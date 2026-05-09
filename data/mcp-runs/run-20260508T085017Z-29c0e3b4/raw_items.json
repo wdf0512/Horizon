@@ -1,0 +1,738 @@
+[
+  {
+    "id": "github:release:319213104",
+    "source_type": "github",
+    "title": "triton-lang/triton released v3.7.0",
+    "url": "https://github.com/triton-lang/triton/releases/tag/v3.7.0",
+    "content": "## Table of Contents\r\n- [Dialect & Frontend](#dialect--frontend)\r\n- [Backend & Compiler](#backend--compiler)\r\n- [AMD/HIP Backend](#amdhip-backend)\r\n- [NVIDIA Backend](#nvidia-backend)\r\n- [Gluon & Layout Improvements](#gluon--layout-improvements)\r\n- [Kernels & Benchmarks](#kernels--benchmarks)\r\n- [Proton Profiling](#proton-profiling)\r\n- [Testing & CI](#testing--ci)\r\n- [Build & Infrastructure](#build--infrastructure)\r\n- [Documentation](#documentation)\r\n- [Breaking Changes](#breaking-changes)\r\n- [Contributors](#contributors)\r\n\r\n---\r\n\r\n## Dialect & Frontend\r\n\r\n### New Features\r\n- **`tl.squeeze` / `tl.unsqueeze`**: Added `tl.squeeze` and `tl.unsqueeze` operations to the standard library (#8924)\r\n- **Scaled BMM**: Added support for scaled batched matmul in the frontend (#9000)\r\n- **FP8 Constants**: Frontend can now create FP8 constants directly (#8882)\r\n- **Returning Constexpr from JIT**: Functions can return `constexpr` values from JIT-compiled code (#8785)\r\n- **`get_int_attr` for Out-of-Tree Walk**: Added `get_int_attr` to `Operation` to support out-of-tree IR walks (#8892)\r\n- **Optional Device Arg to `preload`**: Added optional device argument to `preload` and guardrails for cross-target preload (#8951, #8952, #9234)\r\n- **`tl.cat(can_reorder=False)`**: Added a non-reordering variant of `tl.cat` with broadcast support (#9312, #9163)\r\n- **Round f32→tf32 in Descriptor**: Added option to round f32 to tf32 inside tensor descriptors (#9295)\r\n- **Plugin Hooks & Out-of-Tree Dialects**: Added support for out-of-tree TTIR/TTGIR passes and Triton Dialect Plugins, with example documentation (#8401, #8523, #8815)\r\n\r\n### Bug Fixes\r\n- **`desc.shape` for FP4 Padded**: Fixed `desc.shape` values for fp4-padded tensor descriptors (#9012)\r\n- **Setting Attr on Constexpr Argument**: Fixed setting attributes on constexpr arguments (#9053)\r\n- **Named Tuples in Constexpr Functions**: Preserved named tuples through `constexpr_functions` (#8876)\r\n- **`must_use_result` for Methods**: Fixed `must_use_result` check for methods (#8902)\r\n- **`_semantic` Default to None**: Defaulted `_semantic` parameter to None (#8909)\r\n- **`make_tensor_descriptor` Error Typo**: Fixed typo in `make_tensor_descriptor` error message (#8912)\r\n- **`tl.cat` Determinism**: Made `tl.cat` deterministic via permute+reshape+join, then reverted (#9312, #8854, #8878)\r\n- **Deprecation Warning for `make_block_ptr`**: Emitted a deprecation warning when `make_block_ptr` is used (#9667)\r\n\r\n### Improvements\r\n- **Frontend Performance**: Pre-computed `inspect.signature` for builtins, lazily computed tuple type names, avoided `find_paths_if` and `inspect.getclosurevars`, removed outdated `catch_warnings` blocks — all to reduce JIT overhead (#8843, #8844, #8846, #8845, #8881)\r\n- **Revert Deep Copy on Scope Entry**: Removed deep copy when entering a new scope (#8832)\r\n- **Default 32-bit Dot Precision Change**: Briefly changed default 32-bit dot precision to TF32x3, then reverted (#9080, #9090)\r\n- **Tutorial Updates** (#8565, #8853, #8982)\r\n- **Interpreter Cleanups**: Typing and efficiency cleanups in the interpreter (#9072)\r\n\r\n---\r\n\r\n## Backend & Compiler\r\n\r\n### LLVM Updates\r\n- **LLVM Bumps**: Multiple LLVM uprevs through the cycle, with one bump reverted on the release branch for stability (#8766, #8840, #8919, #8987, #9264, #9333, #9431, #9942)\r\n- **llvm-head Merge**: Merged changes from llvm-head (#8842)\r\n- **Infinite Rewrite Loop in Latest LLVM**: Fixed an infinite rewrite loop introduced by a newer LLVM revision (#9249)\r\n\r\n### 2CTA / Multicast / TMA\r\n- **2CTA Mode End-to-End**: Gluon multi-cta + 2CTA support, M=64 2CTA mode, removed unnecessary synchronization in 2CTA MMA, and proper TMEM deallocation timing (#8684, #8874, #8922, #8986)\r\n- **TMA + Multicast**: Backend support for TMA with multicast (#9005)\r\n- **`tcgen05.mma` + Multicast**: Added multicast support for `tcgen05.mma` (#9071)\r\n- **TMA Index Translation**: Moved TMA index translation from mid-end to lowering (#9082)\r\n- **`tcgen05.mma` Verifier & Errors**: Throw a clear error instead of miscompiling very large `tcgen05.mma` along N (#8915)\r\n- **MMAv5 Illegal Instruction Fix**: Fixed illegal instruction in MMAv5 lowering (#8910)\r\n\r\n### Warp Specialization\r\n- **Nested Loops**: Nested-loop support in warp specialization (#8687)\r\n- **Partition Scheduling**: Improved partition scheduling pass; correct stage/cluster annotations for block-arg producers (#7312, #8883)\r\n- **WS Lowering Hardening**: Variable naming fix in `LowerAref`, per-partition `asyncOp` storage, explicit captures to `WarpSpecializePartitionsOp`, skip `InsertTmemAref` when WS isn't used (#8978, #9007, #9023, #9133, #9212)\r\n- **`RegionBranchInterface`**: Made `WarpSpecializePartitionsOp` implement `RegionBranchInterface` (#8799)\r\n- **Mixed TMA / non-TMA Loads**: Fixed AutoWS when mixing TMA and non-TMA loads (#9111)\r\n- **`aref.get` Filtering**: `aref.get` creation now filters results not in the scheduled loop (#9114)\r\n- **Multibuffering Acc Logic**: Improved multibuffering accumulator logic in WS (#8950)\r\n\r\n### Code Generation & Analysis\r\n- **`tt.scan` Layout Fixes**: Fixed `tt.scan` with broadcasted layouts and additional scan layout issues (#9185, #9189)\r\n- **Reduce/Scan Verifier**: Verify reduce/scan op axis values (#9061)\r\n- **Pipelined Loops Skip Asserts/Prints**: Loops containing `assert` or `print` are no longer pipelined (#9055)\r\n- **Async Op Semantics**: Added explicit semantics for async ops (#8966)\r\n- **WGMMA Wait Delay**: Delay `wgmma wait(0)` to first use of the accumulator (#9021, #9179)\r\n- **WGMMA Register Pipelining**: Added missing waits in WGMMA RHS register pipelining (#8964, #8970, #8997)\r\n- **WGMMA RS Split Limit**: Limit RS-dot splitting to two splits (#9152)\r\n- **Layout Hoisting Fix**: Fixed handling of conflicting layouts when hoisting convert into conditionals (#9083)\r\n- **Rematerialization Cost**: Consider rematerialisation cost when hoisting over `ext`; improved robustness of ext slice rematerialization (#9194, #9019)\r\n- **AxisInfo Improvements**: Enhanced divisibility handling in `AxisInfo` for add/sub; reland of unvisited-operand handling (#9297, #8758)\r\n- **Layout Picker for Small `async_cp`**: Pick better layouts for small `async_cp` (#9183)\r\n- **Skip Conversion-Backward-Slice Cycle**: Skip values with existing conversions in `getConvertBackwardSlice` (#8291)\r\n- **Membar Improvements**: Consider `memdesc_slice` in Membar; extended membar with third-party ops via traits; AMD-aware `membarFilter` (#8755, #8798, #9265)\r\n- **Reduce Op Lowering**: Improvements to `ReduceOp` lowering, later reverted on release branch (#9192, #9214)\r\n- **Clamp on Scalars**: Support clamp optimization on scalars (#8796)\r\n- **`kReg` smem Padding**: Separated additive `kReg` shared-memory padding contribution (#9286)\r\n- **`tcgen05.mma` + multicast support** and Generalized Encodings: continued generalization of TMEM and shared-memory layouts (#9071)\r\n- **`SwizzledShared` Layout**, **uniform hint** on `ttg.warp_id`, and CGAEncoding rename (#9286, #9073, #8850, #9040, #9125)\r\n- **Pipelining Barrier Location**: Fixed barrier placement in loop lowering for MMA ops with non-pipelined operands (#8732)\r\n- **Properly Async wgmma Loop Detection**: Fixed `dotCanBeProperlyAsync` when wgmma is not yielded by the loop and an associated infinite loop (#9274, #9282)\r\n- **`FuncOpToLLVM` Refactors**: Moved `handleArgPtrDatatype` to `Utility.h`; support for LLVM struct/array types in `DITypeAttr` (#9120, #9124)\r\n- **Cache Robustness**: Handle corrupted on-disk cache (#8923)\r\n- **Async Sentinel**: Added a sentinel when async-compiling (#9251)\r\n- **`JITFunction` in `preload`**: Support `JITFunction` in `preload` (#8794)\r\n\r\n### CONSAN (Concurrency Sanitizer) & Debug\r\n- Buffer-region analysis, aliasing support, false-positive deadlock fix, overflow-check disable, compile-time optimization, reduced coverage configurations, TMEM allocation handling, and removal of TMEM size verification (#8837, #8939, #9046, #8940, #9240, #9294, #8787, #8782)\r\n- **Debug Info**: Fixed missing kernel arguments in LLVM debug info; fixed address-sanitizer stack-use-after-scope (#9002, #9088)\r\n\r\n---\r\n\r\n## AMD/HIP Backend\r\n\r\n> 3.7 is heavy on **gfx1250 (RDNA4)** maturation, **warp specialization on AMD**, **Tensor Data Movement (TDM)**, and a new **warp-pipeline** path.\r\n\r\n### Warp Specialization & Warp Pipelining on AMD\r\n- **Warp-Pipeline Support**: New AMD warp-pipeline path with Gluon and LLVM lowering (#8586, #8975, #8980)\r\n- **Warp Specialization on gfx1250** (#8947, #8968)\r\n- **Warp-Pipeline Fixes**: Priority hints and Gluon fixes for the new pipeline (#9301)\r\n- **`ttg.warp_id` and AMD Conversions** (#8659)\r\n\r\n### gfx1250 / RDNA4 Maturation\r\n- **Mixed-Precision Scaled Dot**: Enabled mixed-precision (scaled) dot in Triton on gfx1250 (#8938)\r\n- **4-Warp / 8-Warp MXFP GEMM**: 4-warp scheduling and 8-warp pingpong + MXGEMM refactor (#9031, #9356)\r\n- **Persistent WS f16 GEMM**: Persistent variant and persistent subtiled variant for WS f16 GEMM (#8990, #9052)\r\n- **F16 GEMM Examples Updates**: Updated MXFP FA example and f16 GEMM examples (#9326, #8972)\r\n- **Buffer Atomics for RDNA4**: Enabled buffer atomics on RDNA4 (#8778)\r\n- **`v_permlane16_swap`**: Enabled for `convert_layout` and `reduceOp` on GFX1250 (#8724)\r\n- **Extended FP Conversion**: Including RTZ rounding fixes for GFX1250 (#8821, #8965)\r\n- **libdevice for ROCm 7.1**: Updated libdevice bitcode files (#8807)\r\n- **Cluster Loads / Multi-CTA**: Multi-CTA GEMM example for gfx1250, multi-CTA support for `AMDWmmaEncodingAttr`, scalar-pointer cluster-load avoidance (#9342, #9340, #9129)\r\n- **Gluon `AMDWMMALayout` Rank Consistency** (#9127)\r\n- **WMMA Database Additions**: Added `i8xi8xi32` v3, missing `f64.16x16x4.f64`, and clamp operand on WMMA int intrinsic (#9267, #9271, #9291, #9359)\r\n- **Wavefront Scheduling**: Fixed waitcnt for gfx1250 (#8835)\r\n- **Gluon Stream-K**: 4- and 8-warp stream-k Gluon kernels for gfx1250 (#9370)\r\n- **Roll-up Updates**: Bundled small gfx1250 fixes (#9365)\r\n\r\n### Tensor Data Movement (TDM)\r\n- **Multi-CTA & Multicast for TDM** (#8790)\r\n- **Host-Side TDM Descriptor**: 1D-5D support on gfx1250 (#8977)\r\n- **TDM L2 Prefetch**: Backend and Gluon exposure (#9086, #9148)\r\n- **TDM Predicate**: Use TDM predicate in f16 GEMM variants (#9054)\r\n- **TDM Async Wait**: Support TDM `AsyncWait` in `UpdateAsyncWaitCount` (#9352)\r\n- **TDM Padding in Store**: Support padding when interval equals the inner dimension (#9360)\r\n- **TDM Async Scatter/Gather**: Tensor async scatter/gather support and fixed OOB handling (#9299, #9313, #9371)\r\n- **TDM Shape Adjustment**: Account for CGA offset in TDM shape adjustment (#9341)\r\n- **4D+ TDM Bug Fix**: Fixed TDM behavior when `dim > 2` (#8994)\r\n- **Some TDM Features Enabled** (#9283)\r\n\r\n### Async Copy / LDS\r\n- **AsyncCopy Default On**: Enabled `AsyncCopy` by default for gfx950 and gfx1250 — later reverted on release/3.7.x (#9445, #9087)\r\n- **Async Copy Block Dim Duplication**: Allow async load global-to-load block-dim duplication (#8788)\r\n- **Direct-to-LDS Refactors**: Fixed shared-order selection on GFX9, refactored coalescing checks, contiguity hints, vector-size fixes for padded encodings (#9028, #9041, #9048, #9089, #9149)\r\n- **`v_perm` for `convert_layout`** (#9014)\r\n- **Padded Layout Heuristic**: Relaxed heuristics for smaller block sizes (#9074)\r\n\r\n### Reorder / Pipelining Cleanup\r\n- **`ReorderInstructions`**: Removed `sinkSecondLoad`, `sinkDotConversion`, and `moveUpTranspose` optimizations (#9119, #9139, #9204, #9229)\r\n- **Replace `ReorderInstructions` with `MoveUpPrologueLoads`** (#9328)\r\n- **`UpdateAsyncWaitCount`**: Support single-block `execute` regions (#9126)\r\n- **`OptimizeLDSUsage` Removal** (#8282)\r\n\r\n### libdevice / Layouts / Misc\r\n- **`finite`/`isfinited`**, **`rint`**, **`clampf` via `v_med3`**: libdevice and codegen additions (#9097, #9166, #9256)\r\n- **`BlockPingpong` Improvements**: Debug messages and dot-dominates-predecessors fix (#8804, #9027)\r\n- **`kWidth` mandatory for WMMA v3** (#8783)\r\n- **`copysign` Replacement**: Replaced LLVM `copysign` intrinsic (#8789)\r\n- **WMMA Layout CTA Fields**: Generalized (#8946)\r\n- **TDM with `CanonicalizePointers`**: Support `MakeTensorDescOp` in `CanonicalizePointers` (#9228)\r\n- **`PartitionedSharedEncodingAttr`**: Introduced and reverted (#9314, #9367)\r\n- **`scf.if` Combining**: Added `PrepareIfCombining` pass (#9253)\r\n- **Fine-Grained Cluster Barrier**: New AMD cluster barrier exposed to Gluon (#9206)\r\n- **`SinkLayoutConversions` Pass** (#9168)\r\n- **MIR Swap**: Option to swap MIR; `addOccurrence` for proper LLVM-option disabling; `ScopedNoAliasAAWrapperPass` in MIR swap pipeline (#8711, #9311, #9309)\r\n\r\n### AMD Bug Fixes (selected)\r\n- **`atomic_cas` Fixes**: Wrong struct index for atomic-CAS pattern, ignored sem/scope, and atomic-CAS for non-int types (#8867, #9042, #9116)\r\n- **Atomic-RMW Mask Vectorization**: Fixed wrong vectorization width for masked atomic-RMW (#9142)\r\n- **BroadcastedRegisters in Compilation**: Fixed compilation crash (#8828)\r\n- **`uniformSum` Crash**: Fixed null `uniformSum` in `CanonicalizePointers` (#8991)\r\n- **Cooperative Groups Support**: Driver check (#8935)\r\n- **FP8/BF8 WMMA Selection** on release/3.7.x: Fixed mixed FP8 promotion / instruction selection (#9567, #9581)\r\n- **True16 on gfx11**: Disabled True16 for assembler on gfx11 (#9447, #9476)\r\n- **`RangeAnalysis` `tripCount`**: Fixed trip-count calculation (#9383, #9944)\r\n- **Padded-Layout Async Copy OOM**: Fixed OOM in pipelining with padded async copy on GFX950 (#9442, #9945)\r\n- **`BlockPingpong` for non-MFMA dot** (#9618, #9948)\r\n- **`CanonicalizePointers` Different Bases** (#9541, #9950)\r\n- **Backend cherry-pick dance** (#9487, #9502, #9673, #9675)\r\n- **FP4 Matmul Tests Skipping**: Skip tests packed along M/N for gfx1250 (#9176)\r\n\r\n---\r\n\r\n## NVIDIA Backend\r\n\r\n### Blackwell & Newer SMs\r\n- **`tcgen05` MMA on sm110 (Jetson Thor)** (#9160)\r\n- **`tcgen05.ld.red` on sm103**: Implemented in Gluon (#9151)\r\n- **x Scale Swizzling for Blackwell + Batched Matmul** (#8863)\r\n- **Block-Scaled Matmul Baselining**: mxfp8/nvfp4 block-scaled cuBLAS baselines (#9044)\r\n- **ptxas for Blackwell**: Repeated ptxas-version uprev/revert; final state on release/3.7.x cherry-picks the GB300/Spark/THOR-required commits (#8941, #9011, #9016, #8983, #9363, #9621)\r\n- **NVMMA Variadic CUDA Launcher**: Variadic-argument pre-compiled CUDA launcher (#6788)\r\n- **`NVIDIA::canSkipBarSync`**: Resurrected (#9246)\r\n\r\n### TMA\r\n- **TMA im2col Mode**: End-to-end im2col TMA support — `AsyncTMACopyGlobalToLocalOp`, tensor-descriptor support, fix for `tma load`, and driver support (#9202, #9225, #9303, #9305)\r\n- **TMA Encoding Verification**: Verify encodings on TMA ops (#8886)\r\n- **TMA Descriptor Mitigation**: Mitigation against potential TMA descriptor creation errors (#9235)\r\n\r\n### Hopper / WS\r\n- **`tt.split`/`join` in WS Data Partition**: Hopper WS support for `tt.split`/`tt.join` (#456, #9147)\r\n- **mx8 `w_scale` Mask**: Fixed Hopper mask (#8974)\r\n- **Small-Batch Hopper**: Bench fixes for small batches on Hopper (#8877)\r\n- **SM89 ptxas Workaround Reverted**: Removed the older workaround for the SM89 ptxas bug now that it is unnecessary (#9756)\r\n\r\n---\r\n\r\n## Gluon & Layout Improvements\r\n\r\n### New Features\r\n- **Local Scatter/Gather**: Added local scatter/gather support to Gluon (#8480)\r\n- **`get_view()`**: Added `get_view()` for Gluon layouts (#9270)\r\n- **Finer Cluster Fences**: Exposed finer-grained cluster fences (#9076)\r\n- **Multi-CTA Refactor of `PaddedSharedLayouts`** (#9336)\r\n- **\"Illegal Instruction\" Sanitize Mode**: Tightened TMA op verifiers and added an \"illegal instruction\" sanitize mode (#9112)\r\n- **Verifier Improvements**: Tightened Gluon dialect verifiers and moved checks into C++ (#8981, #9018, #9033)\r\n- **TensorMemory in `to_linear_layout`**: Allow TM layouts in `to_linear_layout` for printing (#8682)\r\n- **More Blackwell Tutorials** (#8982)\r\n\r\n### Layouts & Shared Encodings\r\n- **LinearEncoding Tightening**: Tightened LinearEncoding checks (#9215)\r\n- **`SharedLinearEncoding`**: Continued lowering generalization (carry-over from 3.6 with backend updates).\r\n\r\n---\r\n\r\n## Kernels & Benchmarks\r\n\r\n### Persistent Matmul\r\n- **Persistent Matmul Heuristics**: Fixed and refined heuristics (#8791, #8813)\r\n- **Hopper HBM Swizzling**: Persistent matmul now supports Hopper HBM swizzling (#8917)\r\n- **Hopper FP4 Swizzled, num_warps=4** (#9029)\r\n- **Don't Flatten Mixed-Precision Hopper Persistent Matmul** (#9279)\r\n- **High-Occupancy Persistent Matmul**: Re-enabled (#9248)\r\n- **4-Warp Persistent Kernel**: Re-enabled after fixes (#9331)\r\n- **Strided Layout Handling for Persistent**: Fixed when setting `requires_persistent` (#9198)\r\n- **Mxfp Non-Persistent Strided Layout**: Allow non-persistent mx matmul with strided layout (#8808)\r\n\r\n### Triton Kernels Refactor\r\n- **Matrix-Multiplication Refactor**: Major refactor of triton_kernels matmul (#8765)\r\n- **Tensor/Layout/Distributed Refactor**: Reland of the tensor/layout/distributed refactor; small follow-ups (#9134, #9140, #9186, #9187, #9213)\r\n- **Closure-Based Output Mapping**: For peer shards (#8999)\r\n- **Distributed Tests**: Distributed routing kernels test fix (#9258)\r\n- **Device Descriptor Allocator**: Keep a pool to fix descriptor allocator behavior (#9259)\r\n- **Reduce Kernel**: Unfuse FMA for numeric stability, unpadded batch handling, global scale (#9320, #9332, #9372)\r\n- **`Tensor.clone`**: Briefly added `clone` for `triton_kernels.tensor.Tensor`, then reverted (#9178, #9208)\r\n\r\n### MXFP / Scaled-Dot Kernels\r\n- **Force `mxfp4→bf16` Conversion via `mul.bf16x2`** (#8967)\r\n- **Hopper mxfp4 Swizzled, num_warps=4** (#9029)\r\n- **swiglu Optimizations**: Save instructions, then partial revert; later use of `ex2.approx.ftz` for swiglu (#8801, #8905, #9164)\r\n- **matmul Output mxfp Format Fixes** (#8865)\r\n- **Symmetric Memory in Bench**: Release symmetric memory between runs (#8900)\r\n- **`distributed.py` / `bench_utils.py`**: Extracted common code from `bench_mlp.py` and `distributed.py` (#8866)\r\n- **`num_stages` Adjustment**: For bf16/fp16 × mxfp (#8773)\r\n\r\n### Other\r\n- **X Scale Swizzling for Ragged** (#8897)\r\n- **`reduce_forward` Metadata**: Improved performance (#9068)\r\n- **TF32 Rounding in MoE** (#9296)\r\n- **`p_matmul` Asserts & Fixes** (#9376)\r\n- **Distributed `symm_mem_pool` by Argument** (#9092, #9155)\r\n\r\n---\r\n\r\n## Proton Profiling\r\n\r\n### Highlights\r\n- **Hardware Trace on Blackwell**: Enabled low-overhead hardware trace (#9307)\r\n- **Significant `deactivate` / `get_data` Overhead Reduction**: Especially for CUDA-graph profiling; exposed `get_data_msgpack` (#9030)\r\n- **Periodic Dumping**: Periodic profile dumping; metadata profiling with periodic flushing (#9150, #9236)\r\n- **Multi-Device Metric Profiling**: Fixed metric buffer deadlock and added multi-device support (#8943)\r\n- **Capture-on-Error**: Capture traces even when code exits with an error (#8955)\r\n- **Vector Metrics**: New vector metric type (#9329)\r\n\r\n### API & Internals\r\n- **`get_data` API**: Export profile data directly in Python (#8928)\r\n- **`clear_data` API**: Remove pre-deactivation data (#8971)\r\n- **`finalize` Cleanup**: Clean up context source after teardown (#9069)\r\n- **Fewer Locks**: Further reduce unnecessary locks (#9257)\r\n- **Runtime/Metric Correlation**: Simplified to reduce overhead (#9132)\r\n- **Selective Kernel Metadata**: Allow Proton to record metadata for selective kernels (#9158)\r\n- **Metric Type Restrictions**: Restrict frontend metric types (#8858)\r\n- **Init/Final Timestamps**: Added to Chrome trace (#8870)\r\n- **`GlobalScratchAllocOp` Deprecation**: Deprecated Proton's own op in favor of TritonGPU's, with a custom backend (#8976)\r\n- **Drop Invalid-Time Kernels** (#8961)\r\n- **Ignore Metric-Kernel Timing** (#9058)\r\n- **Documented Experimental APIs** (#9056)\r\n- **HW Trace Default Fix**: Fixed default value for `TRITON_ENABLE_HW_TRACE` in `CuptiProfiler` (#9324)\r\n- **Tensor Descriptor & 2-CTA Tests** (#9070)\r\n- **AMD Proton Test Fixes** (#8763)\r\n\r\n---\r\n\r\n## Testing & CI\r\n- **Gluon TMA + MMA Hopper/Blackwell Test** (#8873)\r\n- **AMD Shadow CI**: New AMD runner setup, then reverted (#9032, #9049)\r\n- **`fresh_knobs` Default Behavior** (#9184)\r\n- **`tl.dot` BF16xN Nondeterminism** (#8818)\r\n- **Disable Stack Traces in Performance Remarks** (#8884)\r\n- **Pin pandas < 3.0** (#9273)\r\n- **Fix pytorch Deprecation Warning in CI** (#8857)\r\n- **Reduce Wheel Size, Pin `DOCKER_API_VERSION` (release/3.7.x)** (#10244)\r\n- **Increase Release Wheel Timeout** (#10250)\r\n- **Skip Tests for RDNA / gfx1250**: Various AMD test skips and enables (#9210, #9176, #9177, #9232, #9343, #9095)\r\n- **Triton's `assert_close`**: Propagate `err_msg` to numpy (#9170)\r\n- **Float8 × MX Tolerance** (#9316, #9338)\r\n- **NumPy 2.4 Compatibility**: Explicit numpy-array-to-scalar conversion (#9172)\r\n- **`test_line_info_ir_source` Flake Fix** (#9161)\r\n\r\n---\r\n\r\n## Build & Infrastructure\r\n- **`CMAKE_LIBRARY_OUTPUT_DIRECTORY`**: Fixed build with empty directory (#8810)\r\n- **`llvm_update_compile_flags` Removal** (#9167)\r\n- **`LLVM_BUILD_SHARED_LIBS` Canonicalization** (#8933)\r\n- **actions/checkout v5 → v6** (#8826)\r\n- **Version Bumps**: 3.5.0 → 3.6.0 ; 3.6.0 → 3.7.0 (#8836, #9885, #9888)\r\n- **`TRITON_EXT_ENABLED` for Wheels** (#9935, #9959)\r\n- **`nvidia-toolchain-version.json` Update**.\r\n- **`TRITON_DEFAULT_BACKEND`**: Control `driver.active` via this env var (#9144)\r\n- **`TRITON_PTXAS_BLACKWELL_PATH`**: Allow override of `ptxas-blackwell` binary (#8945)\r\n- **Release to PyPI** (#10251)\r\n- **`topk` in Plugin Example**: Increment index in plugin example (#9315)\r\n- **HIP Support in `link.py`** (#9084)\r\n\r\n---\r\n\r\n## Documentation\r\n- **Divisibility Reset Logic**: Clarified for contiguous dimensions in `AxisInfo` (#9266)\r\n- **`topk` Operation**: Added to language documentation (#9345)\r\n- **Plugin Example README**: Added a second pass-plugin README example (#8815)\r\n- **Conference Materials**: Updated README (#9009)\r\n- **Community Meetup Notes**: Added 2026-01-06 meetup notes (#9288)\r\n- **`warp_specialize` Docs**: Updated `gl.warp_specialize` docs (#8553)\r\n- **`LinearLayout` Output Matrix Comment**: Doc fix (#9243)\r\n\r\n---\r\n\r\n## Breaking Changes\r\n- **`triton_kernels` matmul refactor (BC-breaking)**: The matrix-multiplication refactor introduces a backwards-incompatible API surface. Downstream users of `triton_kernels.matmul_*` should review call sites (#8765)\r\n- **`tcgen05.cp` Lowering Generalization & `tcgen05.mma` Encoding Acceptance**: Continued from 3.6, with new verifier behavior and stricter encoding checks.\r\n- **Proton `GlobalScratchAllocOp` Deprecated**: Replaced with TritonGPU's `GlobalScratchAllocOp` + custom backend. Out-of-tree consumers must migrate (#8976)\r\n- **`make_block_ptr` Deprecated**: A deprecation warning is now emitted; users should migrate to tensor descriptors (#9667)\r\n- **Default 32-bit Dot Precision Reverted**: Default 32-bit dot precision was briefly TF32x3 — the default in 3.7 remains as in 3.6. Note the new \"round f32→tf32 in descriptor\" option (#9080, #9090, #9295)\r\n- **AsyncCopy Default for gfx950 / gfx1250**: Was enabled by default and then reverted on the release branch. Users must opt in explicitly in 3.7 (#9087, #9445)\r\n- **SM89 ptxas Workaround Reverted**: The ptxas workaround introduced earlier is removed on release/3.7.x (#9756, #7067)\r\n\r\n---\r\n\r\n## Contributors\r\n\r\nThis release includes contributions from engineers at:\r\n\r\n- Meta\r\n- AMD\r\n- NVIDIA\r\n- OpenAI\r\n- Intel\r\n- Google\r\n- And many individual contributors\r\n\r\nSpecial thanks to all contributors who submitted bug reports, feature requests, and code improvements!\r\n\r\n",
+    "author": "atalman",
+    "published_at": "2026-05-07T22:19:06Z",
+    "fetched_at": "2026-05-08T08:50:23.968509",
+    "metadata": {
+      "repo": "triton-lang/triton",
+      "tag": "v3.7.0",
+      "prerelease": false
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48055913",
+    "source_type": "hackernews",
+    "title": "Canvas is down as ShinyHunters threatens to leak schools’ data",
+    "url": "https://www.theverge.com/tech/926458/canvas-shinyhunters-breach",
+    "content": "<a href=\"https:&#x2F;&#x2F;thetech.com&#x2F;2026&#x2F;05&#x2F;07&#x2F;canvas-breach-26\" rel=\"nofollow\">https:&#x2F;&#x2F;thetech.com&#x2F;2026&#x2F;05&#x2F;07&#x2F;canvas-breach-26</a><p><a href=\"https:&#x2F;&#x2F;techcrunch.com&#x2F;2026&#x2F;05&#x2F;07&#x2F;hackers-deface-school-login-pages-after-claiming-another-instructure-hack&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;techcrunch.com&#x2F;2026&#x2F;05&#x2F;07&#x2F;hackers-deface-school-logi...</a>\n\n\n--- Top Comments ---\n\n[blahedo]: Perspective from the trenches: I teach at a university that uses Canvas.  We are in our final exams period right now. We got our first email (from Academic Affairs) notifying us that it was down at 5:17pm EDT this afternoon, with little info; followup emails were sent at 6:24 and 6:57 with more info, but mostly about how we would be compensating for it and not about what actually was going on (other than, &quot;nationwide shutdown&quot; and &quot;cybersecurity attacks&quot;, no further detail...\n\n[Gabriel54]: I&#x27;m surprised how few comments there are on this thread.  This is probably affecting millions of students at the most stressful time of the year. Incidentally I&#x27;ve always hated Canvas and probably every other LMS provider, but what is particularly amusing about this current outage is that it is occurring at exactly the time when universities are demanding that all professors put all of their materials on Canvas, without exception, due to ADA compliance regulations.  It is explicitly...\n\n[myrandomcomment]: 1. It should be illegal for any company to pay ransomware attacks. Period. No pay out ever. \n2. The penalty for being the attacker should be linked to the system they violated. If you do this to a hospital and someone dies you are life in prison &#x2F; chair. The minimum sentence should be so painful that it deters the attack. No this will not stop this and companies need to be held accountable for their lack of security investment. Every attack should be investigate if the company met an agr...\n\n[BooneJS]: My kids are in the middle of their finals week. What a mess. Universities know nothing, Canvas claims to be in a &quot;scheduled maintenance&quot;, and one Prof claims to &quot;not have any copies of material offline&quot; which seems pretty negligent. Sounds like one section of a popular class will be doing paper exams while other sections had Canvas-based &quot;half points for 2nd attempt&quot;-type exams earlier today. How soon before names &amp; grades appear in data dumps? This would be ...\n\n[kelnos]: A friend who teaches at MIT said they were hit by this.  I found it ironic and a little sad that a place like MIT doesn&#x27;t have an IT staff that can maintain their own on-prem solutions for things like this. But it turns out that MIT used to have their own homegrown system, and recently switched to Canvas.  Bet they&#x27;re regretting that now. The build vs. buy decision seems to have swung very hard toward buy in the last decade, and I think that&#x27;s a shame.  Yes, orgs need to focus ...",
+    "author": "stefanpie",
+    "published_at": "2026-05-07T22:22:21Z",
+    "fetched_at": "2026-05-08T08:50:22.253965",
+    "metadata": {
+      "score": 601,
+      "descendants": 372,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48055913",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48056227",
+    "source_type": "hackernews",
+    "title": "Maybe you shouldn't install new software for a bit",
+    "url": "https://xeiaso.net/blog/2026/abstain-from-install/",
+    "content": "\n--- Top Comments ---\n\n[marcus_holmes]: This was always a nightmare waiting to happen. The sheer mass of packages and the  consequent vast attack surface for supply chain attacks was always a problem that was eventually going to blow up in everyone&#x27;s face. But it was too convenient. Anyone warning about it or trying to limit the damage was shouted down by people who had no experience of any other way of doing things. &quot;import antigravity&quot; is just too easy to do without. Well, now we&#x27;re reaching the &quot;find out...\n\n[mastermage]: I think what we have to start accepting even security experts is that our world is incredibly fragile. I think people realy understimate this. And I do not mean just the IT world but the entire world is built on many incredibly fragile balances. Security Exploits will always exist. Not just in software but in real life. Heck someone managed to Sneak into a Security Conference. And that guy was a random youtuber. Granted that was not like a high security thing. But thats just an example I had ...\n\n[0xbadcafebee]: &quot;Wait a week to install software&quot; does not work. Just a few months ago a massive exploit hit the web, which was a timed attack which sat for more than a month before executing. If everyone starts waiting a week, their exploits will wait 2 weeks. Cyber criminals do not need to exploit you immediately, they just need to exploit you. (It also doesn&#x27;t change a large range of vuln classes like typosquatting)\n\n[cperciva]: Alternatively, switch to an operating system like FreeBSD which doesn&#x27;t take a YOLO approach to security.  Security fixes don&#x27;t just get tossed into the FreeBSD kernel without coordination; they go through the FreeBSD security team and we have binary updates (via FreeBSD Update, and via pkgbase for 15.0-RELEASE) published within a couple minutes of the patches hitting the src tree.  (Roughly speaking, a few seconds for the &quot;I&#x27;ve pushed the patches&quot; message to go out o...\n\n[AgentME]: There&#x27;s already an okay solution to supply-chain attacks against dependency managers like npm, PyPI, and Cargo: set them to only install package versions that are more than a few days old. The recent high-profile attacks were all caught and rolled back within a day, so doing this would have let you safely avoid the attacks. It really should be the default behavior. Let self-selected beta testers and security scanner companies try out the newest versions of packages for a day before you t...",
+    "author": "psxuaw",
+    "published_at": "2026-05-07T23:02:11Z",
+    "fetched_at": "2026-05-08T08:50:22.253993",
+    "metadata": {
+      "score": 484,
+      "descendants": 253,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48056227",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48054423",
+    "source_type": "hackernews",
+    "title": "Cloudflare to cut about 20% workforce",
+    "url": "https://www.reuters.com/business/world-at-work/cloudflare-cut-over-1100-jobs-2026-05-07/",
+    "content": "<a href=\"https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;building-for-the-future&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;building-for-the-future&#x2F;</a>\n\n\n--- Top Comments ---\n\n[AloysB]: This is awkward. Exhibit A - September 2025 - &quot;Help build the future&quot; - Cloudflare hires 1111 interns to &quot;help build the future&quot;\n[ https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;cloudflare-1111-intern-program&#x2F; ] Exhibit B - May 2026 - &quot;Building for the future&quot; - Cloudflare lays off 1100 people, about 20% of their workforce to &quot;continue building the future&quot;\n[ https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;building-for-the-future&#x2F; ] I&#x27;ll finish on ...\n\n[ggoo]: &gt; The packages for departing employees will include the equivalent of their full base pay through the end of 2026. Healthcare coverage is different across the globe, and if you’re in the United States, we’ll continue to provide support through the end of the year. We are also vesting equity for departing team members through August 15th, so they receive stock beyond their departure date. And, if departing team members haven’t hit their one-year cliffs, we are going to waive those and vest ...\n\n[Snoozle]: &quot;We are our own most demanding customer. Cloudflare’s usage of AI has increased by more than 600% in the last three months alone. Employees across the company from engineering to HR to finance to marketing run thousands of AI agent sessions each day to get their work done. That means we have to be intentional in how we architect our company for the agentic AI era in order to supercharge the value we deliver to our customers and to honor our mission to help build a better Internet for eve...\n\n[piperswe]: Welp, looks like I’m affected. If anyone is looking to hire a systems engineer with distributed systems and load balancing experience, shoot me an email at &lt;anything&gt;@piperswe.me :&#x2F; I’ll update this with a resume link tonight…\n\n[stego-tech]: I&#x27;m going to start calling these &quot;Canary&quot; moments. Assuming we take everything at face value for these sorts of cuts, it creates the following scenario: A company finds itself with surplus labor capacity due to the efficiencies in AI while also posting substantial profit or revenue growth.  The company could downsize the workforce to capitalize on short-term efficiencies and increase margins, though this will come at the cost of long-term reputational harm due to posted profits...",
+    "author": "PriorityLeft",
+    "published_at": "2026-05-07T20:23:37Z",
+    "fetched_at": "2026-05-08T08:50:22.254021",
+    "metadata": {
+      "score": 680,
+      "descendants": 428,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48054423",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48053623",
+    "source_type": "hackernews",
+    "title": "Dirtyfrag: Universal Linux LPE",
+    "url": "https://www.openwall.com/lists/oss-security/2026/05/07/8",
+    "content": "\n--- Top Comments ---\n\n[firer]: This is  very  similar in root cause and exploitation to Copy Fail. Which illustrates pretty well something that&#x27;s lost when relying heavily on LLMs to do work for you: exploration. I find that doing vulnerability research using AI really hinders my creativity. When your workflow consists of asking questions and getting answers immediately, you don&#x27;t get to see what&#x27;s nearby. It&#x27;s like a genie - you get exactly what you asked for and nothing more. The researcher who discov...\n\n[drmpeg]: Looks like the esp4 and esp6 fixes have been pushed for 7.0, 6.18, 6.12 and 6.6 kernels.  https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;2026050851-iron-hurdle-6421@gre...   https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;2026050843-unplowed-spinster-cf...   https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;2026050832-remold-faceless-bed0...   https:&#x2F;&#x2F;lore.kernel.org&#x2F;lkml&#x2F;2026050825-heaving-spender-13a8...\n\n[john_strinlai]: &quot;Because the embargo has now been broken, no patches or CVEs exist for these vulnerabilities.&quot;  link:  https:&#x2F;&#x2F;github.com&#x2F;V4bel&#x2F;dirtyfrag  detailed writeup:  https:&#x2F;&#x2F;github.com&#x2F;V4bel&#x2F;dirtyfrag&#x2F;blob&#x2F;master&#x2F;assets&#x2F;write-...  importantly: &quot; Copy Fail was the motivation for starting this research. In particular, xfrm-ESP Page-Cache Write in the Dirty Frag vulnerability chain shares the same sink as Copy Fail. However, it i...\n\n[eqvinox]: And I ask again: why the f*ck is algif_aead getting all the flak for copy.fail?  It&#x27;s authencesn being stupid. authencesn didn&#x27;t get fixed. Now we got the results of that, turns out you can access the same (I believe) out of bounds write through plain network sockets. I wish I thought of that, but I didn&#x27;t. [ed.: I&#x27;m referring to the through-ESP issue. The RxRPC one is AIUI completely unrelated.]\n\n[chromacity]: If this indeed works on all major distributions, I just continue to be amazed by how irresponsible the maintainers are. We&#x27;re talking about optional kernel functionality that&#x27;s presumably useful to something like &lt;0.1% of their userbase, but is enabled by default?... why? This feels like the practice of Linux distros back in 1999 when they&#x27;d ship default installs with dozens of network services exposed to the internet. Except it&#x27;s not 1999 anymore.",
+    "author": "flipped",
+    "published_at": "2026-05-07T19:21:32Z",
+    "fetched_at": "2026-05-08T08:50:22.254043",
+    "metadata": {
+      "score": 625,
+      "descendants": 256,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48053623",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48049653",
+    "source_type": "hackernews",
+    "title": "The map that keeps Burning Man honest",
+    "url": "https://www.not-ship.com/burning-man-moop/",
+    "content": "\n--- Top Comments ---\n\n[stonegray]: I’ve done this for a couple years now, cool to see it pop up here. I believe the scale is a touch larger; 3935 acres in 2025, plus a small amount outside the fence line. On the technical side, we not only log but photograph everything, down to each clump of toilet paper. We check our progress by doing hundreds of tests identical to what the BLM does, both ahead and behind our main crew; bagging up any debris to be photographed on green screens where the pixels are counted to ensure we’re unde...\n\n[justin]: What I love about Burning Man is that it is an event where all the programming is created by the attendees. All the art, sound stages, art cars, experiences.. if you want something to exist in Black Rock City, then it is up to you to just go figure out how to bring it, solely for the benefit and joy of those who get to experience it. It is a tremendous amount of work, but the rewarding feeling of seeing your creation manifested into reality is worth it. So much of our daily lives in society i...\n\n[childofhedgehog]: So a giant party can clean up after itself, but 4th of July in Tahoe for example is a toxic mess. I wish more people would practice these principles. It’s impressive how well this is cleaned up.\n\n[ruleryak]: Last year was tough - it rained for hours 5 nights in a row and the first rain night was accompanied by 70 mile an hour winds that did a massive amount of damage to camp infrastructure throughout the city.   The roads in half the city were ruined by emergency traffic that kept on running throughout the storms, and the result was a lumpy nightmare that shook things loose from cars and bikes at a much higher rate than most years.  The mud absorbed and hid things and made cleanup a far more grue...\n\n[cmiles8]: My respect for Burning Man just went up a lot. These big events usually leave a giant mess behind. Glad to see they take the cleanup and restoration so seriously.",
+    "author": "speckx",
+    "published_at": "2026-05-07T14:06:10Z",
+    "fetched_at": "2026-05-08T08:50:22.255038",
+    "metadata": {
+      "score": 638,
+      "descendants": 313,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48049653",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48051562",
+    "source_type": "hackernews",
+    "title": "Agents need control flow, not more prompts",
+    "url": "https://bsuh.bearblog.dev/agents-need-control-flow/",
+    "content": "\n--- Top Comments ---\n\n[827a]: 1000% agree. I am increasingly hesitant to believe Anthropic&#x27;s continual war drum of &quot;build for the capabilities of future models, they&#x27;ll get better&quot;. We&#x27;ve got a QA agent that needs to run through, say, 200 markdown files of requirements in a browser session. Its a cool system that has really helped improve our team&#x27;s efficiency. For the longest time we tried everything to get a prompt like the following working: &quot;Look in this directory at the requirements...\n\n[Weryj]: Pure agentic loops with markdown documents as a program &#x27;agentic workflow&#x27; is incredible for experimentation, developing and testing your workflow idea. The second it works, bake the workflow into the harness. \nYesterday I was doing just that, and the whole agent loop disappeared because the process could&#x27;ve been condensed into a one-shot request (+1 MorphLLM fast apply) from careful context construction. (It was an Autoresearcher)\n\n[rnxrx]: I wonder if a part of the problem isn&#x27;t just the misapplication of LLMs in the first place.  As has been mentioned elsewhere, perhaps the agent&#x27;s prompt should be to write code to accomplish as much of the task in as repeatable&#x2F;verifiable&#x2F;deterministic a way as possible.  This would hopefully include validation of the agent&#x27;s output as well.  The overall goal would be to keep the LLM out of doing processing that could be more efficiently (and often correctly) handled ...\n\n[bwestergard]: I agree with the sentiment, but I think the conclusion should be altered. When you hit the limit of prompting, you need to move from using LLMs at run time to accomplish a task to using LLMs to write software to accomplish the task. The role of LLMs at run time will generally shrink to helping users choose compliant inputs to a software system that embodies hard business rules.\n\n[jerf]: This is why I frequently refer to &quot;next generation AIs&quot; that aren&#x27;t just LLMs. LLMs are pretty cool and I expect that even if we see no further foundational advancement in AIs that we&#x27;re going to continue to see them exploited in more interesting ways and optimized better. Even if the models froze as they are today, there&#x27;s a lot more value to be squeezed out of them as we figure out how to do that. However, there are some things that I think need a foundational next-...",
+    "author": "bsuh",
+    "published_at": "2026-05-07T16:43:35Z",
+    "fetched_at": "2026-05-08T08:50:22.255081",
+    "metadata": {
+      "score": 461,
+      "descendants": 220,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48051562",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48052537",
+    "source_type": "hackernews",
+    "title": "Natural Language Autoencoders: Turning Claude's Thoughts into Text",
+    "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+    "content": "\n--- Top Comments ---\n\n[zozbot234]: Anthropic has released open weight models for translating the activations of existing models, viz. Qwen 2.5 (7B), Gemma 3 (12B, 27B) and Llama 3.3 (70B) into natural language text.  https:&#x2F;&#x2F;github.com&#x2F;kitft&#x2F;natural_language_autoencoders   https:&#x2F;&#x2F;huggingface.co&#x2F;collections&#x2F;kitft&#x2F;nla-models  This is huge news and it&#x27;s great to see Anthropic finally engage with the Hugging Face and open weights community!\n\n[gekoxyz]: I would suggest experts in interpretability (but everyone really) to go directly to the transformer circuits blog, where they explain their approach more in detail. Here is the link for this post:  https:&#x2F;&#x2F;transformer-circuits.pub&#x2F;2026&#x2F;nla&#x2F;index.html  Also, if you have never read it, I would suggest starting to read all the Transformer Circuits thread, by reading its &quot;prologue&quot; in distill pub\n\n[rao-v]: This is the first approach to activation analysis that I’ve seen that seems like a plausible path to model understanding. Unfortunately I don’t know how you ground this … it’s basically asking if you can encode activations in plausible sounding text. Of course you can! But is the plausible text actually reflective of what the model is “thinking”? How to tell?\n\n[comex]: Fascinating.  The training process forces the “verbalizer” model to develop  some  mapping from activations to tokens that the “reconstructor” model can then invert back into the activations.  But to quote the paper: &gt; Note that nothing in this objective constrains the NLA explanation z to be human-readable, or even to bear any semantic relation to the content of [the activation]. The objective could be optimized even if the verbalizer and reconstructor made up their own “language” to repr...\n\n[cadamsdotcom]: &gt; An early version of Claude Opus 4.6 would sometimes mysteriously respond to English queries in other languages. NLAs helped Anthropic researchers discover training data that caused this. Very cool - sounds similar to OpenAI’s goblin troubles.  https:&#x2F;&#x2F;openai.com&#x2F;index&#x2F;where-the-goblins-came-from&#x2F;",
+    "author": "instagraham",
+    "published_at": "2026-05-07T17:54:02Z",
+    "fetched_at": "2026-05-08T08:50:22.255110",
+    "metadata": {
+      "score": 270,
+      "descendants": 89,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48052537",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48050751",
+    "source_type": "hackernews",
+    "title": "DeepSeek 4 Flash local inference engine for Metal",
+    "url": "https://github.com/antirez/ds4",
+    "content": "\n--- Top Comments ---\n\n[kgeist]: Heh, I made something very similar for the Qwen3 models a while back. It only runs Qwen3, supports only some quants, loads from GGUF, and has inference optimized by Claude (in a loop). The whole thing is compact (just a couple of files) and easy to reason about. I made it for my students so they could tinker with it and learn (add different decoding strategies, add abliteration, etc.). Popular frameworks are large, complex, and harder to hack on, while educational projects usually focus on so...\n\n[lhl]: I think especially with the ability for SOTA AI to optimize kernels more people should try their hand at making better inference for their specific hardware. I have an older W7900 (RDNA3) which, besides 48GB of VRAM, has some pretty decent roofline specs - 123 FP16 TFLOPS&#x2F;INT8 TOPS, 864 GB&#x2F;s MBW, but has had notoriously bad support both from AMD (ROCm) as well as llama.cpp. Recently I decided I&#x27;d like to turn the card into a dedicated agentic&#x2F;coder endpoint and I started t...\n\n[octocop]: Finally someone who pays proper respect to GGML ecosystem.\n\n[maherbeg]: This is so sick. I&#x27;m really curious to see what focused effort on optimizing a single open source model can look like over many months. Not only on the inference serving side, but also on the harness optimization side and building custom workflows to narrow the gap between things frontier models can infer and deduce and what open source models natively lack due to size, training etc.\n\n[antirez]: A random, funny, interesting and telling data point: my MacBook M3 Max while DS4 is generating tokens at full speed peaks 50W of energy usage...",
+    "author": "tamnd",
+    "published_at": "2026-05-07T15:40:24Z",
+    "fetched_at": "2026-05-08T08:50:22.255125",
+    "metadata": {
+      "score": 380,
+      "descendants": 102,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48050751",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48050278",
+    "source_type": "hackernews",
+    "title": "AlphaEvolve: Gemini-powered coding agent scaling impact across fields",
+    "url": "https://deepmind.google/blog/alphaevolve-impact/",
+    "content": "\n--- Top Comments ---\n\n[momojo]: This reminds me of Antirez&#x27;s &quot;Don&#x27;t fall into the anti-AI hype&quot; [0] In a sentence: These foundation models are really good at optimizing these extremely high level, extremely well defined problem spaces (ie multiply matrices faster). In Antirez&#x27;s case, it&#x27;s &quot;make Redis faster&quot;. There have been two reactions: &quot;Oh it would never work for me&quot; and &quot;I have seen months of my life accomplished in an hour&quot;, and I think they&#x27;re both righ...\n\n[zkmon]: An issue I have been noticing with claude is, for simple tasks, it gives extremely bloated code and artifacts, which sometime does not even work. Gemini balances it quite well, by giving a working solution with the exact amount of code and minimal complexity, that is easier to manage. The only thing I go to Claude these days, is for front-end code (HTML). Here also, it gives too much of CSS code (60% of the file size), but I&#x27;m OK with that as it gives a bit of polished look, though heavy...\n\n[alecco]: Are Googlers themselves happy using Gemini coding agent instead of Claude Code or Codex? (no snark, I&#x27;m really asking)\n\n[pingou]: AI improving itself (or at least the architecture it runs on), the singularity is near as they say. Do we have other examples of AI being used to improve the LLMs, apart for the creation of synthetic data and the testing of the models?\n\n[ainch]: The AI CEOs love to pontificate about AI curing cancer, but it seems like DeepMind is the only one actively working on these research problems, while OpenAI&#x2F;Anthropic largely chase enterprise&#x2F;coding revenue.",
+    "author": "berlianta",
+    "published_at": "2026-05-07T15:02:20Z",
+    "fetched_at": "2026-05-08T08:50:22.255140",
+    "metadata": {
+      "score": 289,
+      "descendants": 123,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48050278",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48052371",
+    "source_type": "hackernews",
+    "title": "Brazil's Pix payment system faces pressure from Visa and Mastercard",
+    "url": "https://www.elciudadano.com/en/brazils-pix-payment-system-faces-pressure-from-visa-and-mastercard/04/04/",
+    "content": "\n--- Top Comments ---\n\n[WinstonSmith84]: I can see that Visa and Mastercard are freaking out, not because Pix can take over their business model, but because it can give ideas to other countries doing the same. I&#x27;ve spent three months earlier this year in Brazil and never used Pix once. Not because I didn&#x27;t want, but because I couldn&#x27;t, or let&#x27;s be honest: my time was not worth the hassle. To be able to pay with Pix, one needs to get a CPF (Brazilian Tax ID). Then to open a bank account, mostly local banks only a...\n\n[dbolgheroni]: People underestimate how difficult it was to transfer money before Pix, even between local banks. The process was hard to use, it could take days and the fees were huge, depending on your bank. Pix solved all these problems. What happens also is that many sellers provide discounts when using Pix, because you dodge the expensive fees charged not only by Visa and MasterCard, but the fees operators (banks, fintechs) charge to provide the infrastructure (PoS machines, financing for installments, ...\n\n[reese_john]: It is worth noting that despite all this cheap sovereignty talk from Brazil’s president, in practice Brazil would not be able to operate Pix at that scale without heavily relying on American hyperscalers companies. Brazilian institutions are paying hundreds of millions of dollars to US cloud \nproviders, specially AWS, to be able to process that many transactions. Earlier this year, when sa-east-1 was down, major banks were forced to suspend Pix payments for nearly 3 hours. When this happens, ...\n\n[pjg]: It is delightful to see PIX&#x27;s exponential growth. It was preceded by India&#x27;s UPI and borrowed heavily from it\nHere&#x27;s a paper describing the experience:  https:&#x2F;&#x2F;www.braziliankeynesianreview.org&#x2F;BKR&#x2F;article&#x2F;view&#x2F;33...\n\n[h4kunamata]: Read: The USA does not like what they cannot control!! I am glad to see the EU following Brazil with its own payment system. Visa&#x2F;MasterCard&#x2F;Paypal era is gone!!",
+    "author": "wslh",
+    "published_at": "2026-05-07T17:42:58Z",
+    "fetched_at": "2026-05-08T08:50:22.255159",
+    "metadata": {
+      "score": 185,
+      "descendants": 155,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48052371",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48053203",
+    "source_type": "hackernews",
+    "title": "AI slop is killing online communities",
+    "url": "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/",
+    "content": "\n--- Top Comments ---\n\n[AdminAccount]: I think the only reason stackoverflow still has any activity is because the community choose to ban AI content [1] and so did most of its other networks [2]. Perhaps it will even see a (small) resurgence when AI providers start charging for the actual costs. [1]  https:&#x2F;&#x2F;meta.stackoverflow.com&#x2F;questions&#x2F;421831  [2]  https:&#x2F;&#x2F;meta.stackexchange.com&#x2F;questions&#x2F;384922\n\n[CrzyLngPwd]: I run a niche creative community, and we outlawed AI-generated content in 2022 as it was easy to see how corrosive it would be to the community. It hasn&#x27;t been easy. We ban fake AI accounts daily and shrug off around 600 AI content creator accounts monthly. It&#x27;s a lot of work, extra work that wasn&#x27;t needed before AI content came around, and of course, that is an extra cost. I fear losing the battle.\n\n[agustechbro]: I kind feel this might be good.\nBot writen comments and AI media that can no longer be distinguish from real, will make us human leave the social networks, which helped to separate Us humans.\nGoing back to the real world were you can trully believe on what you see, and enjoy the tone, look and scent of of our fellows humans beings.\n\n[carlgreene]: I have largely written Reddit off and no longer visit it \nafter an experiment I did where I had an agent karma farm for me and do some covert advertising. As I went through the posts it wrote I realized that as a reader I would have NO idea that these were just written by a computer. Many many people (or other bots) had full on conversations with it and it scared me a bit. I am not quite there with Hacker News but I do know for a fact that many &quot;users&quot; here are LLMs. Online communit...\n\n[alaudet]: The balance is so far out of whack with LLM&#x27;s now in online communities.  People crave human interaction with like minded individuals, and whoever figures out how to give authentic online experiences is going to be successful.  Maybe small communities need to come back, where you build credibility slowly.  Why does every site have to be a monstrosity that wants to build a hundred million users to IPO. It just attracts the worst.  I was active on Reddit for years under the same username I...",
+    "author": "thm",
+    "published_at": "2026-05-07T18:46:25Z",
+    "fetched_at": "2026-05-08T08:50:22.255174",
+    "metadata": {
+      "score": 632,
+      "descendants": 557,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48053203",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "hackernews:story:48051079",
+    "source_type": "hackernews",
+    "title": "Hardening Firefox with Claude Mythos Preview",
+    "url": "https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/",
+    "content": "<a href=\"https:&#x2F;&#x2F;arstechnica.com&#x2F;information-technology&#x2F;2026&#x2F;05&#x2F;mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;arstechnica.com&#x2F;information-technology&#x2F;2026&#x2F;05&#x2F;mozil...</a>\n\n\n--- Top Comments ---\n\n[jerrythegerbil]: Again, and this is important: A bug is a bug. A “potential vulnerability” is a bug. A vulnerability is verifiable as having security implications with a proof of concept or other substantial evidence. Words matter. Bugs matter. It’s important to fix large amounts of bugs, just as it always has been, and has been done. Let that be impressive on its own, because it IS impressive. Mythos didn’t write 271 PoC for vulnerabilities and demonstrate code path reachability with security implications. M...\n\n[input_sh]: Original source:  https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48051079  It&#x27;s better because it actually lists a sample of Bugzilla reports that were made public. This topic was discussed previously (36 comments two weeks ago:  https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47885042 ), but the part about bug reports being made public is brand new.\n\n[kajman]: I dismissed the earlier non-technical blog post as shameless product boosterism for Anthropic. The linked hacks blog (which is a better source than this article) is a welcome release. It&#x27;s hard to deny there&#x27;s something real to this now, I think. Mozilla&#x27;s internal definition of a &quot;vulnerability&quot; is also probably more widely applied than what many would intuit, but it is good that these issues are being taken seriously and fixed.\n\n[tialaramex]: They&#x27;ve only linked a few tickets, so of course maybe when we see all 271 actual distinct things the insight won&#x27;t apply but all those I examined ended up as some C++ code with a nasty bug in it. Firefox is written in several languages, only about 25% of it is in C++ but every single one of these issues seems to touch the C++.\n\n[Diti]: I hope to see the day when (or if) the LLMs get so good at spotting and fixing bugs that all that’s left for the Firefox engineers to do is to focus on adding new features. This isn’t sarcasm. Firefox deserves to be used more. Most people I know don’t use it because “Chrome does almost everything better”, and Firefox can’t compete with the other browsers’ roadmaps.",
+    "author": "HieronymusBosch",
+    "published_at": "2026-05-07T16:05:33Z",
+    "fetched_at": "2026-05-08T08:50:22.255187",
+    "metadata": {
+      "score": 180,
+      "descendants": 87,
+      "type": "story",
+      "discussion_url": "https://news.ycombinator.com/item?id=48051079",
+      "comment_count": 5
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:simonwillison.net_atom_everything_:-8814034369786990150",
+    "source_type": "rss",
+    "title": "llm-gemini 0.31",
+    "url": "https://simonwillison.net/2026/May/7/llm-gemini/#atom-everything",
+    "content": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-gemini/releases/tag/0.31\">llm-gemini 0.31</a></p>\n        <blockquote>\n<ul>\n<li><code>gemini-3.1-flash-lite</code> is <a href=\"https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available\">no longer a preview</a>. </li>\n</ul>\n</blockquote>\n<p>Here's my write-up of the <a href=\"https://simonwillison.net/2026/Mar/3/gemini-31-flash-lite/\">Gemini 3.1 Flash-Lite Preview model</a> back in March. I don't believe this new non-preview model has changed since then.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/llm-release\">llm-release</a>, <a href=\"https://simonwillison.net/tags/gemini\">gemini</a>, <a href=\"https://simonwillison.net/tags/llm\">llm</a>, <a href=\"https://simonwillison.net/tags/google\">google</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a></p>",
+    "author": "Simon Willison",
+    "published_at": "2026-05-07T19:57:06Z",
+    "fetched_at": "2026-05-08T08:50:18.790984",
+    "metadata": {
+      "feed_name": "Simon Willison",
+      "category": "ai-tools",
+      "tags": [
+        "llm-release",
+        "gemini",
+        "llm",
+        "google",
+        "generative-ai",
+        "ai",
+        "llms"
+      ]
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:simonwillison.net_atom_everything_:5246036846703572392",
+    "source_type": "rss",
+    "title": "Big Words",
+    "url": "https://simonwillison.net/2026/May/7/big-words/#atom-everything",
+    "content": "<p><strong>Tool:</strong> <a href=\"https://tools.simonwillison.net/big-words\">Big Words</a></p>\n        <p>I'm using my <a href=\"https://simonwillison.net/2026/Feb/25/present/\">vibe coded macOS presentations tool</a> to put together a talk, and I wanted to add a slide with some text on it. The tool only accepts URLs, so I <a href=\"https://github.com/simonw/tools/pull/279\">put together</a> a quick page that accepts query string arguments and turns them into a simple slide.</p>\n<p>Here's an example: <a href=\"https://tools.simonwillison.net/big-words?text=simonwillison.net&amp;gradient=1&amp;size=9.5\">https://tools.simonwillison.net/big-words?text=simonwillison.net&amp;gradient=1&amp;size=9.5</a></p>\n<p>Double click or double tap the page to access a form for modifying the different options.</p>\n<p><img alt=\"Screenshot of a slide editing tool showing a slide on the left with &quot;simonwillison.net&quot; in heavy white sans-serif text on a black-to-blue gradient background, and a &quot;Slide settings&quot; panel on the right with: TEXT field containing &quot;simonwillison.net&quot;, TEXT COLOR white, BACKGROUND black, &quot;Use gradient background&quot; checked, SECOND COLOR blue, ANGLE 135°, FONT &quot;System sans-seri&quot;, WEIGHT &quot;Heavy&quot;, SIZE 9.5vmin, unchecked Italic / Uppercase / Drop shadow checkboxes, and Reset and Save URL buttons.\" src=\"https://static.simonwillison.net/static/2026/big-words.jpg\" /></p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/vibe-coding\">vibe-coding</a>, <a href=\"https://simonwillison.net/tags/tools\">tools</a></p>",
+    "author": "Simon Willison",
+    "published_at": "2026-05-07T18:47:09Z",
+    "fetched_at": "2026-05-08T08:50:18.791011",
+    "metadata": {
+      "feed_name": "Simon Willison",
+      "category": "ai-tools",
+      "tags": [
+        "vibe-coding",
+        "tools"
+      ]
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:simonwillison.net_atom_everything_:499895090639100497",
+    "source_type": "rss",
+    "title": "Behind the Scenes Hardening Firefox with Claude Mythos Preview",
+    "url": "https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything",
+    "content": "<p><strong><a href=\"https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/\">Behind the Scenes Hardening Firefox with Claude Mythos Preview</a></strong></p>\nFascinating, in-depth details on how Mozilla used their access to the Claude Mythos preview to locate and then fix hundreds of vulnerabilities in Firefox:</p>\n<blockquote>\n<p><strong>Suddenly, the bugs are very good</strong></p>\n<p>Just a few months ago, AI-generated security bug reports to open source projects were mostly known for being unwanted slop. Dealing with reports that look plausibly correct but are wrong imposes an asymmetric cost on project maintainers: it’s cheap and easy to prompt an LLM to find a “problem” in code, but slow and expensive to respond to it.</p>\n<p>It is difficult to overstate how much this dynamic changed for us over a few short months. This was due to a combination of two main factors. First, the models got a lot more capable. Second, we dramatically improved our techniques for <em>harnessing</em> these models — steering them, scaling them, and stacking them to generate large amounts of signal and filter out the noise.</p>\n</blockquote>\n<p>They include some detailed bug descriptions too, including a 20-year old XSLT bug and a 15-year-old bug in the <code>&lt;legend&gt;</code> element.</p>\n<p>A lot of the attempts made by the harness were blocked by Firefox's existing defense-in-depth measures, which is reassuring.</p>\n<p>Mozilla were fixing around 20-30 security bugs in Firefox per month through 2025. That jumped to 423 in April.</p>\n<p><img alt=\"Bar chart titled &quot;Firefox Security Bug Fixes by Month&quot; with subtitle &quot;All Sources • All Severities&quot; on a dark purple background, showing monthly counts: Jan 2025: 21, Feb 2025: 20, Mar 2025: 26, Apr 2025: 31, May 2025: 17, Jun 2025: 21, Jul 2025: 22, Aug 2025: 17, Sep 2025: 18, Oct 2025: 26, Nov 2025: 19, Dec 2025: 20, Jan 2026: 25, Feb 2026: 61, Mar 2026: 76, Apr 2026: 423 — a dramatic spike in the final month.\" src=\"https://static.simonwillison.net/static/2026/firefox-security.webp\" />\n\n    <p><small></small>Via <a href=\"https://lobste.rs/s/7zppv1/behind_scenes_hardening_firefox_with\">Lobste.rs</a></small></p>\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/firefox\">firefox</a>, <a href=\"https://simonwillison.net/tags/mozilla\">mozilla</a>, <a href=\"https://simonwillison.net/tags/security\">security</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/claude\">claude</a>, <a href=\"https://simonwillison.net/tags/ai-security-research\">ai-security-research</a></p>",
+    "author": "Simon Willison",
+    "published_at": "2026-05-07T17:56:25Z",
+    "fetched_at": "2026-05-08T08:50:18.791027",
+    "metadata": {
+      "feed_name": "Simon Willison",
+      "category": "ai-tools",
+      "tags": [
+        "firefox",
+        "mozilla",
+        "security",
+        "ai",
+        "generative-ai",
+        "llms",
+        "anthropic",
+        "claude",
+        "ai-security-research"
+      ]
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:simonwillison.net_atom_everything_:-8963340124282742067",
+    "source_type": "rss",
+    "title": "Notes on the xAI/Anthropic data center deal",
+    "url": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-everything",
+    "content": "<p>There weren't a lot of big new announcements from Anthropic at yesterday's Code w/ Claude event, but the biggest by far was the deal they've struck with SpaceX/xAI to use \"all of the capacity of their Colossus data center\".</p>\n<p>As I mentioned in my <a href=\"https://simonwillison.net/2026/May/6/code-w-claude-2026/\">live blog of the keynote</a>, that's the one with the <a href=\"https://www.politico.com/news/2025/05/06/elon-musk-xai-memphis-gas-turbines-air-pollution-permits-00317582\">particularly bad environmental record</a>. The gas turbines installed to power the facility initially ran without Clean Air Act permits or pollution control devices, which they got away with by classifying them as \"temporary\". Credible reports link it to increases in hospital admissions relating to low air quality.</p>\n<p>Andy Masley, one of the most prolific voices pushing back against misleading rhetoric about data centers (see <a href=\"https://blog.andymasley.com/p/the-ai-water-issue-is-fake\">The AI water issue is fake</a> and <a href=\"https://blog.andymasley.com/p/data-center-land-use-issues-are-fake\">Data center land issues are fake</a>), had <a href=\"https://x.com/andymasley/status/2052070252930826384\">this to say</a> about Colossus:</p>\n<blockquote>\n<p>I would simply not run my computing out of this specific data center</p>\n</blockquote>\n<p>I get that Anthropic are severely compute-constrained, but in a world where the very existence of \"AI data centers\" is a red-hot political issue (see recent <a href=\"https://kutv.com/news/local/amid-boos-box-elder-county-commission-unanimously-approves-plan-for-massive-data-center\">news out of Utah</a> for a fresh example), signing up with this particular data center is a really bad look.</p>\n<p>There was a lot of initial chatter about how this meant xAI were clearly giving up on their own Grok models, since all of their capacity would be sold to Anthropic instead. That was a misconception - Anthropic are getting Colossus 1, but xAI are keeping their larger Colossus 2 data center for their own work.</p>\n<p>As an interesting side note, the night before the Anthropic announcement, xAI sent out a deprecation notice for Grok 4.1 Fast and several other models providing just two weeks' notice before shutdown, reported here <a href=\"https://twitter.com/xlr8harder/status/2051901091906834439\">by @xlr8harder</a> from SpeechMap:</p>\n<blockquote>\n<p><img alt=\"Effective May 15, 2026 at 12:00pm PT, the following models will be retired from the xAI API: grok-4-1-fast-reasoning, grok-4-1-fast-non-reasoning, grok-4-fast-reasoning, grok-4-fast-non-reasoning, grok-4-0709, grok-code-fast-1, grok-3, grok-imagine-image-pro. After May 15, 2026, requests to these models will no longer work.\" src=\"https://static.simonwillison.net/static/2026/grok-fast-shutdown.png\" /></p>\n<p>This is terrible @xai. I just spent time and money to migrate to grok 4.1 fast, and you're disabling it with less than two weeks notice, after releasing it in November, with no migration path to a fast/cheap alternative.</p>\n<p>I will never depend on one of your products again.</p>\n</blockquote>\n<p>Here's <a href=\"https://speechmap.substack.com/p/speechmap-update-xai-loses-top-spot\">SpeechMap's detailed explanation</a> of how they selected Grok 4.1 Fast for their project in March.</p>\n<p>Were xAI serving those models out of Colossus 1?</p>\n<p>xAI owner Elon Musk (who previously delighted in calling Anthropic <a href=\"https://twitter.com/search?q=from%3Aelonmusk+misanthropic&amp;src=typed_query&amp;f=live\">\"Misanthropic\"</a>) <a href=\"https://twitter.com/elonmusk/status/2052069691372478511\">tweeted</a> the following:</p>\n<blockquote>\n<p>By way of background for those who care, I spent a lot of time last week with senior members of the Anthropic team to understand what they do to ensure Claude is good for humanity and was impressed. [...]</p>\n<p>After that, I was ok leasing Colossus 1 to Anthropic, as SpaceXAI had already moved training to Colossus 2.</p>\n</blockquote>\n<p>And then <a href=\"https://twitter.com/elonmusk/status/2052076315306864756\">shortly afterwards</a>:</p>\n<blockquote>\n<p>Just as SpaceX launches hundreds of satellites for competitors with fair terms and pricing, we will provide compute to AI companies that are taking the right steps to ensure it is good for humanity.</p>\n<p>We reserve the right to reclaim the compute if their AI engages in actions that harm humanity.</p>\n</blockquote>\n<p>Presumably the criteria for \"harm humanity\" are decided by Elon himself. Sounds like a new form of supply chain risk for Anthropic to me!</p>\n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/ai-ethics\">ai-ethics</a>, <a href=\"https://simonwillison.net/tags/ai-energy-usage\">ai-energy-usage</a>, <a href=\"https://simonwillison.net/tags/xai\">xai</a>, <a href=\"https://simonwillison.net/tags/andy-masley\">andy-masley</a></p>",
+    "author": "Simon Willison",
+    "published_at": "2026-05-07T17:09:28Z",
+    "fetched_at": "2026-05-08T08:50:18.791039",
+    "metadata": {
+      "feed_name": "Simon Willison",
+      "category": "ai-tools",
+      "tags": [
+        "ai",
+        "llms",
+        "anthropic",
+        "ai-ethics",
+        "ai-energy-usage",
+        "xai",
+        "andy-masley"
+      ]
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41263",
+    "source_type": "telegram",
+    "title": "宇树 G1 人形机器人在韩国佛门受戒，获法名“迦悲”，遵守不伤害、不过度充电等五戒",
+    "url": "https://www.fnnews.com/news/202605061342176985",
+    "content": "宇树 G1 人形机器人在韩国佛门受戒，获法名“迦悲”，遵守不伤害、不过度充电等五戒\n\n韩国佛诞节前，首尔曹溪寺为身高 130 厘米的宇树 G1 人形机器人举行受戒仪式，授予法名“迦悲”。机器人身着袈裟合掌，完成忏悔和燃臂（以贴纸代替），并回答愿皈依三宝。\n\n传统五戒被改编为机器人版：尊重生命、不伤害生命，不损坏其他机器人和物品，服从人类不顶撞，不做欺骗，节约能源不过度充电。曹溪宗表示，此举象征技术应立足慈悲、智慧与责任，探索人类与技术共存的新可能。\n\nNews1 / 파이낸셜뉴스\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-07T12:02:26Z",
+    "fetched_at": "2026-05-08T08:50:19.789405",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41263",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41264",
+    "source_type": "telegram",
+    "title": "巴西宣布对中国公民免签",
+    "url": "https://www.xinhuanet.com/20260507/9936cb3a9ebf46739c15388fa7bd2d7e/c.html",
+    "content": "巴西宣布对中国公民免签\n\n巴西政府 2026 年 5 月 7 日宣布，自 2026 年 5 月 11 日起，持普通护照的中国公民可免签入境巴西，每次最长停留 30 天。\n\n新华网\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-07T12:33:02Z",
+    "fetched_at": "2026-05-08T08:50:19.789651",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41264",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41265",
+    "source_type": "telegram",
+    "title": "🤖 Google 被发现或在测试 Gemini 的 AI Ultra Lite 套餐",
+    "url": "https://www.androidauthority.com/google-gemini-ai-ultra-lite-3664475/",
+    "content": "🤖 Google 被发现或在测试 Gemini 的 AI Ultra Lite 套餐\n\nAndroid Authority 在 Gemini 的 macOS 应用字符串中发现，Google 似乎在开发名为 AI Ultra Lite 的新订阅档位，代号为“Neon”。现有信息只显示它位于每月 20 美元的 AI Pro 与 250 美元的 AI Ultra 之间，具体价格和权益尚未公布。\n\n同批线索还显示，Google 可能为 Gemini 增加 AI 使用量看板，用来显示 5 小时和每周额度，以及超额额度相关信息。更多细节或许会在 Google I/O 2026 前后出现。\n\nAndroid Authority\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-07T13:34:57Z",
+    "fetched_at": "2026-05-08T08:50:19.789884",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41265",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41266",
+    "source_type": "telegram",
+    "title": "英国 FCA 调查 PayPal、万事达与 Visa 数字钱包合约反竞争问题",
+    "url": "https://www.fca.org.uk/news/press-releases/competition-act-1998-investigations",
+    "content": "英国 FCA 调查 PayPal、万事达与 Visa 数字钱包合约反竞争问题\n\n英国金融行为监管局（FCA）对 PayPal、万事达和 Visa 启动反竞争调查，聚焦 PayPal 数字钱包相关的合同条款。三家公司均表示配合，FCA 尚未就是否违反竞争法得出结论。\n\n英国数字钱包交易占比已从 2023 年的 8% 跃升至 29%，监管机构此前呼吁加强数字钱包提供商之间的竞争，以促进创新和市场准入。CMA 此前已对苹果和谷歌移动生态启动反垄断调查。\n\nFCA︱MarketScreener UK\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-07T14:46:44Z",
+    "fetched_at": "2026-05-08T08:50:19.790095",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41266",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41267",
+    "source_type": "telegram",
+    "title": "上海将承办 2028 年奥运会资格系列赛一站赛事",
+    "url": "https://mp.weixin.qq.com/s/23Njfx43MVO61L-XB-3bPg",
+    "content": "上海将承办 2028 年奥运会资格系列赛一站赛事\n\n国际奥委会确认，2028 年奥运会资格系列赛将在东京、上海、蒙特利尔、奥兰多四城举行。上海站时间为 2028 年 5 月 11 日至 14 日，各站具体项目将后续公布。\n\n赛事设三人篮球、沙滩排球、自由式小轮车、攀岩、腰旗橄榄球、滑板 6 个项目，是 2028 年洛杉矶奥运会的核心资格通道。\n\n上海发布\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-07T15:06:34Z",
+    "fetched_at": "2026-05-08T08:50:19.790315",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41267",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41268",
+    "source_type": "telegram",
+    "title": "🐶 Google 为 AI 搜索结果加入社区观点与链接改进",
+    "url": "https://www.macrumors.com/2026/05/06/google-search-ai-mode-expert-advice/",
+    "content": "🐶 Google 为 AI 搜索结果加入社区观点与链接改进\n\nGoogle 正在更新 Search 的 AI Mode 和 AI Overviews，加入来自公开网络讨论和社交媒体的“观点预览”。这类内容有时会标为“Expert Advice”，也可能显示为“Community Perspectives”，并附创作者姓名、账号或社区名。\n\n这次还加入“Further Exploration”后续探索建议；订阅新闻站点的链接会标注“Subscribed”并优先显示；AI 回答中的链接会更醒目，桌面端悬停链接时还能预览网站名称或网页标题。\n\nMacRumors\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-07T16:02:20Z",
+    "fetched_at": "2026-05-08T08:50:19.790498",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41268",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41269",
+    "source_type": "telegram",
+    "title": "OpenAI升级语音转录及生成模型  OpenAI发布了新的文本转语音模型gpt-4o-mini-tts，和语音转文本模型gpt-4o-transcribe和g",
+    "url": "https://t.me/zaihuapd/41269",
+    "content": "OpenAI升级语音转录及生成模型  OpenAI发布了新的文本转语音模型gpt-4o-mini-tts，和语音转文本模型gpt-4o-transcribe和gpt-4o-mini-transcribe。开发者现可通过自然语言指令控制语音合成效果，如指定特定风格，提升了语音的真实度和可控性。  新语音转录模型在处理口音、嘈杂环境及减少幻觉方面有显著提升。但对某些语言，错误率仍较高。OpenAI此次未开源这些模型，因其规模较大，不适合本地运行。  TechCrunch  📮投稿  ☘️频道  🌸聊天",
+    "author": "zaihuapd",
+    "published_at": "2026-05-07T17:19:14Z",
+    "fetched_at": "2026-05-08T08:50:19.790844",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41269",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41270",
+    "source_type": "telegram",
+    "title": "Linux 内核现严重本地提权漏洞，全主流发行版暂无补丁",
+    "url": "https://github.com/V4bel/dirtyfrag",
+    "content": "Linux 内核现严重本地提权漏洞，全主流发行版暂无补丁\n\n一名安全研究人员本周公开披露了一个被命名为”Dirty Frag”的 Linux 内核本地权限提升漏洞。该漏洞允许普通用户无需密码即可获得系统最高权限（root），且目前 Ubuntu、RHEL、Fedora、openSUSE 等全部主流发行版均尚无可用补丁。\n\n该漏洞由韩国安全研究员 Hyunwoo Kim（网名 @ v4bel）发现并报告。POC 已于 2026 年 5 月 7 日在 GitHub 公开，任何人均可通过单行命令完成编译并执行。\n\n漏洞源自脏写入了零拷贝路径，由两个独立模块链式组合后构成。具体可参考：\nDirty Frag 属于与 Dirty Pipe（CVE-2022-0847）和 Copy Fail 相同的漏洞类——零拷贝发送路径上，splice()将攻击者只有读权限的 page cache 页直接钉入 struct sk_buff 的 frag 槽，而接收侧内核代码对该 frag 执行原地（in-place）加密/解密，导致只读 page cache 被写入。\n\n其一利用 IPsec ESP 模块（存在约 9 年，自 2017 年起受影响），可将 /usr/bin/su 替换为恶意程序，需要创建用户命名空间的权限；其二利用 RxRPC 协议模块（自 2023 年起受影响），可清空 /etc/passwd 中 root 的密码字段，完全无需任何特殊权限。两个变体互相覆盖对方的限制，使得单一攻击程序可在几乎所有主流 Linux 发行版上通用。\n\n上游 Linux 内核已于 5 月 7 日合并了针对 ESP 模块的修复补丁，但 RxRPC 模块的补丁尚未合并。由于协调披露期间遭第三方抢先公开，各发行版未能按计划准备 backport，导致当前所有发行版内核均处于无补丁状态，CVE 编号亦尚未分配。\n被破坏的披露流程：\n2026-04-29/30：作者向 security@kernel.org 提交漏洞和补丁\n2026-05-07：作者向 linux-distros 提交，设定 5 天 embargo\n2026-05-07 同日：不相关的第三方将 exploit 公开至互联网，embargo 被打破\n2026-05-07：作者与发行版维护者协商后，决定全面公开 Dirty Frag 文档\n\n官方建议的缓解措施：\nprintf 'install esp4 /bin/false\\ninstall esp6 /bin/false\\ninstall rxrpc /bin/false\\n' \\\n  > /etc/modprobe.d/dirtyfrag.conf\n此操作对不使用 IPsec 或 AFS 的普通服务器无功能影响。\n\nGitHub\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-07T23:07:23Z",
+    "fetched_at": "2026-05-08T08:50:19.791072",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41270",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41271",
+    "source_type": "telegram",
+    "title": "工信部批复 6 GHz 频段 6G 试验频率使用许可",
+    "url": "https://mp.weixin.qq.com/s/sNgyr34V_TYu_3SfBckG8w",
+    "content": "工信部批复 6 GHz 频段 6G 试验频率使用许可\n\n工业和信息化部近日向 IMT-2030（6G）推进组批复 6 GHz 频段 6G 试验频率使用许可，支持其在部分地区开展 6G 技术试验。\n\n试验将面向国际电信联盟确定的 6G 典型场景和关键性能指标，开展技术研发攻关与测试验证。\n\n工信微报\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T01:14:02Z",
+    "fetched_at": "2026-05-08T08:50:19.791230",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41271",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41272",
+    "source_type": "telegram",
+    "title": "特朗普政府计划邀请英伟达、苹果等公司 CEO 随行访华",
+    "url": "https://www.semafor.com/article/05/07/2026/trump-administration-plans-to-invite-ceos-from-nvidia-apple-exxon-on-china-trip",
+    "content": "特朗普政府计划邀请英伟达、苹果等公司 CEO 随行访华\n\n特朗普政府计划邀请英伟达、苹果、埃克森美孚、波音等公司 CEO，下周随总统赴华访问。知情人士称，名单还包括高通、黑石、花旗、Visa 的高管，且可能继续扩大。\n\n官员表示此行重在推进特朗普与习近平的关系，预期不会有大规模商业协议，仅大豆和波音飞机订单较明确，气氛将不及去年的海湾之行。\n\nSemafor\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T02:03:21Z",
+    "fetched_at": "2026-05-08T08:50:19.791385",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41272",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41273",
+    "source_type": "telegram",
+    "title": "🤖 ChatGPT 新增“信任联系人”功能，检测到自残话题时可通知亲友",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification",
+    "content": "🤖 ChatGPT 新增“信任联系人”功能，检测到自残话题时可通知亲友\n\nOpenAI 为 ChatGPT 成年用户推出可选安全功能“信任联系人”，用户可指定一位朋友、家人或照护者。当系统检测到用户可能谈论自残或自杀时，ChatGPT 会先鼓励用户联系该联系人，并告知联系人可能被通知；经受过专门培训的团队审核后，若确认存在严重安全顾虑，会向联系人发送邮件、短信或 ChatGPT 应用内通知，但不共享聊天内容。须双方均为成年人（韩国需 19 岁以上），且联系人需在收到邀请后一周内接受。\n\n该功能是对此前青少年安全选项的扩展，背景是一名 16 岁少年在长期与 ChatGPT 倾诉后自杀身亡。Meta 也在 Instagram 推出了类似功能，当孩子反复搜索自残话题时会通知家长。\n\nThe Verge\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T02:47:23Z",
+    "fetched_at": "2026-05-08T08:50:19.791551",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41273",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41274",
+    "source_type": "telegram",
+    "title": "🍏 苹果带摄像头 AirPods 进入设计验证测试",
+    "url": "https://www.bloomberg.com/news/articles/2026-05-07/apple-s-camera-equipped-airpods-reach-advanced-testing-stage-in-ai-device-push",
+    "content": "🍏 苹果带摄像头 AirPods 进入设计验证测试\n\n苹果研发中的带摄像头 AirPods 已进入 DVT 设计验证测试，原型机接近定型。摄像头位于左右耳机，用于让 Siri 感知周围环境并提供视觉信息，不用于拍照或录像。\n\n该产品原定最早于今年上半年发售，但因新版 Siri 延迟而推后。若苹果对视觉 AI 功能质量仍不满意，上市时间还可能继续后移。\n\nBloomberg\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T03:32:23Z",
+    "fetched_at": "2026-05-08T08:50:19.791720",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41274",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41275",
+    "source_type": "telegram",
+    "title": "🤖 Codex 推出 Chrome 扩展，可在浏览器中运行 agent 任务",
+    "url": "https://developers.openai.com/codex/changelog",
+    "content": "🤖 Codex 推出 Chrome 扩展，可在浏览器中运行 agent 任务\n\nOpenAI 为 Codex 发布 Chrome 扩展，让 agent 直接在浏览器中操作已登录的网站，处理页面导航和重复数据录入。扩展通过写代码并运行来完成操作，在后台独立标签组工作，不干涉用户当前标签页，支持多任务跨标签页并行。Codex 会根据任务需要自动组合浏览器和插件工具。\n\n使用前需在 Codex app 安装 Chrome 插件，再从 Chrome Web Store 安装扩展。同时，Codex app 内置浏览器功能也得到增强，可操作本地开发服务器和文件页面，用于点击 UI、复现视觉 bug 或验证本地修复。目前除欧盟和英国外全地区可用，这两个地区后续支持。\n\nOpenAI\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T04:17:23Z",
+    "fetched_at": "2026-05-08T08:50:19.791944",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41275",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41276",
+    "source_type": "telegram",
+    "title": "Canvas 遭黑客入侵影响美国多所学校期末周",
+    "url": "https://www.cnn.com/2026/05/07/us/canvas-hack-strands-college-students-finals-week",
+    "content": "Canvas 遭黑客入侵影响美国多所学校期末周\n\n美国多所大学和学区的 Canvas 主页周四出现勒索信息，学生访问成绩、资料和测验受阻。Instructure 当晚称 Canvas 已对“多数用户”恢复可用，此前平台因调查进入维护模式。\n\n黑客组织 ShinyHunters 声称负责本月两起针对 Instructure 的事件。5 月 1 日的另一起事件中，用户名、邮箱地址和学生 ID 号被泄露；此次中断还导致 James Madison University 调整原定周五的考试安排，延至周三。\n\n据传闻，影响范围接近 9000 所学校或组织，泄露数据超过 300 TB，包含姓名，学生 ID，以及学校邮箱等敏感信息。\n\nCNN\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T04:30:32Z",
+    "fetched_at": "2026-05-08T08:50:19.792157",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41276",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41277",
+    "source_type": "telegram",
+    "title": "不能在频道消息底部点表情的群友，不是个例，也不是频道设置问题，这是TGbug（此前官方说要拦截机器人点赞，可能误伤了）",
+    "url": "https://t.me/zaihuapd/41277",
+    "content": "不能在频道消息底部点表情的群友，不是个例，也不是频道设置问题，这是TGbug（此前官方说要拦截机器人点赞，可能误伤了）\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T04:45:31Z",
+    "fetched_at": "2026-05-08T08:50:19.792299",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41277",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41278",
+    "source_type": "telegram",
+    "title": "🦘 美团共享充电宝推出支持 UFCS 1.0 的快充款",
+    "url": "https://mp.weixin.qq.com/s/f-zpBhH_JMrvovEGqLbvWQ",
+    "content": "🦘 美团共享充电宝推出支持 UFCS 1.0 的快充款\n\n美团共享充电宝近日完成全国范围产品迭代，推出新一代共享充电宝，支持 22.5W 超级快充并兼容 UFCS 1.0 协议，配备 7500 mAh 电池和 Lightning、USB-C 双接口线材。\n\nPower-Z 测试显示，该产品可稳定触发 UFCS 1.0，输出档位为 5.00V-11.00V/2.50A，峰值功率达 27.5W。机身标注 CCC、CB、CE 等认证标识。\n\n充电头网评测室\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T05:02:23Z",
+    "fetched_at": "2026-05-08T08:50:19.792481",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41278",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41279",
+    "source_type": "telegram",
+    "title": "🍏 Apple Watch 首次加入教育商店，中国大陆师生可享优惠",
+    "url": "https://www.apple.com.cn/cn-edu/store",
+    "content": "🍏 Apple Watch 首次加入教育商店，中国大陆师生可享优惠\n\nApple Watch 首次进入教育商店，中国大陆等部分市场的师生现可享受约 10% 折扣，需通过资格验证。\n\n中国大陆教育商店页面已列出 Series 11（2699 元起）、SE 3（1799 元起）、Ultra 3（5020 元起）的教育优惠价，但 Hermès 系列不参与；优惠面向高校在读/新录取学生及教师、教职员工。\n\nApple(中国)(1, 2) | 9To5Mac | MacRumors\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T05:56:58Z",
+    "fetched_at": "2026-05-08T08:50:19.792736",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41279",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41280",
+    "source_type": "telegram",
+    "title": "美国最高法院裁定特朗普全球关税违宪，特朗普随即签署 10% 临时关税令作为替代  美国最高法院于 2 月 20 日以 6 比 3 的投票结果裁定，特朗普政府此前",
+    "url": "https://t.me/zaihuapd/41280",
+    "content": "美国最高法院裁定特朗普全球关税违宪，特朗普随即签署 10% 临时关税令作为替代  美国最高法院于 2 月 20 日以 6 比 3 的投票结果裁定，特朗普政府此前依据《国际紧急经济权力法》（IEEPA）征收的全球关税违宪。法院明确指出，宪法赋予国会而非总统征收关税的权力，总统单方面征税属于越权行为。  特朗普随后在白宫签署行政命令，改用《贸易法》第 122 条对全球进口商品征收 10% 的临时从价关税，为期 150 天。该关税将于美东时间 2 月 24 日凌晨生效，豁免范围涵盖关键矿产、能源产品、化肥、药品原料及部分农产品。…",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T06:46:54Z",
+    "fetched_at": "2026-05-08T08:50:19.792988",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41280",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41281",
+    "source_type": "telegram",
+    "title": "今晚油价将调整 或迎年内最大涨幅  国内成品油价格将于今晚 24 时进行调整。",
+    "url": "https://t.me/zaihuapd/41281",
+    "content": "今晚油价将调整 或迎年内最大涨幅  国内成品油价格将于今晚 24 时进行调整。据卓创资讯数据，截至 3 月 5 日收盘，国内第 9 个工作日参考原油变化率为 11.35%，预计汽柴油上调 500 元/吨。折合升价后，92 号汽油、95 号汽油、0 号柴油将分别上涨 0.39 元/升、0.41 元/升、0.42 元/升，加满 50 升 92 号汽油将增加支出 19.5 元。  本轮调整落地后，国内油价将迎来四连涨。今年以来国内成品油价格已历经 4 轮调整，除首轮搁浅外，后续三次均为上涨。最终调整幅度以国家发展改革委官方宣布为准。…",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T07:30:23Z",
+    "fetched_at": "2026-05-08T08:50:19.793153",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41281",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41282",
+    "source_type": "telegram",
+    "title": "Cloudflare 宣布裁员逾 1100 人，称以 AI 重组组织架构为核心驱动",
+    "url": "https://blog.cloudflare.com/building-for-the-future/",
+    "content": "Cloudflare 宣布裁员逾 1100 人，称以 AI 重组组织架构为核心驱动\n\n2026 年 5 月 7 日，美国互联网基础设施公司 Cloudflare 宣布，将在全球范围内裁减超过 1100 名员工。两位创始人当日向全体员工发出内部信，并随即将该信件公开至公司官方博客。两人在信中表示，此次裁员的根本原因在于公司内部人工智能应用的大规模扩张，促使管理层重新审视整体组织架构。\n\n根据内部信披露，过去三个月内，Cloudflare 内部 AI 使用量增长超过 600%，涵盖工程、人力资源、财务、市场等多个部门，员工每天通过 AI 智能体完成大量日常工作。\n\nCloudflare 为离职员工提供的遣散方案包括：相当于其全部基本工资直至 2026 年底的补偿；在美国提供至年底的医疗保险；股权归属延至 2026 年 8 月 15 日；对于尚未达到一年归属节点的员工，公司将豁免其”悬崖期”条款，并按比例计算至 8 月的应得股权。\n\n公司在信中强调，此次裁员将一次性完成，明确拒绝分批裁员的方式。通知方式为直接向离职员工发送邮件，不经过管理层转达。\n\nCloudFlare Blog\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-08T08:15:23Z",
+    "fetched_at": "2026-05-08T08:50:19.793467",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41282",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  }
+]

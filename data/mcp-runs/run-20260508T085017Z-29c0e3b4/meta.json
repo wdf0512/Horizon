@@ -1,0 +1,32 @@
+{
+  "run_id": "run-20260508T085017Z-29c0e3b4",
+  "created_at": "2026-05-08T08:50:17.509308+00:00",
+  "horizon_path": "/Users/defff/Horizon-Fork",
+  "config_path": "/Users/defff/Horizon-Fork/data/config.json",
+  "hours": 24,
+  "since": "2026-05-07T08:50:17.509493+00:00",
+  "source_selection": [
+    "github",
+    "hackernews",
+    "rss",
+    "reddit",
+    "telegram"
+  ],
+  "unknown_sources": [],
+  "raw_count_before_merge": 37,
+  "raw_count": 37,
+  "updated_at": "2026-05-08T09:50:48.942331+00:00",
+  "scored_count": 37,
+  "scored_threshold": 8.0,
+  "scored_above_threshold": 16,
+  "filtered_count": 13,
+  "filter_threshold": 8.0,
+  "topic_dedup_enabled": true,
+  "topic_dedup_removed": 3,
+  "enriched_count": 13,
+  "citation_count": 25,
+  "summary_stage": "enriched",
+  "summary_language": "zh",
+  "summary_generated_at": "2026-05-08T09:50:48.942251+00:00",
+  "summary_artifact": "/Users/defff/Horizon-Fork/data/mcp-runs/run-20260508T085017Z-29c0e3b4/summary-zh.md"
+}

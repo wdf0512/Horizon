@@ -1,5 +1,10 @@
 {
   "mcpServers": {
+    "horizon": {
+      "command": "uv",
+      "args": ["run", "horizon-mcp"],
+      "cwd": "/Users/defff/Horizon-Fork"
+    },
     "obsidian": {
       "command": "/Users/defff/Obsidian/Defang's FK Valut/.obsidian/plugins/mcp-tools/bin/mcp-server",
       "env": {

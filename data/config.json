@@ -57,6 +57,36 @@
         "url": "https://lwn.net/headlines/full_text?key=${LWN_KEY}",
         "enabled": false,
         "category": "linux-kernel"
+      },
+      {
+        "name": "抖音电商规则中心",
+        "url": "https://rsshub.rssforever.com/douyin/user/MS4wLjABAAAARcAHmmF9mAG3JEixq_CdP72APhBlGlLVbN-1eBcPqao",
+        "enabled": false,
+        "category": "compliance-ecommerce"
+      },
+      {
+        "name": "市监局-网络交易监督",
+        "url": "https://rsshub.rssforever.com/gov/samr/news/6ac05b4dbd4e41c69f4529262540459b",
+        "enabled": false,
+        "category": "compliance-regulation"
+      },
+      {
+        "name": "市监局-反不正当竞争",
+        "url": "https://rsshub.rssforever.com/gov/samr/news/c5d2b1b273b545cfbc6f874f670654ab",
+        "enabled": false,
+        "category": "compliance-regulation"
+      },
+      {
+        "name": "网信中国（CAC）",
+        "url": "https://rsshub.rssforever.com/wechat/msghistory/wangxinzhongguo",
+        "enabled": false,
+        "category": "compliance-internet"
+      },
+      {
+        "name": "广电总局公告公示",
+        "url": "https://rsshub.rssforever.com/gov/nrta/news/113",
+        "enabled": true,
+        "category": "compliance-broadcast"
       }
     ],
     "reddit": {
@@ -89,6 +119,16 @@
           "channel": "zaihuapd",
           "enabled": true,
           "fetch_limit": 20
+        },
+        {
+          "channel": "cdtchinesefeed",
+          "enabled": true,
+          "fetch_limit": 10
+        },
+        {
+          "channel": "https1024",
+          "enabled": true,
+          "fetch_limit": 10
         }
       ]
     },

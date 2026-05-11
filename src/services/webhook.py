@@ -431,6 +431,40 @@ class WebhookNotifier:
             }]
 
         delivery = getattr(self.config, "delivery", "summary")
+        if delivery == "items_only":
+            messages: List[dict[str, Any]] = []
+            for item in important_items:
+                meta = item.metadata
+                dir_name = meta.get("dir_name") or meta.get("category") or ""
+                score_str = f"评分：{item.ai_score}/10\n" if item.ai_score is not None else ""
+                cat_line = f"分类：{dir_name}\n" if dir_name else ""
+
+                # Prefer enrichment fields; fall back to ai_summary
+                whats_new = meta.get("whats_new_zh") or ""
+                why_matters = meta.get("why_it_matters_zh") or ""
+                key_details = meta.get("key_details_zh") or ""
+                if whats_new or why_matters:
+                    detail = ""
+                    if whats_new:
+                        detail += f"\n📌 {whats_new}"
+                    if why_matters:
+                        detail += f"\n⚠️ {why_matters}"
+                    if key_details:
+                        detail += f"\n🔍 {key_details}"
+                else:
+                    ai_line = item.ai_summary or ""
+                    detail = f"\n{ai_line}" if ai_line and ai_line != item.title else ""
+
+                tag_line = f"标签：{'、'.join(item.ai_tags)}\n" if item.ai_tags else ""
+                body = f"*{item.title}*\n{score_str}{cat_line}{tag_line}{detail}\n\n🔗 {item.url}"
+                messages.append({
+                    **base_vars,
+                    "message_title": "📋 合规动态",
+                    "message_kind": "compliance_item",
+                    "summary": body,
+                })
+            return messages
+
         if delivery == "summary_and_items":
             item_messages: List[dict[str, Any]] = []
             overview = summarizer.generate_webhook_overview(

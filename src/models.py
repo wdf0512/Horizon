@@ -14,6 +14,7 @@ class SourceType(str, Enum):
     REDDIT = "reddit"
     TELEGRAM = "telegram"
     TWITTER = "twitter"
+    JINRITEMAI = "jinritemai"
 
 
 class ContentItem(BaseModel):
@@ -129,6 +130,12 @@ class TelegramConfig(BaseModel):
     channels: List[TelegramChannelConfig] = Field(default_factory=list)
 
 
+class JinriteMaiConfig(BaseModel):
+    """抖音电商规则中心 scraper configuration."""
+    enabled: bool = True
+    fetch_limit: int = 20
+
+
 class TwitterConfig(BaseModel):
     """Twitter source configuration via Apify."""
     enabled: bool = True
@@ -151,6 +158,7 @@ class SourcesConfig(BaseModel):
     reddit: RedditConfig = Field(default_factory=RedditConfig)
     telegram: TelegramConfig = Field(default_factory=TelegramConfig)
     twitter: Optional[TwitterConfig] = None
+    jinritemai: Optional[JinriteMaiConfig] = None
 
 
 class WebhookConfig(BaseModel):
@@ -159,13 +167,15 @@ class WebhookConfig(BaseModel):
     url_env: Optional[str] = None          # Environment variable name containing the webhook URL
     request_body: Optional[Union[str, dict, list]] = None  # POST body: real JSON object or string with #{key} placeholders; if empty, will use GET
     headers: Optional[str] = None          # Custom headers, "Key: Value" per line
-    delivery: str = "summary"             # summary, or summary_and_items
+    delivery: str = "summary"             # summary, summary_and_items, or items_only
     overview_position: str = "first"       # For summary_and_items: first, or last
     platform: str = "generic"              # generic, feishu, lark, dingtalk, slack, discord
     layout: str = "markdown"               # markdown, or collapsible
     fallback_layout: str = "markdown"      # Layout to use when the requested layout is unsupported
     languages: Optional[List[str]] = None  # Optional language filter for webhook delivery; defaults to all AI languages
     enabled: bool = False
+    category_filter: Optional[List[str]] = None  # if set, only items whose metadata.category is in this list
+    score_threshold_override: Optional[float] = None  # overrides global ai_score_threshold; 0.0 = send all regardless of score
 
 
 class EmailConfig(BaseModel):
@@ -198,3 +208,4 @@ class Config(BaseModel):
     filtering: FilteringConfig
     email: Optional[EmailConfig] = None
     webhook: Optional[WebhookConfig] = None
+    webhooks: List[WebhookConfig] = Field(default_factory=list)

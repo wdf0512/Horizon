@@ -18,6 +18,7 @@ from .scrapers.rss import RSSScraper
 from .scrapers.reddit import RedditScraper
 from .scrapers.telegram import TelegramScraper
 from .scrapers.twitter import TwitterScraper
+from .scrapers.jinritemai import JinriteMaiScraper
 from .ai.client import create_ai_client
 from .ai.analyzer import ContentAnalyzer
 from .ai.summarizer import DailySummarizer
@@ -44,6 +45,11 @@ class HorizonOrchestrator:
             if config.webhook and config.webhook.enabled
             else None
         )
+        self.extra_notifiers = [
+            WebhookNotifier(wh, console=self.console)
+            for wh in config.webhooks
+            if wh.enabled
+        ]
 
     async def run(self, force_hours: int = None) -> None:
         """Execute the complete workflow.
@@ -83,11 +89,12 @@ class HorizonOrchestrator:
             analyzed_items = await self._analyze_content(merged_items)
             self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
 
-            # 5. Filter by score threshold
+            # 5. Filter by score threshold (compliance items handled by extra webhooks)
             threshold = self.config.filtering.ai_score_threshold
             important_items = [
                 item for item in analyzed_items
                 if item.ai_score and item.ai_score >= threshold
+                and not item.metadata.get("category", "").startswith("compliance-")
             ]
             important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
 
@@ -182,6 +189,45 @@ class HorizonOrchestrator:
                         summarizer=summarizer,
                     )
 
+            # 7.5 Enrich compliance items that scored ≥ 5 (search for news coverage)
+            compliance_items = [
+                item for item in analyzed_items
+                if item.metadata.get("category", "").startswith("compliance-")
+                and (item.ai_score or 0) >= 5.0
+            ]
+            if compliance_items:
+                self.console.print(f"📋 Enriching {len(compliance_items)} compliance item(s)...")
+                await self._enrich_important_items(compliance_items)
+
+            # 8. Fire extra webhooks (e.g. compliance channel) from analyzed_items
+            if self.extra_notifiers:
+                for notifier in self.extra_notifiers:
+                    wh_cfg = notifier.config
+                    override = wh_cfg.score_threshold_override
+                    wh_threshold = override if override is not None else self.config.filtering.ai_score_threshold
+                    wh_langs = wh_cfg.languages or self.config.ai.languages
+
+                    wh_items = [
+                        item for item in analyzed_items
+                        if (wh_cfg.category_filter is None or item.metadata.get("category") in wh_cfg.category_filter)
+                        and (wh_threshold == 0 or (item.ai_score is not None and item.ai_score >= wh_threshold))
+                    ]
+
+                    if not wh_items:
+                        self.console.print("🔕 Extra webhook: no matching items, skipping")
+                        continue
+
+                    self.console.print(f"🔔 Extra webhook: {len(wh_items)} item(s) matched")
+                    for lang in wh_langs:
+                        await notifier.send_daily_summary(
+                            summary="",
+                            important_items=wh_items,
+                            all_items_count=len(all_items),
+                            date=today,
+                            lang=lang,
+                            summarizer=DailySummarizer(),
+                        )
+
             self.console.print("[bold green]✅ Horizon completed successfully![/bold green]")
             usage = get_usage_snapshot()
             if usage.total_tokens > 0:
@@ -261,6 +307,11 @@ class HorizonOrchestrator:
             if self.config.sources.twitter and self.config.sources.twitter.enabled:
                 twitter_scraper = TwitterScraper(self.config.sources.twitter, client)
                 tasks.append(self._fetch_with_progress("Twitter", twitter_scraper, since))
+
+            # 抖音电商规则中心 (Playwright)
+            if self.config.sources.jinritemai and self.config.sources.jinritemai.enabled:
+                jinritemai_scraper = JinriteMaiScraper(self.config.sources.jinritemai, client)
+                tasks.append(self._fetch_with_progress("JinriteMai", jinritemai_scraper, since))
 
             # Fetch all concurrently
             results = await asyncio.gather(*tasks, return_exceptions=True)

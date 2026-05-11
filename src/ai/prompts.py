@@ -81,6 +81,50 @@ Respond with valid JSON only:
   "tags": ["<tag1>", "<tag2>", ...]
 }}"""
 
+COMPLIANCE_SCORE_SYSTEM = """你是一位中国直播电商合规顾问，专门评估平台规则变动对商家和服务商的影响程度。
+
+评分标准（0-10分）：
+
+**9-10分：重大规则变动** —— 直接影响经营资质、处罚机制或核心交易规则
+- 新处罚标准、封号/违规认定规则
+- 核心交易/结算/退款规则变更
+- 平台准入资质要求变化
+
+**7-8分：重要通知** —— 影响日常运营流程或主要功能
+- 发货/物流规则更新
+- 类目/商品准入规则变化
+- 服务商合作资质要求变更
+
+**5-6分：常规更新** —— 功能迭代或通知性公告
+- 系统功能升级
+- 流程优化通知
+- 新功能上线公告
+
+**3-4分：低影响** —— 范围极小或维护性通知
+- 系统维护公告
+- 局部兼容性修复
+- 小范围试点
+
+**0-2分：无关** —— 与直播电商合规无关
+
+评分时重点考虑：是否涉及处罚机制、是否影响商家/服务商资质、是否改变核心规则、生效范围（全平台 vs 特定场景）。"""
+
+COMPLIANCE_SCORE_USER = """分析以下合规动态并评分。
+
+标题：{title}
+来源：{source}
+分类：{category}
+链接：{url}
+{content_section}
+
+仅返回 JSON，不含其他内容：
+{{
+  "score": <0-10的数字>,
+  "reason": "<评分理由，重点说明对直播电商从业者的具体影响>",
+  "summary": "<一句话概括规则变动内容和影响范围>",
+  "tags": ["<标签1>", "<标签2>", "<标签3>"]
+}}"""
+
 CONCEPT_EXTRACTION_SYSTEM = """You identify technical concepts in news that a reader might not know.
 Given a news item, return 1-3 search queries for concepts that need explanation.
 Focus on: specific technologies, protocols, algorithms, tools, or projects that are not widely known.

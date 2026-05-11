@@ -8,7 +8,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
 
 from .client import AIClient
-from .prompts import CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER
+from .prompts import CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER, COMPLIANCE_SCORE_SYSTEM, COMPLIANCE_SCORE_USER
 from .utils import parse_json_response
 from ..models import ContentItem
 
@@ -118,19 +118,33 @@ class ContentAnalyzer:
 
         discussion_section = "\n".join(discussion_parts) if discussion_parts else ""
 
-        # Generate user prompt
-        user_prompt = CONTENT_ANALYSIS_USER.format(
-            title=item.title,
-            source=f"{item.source_type.value}",
-            author=item.author or "Unknown",
-            url=str(item.url),
-            content_section=content_section,
-            discussion_section=discussion_section
-        )
+        # Choose prompt based on item category
+        category = item.metadata.get("category", "")
+        is_compliance = category.startswith("compliance-")
+
+        if is_compliance:
+            user_prompt = COMPLIANCE_SCORE_USER.format(
+                title=item.title,
+                source=item.source_type.value,
+                category=item.metadata.get("dir_name") or category,
+                url=str(item.url),
+                content_section=content_section,
+            )
+            system_prompt = COMPLIANCE_SCORE_SYSTEM
+        else:
+            user_prompt = CONTENT_ANALYSIS_USER.format(
+                title=item.title,
+                source=f"{item.source_type.value}",
+                author=item.author or "Unknown",
+                url=str(item.url),
+                content_section=content_section,
+                discussion_section=discussion_section,
+            )
+            system_prompt = CONTENT_ANALYSIS_SYSTEM
 
         # Get AI completion
         response = await self.client.complete(
-            system=CONTENT_ANALYSIS_SYSTEM,
+            system=system_prompt,
             user=user_prompt,
         )
 

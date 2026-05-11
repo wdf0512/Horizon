@@ -144,6 +144,10 @@
         }
       ]
     },
+    "jinritemai": {
+      "enabled": true,
+      "fetch_limit": 20
+    },
     "twitter": {
       "enabled": false,
       "users": ["karpathy", "roifex"],
@@ -158,6 +162,23 @@
     "ai_score_threshold": 8.0,
     "time_window_hours": 24
   },
+  "webhooks": [
+    {
+      "enabled": true,
+      "url_env": "TELEGRAM_WEBHOOK_URL",
+      "delivery": "items_only",
+      "platform": "telegram",
+      "layout": "markdown",
+      "languages": ["zh"],
+      "category_filter": ["compliance-ecommerce", "compliance-broadcast", "compliance-regulation", "compliance-internet"],
+      "score_threshold_override": 0,
+      "request_body": {
+        "chat_id": "-5110844367",
+        "text": "#{message_title}\n\n#{summary}"
+      },
+      "headers": ""
+    }
+  ],
   "webhook": {
     "enabled": true,
     "url_env": "TELEGRAM_WEBHOOK_URL",

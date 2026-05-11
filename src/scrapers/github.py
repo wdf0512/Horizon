@@ -57,11 +57,11 @@ class GitHubScraper(BaseScraper):
                 continue
 
             if source.type == "user_events" and source.username:
-                user_items = await self._fetch_user_events(source.username, since)
+                user_items = await self._fetch_user_events(source.username, since, source.category)
                 items.extend(user_items)
             elif source.type == "repo_releases" and source.owner and source.repo:
                 release_items = await self._fetch_repo_releases(
-                    source.owner, source.repo, since
+                    source.owner, source.repo, since, source.category
                 )
                 items.extend(release_items)
 
@@ -70,7 +70,8 @@ class GitHubScraper(BaseScraper):
     async def _fetch_user_events(
         self,
         username: str,
-        since: datetime
+        since: datetime,
+        category: Optional[str] = None,
     ) -> List[ContentItem]:
         """Fetch public events for a user.
 
@@ -105,7 +106,7 @@ class GitHubScraper(BaseScraper):
                 ]:
                     continue
 
-                item = self._parse_event(event, username)
+                item = self._parse_event(event, username, category)
                 if item:
                     items.append(item)
 
@@ -114,7 +115,7 @@ class GitHubScraper(BaseScraper):
 
         return items
 
-    def _parse_event(self, event: dict, username: str) -> Optional[ContentItem]:
+    def _parse_event(self, event: dict, username: str, category: Optional[str] = None) -> Optional[ContentItem]:
         """Parse GitHub event into ContentItem.
 
         Args:
@@ -165,6 +166,7 @@ class GitHubScraper(BaseScraper):
             metadata={
                 "event_type": event_type,
                 "repo": repo_name,
+                "category": category,
             }
         )
 
@@ -172,7 +174,8 @@ class GitHubScraper(BaseScraper):
         self,
         owner: str,
         repo: str,
-        since: datetime
+        since: datetime,
+        category: Optional[str] = None,
     ) -> List[ContentItem]:
         """Fetch releases for a repository.
 
@@ -212,6 +215,7 @@ class GitHubScraper(BaseScraper):
                         "repo": f"{owner}/{repo}",
                         "tag": release["tag_name"],
                         "prerelease": release.get("prerelease", False),
+                        "category": category,
                     }
                 )
                 items.append(item)

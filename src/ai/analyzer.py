@@ -8,7 +8,12 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
 
 from .client import AIClient
-from .prompts import CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER, COMPLIANCE_SCORE_SYSTEM, COMPLIANCE_SCORE_USER
+from .prompts import (
+    CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER,
+    COMPLIANCE_SCORE_SYSTEM, COMPLIANCE_SCORE_USER,
+    DEPENDENCY_RISK_SYSTEM, DEPENDENCY_RISK_USER,
+    ECOSYSTEM_SIGNAL_SYSTEM, ECOSYSTEM_SIGNAL_USER,
+)
 from .utils import parse_json_response
 from ..models import ContentItem
 
@@ -119,10 +124,9 @@ class ContentAnalyzer:
         discussion_section = "\n".join(discussion_parts) if discussion_parts else ""
 
         # Choose prompt based on item category
-        category = item.metadata.get("category", "")
-        is_compliance = category.startswith("compliance-")
+        category = item.metadata.get("category", "") or ""
 
-        if is_compliance:
+        if category.startswith("compliance-"):
             user_prompt = COMPLIANCE_SCORE_USER.format(
                 title=item.title,
                 source=item.source_type.value,
@@ -131,6 +135,25 @@ class ContentAnalyzer:
                 content_section=content_section,
             )
             system_prompt = COMPLIANCE_SCORE_SYSTEM
+        elif category == "dependency-risk":
+            user_prompt = DEPENDENCY_RISK_USER.format(
+                title=item.title,
+                source=item.source_type.value,
+                url=str(item.url),
+                content_section=content_section,
+                discussion_section=discussion_section,
+            )
+            system_prompt = DEPENDENCY_RISK_SYSTEM
+        elif category == "ecosystem-signal":
+            user_prompt = ECOSYSTEM_SIGNAL_USER.format(
+                title=item.title,
+                source=item.source_type.value,
+                author=item.author or "Unknown",
+                url=str(item.url),
+                content_section=content_section,
+                discussion_section=discussion_section,
+            )
+            system_prompt = ECOSYSTEM_SIGNAL_SYSTEM
         else:
             user_prompt = CONTENT_ANALYSIS_USER.format(
                 title=item.title,

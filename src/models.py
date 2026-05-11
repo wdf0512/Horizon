@@ -72,6 +72,7 @@ class GitHubSourceConfig(BaseModel):
     owner: Optional[str] = None
     repo: Optional[str] = None
     enabled: bool = True
+    category: Optional[str] = None
 
 
 class HackerNewsConfig(BaseModel):

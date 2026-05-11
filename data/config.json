@@ -19,19 +19,64 @@
         "type": "repo_releases",
         "owner": "vllm-project",
         "repo": "vllm",
-        "enabled": true
+        "enabled": true,
+        "category": "ecosystem-signal"
       },
       {
         "type": "repo_releases",
         "owner": "sgl-project",
         "repo": "sglang",
-        "enabled": true
+        "enabled": true,
+        "category": "ecosystem-signal"
       },
       {
         "type": "repo_releases",
         "owner": "triton-lang",
         "repo": "triton",
-        "enabled": true
+        "enabled": true,
+        "category": "ecosystem-signal"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "anthropics",
+        "repo": "anthropic-sdk-python",
+        "enabled": true,
+        "category": "dependency-risk"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "openai",
+        "repo": "openai-python",
+        "enabled": true,
+        "category": "dependency-risk"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "pydantic",
+        "repo": "pydantic",
+        "enabled": true,
+        "category": "dependency-risk"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "encode",
+        "repo": "httpx",
+        "enabled": true,
+        "category": "dependency-risk"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "BerriAI",
+        "repo": "litellm",
+        "enabled": true,
+        "category": "dependency-risk"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "langchain-ai",
+        "repo": "langchain",
+        "enabled": true,
+        "category": "dependency-risk"
       }
     ],
     "hackernews": {
@@ -44,13 +89,31 @@
         "name": "Simon Willison",
         "url": "https://simonwillison.net/atom/everything/",
         "enabled": true,
-        "category": "ai-tools"
+        "category": "ecosystem-signal"
       },
       {
         "name": "GitHub Trending - Daily",
         "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
         "enabled": true,
-        "category": "github-trending"
+        "category": "ecosystem-signal"
+      },
+      {
+        "name": "arXiv AI",
+        "url": "https://rss.arxiv.org/rss/cs.AI",
+        "enabled": true,
+        "category": "ecosystem-signal"
+      },
+      {
+        "name": "arXiv ML",
+        "url": "https://rss.arxiv.org/rss/cs.LG",
+        "enabled": true,
+        "category": "ecosystem-signal"
+      },
+      {
+        "name": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "enabled": true,
+        "category": "ecosystem-signal"
       },
       {
         "name": "LWN.net",
@@ -85,7 +148,7 @@
       {
         "name": "广电总局公告公示",
         "url": "https://rsshub.rssforever.com/gov/nrta/news/113",
-        "enabled": true,
+        "enabled": false,
         "category": "compliance-broadcast"
       },
       {
@@ -145,7 +208,7 @@
       ]
     },
     "jinritemai": {
-      "enabled": true,
+      "enabled": false,
       "fetch_limit": 20
     },
     "twitter": {
@@ -170,10 +233,10 @@
       "platform": "telegram",
       "layout": "markdown",
       "languages": ["zh"],
-      "category_filter": ["compliance-ecommerce", "compliance-broadcast", "compliance-regulation", "compliance-internet"],
-      "score_threshold_override": 0,
+      "category_filter": ["dependency-risk"],
+      "score_threshold_override": 7.0,
       "request_body": {
-        "chat_id": "-5110844367",
+        "chat_id": "6855688015",
         "text": "#{message_title}\n\n#{summary}"
       },
       "headers": ""

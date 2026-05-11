@@ -87,6 +87,18 @@
         "url": "https://rsshub.rssforever.com/gov/nrta/news/113",
         "enabled": true,
         "category": "compliance-broadcast"
+      },
+      {
+        "name": "36kr-电商监管",
+        "url": "https://rsshub.rssforever.com/36kr/search/articles/电商监管",
+        "enabled": false,
+        "category": "compliance-ecommerce"
+      },
+      {
+        "name": "36kr-抖音规则",
+        "url": "https://rsshub.rssforever.com/36kr/search/articles/抖音规则",
+        "enabled": false,
+        "category": "compliance-ecommerce"
       }
     ],
     "reddit": {

@@ -19,22 +19,19 @@
         "type": "repo_releases",
         "owner": "vllm-project",
         "repo": "vllm",
-        "enabled": true,
-        "category": "ecosystem-signal"
+        "enabled": true
       },
       {
         "type": "repo_releases",
         "owner": "sgl-project",
         "repo": "sglang",
-        "enabled": true,
-        "category": "ecosystem-signal"
+        "enabled": true
       },
       {
         "type": "repo_releases",
         "owner": "triton-lang",
         "repo": "triton",
-        "enabled": true,
-        "category": "ecosystem-signal"
+        "enabled": true
       },
       {
         "type": "repo_releases",
@@ -88,34 +85,29 @@
       {
         "name": "Simon Willison",
         "url": "https://simonwillison.net/atom/everything/",
-        "enabled": true,
-        "category": "ecosystem-signal"
+        "enabled": true
       },
       {
         "name": "GitHub Trending - Daily",
         "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
-        "enabled": true,
-        "category": "ecosystem-signal"
+        "enabled": true
       },
       {
         "name": "arXiv AI",
         "url": "https://rss.arxiv.org/rss/cs.AI",
-        "enabled": true,
-        "category": "ecosystem-signal",
+        "enabled": false,
         "max_items": 15
       },
       {
         "name": "arXiv ML",
         "url": "https://rss.arxiv.org/rss/cs.LG",
-        "enabled": true,
-        "category": "ecosystem-signal",
+        "enabled": false,
         "max_items": 15
       },
       {
         "name": "Hugging Face Blog",
         "url": "https://huggingface.co/blog/feed.xml",
-        "enabled": true,
-        "category": "ecosystem-signal"
+        "enabled": true
       },
       {
         "name": "LWN.net",
@@ -199,12 +191,12 @@
         },
         {
           "channel": "cdtchinesefeed",
-          "enabled": true,
+          "enabled": false,
           "fetch_limit": 10
         },
         {
           "channel": "https1024",
-          "enabled": true,
+          "enabled": false,
           "fetch_limit": 10
         }
       ]

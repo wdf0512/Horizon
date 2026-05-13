@@ -80,22 +80,21 @@ class RSSScraper(BaseScraper):
             # Parse feed
             feed = feedparser.parse(response.text)
 
+            feed_id = str(source.url).split("//")[1].replace("/", "_")
             for entry in feed.entries:
+                if source.max_items and len(items) >= source.max_items:
+                    break
+
                 # Parse published date
                 published_at = self._parse_date(entry)
                 if not published_at or published_at < since:
                     continue
 
-                # Generate unique ID from feed URL and entry ID
-                feed_id = str(source.url).split("//")[1].replace("/", "_")
-                entry_id = entry.get("id", entry.get("link", ""))
-                unique_id = f"{feed_id}:{hash(entry_id)}"
-
                 # Extract content
                 content = self._extract_content(entry)
 
                 item = ContentItem(
-                    id=self._generate_id("rss", feed_id, str(hash(entry_id))),
+                    id=self._generate_id("rss", feed_id, str(hash(entry.get("id", entry.get("link", ""))))),
                     source_type=SourceType.RSS,
                     title=entry.get("title", "Untitled"),
                     url=entry.get("link", str(source.url)),

@@ -90,6 +90,7 @@ class RSSSourceConfig(BaseModel):
     url: HttpUrl
     enabled: bool = True
     category: Optional[str] = None
+    max_items: int = 0  # 0 = no limit
 
 
 class RedditSubredditConfig(BaseModel):

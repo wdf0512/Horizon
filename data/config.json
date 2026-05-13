@@ -101,13 +101,15 @@
         "name": "arXiv AI",
         "url": "https://rss.arxiv.org/rss/cs.AI",
         "enabled": true,
-        "category": "ecosystem-signal"
+        "category": "ecosystem-signal",
+        "max_items": 15
       },
       {
         "name": "arXiv ML",
         "url": "https://rss.arxiv.org/rss/cs.LG",
         "enabled": true,
-        "category": "ecosystem-signal"
+        "category": "ecosystem-signal",
+        "max_items": 15
       },
       {
         "name": "Hugging Face Blog",

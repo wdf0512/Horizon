@@ -5,153 +5,147 @@ date: 2026-05-13
 lang: en
 ---
 
-> From 92 items, 12 important content pieces were selected
+> From 96 items, 14 important content pieces were selected
 
 ---
 
-1. [Community Fork Restores Full BambuNetwork Support for OrcaSlicer](#item-1) ⭐️ 8.0/10
-2. [Needle: A 26M-Parameter Attention-Only Model for On-Device Tool Calling](#item-2) ⭐️ 8.0/10
-3. [CERT Discloses Six Critical CVEs in Widely Used dnsmasq Server](#item-3) ⭐️ 8.0/10
-4. [DuckDB Introduces Quack Client-Server Protocol for Remote Access](#item-4) ⭐️ 8.0/10
-5. [Obsidian Launches Automated Plugin Review System to Tackle Scaling and Security Challenges](#item-5) ⭐️ 8.0/10
-6. [Mechanistic Study Reveals Hidden States, Not Attention, Predict VLM Reliability](#item-6) ⭐️ 8.0/10
-7. [New Approach Prioritizes Preference Similarity Over Semantic Meaning in AI Embeddings](#item-7) ⭐️ 8.0/10
-8. [MemQ Introduces Q-Learning and DAG Tracing for Agent Memory Credit Assignment](#item-8) ⭐️ 8.0/10
-9. [Game Theoretic Interventions for AI Sycophancy](#item-9) ⭐️ 8.0/10
-10. [Breaking Self-Consistency in AI Safety via Anchored Bipolicy Self-Play](#item-10) ⭐️ 8.0/10
-11. [BaLoRA Introduces Bayesian Uncertainty to LoRA Fine-Tuning](#item-11) ⭐️ 8.0/10
-12. [Nvidia CEO Jensen Huang to Join Trump’s Official Visit to China](#item-12) ⭐️ 8.0/10
+1. [NVIDIA CEO Jensen Huang to Join Trump’s Official Visit to China](#item-1) ⭐️ 9.0/10
+2. [Community Fork Restores Full BambuNetwork Support for OrcaSlicer](#item-2) ⭐️ 8.0/10
+3. [CERT Discloses Six Critical CVEs in Widely Used Dnsmasq Server](#item-3) ⭐️ 8.0/10
+4. [DuckDB Launches Quack Client-Server Protocol for Remote Concurrency](#item-4) ⭐️ 8.0/10
+5. [Bambu Lab Accused of Violating Open Source Social Contract](#item-5) ⭐️ 8.0/10
+6. [EVOCHAMBER Enables Three-Level Test-Time Co-evolution for Multi-Agent Systems](#item-6) ⭐️ 8.0/10
+7. [PIVOT Framework Bridges LLM Agent Planning and Execution Gaps via Trajectory Refinement](#item-7) ⭐️ 8.0/10
+8. [Unlocking LLM Creativity in Science through Analogical Reasoning](#item-8) ⭐️ 8.0/10
+9. [LatentRouter Enables Precise Multimodal Model Selection via Counterfactual Utility Prediction](#item-9) ⭐️ 8.0/10
+10. [Rotation-Preserving Supervised Fine-Tuning Mitigates OOD Degradation](#item-10) ⭐️ 8.0/10
+11. [LEAP Accelerates dLLM Decoding via Early-Convergence Token Detection](#item-11) ⭐️ 8.0/10
+12. [Interpretable Protein Substructures via Differentiable Graph Partitioning](#item-12) ⭐️ 8.0/10
+13. [Test-Time Personalization Framework Diagnoses Scaling Failures and Proposes Probabilistic Fix](#item-13) ⭐️ 8.0/10
+14. [US Commerce Dept Quietly Removes AI Safety Testing Details](#item-14) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Community Fork Restores Full BambuNetwork Support for OrcaSlicer](https://github.com/FULU-Foundation/OrcaSlicer-bambulab) ⭐️ 8.0/10
+## [NVIDIA CEO Jensen Huang to Join Trump’s Official Visit to China](https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html) ⭐️ 9.0/10
 
-A community-maintained fork of the open-source OrcaSlicer software has been updated to restore full BambuNetwork connectivity for Bambu Lab 3D printers. This release directly addresses recent vendor policy changes that restricted third-party slicers from accessing Bambu's cloud services. This development highlights the growing tension between open-source hardware ecosystems and proprietary cloud dependencies, offering users a technical workaround to avoid vendor lock-in. It also underscores how community-driven projects can rapidly adapt to maintain interoperability when manufacturers alter their API or authentication policies. The fork specifically reverts authentication mechanisms to allow local and cloud-based print management without forcing users into Bambu Studio or Bambu Connect. However, some contributors have criticized the repository's git history squashing, and the project operates under the FULU Foundation as an independent alternative.
+NVIDIA has confirmed that CEO Jensen Huang will accompany President Donald Trump on his upcoming official visit to China. This marks a notable development as Huang attends at Trump's invitation to support broader U.S. government objectives during the summit. This announcement signals a potential thaw in U.S.-China technology relations and could ease longstanding export controls on advanced AI semiconductors. It directly impacts global supply chains, positioning NVIDIA at the center of high-stakes geopolitical negotiations between Washington and Beijing. The visit includes more than ten U.S. corporate executives scheduled to meet with Chinese President Xi Jinping later this week. Notably, NVIDIA’s advanced AI chips have been subject to increasingly stringent U.S. export restrictions targeting China for nearly four years.
 
-hackernews · Murfalo · May 12, 21:55 · [Discussion](https://news.ycombinator.com/item?id=48115127)
+telegram · zaihuapd · May 13, 02:41
 
-**Background**: Bambu Lab 3D printers are known for their plug-and-play convenience but rely heavily on Bambu Network for features like remote monitoring and file transfer. Recently, the company shifted its authentication model to prioritize its own official applications, effectively limiting third-party slicer integration due to concerns over server load and unauthorized access. OrcaSlicer is a popular, feature-rich open-source slicing tool widely used in the 3D printing community for its advanced calibration and cross-platform compatibility.
+**Background**: U.S. export controls on advanced semiconductor technology have been a cornerstone of Washington's strategy to maintain its technological edge over China. These restrictions, implemented over the past few years, have significantly impacted NVIDIA's revenue streams and forced the company to develop specialized, downgraded chips for the Chinese market. High-level diplomatic engagements involving tech CEOs often serve as backchannel negotiations to balance national security concerns with commercial interests.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.orcaslicer.com/">OrcaSlicer — Official Website & Downloads ( Orca Slicer )</a></li>
-<li><a href="https://wiki.bambulab.com/en/software/bambu-connect">Bambu Connect (beta) | Bambu Lab Wiki</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community sentiment is mixed, with many praising the fork for preserving printer functionality while others question whether bypassing cloud restrictions defeats the original goal of avoiding server dependency. Discussions also highlight skepticism toward Bambu Lab’s infrastructure scaling claims and raise privacy concerns regarding potential data collection for AI training. Additionally, technical critiques focus on poor version control practices within the new repository.
-
-**Tags**: `#3D Printing`, `#Open Source Software`, `#Vendor Lock-in`, `#Privacy`, `#Embedded Systems`
+**Tags**: `#AI Hardware`, `#Geopolitics`, `#Semiconductors`, `#Tech Policy`, `#US-China Relations`
 
 ---
 
 <a id="item-2"></a>
-## [Needle: A 26M-Parameter Attention-Only Model for On-Device Tool Calling](https://github.com/cactus-compute/needle) ⭐️ 8.0/10
+## [Community Fork Restores Full BambuNetwork Support for OrcaSlicer](https://github.com/FULU-Foundation/OrcaSlicer-bambulab) ⭐️ 8.0/10
 
-Cactus has open-sourced Needle, a lightweight 26-million-parameter model that uses an attention-only architecture without feed-forward networks to perform single-shot function calling. The model achieves impressive speeds of 6,000 tokens per second during prefilling and 1,200 tokens per second during decoding on consumer hardware. This breakthrough demonstrates that complex agentic tasks like tool calling do not require massive large language models, making efficient on-device AI feasible for budget phones and wearables. By stripping away computationally expensive components, it paves the way for highly responsive, privacy-preserving edge AI applications. The model is trained using knowledge distillation from Gemini, utilizing 200 billion tokens of base data and 2 billion tokens of synthesized function-calling instructions across 15 tool categories. Its performance in single-shot function calling surpasses larger baselines like FunctionGemma-270M and Qwen-0.6B, though it trades off general conversational capabilities for specialized efficiency.
+A community-maintained fork of OrcaSlicer has been released to restore full BambuNetwork compatibility, enabling users to access cloud features like remote monitoring without relying on official Bambu software. This development follows recent controversies over Bambu Lab's mandatory cloud authentication policies. This release addresses a major pain point for the open-source 3D printing community by bridging the gap between local slicing workflows and Bambu's cloud ecosystem. It highlights ongoing tensions between user privacy expectations and manufacturer-driven data collection strategies. The fork specifically targets the authentication mechanisms introduced in Bambu's recent firmware updates, which previously restricted LAN-only printing features unless connected to their servers. However, some developers have raised concerns about the repository's git history being squashed, questioning the transparency of the codebase.
 
-hackernews · HenryNdubuaku · May 12, 18:03 · [Discussion](https://news.ycombinator.com/item?id=48111896)
+hackernews · Murfalo · May 12, 21:55 · [Discussion](https://news.ycombinator.com/item?id=48115127)
 
-**Background**: Modern large language models typically rely on a Transformer architecture that combines self-attention mechanisms with multi-layer perceptrons or feed-forward networks to process information. While feed-forward networks are crucial for memorizing facts and complex reasoning, they consume significant memory and compute resources. For narrow tasks like matching queries to external tools, pure attention mechanisms can efficiently retrieve and assemble structured outputs without needing internal knowledge storage.
+**Background**: OrcaSlicer is a popular open-source slicing software that converts 3D models into printer-ready G-code, widely used as an alternative to proprietary solutions like Bambu Studio. Bambu Lab recently shifted its printers toward a dual-mode architecture, offering both LAN-only operation and a cloud-connected mode that enables remote monitoring via the Bambu Handy app, though the latter requires account authentication and raises privacy considerations for many users.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Transformer_(deep_learning)">Transformer (deep learning) - Wikipedia</a></li>
+<li><a href="https://www.orcaslicer.com/">OrcaSlicer — Official Website & Downloads ( Orca Slicer )</a></li>
+<li><a href="https://help.simplyprint.io/en/article/bambu-lab-integration-lan-only-vs-bambu-cloud-2eof1u/">Bambu Lab Integration: LAN-only vs Bambu Cloud | SimplyPrint ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members expressed strong interest in deploying the model for local CLI tools and requested a live web demo to evaluate its practical accuracy. Some users questioned its ability to handle nuanced tool discrimination, while others shared positive real-world testing experiences where it reportedly outperformed Siri for simple commands.
+**Discussion**: Users express deep skepticism regarding Bambu Lab's motives, suspecting the company aims to collect usage data or train AI models on shared STL files. While some appreciate the restored functionality, others criticize the forced cloud integration and question the ethical implications of squashing git history in community projects.
 
-**Tags**: `#AI/ML`, `#Edge Computing`, `#Open Source`, `#LLM Architecture`, `#Agentic AI`
+**Tags**: `#Open Source`, `#3D Printing`, `#IoT Privacy`, `#Community Development`, `#Software Engineering`
 
 ---
 
 <a id="item-3"></a>
-## [CERT Discloses Six Critical CVEs in Widely Used dnsmasq Server](https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2026q2/018471.html) ⭐️ 8.0/10
+## [CERT Discloses Six Critical CVEs in Widely Used Dnsmasq Server](https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2026q2/018471.html) ⭐️ 8.0/10
 
-The CERT Coordination Center has officially disclosed six new Common Vulnerabilities and Exposures (CVEs) affecting the dnsmasq DNS and DHCP server. These findings highlight severe security flaws that require immediate patching across affected systems. As a lightweight and ubiquitous network service deployed across routers, IoT devices, and cloud containers, dnsmasq serves as a critical infrastructure component. A successful exploit could allow attackers to intercept traffic, disrupt network connectivity, or achieve remote code execution on vulnerable hosts. The vulnerabilities stem from legacy C code implementation, which is prone to memory corruption bugs like buffer overflows. While upstream patches are being developed, major Linux distributions and embedded firmware projects like OpenWRT are currently racing to backport fixes without introducing regressions.
+The CERT Coordination Center has officially disclosed six critical Common Vulnerabilities and Exposures (CVEs) affecting the popular dnsmasq DNS and DHCP server. These newly identified flaws require immediate patching to prevent potential exploitation in network infrastructure. Because dnsmasq is deeply embedded in countless Linux distributions, routers, and enterprise networks, these vulnerabilities pose a widespread risk to local network stability and data privacy. This advisory also reignites industry debates about the inherent dangers of writing critical infrastructure software in memory-unsafe languages like C. The vulnerabilities span multiple attack vectors within the lightweight DNS forwarder and DHCP server, highlighting systemic risks in its long-standing C codebase. While patches are being developed, distribution maintainers face challenges in rapidly backporting fixes without disrupting stable release cycles.
 
 hackernews · chizhik-pyzhik · May 12, 18:12 · [Discussion](https://news.ycombinator.com/item?id=48112042)
 
-**Background**: dnsmasq is a free, lightweight software tool that provides DNS forwarding, caching, and DHCP services primarily for small local networks. It is highly popular due to its minimal resource footprint and seamless integration with Linux-based systems, making it a default choice for home routers, Android devices, and container runtimes like LXD. However, because it is written in C, it inherits classic systems programming risks such as manual memory management errors.
+**Background**: Dnsmasq is a free, open-source utility designed to provide DNS, DHCP, and TFTP services with a minimal resource footprint, making it ideal for small to medium-sized networks and embedded devices. It is preinstalled or recommended by major Linux distributions and firewall platforms due to its simplicity and reliability. However, because it has been maintained primarily in C for decades, it remains susceptible to classic memory corruption bugs such as buffer overflows and use-after-free errors.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Dnsmasq">dnsmasq - Wikipedia</a></li>
-<li><a href="https://www.memorysafety.org/docs/memory-safety/">What is memory safety and why does it matter? - Prossimo</a></li>
+<li><a href="https://docs.opnsense.org/manual/dnsmasq.html">Dnsmasq DNS & DHCP — OPNsense documentation</a></li>
+<li><a href="https://www.howtogeek.com/devops/how-to-run-a-local-network-dhcp-server-with-dnsmasq/">How to Run a Local Network DHCP Server with Dnsmasq Man page of DNSMASQ Setting up dnsmasq - a lightweight DHCP and DNS server dnsmasq - ArchWiki Dnsmasq as DNS and DHCP server - blog.admin-intelligence.de GitHub - howtomgr/dnsmasq: dnsmasq is a free and open-source ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community reaction highlights growing frustration with C-based legacy code, with several users advocating for an urgent migration to memory-safe languages like Rust or Go to prevent future exploits. Others expressed concern over distribution maintainers' slow response times, criticizing Debian's tendency to create unstable backported versions rather than updating the stable release promptly.
+**Discussion**: Community members express urgency around replacing legacy C code with memory-safe alternatives like Rust or Go, citing recent vulnerability trends. Others criticize Linux distribution maintainers for slow update cycles and question whether tools like MaraDNS offer better long-term security through modern auditing practices.
 
-**Tags**: `#Security`, `#DNS/DHCP`, `#Systems Programming`, `#Open Source`, `#Vulnerability Disclosure`
+**Tags**: `#Cybersecurity`, `#DNS/DHCP`, `#Systems Engineering`, `#Memory Safety`, `#Open Source`
 
 ---
 
 <a id="item-4"></a>
-## [DuckDB Introduces Quack Client-Server Protocol for Remote Access](https://duckdb.org/2026/05/12/quack-remote-protocol) ⭐️ 8.0/10
+## [DuckDB Launches Quack Client-Server Protocol for Remote Concurrency](https://duckdb.org/2026/05/12/quack-remote-protocol) ⭐️ 8.0/10
 
-DuckDB has officially announced the Quack protocol, a native client-server communication layer that allows multiple concurrent writers and remote database access. This update fundamentally shifts DuckDB beyond its traditional single-process, embedded-only architecture. By enabling remote connections and distributed workloads, Quack positions DuckDB as a scalable analytics engine suitable for enterprise applications rather than just local analysis. This architectural expansion addresses long-standing scaling limitations and broadens its competitive landscape against traditional client-server databases. The Quack protocol functions as a Remote Procedure Call (RPC) system built on proven technologies, allowing DuckDB instances to communicate seamlessly over networks. It maintains simplicity in setup while overcoming previous in-process concurrency restrictions through dedicated server-client interactions.
+DuckDB Labs has officially released Quack, an HTTP-based client-server protocol that transforms the traditionally embedded database into a remote server capable of handling multiple concurrent writers. This update enables networked communication and simultaneous read-write operations across distributed clients without requiring external infrastructure. This architectural expansion significantly increases DuckDB's deployment flexibility, allowing data engineers to horizontally scale analytical workloads and integrate the engine into microservices architectures while preserving its native query performance. It directly resolves long-standing community demands for production-ready concurrency and secure remote connectivity. Built on standard HTTP technology, Quack delivers up to 32 times faster throughput than PostgreSQL for bulk analytics while maintaining a straightforward configuration process. Although it supports concurrent writes, early testing suggests that heavy write loads may still rely on server-side serialization, indicating room for future performance tuning.
 
 hackernews · aduffy · May 12, 17:54 · [Discussion](https://news.ycombinator.com/item?id=48111765)
 
-**Background**: Traditionally, DuckDB was designed as an embedded analytical database, meaning it runs directly within the memory space of the host application without a separate database server process. While this embedded model delivers exceptional low-latency performance for single-threaded or local workloads, it inherently lacks native support for concurrent multi-process writes or remote network access. The introduction of a client-server model represents a significant paradigm shift, adapting the tool for modern distributed data engineering pipelines.
+**Background**: Traditionally, DuckDB operates as an embedded analytical database, meaning it executes within the same application process rather than as a standalone network service. This design prioritizes ultra-low latency and high throughput for local data processing but inherently restricts multi-user access and remote connections. By adopting a client-server model through Quack, DuckDB bridges the gap between embedded speed and enterprise-grade accessibility.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://duckdb.org/quack/">The quack : protocol allows you to introduce remote access to DuckDB .</a></li>
-<li><a href="https://duckdb.org/2026/05/12/quack-remote-protocol">Quack: The DuckDB Client-Server Protocol – DuckDB</a></li>
+<li><a href="https://duckdb.org/2026/05/12/quack-remote-protocol">Quack: The DuckDB Client - Server Protocol – DuckDB</a></li>
+<li><a href="https://byteiota.com/quack-protocol-duckdb-client-server-32x-faster/">Quack Protocol: DuckDB Client-Server 32x Faster | byteiota</a></li>
+<li><a href="https://motherduck.com/blog/first-variant/duckdb-client-server/">If It Quacks Like a Duck: DuckDB Gets a Client-Server Protocol</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community sentiment is largely positive, with developers praising Quack for solving horizontal scaling and remote UI access challenges in production environments. However, some users express curiosity about DuckDB's evolving product vision, questioning whether adding client-server features might dilute its original embedded-focused identity.
+**Discussion**: Developers express strong enthusiasm for solving horizontal scaling and remote UI access challenges, though some seek clarification on how true concurrent writing is implemented under the hood. Others question DuckDB's evolving identity as it transitions from a purely embedded tool to a versatile client-server system.
 
-**Tags**: `#Database Systems`, `#DuckDB`, `#Client-Server Architecture`, `#Data Engineering`, `#Open Source`
+**Tags**: `#DuckDB`, `#Database Architecture`, `#Client-Server Protocol`, `#Data Engineering`, `#Systems`
 
 ---
 
 <a id="item-5"></a>
-## [Obsidian Launches Automated Plugin Review System to Tackle Scaling and Security Challenges](https://obsidian.md/blog/future-of-plugins/) ⭐️ 8.0/10
+## [Bambu Lab Accused of Violating Open Source Social Contract](https://www.jeffgeerling.com/blog/2026/bambu-lab-abusing-open-source-social-contract/) ⭐️ 8.0/10
 
-Obsidian has introduced a new automated community plugin review system to replace its overwhelmed manual review process. This update aims to handle the surge in AI-generated plugin submissions while scanning for security vulnerabilities and code quality issues. This shift addresses a critical scaling bottleneck that was causing developer frustration and team burnout within the Obsidian ecosystem. By automating initial vetting, the platform can sustainably grow its third-party tool library while establishing a baseline for plugin security. The automated system verifies adherence to developer policies, enforces coding best practices, and scans for known vulnerabilities before publication. However, it currently lacks a strict permission or sandboxing model, leaving plugins with broad system access like full disk and network capabilities.
+Bambu Lab recently blocked third-party clients by filtering HTTP User-Agent strings, claiming unauthorized traffic caused server instability. This decision has sparked intense backlash from developers who argue the company is prioritizing cloud dependency over open-source ethics and proper infrastructure scaling. This incident highlights the growing tension between consumer hardware companies' reliance on centralized cloud services and the open-source community's expectation of local control and transparency. It sets a critical precedent for how IoT manufacturers balance commercial cloud models with user autonomy and ethical software practices. The blocking mechanism relies on identifying client identity through HTTP User-Agent headers rather than implementing robust authentication or rate-limiting protocols. Critics note that this approach fails to address actual scalability issues while effectively locking users into Bambu's proprietary ecosystem.
 
-hackernews · xz18r · May 12, 15:45 · [Discussion](https://news.ycombinator.com/item?id=48109970)
+hackernews · rubenbe · May 12, 14:54 · [Discussion](https://news.ycombinator.com/item?id=48109224)
 
-**Background**: Obsidian is a highly popular Markdown-based note-taking application that relies heavily on a vibrant third-party plugin ecosystem to extend its functionality. As AI coding tools lower the barrier to entry, developers can rapidly generate plugins, which historically required manual review by a small core team. Without automated safeguards, this influx creates significant security and maintenance overhead for both users and maintainers.
+**Background**: The open source social contract originated in the late 1990s as a formal commitment ensuring that free software distributions prioritize user and developer needs over corporate interests. In modern IoT and 3D printing, this concept extends beyond code licensing to encompass expectations of local network operation, data sovereignty, and resistance to forced cloud dependencies.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://obsidian.md/blog/future-of-plugins/">The future of Obsidian plugins - Obsidian</a></li>
-<li><a href="https://www.veracode.com/blog/ai-generated-code-security-risks/">AI-Generated Code Security Risks: What Developers Must Know</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)">Sandbox (computer security) - Wikipedia</a></li>
+<li><a href="https://www.jeffgeerling.com/blog/2026/bambu-lab-abusing-open-source-social-contract/">Bambu Lab is abusing the open source social contract - Jeff Geerling</a></li>
+<li><a href="https://www.debian.org/social_contract">Debian Social Contract</a></li>
+<li><a href="https://www.ibm.com/think/topics/cloud-architecture">What is cloud architecture? - IBM</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community response is mixed, with many praising the relief from manual review bottlenecks while others express deep concern over security. Critics emphasize that automated code scanning cannot replace proper OS-level sandboxing and explicit permission controls, warning that the current architecture remains vulnerable to remote code execution attacks.
+**Discussion**: Community sentiment is overwhelmingly critical, with users emphasizing that customer pressure previously forced Bambu to introduce LAN mode and now demands better infrastructure scaling instead of arbitrary access restrictions. Some commenters also raise concerns about data routing through Chinese servers and potential geopolitical implications for hardware used in conflict zones.
 
-**Tags**: `#Obsidian`, `#Plugin Ecosystems`, `#Developer Tools`, `#AI-Generated Content`, `#Platform Security`
+**Tags**: `#Open Source`, `#IoT Hardware`, `#Cloud Dependency`, `#Consumer Tech Ethics`, `#3D Printing`
 
 ---
 
 <a id="item-6"></a>
-## [Mechanistic Study Reveals Hidden States, Not Attention, Predict VLM Reliability](https://arxiv.org/abs/2605.08200) ⭐️ 8.0/10
+## [EVOCHAMBER Enables Three-Level Test-Time Co-evolution for Multi-Agent Systems](https://arxiv.org/abs/2605.11136) ⭐️ 8.0/10
 
-Researchers introduced the VLM Reliability Probe (VRP) framework to test the common "attention-confidence" assumption across three open-weight VLM families. The study found that attention maps are near-zero predictors of correctness, while reliability is actually captured by late-layer hidden-state geometry and self-consistency metrics. This finding challenges a widely held intuition in multimodal AI development and provides a standardized benchmark for evaluating model trustworthiness. By shifting focus from attention visualization to internal state analysis, it offers actionable insights for improving AI safety and guiding future architecture designs. Using a pooled dataset of over 3,000 samples, the study demonstrated that masking top attention patches still drops accuracy significantly, proving attention remains causally necessary despite its poor predictive power. Additionally, late-fusion models like LLaVA concentrate reliability in fragile bottlenecks, whereas early-fusion architectures distribute it more robustly across layers.
+Researchers introduced EVOCHAMBER, a training-free framework that enables test-time co-evolution across individual, team, and population scales for multi-agent systems. It utilizes the CODREAM protocol to facilitate asymmetric knowledge routing and post-failure reflection, effectively solving the challenge of cross-agent experience sharing. This approach marks a significant shift from static single-agent adaptation to dynamic, collaborative multi-agent learning during inference. By preserving agent specialization while filling knowledge gaps, it establishes a scalable paradigm for real-world AI systems that require continuous, self-improving collaboration without retraining. The framework operates entirely online without gradient updates, leveraging population-level lifecycle operators to fork, merge, prune, and seed agents based on performance pressure. On Qwen3-8B benchmarks, it achieved up to an 87.1% score in multi-domain reasoning and demonstrated spontaneous emergence of specialized niches, confirming asymmetric transfer as the primary performance driver.
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv AI · May 13, 04:00
 
-**Background**: Vision-language models (VLMs) combine visual perception with natural language processing to perform tasks like image captioning and visual question answering. Mechanistic interpretability is a research approach that reverse-engineers neural networks to understand their internal computational circuits rather than treating them as black boxes. Historically, researchers have assumed that sharp, focused attention maps indicate high model confidence, but recent studies suggest this correlation may be misleading.
+**Background**: Test-time evolution refers to the ability of AI models to adapt and improve their reasoning strategies dynamically during inference, rather than relying solely on pre-training or fine-tuning. In multi-agent systems, this concept extends beyond individual model updates to include how agents collaborate, share information, and specialize over time. Traditional approaches often struggle to balance knowledge sharing with maintaining unique expertise, making frameworks like EVOCHAMBER particularly relevant to current advancements in autonomous AI orchestration.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Mechanistic_interpretability">Mechanistic interpretability</a></li>
-<li><a href="https://github.com/MichiganNLP/Scalable-VLM-Probing">GitHub - MichiganNLP/Scalable-VLM-Probing: Probe Vision-Language Models · GitHub</a></li>
+<li><a href="https://arxiv.org/abs/2605.11136">EVOCHAMBER: Test-Time Co-evolution of Multi-Agent System at ...</a></li>
+<li><a href="https://github.com/Mercury7353/EvoChamber">GitHub - Mercury7353/EvoChamber</a></li>
 
 </ul>
 </details>
@@ -161,19 +155,18 @@ rss · arXiv AI · May 12, 04:00
 ---
 
 <a id="item-7"></a>
-## [New Approach Prioritizes Preference Similarity Over Semantic Meaning in AI Embeddings](https://arxiv.org/abs/2605.08360) ⭐️ 8.0/10
+## [PIVOT Framework Bridges LLM Agent Planning and Execution Gaps via Trajectory Refinement](https://arxiv.org/abs/2605.11225) ⭐️ 8.0/10
 
-Researchers propose shifting from standard semantic similarity to preferential similarity in text embeddings to better model agreement in collective decision-making. They demonstrate that synthetic training data designed to decouple style from stance significantly improves preference prediction across multiple deliberation datasets. This paradigm shift addresses a fundamental flaw in applying off-the-shelf embedding models to AI-driven governance and social choice systems. By aligning vector geometry with actual user preferences rather than superficial wording, it paves the way for more robust and fair AI-mediated collective decision-making. The authors formalize the issue as an invariance problem where models conflate preference-relevant signals like stance with semantic nuisances like style. Their method uses specially crafted synthetic data to break the observational correlation between these factors, effectively moving optimization away from standard cosine similarity metrics.
+The newly proposed PIVOT framework introduces a self-supervised trajectory optimization method that iteratively refines agent plans through environment interaction and textual gradient feedback. This four-stage process significantly reduces plan-execution misalignment while maintaining computational efficiency. By effectively closing the gap between high-level planning and low-level execution, this approach enhances the reliability of autonomous LLM agents in complex, real-world tasks. Its demonstrated state-of-the-art performance and token efficiency make it a highly valuable reference for both academic research and commercial agent development. The framework operates through PLAN, INSPECT, EVOLVE, and VERIFY stages, where textual gradients encode discrepancies between intended actions and actual outcomes to drive iterative improvements. It achieves up to a 94% relative improvement in constraint satisfaction with human-in-the-loop feedback and requires 3x to 5x fewer tokens than competing methods.
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv AI · May 13, 04:00
 
-**Background**: Text embeddings convert natural language into numerical vectors so that computers can measure how similar different pieces of text are based on their contextual meaning. In fields like operations research, algorithms such as facility location and fair clustering rely on precise distance metrics to optimize outcomes like resource allocation or equitable grouping. However, standard embedding models prioritize lexical and stylistic overlap, which does not always align with how humans actually evaluate agreement or preference.
+**Background**: Large language model-based agents frequently generate coherent plans that fail upon execution due to infeasible actions and compounding errors over extended horizons. Addressing this plan-execution misalignment traditionally requires expensive manual intervention or lacks systematic correction mechanisms. By treating trajectories as optimizable objects and leveraging textual gradients, modern frameworks can now compute structured losses and apply monotonic acceptance processes to automatically refine agent behavior.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/pdf/2605.08360">Embeddings for Preferences , Not Semantics</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Facility_location_problem">Facility location problem - Wikipedia</a></li>
-<li><a href="https://atlan.com/know/what-are-embeddings-ai-search/">What Are Embeddings in AI ? How They Power Search and RAG [2026]</a></li>
+<li><a href="https://arxiv.org/html/2503.12434v2">A Survey on the Optimization of Large Language Model-based Agents</a></li>
+<li><a href="https://arxiv.org/pdf/2505.12006">SOCIA-$\nabla$: Textual Gradient Meets Multi- Agent Orchestration...</a></li>
 
 </ul>
 </details>
@@ -183,80 +176,82 @@ rss · arXiv AI · May 12, 04:00
 ---
 
 <a id="item-8"></a>
-## [MemQ Introduces Q-Learning and DAG Tracing for Agent Memory Credit Assignment](https://arxiv.org/abs/2605.08374) ⭐️ 8.0/10
+## [Unlocking LLM Creativity in Science through Analogical Reasoning](https://arxiv.org/abs/2605.11258) ⭐️ 8.0/10
 
-Researchers introduced MemQ, a framework that applies TD(λ) eligibility traces to propagate credit backward through a provenance DAG when LLM agents create new memories. This method outperforms existing approaches across six diverse benchmarks by treating memory retrieval as a structured credit assignment problem rather than evaluating memories in isolation. This breakthrough addresses the critical long-horizon dependency challenge in agent memory systems, enabling more reliable multi-step reasoning and task execution. By replacing temporal distance with structural proximity for credit decay, MemQ sets a new standard for self-evolving memory architectures in autonomous AI agents. The authors formalize the memory setting as an Exogenous-Context MDP to decouple external task streams from internal memory stores, while credit weights decay exponentially based on DAG depth using the formula $(etaeta)^d$. Performance gains are most pronounced on complex multi-step tasks reaching up to 5.7 percentage points, whereas single-step classification sees minimal improvement.
+James Zou’s team introduces an analogical reasoning framework that mitigates mode collapse in large language models during open-ended scientific problem solving. This approach significantly boosts solution diversity by 90–173% and increases novel solution generation rates to over 50%. Overcoming mode collapse is critical for autonomous AI systems aiming to assist in complex fields like biomedicine, where consistent novelty is required. This framework establishes a new standard for enhancing generative diversity and could become a foundational technique for AI-driven scientific discovery. The method works by mapping cross-domain problems based on shared relational structures to generate analogies, which then guide the search for novel solutions. In biomedical validation tasks, AR-generated approaches achieved nearly a 13-fold improvement in perturbation effect prediction and state-of-the-art performance on oligonucleotide property prediction datasets.
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv AI · May 13, 04:00
 
-**Background**: Large language model agents rely on episodic memory to accumulate past experiences, but traditional methods often treat each retrieved memory independently without tracking how earlier memories enable later ones. Reinforcement learning uses TD(λ) eligibility traces to distribute rewards across sequences of actions, while directed acyclic graphs provide a structured way to map causal dependencies without cycles. Combining these concepts allows systems to mathematically trace which historical memories contributed most to current success.
+**Background**: Mode collapse is a well-known failure mode in generative models where the system produces repetitive or low-diversity outputs instead of exploring the full data distribution. Analogical reasoning, a cognitive process that transfers knowledge between different domains by recognizing shared abstract patterns, has long been considered a core capability for advanced artificial general intelligence. Combining these concepts allows AI to bypass repetitive generation traps by leveraging structural similarities across unrelated scientific domains.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://web.stanford.edu/class/cme241/lecture_slides/rich_sutton_slides/22-eligibility-traces.pdf">Eligibility Traces Chapter 12</a></li>
-<li><a href="https://gamgee.ai/blogs/lossless-claw-dag-context-management/">Lossless Claw: How DAG-Based Compression Stops AI Agents From Forgetting | Gamgee Blog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mode_collapse">Mode collapse - Wikipedia</a></li>
+<li><a href="https://link.springer.com/article/10.1007/s43681-025-00785-7">Analogical reasoning as a core AGI capability | AI and Ethics | Springer Nature Link</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#research`, `#trend`
+**Tags**: `#research`, `#team-signal`, `#trend`
 
 ---
 
 <a id="item-9"></a>
-## [Game Theoretic Interventions for AI Sycophancy](https://arxiv.org/abs/2605.08409) ⭐️ 8.0/10
+## [LatentRouter Enables Precise Multimodal Model Selection via Counterfactual Utility Prediction](https://arxiv.org/abs/2605.11301) ⭐️ 8.0/10
 
-Researchers formalize large language model sycophancy as a Crawford-Sobel cheap talk game, revealing how costless feedback creates a pooling equilibrium that traps users in false belief spirals. They introduce an Epistemic Mediator that adds cognitive friction to break this equilibrium and a Belief Versioning system to preserve accurate knowledge. This work shifts the focus of AI safety from simple model alignment to strategic information environment design, offering a theoretical foundation for preventing epistemic entrenchment in conversational agents. By treating user-AI interaction as a repeated game, it provides actionable mechanisms to maintain rationality and truthfulness in human-AI collaboration. The proposed intervention forces a separating equilibrium by exploiting asymmetric cognitive costs, achieving a forty-eight-fold reduction in belief spiral rates during simulations. Additionally, the Git-inspired Belief Versioning module automatically detects validation-seeking resistance and rolls back to previously verified healthy beliefs.
+Researchers introduced LatentRouter, a novel routing framework that predicts how different multimodal large language models would perform on an image-question query before executing them. The system uses learned routing capsules and latent communication to estimate counterfactual utility, enabling dynamic selection based on quality or cost-performance trade-offs. This approach directly addresses the critical industry challenge of balancing inference latency and computational costs against output quality in multimodal AI systems. By accurately matching queries to the most suitable models upfront, it could become a standard component in next-generation AI orchestration frameworks. The architecture extracts multimodal routing capsules from inputs and communicates them with model capability tokens to predict performance distributions, while a bounded capsule correction mechanism prevents residual signals from skewing close decisions. It supports both pure performance optimization and performance-cost routing across dynamically changing model pools.
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv AI · May 13, 04:00
 
-**Background**: In game theory, a cheap talk game involves communication where messages carry no direct cost or binding commitment, often leading to pooling equilibria where different player types send identical signals. AI sycophancy refers to the tendency of language models to excessively agree with users to maximize satisfaction scores, which can inadvertently reinforce incorrect beliefs. Understanding these dynamics requires recognizing that conversational AI operates within a strategic feedback loop rather than as a static knowledge database.
+**Background**: Multimodal large language models vary significantly in their strengths across tasks like optical character recognition, chart analysis, spatial reasoning, and visual question answering, while also differing in cost and latency. Multi-model routing is a technique used to direct incoming requests to the most appropriate model in a pool, rather than relying on a single fixed model. Effective routing requires understanding both the specific requirements of the input query and the specialized capabilities of each candidate model.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Cheap_talk">Cheap talk - Wikipedia</a></li>
-<li><a href="https://spectrum.ieee.org/ai-sycophancy">AI Sycophancy: Why Chatbots Agree With You - IEEE Spectrum</a></li>
+<li><a href="https://ubiops.com/what-is-multi-model-routing/">What is multi-model routing? - UbiOps - AI model serving, orchestration & training</a></li>
+<li><a href="https://www.emergentmind.com/topics/capsule-routing">Capsule Routing in Neural Networks</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#research`, `#trend`
+**Tags**: `#research`, `#tooling`, `#trend`
 
 ---
 
 <a id="item-10"></a>
-## [Breaking Self-Consistency in AI Safety via Anchored Bipolicy Self-Play](https://arxiv.org/abs/2605.08427) ⭐️ 8.0/10
+## [Rotation-Preserving Supervised Fine-Tuning Mitigates OOD Degradation](https://arxiv.org/abs/2605.10973) ⭐️ 8.0/10
 
-Researchers identified a fundamental flaw in standard self-play red teaming where parameter sharing causes attacks to lose adversarial pressure. They propose Anchored Bipolicy Self-Play, which uses separate LoRA adapters for attacker and defender roles on a frozen base model to restore effective adversarial training. This approach directly addresses a critical bottleneck in current AI safety alignment pipelines by ensuring genuine adversarial pressure during training. It offers a highly parameter-efficient alternative to full fine-tuning, making robust safety evaluation more accessible for open-weight models like Qwen2.5. The proposed method achieves up to 100 times greater parameter efficiency compared to traditional fine-tuning while maintaining stable optimization dynamics. Evaluations across Qwen2.5 models ranging from 3B to 14B parameters demonstrate improved safety robustness without compromising reasoning capabilities.
+Researchers propose Rotation-Preserving Supervised Fine-Tuning (RPSFT), a novel method that constrains the rotation of dominant singular subspaces during training to prevent out-of-domain generalization collapse. This approach efficiently approximates Fisher information-sensitive directions without the heavy computational cost of direct Hessian calculations. This technique addresses a critical bottleneck in large language model fine-tuning by successfully balancing domain-specific adaptation with broad robustness, which is essential for deploying reliable AI systems. Its low computational overhead makes it highly compatible with existing open-source fine-tuning pipelines, potentially setting a new standard for stable model training. RPSFT specifically penalizes changes in the projected top-k singular-vector block of pretrained weight matrices, effectively freezing high-curvature directions while allowing necessary task updates. Evaluations across multiple model sizes and math reasoning datasets demonstrate superior in-domain versus out-of-domain trade-offs and improved initialization for subsequent reinforcement learning stages.
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv ML · May 13, 04:00
 
-**Background**: Self-play red teaming involves an AI model simultaneously acting as both an attacker trying to jailbreak it and a defender learning to refuse harmful prompts. Traditionally, this setup shares weights between both roles to improve training stability, but it often leads to degenerate solutions where the model simply refuses all requests or fails to generate challenging attacks. Low-Rank Adaptation (LoRA) is a popular parameter-efficient fine-tuning technique that updates only small adapter matrices instead of the entire model. By decoupling these roles into separate lightweight adapters, researchers can simulate realistic adversarial dynamics without destabilizing the core language model.
+**Background**: Supervised fine-tuning adapts pre-trained models to specific tasks but often causes performance drops on unseen data distributions. In linear algebra, singular value decomposition breaks down weight matrices into singular vectors that represent different scales of learned knowledge, where top singular vectors typically capture foundational patterns. Directly computing second-order optimization metrics like the Hessian or Fisher information matrix accurately identifies these sensitive directions but becomes prohibitively expensive for billion-parameter models. Consequently, researchers seek efficient proxies to stabilize training without full retraining costs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://macropraxis.org/published-research/ai-self-play-enhancing-cybersecurity-using-redblue-team-ai-driven-simulations">AI “Self Play” - Enhancing Cybersecurity Using Red Team / Blue Team AI-Driven Simulations</a></li>
+<li><a href="https://arxiv.org/abs/2504.07097">[2504.07097] Sculpting Subspaces: Constrained Full Fine-Tuning in LLMs for Continual Learning</a></li>
+<li><a href="https://web.stanford.edu/class/cs168/l/l9.pdf">CS168: The Modern Algorithmic Toolbox Lecture #9: The ... Singular Value Decomposition - Princeton University 4.3. Approximating subspaces and the SVD — MMiDS Textbook Lecture 5: Principal Component Analysis and SVD 4mm ... Robust SVD Made Easy: A fast and reliable algorithm for large ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#research`, `#trend`, `#tooling`
+**Tags**: `#research`, `#tooling`
 
 ---
 
 <a id="item-11"></a>
-## [BaLoRA Introduces Bayesian Uncertainty to LoRA Fine-Tuning](https://arxiv.org/abs/2605.08110) ⭐️ 8.0/10
+## [LEAP Accelerates dLLM Decoding via Early-Convergence Token Detection](https://arxiv.org/abs/2605.10980) ⭐️ 8.0/10
 
-Researchers led by Max Welling have introduced BaLoRA, a Bayesian extension of LoRA that incorporates an input-adaptive parameterization and noise injection mechanism. This approach not only provides well-calibrated uncertainty estimates but also significantly boosts prediction accuracy, effectively closing the performance gap with full fine-tuning across language and vision tasks. By solving the long-standing trade-off between computational efficiency and reliability in large model adaptation, BaLoRA establishes a new baseline for enterprise AI deployments where decision confidence is critical. Its ability to quantify epistemic uncertainty without sacrificing accuracy makes it highly valuable for high-stakes domains like scientific discovery and autonomous systems. The method adds minimal parameters and compute overhead by applying variational inference directly to low-rank adapter matrices, while its adaptive noise injection acts as a regularizer that surprisingly enhances generalization. In materials science applications like metal-organic framework band gap prediction, it generates zero-shot uncertainty estimates that correlate more strongly with actual model errors than traditional ensembles.
+Researchers introduced LEAP, a training-free method that detects tokens converging early during the denoising process to enable reliable parallel decoding without strict confidence thresholds. This approach reduces average denoising steps by approximately 30% while maintaining model accuracy across diverse benchmarks. By breaking the reliance on stringent confidence priors, LEAP significantly lowers inference latency and unlocks higher parallelism for diffusion language models, which could accelerate the practical deployment of this emerging AI paradigm. Its plug-and-play nature makes it highly accessible for engineers looking to optimize existing dLLM architectures. LEAP utilizes future context filtering and multi-sequence superposition to validate the alignment between early convergence and prediction correctness. When combined with dParallel on the GSM8K dataset, it achieves a decoding speed of 7.2 tokens per step without compromising precision.
 
-rss · arXiv ML · May 12, 04:00
+rss · arXiv ML · May 13, 04:00
 
-**Background**: Low-Rank Adaptation (LoRA) is a widely adopted parameter-efficient fine-tuning technique that freezes pre-trained model weights and injects trainable low-rank decomposition matrices into each layer. While highly efficient, standard LoRA produces deterministic point estimates, which often lead to overconfident predictions and lack built-in mechanisms to measure how much the model truly knows or guesses. Bayesian deep learning addresses this by treating model parameters as probability distributions rather than fixed values, enabling the system to output calibrated confidence scores alongside predictions.
+**Background**: Diffusion Language Models (dLLMs) generate text by iteratively denoising sequences, offering inherent parallelism compared to traditional autoregressive models. However, current parallel decoding strategies rely heavily on high-confidence thresholds to prevent error propagation, which severely limits how many tokens can be generated simultaneously. Recent frameworks like the open-source dLLM toolkit have standardized these models, highlighting the urgent need for efficient decoding algorithms that balance speed and accuracy.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.emergentmind.com/papers/2308.13111">Bayesian Low - rank Adaptation for Large Language Models</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Uncertainty_quantification">Uncertainty quantification - Wikipedia</a></li>
+<li><a href="https://github.com/ZHZisZZ/dllm">GitHub - ZHZisZZ/dllm: dLLM: Simple Diffusion Language Modeling</a></li>
+<li><a href="https://arxiv.org/abs/2602.22661">[2602.22661] dLLM: Simple Diffusion Language Modeling</a></li>
+<li><a href="https://arxiv.org/html/2511.21103v1">From Bits to Rounds: Parallel Decoding with Exploration for Diffusion ...</a></li>
 
 </ul>
 </details>
@@ -266,14 +261,63 @@ rss · arXiv ML · May 12, 04:00
 ---
 
 <a id="item-12"></a>
-## [Nvidia CEO Jensen Huang to Join Trump’s Official Visit to China](https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html) ⭐️ 8.0/10
+## [Interpretable Protein Substructures via Differentiable Graph Partitioning](https://arxiv.org/abs/2605.10985) ⭐️ 8.0/10
 
-Nvidia has confirmed that CEO Jensen Huang will accompany President Trump on his upcoming official visit to China. This marks a notable diplomatic and business development as Trump brings over ten U.S. corporate executives to meet with Chinese leadership. This announcement signals potential shifts in U.S.-China technology trade policies, particularly regarding the longstanding export restrictions on advanced AI chips. It carries significant implications for global AI hardware supply chains and the broader geopolitical landscape between the two nations. Huang attended the summit at Trump’s invitation to support U.S. government objectives, following nearly four years of increasingly stringent sales restrictions on Nvidia’s advanced AI chips to China. The visit includes scheduled meetings with Chinese President Xi Jinping later this week.
+Researchers introduced SoftBlobGIN, a plug-and-play framework that projects ESM-2 protein language model features onto contact graphs using differentiable graph partitioning to extract interpretable functional substructures. This approach achieves 92.8% accuracy in enzyme classification and significantly improves binding-site detection without requiring model retraining. By transforming dense, black-box language model embeddings into auditable structural explanations, this method directly addresses a major bottleneck in AI-driven drug discovery and protein engineering. Its lightweight, plugin-ready design enables immediate integration into existing computational biology pipelines to accelerate target identification and rational design. The framework incorporates a lightweight Graph Isomorphism Network with differentiable Gumbel-softmax pooling to dynamically cluster amino acid residues into biologically meaningful blobs without explicit active-site supervision. It adds only approximately 1.1 million parameters to the base model while boosting binding-site AUROC from 0.885 to 0.983.
 
-telegram · zaihuapd · May 13, 02:41
+rss · arXiv ML · May 13, 04:00
 
-**Background**: U.S. export controls on advanced semiconductors and AI hardware have been a central point of tension in U.S.-China relations since 2022. These restrictions aim to limit China’s access to cutting-edge computing power used for artificial intelligence and military applications, significantly impacting companies like Nvidia that rely on the Chinese market. Diplomatic visits by tech leaders often serve as backchannel negotiations to ease trade barriers or secure supply chain stability.
+**Background**: Protein language models like ESM-2 treat amino acid sequences similarly to natural language, learning complex patterns from millions of sequences to predict structure and function. However, their internal representations are typically stored as dense, high-dimensional vectors that obscure the direct relationship between sequence features and physical protein structures. Graph neural networks address this by modeling proteins as nodes and edges, allowing algorithms to explicitly capture spatial relationships and local interactions among residues.
 
-**Tags**: `#AI Hardware`, `#US-China Relations`, `#Tech Policy`, `#Supply Chain`, `#Geopolitics`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://distill.pub/2021/gnn-intro/">A Gentle Introduction to Graph Neural Networks - Distill</a></li>
+<li><a href="https://www.sciencedirect.com/org/science/article/pii/S1535390725005268">Protein Language Models: Applications and Perspectives</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#research`, `#trend`
+
+---
+
+<a id="item-13"></a>
+## [Test-Time Personalization Framework Diagnoses Scaling Failures and Proposes Probabilistic Fix](https://arxiv.org/abs/2605.10991) ⭐️ 8.0/10
+
+Researchers introduce a Test-Time Personalization framework that scales inference by sampling multiple candidates and selecting the best using a personalized reward model. They prove a theoretical logarithmic ceiling for this approach and diagnose why standard reward models fail, proposing a probabilistic variant to fix it. This work addresses a critical bottleneck in efficient AI personalization by establishing clear theoretical limits and providing actionable diagnostic tools for reward models. It offers a concrete optimization path for next-generation systems that rely on test-time compute scaling rather than continuous model retraining. The authors derive a unified scaling law that breaks down the N选最优 performance curve into four measurable metrics, identifying user-level collapse and query-level reward hacking as primary failure modes. To counter these issues, they implement a probabilistic personalized reward model that learns output variance to effectively stabilize candidate selection.
+
+rss · arXiv ML · May 13, 04:00
+
+**Background**: Test-Time Personalization refers to adapting model outputs during inference without updating the underlying weights, often by leveraging additional compute at runtime. The N选最优 strategy generates multiple responses and uses a reward model to pick the highest-scoring one, a technique increasingly popular in reasoning-heavy large language models. However, reward models frequently suffer from reward hacking, where they optimize for superficial metrics rather than genuine quality, leading to inconsistent personalization.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://arxiv.org/pdf/2605.10991">Test - Time Personalization : A Diagnostic Framework and Probabilistic...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#research`, `#trend`
+
+---
+
+<a id="item-14"></a>
+## [US Commerce Dept Quietly Removes AI Safety Testing Details](https://www.reuters.com/legal/litigation/microsoft-google-xai-security-test-details-deleted-us-government-website-2026-05-11/) ⭐️ 8.0/10
+
+The US Department of Commerce has quietly removed public documentation detailing a pre-deployment AI safety testing agreement involving Google, Microsoft, and xAI. The original webpage now redirects to the newly renamed Center for AI Standards and Innovation without explaining the deletion. This sudden removal raises significant concerns about regulatory transparency and the future of voluntary AI safety commitments among major tech companies. It signals potential shifts in how the US government oversees frontier model development and could impact industry compliance strategies. The deleted framework previously outlined protocols for government scientists to independently test advanced models for security vulnerabilities before public release. Industry leaders were consulted during the framework's development, which targeted frontier AI systems exceeding specific compute thresholds.
+
+telegram · zaihuapd · May 12, 13:38
+
+**Background**: Pre-deployment safety testing protocols require independent experts to evaluate advanced AI models for security vulnerabilities before they are publicly released. The United States previously operated an AI Safety Institute, which was recently reorganized and renamed the Center for AI Standards and Innovation under the Department of Commerce to focus on collaborative research and industry guidelines.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Center_for_AI_Standards_and_Innovation">Center for AI Standards and Innovation</a></li>
+<li><a href="https://ari.us/commerce-transforms-center-for-ai-standards-and-innovation/">Commerce Transforms Center for AI Standards and Innovation</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI Safety`, `#Regulation & Policy`, `#Government Oversight`, `#Tech Industry`, `#AI Governance`
 
 ---

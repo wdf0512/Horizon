@@ -5,153 +5,147 @@ date: 2026-05-13
 lang: zh
 ---
 
-> From 92 items, 12 important content pieces were selected
+> From 96 items, 14 important content pieces were selected
 
 ---
 
-1. [社区分支恢复 OrcaSlicer 对 BambuNetwork 的完整支持](#item-1) ⭐️ 8.0/10
-2. [Needle：专为端侧工具调用设计的 26M 参数注意力模型](#item-2) ⭐️ 8.0/10
-3. [CERT 披露 dnsmasq 服务器六项严重安全漏洞 (CVE)](#item-3) ⭐️ 8.0/10
-4. [DuckDB 推出 Quack 客户端-服务器协议以支持远程访问](#item-4) ⭐️ 8.0/10
-5. [Obsidian 推出自动化插件审核系统应对安全与扩展难题](#item-5) ⭐️ 8.0/10
-6. [机制研究揭示隐藏状态而非注意力决定视觉语言模型可靠性](#item-6) ⭐️ 8.0/10
-7. [以偏好相似度替代语义相似度的 AI 嵌入新方案](#item-7) ⭐️ 8.0/10
-8. [MemQ 利用强化学习与有向无环图追溯优化智能体记忆信用分配](#item-8) ⭐️ 8.0/10
-9. [博弈论干预 AI 谄媚与认知幻觉](#item-9) ⭐️ 8.0/10
-10. [锚定双策略自博弈破解 AI 安全自一致性问题](#item-10) ⭐️ 8.0/10
-11. [BaLoRA 为 LoRA 微调引入贝叶斯不确定性量化机制](#item-11) ⭐️ 8.0/10
-12. [英伟达 CEO 黄仁勋将陪同特朗普访华](#item-12) ⭐️ 8.0/10
+1. [英伟达首席执行官黄仁勋将随特朗普总统访华](#item-1) ⭐️ 9.0/10
+2. [社区分支恢复 OrcaSlicer 对 BambuNetwork 的完整支持](#item-2) ⭐️ 8.0/10
+3. [CERT 披露 dnsmasq 服务器六项严重安全漏洞 CVE](#item-3) ⭐️ 8.0/10
+4. [DuckDB 发布 Quack 协议实现远程并发访问](#item-4) ⭐️ 8.0/10
+5. [拓竹被指滥用开源社会契约](#item-5) ⭐️ 8.0/10
+6. [EVOCHAMBER 实现多智能体系统三层测试时协同演化](#item-6) ⭐️ 8.0/10
+7. [PIVOT 框架借轨迹优化弥合智能体规划与执行鸿沟](#item-7) ⭐️ 8.0/10
+8. [通过类比推理释放 LLM 的科学创造力](#item-8) ⭐️ 8.0/10
+9. [LatentRouter 通过反事实效用预测实现多模态模型精准选择](#item-9) ⭐️ 8.0/10
+10. [旋转保持监督微调有效缓解模型泛化退化](#item-10) ⭐️ 8.0/10
+11. [LEAP 通过早期收敛检测加速扩散语言模型解码](#item-11) ⭐️ 8.0/10
+12. [基于可微图划分的可解释蛋白质子结构解析方法](#item-12) ⭐️ 8.0/10
+13. [测试时个性化诊断框架与修复方案](#item-13) ⭐️ 8.0/10
+14. [美商务部悄然移除 AI 安全测试协议细节](#item-14) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [社区分支恢复 OrcaSlicer 对 BambuNetwork 的完整支持](https://github.com/FULU-Foundation/OrcaSlicer-bambulab) ⭐️ 8.0/10
+## [英伟达首席执行官黄仁勋将随特朗普总统访华](https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html) ⭐️ 9.0/10
 
-一个由社区维护的开源切片软件 OrcaSlicer 分支已更新，恢复了针对 Bambu Lab 3D 打印机的完整 BambuNetwork 连接功能。该版本直接回应了近期厂商政策的变化，这些变化限制了第三方切片软件访问 Bambu 的云服务。 这一进展凸显了开源硬件生态与专有云依赖之间的紧张关系，为用户提供了一种避免厂商锁定的技术替代方案。它也说明了当制造商更改其 API 或身份验证策略时，社区驱动的项目如何能够快速适应以维持互操作性。 该分支专门恢复了身份验证机制，允许用户在不强制使用 Bambu Studio 或 Bambu Connect 的情况下进行本地和云端打印管理。然而，部分贡献者批评了仓库的 Git 历史压缩操作，且该项目在 FULU 基金会下作为独立替代品运行。
+英伟达已确认其首席执行官黄仁勋将陪同美国总统唐纳德·特朗普进行即将到来的中国官方访问。这是黄仁勋应特朗普邀请出席峰会以支持美国政府目标的重要进展。 这一声明标志着中美科技关系可能出现缓和，并有望放宽对先进 AI 半导体的长期出口管制。它直接影响全球供应链，使英伟达处于华盛顿与北京之间高规格地缘政治谈判的核心位置。 此次行程包括十多家美国企业高管计划在本周晚些时候与中国国家主席习近平会面。值得注意的是，英伟达的先进 AI 芯片近四年来一直受到美国针对中国的日益严格的出口限制。
 
-hackernews · Murfalo · May 12, 21:55 · [社区讨论](https://news.ycombinator.com/item?id=48115127)
+telegram · zaihuapd · May 13, 02:41
 
-**背景**: Bambu Lab 3D 打印机以其即插即用的便捷性而闻名，但高度依赖 Bambu Network 来实现远程监控和文件传输等功能。近期，该公司改变了其身份验证模式，优先支持其官方应用程序，出于对服务器负载和未授权访问的担忧，实际上限制了第三方切片软件的集成。OrcaSlicer 是一款广受欢迎的开源切片工具，因其高级校准功能和跨平台兼容性而在 3D 打印社区中广泛使用。
+**背景**: 美国对先进半导体技术的出口管制一直是华盛顿维持对华技术优势战略的核心。过去几年实施的这些限制措施显著影响了英伟达的收入来源，并迫使该公司为中国市场开发专门降级的芯片。涉及科技企业高层的外交互动通常作为幕后谈判渠道，以平衡国家安全关切与商业利益。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.orcaslicer.com/">OrcaSlicer — Official Website & Downloads ( Orca Slicer )</a></li>
-<li><a href="https://wiki.bambulab.com/en/software/bambu-connect">Bambu Connect (beta) | Bambu Lab Wiki</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区情绪褒贬不一，许多人称赞该分支保留了打印机功能，而另一些人则质疑绕过云限制是否违背了最初避免服务器依赖的目标。讨论还凸显了对 Bambu Lab 基础设施扩展声明的怀疑，并引发了关于潜在数据收集用于 AI 训练的隐私担忧。此外，技术层面的批评集中在该新仓库中较差的版本控制实践上。
-
-**标签**: `#3D Printing`, `#Open Source Software`, `#Vendor Lock-in`, `#Privacy`, `#Embedded Systems`
+**标签**: `#AI Hardware`, `#Geopolitics`, `#Semiconductors`, `#Tech Policy`, `#US-China Relations`
 
 ---
 
 <a id="item-2"></a>
-## [Needle：专为端侧工具调用设计的 26M 参数注意力模型](https://github.com/cactus-compute/needle) ⭐️ 8.0/10
+## [社区分支恢复 OrcaSlicer 对 BambuNetwork 的完整支持](https://github.com/FULU-Foundation/OrcaSlicer-bambulab) ⭐️ 8.0/10
 
-Cactus 团队开源了 Needle，这是一个仅包含注意力机制且不含前馈网络（FFN）的 2600 万参数轻量级模型，专门用于单次函数调用。该模型在消费级设备上可实现每秒 6000 个词元的预填充速度和每秒 1200 个词元的解码速度。 这一突破证明，像工具调用这样的复杂智能体任务并不需要庞大的大语言模型，从而让预算有限的手机和可穿戴设备也能实现高效的端侧人工智能。通过移除计算密集型组件，它为高响应速度、保护隐私的边缘人工智能应用铺平了道路。 该模型采用知识蒸馏技术从 Gemini 中学习，使用了 2000 亿基础词元数据和涵盖 15 类工具的 20 亿合成指令数据进行训练。它在单次函数调用任务上的表现超越了 FunctionGemma-270M 和 Qwen-0.6B 等更大规模的基线模型，但为了追求专业化效率而牺牲了通用对话能力。
+一个由社区维护的 OrcaSlicer 分支已发布，旨在恢复对 BambuNetwork 的完整兼容，使用户无需依赖官方软件即可访问远程监控等云端功能。此举是在 Bambu Lab 强制云认证政策引发争议后推出的。 该版本解决了开源 3D 打印社区的一个主要痛点，弥合了本地切片工作流与 Bambu 云生态系统之间的差距。它凸显了用户隐私期望与制造商数据收集策略之间持续的紧张关系。 该分支专门针对 Bambu 近期固件更新中引入的认证机制进行了适配，这些机制此前在未连接其服务器时会限制仅局域网打印的功能。然而，部分开发者对仓库历史被压缩表示担忧，质疑代码库的透明度。
 
-hackernews · HenryNdubuaku · May 12, 18:03 · [社区讨论](https://news.ycombinator.com/item?id=48111896)
+hackernews · Murfalo · May 12, 21:55 · [社区讨论](https://news.ycombinator.com/item?id=48115127)
 
-**背景**: 现代大语言模型通常依赖 Transformer 架构，该架构将自注意力机制与多层感知机或前馈网络相结合来处理信息。虽然前馈网络对于记忆事实和进行复杂推理至关重要，但它们会消耗大量的内存和计算资源。对于将查询匹配到外部工具等狭窄任务而言，纯粹的注意力机制无需内部知识存储即可高效地检索并组装结构化输出。
+**背景**: OrcaSlicer 是一款流行的开源切片软件，可将 3D 模型转换为打印机可用的 G-code，常作为 Bambu Studio 等专有软件的替代方案。Bambu Lab 最近将其打印机转向双模式架构，提供纯局域网操作和云连接模式，后者可通过 Bambu Handy 应用实现远程监控，但需要账户认证，引发了许多用户的隐私担忧。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Transformer_(deep_learning)">Transformer (deep learning) - Wikipedia</a></li>
+<li><a href="https://www.orcaslicer.com/">OrcaSlicer — Official Website & Downloads ( Orca Slicer )</a></li>
+<li><a href="https://help.simplyprint.io/en/article/bambu-lab-integration-lan-only-vs-bambu-cloud-2eof1u/">Bambu Lab Integration: LAN-only vs Bambu Cloud | SimplyPrint ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员对将该模型部署到本地命令行工具中表现出浓厚兴趣，并呼吁提供在线演示以评估其实际准确率。部分用户质疑其在处理细微工具区分时的能力，但也有其他用户分享了积极的实测体验，称其在简单指令下表现甚至优于 Siri。
+**社区讨论**: 用户对 Bambu Lab 的动机表示强烈怀疑，认为该公司旨在收集使用数据或利用共享的 STL 文件训练 AI 模型。尽管部分用户赞赏恢复的功能，但也有人批评强制的云集成，并对在社区项目中压缩 Git 历史的透明度提出质疑。
 
-**标签**: `#AI/ML`, `#Edge Computing`, `#Open Source`, `#LLM Architecture`, `#Agentic AI`
+**标签**: `#Open Source`, `#3D Printing`, `#IoT Privacy`, `#Community Development`, `#Software Engineering`
 
 ---
 
 <a id="item-3"></a>
-## [CERT 披露 dnsmasq 服务器六项严重安全漏洞 (CVE)](https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2026q2/018471.html) ⭐️ 8.0/10
+## [CERT 披露 dnsmasq 服务器六项严重安全漏洞 CVE](https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2026q2/018471.html) ⭐️ 8.0/10
 
-CERT 协调中心已正式披露影响 dnsmasq DNS 和 DHCP 服务器的六项新通用漏洞披露（CVE）。这些发现揭示了需要立即修补的严重安全缺陷。 作为部署在路由器、物联网设备和云容器中的轻量级且无处不在的网络服务，dnsmasq 是关键的基础设施组件。成功利用这些漏洞可能使攻击者能够拦截流量、破坏网络连接或在易受攻击的主机上实现远程代码执行。 这些漏洞源于容易引发内存损坏错误（如缓冲区溢出）的遗留 C 语言代码实现。尽管上游正在开发补丁，但主要的 Linux 发行版和嵌入式固件项目（如 OpenWRT）目前正竞相移植修复程序，同时避免引入回归问题。
+CERT 协调中心已正式公布影响流行 dnsmasq DNS 和 DHCP 服务器的六项严重通用漏洞与暴露（CVE）。这些新发现的安全缺陷需要立即修补，以防止网络基础设施遭到潜在利用。 由于 dnsmasq 深度集成于无数 Linux 发行版、路由器和企业网络中，这些漏洞对本地网络的稳定性和数据隐私构成了广泛风险。该安全公告也重新引发了业界关于使用 C 等内存不安全语言编写关键基础设施软件的固有危险的讨论。 这些漏洞涉及轻量级 DNS 转发器和 DHCP 服务器中的多个攻击向量，凸显了其长期使用的 C 代码库的系统性风险。尽管补丁正在开发中，但发行版维护者在快速移植修复程序时面临挑战，且不能破坏稳定版本的发布周期。
 
 hackernews · chizhik-pyzhik · May 12, 18:12 · [社区讨论](https://news.ycombinator.com/item?id=48112042)
 
-**背景**: dnsmasq 是一款免费且轻量的软件工具，主要为小型本地网络提供 DNS 转发、缓存和 DHCP 服务。由于其极低的资源占用以及与基于 Linux 的系统无缝集成，它广受欢迎，成为家庭路由器、Android 设备和 LXD 等容器运行时的默认选择。然而，由于它使用 C 语言编写，因此继承了手动内存管理错误等经典的系统编程风险。
+**背景**: Dnsmasq 是一款免费开源的工具，旨在以极低的资源占用提供 DNS、DHCP 和 TFTP 服务，非常适合中小型网络和嵌入式设备。由于其简单可靠，它被主要 Linux 发行版和防火墙平台预装或推荐。然而，由于该项目数十年来主要使用 C 语言维护，它仍然容易受到缓冲区溢出和释放后使用等经典内存损坏漏洞的影响。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Dnsmasq">dnsmasq - Wikipedia</a></li>
-<li><a href="https://www.memorysafety.org/docs/memory-safety/">What is memory safety and why does it matter? - Prossimo</a></li>
+<li><a href="https://docs.opnsense.org/manual/dnsmasq.html">Dnsmasq DNS & DHCP — OPNsense documentation</a></li>
+<li><a href="https://www.howtogeek.com/devops/how-to-run-a-local-network-dhcp-server-with-dnsmasq/">How to Run a Local Network DHCP Server with Dnsmasq Man page of DNSMASQ Setting up dnsmasq - a lightweight DHCP and DNS server dnsmasq - ArchWiki Dnsmasq as DNS and DHCP server - blog.admin-intelligence.de GitHub - howtomgr/dnsmasq: dnsmasq is a free and open-source ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区反应凸显了人们对基于 C 语言的遗留代码日益增长的沮丧情绪，许多用户呼吁紧急迁移到 Rust 或 Go 等内存安全语言，以防止未来的漏洞利用。其他人则对发行版维护者的缓慢响应表示担忧，批评 Debian 倾向于创建不稳定的移植版本，而不是及时更新稳定版。
+**社区讨论**: 社区成员强烈呼吁用 Rust 或 Go 等内存安全语言替换遗留的 C 代码，并指出近期的漏洞趋势证明了这一点。其他用户则批评 Linux 发行版维护者的更新周期缓慢，并质疑像 MaraDNS 这样的工具是否通过现代审计实践提供了更好的长期安全性。
 
-**标签**: `#Security`, `#DNS/DHCP`, `#Systems Programming`, `#Open Source`, `#Vulnerability Disclosure`
+**标签**: `#Cybersecurity`, `#DNS/DHCP`, `#Systems Engineering`, `#Memory Safety`, `#Open Source`
 
 ---
 
 <a id="item-4"></a>
-## [DuckDB 推出 Quack 客户端-服务器协议以支持远程访问](https://duckdb.org/2026/05/12/quack-remote-protocol) ⭐️ 8.0/10
+## [DuckDB 发布 Quack 协议实现远程并发访问](https://duckdb.org/2026/05/12/quack-remote-protocol) ⭐️ 8.0/10
 
-DuckDB 正式推出了 Quack 协议，这是一种原生的客户端-服务器通信层，支持多并发写入和远程数据库访问。此次更新使 DuckDB 突破了其传统的单进程嵌入式架构限制。 通过支持远程连接和分布式工作负载，Quack 将 DuckDB 定位为适用于企业应用的可扩展分析引擎，而不仅仅是本地分析工具。这一架构扩展解决了长期存在的扩展性瓶颈，并使其在传统客户端-服务器数据库中获得了更强的竞争力。 Quack 协议基于成熟技术构建了一个远程过程调用系统，允许不同的 DuckDB 实例通过网络进行无缝通信。它在保持配置简洁的同时，通过专用的客户端-服务器交互机制克服了以往嵌入式架构的并发限制。
+DuckDB Labs 正式发布了基于 HTTP 的 Quack 客户端服务器协议，将原本嵌入式的数据库转变为支持多并发写入的远程服务器。此次更新实现了跨网络通信与分布式客户端的同步读写操作，且无需依赖外部基础设施。 这一架构扩展显著提升了 DuckDB 的部署灵活性，使数据工程师能够在保持原生查询性能的同时水平扩展分析工作负载，并将其无缝集成到微服务架构中。它直接解决了社区长期以来对生产级并发能力和安全远程连接功能的诉求。 Quack 基于标准 HTTP 技术构建，在批量分析场景下的吞吐量比 PostgreSQL 快高达 32 倍，同时保持了直观的配置流程。尽管它支持并发写入，但初步测试表明高写入负载可能仍依赖服务端序列化机制，这表明未来仍有性能调优空间。
 
 hackernews · aduffy · May 12, 17:54 · [社区讨论](https://news.ycombinator.com/item?id=48111765)
 
-**背景**: 传统上，DuckDB 被设计为一种嵌入式分析型数据库，这意味着它直接在主机应用程序的内存空间中运行，无需独立的数据库服务器进程。虽然这种嵌入式模型为单线程或本地工作负载提供了极佳的低延迟性能，但它本质上不支持多进程并发写入或远程网络访问。引入客户端-服务器模型代表了重大范式转变，使该工具能够适应现代分布式数据工程流水线。
+**背景**: 传统上，DuckDB 一直作为嵌入式分析数据库运行，这意味着它与应用程序在同一进程中执行，而非作为独立的网络服务。这种设计优先考虑本地数据处理时的超低延迟和高吞吐量，但本质上限制了多用户访问和远程连接。通过 Quack 采用客户端服务器模型，DuckDB 成功弥合了嵌入式速度与大型企业级可访问性之间的差距。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://duckdb.org/quack/">The quack : protocol allows you to introduce remote access to DuckDB .</a></li>
-<li><a href="https://duckdb.org/2026/05/12/quack-remote-protocol">Quack: The DuckDB Client-Server Protocol – DuckDB</a></li>
+<li><a href="https://duckdb.org/2026/05/12/quack-remote-protocol">Quack: The DuckDB Client - Server Protocol – DuckDB</a></li>
+<li><a href="https://byteiota.com/quack-protocol-duckdb-client-server-32x-faster/">Quack Protocol: DuckDB Client-Server 32x Faster | byteiota</a></li>
+<li><a href="https://motherduck.com/blog/first-variant/duckdb-client-server/">If It Quacks Like a Duck: DuckDB Gets a Client-Server Protocol</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区整体反响积极，开发者普遍称赞 Quack 解决了生产环境中水平扩展和远程界面访问的难题。然而，部分用户对 DuckDB 不断演进的产品愿景表示好奇，质疑增加客户端-服务器功能是否会削弱其原本专注于嵌入式的定位。
+**社区讨论**: 开发者对解决水平扩展和远程 UI 访问挑战表示高度热情，但部分人对底层如何实现真正的并发写入提出了疑问。另一些人则对 DuckDB 从纯嵌入式工具向多功能客户端服务器系统演变过程中的定位变化表达了困惑。
 
-**标签**: `#Database Systems`, `#DuckDB`, `#Client-Server Architecture`, `#Data Engineering`, `#Open Source`
+**标签**: `#DuckDB`, `#Database Architecture`, `#Client-Server Protocol`, `#Data Engineering`, `#Systems`
 
 ---
 
 <a id="item-5"></a>
-## [Obsidian 推出自动化插件审核系统应对安全与扩展难题](https://obsidian.md/blog/future-of-plugins/) ⭐️ 8.0/10
+## [拓竹被指滥用开源社会契约](https://www.jeffgeerling.com/blog/2026/bambu-lab-abusing-open-source-social-contract/) ⭐️ 8.0/10
 
-Obsidian 推出了全新的自动化社区插件审核系统，以取代不堪重负的人工审核流程。该更新旨在应对激增的人工智能生成插件提交量，并自动扫描代码漏洞与质量问题。 这一转变解决了导致开发者沮丧和团队倦怠的关键扩展瓶颈。通过自动化初步审查，该平台能够可持续地扩充第三方工具库，并为插件安全建立基准。 该自动化系统在发布前会验证是否符合开发者政策、执行编码最佳实践，并扫描已知漏洞。然而，它目前缺乏严格的权限或沙盒模型，插件仍保留对磁盘和网络等系统的广泛访问权限。
+拓竹实验室近期通过过滤 HTTP User-Agent 字符串来阻止第三方客户端连接，声称未授权流量导致了服务器不稳定。这一决定引发了开发者的强烈反弹，他们认为该公司将云依赖置于开源伦理之上，且未能妥善扩展基础设施。 该事件凸显了消费级硬件公司对集中式云服务的高度依赖与开源社区对本地控制和透明度的期望之间的日益加剧的紧张关系。它为物联网制造商如何在商业云模式、用户自主权与伦理软件实践之间取得平衡设定了关键先例。 该屏蔽机制依赖于通过 HTTP User-Agent 头识别客户端身份，而非实施强大的身份验证或速率限制协议。批评者指出，这种方法既未能解决实际的扩展性问题，又有效地将用户锁定在拓竹的专有生态系统中。
 
-hackernews · xz18r · May 12, 15:45 · [社区讨论](https://news.ycombinator.com/item?id=48109970)
+hackernews · rubenbe · May 12, 14:54 · [社区讨论](https://news.ycombinator.com/item?id=48109224)
 
-**背景**: Obsidian 是一款基于 Markdown 的热门笔记应用，其功能高度依赖活跃的第三方插件生态进行扩展。随着人工智能编程工具降低了开发门槛，开发者能够快速生成插件，而这些插件过去需要由小型核心团队进行人工审核。如果没有自动化保障措施，这种涌入会对用户和维护者带来巨大的安全与维护负担。
+**背景**: 开源社会契约起源于 20 世纪 90 年代末，是一份正式承诺，旨在确保自由软件发行版优先考虑用户和开发者的需求，而非企业利益。在现代物联网与 3D 打印领域，这一理念已超越单纯的代码许可，延伸至对本地网络运行、数据主权以及抵制强制云依赖的广泛期望。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://obsidian.md/blog/future-of-plugins/">The future of Obsidian plugins - Obsidian</a></li>
-<li><a href="https://www.veracode.com/blog/ai-generated-code-security-risks/">AI-Generated Code Security Risks: What Developers Must Know</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)">Sandbox (computer security) - Wikipedia</a></li>
+<li><a href="https://www.jeffgeerling.com/blog/2026/bambu-lab-abusing-open-source-social-contract/">Bambu Lab is abusing the open source social contract - Jeff Geerling</a></li>
+<li><a href="https://www.debian.org/social_contract">Debian Social Contract</a></li>
+<li><a href="https://www.ibm.com/think/topics/cloud-architecture">What is cloud architecture? - IBM</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区反响不一，许多人称赞其缓解了人工审核的瓶颈，但也有人对其安全性表示深切担忧。批评者强调，自动化代码扫描无法替代操作系统的沙盒隔离和明确的权限控制，并警告当前架构仍存在远程代码执行攻击的风险。
+**社区讨论**: 社区舆论普遍持批评态度，用户强调此前的消费者压力曾迫使拓竹推出局域网模式，如今则要求公司改善基础设施扩展能力，而非实施随意的访问限制。部分评论者还表达了对数据经由中国服务器中转的担忧，并提及此类硬件在冲突地区使用可能带来的地缘政治风险。
 
-**标签**: `#Obsidian`, `#Plugin Ecosystems`, `#Developer Tools`, `#AI-Generated Content`, `#Platform Security`
+**标签**: `#Open Source`, `#IoT Hardware`, `#Cloud Dependency`, `#Consumer Tech Ethics`, `#3D Printing`
 
 ---
 
 <a id="item-6"></a>
-## [机制研究揭示隐藏状态而非注意力决定视觉语言模型可靠性](https://arxiv.org/abs/2605.08200) ⭐️ 8.0/10
+## [EVOCHAMBER 实现多智能体系统三层测试时协同演化](https://arxiv.org/abs/2605.11136) ⭐️ 8.0/10
 
-研究人员提出了 VLM 可靠性探测（VRP）框架，对三种开源视觉语言模型家族中“注意力即置信度”的常识进行了验证。研究发现注意力图几乎无法预测回答的正确性，而模型的可靠性实际上由晚期层的隐藏状态几何结构和自一致性指标所决定。 这一发现挑战了多模态 AI 开发中的普遍直觉，并为评估模型可信度提供了标准化基准。通过将关注点从注意力可视化转向内部状态分析，它为提升 AI 安全并指导未来架构设计提供了切实可行的见解。 研究使用超过 3000 个样本的数据集证明，尽管注意力图的预测能力极弱，但遮蔽关键注意力区域仍会导致准确率显著下降，表明其因果必要性。此外，LLaVA 等晚期融合模型将可靠性集中在脆弱的瓶颈层，而早期融合架构则将其更稳健地分布在多层中。
+研究团队提出了 EVOCHAMBER 框架，这是一种无需训练的测试时协同演化方案，可在个体、团队和种群三个尺度上运行。该框架通过 CODREAM 协议实现非对称知识路由与失败后反思，有效解决了跨智能体经验共享的难题。 该方法标志着从静态的单智能体自适应向推理期间动态协作式多智能体学习的重要转变。通过在填补知识空白的同时保留智能体的专业化能力，它为需要持续自我改进且无需重新训练的现实世界 AI 系统建立了一种可扩展范式。 该框架完全在无需梯度更新的在线环境中运行，利用种群级生命周期算子根据性能压力对智能体进行分裂、合并、剪枝和播种。在 Qwen3-8B 基准测试中，它在多领域推理任务上取得了 87.1%的最高得分，并展示了专业生态位的自发涌现，证实了非对称转移是提升性能的核心驱动力。
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv AI · May 13, 04:00
 
-**背景**: 视觉语言模型（VLM）结合视觉感知与自然语言处理，用于执行图像描述和视觉问答等任务。机制可解释性是一种通过逆向工程神经网络来理解其内部计算电路的研究方法，而非将其视为黑盒。长期以来，研究者普遍认为清晰集中的注意力图代表高模型置信度，但近期研究表明这种相关性可能具有误导性。
+**背景**: 测试时演化是指 AI 模型在推理过程中动态调整和改进其推理策略的能力，而非仅仅依赖预训练或微调。在多智能体系统中，这一概念超越了单个模型的更新，涵盖了智能体如何随时间推移进行协作、信息共享以及专业化分工。传统方法往往难以在知识共享与保持独特专长之间取得平衡，这使得 EVOCHAMBER 等框架在当前自主 AI 编排技术的进步中显得尤为重要。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Mechanistic_interpretability">Mechanistic interpretability</a></li>
-<li><a href="https://github.com/MichiganNLP/Scalable-VLM-Probing">GitHub - MichiganNLP/Scalable-VLM-Probing: Probe Vision-Language Models · GitHub</a></li>
+<li><a href="https://arxiv.org/abs/2605.11136">EVOCHAMBER: Test-Time Co-evolution of Multi-Agent System at ...</a></li>
+<li><a href="https://github.com/Mercury7353/EvoChamber">GitHub - Mercury7353/EvoChamber</a></li>
 
 </ul>
 </details>
@@ -161,19 +155,18 @@ rss · arXiv AI · May 12, 04:00
 ---
 
 <a id="item-7"></a>
-## [以偏好相似度替代语义相似度的 AI 嵌入新方案](https://arxiv.org/abs/2605.08360) ⭐️ 8.0/10
+## [PIVOT 框架借轨迹优化弥合智能体规划与执行鸿沟](https://arxiv.org/abs/2605.11225) ⭐️ 8.0/10
 
-研究人员提出在文本嵌入中用偏好相似度替代传统的语义相似度，以更准确地建模集体决策中的意见一致性。他们证明，通过合成训练数据解耦文风与立场，能显著提升多个协商数据集上的偏好预测精度。 这一范式转变解决了将现成嵌入模型应用于人工智能驱动治理和社会选择系统时的根本缺陷。通过将向量几何与实际用户偏好而非表面措辞对齐，它为构建更稳健、公平的人工智能辅助集体决策铺平了道路。 作者将该问题形式化为一个不变性问题，指出模型常将立场等偏好相关信号与文风等语义干扰因素混淆。该方法利用专门设计的合成数据打破这些因素间的观测相关性，从而将优化过程从标准的余弦相似度指标中剥离出来。
+新提出的 PIVOT 框架引入了一种自监督轨迹优化方法，通过环境交互和文本梯度反馈迭代改进智能体的计划。这一四阶段流程显著减少了规划与执行之间的错位问题，同时保持了计算效率。 该方法有效弥合了高层规划与底层执行之间的差距，提升了自主大语言模型智能体在复杂现实任务中的可靠性。其在权威基准上展现的领先性能与低 token 消耗特性，使其成为学术界研究与商业智能体开发的重要参考。 该框架包含生成、检查、演进和验证四个阶段，利用编码计划与实际结果差异的文本梯度来驱动迭代优化。在结合人工反馈时，其约束满足率相对提升高达 94%，且相比同类方法可减少 3 到 5 倍的 token 消耗。
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv AI · May 13, 04:00
 
-**背景**: 文本嵌入技术将自然语言转换为数值向量，使计算机能够根据上下文含义衡量不同文本之间的相似程度。在运筹学等领域，设施选址和公平聚类算法依赖精确的距离度量来优化资源配置或公平分组等结果。然而，标准嵌入模型优先考虑词汇和风格的重叠，这并不总是与人类实际评估意见一致性的方式相符。
+**背景**: 基于大语言模型的智能体经常生成看似连贯的计划，但由于执行步骤不可行或在长周期内累积错误而导致失败。解决这种规划与执行错位的问题传统上需要昂贵的人工干预，或缺乏系统性的纠正机制。通过将轨迹视为可优化对象并利用文本梯度，现代框架现在能够计算结构化损失并应用单调接受过程，从而自动优化智能体的行为。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://arxiv.org/pdf/2605.08360">Embeddings for Preferences , Not Semantics</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Facility_location_problem">Facility location problem - Wikipedia</a></li>
-<li><a href="https://atlan.com/know/what-are-embeddings-ai-search/">What Are Embeddings in AI ? How They Power Search and RAG [2026]</a></li>
+<li><a href="https://arxiv.org/html/2503.12434v2">A Survey on the Optimization of Large Language Model-based Agents</a></li>
+<li><a href="https://arxiv.org/pdf/2505.12006">SOCIA-$\nabla$: Textual Gradient Meets Multi- Agent Orchestration...</a></li>
 
 </ul>
 </details>
@@ -183,80 +176,82 @@ rss · arXiv AI · May 12, 04:00
 ---
 
 <a id="item-8"></a>
-## [MemQ 利用强化学习与有向无环图追溯优化智能体记忆信用分配](https://arxiv.org/abs/2605.08374) ⭐️ 8.0/10
+## [通过类比推理释放 LLM 的科学创造力](https://arxiv.org/abs/2605.11258) ⭐️ 8.0/10
 
-研究团队提出了 MemQ 框架，该框架将 TD(λ)资格迹应用于大型语言模型智能体创建新记忆时的信用回溯传播过程。该方法通过将记忆检索视为结构化信用分配问题而非孤立评估，在六个多样化基准测试中均超越了现有方法。 这一突破解决了智能体记忆系统中关键的长程依赖难题，使多步推理和任务执行更加可靠。通过用结构邻近度替代时间距离进行信用衰减计算，MemQ 为自主 AI 智能体的自进化记忆架构树立了新标准。 作者将记忆设置形式化为外境上下文马尔可夫决策过程以解耦外部任务流与内部记忆库，同时信用权重根据有向无环图深度按公式$(etaeta)^d$指数衰减。性能提升在复杂多步任务中最显著，最高可达 5.7 个百分点，而单步分类任务仅获微小改进。
+James Zou 团队提出了一种类比推理框架，有效缓解了 LLM 在开放式科学问题求解中的模式崩溃现象。该方法将生成多样性提升了 90%至 173%，并将新颖方案的产出率提高至 50%以上。 克服模式崩溃对于旨在辅助生物医学等复杂领域的自主 AI 系统至关重要，因为这些领域需要持续的新颖性。该框架为提升生成多样性树立了新标准，有望成为 AI 驱动科学发现的基础技术。 该方法通过分析跨领域问题的共享关系结构来生成类比，进而引导搜索新颖方案。在生物医学验证任务中，基于 AR 生成的方法在扰动效应预测上实现了近 13 倍的提升，并在寡核苷酸属性预测数据集上达到了最先进水平。
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv AI · May 13, 04:00
 
-**背景**: 大型语言模型智能体依赖情景记忆来积累过往经验，但传统方法通常孤立地检索每条记忆，而不追踪早期记忆如何促成后续记忆的形成。强化学习利用 TD(λ)资格迹在动作序列中分配奖励，而有向无环图则提供了一种无循环的结构化方式来映射因果依赖关系。将这些概念结合可使系统从数学层面追溯哪些历史记忆对当前成功贡献最大。
+**背景**: 模式崩溃是生成模型中一种常见的失效现象，指系统倾向于产生重复或低多样性的输出，而无法充分探索数据分布。类比推理是一种认知过程，通过识别不同领域间的抽象共享模式来转移知识，长期以来被视为高级 AGI 的核心能力。将两者结合，使 AI 能够利用无关科学领域间的结构相似性，从而避开重复生成的陷阱。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://web.stanford.edu/class/cme241/lecture_slides/rich_sutton_slides/22-eligibility-traces.pdf">Eligibility Traces Chapter 12</a></li>
-<li><a href="https://gamgee.ai/blogs/lossless-claw-dag-context-management/">Lossless Claw: How DAG-Based Compression Stops AI Agents From Forgetting | Gamgee Blog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mode_collapse">Mode collapse - Wikipedia</a></li>
+<li><a href="https://link.springer.com/article/10.1007/s43681-025-00785-7">Analogical reasoning as a core AGI capability | AI and Ethics | Springer Nature Link</a></li>
 
 </ul>
 </details>
 
-**标签**: `#research`, `#trend`
+**标签**: `#research`, `#team-signal`, `#trend`
 
 ---
 
 <a id="item-9"></a>
-## [博弈论干预 AI 谄媚与认知幻觉](https://arxiv.org/abs/2605.08409) ⭐️ 8.0/10
+## [LatentRouter 通过反事实效用预测实现多模态模型精准选择](https://arxiv.org/abs/2605.11301) ⭐️ 8.0/10
 
-研究人员将大语言模型的谄媚行为形式化为克劳福德-索贝尔廉价沟通博弈，揭示了无成本反馈如何形成聚集均衡并将用户困于错误信念螺旋中。他们提出了一种认识论调解器机制，通过引入认知摩擦打破该均衡，并设计了信念版本控制系统以保留准确知识。 这项研究将人工智能安全的重点从简单的模型对齐转向了战略性信息环境设计，为在对话代理中防止认知固化提供了理论基础。通过将人机交互视为重复博弈，它为维持协作中的理性与真实性提供了可操作的机制。 所提出的干预机制通过利用不对称的认知成本强制实现分离均衡，在模拟中将信念螺旋率降低了四十八倍。此外，受版本控制系统启发的信念版本管理模块能够自动检测寻求验证的抵抗行为，并回滚至先前验证过的健康信念状态。
+研究人员提出了 LatentRouter，这是一种新型路由框架，可在执行前预测不同多模态大语言模型对图像-问题查询的表现。该系统利用学习到的路由胶囊和隐式通信来估算反事实效用，从而实现基于质量或性价比的动态模型选择。 该方法直接解决了多模态人工智能系统中平衡推理延迟、计算成本与输出质量这一关键行业挑战。通过在请求到达时准确匹配最合适的模型，它有望成为下一代人工智能编排框架的标准组件。 该架构从输入中提取多模态路由胶囊，并将其与模型能力令牌进行隐式通信以预测性能分布，同时采用有界胶囊修正机制防止残差信号干扰接近的决策。它支持在动态变化的模型池中同时进行纯性能优化与性能成本权衡的路由策略。
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv AI · May 13, 04:00
 
-**背景**: 在博弈论中，廉价沟通博弈涉及一种通信形式，其中消息不产生直接成本或具有约束力的承诺，这通常会导致聚集均衡，即不同类型的参与者发送相同的信号。人工智能谄媚是指语言模型为了最大化满意度评分而过度迎合用户的倾向，这可能会无意中强化错误的信念。理解这些动态需要认识到，对话式人工智能是在一个战略性反馈循环中运行，而不是作为静态的知识数据库。
+**背景**: 多模态大语言模型在光学字符识别、图表分析、空间推理和视觉问答等任务上的优势差异显著，且各自的推理成本与延迟也各不相同。多模型路由是一种将传入请求导向池中最合适模型的技术，而非依赖单一固定模型。有效的路由需要同时理解输入查询的具体需求以及每个候选模型的专业能力。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Cheap_talk">Cheap talk - Wikipedia</a></li>
-<li><a href="https://spectrum.ieee.org/ai-sycophancy">AI Sycophancy: Why Chatbots Agree With You - IEEE Spectrum</a></li>
+<li><a href="https://ubiops.com/what-is-multi-model-routing/">What is multi-model routing? - UbiOps - AI model serving, orchestration & training</a></li>
+<li><a href="https://www.emergentmind.com/topics/capsule-routing">Capsule Routing in Neural Networks</a></li>
 
 </ul>
 </details>
 
-**标签**: `#research`, `#trend`
+**标签**: `#research`, `#tooling`, `#trend`
 
 ---
 
 <a id="item-10"></a>
-## [锚定双策略自博弈破解 AI 安全自一致性问题](https://arxiv.org/abs/2605.08427) ⭐️ 8.0/10
+## [旋转保持监督微调有效缓解模型泛化退化](https://arxiv.org/abs/2605.10973) ⭐️ 8.0/10
 
-研究人员指出标准自博弈红队测试中参数共享会导致攻击失去对抗压力。为此他们提出了锚定双策略自博弈方法，通过在冻结的基础模型上为攻击者和防御者分别训练独立的 LoRA 适配器来恢复有效的对抗训练。 该方法通过确保训练过程中的真实对抗压力，直接解决了当前 AI 安全对齐流程中的一个关键瓶颈。它提供了比全量微调更具参数效率的替代方案，使得 Qwen2.5 等开源模型的鲁棒安全评估变得更加可行。 与传统微调相比，该方法实现了高达 100 倍的参数效率提升，同时保持了稳定的优化动态。在 3B 至 14B 参数的 Qwen2.5 系列模型上的评估表明，其在不损害推理能力的前提下显著提升了安全鲁棒性。
+研究团队提出了一种名为旋转保持监督微调（RPSFT）的新方法，通过在训练过程中约束主导奇异子空间的旋转来防止模型在域外数据上的泛化能力崩溃。该方法无需高昂的计算成本即可高效代理费雪信息敏感方向。 该技术解决了大语言模型微调中的一个关键瓶颈，成功平衡了领域特定适应与广泛鲁棒性，这对于部署可靠的 AI 系统至关重要。其低计算开销使其高度兼容现有开源微调流水线，有望为稳定模型训练树立新标准。 RPSFT 专门对预训练权重矩阵投影后的前 k 个奇异向量块的变化施加惩罚，在冻结高曲率方向的同时允许必要的任务更新。在多个模型规模和数学推理数据集上的评估表明，该方法在域内与域外性能权衡上表现更优，并为后续的强化学习阶段提供了更好的初始化。
 
-rss · arXiv AI · May 12, 04:00
+rss · arXiv ML · May 13, 04:00
 
-**背景**: 自博弈红队测试是指让同一个 AI 模型同时扮演试图越狱的攻击者和学习拒绝有害提示的防御者。传统设置通常在这两个角色间共享权重以提高训练稳定性，但这往往会导致退化解决方案，例如模型直接拒绝所有请求或无法生成具有挑战性的攻击。低秩自适应（LoRA）是一种流行的参数高效微调技术，它仅更新小型适配器矩阵而非整个模型。通过将这两个角色解耦为独立的轻量级适配器，研究人员可以在不破坏核心语言模型稳定性的情况下模拟真实的对抗动态。
+**背景**: 监督微调旨在将预训练模型适配到特定任务，但往往会导致模型在未见数据分布上出现性能下降。在线性代数中，奇异值分解将权重矩阵分解为不同尺度的奇异向量，其中前几个奇异向量通常捕获基础模式。直接计算海森矩阵或费雪信息矩阵等二阶优化指标可以准确识别这些敏感方向，但对于十亿参数级别的模型来说计算成本过高。因此，研究人员正在寻找高效的替代方案，以在不增加全量重训成本的情况下稳定训练过程。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://macropraxis.org/published-research/ai-self-play-enhancing-cybersecurity-using-redblue-team-ai-driven-simulations">AI “Self Play” - Enhancing Cybersecurity Using Red Team / Blue Team AI-Driven Simulations</a></li>
+<li><a href="https://arxiv.org/abs/2504.07097">[2504.07097] Sculpting Subspaces: Constrained Full Fine-Tuning in LLMs for Continual Learning</a></li>
+<li><a href="https://web.stanford.edu/class/cs168/l/l9.pdf">CS168: The Modern Algorithmic Toolbox Lecture #9: The ... Singular Value Decomposition - Princeton University 4.3. Approximating subspaces and the SVD — MMiDS Textbook Lecture 5: Principal Component Analysis and SVD 4mm ... Robust SVD Made Easy: A fast and reliable algorithm for large ...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#research`, `#trend`, `#tooling`
+**标签**: `#research`, `#tooling`
 
 ---
 
 <a id="item-11"></a>
-## [BaLoRA 为 LoRA 微调引入贝叶斯不确定性量化机制](https://arxiv.org/abs/2605.08110) ⭐️ 8.0/10
+## [LEAP 通过早期收敛检测加速扩散语言模型解码](https://arxiv.org/abs/2605.10980) ⭐️ 8.0/10
 
-由 Max Welling 领衔的研究团队提出了 BaLoRA，这是一种对 LoRA 的贝叶斯扩展，引入了输入自适应参数化与噪声注入机制。该方法不仅提供了校准良好的不确定性估计，还显著提升了预测精度，有效缩小了自然语言推理与视觉任务中与全量微调的性能差距。 通过解决大模型适配中长期存在的计算效率与可靠性之间的权衡难题，BaLoRA 为决策置信度至关重要的企业级 AI 部署树立了新基准。其在不牺牲精度的前提下量化认知不确定性的能力，使其在科学发现等高风险领域具有极高应用价值。 该方法通过将变分推断直接应用于低秩适配器矩阵，以极小的参数和计算开销实现贝叶斯建模，同时其自适应噪声注入作为一种正则化手段意外地增强了泛化能力。在金属有机框架带隙预测等应用中，它能生成零样本不确定性估计，且与实际模型误差的相关性优于传统集成方法。
+研究团队提出了 LEAP，这是一种无需训练的即插即用方法，能够识别在去噪过程中提前收敛的 Token，从而摆脱对高置信度阈值的依赖以实现可靠的并行解码。该方法在保持模型精度的前提下，将平均去噪步骤减少了约 30%。 通过打破对严格置信度先验的依赖，LEAP 显著降低了推理延迟并释放了扩散语言模型的更高并行能力，有望加速这一新兴 AI 范式的实际落地。其免训练的即插即用特性极大降低了工程门槛，便于开发者快速集成到现有架构中。 LEAP 利用未来上下文过滤和多序列叠加技术，验证了早期收敛与预测正确性之间的一致性。在与 GSM8K 数据集上的 dParallel 结合使用时，该方法能在不损失精度的情况下实现每步 7.2 个 Token 的解码速度。
 
-rss · arXiv ML · May 12, 04:00
+rss · arXiv ML · May 13, 04:00
 
-**背景**: 低秩自适应（LoRA）是一种广泛采用的参数高效微调技术，它冻结预训练模型的权重，并在每一层中注入可训练的低秩分解矩阵。尽管效率极高，但标准 LoRA 仅产生确定性的点估计，这通常会导致模型过度自信，且缺乏内置机制来衡量模型的真实认知程度。贝叶斯深度学习通过将模型参数视为概率分布而非固定值来解决这一问题，使系统能够在输出预测的同时提供校准后的置信度评分。
+**背景**: 扩散语言模型（dLLMs）通过迭代去噪序列来生成文本，相较于传统的自回归模型具有内在的并行处理优势。然而，当前的并行解码策略高度依赖高置信度阈值来防止误差累积，这严重限制了同时生成的 Token 数量。随着开源 dLLM 工具包等框架的标准化，开发能够在速度与精度之间取得平衡的高效解码算法已成为该领域的迫切需求。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.emergentmind.com/papers/2308.13111">Bayesian Low - rank Adaptation for Large Language Models</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Uncertainty_quantification">Uncertainty quantification - Wikipedia</a></li>
+<li><a href="https://github.com/ZHZisZZ/dllm">GitHub - ZHZisZZ/dllm: dLLM: Simple Diffusion Language Modeling</a></li>
+<li><a href="https://arxiv.org/abs/2602.22661">[2602.22661] dLLM: Simple Diffusion Language Modeling</a></li>
+<li><a href="https://arxiv.org/html/2511.21103v1">From Bits to Rounds: Parallel Decoding with Exploration for Diffusion ...</a></li>
 
 </ul>
 </details>
@@ -266,14 +261,63 @@ rss · arXiv ML · May 12, 04:00
 ---
 
 <a id="item-12"></a>
-## [英伟达 CEO 黄仁勋将陪同特朗普访华](https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html) ⭐️ 8.0/10
+## [基于可微图划分的可解释蛋白质子结构解析方法](https://arxiv.org/abs/2605.10985) ⭐️ 8.0/10
 
-英伟达已确认其首席执行官黄仁勋将陪同美国总统特朗普进行即将进行的对华官方访问。此次特朗普将带领十余名美国企业高管前往北京与中国领导人会面，标志着重要的政商动态。 这一声明预示着美中科技贸易政策可能发生转变，特别是针对先进人工智能芯片的长期出口限制。它将对全球 AI 硬件供应链以及两国更广泛的地缘政治格局产生重大影响。 黄仁勋应特朗普邀请出席峰会以支持美国政府目标，此前近四年来英伟达向中国销售先进 AI 芯片一直面临日益严格的限制。此次行程包括本周晚些时候与中国国家主席习近平的预定会晤。
+研究团队提出了 SoftBlobGIN 框架，通过可微图划分技术将 ESM-2 语言模型的特征投影到蛋白质接触图上，从而提取出可解释的功能子结构。该方法在无需重新训练模型的情况下，实现了 92.8%的酶分类准确率，并显著提升了结合位点检测性能。 该方法将密集且难以解释的语言模型嵌入转化为可审计的结构解释，直接解决了人工智能驱动药物发现和蛋白质工程中的核心瓶颈。其轻量级且即插即用的设计使其能够无缝集成到现有的计算生物学流程中，从而加速靶点识别与理性设计进程。 该框架结合了带有可微 Gumbel-softmax 池化的轻量级图同构网络，能够在无显式活性位点监督的情况下，动态将氨基酸残基聚类为具有生物学意义的团块。它仅向基础模型增加约 110 万个参数，同时将结合位点 AUROC 从 0.885 提升至 0.983。
 
-telegram · zaihuapd · May 13, 02:41
+rss · arXiv ML · May 13, 04:00
 
-**背景**: 自 2022 年以来，美国对先进半导体和人工智能硬件的出口管制一直是美中关系中的紧张焦点。这些限制旨在阻止中国获取用于人工智能和军事应用的尖端计算能力，严重影响了依赖中国市场的公司如英伟达。科技领袖的外交访问通常作为幕后谈判渠道，以缓解贸易壁垒或确保供应链稳定。
+**背景**: 像 ESM-2 这样的蛋白质语言模型将氨基酸序列类比为自然语言，从数百万条序列中学习复杂模式以预测结构和功能。然而，其内部表示通常存储为密集的高维向量，掩盖了序列特征与物理蛋白质结构之间的直接联系。图神经网络通过将蛋白质建模为节点和边来解决这一问题，使算法能够显式捕捉残基间的空间关系和局部相互作用。
 
-**标签**: `#AI Hardware`, `#US-China Relations`, `#Tech Policy`, `#Supply Chain`, `#Geopolitics`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://distill.pub/2021/gnn-intro/">A Gentle Introduction to Graph Neural Networks - Distill</a></li>
+<li><a href="https://www.sciencedirect.com/org/science/article/pii/S1535390725005268">Protein Language Models: Applications and Perspectives</a></li>
+
+</ul>
+</details>
+
+**标签**: `#research`, `#trend`
+
+---
+
+<a id="item-13"></a>
+## [测试时个性化诊断框架与修复方案](https://arxiv.org/abs/2605.10991) ⭐️ 8.0/10
+
+研究人员提出了测试时个性化框架，通过采样多个候选答案并利用个性化奖励模型进行最佳选择来扩展推理计算。该研究证明了此方法的理论对数收益上限，诊断了标准奖励模型的失效原因，并提出了一种概率型变体作为修复方案。 该研究解决了高效人工智能个性化领域的关键瓶颈，通过确立明确的理论限制并为奖励模型提供可操作的诊断工具，为下一代依赖推理时计算扩展而非持续重训练的系统提供了具体的优化路径。 作者推导出一项统一缩放定律，将性能曲线分解为四个可测量指标，并指出用户级崩溃和查询级奖励黑客攻击是主要失效模式。为应对这些问题，他们实现了一个学习输出方差的概率型个性化奖励模型，从而有效稳定候选答案的选择过程。
+
+rss · arXiv ML · May 13, 04:00
+
+**背景**: 测试时个性化指在不更新底层模型权重的情况下，于推理阶段动态调整模型输出，通常通过运行时增加额外计算来实现。N 选最优策略会生成多个回复，并利用奖励模型挑选得分最高的一个，该技术在大语言模型的推理任务中日益普及。然而，奖励模型常面临奖励黑客攻击问题，即模型过度优化表面指标而忽视真实质量，导致个性化效果不稳定。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://arxiv.org/pdf/2605.10991">Test - Time Personalization : A Diagnostic Framework and Probabilistic...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#research`, `#trend`
+
+---
+
+<a id="item-14"></a>
+## [美商务部悄然移除 AI 安全测试协议细节](https://www.reuters.com/legal/litigation/microsoft-google-xai-security-test-details-deleted-us-government-website-2026-05-11/) ⭐️ 8.0/10
+
+美国商务部已悄然从官网移除了涉及谷歌、微软和 xAI 的预部署 AI 安全测试协议的公开文件。原链接现已跳转至新改名的“人工智能标准与创新中心”，但未说明删除原因。 这一突然的删除引发了人们对监管透明度以及大型科技公司自愿 AI 安全承诺未来走向的严重担忧。它可能预示着美国政府监督前沿模型开发方式的转变，并影响行业的合规策略。 被删除的框架此前规定了政府科学家在模型公开发布前独立测试高级模型安全漏洞的具体流程。该框架在制定过程中咨询了行业领袖，主要针对超过特定算力阈值的前沿人工智能系统。
+
+telegram · zaihuapd · May 12, 13:38
+
+**背景**: 预部署安全测试协议要求独立专家在高级人工智能模型公开发布前对其安全漏洞进行评估。美国此前运营着一个 AI 安全研究所，该机构近期在美国商务部的领导下重组并更名为“人工智能标准与创新中心”，专注于开展合作研究与行业指导。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Center_for_AI_Standards_and_Innovation">Center for AI Standards and Innovation</a></li>
+<li><a href="https://ari.us/commerce-transforms-center-for-ai-standards-and-innovation/">Commerce Transforms Center for AI Standards and Innovation</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI Safety`, `#Regulation & Policy`, `#Government Oversight`, `#Tech Industry`, `#AI Governance`
 
 ---

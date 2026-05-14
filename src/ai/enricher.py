@@ -10,7 +10,8 @@ import re
 import sys
 import os
 from typing import List, Optional
-from tenacity import retry, stop_after_attempt, wait_exponential
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_not_exception_type
+from openai import PermissionDeniedError
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
 from ddgs import DDGS
 
@@ -115,7 +116,8 @@ class ContentEnricher:
 
     @retry(
         stop=stop_after_attempt(3),
-        wait=wait_exponential(min=2, max=10)
+        wait=wait_exponential(min=2, max=10),
+        retry=retry_if_not_exception_type(PermissionDeniedError),
     )
     async def _enrich_item(self, item: ContentItem) -> None:
         """Enrich a single item with background knowledge.
@@ -169,10 +171,29 @@ class ContentEnricher:
             web_context=web_context or "No web search results available.",
         )
 
-        response = await self.client.complete(
-            system=CONTENT_ENRICHMENT_SYSTEM,
-            user=user_prompt,
-        )
+        try:
+            response = await self.client.complete(
+                system=CONTENT_ENRICHMENT_SYSTEM,
+                user=user_prompt,
+            )
+        except PermissionDeniedError:
+            # Content moderation triggered by web search results — retry without web context
+            user_prompt_no_web = CONTENT_ENRICHMENT_USER.format(
+                title=item.title,
+                url=str(item.url),
+                summary=item.ai_summary or item.title,
+                score=item.ai_score or 0,
+                reason=item.ai_reason or "",
+                tags=", ".join(item.ai_tags) if item.ai_tags else "",
+                content=content_text,
+                comments_section=f"\n**Community Comments:**\n{comments_text}" if comments_text else "",
+                web_context="No web search results available.",
+            )
+            available_urls = {}
+            response = await self.client.complete(
+                system=CONTENT_ENRICHMENT_SYSTEM,
+                user=user_prompt_no_web,
+            )
 
         # Parse JSON response with robust fallback
         result = self._parse_json_response(response)

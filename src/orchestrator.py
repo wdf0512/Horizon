@@ -94,7 +94,7 @@ class HorizonOrchestrator:
             important_items = [
                 item for item in analyzed_items
                 if item.ai_score and item.ai_score >= threshold
-                and not item.metadata.get("category", "").startswith("compliance-")
+                and not (item.metadata.get("category") or "").startswith("compliance-")
             ]
             important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
 
@@ -192,7 +192,7 @@ class HorizonOrchestrator:
             # 7.5 Enrich compliance items that scored ≥ 5 (search for news coverage)
             compliance_items = [
                 item for item in analyzed_items
-                if item.metadata.get("category", "").startswith("compliance-")
+                if (item.metadata.get("category") or "").startswith("compliance-")
                 and (item.ai_score or 0) >= 5.0
             ]
             if compliance_items:

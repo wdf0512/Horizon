@@ -113,7 +113,7 @@ def main() -> None:
     today = date.today().strftime('%Y-%m-%d')
     date_str = sys.argv[1] if len(sys.argv) > 1 else today
 
-    summary_path = Path('data/summaries') / f'{date_str}-summary-zh.md'
+    summary_path = Path('data/summaries') / f'horizon-{date_str}-zh.md'
     if not summary_path.exists():
         print(f'Summary not found: {summary_path}', file=sys.stderr)
         sys.exit(1)

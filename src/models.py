@@ -124,6 +124,7 @@ class TelegramChannelConfig(BaseModel):
     channel: str            # channel username, e.g. "zaihuapd"
     enabled: bool = True
     fetch_limit: int = 20
+    category: Optional[str] = None
 
 
 class TelegramConfig(BaseModel):

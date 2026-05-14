@@ -13,6 +13,7 @@ from .prompts import (
     COMPLIANCE_SCORE_SYSTEM, COMPLIANCE_SCORE_USER,
     DEPENDENCY_RISK_SYSTEM, DEPENDENCY_RISK_USER,
     ECOSYSTEM_SIGNAL_SYSTEM, ECOSYSTEM_SIGNAL_USER,
+    TELEGRAM_ZH_SYSTEM, TELEGRAM_ZH_USER,
 )
 from .utils import parse_json_response
 from ..models import ContentItem
@@ -123,6 +124,19 @@ class ContentAnalyzer:
 
         discussion_section = "\n".join(discussion_parts) if discussion_parts else ""
 
+        # Derive a human-readable sub-source label for prompt context
+        meta = item.metadata
+        if meta.get("subreddit"):
+            sub_source = f"r/{meta['subreddit']}"
+        elif meta.get("feed_name"):
+            sub_source = meta["feed_name"]
+        elif meta.get("channel"):
+            sub_source = f"@{meta['channel']}"
+        elif meta.get("repo"):
+            sub_source = meta["repo"]
+        else:
+            sub_source = item.author or item.source_type.value
+
         # Choose prompt based on item category
         category = item.metadata.get("category", "") or ""
 
@@ -139,11 +153,20 @@ class ContentAnalyzer:
             user_prompt = DEPENDENCY_RISK_USER.format(
                 title=item.title,
                 source=item.source_type.value,
+                sub_source=sub_source,
                 url=str(item.url),
                 content_section=content_section,
                 discussion_section=discussion_section,
             )
             system_prompt = DEPENDENCY_RISK_SYSTEM
+        elif category == "telegram-zh":
+            user_prompt = TELEGRAM_ZH_USER.format(
+                title=item.title,
+                sub_source=sub_source,
+                url=str(item.url),
+                content_section=content_section,
+            )
+            system_prompt = TELEGRAM_ZH_SYSTEM
         elif category == "ecosystem-signal":
             user_prompt = ECOSYSTEM_SIGNAL_USER.format(
                 title=item.title,
@@ -157,7 +180,8 @@ class ContentAnalyzer:
         else:
             user_prompt = CONTENT_ANALYSIS_USER.format(
                 title=item.title,
-                source=f"{item.source_type.value}",
+                source=item.source_type.value,
+                sub_source=sub_source,
                 author=item.author or "Unknown",
                 url=str(item.url),
                 content_section=content_section,

@@ -1,0 +1,15 @@
+{
+  "run_id": "run-20260509T080157Z-5ddff3f4",
+  "created_at": "2026-05-09T08:01:57.981420+00:00",
+  "horizon_path": "/Users/defff/Horizon-Fork",
+  "config_path": "/Users/defff/Horizon-Fork/data/config.json",
+  "hours": 48,
+  "since": "2026-05-07T08:01:57.981920+00:00",
+  "source_selection": [
+    "telegram"
+  ],
+  "unknown_sources": [],
+  "raw_count_before_merge": 39,
+  "raw_count": 39,
+  "updated_at": "2026-05-09T08:02:00.087233+00:00"
+}

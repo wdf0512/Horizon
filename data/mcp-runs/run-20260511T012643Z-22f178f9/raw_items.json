@@ -1,0 +1,680 @@
+[
+  {
+    "id": "rss:simonwillison.net_atom_everything_:-4832060696187299688",
+    "source_type": "rss",
+    "title": "Quoting New York Times Editors’ Note",
+    "url": "https://simonwillison.net/2026/May/10/new-york-times-editors-note/#atom-everything",
+    "content": "<blockquote cite=\"https://www.nytimes.com/2026/04/14/world/canada/election-carney-liberal-party.html\"><p><em>This article was updated after The Times learned that a remark attributed to Pierre Poilievre, the Conservative leader, was in fact an A.I.-generated summary of his views about Canadian politics that A.I. rendered as a quotation. The reporter should have checked the accuracy of what the A.I. tool returned.  The article now accurately quotes from a speech delivered by Mr. Poilievre in April. [...] He did not refer to politicians who changed allegiances as turncoats in that speech.</em></p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://www.nytimes.com/2026/04/14/world/canada/election-carney-liberal-party.html\">New York Times Editors’ Note</a></p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/ai-ethics\">ai-ethics</a>, <a href=\"https://simonwillison.net/tags/hallucinations\">hallucinations</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/new-york-times\">new-york-times</a>, <a href=\"https://simonwillison.net/tags/journalism\">journalism</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a></p>",
+    "author": "Simon Willison",
+    "published_at": "2026-05-10T23:58:49Z",
+    "fetched_at": "2026-05-11T01:26:43.943839",
+    "metadata": {
+      "feed_name": "Simon Willison",
+      "category": "ai-tools",
+      "tags": [
+        "ai-ethics",
+        "hallucinations",
+        "generative-ai",
+        "new-york-times",
+        "journalism",
+        "ai",
+        "llms"
+      ]
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:simonwillison.net_atom_everything_:9208018058394097912",
+    "source_type": "rss",
+    "title": "Quoting Andrew Quinn",
+    "url": "https://simonwillison.net/2026/May/10/andrew-quinn/#atom-everything",
+    "content": "<blockquote cite=\"https://til.andrew-quinn.me/posts/replacing-a-3-gb-sqlite-database-with-a-7-mb-fst-finite-state-trandsucer-binary/#fn:5\"><p>One could say in the first quarter-century of my life, that while I was always fascinated by programming, I could never overcome the guilt of not really knowing whether the tool I am building right now isn’t already superceded by some much better implementation someone else has already written 30 or 40 years ago; I could write a TSV-aware search and replace, or I could find out about <code>awk</code> and solve that entire class of problems in one fell swoop, for example. My central conceit is that <em>this is a trap</em>. You <em>need</em> to reinvent a couple of wheels to get to the edge of what we know about wheel-making, not a thousand wheels, and not zero; probably four or five is sufficient in most domains, maybe closer to twenty or thirty in the most epistemically rigorous and developed fields like mathematics or computer science. Each wheel you reinvent, and every directed question you ask along the way, will propel you faster to the true frontier than that same amount of time spend in idle study, or even five times that amount.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://til.andrew-quinn.me/posts/replacing-a-3-gb-sqlite-database-with-a-7-mb-fst-finite-state-trandsucer-binary/#fn:5\">Andrew Quinn</a>, footnote on Replacing a 3 GB SQLite database with a 10 MB FST (finite state transducer) binary</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/careers\">careers</a>, <a href=\"https://simonwillison.net/tags/sqlite\">sqlite</a></p>",
+    "author": "Simon Willison",
+    "published_at": "2026-05-10T14:59:17Z",
+    "fetched_at": "2026-05-11T01:26:43.943902",
+    "metadata": {
+      "feed_name": "Simon Willison",
+      "category": "ai-tools",
+      "tags": [
+        "careers",
+        "sqlite"
+      ]
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:simonwillison.net_atom_everything_:2240125417965699316",
+    "source_type": "rss",
+    "title": "Quoting Luke Curley",
+    "url": "https://simonwillison.net/2026/May/9/luke-curley/#atom-everything",
+    "content": "<blockquote cite=\"https://moq.dev/blog/webrtc-is-the-problem/\"><p>WebRTC is designed to <strong>degrade and drop my prompt</strong> during poor network conditions.</p>\n<p>wtf my dude</p>\n<p>WebRTC aggressively drops audio packets to keep latency low. If you’ve ever heard distorted audio on a conference call, that’s WebRTC baybee. The idea is that conference calls depend on rapid back-and-forth, so pausing to wait for audio is unacceptable.</p>\n<p>…but as a user, I would much rather wait an extra 200ms for my slow/expensive prompt to be accurate. After all, I’m paying good money to boil the ocean, and a garbage prompt means a garbage response. It’s not like LLMs are particularly responsive anyway.</p>\n<p><strong>But I’m not allowed to wait</strong>. It’s <em>impossible</em> to even retransmit a WebRTC audio packet within a browser; we tried at Discord. The <em>implementation</em> is hard-coded for real-time latency <strong>or else</strong>.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://moq.dev/blog/webrtc-is-the-problem/\">Luke Curley</a>, OpenAI’s WebRTC Problem, in response to <a href=\"https://openai.com/index/delivering-low-latency-voice-ai-at-scale/\">How OpenAI delivers low-latency voice AI at scale</a></p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/webrtc\">webrtc</a>, <a href=\"https://simonwillison.net/tags/openai\">openai</a></p>",
+    "author": "Simon Willison",
+    "published_at": "2026-05-09T01:03:58Z",
+    "fetched_at": "2026-05-11T01:26:43.943916",
+    "metadata": {
+      "feed_name": "Simon Willison",
+      "category": "ai-tools",
+      "tags": [
+        "webrtc",
+        "openai"
+      ]
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:simonwillison.net_atom_everything_:-3538518588832339263",
+    "source_type": "rss",
+    "title": "Using Claude Code: The Unreasonable Effectiveness of HTML",
+    "url": "https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything",
+    "content": "<p><strong><a href=\"https://twitter.com/trq212/status/2052809885763747935\">Using Claude Code: The Unreasonable Effectiveness of HTML</a></strong></p>\nThought-provoking piece by Thariq Shihipar (on the Claude Code team at Anthropic) advocating for HTML over Markdown as an output format to request from Claude.</p>\n<p>The article is crammed with interesting examples (collected on <a href=\"https://thariqs.github.io/html-effectiveness/\">this site</a>) and prompt suggestions like this one:</p>\n<blockquote>\n<p><code>Help me review this PR by creating an HTML artifact that describes it. I'm not very familiar with the streaming/backpressure logic so focus on that. Render the actual diff with inline margin annotations, color-code findings by severity and whatever else might be needed to convey the concept well.</code></p>\n</blockquote>\n<p>I've been defaulting to asking for most things in Markdown since the GPT-4 days, when the 8,192 token limit meant that Markdown's token-efficiency over HTML was extremely worthwhile.</p>\n<p>Thariq's piece here has caused me to reconsider that, especially for output. Asking Claude for an explanation in HTML means it can drop in SVG diagrams, interactive widgets, in-page navigation and all sorts of other neat ways of making the information more pleasant to navigate.</p>\n<p>I wrote about <a href=\"https://simonwillison.net/2025/Dec/10/html-tools/\">Useful patterns for building HTML tools</a> last December, but that was focused very much on interactive utilities like the ones on my <a href=\"https://tools.simonwillison.net/\">tools.simonwillison.net</a> site. I'm excited to start experimenting more with rich HTML explanations in response to ad-hoc prompts.</p>\n<h4 id=\"trying-this-out\">Trying this out on copy.fail</h4>\n\n<p><a href=\"https://copy.fail/\">copy.fail</a> describes a recently discovered Linux security exploit, including a proof of concept distributed as obfuscated Python.</p>\n<p>I tried having GPT-5.5 create an HTML explanation of the exploit like this:</p>\n<blockquote>\n<p><code>curl https://copy.fail/exp | llm -m gpt-5.5 -s 'Explain this code in detail. Reformat it, expand out any confusing bits and go deep into what it does and how it works. Output HTML, neatly styled and using capabilities of HTML and CSS and JavaScript to make the explanation rich and interactive and as clear as possible'</code></p>\n</blockquote>\n<p>Here's <a href=\"https://gisthost.github.io/?ae53e3461ffdbfd0826156aacf025c7e\">the resulting HTML page</a>. It's pretty good, though I should have emphasized explaining the exploit over the Python harness around it.</p>\n<p><img alt=\"Screenshot of a dark-themed technical document titled &quot;What this Python script does&quot;. Body text: &quot;This is a compact, deliberately obfuscated Linux-specific local privilege-escalation proof-of-concept. Its apparent goal is to tamper with the in-memory image/page cache of /usr/bin/su, then execute su to obtain elevated privileges.&quot; A yellow-bordered callout reads: &quot;Safety note: This explanation is for code understanding, reverse engineering, and defensive analysis. Do not run this on systems you do not own or administer. On a vulnerable kernel, code like this can alter the behavior of a privileged executable.&quot; Left column heading &quot;High-level summary&quot;: &quot;The script opens /usr/bin/su read-only, decompresses an embedded binary payload, and then processes that payload in 4-byte chunks. For each chunk, it performs a carefully arranged sequence involving Linux's kernel crypto socket interface, AF_ALG, pipes, and splice(). The important point is that this is not ordinary file writing. It never calls write() on /usr/bin/su. Instead, it appears to rely on a kernel bug/primitive involving spliced file pages and the crypto API to get controlled bytes placed into the page-cache representation of a privileged executable.&quot; Numbered steps follow: &quot;1. Open target executable — /usr/bin/su is opened read-only. 2. Decode hidden payload — A zlib-compressed hex blob is decompressed into bytes. 3. Patch in 4-byte chunks — The helper function is called repeatedly with offsets 0, 4, 8, ...&quot;. Right column heading &quot;Why it looks strange&quot; contains a table with Pattern and Purpose columns: &quot;import os as g — Short aliasing to make the script compact and harder to read. socket(38, 5, 0) — Uses raw numeric Linux constants instead of readable names. Compressed hex blob — Hides binary payload bytes and keeps the script small. splice() — Moves file-backed pages through pipes without normal user-space copying. try: recv(...) except: 0 — Triggers the kernel operation and ignores expected errors.&quot;\" src=\"https://static.simonwillison.net/static/2026/python-script-explainer.jpg\" />\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/html\">html</a>, <a href=\"https://simonwillison.net/tags/security\">security</a>, <a href=\"https://simonwillison.net/tags/markdown\">markdown</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/prompt-engineering\">prompt-engineering</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/llm\">llm</a>, <a href=\"https://simonwillison.net/tags/claude-code\">claude-code</a></p>",
+    "author": "Simon Willison",
+    "published_at": "2026-05-08T21:00:11Z",
+    "fetched_at": "2026-05-11T01:26:43.943931",
+    "metadata": {
+      "feed_name": "Simon Willison",
+      "category": "ai-tools",
+      "tags": [
+        "html",
+        "security",
+        "markdown",
+        "ai",
+        "prompt-engineering",
+        "generative-ai",
+        "llms",
+        "llm",
+        "claude-code"
+      ]
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:rsshub.rssforever.com_gov_nrta_news_113:7763948543061566266",
+    "source_type": "rss",
+    "title": "国家广播电视总局关于印发《广播电视设备器材入网认定品种表（2026版）》的通知",
+    "url": "https://www.nrta.gov.cn/art/2026/5/9/art_113_73256.html",
+    "content": "<div>\n<!--<$[信息内容]>begin--><!--ZJEG_RSS.content.begin--><p style=\"text-align: center; text-indent: 2em;\">广电发〔2026〕23号</p><p style=\"text-align: left; text-indent: 0em;\">各省、自治区、直辖市广播电视局，新疆生产建设兵团文化体育广电和旅游局，总局直属有关单位，中央广播电视总台办公厅、电影频道节目中心、中国教育电视台，中国电信、中国移动、中国联通，各有关单位：</p><p style=\"text-align: left; text-indent: 2em;\">为适应广播电视和网络视听行业应用及技术发展需要,推进广播电视设备器材入网认定管理的科学化、精准化、系统化，按照《广播电视设备器材入网认定管理办法》（国家广播电视总局令第1号），国家广播电视总局组织制定了《广播电视设备器材入网认定品种表（2026版）》，现予发布。同时，2024年5月31日国家广播电视总局发布的《广播电视设备器材入网认定品种表（2024版）》（广电发〔2024〕27号）废止。</p><p style=\"text-align: left; text-indent: 2em;\">请你单位认真执行入网认定管理要求，对照品种表，严格审核采购使用的设备器材是否具备入网认定证书，不得采购使用未获得入网认定证书的设备器材。请省级广电主管部门将此文件转发至辖区内设备使用相关单位，并督促落实。</p><p style=\"text-align: left; text-indent: 2em;\"><br /></p><p style=\"text-align: left; text-indent: 2em;\"><a href=\"https://www.nrta.gov.cn/module/download/downfile.jsp?classid=0&amp;showname=%E5%B9%BF%E6%92%AD%E7%94%B5%E8%A7%86%E8%AE%BE%E5%A4%87%E5%99%A8%E6%9D%90%E5%85%A5%E7%BD%91%E8%AE%A4%E5%AE%9A%E5%93%81%E7%A7%8D%E8%A1%A8%EF%BC%882026%E7%89%88%EF%BC%89.pdf&amp;filename=50936eb9bc054cfabd46b9bfafaa9298.pdf\"><img src=\"https://www.nrta.gov.cn/module/jslib/icons/acrobat.png\" style=\"border: none;\" />广播电视设备器材入网认定品种表（2026版）.pdf</a></p><p style=\"text-align: left; text-indent: 2em;\"><br /></p><p style=\"text-align: left; text-indent: 2em;\"><br /></p><p style=\"text-align: right; text-indent: 2em;\"><br /></p><p style=\"text-align: right; text-indent: 2em;\">国家广播电视总局&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p style=\"text-align: right; text-indent: 2em;\">2026年5月7日&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><!--ZJEG_RSS.content.end--><!--<$[信息内容]>end-->\n</div>",
+    "author": "来源：科技司",
+    "published_at": "2026-05-09T10:01:00Z",
+    "fetched_at": "2026-05-11T01:26:53.099454",
+    "metadata": {
+      "feed_name": "广电总局公告公示",
+      "category": "compliance-broadcast",
+      "tags": []
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "rss:rsshub.rssforever.com_gov_nrta_news_113:-8109794210631735574",
+    "source_type": "rss",
+    "title": "国家广播电视总局办公厅关于2026年1月至3月全国国产网络剧片发行许可情况的通告",
+    "url": "https://www.nrta.gov.cn/art/2026/5/8/art_113_73252.html",
+    "content": "<div>\n<!--<$[信息内容]>begin--><!--ZJEG_RSS.content.begin--><p style=\"text-align: center; text-indent: 2em;\">〔2026〕4号</p><p style=\"text-align: justify; text-indent: 2em;\"><br /></p><p style=\"text-align: justify; text-indent: 2em;\">根据国家广播电视总局网络剧片发行许可管理有关要求，现将2026年1月至3月全国国产网络剧片发行许可情况通告如下：</p><p style=\"text-align: justify; text-indent: 2em;\">2026年1月至3月，全国广播电视主管部门颁发发行许可的国产网络剧片共317部7262集。其中网络剧15部333集，网络电影33部，微短剧144部5667集，网络动画片125部1229集。</p><p style=\"text-align: justify; text-indent: 2em;\">网络剧中，都市题材4部103集、农村题材1部24集、青少题材1部17集、武打题材1部12集、传奇题材2部58集、公安题材5部97集、其他题材1部22集。</p><p style=\"text-align: justify; text-indent: 2em;\">网络电影中，都市题材5部、农村题材5部、青少题材3部、科幻题材1部、武打题材3部、传记题材1部、传奇题材2部、军事题材2部、民族题材1部、公安题材1部、其他题材9部。</p><p style=\"text-align: justify; text-indent: 2em;\">微短剧中，都市题材54部2098集、农村题材2部52集、青少题材2部76集、科幻题材4部60集、武打题材7部353集、传记题材1部60集、传奇题材29部1316集、宫廷题材4部136集、国家安全题材1部73集、军事题材1部5集、公安题材5部197集、革命题材5部124集、其他题材29部1117集。</p><p style=\"text-align: justify; text-indent: 2em;\">网络动画片中，都市题材2部15集、青少题材15部373集、科幻题材13部107集、传记题材2部11集、传奇题材43部357集、武打题材3部18集、其他题材47部348集。</p><p style=\"text-align: justify; text-indent: 2em;\"><br /></p><p style=\"text-align: justify; text-indent: 2em;\">附件：<a href=\"https://www.nrta.gov.cn/module/download/downfile.jsp?classid=0&amp;showname=2026%E5%B9%B41%E6%9C%88%E8%87%B33%E6%9C%88%E5%85%A8%E5%9B%BD%E5%9B%BD%E4%BA%A7%E7%BD%91%E7%BB%9C%E5%89%A7%E7%89%87%E5%8F%91%E8%A1%8C%E8%AE%B8%E5%8F%AF%E6%83%85%E5%86%B5.pdf&amp;filename=e762b608112f440c9cfe309a952d914a.pdf\"><img src=\"https://www.nrta.gov.cn/module/jslib/icons/acrobat.png\" style=\"border: none;\" />2026年1月至3月全国国产网络剧片发行许可情况.pdf</a></p><p style=\"text-align: justify; text-indent: 2em;\"><br /></p><p style=\"text-align: right; text-indent: 2em;\">国家广播电视总局办公厅&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p style=\"text-align: right; text-indent: 2em;\">2026年4月30日&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><!--ZJEG_RSS.content.end--><!--<$[信息内容]>end-->\n</div>",
+    "author": "来源：网络视听节目管理司",
+    "published_at": "2026-05-08T06:32:00Z",
+    "fetched_at": "2026-05-11T01:26:53.099472",
+    "metadata": {
+      "feed_name": "广电总局公告公示",
+      "category": "compliance-broadcast",
+      "tags": []
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41296",
+    "source_type": "telegram",
+    "title": "Snapseed 正式推出 4.0 大版本更新",
+    "url": "https://play.google.com/store/apps/details?id=com.niksoftware.snapseed",
+    "content": "Snapseed 正式推出 4.0 大版本更新\n\n时隔 2 年，安卓版 Snapseed 再次迎来更新，版本号直接从 2.22 跃升至 4.0，iOS 版本同步推出。\n\n具体升级如下：\n• 首次加入 Snapseed Camera\n• 重新设计的用户界面：更快的编辑速度、新的收藏夹栏和简化的工具视图\n• 核心升级：无损和批量编辑\n• 专业功能：智能蒙版、人像和胶片的重大更新\n• 新工具：使用色彩 HSL、去雾、光晕和泛光掌握色彩和光线\n\nGooglePlay ｜ AppStore\n\n「少数派」微信公众号\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T02:39:35Z",
+    "fetched_at": "2026-05-11T01:26:45.063576",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41296",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41297",
+    "source_type": "telegram",
+    "title": "🚘 小米汽车被曝将推独立子品牌\"寻天\"主攻增程市场",
+    "url": "https://finance.sina.com.cn/tech/shenji/2026-05-09/doc-inhxhkfp3581052.shtml",
+    "content": "🚘 小米汽车被曝将推独立子品牌\"寻天\"主攻增程市场\n\n据多家媒体报道，小米汽车计划推出独立子品牌\"寻天\"，专注增程式车型。小米汽车门店工作人员对此回应称，目前未收到相关通知。增程式技术路线近期受到多家车企青睐，理想、问界等品牌已在该领域取得一定市场份额。小米汽车现有SU7系列为纯电车型，若\"寻天\"品牌属实，将标志着小米首次切入增程赛道。小米官方尚未对此事作出正式回应。\n\n新浪科技\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T04:07:38Z",
+    "fetched_at": "2026-05-11T01:26:45.063775",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41297",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41298",
+    "source_type": "telegram",
+    "title": "阿里云辟谣采购寒武纪 15 万片芯片传言，寒武纪股价大跌  8 月 31 日晚间有消息称阿里云紧急追加寒武纪思元 370 芯片订单至 15 万片。",
+    "url": "https://t.me/zaihuapd/41298",
+    "content": "阿里云辟谣采购寒武纪 15 万片芯片传言，寒武纪股价大跌  8 月 31 日晚间有消息称阿里云紧急追加寒武纪思元 370 芯片订单至 15 万片。9 月 1 日凌晨，阿里云相关人士回应称该消息不实，表示阿里云确实支持国产供应链，但传言的采购数量并不属实。  受此影响，9 月 1 日寒武纪股价短线跳水，跌幅一度扩大至 8.96%，股价一度跌破 1400 元。截至发稿时，跌幅为 6.2%，最新股价报 1400 元。  中国新闻周刊  🍀在花频道  🍵茶馆  📮投稿",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T06:30:44Z",
+    "fetched_at": "2026-05-11T01:26:45.063939",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41298",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41299",
+    "source_type": "telegram",
+    "title": "百度发布文心大模型 5.1",
+    "url": "https://mp.weixin.qq.com/s/_I9ziafHheXiJpA-QY2F7A",
+    "content": "百度发布文心大模型 5.1\n\n百度发布文心大模型 5.1，已在百度千帆模型广场、文心一言官网上线，面向企业用户和开发者开放体验。该模型采用“多维弹性预训练”，以业界同规模模型约 6% 的预训练成本实现基础效果领先。\n\n文心 5.1 在 LMArena 搜索榜以 1223 分位列国内第一、全球第四。百度称其 Agent 能力超越 DeepSeek-V4-Pro，创意写作能力与 Gemini 3.1 Pro 相当，推理能力接近业界领先闭源模型。\n\n文心公众号\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T07:45:42Z",
+    "fetched_at": "2026-05-11T01:26:45.064130",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41299",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41300",
+    "source_type": "telegram",
+    "title": "2025 年结婚登记增长至 676 万对，2026年情人节预约名额告罄  2025年中国多地结婚登记人数同比大幅增长，其中上海、深圳、苏州等城市增幅均超过25%",
+    "url": "https://t.me/zaihuapd/41300",
+    "content": "2025 年结婚登记增长至 676 万对，2026年情人节预约名额告罄  2025年中国多地结婚登记人数同比大幅增长，其中上海、深圳、苏州等城市增幅均超过25%。受婚姻登记“全国通办”及取消户口簿限制等政策影响，2026年2月14日情人节预约热度火爆，深圳、成都及江苏多地线上名额已提前约满。  民政部公布 2025 年 4 季度民政统计数据。数据显示，全年全国依法办理结婚登记 676.3 万对，同比上升 10.75%。  民政部 ｜第一财经  🍀在花频道  🍵茶馆聊天  📮投稿",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T08:52:13Z",
+    "fetched_at": "2026-05-11T01:26:45.064298",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41300",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41301",
+    "source_type": "telegram",
+    "title": "温馨提示：明日，2026年5月10日星期日 母亲节",
+    "url": "https://t.me/zaihuapd/41301",
+    "content": "温馨提示：明日，2026年5月10日星期日 母亲节",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T09:21:31Z",
+    "fetched_at": "2026-05-11T01:26:45.064417",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41301",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41302",
+    "source_type": "telegram",
+    "title": "研究称主流 AI 回答常偏向日本和美国",
+    "url": "https://cybernews.com/ai-news/every-ai-answer-japan/",
+    "content": "研究称主流 AI 回答常偏向日本和美国\n\n巴斯克大学和卡迪夫大学研究了 8 个主流大模型在 24 种语言下对 31,680 个文化问题的回答，发现它们常把答案锚定到日本或美国；其中 5 个模型更偏向日本，2 个更偏向美国。\n\n研究还发现，这种分布主要是在监督微调阶段形成的，基础模型相对更均衡；低资源语言更容易输出指向本国的回答。\n\nCybernews\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T10:02:59Z",
+    "fetched_at": "2026-05-11T01:26:45.064595",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41302",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41303",
+    "source_type": "telegram",
+    "title": "欧盟研究机构称 VPN 构成年龄验证漏洞须修补",
+    "url": "https://cyberinsider.com/eu-calls-vpns-a-loophole-that-needs-closing-in-age-verification-push/",
+    "content": "欧盟研究机构称 VPN 构成年龄验证漏洞须修补\n\n欧洲议会研究服务局（EPRS）发布报告，将 VPN 视为在线年龄验证法规的一个“漏洞”，认为其正被用于绕过成人内容限级检查，呼吁在立法中加以封闭。\n\n英国等地推行强制年龄验证后，VPN 下载量激增，部分政策制定者和儿童专员已提议将 VPN 访问限于成年人。但 VPN 行业及隐私团体反对这一做法，认为强制身份验证将严重削弱匿名保护。此外，欧盟官方推出的年龄验证 App 近期也被发现存在安全缺陷，凸显技术落地的困难。法国目前试行的“双盲”验证系统被列为一种探索方向。\n\nCyberInsider\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T11:48:44Z",
+    "fetched_at": "2026-05-11T01:26:45.064766",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41303",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41304",
+    "source_type": "telegram",
+    "title": "NASA 推进新型旋翼技术突破",
+    "url": "https://arstechnica.com/space/2026/05/engineers-at-nasas-jet-propulsion-lab-make-a-breakthrough-in-rotor-technology/",
+    "content": "NASA 推进新型旋翼技术突破\n\nNASA 喷气推进实验室的工程师在旋翼技术上取得新进展，重点是让飞行器在火星这类稀薄大气环境中获得更高效率和更稳定的升力。这项突破瞄准的是比“机智号”更重、任务能力更强的下一代火星飞行器。\n\n新方案的意义在于扩大火星飞行器的载荷和任务空间，让它们能飞得更远、带更多设备，也为未来更复杂的空中探测任务铺路。\n\nArs Technica\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-09T14:21:34Z",
+    "fetched_at": "2026-05-11T01:26:45.064940",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41304",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41305",
+    "source_type": "telegram",
+    "title": "🤖 报告揭秘中国 Claude API 灰产：一折低价背后是数据窃取与模型掉包",
+    "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chinese-grey-market-sells-claude-api-access-at-90-percent-off-through-proxy-networks-that-harvest-user-data",
+    "content": "🤖 报告揭秘中国 Claude API 灰产：一折低价背后是数据窃取与模型掉包\n\n研究显示，中国开发者社区存在大量被称为“中转站”的 API 代理服务，以低至官方一成的价格转售 Anthropic 的 Claude 模型访问权。其运作模式主要包括：\n\n1. 降低成本：利用盗刷信用卡、批量注册空投账号或拆分订阅套餐获取权限，甚至招募低收入国家人员代办实人认证以规避官方审查。\n2. 模型掉包：普遍存在欺诈行为，服务商常以廉价模型或国产模型冒充 Claude Opus 等高级模型向用户返回结果。\n3. 数据窃取：服务商会采集并转售用户的提示词与输出（尤其是代码逻辑）用于模型蒸馏，使用户面临代码和商业机密泄露风险。\n\nTom's Hardware\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T01:48:06Z",
+    "fetched_at": "2026-05-11T01:26:45.065132",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41305",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41306",
+    "source_type": "telegram",
+    "title": "今天母亲节送什么礼物？鉴赏下！🥳",
+    "url": "https://t.me/zaihuapd/41306",
+    "content": "今天母亲节送什么礼物？鉴赏下！🥳",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T02:49:21Z",
+    "fetched_at": "2026-05-11T01:26:45.065248",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41306",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41307",
+    "source_type": "telegram",
+    "title": "多地 5 月 20 日结婚登记预约已满  5 月 20 日结婚登记预约在多地紧张。",
+    "url": "https://t.me/zaihuapd/41307",
+    "content": "多地 5 月 20 日结婚登记预约已满  5 月 20 日结婚登记预约在多地紧张。广州 11 区 15 个婚姻登记处当天剩余预约量均为 0；深圳各区婚登处已约满；南京已有超 1400 对新人预约，无锡多个登记点线上预约已满，但当天仍可现场办理。  2025 年 5 月 10 日起，新修订的《婚姻登记条例》实施，婚姻登记取消地域限制并实行全国通办。一年来，各地办理“全国通办”68.2 万件、异地调档 24.7 万份。  新华社  🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T03:27:11Z",
+    "fetched_at": "2026-05-11T01:26:45.065402",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41307",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41308",
+    "source_type": "telegram",
+    "title": "美国 FCC 拟要求开通电话号码前核验用户身份",
+    "url": "https://reclaimthenet.org/the-fcc-wants-your-id-before-you-get-a-phone-number",
+    "content": "美国 FCC 拟要求开通电话号码前核验用户身份\n\n美国联邦通信委员会一致通过一项提案，拟要求电信运营商在开通电话服务前核验用户身份，可能包括政府签发证件、法定姓名、住址和现有号码。适用范围涵盖传统运营商、移动运营商和 VoIP 服务，具体细节仍在征求公众意见。\n\n提案称目标是打击非法骚扰电话，并考虑要求运营商在用户离网后至少保存身份资料 4 年、核查执法观察名单。预付费手机和 SIM 卡当前可匿名现金购买，若规则落地，这类半匿名通信方式将受影响。\n\nReclaim The Net\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T04:12:09Z",
+    "fetched_at": "2026-05-11T01:26:45.065564",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41308",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41309",
+    "source_type": "telegram",
+    "title": "Epic 称 AI 主要用于提效，《堡垒之夜》相关使用由公司统一把控",
+    "url": "https://www.ithome.com/0/948/483.htm",
+    "content": "Epic 称 AI 主要用于提效，《堡垒之夜》相关使用由公司统一把控\n\nEpic 表示，公司持续试用各类 AI 工具，主要用于支持游戏开发、缩短部分任务耗时、提升运转效率，不会用 AI 取代现有岗位。负责《堡垒之夜》的高级开发经理斯蒂芬妮・阿内特还说，未来会把 AI 用于艺术创意创作。\n\n她同时称，《堡垒之夜》的合作方不得自行启用 AI，相关使用将由 Epic 统一决定。报道也提到，Epic 曾在 2026 年裁员 1000 人，这让外界对其“AI 不危及就业”的说法存疑。\n\nIT之家\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T09:07:46Z",
+    "fetched_at": "2026-05-11T01:26:45.065721",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41309",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41310",
+    "source_type": "telegram",
+    "title": "OPPO 母亲节文案“我妈有两个老公”引发争议后删除  17:27 OPPO回应：关于本次母亲节宣传文案引起的争议，我们诚恳表示歉意。",
+    "url": "https://t.me/zaihuapd/41310",
+    "content": "OPPO 母亲节文案“我妈有两个老公”引发争议后删除  17:27 OPPO回应：关于本次母亲节宣传文案引起的争议，我们诚恳表示歉意。 我们的创作初衷，是希望打破刻板印象，呈现更多元、更立体的当代母亲形象：母亲可以热爱马拉松，可以沉浸文字创作，也可以拥有自己的追星爱好。 我们已第一时间下架全部相关物料。  我们将认真倾听各方批评，全面审查内容审核机制，确保此类问题不再发生。  🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T09:45:31Z",
+    "fetched_at": "2026-05-11T01:26:45.065877",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41310",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41311",
+    "source_type": "telegram",
+    "title": "Trump Media 一季度亏损 4.059 亿美元",
+    "url": "https://cybernews.com/ai-news/trump-media-swings-to-406m-loss-as-crypto-valuation-drops/",
+    "content": "Trump Media 一季度亏损 4.059 亿美元\n\nTrump Media & Technology 2026 年第一季度净亏损 4.059 亿美元，其中约 3.68 亿美元来自数字资产、质押数字资产和股票证券的未实现亏损等非现金项目。季度收入略高于 87 万美元，净销售额增长 6%。\n\n公司同期经营现金流为正 1,790 万美元，金融资产为 21 亿美元。报道还称，其财库持有逾 9,500 枚比特币，2 月曾以每枚不到 7 万美元出售约 2,000 枚。\n\nCybernews\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T10:32:32Z",
+    "fetched_at": "2026-05-11T01:26:45.066044",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41311",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41312",
+    "source_type": "telegram",
+    "title": "Chrome 148 删去本地 AI 不上传数据表述，Google 称处理方式未变",
+    "url": "https://cybernews.com/ai-news/chrome-removes-ai-privacy-wording-google-says-data-still-stays-on-device/",
+    "content": "Chrome 148 删去本地 AI 不上传数据表述，Google 称处理方式未变\n\nChrome 148.0.7778.97 开始推送后，设置中的“On-device AI”说明删去了“不会把你的数据发送到 Google 服务器”这句话；147 版仍显示旧文案。\n\nGoogle 称这不代表 Chrome 本地 AI 的处理方式有变，传给模型的数据仍只在设备上处理；但在部分调用 Chrome 中 Gemini Nano 的网站场景中，网站可看到模型输入和输出，各站点按自己的隐私政策处理。\n\nCybernews\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T12:01:49Z",
+    "fetched_at": "2026-05-11T01:26:45.066210",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41312",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41313",
+    "source_type": "telegram",
+    "title": "Grok Build 编程工具泄露，马斯克 xAI 或推新模型对标 Claude Code",
+    "url": "https://tech.ifeng.com/c/8t0yrbeeuwt",
+    "content": "Grok Build 编程工具泄露，马斯克 xAI 或推新模型对标 Claude Code\n\nxAI 桌面工具 Grok Build 泄露，是一款跨平台 Agent 工作流应用，可自主执行多步开发任务，默认搭载 Grok 4.3 Early Access。它开放本地文件与 Git 权限，支持 MCP、官方技能与插件。\n\n马斯克此前称 6 月将发布编程能力超越 Claude 的新模型；泄露页面显示 xAI 在训练多个大规模模型，包括 1 万亿、1.5 万亿、6 万亿和 10 万亿参数版本及图像视频模型 Imagine V2。对标 Claude Code 的 Opus 级别需至少 6 万亿参数。\n\n凤凰网\n\n🌸 在花频道 · 茶馆讨论 · 投稿通道",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T13:34:29Z",
+    "fetched_at": "2026-05-11T01:26:45.066383",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41313",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41314",
+    "source_type": "telegram",
+    "title": "山西“订婚强奸案”入选最高法案例，明确订婚不等于性同意  山西大同“订婚强奸案”入选最高人民法院发布的参考案例。",
+    "url": "https://t.me/zaihuapd/41314",
+    "content": "山西“订婚强奸案”入选最高法案例，明确订婚不等于性同意  山西大同“订婚强奸案”入选最高人民法院发布的参考案例。裁判要旨指出：订婚不代表对性行为存在默示同意，不存在“订婚即有性权利”。若行为人违背妇女意志，以暴力、胁迫等手段发生性关系，构成强奸罪，应依法追究刑责。同时，泄露依法不公开审理案件信息的行为也将依法追责。此案明确保护女性性自主权，厘清公众法律认知。  正在新闻  📮投稿  ☘️频道  🐶618红包",
+    "author": "zaihuapd",
+    "published_at": "2026-05-10T14:23:59Z",
+    "fetched_at": "2026-05-11T01:26:45.066553",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41314",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:zaihuapd:41315",
+    "source_type": "telegram",
+    "title": "特朗普宣布将于 5 月中旬访华，外交部称双方正保持沟通  美国白宫新闻秘书卡罗琳·莱维特于 3 月 25 日宣布，美国总统特朗普将于 5 月 14 日至 15 ",
+    "url": "https://t.me/zaihuapd/41315",
+    "content": "特朗普宣布将于 5 月中旬访华，外交部称双方正保持沟通  美国白宫新闻秘书卡罗琳·莱维特于 3 月 25 日宣布，美国总统特朗普将于 5 月 14 日至 15 日正式访华并举行中美两国领导人峰会。特朗普随后在社交平台证实了这一消息，并称相关访问的最后准备工作正在进行中。此前，特朗普曾因伊朗局势推迟了原定于 3 月下旬至 4 月初的访华行程。  中国外交部发言人林剑在 3 月 26 日的例行记者会上对此回应称，元首外交对中美关系发挥着不可替代的战略引领作用，中美双方正就特朗普总统访华事宜保持沟通。这是特朗普继…",
+    "author": "zaihuapd",
+    "published_at": "2026-05-11T01:12:18Z",
+    "fetched_at": "2026-05-11T01:26:45.066689",
+    "metadata": {
+      "msg_url": "https://t.me/zaihuapd/41315",
+      "channel": "zaihuapd"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21571",
+    "source_type": "telegram",
+    "title": "在“德国老司机驾校”的暗角里，在那些加密群组的深处，还有多少人在用黑话交流、用药物控制、用录像收藏、用群体的喝彩喂养自己的恶心欲望？",
+    "url": "https://chinadigitaltimes.net/chinese/727047.html",
+    "content": "在“德国老司机驾校”的暗角里，在那些加密群组的深处，还有多少人在用黑话交流、用药物控制、用录像收藏、用群体的喝彩喂养自己的恶心欲望？我相信，无论如何，无论阴暗的角落里还有多少只蟑螂，犯罪者终将获得法律的严惩和终身的耻辱。\n\n🔗 thinking wang｜中国高材生跨国迷奸案：德国连环性犯罪背后的熟人暴力与群体之恶",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-08T04:40:01Z",
+    "fetched_at": "2026-05-11T01:26:45.034375",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21571",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21572",
+    "source_type": "telegram",
+    "title": "我正穿越北非，去往巴勒斯坦输送医疗和重建物资，中国现在只有我一个人，其他国家都有代表团，急需律师团队和中国大使馆护航！",
+    "url": "https://chinadigitaltimes.net/chinese/727064.html",
+    "content": "我正穿越北非，去往巴勒斯坦输送医疗和重建物资，中国现在只有我一个人，其他国家都有代表团，急需律师团队和中国大使馆护航！如果您愿意，请同我联系，我将您对接给全球坚韧船队的律师团队！限流了，求转发！！！\n\n🔗 【404文库】一书是一书｜我正在去巴勒斯坦，急需律师和使馆援助！！！",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-09T03:20:02Z",
+    "fetched_at": "2026-05-11T01:26:45.034511",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21572",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21573",
+    "source_type": "telegram",
+    "title": "希望海力士的高管们好好研读这句话的思想高度，我们有个叫宁德的企业，做到世界第一了，可依然不骄不躁：坚持只给给基层工厂员工涨薪100多元，效果非常好。",
+    "url": "https://chinadigitaltimes.net/chinese/727068.html",
+    "content": "希望海力士的高管们好好研读这句话的思想高度，我们有个叫宁德的企业，做到世界第一了，可依然不骄不躁：坚持只给给基层工厂员工涨薪100多元，效果非常好。员工不仅感恩戴德，还积极踊跃报名“896”奋斗100天的项目。相比而言，海力士那种被工会“绑架”、简单粗暴分钱的做法，管理上极度幼稚，缺乏大局意识，整体意识。\n\n🔗 木蹊说｜人均百万奖金，韩国企业为啥要强制分红？",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-09T03:40:03Z",
+    "fetched_at": "2026-05-11T01:26:45.034643",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21573",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21574",
+    "source_type": "telegram",
+    "title": "这篇批评文其大概表述内容：海参崴是中国的故土，沙俄通过不平等条约强占，生活在这里的华人曾遭驱赶残害屠杀，让孩子在此参加俄方胜利游行，是很伤害民族尊严的。",
+    "url": "https://chinadigitaltimes.net/chinese/727066.html",
+    "content": "这篇批评文其大概表述内容：海参崴是中国的故土，沙俄通过不平等条约强占，生活在这里的华人曾遭驱赶残害屠杀，让孩子在此参加俄方胜利游行，是很伤害民族尊严的。\n\n🔗 【404文库】往昔新摘｜人民日报平安校园很快就把此文自个儿删掉了",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-09T03:40:03Z",
+    "fetched_at": "2026-05-11T01:26:45.034755",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21574",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21575",
+    "source_type": "telegram",
+    "title": "当地时间5月4日，2026年普利策奖公布获奖名单，美联社（Associated Press）记者 Dake Kang、Garance Burke、Byron T",
+    "url": "https://chinadigitaltimes.net/chinese/727070.html",
+    "content": "当地时间5月4日，2026年普利策奖公布获奖名单，美联社（Associated Press）记者 Dake Kang、Garance Burke、Byron Tau、Aniruddha Ghosal 以及独立记者 Yael Grauer 获得“国际报道奖”（International Reporting）。普利策委员会在授奖词中称，“这是一项令人震惊的全球调查，揭示了那些诞生于硅谷、在中国得到发展、并向全球扩散，最终又被美国边境巡逻队带回国内用于秘密新用途的尖端大规模监控工具”。\n\n🔗 【CDT报告汇·专题】美联社数字监控系列报道获普利策奖，美企助中国打造数字牢笼最终反噬自身",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-09T14:20:01Z",
+    "fetched_at": "2026-05-11T01:26:45.034879",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21575",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21576",
+    "source_type": "telegram",
+    "title": "每年五月的第二个星期日，社交媒体被鲜花与祝福淹没。",
+    "url": "https://chinadigitaltimes.net/chinese/727087.html",
+    "content": "每年五月的第二个星期日，社交媒体被鲜花与祝福淹没。但鲜少有人追问：这些献给“母亲”的敬意，是否平等地流向了所有母亲？那些没有结婚证、独自或与非婚伴侣共同完成生育的女性，是否也获得了应有的祝福和权利？\n\n🔗 港大法律平等权｜中国内地“单身”女性生育权：概念厘清与十年制度突围",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-09T23:00:01Z",
+    "fetched_at": "2026-05-11T01:26:45.035004",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21576",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21577",
+    "source_type": "telegram",
+    "title": "猝不及防地，发现我前面的一篇文章被平台删除了。根据上面的描述，我应该是被人投诉了。",
+    "url": "https://chinadigitaltimes.net/chinese/727089.html",
+    "content": "猝不及防地，发现我前面的一篇文章被平台删除了。根据上面的描述，我应该是被人投诉了。\n\n🔗 【404经验】苟住 然后绽放｜接到投诉，我的文章被删除了",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-10T01:20:01Z",
+    "fetched_at": "2026-05-11T01:26:45.035117",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21577",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21578",
+    "source_type": "telegram",
+    "title": "“德国老司机驾校”，是加密通讯软件Telegram上的一个私密群组。",
+    "url": "https://chinadigitaltimes.net/chinese/727093.html",
+    "content": "“德国老司机驾校”，是加密通讯软件Telegram上的一个私密群组。核心成员约8人，均为居住于德国的中国籍男性，大多拥有高等教育背景——哈工大、北大、慕尼黑工业大学、图宾根大学，这些标签拼凑出一个令人无法置信的“精英”犯罪图谱。\n\n🔗 她事清叙｜德国版“N号房”宣判：多名华人男性利用加密群组系统性下药性侵，最高获刑14年",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-10T04:40:01Z",
+    "fetched_at": "2026-05-11T01:26:45.035249",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21578",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21579",
+    "source_type": "telegram",
+    "title": "给警察打这个电话其实我挺放松的，权力是一个具体的存在，是一个接线员，不清不楚的信息揉成的一个纸团。",
+    "url": "https://chinadigitaltimes.net/chinese/727090.html",
+    "content": "给警察打这个电话其实我挺放松的，权力是一个具体的存在，是一个接线员，不清不楚的信息揉成的一个纸团。在它还没打开前，我以为它是个石头，但是接住展开它的那一刻，其实就知道它的质地是脆弱的。整个问话两个小时。最后我发着抖解散了我们的群聊。\n\n🔗 豆瓣｜她动身赴约，但明白，她已经不是之前的自己。",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-10T08:20:01Z",
+    "fetched_at": "2026-05-11T01:26:45.035368",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21579",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  },
+  {
+    "id": "telegram:cdtchinesefeed:21580",
+    "source_type": "telegram",
+    "title": "过去十余年间，中国图书行业从一个仍有活力的文化市场，逐渐演变成一个高度依赖审查、自我规训与短视频流量逻辑的产业，“中国图书出版商正面临生存危机”。",
+    "url": "https://chinadigitaltimes.net/chinese/727095.html",
+    "content": "过去十余年间，中国图书行业从一个仍有活力的文化市场，逐渐演变成一个高度依赖审查、自我规训与短视频流量逻辑的产业，“中国图书出版商正面临生存危机”。\n\n🔗 【CDT报告汇】连线中国：政治商业双压力，中国书商迎来行业寒冬（外二篇）",
+    "author": "cdtchinesefeed",
+    "published_at": "2026-05-10T09:00:01Z",
+    "fetched_at": "2026-05-11T01:26:45.035475",
+    "metadata": {
+      "msg_url": "https://t.me/cdtchinesefeed/21580",
+      "channel": "cdtchinesefeed"
+    },
+    "ai_score": null,
+    "ai_reason": null,
+    "ai_summary": null,
+    "ai_tags": []
+  }
+]

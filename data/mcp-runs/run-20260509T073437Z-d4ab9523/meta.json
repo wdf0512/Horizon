@@ -1,0 +1,15 @@
+{
+  "run_id": "run-20260509T073437Z-d4ab9523",
+  "created_at": "2026-05-09T07:34:37.644622+00:00",
+  "horizon_path": "/Users/defff/Horizon-Fork",
+  "config_path": "/Users/defff/Horizon-Fork/data/config.json",
+  "hours": 72,
+  "since": "2026-05-06T07:34:37.645284+00:00",
+  "source_selection": [
+    "rss"
+  ],
+  "unknown_sources": [],
+  "raw_count_before_merge": 9,
+  "raw_count": 9,
+  "updated_at": "2026-05-09T07:34:43.831865+00:00"
+}

@@ -8,7 +8,9 @@
     "obsidian": {
       "command": "/Users/defff/Obsidian/Defang's FK Valut/.obsidian/plugins/mcp-tools/bin/mcp-server",
       "env": {
-        "OBSIDIAN_API_KEY": "de336c564363911b2bcdb3a86b905c38db0108d6cd7940ea29e6276f3a90ae24"
+        "OBSIDIAN_API_KEY": "de336c564363911b2bcdb3a86b905c38db0108d6cd7940ea29e6276f3a90ae24",
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
       }
     }
   }

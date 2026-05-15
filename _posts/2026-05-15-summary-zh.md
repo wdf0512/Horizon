@@ -5,87 +5,66 @@ date: 2026-05-15
 lang: zh
 ---
 
-> From 42 items, 13 important content pieces were selected
+> From 43 items, 15 important content pieces were selected
 
 ---
 
-1. [DeepSeek-R1 会话隔离漏洞：未闭合<think 标签导致跨用户对话泄露](#item-1) ⭐️ 10.0/10
-2. [vLLM v0.21.0 发布：强制升级 Transformers v5 和 C++20 编译器](#item-2) ⭐️ 9.0/10
-3. [LiteLLM v1.84.0 发布，含未明确说明的破坏性变更](#item-3) ⭐️ 9.0/10
-4. [首个公开的 Apple M5 芯片 macOS 内核内存破坏漏洞利用](#item-4) ⭐️ 9.0/10
-5. [arXiv 对包含幻觉参考文献的论文实施一年禁投处罚](#item-5) ⭐️ 9.0/10
-6. [Bun 核心已完全重写为 Rust 并合并](#item-6) ⭐️ 9.0/10
-7. [IBM 与 Hugging Face 发布 Granite 多语言嵌入模型 R2](#item-7) ⭐️ 9.0/10
-8. [NGINX rewrite 模块堆溢出漏洞 CVE-2026-42945 被披露](#item-8) ⭐️ 9.0/10
-9. [美国批准向 10 家中国公司出口 H200 芯片，AI 算力博弈升级](#item-9) ⭐️ 9.0/10
-10. [DwarfStar4（DS4）发布：面向 DeepSeek V4 的 Metal 优先轻量级大模型推理运行时](#item-10) ⭐️ 8.0/10
-11. [CSP 允许列表实验实现运行时用户驱动的域名白名单机制](#item-11) ⭐️ 8.0/10
-12. [Hugging Face 推出‘continuous async’实现异步连续批处理](#item-12) ⭐️ 8.0/10
-13. [Anthropic 推出面向小企业的 Claude 套餐，深度集成主流 SaaS 工具](#item-13) ⭐️ 8.0/10
+1. [DeepSeek-R1 会话隔离漏洞：未闭合<think 标签导致跨会话数据泄露](#item-1) ⭐️ 10.0/10
+2. [LiteLLM v1.84.0 发布：含未明示的破坏性变更及签名 Docker 镜像](#item-2) ⭐️ 9.0/10
+3. [Mullvad VPN 出口 IP 基于 WireGuard 密钥确定性分配，构成指纹识别向量](#item-3) ⭐️ 9.0/10
+4. [首个公开的 Apple M5 macOS 内核内存破坏漏洞利用](#item-4) ⭐️ 9.0/10
+5. [严重 18 年陈旧 Nginx 远程代码执行漏洞“Nginx-Rift”（CVE-2026-42945）公开披露](#item-5) ⭐️ 9.0/10
+6. [arXiv 对幻觉引用实施一年投稿禁令](#item-6) ⭐️ 9.0/10
+7. [Bun 核心运行时正式从 Zig 重写为 Rust 并合并](#item-7) ⭐️ 9.0/10
+8. [安大略省审计人员发现 AI 临床记录工具频繁编造医学事实](#item-8) ⭐️ 9.0/10
+9. [IBM 与 Hugging Face 发布 Granite 多语言嵌入模型 R2](#item-9) ⭐️ 9.0/10
+10. [美国批准向 10 家中国企业销售 H200 芯片，出口管制下罕见松动](#item-10) ⭐️ 9.0/10
+11. [黑客移除 2024 款 RAV4 混动版的蜂窝调制解调器和 GPS 以阻止遥测数据上传](#item-11) ⭐️ 8.0/10
+12. [DwarfStar4（DS4）：面向 DeepSeek V4 的 Metal 优先大语言模型推理运行时](#item-12) ⭐️ 8.0/10
+13. [Codex 已集成至 ChatGPT 移动应用，免费开放](#item-13) ⭐️ 8.0/10
+14. [Hugging Face 推出‘continuous async’实现异步大语言模型推理](#item-14) ⭐️ 8.0/10
+15. [Anima：开源的 20 亿参数动漫风格文生图模型](#item-15) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [DeepSeek-R1 会话隔离漏洞：未闭合<think 标签导致跨用户对话泄露](https://github.com/deepseek-ai/DeepSeek-R1/issues/840) ⭐️ 10.0/10
+## [DeepSeek-R1 会话隔离漏洞：未闭合<think 标签导致跨会话数据泄露](https://github.com/deepseek-ai/DeepSeek-R1/issues/840) ⭐️ 10.0/10
 
-2026 年 5 月 11 日晚，DeepSeek-R1 的 Web 与 API 接口被曝出严重会话隔离漏洞：在全新空对话中仅输入未闭合的'<think'字符串，即可触发模型返回其他用户的过往对话片段，包括代码、密钥及隐私信息。 该漏洞危及所有 DeepSeek-R1 部署（含官方及第三方）的多租户安全，无需身份验证或提权即可泄露敏感用户数据；它暴露了大语言模型状态管理中的系统性缺陷，凸显了生产级 AI 服务中亟需强化提示词沙箱与上下文隔离机制。 该漏洞复现极简（仅需发送未转义的'<think'），影响官方及第三方自托管实例；根源在于会话初始化阶段对内部推理标签处理不当，可能源于提示词净化不足及用户间推理状态意外共享。
+2026 年 5 月 11 日晚，DeepSeek-R1 的 Web 与 API 接口被报告存在严重会话隔离漏洞：在全新空对话中仅输入未闭合的'<think'字符串，即可触发模型返回其他用户的历史对话片段，包括代码、API 密钥及隐私信息等。 这是一次系统级安全失效，而非普通幻觉，直接导致生产环境中用户敏感数据跨会话泄露；所有官方及第三方部署的 DeepSeek-R1 服务均受影响，AI 工程师、MLOps 运维和大模型应用开发者需立即响应并加固架构。 该漏洞源于推理状态管理缺陷，而非提示注入或训练产物；仅需一个畸形输入（'<think'）即可复现，无需身份认证或提权；影响范围涵盖 DeepSeek 官方托管服务及采用标准 R1 推理流水线的自托管实例。
 
 telegram · zaihuapd · May 14, 13:15
 
-**背景**: 面向多用户部署的大语言模型必须严格隔离每位用户的对话历史与上下文，以防会话串扰。'会话隔离'指确保一位用户的输入、记忆或生成内容不会影响或泄露至另一位用户会话的架构性防护机制。'<think>'标签是 DeepSeek-R1 内部推理协议的一部分，用于思维链生成，但未针对恶意提示注入进行充分沙箱化。提示注入攻击正是利用模型无法区分开发者指令与用户输入这一根本缺陷。
+**背景**: DeepSeek-R1 于 2025 年 1 月发布，是一款面向推理优化的大语言模型，以支持'<think>'等结构化标签来显式暴露内部推理过程（如思维链）而著称。不同于传统模型，它在推理中使用类似 XML 的标签（如<think>和</think>）划分推理步骤，但对未闭合标签处理不当会导致会话边界失效。LLM 会话隔离是多租户 API 服务中的基础安全要求，旨在防止用户间上下文交叉泄露。
 
 <details><summary>参考链接</summary>
 <ul>
+<li><a href="https://deepwiki.com/deepseek-ai/DeepSeek-R1/2-model-architecture">Model Architecture | deepseek-ai/DeepSeek-R1 | DeepWiki</a></li>
 <li><a href="https://www.a10networks.com/blog/llm-security/">LLM Security: Protecting AI Models & Applications</a></li>
-<li><a href="https://www.wiz.io/academy/ai-security/llm-security">LLM Security: Protecting Models, RAG & Data Pipelines | Wiz</a></li>
 <li><a href="https://www.cloudsine.tech/llm-vulnerabilities-8-critical-threats-and-how-to-mitigate-them/">A Deep Dive into LLM Vulnerabilities: 8 Critical Threats and How to Mitigate Them - cloudsineAI</a></li>
-<li><a href="https://discuss.huggingface.co/t/prompt-injection-concern-with-think-tags/171162">Prompt Injection concern with think tags - Models - Hugging Face...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区成员确认该漏洞同样影响第三方部署，有用户评论称‘这是幻觉’——可能指模型错误地将他人会话片段当作自身推理轨迹输出。讨论普遍强调紧急修复必要性，并呼吁深入审查有状态 LLM 服务中的上下文管理范式。
+**社区讨论**: 部分社区成员最初误将该问题归因为‘幻觉’，但报告明确指出这是确定性的系统级隔离失效。另有用户验证了第三方部署同样受影响，进一步证实根本原因在于推理引擎本身，而非前端或应用层逻辑。
 
-**标签**: `#LLM安全`, `#会话隔离漏洞`, `#Prompt注入`
+**标签**: `#安全漏洞`, `#LLM安全`, `#会话隔离`
 
 ---
 
 <a id="item-2"></a>
-## [vLLM v0.21.0 发布：强制升级 Transformers v5 和 C++20 编译器](https://github.com/vllm-project/vllm/releases/tag/v0.21.0) ⭐️ 9.0/10
+## [LiteLLM v1.84.0 发布：含未明示的破坏性变更及签名 Docker 镜像](https://github.com/BerriAI/litellm/releases/tag/v1.84.0) ⭐️ 9.0/10
 
-vLLM v0.21.0 已在 GitHub 发布，正式废弃对 Hugging Face Transformers v4 的支持，并强制要求使用支持 C++20 的编译器构建源码。同时新增 KV 缓存卸载与混合内存分配器（HMA）的深度集成、支持推理预算的推测解码，以及面向 Blackwell GPU 的 TOKENSPEED_MLA 注意力后端。 该版本大幅提高系统兼容性门槛，迫使生产环境必须同步升级 Python 依赖栈（至 Transformers v5）和构建工具链（至 C++20），可能中断 CI/CD 流水线及老旧 GPU 服务器部署。与此同时，HMA 与 KV 卸载能力显著提升混合架构模型和内存受限场景下的推理效率，巩固 vLLM 在大规模 LLM 服务领域的领先地位。 C++20 要求导致旧版编译器（如 GCC < 11 或 Clang < 14）无法构建；Transformers v4 用户必须先完成升级，因 vLLM v0.21.0 已完全移除兼容层与降级支持。HMA 支持按层定制 KV 缓存大小——这对 Gemma-2 等滑动窗口+全注意力混合模型至关重要，相比统一尺寸分配可减少最高达 79.6% 的显存浪费。
-
-github · khluu · May 14, 23:15
-
-**背景**: vLLM 是一个以 PagedAttention 和连续批处理著称的开源高性能大语言模型推理引擎。Transformers 是 Hugging Face 提供的核心库，用于加载和运行各类基于 Transformer 的模型。混合模型（hybrid models）在同一架构中融合多种注意力机制（例如滑动窗口注意力与全注意力），导致传统统一尺寸的 KV 缓存分配方式产生大量显存浪费。KV 卸载技术将键值缓存从 GPU 显存迁移至 CPU 内存或磁盘，从而扩展有效上下文容量。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://blog.vllm.ai/2026/01/08/kv-offloading-connector.html">Inside vLLM’s New KV Offloading Connector: Smarter Memory Transfer for Maximizing Inference Throughput | vLLM Blog</a></li>
-<li><a href="https://docs.vllm.ai/projects/production-stack/en/vllm-stack-0.1.2/tutorials/kv_cache.html">KV Cache Offloading — production-stack - vLLM</a></li>
-<li><a href="https://github.com/vllm-project/vllm/issues/11382">[RFC]: Hybrid Memory Allocator · Issue #11382 · vllm-project/vllm</a></li>
-
-</ul>
-</details>
-
-**标签**: `#breaking-change`, `#deprecation`
-
----
-
-<a id="item-3"></a>
-## [LiteLLM v1.84.0 发布，含未明确说明的破坏性变更](https://github.com/BerriAI/litellm/releases/tag/v1.84.0) ⭐️ 9.0/10
-
-BerriAI 发布了 LiteLLM v1.84.0 版本，明确标注包含破坏性变更（breaking changes），但发布说明和变更日志中未具体说明哪些 API、接口或行为发生了变更。 该版本对生产环境用户构成高风险，因未明示的破坏性变更可能导致运行时失败、集成回归或安全配置错误，且缺乏清晰的迁移指引——这对依赖 LiteLLM 作为稳定大语言模型抽象层的团队尤为关键。 该版本通过 cosign 对 Docker 镜像进行签名，并推荐使用不可变的提交哈希（0112e53）验证公钥；但‘变更内容’列表仅罗列 PR 合并与次要修复，未指出任何具体的破坏性修改。
+BerriAI 发布了 LiteLLM v1.84.0，该版本被明确标记为高危破坏性更新，包含未在发布说明中具体说明的破坏性变更；所有对应 Docker 镜像均使用 cosign 工具签名，并通过提交哈希 0112e53 所对应的公钥进行验证。 该版本升级前必须进行紧急兼容性评估，因未明示的破坏性变更可能导致生产环境运行时故障；同时采用 cosign 签名的 Docker 镜像显著提升了依赖 LiteLLM 的团队在受监管或高信任要求场景下的软件供应链安全性。 发布说明中未提供破坏性变更的具体描述，用户需手动审查 #25521 至 #26721 等合并请求；Docker 镜像验证支持两种方式——推荐使用不可变的提交哈希（更安全），或使用受保护的发布标签（更易读），两者均需 cosign CLI 并从 GitHub raw 链接获取公钥。
 
 github · github-actions[bot] · May 14, 06:12
 
-**背景**: LiteLLM 是一个开源的大语言模型编排框架，为超过 100 个大语言模型提供商（如 OpenAI、Anthropic、Vertex AI）提供统一接口。它被广泛用于生产环境中实现请求路由、负载均衡、故障转移和可观测性。此类基础库中的破坏性变更必须明确记录，否则可能引发下游服务的级联故障。
+**背景**: LiteLLM 是一个开源大语言模型抽象与代理层，统一支持 100 多个 LLM 提供商（如 OpenAI、Anthropic、Vertex AI）的 API 调用，广泛应用于生产 AI 系统中的路由、负载均衡、可观测性与成本追踪。Cosign 是 Sigstore 项目下的工具，用于对软件制品（包括容器镜像）进行密码学签名与验证，结合透明日志机制防止篡改并确保来源可信。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/sigstore/cosign">GitHub - sigstore / cosign : Code signing and transparency for...</a></li>
-<li><a href="https://docs.sigstore.dev/quickstart/quickstart-cosign/">Sigstore Quickstart with Cosign - Sigstore</a></li>
-<li><a href="https://medium.com/@anil.goyal0057/securing-your-kubernetes-deployments-docker-image-signing-and-verification-with-cosign-and-kyverno-e9bed3ae3efd">Securing Your Kubernetes Deployments: Docker Image Signing and...</a></li>
+<li><a href="https://docs.sigstore.dev/cosign/">Cosign - Sigstore</a></li>
+<li><a href="https://docs.docker.com/engine/security/trust/">Content trust in Docker</a></li>
+<li><a href="https://www.wiz.io/academy/container-security/container-image-signing">What Is Container Image Signing? | Wiz - Cool</a></li>
 
 </ul>
 </details>
@@ -94,229 +73,308 @@ github · github-actions[bot] · May 14, 06:12
 
 ---
 
-<a id="item-4"></a>
-## [首个公开的 Apple M5 芯片 macOS 内核内存破坏漏洞利用](https://blog.calif.io/p/first-public-kernel-memory-corruption) ⭐️ 9.0/10
+<a id="item-3"></a>
+## [Mullvad VPN 出口 IP 基于 WireGuard 密钥确定性分配，构成指纹识别向量](https://tmctmt.com/posts/mullvad-exit-ips-as-a-fingerprinting-vector/) ⭐️ 9.0/10
 
-Calif 团队联合 Anthropic 的 Mythos Preview AI 系统，在 5 天内（2026 年 4 月 25 日至 5 月 1 日）针对运行 macOS 26.4.1 的 Apple M5 硬件，构建并公开披露了首个可用的内核内存破坏利用链，实现从非特权用户到 root shell 的本地提权；该利用成功绕过了 Apple 的内存隔离强制执行（MIE）与指针认证码（PAC）防护。 这是首次在现实中证明 Apple 耗时五年、投入数十亿美元打造的新一代硬件级安全机制（特别是 MIE）可被人类与 AI 协作方式快速突破，彻底改变了业界对 ARM64 架构 Apple 芯片上漏洞利用开发速度与可行性的预期。 该利用链依赖两个独立的内核漏洞，并采用 PAC 绕过技术实现任意内核代码执行；全程无需物理访问或特殊硬件，仅通过标准系统调用完成，目标为 Apple 发布修复补丁前的 macOS 26.4.1 系统（M5 硬件平台）。
+研究人员发现，Mullvad 并非每次连接时随机分配出口 IP，而是根据用户的 WireGuard 私钥确定性地分配出口 IP，因此同一私钥在不同服务器上始终映射到高度重叠的浮点数 IP 范围。 这破坏了一个核心匿名性假设：用户本以为每次连接会获得不可预测的出口 IP（例如用于规避马甲账号检测或跨站追踪），但实际上却面临高熵、持久化的身份识别风险——即使切换服务器或地理位置亦无法规避。 该确定性映射生成高度重叠的浮点数 IP 范围簇（例如 0.4334–0.4428），使跨会话关联置信度超过 99%；官方 Mullvad 客户端中 WireGuard 密钥每 1–30 天轮换一次，但第三方客户端若未手动实现则永不轮换。
 
-hackernews · quadrige · May 14, 18:25 · [社区讨论](https://news.ycombinator.com/item?id=48139219)
+hackernews · RGBCube · May 15, 02:35 · [社区讨论](https://news.ycombinator.com/item?id=48143880)
 
-**背景**: Apple 将内存隔离强制执行（MIE）作为 M5 和 A19 芯片的旗舰级硬件安全特性推出，旨在通过硅基层面隔离内核内存区域来阻止内存破坏类漏洞利用。MIE 基于 ARM64 架构特性（如指针认证码 PAC 和内存标记扩展 MTE）构建，目标是阻断 use-after-free、堆溢出等经典利用原语。在此披露之前，Apple 宣称 MIE 已使所有已知公开 iOS/macOS 利用链（包括 Coruna 和 Darksword）完全失效。
+**背景**: WireGuard 是一种现代轻量级 VPN 协议，使用公钥密码学进行对等体认证。与 Tor 不同（Tor 通过多跳中继路由来隐藏用户身份），大多数商业 VPN（包括 Mullvad）属于单跳代理：它们可向网站隐藏用户真实 IP，但本身并不天然防止 VPN 提供商利用内部标识符（如密钥或 IP）关联不同会话。Mullvad 虽以无日志政策和匿名注册强调隐私，但其设计假设用户理解其威胁模型不包含强会话不可链接性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://blog.calif.io/p/first-public-kernel-memory-corruption">First public macOS kernel memory corruption exploit on Apple M5</a></li>
-<li><a href="https://9to5mac.com/2026/05/14/calif-team-details-how-anthropic-mythos-helped-build-a-working-macos-exploit-in-five-days/">Anthropic Mythos helped Calif build a macOS exploit in five days - 9to5Mac</a></li>
+<li><a href="https://tailscale.com/docs/features/exit-nodes/mullvad-exit-nodes">Use Mullvad VPN endpoints as exit nodes for your tailnet.</a></li>
+<li><a href="https://www.ovpn.com/en/blog/wireguard-integrity-anonymity">WireGuard® - Integrity & anonymity | OVPN.com</a></li>
+<li><a href="https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/">WireGuard Endpoints and IP Addresses | Pro Custodibus</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者对 AI 辅助漏洞利用开发的速度表示惊叹，也有人质疑技术细节披露不足（‘细节略显单薄’），还有人推测该漏洞在 Apple 官方漏洞赏金计划中的估值（若按 beta 版本+锁定模式等条件包装，可能达 150 万美元）；另有讽刺性评论调侃 AI 炒作现象，还有一名用户坦言自己正是因 MIE 安全承诺才购买 M5 设备，如今感到后悔。
+**社区讨论**: 评论者就该行为是否违背用户对匿名性的预期展开辩论：有人指出 Mullvad 等 VPN 本就不提供 Tor 级别的不可链接性；也有人强调实际风险（如论坛马甲识别、地理封锁绕过），并质疑为何密钥轮换未能在所有客户端中强制统一实施。
 
-**标签**: `#macOS`, `#kernel-exploit`, `#Apple-M5`
+**标签**: `#privacy`, `#vpn`, `#fingerprinting`, `#wireguard`, `#anonymity`
+
+---
+
+<a id="item-4"></a>
+## [首个公开的 Apple M5 macOS 内核内存破坏漏洞利用](https://blog.calif.io/p/first-public-kernel-memory-corruption) ⭐️ 9.0/10
+
+Calif 与 Mythos Preview 联合在 5 天内（2025 年 4 月 25 日至 5 月 1 日）针对运行 macOS 26.4.1 的 Apple M5 芯片构建了首个公开披露的内核内存破坏漏洞利用，从非特权用户出发实现本地提权并获取 root shell，全程绕过内存隔离执行（MIE）、指针认证码（PAC）和内存缓存一致性（AMCC）等硬件级防护机制。 这是对苹果新一代芯片安全架构的首次真实世界绕过，表明 AI 辅助下的专家协作可在短期内突破多年构建的内核防护体系，对 macOS 安全保障、红队实战能力以及未来软硬件协同设计假设均具有重大影响。 该利用链结合两个独立漏洞，利用 PAC 密钥复用、AMCC 时序侧信道特性及 MIE 特定失效模式；它并未依赖内存标记扩展（MTE）绕过，引发关于 MTE 为何未能缓解此漏洞的疑问——暗示 M5 上 MTE 的部署范围或覆盖完整性可能存在缺口。
+
+hackernews · quadrige · May 14, 18:25 · [社区讨论](https://news.ycombinator.com/item?id=48139219)
+
+**背景**: Apple M 系列芯片采用指针认证码（PAC）技术，通过四组密钥（IA、IB、DA、DB）对指针进行密码学签名，以防御代码重用攻击。其还具备 Apple 内存缓存一致性（AMCC），即在统一内存架构中由硬件强制保障 CPU、GPU 等处理单元间缓存一致性。内存隔离执行（MIE）是苹果随 M4/M5 推出的最新硬件辅助内核内存保护机制，旨在将内核数据结构与用户空间内存隔离，防止篡改。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://stackoverflow.com/questions/78288651/arm-pointer-authentication-keys-a-and-b-on-apple-m1-and-m3">macos - Arm pointer authentication keys A and B on Apple M1 and M3 - Stack Overflow</a></li>
+<li><a href="https://stackoverflow.com/questions/75140790/how-to-check-for-pointer-authentication-code-pac-on-macos">cpu - How to check for Pointer Authentication Code (PAC) on macOS? - Stack Overflow</a></li>
+<li><a href="https://pacmanattack.com/paper.pdf">PACMAN: Attacking ARM Pointer Authentication with Speculative Execution</a></li>
+<li><a href="https://arxiv.org/html/2504.13385v1">EXAM: Exploiting Exclusive System-Level Cache in Apple M-Series SoCs for Enhanced Cache Occupancy Attacks</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者对 Swift 在内核开发中仍未被广泛采用表示惊讶；因完整报告尚未发布而质疑当前披露的技术深度；特别关注为何内存标记扩展（MTE）未能阻止该漏洞；并推测若将该利用适配至 macOS 测试版或启用锁定模式（Lockdown Mode）场景，是否可大幅提升其在苹果漏洞赏金计划中的估值。
+
+**标签**: `#macOS安全`, `#内核漏洞`, `#Apple Silicon`
 
 ---
 
 <a id="item-5"></a>
-## [arXiv 对包含幻觉参考文献的论文实施一年禁投处罚](https://twitter.com/tdietterich/status/2055000956144935055) ⭐️ 9.0/10
+## [严重 18 年陈旧 Nginx 远程代码执行漏洞“Nginx-Rift”（CVE-2026-42945）公开披露](https://github.com/DepthFirstDisclosures/Nginx-Rift) ⭐️ 9.0/10
 
-arXiv 已推出一项新政策：若作者提交的论文中包含幻觉参考文献（即由人工智能生成的虚假引用），将被禁止投稿一年；此后所有投稿须先经权威同行评审期刊或会议接受。 这是 arXiv 针对 AI 驱动的引用造假行为迄今最严厉的制度回应，强化了预印本文化中的学术诚信标准，并明确表明：验证 AI 生成内容的责任完全在于作者，而非工具或模型。 截至公告发布时，该政策尚未在 arXiv 官网政策页面（如 info.arxiv.org/help/policies/index.html）正式公布；执行依赖人工审核而非自动检测，且无论作者是否故意——无论是因草率使用大语言模型还是蓄意伪造——均适用此一年禁令。
+研究人员披露了 CVE-2026-42945——一个自 2008 年起存在于 Nginx ngx_http_rewrite_module 中的严重堆缓冲区溢出漏洞，可在特定配置（含'rewrite'与'set'指令）下实现未经身份验证的远程代码执行；F5 和 OpenResty 已为 1.31.0 和 1.30.1 版本发布修复补丁。 这是一个高危、可被主动利用的远程代码执行漏洞，影响大量部署的 Nginx 实例，包括 F5 NGINX Plus 和 OpenResty；其长达 18 年的潜伏暴露了长期开源基础设施中的系统性风险，并引发人们对 Web 服务器内存安全技术债的紧迫担忧。 利用需满足特定配置：'rewrite'指令的替换字符串中含问号，且后续'set'指令引用未命名正则捕获组（如$1）；尽管公开 PoC 默认关闭 ASLR，研究人员声称可通过逐字节覆写指针并复用 Nginx 工作进程，可靠绕过 ASLR。
 
-hackernews · gjuggler · May 14, 20:39 · [社区讨论](https://news.ycombinator.com/item?id=48140922)
+hackernews · hetsaraiya · May 14, 17:17 · [社区讨论](https://news.ycombinator.com/item?id=48138268)
 
-**背景**: arXiv 是一个非同行评审但经过人工审核的预印本平台，广泛应用于物理学、数学、计算机科学及相关领域。它依赖作者声明和管理员审核来保障主题相关性与基本学术规范，而非正式同行评审。幻觉参考文献指人工智能生成的看似合理实则不存在的引用，会严重损害科学研究的可靠性与文献可追溯性。
+**背景**: Nginx 是一款广泛使用的开源 Web 服务器与反向代理，以高性能和低资源占用著称。ngx_http_rewrite_module 模块使用 PCRE 正则表达式处理 URL 重写。ASLR（地址空间布局随机化）是一种核心操作系统安全缓解机制，通过随机化内存布局来阻碍内存破坏类漏洞的利用。该漏洞源于该模块在重写求值过程中对正则捕获组引用的处理与存储方式。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://info.arxiv.org/help/submit/index.html">Submission Overview - arXiv info</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)">Hallucination (artificial intelligence) - Wikipedia</a></li>
-<li><a href="https://arxiv.org/abs/2601.18724">[2601.18724] HalluCitation Matters: Revealing the Impact of Hallucinated References with 300 Hallucinated Papers in ACL Conferences</a></li>
+<li><a href="https://www.picussecurity.com/resource/blog/nginx-rift-cve-2026-42945-critical-heap-buffer-overflow-vulnerability-explained">NGINX Rift : CVE-2026-42945 Critical Heap Buffer Overflow...</a></li>
+<li><a href="https://beazley.security/alerts-advisories/critical-18-year-old-rce-vulnerability-in-nginx-aka-nginx-rift-cve-2026-42945">Critical 18-Year-Old RCE Vulnerability in NGINX aka “ NGINX Rift ”...</a></li>
+<li><a href="https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability">NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability | depthfirst</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者普遍支持该政策的初衷，但也表达了对公平性、工具缺陷（如 BibTeX 自动生成不可靠）、透明度（政策尚未在官网明确公示）以及处罚前需审慎核查的担忧。部分人强调作者与引文工具应共担责任，另一些人则指出核实引用始终是作者不可转嫁的核心义务。
+**社区讨论**: 社区讨论围绕 ASLR 绕过可行性展开技术争辩：部分人认为在缺乏 PoC 证据时 ASLR 仍是有效屏障，另一些人则强调鉴于 Nginx 进程模型与漏洞设计，应默认假设其可被绕过；缓解建议聚焦于将未命名捕获组（如$1）替换为命名捕获组，且 F5 NGINX 1.30.1/1.31.0 与 OpenResty 已确认提供修复补丁。
 
-**标签**: `#arXiv`, `#academic-integrity`, `#AI-ethics`, `#research-policy`, `#LLM-responsibility`
+**标签**: `#nginx`, `#security`, `#exploit`, `#aslr`, `#web-server`
 
 ---
 
 <a id="item-6"></a>
-## [Bun 核心已完全重写为 Rust 并合并](https://github.com/oven-sh/bun/pull/30412) ⭐️ 9.0/10
+## [arXiv 对幻觉引用实施一年投稿禁令](https://twitter.com/tdietterich/status/2055000956144935055) ⭐️ 9.0/10
 
-Bun JavaScript 运行时的核心已完全使用 Rust 重写，并通过 PR #30412 合并至主分支，新增超过 1,009,257 行 Rust 代码，同时大幅移除了原有 Zig 实现。 此举标志着高性能 Web 运行时向内存安全系统编程的关键转型，显著提升了长期可维护性，大幅减少了内存安全类缺陷（如悬垂指针、释放后使用），并为大模型辅助开发时代的大型语言迁移树立了重要先例。 Rust 代码库中包含约 10,428 处 unsafe 块，分布在 736 个文件中，表明底层系统开发仍需谨慎使用不安全代码；项目早已预设内部智能指针抽象，能与 Rust 的所有权语义一一对应，极大简化了从 Zig 到 Rust 的迁移过程。
+arXiv 已正式实施新政策：若论文包含幻觉引用（即捏造或无法验证的参考文献），或未核查的 AI 生成内容（如 LLM 插入的元注释、‘示例表格请替换为真实数据’等），作者将被禁止提交论文一年；解禁后，其后续投稿须先经可信同行评审期刊或会议录用，方可提交至 arXiv。 这是 arXiv——计算机科学、物理学和数学领域核心预印本平台——首次针对 AI 引发的学术不端行为采取重大惩戒措施，标志着学界对 AI 辅助写作责任归属的规范正在收紧，并为开放科学交流中的诚信建设树立了重要先例。 该政策不仅适用于幻觉引用，还涵盖未经核实的 LLM 生成元数据、占位符文本（如‘表格仅为示例’）等明显表明作者未审阅 AI 输出的内容；执行依赖 arXiv 审核员判断是否存在‘充分证据’证明作者未履行核查义务。
 
-hackernews · Chaoses · May 14, 08:15 · [社区讨论](https://news.ycombinator.com/item?id=48132488)
+hackernews · gjuggler · May 14, 20:39 · [社区讨论](https://news.ycombinator.com/item?id=48140922)
 
-**背景**: Bun 是一个基于 JavaScriptCore 构建的高性能一体化 JavaScript 运行时，内置打包、转译、任务运行和 npm 客户端等功能。它最初采用 Zig 编写性能关键模块，后迁移到 Rust，以利用其更强的内存安全保证和更成熟的生态系统。Rust 的所有权模型可在无垃圾回收的前提下实现编译期内存安全，非常适配运行时开发。
+**背景**: arXiv 是一个免费、非同行评审的预印本平台，广泛用于物理学、数学、计算机科学及相关领域的研究成果快速传播。与期刊不同，arXiv 不进行正式同行评审，而是依靠人工审核和作者对内容正确性与原创性的自我声明。幻觉引用——即由大语言模型生成的虚构参考文献——近年激增，严重威胁引文可靠性与研究可复现性；《自然》等分析指出，2025–2026 年间可能有数万篇论文受此影响。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://bun.sh/">Bun — A fast all-in-one JavaScript runtime</a></li>
-<li><a href="https://www.linode.com/docs/guides/introduction-to-bun/">Introduction to the Bun JavaScript Runtime | Linode Docs</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">Rust (programming language) - Wikipedia</a></li>
+<li><a href="https://info.arxiv.org/help/submit/index.html">Submission Overview - arXiv info</a></li>
+<li><a href="https://www.nature.com/articles/d41586-026-00969-z">Hallucinated citations are polluting the scientific ... - Nature</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13051339/">Hallucinated citations produced by generative artificial ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论者强调此次重写的周密准备——包括详尽的 Zig 到 Rust 映射指南及预先适配的抽象层——同时就其对软件复杂度管理、unsafe 使用规模以及大语言模型在百万行级系统开发中的作用展开讨论。也有观点指出，Rust 虽能消除大量内存错误，但无法覆盖所有运行时风险，尤其是跨 JS 边界的重入问题。
+**社区讨论**: 社区评论普遍支持该政策对维护科研诚信的必要性，但也提出实际担忧：有人指出该政策尚未出现在 arXiv 官网政策页面上；有人强调工具链缺陷（如不同出版方 BibTeX 格式不一致）易导致无心引用错误；还有人质疑执行标准的公平性与可扩展性。
 
-**标签**: `#Rust`, `#JavaScript runtime`, `#Bun`, `#systems programming`, `#language migration`
+**标签**: `#arXiv`, `#academic-integrity`, `#LLM-misuse`, `#research-ethics`, `#citation-practices`
 
 ---
 
 <a id="item-7"></a>
+## [Bun 核心运行时正式从 Zig 重写为 Rust 并合并](https://github.com/oven-sh/bun/pull/30412) ⭐️ 9.0/10
+
+高性能 JavaScript 运行时 Bun 的核心运行时已正式从 Zig 重写为 Rust，并于 2024 年 5 月通过 GitHub 拉取请求 #30412 合并至主分支。 此次迁移大幅提升了内存安全性与长期可维护性，同时保持 Bun 的性能优势，为 JavaScript 运行时等关键基础设施中的安全优先型系统编程树立了新范式。 Rust 代码库现已超过 100 万行，其中约 736 个文件（共 1443 个 Rust 文件）包含 unsafe 块；Zig 中预先设计的智能指针抽象为迁移提供了便利，大量内存安全缺陷（如悬垂指针、重复释放）现可在编译期捕获。
+
+hackernews · Chaoses · May 14, 08:15 · [社区讨论](https://news.ycombinator.com/item?id=48132488)
+
+**背景**: Bun 是一个快速、一体化的 JavaScript 运行时，使用苹果的 JavaScriptCore 引擎而非 V8，并内置打包、转译和包管理功能。它最初用 Zig 编写——一种强调简洁性和手动内存控制的系统编程语言；但团队最终选择 Rust，以利用其所有权模型和无需垃圾回收的编译期内存安全保障。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bun_(software)">Bun (software) - Wikipedia</a></li>
+<li><a href="https://bun.sh/">Bun — A fast all-in-one JavaScript runtime</a></li>
+<li><a href="https://dev.to/mukhilpadmanabhan/rust-vs-zig-the-new-programming-language-battle-for-performance-1p6">Rust vs . Zig : The New Programming Language... - DEV Community</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区评论者强调此次重写的充分准备——包括详尽的 Zig 到 Rust 语法映射指南及预先采用的智能指针模式——同时也指出实际限制：FFI 和跨 JS 边界的重入场景仍需 unsafe Rust，且跨语言边界的内存泄漏或逻辑错误仍需人工审慎处理。
+
+**标签**: `#Rust`, `#JavaScript runtime`, `#Bun`, `#systems programming`, `#memory safety`
+
+---
+
+<a id="item-8"></a>
+## [安大略省审计人员发现 AI 临床记录工具频繁编造医学事实](https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771) ⭐️ 9.0/10
+
+安大略省省级审计人员发现，医生使用的 AI 临床记录工具经常生成事实错误的摘要，包括虚构的诊断、症状和治疗承诺，这些内容与实际问诊或会议内容严重不符。 此类幻觉直接威胁患者安全、临床决策准确性和法律合规性，可能导致误诊、不当治疗或医疗过失索赔；凸显了在医疗 AI 部署中亟需开展审计、人工复核及监管监督。 此次审计发现的是系统性幻觉模式而非偶发错误，包括对诊断意图的曲解、非线性对话逻辑的崩溃，以及插入未提及但常见的疾病（例如将‘跑步者膝’误记为‘骨质疏松症’）；企业会议工具中采用的时间戳直连音频验证技术虽可行，但在临床环境中面临 HIPAA 合规障碍。
+
+hackernews · sohkamyung · May 14, 22:37 · [社区讨论](https://news.ycombinator.com/item?id=48142188)
+
+**背景**: 用于临床文档的大型语言模型（LLM），例如环境语音转录工具，会将医患对话自动总结为结构化电子健康档案（EHR）记录。然而，LLM 存在固有幻觉倾向：因其依赖统计模式匹配而非事实依据，可能以高置信度输出虚假或无依据的内容。在医疗等高风险场景中，即使较低的幻觉率也可能引发严重后果，因此必须实施严格审计与人工校验。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.nature.com/articles/s41746-025-01670-7">A framework to assess clinical safety and hallucination rates of LLMs for medical text summarisation | npj Digital Medicine</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12318031/">Multi-model assurance analysis showing large language models are highly vulnerable to adversarial hallucination attacks during clinical decision support - PMC</a></li>
+<li><a href="https://arxiv.org/pdf/2311.01463">Creating Trustworthy LLMs: Dealing with Hallucinations in Healthcare AI</a></li>
+<li><a href="https://namas.co/ai-compliance-risk-medical-auditing-2026/">AI in Medical Auditing: Managing Compliance Risk in 2026</a></li>
+<li><a href="https://glass.health/resources/ai-clinical-documentation">AI in Clinical Documentation: How It Works for Clinicians (2026)</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 医疗与企业从业者分享了亲身经历，证实了 AI 记录工具存在误诊、虚构供应商承诺、以及在复杂或非线性讨论中失效等问题，强调当前 LLM 记录工具若缺乏实时验证（如带时间戳的音频直链）和强制人工复核，便不可信赖。
+
+**标签**: `#healthcare-ai`, `#llm-hallucination`, `#clinical-safety`, `#ai-auditing`, `#medical-informatics`
+
+---
+
+<a id="item-9"></a>
 ## [IBM 与 Hugging Face 发布 Granite 多语言嵌入模型 R2](https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2) ⭐️ 9.0/10
 
-IBM 与 Hugging Face 联合发布了 Granite 多语言嵌入模型 R2，这是一款开源、采用 Apache 2.0 许可证的多语言嵌入模型，支持 32K 上下文长度、参数量为 9700 万，在 MTEB-v2 检索平均分上取得 60.3 分，是当前所有开源多语言嵌入模型中参数量低于 1 亿时性能最高的。 该发布显著推动了开放、可投入生产的多语言检索基础设施发展，尤其利好检索增强生成（RAG）、跨语言搜索和长文档检索等应用，提供了高性能且许可宽松（Apache 2.0）的嵌入能力，无需受限于商业条款或 API 调用依赖。 该模型基于 ModernBERT-base 架构（22 层、768 维向量、GeLU 激活函数），通过知识蒸馏与对比学习微调；虽支持 32K 上下文长度，但区别于同期发布的更大规模版本 Granite Embedding Multilingual R2（311M 参数）。
+IBM 与 Hugging Face 联合发布了 Granite Embedding Multilingual R2——一款开源（Apache 2.0 许可证）、支持多语言的文本嵌入模型，上下文长度达 32K，并在参数量低于 1 亿的模型中实现最优检索性能。 此次发布显著推动了面向多语言 RAG 系统的开放、可投入生产的基础设施建设，为全球企业与研究人员提供了无需厂商锁定或授权限制的高质量、长上下文检索能力，大幅降低了部署门槛。 R2 系列包含一个 9700 万参数模型（侧重速度与效率）和一个 3.11 亿参数变体（基于 ModernBERT-base 编码器，含 22 层、768 维向量及 GeLU 激活函数）；两者均支持 32K 词元输入，并在多语言信息检索、代码检索及多轮对话检索等任务中表现优异。
 
 rss · Hugging Face Blog · May 14, 18:55
 
-**背景**: 嵌入模型将文本转换为固定长度向量，以支持语义相似度搜索与检索任务。多语言嵌入模型无需翻译即可处理跨语言任务，对面向全球用户的检索增强生成（RAG）系统至关重要。上下文长度指模型可处理的最大输入文本长度，直接影响长文档或对话历史等场景的检索效果。MTEB 基准测试从检索、分类、聚类等多个维度综合评估嵌入模型性能。
+**背景**: 文本嵌入模型将输入文本转换为固定长度向量，用于 RAG 流程中的语义搜索、相似度计算和检索任务。上下文长度指模型可处理的最大词元数，直接影响其处理长文档或多文档查询的能力。检索质量通常通过 Recall@K、MRR 等指标，在 MTEB 等标准化基准上进行评估。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://huggingface.co/ibm-granite/granite-embedding-97m-multilingual-r2">ibm- granite / granite - embedding -97m- multilingual - r 2 · Hugging Face</a></li>
-<li><a href="https://arxiv.org/pdf/2605.13521">Granite Embedding Multilingual R2 Models</a></li>
+<li><a href="https://arxiv.org/pdf/2605.13521">Granite Embedding Multilingual R 2 Models</a></li>
 <li><a href="https://www.ibm.com/granite/docs/models/embedding">Granite Embedding - IBM Granite</a></li>
 
 </ul>
 </details>
 
-**标签**: `#multilingual`, `#embeddings`, `#RAG`, `#open-source`, `#NLP`
-
----
-
-<a id="item-8"></a>
-## [NGINX rewrite 模块堆溢出漏洞 CVE-2026-42945 被披露](https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability) ⭐️ 9.0/10
-
-2026 年 5 月 13 日，DepthFirst 与 F5 联合披露了 CVE-2026-42945 漏洞——一个潜伏 18 年的 NGINX ngx_http_rewrite_module 模块堆缓冲区溢出漏洞，根源在于含问号的 rewrite 替换字符串与未命名捕获组（如$1）组合触发的两遍执行逻辑不一致。 该 CVSS 9.2 评分的远程代码执行漏洞影响全球数十亿生产服务器，涵盖 Kubernetes Ingress 控制器、API 网关及各类 WAF 产品，因其部署广泛、危害极高且无需身份认证，成为近年来最具影响的 Web 服务器漏洞之一。 利用需满足特定配置模式：rewrite 指令的替换字符串中含问号（例如'rewrite ^/a(.*) /b?$1? last;'），且后续存在引用未命名捕获组的 set 指令（例如'set $var $1'）；官方称 ASLR 可被可靠绕过，但公开 PoC 为简化利用默认禁用了 ASLR。
-
-telegram · zaihuapd · May 14, 02:41
-
-**背景**: ngx_http_rewrite_module 是 NGINX 用于基于正则表达式的动态 URI 重写的内置核心模块。其采用两遍执行机制：第一遍计算输出缓冲区大小，第二遍执行转义并拷贝数据。这种设计曾导致多个历史漏洞，例如 CVE-2021-23017（另一处 rewrite 相关的越界写入）。未命名捕获组（$1、$2）是继承自 PCRE 的传统语法，虽有命名捕获组等更安全替代方案，但仍被大量配置沿用。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://medium.com/@sergey.dudik/mastering-request-and-response-modification-in-nginx-926dd06b049b">Mastering Request and Response Modification in Nginx | Medium</a></li>
-<li><a href="https://www.thegeekstuff.com/2017/08/nginx-rewrite-examples/">7 Nginx Rewrite Rule Examples with Reg-Ex and Flags</a></li>
-<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42945">NVD - CVE - 2026 - 42945</a></li>
-<li><a href="https://www.picussecurity.com/resource/blog/nginx-rift-cve-2026-42945-critical-heap-buffer-overflow-vulnerability-explained">NGINX Rift: CVE - 2026 - 42945 Critical Heap Buffer Overflow...</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区讨论聚焦于 ASLR 的实际缓解效果：部分人认为即使启用 ASLR，该漏洞仍具高度危险性；另一些人则强调官方推荐的缓解措施（将$1 等替换为命名捕获组）简单有效。另有用户质疑 C 语言编写的 Web 服务器长期安全性，并探讨内存安全语言（如 Go）实现的替代方案。
-
-**标签**: `#NGINX`, `#RCE`, `#漏洞分析`
-
----
-
-<a id="item-9"></a>
-## [美国批准向 10 家中国公司出口 H200 芯片，AI 算力博弈升级](https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/) ⭐️ 9.0/10
-
-美国商务部已批准约 10 家中国科技企业（包括阿里巴巴、腾讯、字节跳动、京东等）采购英伟达 H200 GPU，单客户上限为 7.5 万颗；但截至 2026 年中，尚无任何实际交付完成。 这是美国首次批准面向中国的 H200 芯片（当前最强 AI 训练/推理 GPU 之一）出口，标志着对华 AI 芯片出口管制的谨慎松动，将直接影响中国大模型训练资源可获得性、云厂商硬件部署策略，以及国产 AI 芯片替代进程的紧迫性评估。 H200 基于英伟达 Hopper 架构，配备 141GB HBM3e 内存与 4.8TB/s 带宽，内存容量约为 H100 的两倍、带宽高出 1.4 倍；许可对象还包括联想、富士康等分销商，但受监管审慎及北京方面指导影响，目前交付仍未启动。
-
-telegram · zaihuapd · May 14, 08:57
-
-**背景**: 自 2022 年起，美国以国家安全为由对面向中国的高端 AI 芯片（如 A100、H100）实施严格出口管制。H200 于 2024 年发布，是英伟达面向数据中心的新一代旗舰 GPU，最初被明确排除在对华销售许可之外。2026 年的此次批准并非政策转向，而是基于终端用途核查与数量限制的策略性微调。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.nvidia.com/en-us/data-center/h200/">H 200 GPU | NVIDIA</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Nvidia">Nvidia - Wikipedia</a></li>
-<li><a href="https://www.idtechex.com/en/research-article/us-export-controls-on-ai-chips-boost-domestic-innovation-in-china/33482">US Export Controls on AI Chips Boost Domestic Innovation in China</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI芯片`, `#地缘技术政策`, `#大模型基础设施`
+**标签**: `#embeddings`, `#multilingual`, `#open-source`, `#retrieval`, `#RAG`
 
 ---
 
 <a id="item-10"></a>
-## [DwarfStar4（DS4）发布：面向 DeepSeek V4 的 Metal 优先轻量级大模型推理运行时](https://antirez.com/news/165) ⭐️ 8.0/10
+## [美国批准向 10 家中国企业销售 H200 芯片，出口管制下罕见松动](https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/) ⭐️ 9.0/10
 
-Antirez 正式发布了 DwarfStar4（DS4），这是一款专为 DeepSeek V4 优化的轻量级大语言模型推理运行时，以 Apple Metal 为首要后端，面向配备 96GB 或 128GB 内存的高端 MacBook（如 M4 Max 机型）；同时支持 CUDA（含 NVIDIA DGX Spark）及社区维护的 ROCm 分支。 DS4 显著降低了 Apple Silicon 设备上高性能本地大模型推理的门槛，使用户无需依赖云端即可在桌面级硬件上完成复杂推理任务，这对推动实用化本地 AI、实现硬件感知的模型部署以及构建可持续的开源推理生态具有关键意义。 DS4 在 macOS 上需至少 96GB 统一内存（非独立显存），以满足 DeepSeek V4 Flash（2840 亿参数）的加载需求；Metal 后端已具备生产就绪能力，而 ROCm 仅作为实验性分支由社区定期变基维护；项目明确致谢 llama.cpp 与 GGML 为其核心技术基础。
+美国商务部已批准约 10 家中国企业（包括阿里巴巴、腾讯、字节跳动、京东、联想和富士康）采购英伟达 H200 GPU，单客户上限为 7.5 万颗；但截至目前尚未完成任何交付，黄仁勋此次访华旨在推动交易落地。 这是美国对华 AI 芯片出口管制中罕见的定向放松，将直接支持阿里、腾讯等头部企业获取先进推理与训练算力，加速大模型研发进程，并影响全球 AI 硬件供应链格局。 H200 搭载 141GB HBM3e 显存与 4.8TB/s 内存带宽，显存容量约为 H100 的两倍、带宽高 1.4 倍，专为生成式 AI 与大语言模型优化；但受合规审查及北京方面对国内买家的审慎指导影响，目前尚无实际交付。
 
-hackernews · caust1c · May 14, 22:29 · [社区讨论](https://news.ycombinator.com/item?id=48142108)
+telegram · zaihuapd · May 14, 08:57
 
-**背景**: DeepSeek V4 是深度求索（DeepSeek）于 2025 年初发布的前沿开源大模型系列，其中 2840 亿参数的‘Flash’版本专为高保真推理设计。Metal 是 Apple 为 macOS 和 iOS 提供的低开销 GPU 编程接口，可在不依赖厂商锁定的前提下实现高效的设备端 AI 加速。llama.cpp 与 GGML 则是广泛采用的开源框架，支持在消费级硬件上进行 CPU/GPU 协同的大模型推理。
+**背景**: 自 2018 年起，美国持续收紧对华先进半导体出口管制，尤其针对 A100、H100 等 AI 加速芯片，理由是国家安全关切。H200 作为英伟达于 2025 年底发布的 Hopper 架构旗舰 GPU，原被普遍认为将受限于同类禁令。2026 年 1 月，美国商务部工业与安全局（BIS）推出‘灵活许可审查’政策，允许对不构成不可接受军事或情报风险的芯片进行个案审批。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.techno-edge.net/article/2026/05/10/5049.html?pickup_list_click1=true">128GB超メモリMac専用の巨大 LLM エンジン「DwarfStar...</a></li>
-<li><a href="https://ai-manual.ru/article/kak-zastavit-lokalnuyu-llm-pisat-dlinnyie-otvetyi-nastrojka-maxtokens-parametryi-generatsii-i-obhod-early-stopping/">Как настроить max_tokens для длинных ответов LLM ... | AiManual</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA H200 GPU</a></li>
+<li><a href="https://en.wikipedia.org/wiki/United_States_export_controls_on_AI_chips_and_semiconductors">United States export controls on AI chips and semiconductors</a></li>
+<li><a href="https://www.congress.gov/crs-product/R48642">U.S. Export Controls and China: Advanced Semiconductors</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者普遍赞赏 DS4 专注务实的工程取向，并围绕编程任务的‘智能饱和点’展开讨论；有人推测未来几年是否只需 16GB 内存即可运行同类模型；还有人观察到模型能自主识别自身服务进程等意外涌现行为——整体反映出社区对技术演进、硬件可及性及 AI 商业模式变革的深度关切与前瞻性思考。
-
-**标签**: `#LLM`, `#inference-runtime`, `#local-AI`, `#DeepSeek`, `#Metal`
+**标签**: `#AI硬件`, `#出口管制`, `#大模型基建`
 
 ---
 
 <a id="item-11"></a>
-## [CSP 允许列表实验实现运行时用户驱动的域名白名单机制](https://simonwillison.net/2026/May/13/csp-allow/#atom-everything) ⭐️ 8.0/10
+## [黑客移除 2024 款 RAV4 混动版的蜂窝调制解调器和 GPS 以阻止遥测数据上传](https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4/) ⭐️ 8.0/10
 
-西蒙·威利森构建了一个可运行的演示：沙盒化 iframe 拦截被 CSP 阻止的 fetch() 请求，将其转发至父窗口，并提示用户动态将被阻止的源（例如 https://api.inaturalist.org）添加到 connect-src 白名单中，随后刷新页面。 该实验挑战了 CSP 策略必须静态预定义的长期假设，为实现自适应、用户参与的安全策略提供了可行路径，从而在保障安全性的同时提升严格 CSP 的实际可用性与部署可行性。 该技术依赖于启用 'allow-scripts' 但禁用 'allow-same-origin' 的 iframe 沙盒，并在沙盒内对 fetch() 进行猴子补丁（monkey patch），捕获 TypeError('blocked by CSP')，再通过 postMessage 将被阻止的 URL 发送给父窗口；父窗口则维护内存中的白名单，并通过 data: URL 或 meta 刷新方式重写 iframe 的 src 以注入更新后的 CSP 头。
+一名安全研究员物理移除了其 2024 款丰田 RAV4 混动车中嵌入的蜂窝调制解调器和 GPS 模块，以彻底阻断原厂遥测数据上传，并详细记录了硬件拆解、信号测试及移除后的系统行为。 该案例凸显了用户对汽车数据主权日益增长的需求，并揭示了原始设备制造商（OEM）在隐私控制方面的关键缺陷——表明即使通过硬件移除手段，若蓝牙或基于智能手机的信息娱乐系统充当数据代理通道，仍无法完全阻止遥测数据外泄。 移除操作导致内置导航和远程服务失效，但并未彻底消除所有遥测：通过蓝牙配对的手机仍可能将数据中继至丰田服务器；而 USB 连接的 CarPlay 虽可规避此问题，却引入了苹果/谷歌等第三方平台自身的车辆遥测采集。此外，GPS 模块故障还导致电子罗盘偏航，严重影响导航精度。
 
-rss · Simon Willison · May 13, 04:50
+hackernews · arkadiyt · May 14, 17:08 · [社区讨论](https://news.ycombinator.com/item?id=48138136)
 
-**背景**: 内容安全策略（CSP）是一种 HTTP 响应头，通过限制网页可加载的资源来防范 XSS 和数据注入攻击。传统上，connect-src 等 CSP 指令需在页面加载时静态声明，无法在运行时修改。沙盒化 iframe 默认隔离嵌入内容，除非显式指定 'allow-*' 权限，否则禁止访问父上下文。Fetch 拦截此前已通过 Service Worker（如 Foreign Fetch）或客户端猴子补丁实现，但尚未用于实时 CSP 策略自适应场景。
+**背景**: 包括 RAV4 混动版在内的现代丰田汽车均配备远程信息处理控制单元（TCU），用于采集驾驶数据（如位置、车速、诊断信息）并通过嵌入式蜂窝调制解调器上传。这些系统通常缺乏用户可访问的数据退出机制，促使注重隐私的车主寻求物理级或固件级干预手段。信息娱乐系统中的蓝牙与 USB 接口由于共享车载总线（例如 CAN 总线）访问权限，进一步加剧了遥测数据隔离的复杂性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://gist.github.com/mkruisselbrink/f6957bece64740926b84">fetch - interception .md · GitHub</a></li>
-<li><a href="https://blog.logrocket.com/intercepting-javascript-fetch-api-requests-responses/">Intercepting JavaScript Fetch API requests and... - LogRocket Blog</a></li>
-<li><a href="https://www.xjavascript.com/blog/intercept-fetch-api-requests-and-responses-in-javascript/">How to Intercept fetch () API Requests and... — xjavascript.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Toyota_RAV4">Toyota RAV 4 - Wikipedia</a></li>
+<li><a href="https://loging.xyz/device-identity-location-tracking-risks-from-bluetooth-pairi">Device Identity & Location Tracking Risks from Bluetooth Pairing Flaws</a></li>
 
 </ul>
 </details>
 
-**标签**: `#CSP`, `#web-security`, `#sandboxing`, `#fetch-interception`, `#UX-security`
+**社区讨论**: 评论者证实，即使移除了蜂窝调制解调器，通过蓝牙配对手机仍会触发遥测数据中继；而 USB 连接的 CarPlay 虽可避免此问题，却会自行采集车辆遥测数据；另有用户报告 GPS/罗盘等硬件缺陷被丰田拒绝承认与修复；还有人指出其他车型（如福特 Maverick）存在更简单的替代方案（如拔除遥测保险丝）。
+
+**标签**: `#automotive privacy`, `#telemetry`, `#embedded systems`, `#car hacking`, `#IoT security`
 
 ---
 
 <a id="item-12"></a>
-## [Hugging Face 推出‘continuous async’实现异步连续批处理](https://huggingface.co/blog/continuous_async) ⭐️ 8.0/10
+## [DwarfStar4（DS4）：面向 DeepSeek V4 的 Metal 优先大语言模型推理运行时](https://antirez.com/news/165) ⭐️ 8.0/10
 
-Hugging Face 推出了名为‘continuous async’的新调度技术，该技术在连续批处理中将请求接入与令牌生成解耦，支持细粒度、非阻塞的异步 LLM 推理请求处理。 这一进展通过消除同步令牌生成导致的 GPU 空闲时间，显著提升了生产环境中大语言模型服务的吞吐量和尾部延迟，对高并发、低延迟的实时应用场景尤为关键。 continuous async 允许调度决策与计算重叠——请求可在前序令牌仍在生成时被异步接入并入队；该方法无需修改模型架构或分词器，并原生集成于 Hugging Face 的 Text Generation Inference（TGI）服务器。
+Antirez 发布了 DwarfStar4（DS4），这是一款专为 DeepSeek V4 优化的轻量级大语言模型推理运行时，以 Metal 为首要后端，面向配备高内存（如 96GB/128GB M4 Max）的 MacBook；同时支持 CUDA（含 DGX Spark 优化）和 ROCm（由社区维护的独立 rocm 分支）。 DS4 降低了在 Apple Silicon 设备上本地运行 DeepSeek V4 Flash（2840 亿参数）等前沿超大规模语言模型的门槛，同时拓展了跨平台 GPU 支持，弥合了尖端模型规模与脱离云 API 的、硬件优化型本地推理之间的关键鸿沟。 DS4 基于 llama.cpp/GGML 构建，但专用于 DeepSeek V4（非通用型），运行完整版 DeepSeek V4 推理需约 96GB 统一内存，其采用的 imatrix 量化方案被用户反馈在质量上优于当前 OpenRouter 上 Zephyr 系列推理后端；ROCm 支持仍属实验性质，且独立于主分支。
 
-rss · Hugging Face Blog · May 14, 00:00
+hackernews · caust1c · May 14, 22:29 · [社区讨论](https://news.ycombinator.com/item?id=48142108)
 
-**背景**: 连续批处理是一种用于大语言模型推理服务器的 GPU 优化技术，可动态地将陆续到达和完成的多个请求打包进批次，从而提升硬件利用率。传统连续批处理仍是同步的：每个请求必须等待其下一个令牌生成完毕后，调度器才能考虑接纳新请求。当不同请求的令牌生成速率不一致时，这会导致 GPU 空闲，限制系统扩展性。
+**背景**: GGML 是一个面向大语言模型推理的张量库，强调内存效率与量化支持；llama.cpp 是基于 GGML 构建的主流开源推理引擎。Metal 是苹果公司推出的低开销图形与计算 API，Metal 4 已原生支持张量运算，专为机器学习任务优化。DeepSeek V4 是深度求索（DeepSeek）近期发布的 2840 亿参数开源权重模型，以强大的编程与推理能力著称。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.philschmid.de/sagemaker-huggingface-async-inference">Asynchronous Inference with Hugging Face Transformers and...</a></li>
+<li><a href="https://www.techno-edge.net/article/2026/05/10/5049.html?pickup_list_click1=true">128GB超メモリMac専用の巨大 LLM エンジン「DwarfStar...</a></li>
+<li><a href="https://github.com/ggml-org/ggml">GitHub - ggml-org/ggml: Tensor library for machine learning</a></li>
+<li><a href="https://developer.apple.com/metal/whats-new/">What's New - Metal - Apple Developer</a></li>
 
 </ul>
 </details>
 
-**标签**: `#LLM inference`, `#continuous batching`, `#asynchronous systems`, `#GPU optimization`, `#model serving`
+**社区讨论**: 评论者指出 DS4 对硬件的严苛要求（如需 96GB 内存），赞赏其 Metal/CUDA/ROCm 多后端灵活性，质疑开发专用模型推理运行时（而非强化 llama.cpp）的必要性，并围绕‘智能饱和点’展开讨论——推测当本地模型在编程等任务上达到‘足够智能’阈值后，Anthropic 等公司的商业模式可能面临根本性挑战。
+
+**标签**: `#LLM`, `#inference`, `#DeepSeek`, `#llama.cpp`, `#Metal`
 
 ---
 
 <a id="item-13"></a>
-## [Anthropic 推出面向小企业的 Claude 套餐，深度集成主流 SaaS 工具](https://www.anthropic.com/news/claude-for-small-business) ⭐️ 8.0/10
+## [Codex 已集成至 ChatGPT 移动应用，免费开放](https://openai.com/index/work-with-codex-from-anywhere/) ⭐️ 8.0/10
 
-Anthropic 于 2024 年 5 月 14 日正式推出面向小企业的 Claude 套餐，将 Claude 深度接入 Intuit QuickBooks、PayPal、HubSpot、Canva、DocuSign、Google Workspace 和 Microsoft 365，并提供覆盖财务、销售、营销、人力资源和客服等场景的 15 个预置工作流与 15 项技能。 这是 Anthropic 首次为非企业级商业用户推出的专用 AI Agent 产品，显著降低了小企业采用 AI 的门槛；同时展示了具备审批控制、多系统协同与数据主权保障的生产级 AI 自动化架构，为受监管行业的 AI Agent 落地提供了可复用的合规范式。 该服务通过 Claude Cowork 运行，所有消息发送、内容发布或付款操作均需用户手动审批；Team 与 Enterprise 版本明确承诺不使用客户数据训练模型，企业客户还可配置数据保留策略并启用基于角色的访问控制与审计日志。
+OpenAI 已正式将 Codex 代码生成模型（此前为 GitHub Copilot 提供支持）集成至 ChatGPT 移动应用，所有用户只需登录免费 ChatGPT 账户即可使用，无需额外付费。 此次集成显著降低了 AI 编程辅助的使用门槛，使开发者能通过移动设备随时随地获得编程支持，极大提升了可及性，并加速了智能代理式编程工作流在实际场景中的落地。 移动应用中的 Codex 是一个基于云端的智能编程助手，具备内置工作树和并行云环境；其使用包含在免费 ChatGPT 套餐中，但根据 OpenAI 的数据政策，用户交互可能用于模型训练。
 
-telegram · zaihuapd · May 14, 12:41
+hackernews · mikeevans · May 14, 20:06 · [社区讨论](https://news.ycombinator.com/item?id=48140529)
 
-**背景**: Claude 是由 Anthropic 开发的一系列大语言模型，采用‘宪法式 AI’（Constitutional AI）技术训练，以提升模型与人类价值观的一致性。自 Claude 3 起，模型按能力分为 Haiku（最快）、Sonnet（均衡）和 Opus（最强）三个版本。Claude Cowork 是 Anthropic 推出的面向非技术型办公任务的 AI Agent，支持在 macOS 上异步执行文件管理、截图生成表格、桌面整理等任务。
+**背景**: OpenAI Codex 是 GPT-3 的微调版本，专为将自然语言转换为可执行代码而设计，支持十余种编程语言。它是 GitHub Copilot 的底层模型，适用于代码补全、解释与生成等任务。与通用大语言模型不同，Codex 在海量公开代码库上训练，并针对确定性、功能性输出进行了优化。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://grokipedia.com/page/Claude_Cowork">Claude Cowork</a></li>
-<li><a href="https://claude.com/pricing/enterprise">Enterprise plan | Claude by Anthropic</a></li>
-<li><a href="https://rejoicehub.com/blogs/anthropic-enterprise-ai-services-for-business">Anthropic Enterprise AI Services for Business Explained</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(language_model)">OpenAI Codex (language model ) - Wikipedia</a></li>
+<li><a href="https://openai.com/codex/">Codex | AI Coding Partner from OpenAI | OpenAI</a></li>
+<li><a href="https://www.youtube.com/watch?v=Kd0QGZMy_tA">OpenAI Codex in ChatGPT in 5 Minutes - YouTube</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI Agent`, `#SaaS 集成`, `#企业AI落地`
+**社区讨论**: 开发者反馈呈现两极：部分人赞赏移动接入带来的‘氛围编程’（vibe coding）体验和工作流灵活性，另一些人则指出小屏幕和缺乏实体键盘导致指令模糊、生成代码质量下降；隐私权衡及与 Qwen CLI 等工具的对比也引发广泛讨论。
+
+**标签**: `#AI`, `#coding-assistants`, `#mobile-development`, `#LLM-integration`, `#developer-tools`
+
+---
+
+<a id="item-14"></a>
+## [Hugging Face 推出‘continuous async’实现异步大语言模型推理](https://huggingface.co/blog/continuous_async) ⭐️ 8.0/10
+
+Hugging Face 推出了名为‘continuous async’的新技术，该技术在连续批处理系统中将请求调度与 GPU 批执行解耦，使 CPU 端可提前调度下一个批次，与当前批次的 GPU 计算并行执行。 这一进展显著提升了生产环境中大语言模型服务的端到端吞吐量和尾部延迟，尤其在负载波动或突发请求场景下，通过消除 GPU 空闲时间，并使系统调度更契合自回归生成所固有的迭代性与内存受限特性，从而优化整体效率。 ‘continuous async’利用 CUDA 图及可配置的填充间隔（例如 q_padding_interval_size=64、kv_padding_interval_size=16384）降低内核启动开销与内存碎片；它已在 Transformers v4.45+中通过启用 async=True 的 ContinuousBatchingConfig 实现。
+
+rss · Hugging Face Blog · May 14, 00:00
+
+**背景**: 连续批处理（又称动态批处理或迭代级批处理）是一种系统级优化技术：它不按请求而是按解码步长对多个请求的 token 进行分组，从而大幅提升自回归大语言模型推理中的 GPU 利用率（从约 30–60%提升至 80–95%）和吞吐量。与静态批处理不同，它支持变长序列和流式输出，是实际服务场景的关键技术。但传统连续批处理仍使 CPU 调度与 GPU 执行强同步，在高并发下形成瓶颈。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.anyscale.com/blog/continuous-batching-llm-inference">How continuous batching enables 23x throughput in LLM ...</a></li>
+<li><a href="https://tianpan.co/blog/2026-04-09-continuous-batching-llm-inference">Continuous Batching: The Single Biggest GPU Utilization ...</a></li>
+<li><a href="https://huggingface.co/docs/transformers/continuous_batching">Continuous batching · Hugging Face</a></li>
+
+</ul>
+</details>
+
+**标签**: `#LLM inference`, `#continuous batching`, `#asynchronous systems`, `#model serving`, `#GPU optimization`
+
+---
+
+<a id="item-15"></a>
+## [Anima：开源的 20 亿参数动漫风格文生图模型](https://civitai.com/models/2458426/anima) ⭐️ 8.0/10
+
+CircleStone Labs 与 Comfy Org 联合发布了 Anima，这是一款参数量达 20 亿的开源文生图模型，完全基于真实动漫图像与非写实艺术图像（不含合成数据）训练，采用非商业使用许可。 Anima 填补了开源 AIGC 生态中面向动漫与插画领域的高参数量、垂类专用模型空白，使开发者、ComfyUI 工作流构建者及独立创作者能基于高质量风格化生成能力开发工具，无需依赖闭源或偏向写实风格的模型。 该模型采用区别于标准 MMDiT 或 FLUX 的自定义架构，训练数据包含数百万张真实动漫图像及约 80 万张非动漫艺术图像；已在 Hugging Face 和 Civitai 双平台托管，便于快速集成与推理，但明确禁止商业用途。
+
+telegram · zaihuapd · May 15, 03:00
+
+**背景**: 文生图模型（如 Stable Diffusion）通常基于扩散架构和大规模图文对训练；面向特定领域（如动漫）的变体多通过在精选数据集上微调实现。Anima 的独特之处在于将参数量扩展至 20 亿的同时，严格坚持使用真实人工创作的艺术图像作为训练数据，避免使用合成或 AI 生成的数据，从而保障输出风格的一致性与艺术保真度。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://huggingface.co/circlestone-labs/Anima">circlestone - labs /Anima · Hugging Face</a></li>
+<li><a href="https://deepwiki.com/kohya-ss/sd-scripts/7.3-anima-training">Anima Training | kohya-ss/sd-scripts | DeepWiki</a></li>
+<li><a href="https://www.seaart.ai/articleDetail/d72umcde878c739tpsv0">Getting Started with Anima in ComfyUI created with SeaArt AI</a></li>
+
+</ul>
+</details>
+
+**标签**: `#文生图`, `#动漫生成`, `#开源模型`
 
 ---

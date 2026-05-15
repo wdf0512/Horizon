@@ -5,87 +5,66 @@ date: 2026-05-15
 lang: en
 ---
 
-> From 42 items, 13 important content pieces were selected
+> From 43 items, 15 important content pieces were selected
 
 ---
 
-1. [DeepSeek-R1 Session Isolation Vulnerability: Unclosed <think Triggers Cross-User Data Leak](#item-1) ⭐️ 10.0/10
-2. [vLLM v0.21.0 released with breaking transformers v5 and C++20 requirements](#item-2) ⭐️ 9.0/10
-3. [LiteLLM v1.84.0 released with undocumented breaking changes](#item-3) ⭐️ 9.0/10
+1. [DeepSeek-R1 Session Isolation Vulnerability: Unclosed <think Triggers Cross-Session Data Leak](#item-1) ⭐️ 10.0/10
+2. [LiteLLM v1.84.0 released with undocumented breaking changes and signed Docker images](#item-2) ⭐️ 9.0/10
+3. [Mullvad VPN exit IPs are deterministically assigned and fingerprintable](#item-3) ⭐️ 9.0/10
 4. [First public macOS kernel memory corruption exploit for Apple M5](#item-4) ⭐️ 9.0/10
-5. [arXiv imposes 1-year ban for papers with hallucinated references](#item-5) ⭐️ 9.0/10
-6. [Bun's core fully rewritten in Rust and merged](#item-6) ⭐️ 9.0/10
-7. [IBM and Hugging Face release Granite Embedding Multilingual R2](#item-7) ⭐️ 9.0/10
-8. [NGINX Rewrite Module Heap Overflow Vulnerability CVE-2026-42945 Disclosed](#item-8) ⭐️ 9.0/10
-9. [US approves H200 chip sales to 10 Chinese firms amid AI compute race](#item-9) ⭐️ 9.0/10
-10. [DwarfStar4 (DS4) launched as Metal-first LLM inference runtime for DeepSeek V4](#item-10) ⭐️ 8.0/10
-11. [CSP Allow-list Experiment Enables Runtime User-Driven Domain Whitelisting](#item-11) ⭐️ 8.0/10
-12. [Hugging Face introduces 'continuous async' for asynchronous continuous batching](#item-12) ⭐️ 8.0/10
-13. [Anthropic Launches Claude for Small Business with SaaS Integrations](#item-13) ⭐️ 8.0/10
+5. [Critical 18-year-old Nginx RCE vulnerability 'Nginx-Rift' (CVE-2026-42945) disclosed](#item-5) ⭐️ 9.0/10
+6. [arXiv introduces 1-year ban for papers with hallucinated references](#item-6) ⭐️ 9.0/10
+7. [Bun's core runtime rewritten from Zig to Rust and merged](#item-7) ⭐️ 9.0/10
+8. [Ontario auditors find AI clinical note-takers routinely hallucinate medical facts](#item-8) ⭐️ 9.0/10
+9. [IBM and Hugging Face release Granite Embedding Multilingual R2](#item-9) ⭐️ 9.0/10
+10. [US approves H200 chip sales to 10 Chinese firms amid export controls](#item-10) ⭐️ 9.0/10
+11. [Hacker removes cellular modem and GPS from 2024 RAV4 Hybrid to block telemetry](#item-11) ⭐️ 8.0/10
+12. [DwarfStar4 (DS4): A Metal-first LLM inference runtime for DeepSeek V4](#item-12) ⭐️ 8.0/10
+13. [Codex integrated into ChatGPT mobile app for free](#item-13) ⭐️ 8.0/10
+14. [Hugging Face introduces 'continuous async' for asynchronous LLM inference](#item-14) ⭐️ 8.0/10
+15. [Anima: Open-source 2-billion-parameter anime-style text-to-image model](#item-15) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [DeepSeek-R1 Session Isolation Vulnerability: Unclosed <think Triggers Cross-User Data Leak](https://github.com/deepseek-ai/DeepSeek-R1/issues/840) ⭐️ 10.0/10
+## [DeepSeek-R1 Session Isolation Vulnerability: Unclosed <think Triggers Cross-Session Data Leak](https://github.com/deepseek-ai/DeepSeek-R1/issues/840) ⭐️ 10.0/10
 
-On May 11, 2026, a critical session isolation vulnerability was reported in DeepSeek-R1’s web and API interfaces: sending an unclosed '<think' string in a new empty chat causes the model to leak fragments of other users’ prior conversations—including code, API keys, and private data. This flaw compromises multi-tenancy security for all DeepSeek-R1 deployments—official and third-party—exposing sensitive user data without authentication or privilege escalation; it highlights systemic risks in LLM state management and underscores urgent need for robust prompt sandboxing and context isolation in production AI services. The vulnerability is trivially reproducible (single unescaped '<think' input), affects both official and self-hosted instances, and stems from improper handling of internal reasoning tags during session initialization—likely due to insufficient prompt sanitization and shared inference state across users.
+On May 11, 2026, a critical session isolation vulnerability was reported in DeepSeek-R1’s web and API interfaces: sending an unclosed '<think' string in a new empty chat causes the model to leak fragments of other users’ prior conversations—including code, API keys, and private data. This is a systemic security failure—not hallucination—exposing sensitive user data across sessions in production deployments; it affects all official and third-party DeepSeek-R1 integrations, demanding urgent mitigation by AI engineers, MLOps teams, and application developers. The vulnerability stems from flawed inference state management—not prompt injection or training artifacts—and is trivially reproducible with a single malformed input ('<think') without authentication or privilege escalation. It impacts both DeepSeek’s hosted services and self-hosted instances using the standard R1 inference pipeline.
 
 telegram · zaihuapd · May 14, 13:15
 
-**Background**: Large language models deployed in multi-user environments must strictly isolate each user's conversation history and context to prevent cross-talk. 'Session isolation' refers to architectural safeguards ensuring that one user's inputs, memory, or generated outputs cannot influence or leak into another's session. The '<think>' tag is part of DeepSeek-R1's internal reasoning protocol—used during chain-of-thought generation—but was not properly sandboxed against adversarial prompt injection. Prompt injection exploits the model's inability to distinguish between developer instructions and user input.
+**Background**: DeepSeek-R1, released in January 2025, is a reasoning-optimized LLM known for its 'think' tag mechanism to expose internal reasoning traces (e.g., Chain-of-Thought). Unlike traditional models, it uses structured XML-like tags such as <think> and </think> during inference to demarcate reasoning steps—but improper handling of unclosed tags breaks session boundaries. LLM session isolation is a foundational security requirement to prevent cross-user context leakage, especially in multi-tenant API services.
 
 <details><summary>References</summary>
 <ul>
+<li><a href="https://deepwiki.com/deepseek-ai/DeepSeek-R1/2-model-architecture">Model Architecture | deepseek-ai/DeepSeek-R1 | DeepWiki</a></li>
 <li><a href="https://www.a10networks.com/blog/llm-security/">LLM Security: Protecting AI Models & Applications</a></li>
-<li><a href="https://www.wiz.io/academy/ai-security/llm-security">LLM Security: Protecting Models, RAG & Data Pipelines | Wiz</a></li>
 <li><a href="https://www.cloudsine.tech/llm-vulnerabilities-8-critical-threats-and-how-to-mitigate-them/">A Deep Dive into LLM Vulnerabilities: 8 Critical Threats and How to Mitigate Them - cloudsineAI</a></li>
-<li><a href="https://discuss.huggingface.co/t/prompt-injection-concern-with-think-tags/171162">Prompt Injection concern with think tags - Models - Hugging Face...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members confirmed the vulnerability affects third-party deployments too, with one noting 'it's hallucination'—likely referring to the model erroneously retrieving and outputting non-local context as if it were its own reasoning trace. Discussions emphasize urgency in patching and call for deeper scrutiny of stateful LLM serving patterns.
+**Discussion**: Some community members initially misattributed the issue to 'hallucination', but the report clarifies it is a deterministic system-level isolation failure. Others confirmed the vulnerability affects third-party deployments, reinforcing that the root cause lies in the inference engine—not frontend or application logic.
 
-**Tags**: `#LLM安全`, `#会话隔离漏洞`, `#Prompt注入`
+**Tags**: `#安全漏洞`, `#LLM安全`, `#会话隔离`
 
 ---
 
 <a id="item-2"></a>
-## [vLLM v0.21.0 released with breaking transformers v5 and C++20 requirements](https://github.com/vllm-project/vllm/releases/tag/v0.21.0) ⭐️ 9.0/10
+## [LiteLLM v1.84.0 released with undocumented breaking changes and signed Docker images](https://github.com/BerriAI/litellm/releases/tag/v1.84.0) ⭐️ 9.0/10
 
-vLLM v0.21.0 was released on GitHub, formally deprecating support for Hugging Face Transformers v4 and requiring a C++20-compatible compiler for building from source. It also introduces KV offloading integrated with the Hybrid Memory Allocator (HMA), speculative decoding with thinking budget support, and the TOKENSPEED_MLA attention backend for Blackwell GPUs. This release significantly raises the system compatibility bar, forcing production deployments to upgrade both their Python package stack (to Transformers v5) and build toolchain (to C++20), which may break CI/CD pipelines and legacy GPU servers. Meanwhile, HMA and KV offloading enable efficient inference for hybrid models and memory-constrained scenarios, advancing vLLM’s leadership in scalable LLM serving. The C++20 requirement breaks builds on older GCC/Clang versions (e.g., GCC < 11, Clang < 14); Transformers v4 users must upgrade before upgrading vLLM, as no fallback or dual-version support remains. HMA enables per-layer KV cache size customization—critical for sliding-window + full-attention hybrid models like Gemma-2—reducing up to 79.6% memory waste compared to uniform allocation.
-
-github · khluu · May 14, 23:15
-
-**Background**: vLLM is an open-source high-throughput LLM inference engine known for PagedAttention and continuous batching. Transformers is Hugging Face’s foundational library for loading and running transformer-based models. Hybrid models combine different attention mechanisms (e.g., sliding window + full attention) in one architecture, making uniform KV cache allocation inefficient. KV offloading moves key-value caches from GPU to CPU or disk to extend effective context capacity.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://blog.vllm.ai/2026/01/08/kv-offloading-connector.html">Inside vLLM’s New KV Offloading Connector: Smarter Memory Transfer for Maximizing Inference Throughput | vLLM Blog</a></li>
-<li><a href="https://docs.vllm.ai/projects/production-stack/en/vllm-stack-0.1.2/tutorials/kv_cache.html">KV Cache Offloading — production-stack - vLLM</a></li>
-<li><a href="https://github.com/vllm-project/vllm/issues/11382">[RFC]: Hybrid Memory Allocator · Issue #11382 · vllm-project/vllm</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#breaking-change`, `#deprecation`
-
----
-
-<a id="item-3"></a>
-## [LiteLLM v1.84.0 released with undocumented breaking changes](https://github.com/BerriAI/litellm/releases/tag/v1.84.0) ⭐️ 9.0/10
-
-BerriAI released LiteLLM v1.84.0, explicitly labeled as containing breaking changes, but the release notes and changelog omit specific details about which APIs, interfaces, or behaviors were altered. This release poses high operational risk for production users, as silent breaking changes can cause runtime failures, integration regressions, or security misconfigurations without clear migration guidance — especially critical for teams relying on LiteLLM as a stable LLM abstraction layer. The release includes Docker image signing via cosign using a pinned, cryptographically immutable commit hash (0112e53) for key verification; however, the 'What's Changed' section lists only PR merges and minor fixes without identifying breaking modifications.
+BerriAI released LiteLLM v1.84.0, a high-severity breaking-change release explicitly flagged as containing undocumented breaking changes; all Docker images for this version are cryptographically signed using cosign with a pinned public key from commit 0112e53. This release demands urgent compatibility assessment before upgrade, as silent breaking changes risk runtime failures in production deployments; the adoption of cosign-based image signing also strengthens supply-chain security for teams relying on LiteLLM in regulated or high-trust environments. The release notes lack specific descriptions of the breaking changes, forcing users to manually audit PRs like #25521–#26721; Docker image verification is supported via two methods—using the immutable commit hash (recommended) or the protected release tag—with both requiring cosign CLI and fetching the public key from GitHub raw content.
 
 github · github-actions[bot] · May 14, 06:12
 
-**Background**: LiteLLM is an open-source LLM orchestration framework that provides a unified interface to over 100 LLM providers (e.g., OpenAI, Anthropic, Vertex AI). It is widely used in production for routing, load balancing, fallbacks, and observability. Breaking changes in such a foundational library require explicit documentation to avoid cascading failures across dependent services.
+**Background**: LiteLLM is an open-source LLM abstraction and proxy layer that unifies API calls across 100+ LLM providers (e.g., OpenAI, Anthropic, Vertex AI). It is widely used for routing, load balancing, observability, and cost tracking in production AI systems. Cosign is a Sigstore project tool for signing and verifying software artifacts—including container images—using cryptographic signatures and transparency logs to prevent tampering and ensure provenance.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/sigstore/cosign">GitHub - sigstore / cosign : Code signing and transparency for...</a></li>
-<li><a href="https://docs.sigstore.dev/quickstart/quickstart-cosign/">Sigstore Quickstart with Cosign - Sigstore</a></li>
-<li><a href="https://medium.com/@anil.goyal0057/securing-your-kubernetes-deployments-docker-image-signing-and-verification-with-cosign-and-kyverno-e9bed3ae3efd">Securing Your Kubernetes Deployments: Docker Image Signing and...</a></li>
+<li><a href="https://docs.sigstore.dev/cosign/">Cosign - Sigstore</a></li>
+<li><a href="https://docs.docker.com/engine/security/trust/">Content trust in Docker</a></li>
+<li><a href="https://www.wiz.io/academy/container-security/container-image-signing">What Is Container Image Signing? | Wiz - Cool</a></li>
 
 </ul>
 </details>
@@ -94,229 +73,308 @@ github · github-actions[bot] · May 14, 06:12
 
 ---
 
-<a id="item-4"></a>
-## [First public macOS kernel memory corruption exploit for Apple M5](https://blog.calif.io/p/first-public-kernel-memory-corruption) ⭐️ 9.0/10
+<a id="item-3"></a>
+## [Mullvad VPN exit IPs are deterministically assigned and fingerprintable](https://tmctmt.com/posts/mullvad-exit-ips-as-a-fingerprinting-vector/) ⭐️ 9.0/10
 
-Calif, in collaboration with Anthropic's Mythos Preview AI system, developed and publicly disclosed the first working kernel memory corruption exploit chain for macOS running on Apple M5 hardware (macOS 26.4.1), achieving local privilege escalation from unprivileged user to root shell within five days (April 25–May 1, 2026). The exploit bypasses Apple's Memory Isolation Enforcement (MIE) and Pointer Authentication Code (PAC) protections. This represents the first real-world demonstration that Apple's next-generation hardware-enforced security mechanisms—specifically MIE, designed over five years and backed by billions in investment—can be defeated by a human-AI collaborative approach, reshaping expectations for exploit development speed and feasibility on ARM64-based Apple silicon. The exploit chain relies on two distinct kernel vulnerabilities and leverages PAC bypass techniques to achieve arbitrary kernel code execution; it operates without physical access or special hardware, using only standard system calls, and targets macOS 26.4.1 on M5 hardware before Apple's official patch release.
+Researchers discovered that Mullvad assigns exit IP addresses deterministically based on the user's WireGuard private key—not randomly per session—so the same key consistently maps to IPs within narrow, overlapping floating-point ranges across different servers. This undermines a core anonymity assumption: users expecting session-level IP unpredictability (e.g., for avoiding sockpuppet detection or cross-site tracking) are instead exposed to high-entropy, persistent identification—even when rotating servers or locations. The deterministic mapping produces overlapping float-range clusters (e.g., 0.4334–0.4428), enabling >99% confidence in linking sessions; WireGuard keys rotate every 1–30 days in official Mullvad apps but never in third-party clients unless manually implemented.
 
-hackernews · quadrige · May 14, 18:25 · [Discussion](https://news.ycombinator.com/item?id=48139219)
+hackernews · RGBCube · May 15, 02:35 · [Discussion](https://news.ycombinator.com/item?id=48143880)
 
-**Background**: Apple introduced Memory Isolation Enforcement (MIE) as a flagship hardware security feature for the M5 and A19 chips, designed to prevent memory corruption exploits by isolating kernel memory regions at the silicon level. MIE builds upon ARM64 architecture features like PAC (Pointer Authentication Code) and Memory Tagging Extension (MTE), aiming to disrupt classic exploitation primitives such as use-after-free and heap overflow. Prior to this disclosure, Apple claimed MIE invalidated all known public iOS/macOS exploit chains, including Coruna and Darksword.
+**Background**: WireGuard is a modern, lightweight VPN protocol that uses public-key cryptography for peer authentication. Unlike Tor, which routes traffic through multiple relays to anonymize users from destinations, most commercial VPNs—including Mullvad—act as single-hop proxies: they hide the user’s real IP from websites but do not inherently prevent the VPN provider from correlating sessions via internal identifiers like keys or IPs. Mullvad emphasizes privacy via no-logs policies and anonymous signups, but assumes users understand its threat model does not include strong unlinkability across sessions.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://blog.calif.io/p/first-public-kernel-memory-corruption">First public macOS kernel memory corruption exploit on Apple M5</a></li>
-<li><a href="https://9to5mac.com/2026/05/14/calif-team-details-how-anthropic-mythos-helped-build-a-working-macos-exploit-in-five-days/">Anthropic Mythos helped Calif build a macOS exploit in five days - 9to5Mac</a></li>
+<li><a href="https://tailscale.com/docs/features/exit-nodes/mullvad-exit-nodes">Use Mullvad VPN endpoints as exit nodes for your tailnet.</a></li>
+<li><a href="https://www.ovpn.com/en/blog/wireguard-integrity-anonymity">WireGuard® - Integrity & anonymity | OVPN.com</a></li>
+<li><a href="https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/">WireGuard Endpoints and IP Addresses | Pro Custodibus</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters express awe at the speed of AI-assisted exploit development, skepticism about technical depth ('a little light on the details'), speculation about bug bounty valuation ($100k vs $1.5M depending on framing), and ironic commentary on AI hype. One user regrets purchasing M5 hardware specifically for its MIE security promise.
+**Discussion**: Commenters debate whether this behavior violates user expectations of anonymity, with some clarifying that VPNs like Mullvad are not designed for Tor-level unlinkability; others highlight operational risks (e.g., forum moderation, geoblocking evasion) and question why key rotation isn’t enforced universally across clients.
 
-**Tags**: `#macOS`, `#kernel-exploit`, `#Apple-M5`
+**Tags**: `#privacy`, `#vpn`, `#fingerprinting`, `#wireguard`, `#anonymity`
+
+---
+
+<a id="item-4"></a>
+## [First public macOS kernel memory corruption exploit for Apple M5](https://blog.calif.io/p/first-public-kernel-memory-corruption) ⭐️ 9.0/10
+
+Calif and Mythos Preview jointly developed the first publicly disclosed kernel memory corruption exploit targeting Apple M5 silicon running macOS 26.4.1, achieving local privilege escalation from unprivileged user to root shell in five days (April 25–May 1, 2025), bypassing Memory Isolation Enforcement (MIE), PAC, and AMCC protections. This marks the first real-world bypass of Apple’s next-generation silicon security architecture, demonstrating that AI-assisted expert collaboration can rapidly overcome years of hardened kernel mitigations — with major implications for macOS security assurance, red team operations, and future hardware-software co-design assumptions. The exploit chain leverages two distinct vulnerabilities and combines PAC key reuse, AMCC timing side-channel insights, and MIE-specific failure modes; it does not rely on Memory Tagging Extension (MTE) bypass, raising questions about why MTE did not mitigate it — suggesting possible gaps in MTE deployment or coverage on M5.
+
+hackernews · quadrige · May 14, 18:25 · [Discussion](https://news.ycombinator.com/item?id=48139219)
+
+**Background**: Apple M-series chips implement Pointer Authentication Code (PAC) to cryptographically sign pointers and prevent code-reuse attacks, using four keys (IA, IB, DA, DB). They also feature Apple Memory Cache Coherency (AMCC), a hardware-enforced cache coherence protocol across CPU, GPU, and other IPs in unified memory. Memory Isolation Enforcement (MIE) is Apple’s latest hardware-assisted kernel memory protection, introduced with M4/M5 to isolate kernel data structures from user-space corruption.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://stackoverflow.com/questions/78288651/arm-pointer-authentication-keys-a-and-b-on-apple-m1-and-m3">macos - Arm pointer authentication keys A and B on Apple M1 and M3 - Stack Overflow</a></li>
+<li><a href="https://stackoverflow.com/questions/75140790/how-to-check-for-pointer-authentication-code-pac-on-macos">cpu - How to check for Pointer Authentication Code (PAC) on macOS? - Stack Overflow</a></li>
+<li><a href="https://pacmanattack.com/paper.pdf">PACMAN: Attacking ARM Pointer Authentication with Speculative Execution</a></li>
+<li><a href="https://arxiv.org/html/2504.13385v1">EXAM: Exploiting Exclusive System-Level Cache in Apple M-Series SoCs for Enhanced Cache Occupancy Attacks</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters express surprise at Swift's limited adoption in kernel development, skepticism about technical depth due to report embargo, curiosity about MTE's absence in mitigation, and speculation on bounty valuation—especially whether framing the exploit against beta macOS or Lockdown Mode could increase its payout significantly.
+
+**Tags**: `#macOS安全`, `#内核漏洞`, `#Apple Silicon`
 
 ---
 
 <a id="item-5"></a>
-## [arXiv imposes 1-year ban for papers with hallucinated references](https://twitter.com/tdietterich/status/2055000956144935055) ⭐️ 9.0/10
+## [Critical 18-year-old Nginx RCE vulnerability 'Nginx-Rift' (CVE-2026-42945) disclosed](https://github.com/DepthFirstDisclosures/Nginx-Rift) ⭐️ 9.0/10
 
-arXiv has introduced a new policy that bans authors from submitting to the repository for one year if their paper contains hallucinated references—fabricated citations generated by AI—and requires all subsequent submissions to first be accepted at a reputable peer-reviewed venue. This marks arXiv’s strongest institutional response yet to AI-driven citation fraud, reinforcing academic integrity in preprint culture and signaling that responsibility for verifying AI-generated content rests squarely with authors—not tools or models. The policy is not yet publicly listed on arXiv’s official policy pages as of the announcement date; enforcement appears to rely on moderation review rather than automated detection, and the ban applies regardless of intent—whether due to careless LLM use or deliberate fabrication.
+Researchers disclosed CVE-2026-42945 — a critical heap buffer overflow in Nginx's ngx_http_rewrite_module dating back to 2008 — enabling unauthenticated remote code execution under specific configurations involving 'rewrite' and 'set' directives; F5 and OpenResty have released patches for versions 1.31.0 and 1.30.1. This is a high-severity, actively exploitable RCE flaw affecting widely deployed Nginx installations, including those managed by F5 NGINX Plus and OpenResty; its 18-year persistence underscores systemic risks in long-lived open-source infrastructure and raises urgent concerns about memory-safety debt in web servers. Exploitation requires a 'rewrite' directive with a question mark in the replacement string followed by a 'set' directive referencing an unnamed regex capture group (e.g., $1); while the public PoC disables ASLR, researchers claim reliable ASLR bypass is feasible via byte-by-byte pointer overwrite leveraging Nginx worker process reuse.
 
-hackernews · gjuggler · May 14, 20:39 · [Discussion](https://news.ycombinator.com/item?id=48140922)
+hackernews · hetsaraiya · May 14, 17:17 · [Discussion](https://news.ycombinator.com/item?id=48138268)
 
-**Background**: arXiv is a non-peer-reviewed, moderated preprint server widely used in physics, mathematics, computer science, and related fields. It relies on author certification and moderator oversight—not formal peer review—to ensure topicality and basic scholarly standards. Hallucinated references refer to AI-generated citations that appear plausible but do not correspond to real publications, threatening scientific reliability and literature traceability.
+**Background**: Nginx is a widely used open-source web server and reverse proxy known for high performance and low resource usage. The ngx_http_rewrite_module handles URL rewriting using PCRE-based regular expressions. ASLR (Address Space Layout Randomization) is a core OS security mitigation that randomizes memory layout to hinder exploitation of memory corruption bugs. This vulnerability resides in how the module processes and stores regex capture group references during rewrite evaluation.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://info.arxiv.org/help/submit/index.html">Submission Overview - arXiv info</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)">Hallucination (artificial intelligence) - Wikipedia</a></li>
-<li><a href="https://arxiv.org/abs/2601.18724">[2601.18724] HalluCitation Matters: Revealing the Impact of Hallucinated References with 300 Hallucinated Papers in ACL Conferences</a></li>
+<li><a href="https://www.picussecurity.com/resource/blog/nginx-rift-cve-2026-42945-critical-heap-buffer-overflow-vulnerability-explained">NGINX Rift : CVE-2026-42945 Critical Heap Buffer Overflow...</a></li>
+<li><a href="https://beazley.security/alerts-advisories/critical-18-year-old-rce-vulnerability-in-nginx-aka-nginx-rift-cve-2026-42945">Critical 18-Year-Old RCE Vulnerability in NGINX aka “ NGINX Rift ”...</a></li>
+<li><a href="https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability">NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability | depthfirst</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters broadly support the policy’s intent but raise concerns about fairness, tooling gaps (e.g., unreliable BibTeX generation), transparency (unclear implementation status), and need for careful vetting before penalties. Some emphasize shared responsibility between authors and citation tools, while others stress that verification remains the author’s non-delegable duty.
+**Discussion**: Community discussion reflects technical debate over ASLR bypass feasibility: some argue ASLR remains a meaningful barrier without proof-of-concept, while others stress it should be assumed bypassable by default given Nginx's process model and exploit design; mitigation advice centers on replacing unnamed captures ($1) with named captures, and patching is confirmed for F5 NGINX 1.30.1/1.31.0 and OpenResty.
 
-**Tags**: `#arXiv`, `#academic-integrity`, `#AI-ethics`, `#research-policy`, `#LLM-responsibility`
+**Tags**: `#nginx`, `#security`, `#exploit`, `#aslr`, `#web-server`
 
 ---
 
 <a id="item-6"></a>
-## [Bun's core fully rewritten in Rust and merged](https://github.com/oven-sh/bun/pull/30412) ⭐️ 9.0/10
+## [arXiv introduces 1-year ban for papers with hallucinated references](https://twitter.com/tdietterich/status/2055000956144935055) ⭐️ 9.0/10
 
-The Bun JavaScript runtime’s core has been fully rewritten in Rust and merged into main via PR #30412, resulting in over 1,009,257 lines of new Rust code and the removal of most Zig implementation. This marks a pivotal shift toward memory-safe systems programming for high-performance web runtimes, significantly improving long-term maintainability, reducing memory-safety bugs (e.g., use-after-free), and setting a precedent for large-scale language migrations in the LLM-assisted development era. The Rust codebase contains ~10,428 unsafe blocks across 736 files, indicating careful but non-avoidable low-level systems work; internal smart pointer abstractions were pre-designed to map 1:1 to Rust ownership semantics, easing the migration from Zig.
+arXiv has implemented a new policy that bans authors for one year and requires future submissions to first be accepted by a reputable peer-reviewed venue if their paper contains hallucinated references—i.e., fabricated or unverifiable citations—alongside other unverified AI-generated content such as LLM-inserted metadata or placeholder text. This is the first major enforcement action by arXiv—a cornerstone preprint server for CS, physics, and mathematics—against AI-induced academic misconduct, signaling a hardening of norms around responsibility for AI-assisted writing and setting a precedent for integrity in open scientific communication. The policy applies not only to hallucinated citations but also to unverified LLM-generated metadata, placeholder text, or any content clearly indicating lack of human review; enforcement relies on arXiv moderators identifying 'sufficient evidence' that authors failed to verify AI output before submission.
 
-hackernews · Chaoses · May 14, 08:15 · [Discussion](https://news.ycombinator.com/item?id=48132488)
+hackernews · gjuggler · May 14, 20:39 · [Discussion](https://news.ycombinator.com/item?id=48140922)
 
-**Background**: Bun is a fast, all-in-one JavaScript runtime built on JavaScriptCore, offering bundling, transpilation, task running, and npm client functionality in a single tool. It initially used Zig for performance-critical components but migrated to Rust to leverage stronger memory safety guarantees and ecosystem maturity. Rust’s ownership model enforces compile-time memory safety without garbage collection, making it well-suited for runtime development.
+**Background**: arXiv is a free, non-peer-reviewed preprint server widely used for rapid dissemination of scholarly work in physics, mathematics, computer science, and related fields. Unlike journals, arXiv does not conduct formal peer review but relies on moderation and author certification of correctness and originality. Hallucinated references—fabricated citations generated by large language models—have recently surged, threatening citation integrity and reproducibility, with studies estimating tens of thousands of affected papers in 2025–2026.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://bun.sh/">Bun — A fast all-in-one JavaScript runtime</a></li>
-<li><a href="https://www.linode.com/docs/guides/introduction-to-bun/">Introduction to the Bun JavaScript Runtime | Linode Docs</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">Rust (programming language) - Wikipedia</a></li>
+<li><a href="https://info.arxiv.org/help/submit/index.html">Submission Overview - arXiv info</a></li>
+<li><a href="https://www.nature.com/articles/d41586-026-00969-z">Hallucinated citations are polluting the scientific ... - Nature</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13051339/">Hallucinated citations produced by generative artificial ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters highlight the meticulous preparation behind the rewrite — including detailed Zig-to-Rust mapping guides and pre-adapted abstractions — while debating its implications for software complexity, unsafe usage scale, and the role of LLMs in managing million-line systems. Some note that Rust eliminates many memory bugs but not all runtime hazards, especially around JS boundary re-entrancy.
+**Discussion**: Commenters broadly support the policy as necessary for scientific integrity but raise practical concerns: some note the policy is not yet visible on arXiv’s official policies page, others highlight tooling gaps (e.g., inconsistent BibTeX generation across publishers) that inadvertently encourage citation errors, and a few express skepticism about enforcement fairness and scalability.
 
-**Tags**: `#Rust`, `#JavaScript runtime`, `#Bun`, `#systems programming`, `#language migration`
+**Tags**: `#arXiv`, `#academic-integrity`, `#LLM-misuse`, `#research-ethics`, `#citation-practices`
 
 ---
 
 <a id="item-7"></a>
+## [Bun's core runtime rewritten from Zig to Rust and merged](https://github.com/oven-sh/bun/pull/30412) ⭐️ 9.0/10
+
+The core runtime of Bun — a high-performance JavaScript runtime — has been officially rewritten from Zig to Rust and merged into the main branch via GitHub pull request #30412 on May 2024. This shift significantly improves memory safety and long-term maintainability while retaining Bun’s performance edge, setting a new precedent for safety-conscious systems programming in critical infrastructure like JS runtimes. The Rust codebase now exceeds 1 million lines, with ~736 files containing unsafe blocks (out of 1443 Rust files); pre-existing smart pointer abstractions in Zig enabled a smoother transition, and many memory-safety bugs (e.g., use-after-free) are now caught at compile time.
+
+hackernews · Chaoses · May 14, 08:15 · [Discussion](https://news.ycombinator.com/item?id=48132488)
+
+**Background**: Bun is a fast, all-in-one JavaScript runtime that uses Apple's JavaScriptCore engine instead of V8, and includes built-in bundling, transpilation, and package management. It was originally written in Zig — a systems language emphasizing simplicity and manual memory control — but the team opted for Rust to leverage its ownership model and compile-time memory safety guarantees without garbage collection.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bun_(software)">Bun (software) - Wikipedia</a></li>
+<li><a href="https://bun.sh/">Bun — A fast all-in-one JavaScript runtime</a></li>
+<li><a href="https://dev.to/mukhilpadmanabhan/rust-vs-zig-the-new-programming-language-battle-for-performance-1p6">Rust vs . Zig : The New Programming Language... - DEV Community</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters highlight the extensive preparation behind the rewrite — including detailed Zig-to-Rust mapping guides and pre-adopted smart pointer patterns — while acknowledging realistic limits: unsafe Rust remains necessary for FFI and JS boundary re-entrancy, and memory leaks or logic errors across language boundaries still require manual vigilance.
+
+**Tags**: `#Rust`, `#JavaScript runtime`, `#Bun`, `#systems programming`, `#memory safety`
+
+---
+
+<a id="item-8"></a>
+## [Ontario auditors find AI clinical note-takers routinely hallucinate medical facts](https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771) ⭐️ 9.0/10
+
+Ontario provincial auditors discovered that AI-powered clinical note-taking tools used by physicians routinely generate factually incorrect summaries—including hallucinated diagnoses, symptoms, and treatment commitments—that contradict the actual patient encounter or meeting content. These hallucinations pose direct risks to patient safety, clinical decision-making, and legal liability—potentially leading to misdiagnosis, inappropriate treatment, or malpractice claims—and underscore urgent needs for auditing, human-in-the-loop review, and regulatory oversight in healthcare AI deployment. The audit identified systemic hallucination patterns—not isolated errors—including misrepresentation of diagnostic intent, non-linear discourse breakdown, and insertion of common but unmentioned conditions (e.g., osteoporosis instead of runner’s knee). Timestamp-linked audio verification, as used in some enterprise meeting tools, is technically feasible but faces HIPAA-compliance hurdles in clinical settings.
+
+hackernews · sohkamyung · May 14, 22:37 · [Discussion](https://news.ycombinator.com/item?id=48142188)
+
+**Background**: Large language models (LLMs) used in clinical documentation—such as ambient scribing tools—summarize physician-patient conversations into structured EHR notes. However, LLMs are known to hallucinate: generating confident but false or unsupported statements due to statistical pattern-matching rather than factual grounding. In high-stakes healthcare contexts, even low hallucination rates can have severe consequences, making rigorous auditing and human validation essential.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.nature.com/articles/s41746-025-01670-7">A framework to assess clinical safety and hallucination rates of LLMs for medical text summarisation | npj Digital Medicine</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12318031/">Multi-model assurance analysis showing large language models are highly vulnerable to adversarial hallucination attacks during clinical decision support - PMC</a></li>
+<li><a href="https://arxiv.org/pdf/2311.01463">Creating Trustworthy LLMs: Dealing with Hallucinations in Healthcare AI</a></li>
+<li><a href="https://namas.co/ai-compliance-risk-medical-auditing-2026/">AI in Medical Auditing: Managing Compliance Risk in 2026</a></li>
+<li><a href="https://glass.health/resources/ai-clinical-documentation">AI in Clinical Documentation: How It Works for Clinicians (2026)</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Healthcare and enterprise professionals shared firsthand experiences confirming hallucinations—including misdiagnoses, fabricated vendor commitments, and breakdowns during nuanced or non-linear discussions—emphasizing that current LLM note-takers cannot be trusted without real-time verification (e.g., timestamped audio links) and mandatory human review.
+
+**Tags**: `#healthcare-ai`, `#llm-hallucination`, `#clinical-safety`, `#ai-auditing`, `#medical-informatics`
+
+---
+
+<a id="item-9"></a>
 ## [IBM and Hugging Face release Granite Embedding Multilingual R2](https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2) ⭐️ 9.0/10
 
-IBM and Hugging Face jointly released Granite Embedding Multilingual R2, an open-source, Apache 2.0 licensed multilingual embedding model with 32K context length and 97M parameters, achieving a 60.3 score on MTEB-v2 Retrieval Avg — the highest among all open multilingual embedding models under 100M parameters. This release significantly advances open, production-ready multilingual retrieval infrastructure — especially for RAG, cross-lingual search, and long-document applications — by offering high-quality, permissively licensed embeddings without restrictive commercial terms or API dependencies. The model is based on a ModernBERT-base architecture (22 layers, 768-dim vectors, GeLU activation), fine-tuned via knowledge distillation and contrastive learning; it supports 32K context but is distinct from the larger 311M-parameter Granite Embedding Multilingual R2 variant also released concurrently.
+IBM and Hugging Face jointly released Granite Embedding Multilingual R2 — an open-source (Apache 2.0 licensed), multilingual text embedding model with 32K context length and state-of-the-art retrieval performance among sub-100M parameter models. This release significantly advances open, production-ready infrastructure for multilingual RAG systems, lowering barriers for global enterprises and researchers to deploy high-quality, long-context retrieval without vendor lock-in or licensing restrictions. The R2 series includes both a 97M-parameter model (optimized for speed and efficiency) and a 311M-parameter variant (backed by a ModernBERT-base encoder with 22 layers, 768-dim vectors, and GeLU activation); both support 32K-token inputs and excel across multilingual IR, code retrieval, and conversational multi-turn tasks.
 
 rss · Hugging Face Blog · May 14, 18:55
 
-**Background**: Embedding models convert text into fixed-length vectors to enable semantic similarity search and retrieval. Multilingual embeddings support cross-lingual tasks without translation, crucial for global RAG systems. Context length — how much input text a model can process — directly impacts performance on long documents or conversational history. The MTEB benchmark evaluates embedding models across tasks including retrieval, classification, and clustering.
+**Background**: Text embedding models convert input text into fixed-length vectors used for semantic search, similarity computation, and retrieval in RAG pipelines. Context length — the maximum number of tokens a model can process — directly impacts its ability to handle long documents or multi-document queries. Retrieval quality is typically measured using metrics like Recall@K and MRR on standardized benchmarks such as MTEB.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://huggingface.co/ibm-granite/granite-embedding-97m-multilingual-r2">ibm- granite / granite - embedding -97m- multilingual - r 2 · Hugging Face</a></li>
-<li><a href="https://arxiv.org/pdf/2605.13521">Granite Embedding Multilingual R2 Models</a></li>
+<li><a href="https://arxiv.org/pdf/2605.13521">Granite Embedding Multilingual R 2 Models</a></li>
 <li><a href="https://www.ibm.com/granite/docs/models/embedding">Granite Embedding - IBM Granite</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#multilingual`, `#embeddings`, `#RAG`, `#open-source`, `#NLP`
-
----
-
-<a id="item-8"></a>
-## [NGINX Rewrite Module Heap Overflow Vulnerability CVE-2026-42945 Disclosed](https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability) ⭐️ 9.0/10
-
-On May 13, 2026, DepthFirst and F5 jointly disclosed CVE-2026-42945 — an 18-year-old unauthenticated remote code execution vulnerability in NGINX's ngx_http_rewrite_module, caused by a two-pass heap buffer overflow during URI rewriting with unescaped question marks and unnamed capture groups. This CVSS 9.2 RCE affects billions of production servers globally—including Kubernetes Ingress controllers, API gateways, and WAFs—making it one of the most impactful web server vulnerabilities in recent years due to its wide deployment, high severity, and lack of authentication requirement. Exploitation requires a specific configuration pattern: a 'rewrite' directive with a question mark in the replacement string (e.g., 'rewrite ^/a(.*) /b?$1? last;') followed by a 'set' directive referencing an unnamed capture group (e.g., 'set $var $1'); ASLR bypass is claimed feasible but not demonstrated in the public PoC, which disables ASLR for reliability.
-
-telegram · zaihuapd · May 14, 02:41
-
-**Background**: The ngx_http_rewrite_module is NGINX’s core module for dynamic URI manipulation using regex-based rewrite rules. It processes requests in two phases: first to compute output buffer size, then to copy and escape data. This two-pass design has historically led to subtle memory safety issues, as seen in prior vulnerabilities like CVE-2021-23017 (another rewrite-related off-by-one). Unnamed capture groups ($1, $2) are legacy syntax inherited from PCRE-based matching and remain widely used despite naming conventions encouraging safer alternatives.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://medium.com/@sergey.dudik/mastering-request-and-response-modification-in-nginx-926dd06b049b">Mastering Request and Response Modification in Nginx | Medium</a></li>
-<li><a href="https://www.thegeekstuff.com/2017/08/nginx-rewrite-examples/">7 Nginx Rewrite Rule Examples with Reg-Ex and Flags</a></li>
-<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42945">NVD - CVE - 2026 - 42945</a></li>
-<li><a href="https://www.picussecurity.com/resource/blog/nginx-rift-cve-2026-42945-critical-heap-buffer-overflow-vulnerability-explained">NGINX Rift: CVE - 2026 - 42945 Critical Heap Buffer Overflow...</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community discussion centers on ASLR’s real-world mitigating effect, with some arguing the exploit remains highly dangerous even with ASLR enabled, while others emphasize that the documented mitigation (replacing $1 with named captures) is simple and effective. A few users also question long-term alternatives to C-based web servers, citing memory safety concerns.
-
-**Tags**: `#NGINX`, `#RCE`, `#漏洞分析`
-
----
-
-<a id="item-9"></a>
-## [US approves H200 chip sales to 10 Chinese firms amid AI compute race](https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/) ⭐️ 9.0/10
-
-The U.S. Department of Commerce has approved export licenses for approximately 10 Chinese technology companies—including Alibaba, Tencent, ByteDance, and JD.com—to purchase NVIDIA H200 GPUs, with a cap of up to 75,000 units per customer; however, no physical deliveries have occurred as of mid-2026. This marks the first U.S. authorization of the H200—a flagship AI training/inference GPU with record-breaking memory bandwidth—for China, signaling a calibrated relaxation of AI chip export controls and directly impacting large-model development capacity, cloud infrastructure planning, and urgency of domestic AI chip substitution in China. The H200 is based on NVIDIA's Hopper architecture and features 141 GB of HBM3e memory with 4.8 TB/s bandwidth—nearly double the memory capacity and 1.4× higher bandwidth than the H100; approvals include distributors like Lenovo and Foxconn, but deliveries remain blocked pending further regulatory review and Beijing’s cautious guidance.
-
-telegram · zaihuapd · May 14, 08:57
-
-**Background**: Since 2022, the U.S. has imposed strict export controls on advanced AI chips (e.g., A100, H100) to China, citing national security concerns. The H200, launched in 2024 as NVIDIA’s next-generation data-center GPU, was initially excluded from China sales under these rules. The 2026 approval reflects a strategic recalibration—not a policy reversal—but remains tightly conditioned on end-use verification and quantity limits.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.nvidia.com/en-us/data-center/h200/">H 200 GPU | NVIDIA</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Nvidia">Nvidia - Wikipedia</a></li>
-<li><a href="https://www.idtechex.com/en/research-article/us-export-controls-on-ai-chips-boost-domestic-innovation-in-china/33482">US Export Controls on AI Chips Boost Domestic Innovation in China</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI芯片`, `#地缘技术政策`, `#大模型基础设施`
+**Tags**: `#embeddings`, `#multilingual`, `#open-source`, `#retrieval`, `#RAG`
 
 ---
 
 <a id="item-10"></a>
-## [DwarfStar4 (DS4) launched as Metal-first LLM inference runtime for DeepSeek V4](https://antirez.com/news/165) ⭐️ 8.0/10
+## [US approves H200 chip sales to 10 Chinese firms amid export controls](https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/) ⭐️ 9.0/10
 
-Antirez announced DwarfStar4 (DS4), a new lightweight LLM inference runtime optimized specifically for DeepSeek V4, with Metal as the primary backend targeting high-memory MacBooks (e.g., M4 Max with 96GB/128GB RAM), and secondary support for CUDA (including NVIDIA DGX Spark) and community-maintained ROCm. DS4 lowers the barrier for high-performance local LLM inference on Apple Silicon, enabling near-desktop-scale reasoning without cloud dependency — a critical step toward practical local AI adoption, hardware-aware model deployment, and sustainable open inference ecosystems. DS4 requires at least 96GB of unified memory (not VRAM) on macOS due to DeepSeek V4 Flash’s 284B parameter size; Metal backend is production-ready, while ROCm remains experimental and community-rebased; the project explicitly credits llama.cpp and GGML as foundational influences.
+The U.S. Department of Commerce has approved licenses for approximately 10 Chinese enterprises—including Alibaba, Tencent, ByteDance, JD.com, Lenovo, and Foxconn—to purchase NVIDIA H200 GPUs, with a cap of 75,000 units per customer; no deliveries have occurred yet, and Jensen Huang’s upcoming China visit aims to facilitate implementation. This marks a rare, targeted relaxation of U.S. AI chip export controls toward China, directly enabling major Chinese AI firms to access cutting-edge inference and training infrastructure—potentially accelerating large language model development while reshaping global AI hardware supply chain dynamics. The H200 features 141 GB of HBM3e memory and 4.8 TB/s memory bandwidth—nearly double the H100’s memory capacity and 1.4× higher bandwidth—making it especially suited for generative AI and LLM workloads; however, deliveries remain pending due to ongoing compliance reviews and Beijing’s cautious guidance to domestic buyers.
 
-hackernews · caust1c · May 14, 22:29 · [Discussion](https://news.ycombinator.com/item?id=48142108)
+telegram · zaihuapd · May 14, 08:57
 
-**Background**: DeepSeek V4 is a family of state-of-the-art open-weight LLMs released by DeepSeek in early 2025, including the 284B-parameter 'Flash' variant designed for high-fidelity reasoning. Metal is Apple’s low-overhead GPU API for macOS and iOS, enabling efficient on-device AI acceleration without vendor lock-in. llama.cpp and GGML are widely adopted open-source frameworks for CPU/GPU-accelerated LLM inference on consumer hardware.
+**Background**: Since 2018, the U.S. has progressively tightened export controls on advanced semiconductors to China, particularly AI accelerators like the A100, H100, and their derivatives, citing national security concerns. The H200—released in late 2025 as NVIDIA’s flagship Hopper-generation GPU—was initially presumed subject to the same restrictions. The January 2026 BIS policy introduced a 'flexible license review' framework, allowing case-by-case approvals for chips deemed not to pose unacceptable military or intelligence risks.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.techno-edge.net/article/2026/05/10/5049.html?pickup_list_click1=true">128GB超メモリMac専用の巨大 LLM エンジン「DwarfStar...</a></li>
-<li><a href="https://ai-manual.ru/article/kak-zastavit-lokalnuyu-llm-pisat-dlinnyie-otvetyi-nastrojka-maxtokens-parametryi-generatsii-i-obhod-early-stopping/">Как настроить max_tokens для длинных ответов LLM ... | AiManual</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA H200 GPU</a></li>
+<li><a href="https://en.wikipedia.org/wiki/United_States_export_controls_on_AI_chips_and_semiconductors">United States export controls on AI chips and semiconductors</a></li>
+<li><a href="https://www.congress.gov/crs-product/R48642">U.S. Export Controls and China: Advanced Semiconductors</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters highlight DS4’s narrow focus and hardware pragmatism, debate intelligence saturation thresholds for coding tasks, speculate on future RAM requirements (e.g., whether 16GB will suffice in years), and note surprising emergent behaviors like self-aware process recognition — reflecting broad technical curiosity and concern about shifting AI business models.
-
-**Tags**: `#LLM`, `#inference-runtime`, `#local-AI`, `#DeepSeek`, `#Metal`
+**Tags**: `#AI硬件`, `#出口管制`, `#大模型基建`
 
 ---
 
 <a id="item-11"></a>
-## [CSP Allow-list Experiment Enables Runtime User-Driven Domain Whitelisting](https://simonwillison.net/2026/May/13/csp-allow/#atom-everything) ⭐️ 8.0/10
+## [Hacker removes cellular modem and GPS from 2024 RAV4 Hybrid to block telemetry](https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4/) ⭐️ 8.0/10
 
-Simon Willison built a working demo where a sandboxed iframe intercepts CSP-blocked fetch() requests, relays them to the parent window, and prompts the user to dynamically add the blocked origin (e.g., https://api.inaturalist.org) to a connect-src allow-list before refreshing the page. This experiment challenges the long-standing assumption that CSP policies must be static and pre-declared, introducing a practical path toward adaptive, user-informed security policies that improve both usability and real-world deployability of strict CSP. The technique relies on iframe sandboxing with 'allow-scripts' but no 'allow-same-origin', combined with monkey-patched fetch() inside the sandbox to catch TypeError('blocked by CSP') and postMessage the blocked URL to the parent; the parent then manages an in-memory allow-list and rewrites the iframe's src with updated CSP headers via data: URL or meta refresh.
+A security researcher physically removed the embedded cellular modem and GPS module from their 2024 Toyota RAV4 Hybrid to eliminate factory telemetry transmission, documenting the hardware disassembly, signal testing, and post-removal behavior in detail. This case highlights growing user demand for automotive data sovereignty and exposes critical gaps in OEM privacy controls—showing that even hardware-level removal may not fully prevent telemetry if Bluetooth or smartphone-based infotainment systems act as proxy data channels. The removal disabled built-in navigation and remote services but did not eliminate all telemetry: Bluetooth-paired phones can still relay data to Toyota, while USB CarPlay avoids this but introduces third-party telemetry from Apple/Google. The GPS unit’s failure also caused compass drift affecting navigation accuracy.
 
-rss · Simon Willison · May 13, 04:50
+hackernews · arkadiyt · May 14, 17:08 · [Discussion](https://news.ycombinator.com/item?id=48138136)
 
-**Background**: Content Security Policy (CSP) is an HTTP header that helps prevent XSS and data injection attacks by restricting which resources a page can load. Traditionally, CSP directives like connect-src are declared statically at page load and cannot be modified at runtime. Sandboxed iframes isolate embedded content by default, blocking access to parent context unless explicitly permitted via 'allow-*' tokens. Fetch interception has previously been explored via service workers (Foreign Fetch) or client-side monkey patching, but not yet for real-time CSP policy adaptation.
+**Background**: Modern Toyota vehicles—including the RAV4 Hybrid—include a telematics control unit (TCU) that collects driving data (location, speed, diagnostics) and transmits it via embedded cellular modems. These systems often lack user-accessible opt-out mechanisms, prompting privacy-conscious owners to pursue physical or firmware-level interventions. Bluetooth and USB interfaces in infotainment systems further complicate telemetry isolation due to shared vehicle bus (e.g., CAN) access.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://gist.github.com/mkruisselbrink/f6957bece64740926b84">fetch - interception .md · GitHub</a></li>
-<li><a href="https://blog.logrocket.com/intercepting-javascript-fetch-api-requests-responses/">Intercepting JavaScript Fetch API requests and... - LogRocket Blog</a></li>
-<li><a href="https://www.xjavascript.com/blog/intercept-fetch-api-requests-and-responses-in-javascript/">How to Intercept fetch () API Requests and... — xjavascript.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Toyota_RAV4">Toyota RAV 4 - Wikipedia</a></li>
+<li><a href="https://loging.xyz/device-identity-location-tracking-risks-from-bluetooth-pairi">Device Identity & Location Tracking Risks from Bluetooth Pairing Flaws</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#CSP`, `#web-security`, `#sandboxing`, `#fetch-interception`, `#UX-security`
+**Discussion**: Commenters confirmed Bluetooth pairing enables telemetry relay through phones—even after modem removal—while USB CarPlay avoids this but captures its own telemetry; others reported hardware defects (e.g., broken GPS/compass) ignored by Toyota, and noted simpler alternatives like fuse removal in other models (e.g., Ford Maverick).
+
+**Tags**: `#automotive privacy`, `#telemetry`, `#embedded systems`, `#car hacking`, `#IoT security`
 
 ---
 
 <a id="item-12"></a>
-## [Hugging Face introduces 'continuous async' for asynchronous continuous batching](https://huggingface.co/blog/continuous_async) ⭐️ 8.0/10
+## [DwarfStar4 (DS4): A Metal-first LLM inference runtime for DeepSeek V4](https://antirez.com/news/165) ⭐️ 8.0/10
 
-Hugging Face introduced 'continuous async', a new scheduling technique that decouples request admission from token generation in continuous batching, enabling fine-grained, non-blocking asynchronous processing of LLM inference requests. This advancement significantly improves throughput and tail latency in production LLM serving by eliminating idle GPU time caused by synchronous token generation, making it especially valuable for high-concurrency, low-latency real-time applications. Continuous async allows overlapping of scheduling decisions with computation—requests can be admitted and queued asynchronously while previous tokens are still being generated; it requires no changes to model architecture or tokenizer, and integrates natively with Hugging Face's Text Generation Inference (TGI) server.
+Antirez announced DwarfStar4 (DS4), a new lightweight LLM inference runtime specifically optimized for DeepSeek V4, with Metal as the primary backend targeting high-memory MacBooks (e.g., 96GB/128GB M4 Max), and secondary support for CUDA (including DGX Spark) and ROCm (community-maintained rocm branch). DS4 lowers the barrier to running state-of-the-art, massive LLMs like DeepSeek V4 Flash (284B) locally on Apple Silicon, while also expanding cross-platform GPU support — bridging a critical gap between cutting-edge model scale and accessible, hardware-optimized inference outside cloud APIs. DS4 is built on llama.cpp/GGML foundations but is model-specific (not general-purpose), requires ~96GB of unified memory for full DeepSeek V4 inference, and uses imatrix quantization that users report outperforms current OpenRouter Zephyr backends in quality. ROCm support remains experimental and separate from main.
 
-rss · Hugging Face Blog · May 14, 00:00
+hackernews · caust1c · May 14, 22:29 · [Discussion](https://news.ycombinator.com/item?id=48142108)
 
-**Background**: Continuous batching is a GPU optimization technique used in LLM inference servers to dynamically pack multiple requests into batches as they arrive and depart, improving hardware utilization. Traditional continuous batching remains synchronous: each request must wait for its next token before the scheduler can consider admitting new requests. This creates idle time when requests generate tokens at different rates, limiting scalability.
+**Background**: GGML is a tensor library designed for CPU/GPU inference of LLMs with memory efficiency and quantization support; llama.cpp is a popular open-source inference engine built on GGML. Metal is Apple’s low-overhead graphics and compute API, now extended with native tensor support in Metal 4 for ML workloads. DeepSeek V4 is a recent 284B-parameter open-weight model released by DeepSeek, notable for its strong coding and reasoning capabilities.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.philschmid.de/sagemaker-huggingface-async-inference">Asynchronous Inference with Hugging Face Transformers and...</a></li>
+<li><a href="https://www.techno-edge.net/article/2026/05/10/5049.html?pickup_list_click1=true">128GB超メモリMac専用の巨大 LLM エンジン「DwarfStar...</a></li>
+<li><a href="https://github.com/ggml-org/ggml">GitHub - ggml-org/ggml: Tensor library for machine learning</a></li>
+<li><a href="https://developer.apple.com/metal/whats-new/">What's New - Metal - Apple Developer</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM inference`, `#continuous batching`, `#asynchronous systems`, `#GPU optimization`, `#model serving`
+**Discussion**: Commenters highlight DS4’s hardware constraints (e.g., 96GB RAM requirement), praise its Metal/CUDA/ROCm backend flexibility, debate the rationale for a model-specific runtime versus general llama.cpp, and speculate on intelligence saturation—questioning whether marginal gains in model capability will disrupt business models like Anthropic’s once ‘enough’ intelligence for coding is reached.
+
+**Tags**: `#LLM`, `#inference`, `#DeepSeek`, `#llama.cpp`, `#Metal`
 
 ---
 
 <a id="item-13"></a>
-## [Anthropic Launches Claude for Small Business with SaaS Integrations](https://www.anthropic.com/news/claude-for-small-business) ⭐️ 8.0/10
+## [Codex integrated into ChatGPT mobile app for free](https://openai.com/index/work-with-codex-from-anywhere/) ⭐️ 8.0/10
 
-Anthropic launched Claude for Small Business on May 14, 2024, integrating Claude with QuickBooks, PayPal, HubSpot, Canva, DocuSign, Google Workspace, and Microsoft 365, and providing 15 pre-built workflows and 15 skills for finance, sales, marketing, HR, and customer support. This marks Anthropic’s first dedicated AI agent offering for non-enterprise commercial users, lowering the barrier to AI adoption for small businesses while demonstrating a production-ready architecture for secure, approval-gated, multi-tool AI automation — setting a benchmark for responsible AI agent deployment in regulated business environments. The service runs via Claude Cowork, requiring explicit user approval before sending messages, publishing content, or initiating payments; Team and Enterprise plans explicitly exclude customer data from model training, and configurable data retention policies and role-based access controls are available for enterprise customers.
+OpenAI has officially integrated its Codex code-generation model—previously powering GitHub Copilot—into the ChatGPT mobile app, available to all users at no extra cost beyond a free ChatGPT account. This integration dramatically lowers the barrier to AI-powered coding by enabling on-the-go development assistance via mobile devices, expanding accessibility for developers and accelerating real-world adoption of agentic coding workflows. Codex in the mobile app operates as a cloud-based agentic coding assistant with built-in worktrees and parallel cloud environments; usage is included in the free ChatGPT tier, though interactions may contribute to model training per OpenAI's data policy.
 
-telegram · zaihuapd · May 14, 12:41
+hackernews · mikeevans · May 14, 20:06 · [Discussion](https://news.ycombinator.com/item?id=48140529)
 
-**Background**: Claude is a family of large language models developed by Anthropic, trained using constitutional AI to improve alignment with human values. Since Claude 3, models are released in three tiers: Haiku (fastest), Sonnet (balanced), and Opus (most capable). Claude Cowork is Anthropic’s AI agent designed for asynchronous, non-technical office tasks — such as file management, spreadsheet generation, and desktop organization — primarily on macOS.
+**Background**: OpenAI Codex is a fine-tuned version of GPT-3 specialized for converting natural language into executable code across over a dozen programming languages. It underpins GitHub Copilot and is designed for tasks like code completion, explanation, and generation. Unlike general-purpose LLMs, Codex was trained on vast public code repositories and optimized for deterministic, functional output.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://grokipedia.com/page/Claude_Cowork">Claude Cowork</a></li>
-<li><a href="https://claude.com/pricing/enterprise">Enterprise plan | Claude by Anthropic</a></li>
-<li><a href="https://rejoicehub.com/blogs/anthropic-enterprise-ai-services-for-business">Anthropic Enterprise AI Services for Business Explained</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(language_model)">OpenAI Codex (language model ) - Wikipedia</a></li>
+<li><a href="https://openai.com/codex/">Codex | AI Coding Partner from OpenAI | OpenAI</a></li>
+<li><a href="https://www.youtube.com/watch?v=Kd0QGZMy_tA">OpenAI Codex in ChatGPT in 5 Minutes - YouTube</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI Agent`, `#SaaS 集成`, `#企业AI落地`
+**Discussion**: Developers report mixed experiences: some praise 'vibe coding' and workflow flexibility enabled by mobile access, while others note reduced code quality due to smaller screens and lack of physical keyboards; privacy trade-offs and comparisons to alternatives like Qwen CLI are also widely discussed.
+
+**Tags**: `#AI`, `#coding-assistants`, `#mobile-development`, `#LLM-integration`, `#developer-tools`
+
+---
+
+<a id="item-14"></a>
+## [Hugging Face introduces 'continuous async' for asynchronous LLM inference](https://huggingface.co/blog/continuous_async) ⭐️ 8.0/10
+
+Hugging Face introduced 'continuous async', a new technique that decouples request scheduling from GPU batch execution in continuous batching systems, enabling CPU-side scheduling of the next batch to overlap with GPU computation of the current one. This advancement significantly improves end-to-end throughput and tail latency in production LLM serving—especially under variable or bursty workloads—by eliminating idle GPU time and better aligning system scheduling with the iterative, memory-bound nature of autoregressive generation. Continuous async leverages CUDA graphs and configurable padding intervals (e.g., q_padding_interval_size=64, kv_padding_interval_size=16384) to reduce kernel launch overhead and memory fragmentation; it is implemented in Transformers v4.45+ via ContinuousBatchingConfig with async=True.
+
+rss · Hugging Face Blog · May 14, 00:00
+
+**Background**: Continuous batching—also known as dynamic or iteration-level batching—is a systems optimization where tokens from multiple requests are grouped not per request but per decoding step, dramatically improving GPU utilization (from ~30–60% to 80–95%) and throughput in autoregressive LLM inference. Unlike static batching, it accommodates variable-length sequences and streaming outputs, making it essential for real-world serving. Traditional continuous batching still synchronizes CPU scheduling tightly with GPU execution, creating bottlenecks under high concurrency.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.anyscale.com/blog/continuous-batching-llm-inference">How continuous batching enables 23x throughput in LLM ...</a></li>
+<li><a href="https://tianpan.co/blog/2026-04-09-continuous-batching-llm-inference">Continuous Batching: The Single Biggest GPU Utilization ...</a></li>
+<li><a href="https://huggingface.co/docs/transformers/continuous_batching">Continuous batching · Hugging Face</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#LLM inference`, `#continuous batching`, `#asynchronous systems`, `#model serving`, `#GPU optimization`
+
+---
+
+<a id="item-15"></a>
+## [Anima: Open-source 2-billion-parameter anime-style text-to-image model](https://civitai.com/models/2458426/anima) ⭐️ 8.0/10
+
+CircleStone Labs and Comfy Org jointly released Anima, a 2-billion-parameter open-source text-to-image model fine-tuned exclusively on real-world anime and non-photorealistic art images (no synthetic data), available under a non-commercial license. Anima fills a critical gap in the open-source AIGC ecosystem by offering high-capacity, domain-specialized generation for anime and illustration — enabling developers, ComfyUI workflow designers, and indie creators to build robust, stylistically consistent tools without relying on proprietary or photorealism-biased models. The model is built on a custom architecture distinct from standard MMDiT or FLUX variants, trained on ~millions of authentic anime images plus ~800K non-anime artistic images; it is hosted on both Hugging Face and Civitai for easy integration and inference, but explicitly prohibits commercial use.
+
+telegram · zaihuapd · May 15, 03:00
+
+**Background**: Text-to-image models like Stable Diffusion rely on diffusion architectures and large-scale image-text pairs; domain-specific variants (e.g., for anime) typically use fine-tuning on curated datasets. Anima distinguishes itself by scaling parameter count to 2B while maintaining strict fidelity to authentic artistic sources — avoiding synthetic or AI-generated training data that can degrade output coherence and style integrity.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://huggingface.co/circlestone-labs/Anima">circlestone - labs /Anima · Hugging Face</a></li>
+<li><a href="https://deepwiki.com/kohya-ss/sd-scripts/7.3-anima-training">Anima Training | kohya-ss/sd-scripts | DeepWiki</a></li>
+<li><a href="https://www.seaart.ai/articleDetail/d72umcde878c739tpsv0">Getting Started with Anima in ComfyUI created with SeaArt AI</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#文生图`, `#动漫生成`, `#开源模型`
 
 ---

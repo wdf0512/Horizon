@@ -23,6 +23,27 @@ def extract_counts(content: str) -> tuple[int, int]:
     return 0, 0
 
 
+def _fix_details_for_mdx(text: str) -> str:
+    """Convert <details><summary>...<ul><li><a> blocks to plain markdown lists.
+
+    MDX is strict about block-level HTML — <details> inside a paragraph context
+    causes a parse error. Plain markdown links are universally safe.
+    """
+    def replace(m: re.Match) -> str:
+        links = re.findall(r'<a href="([^"]+)">([^<]+)</a>', m.group(1))
+        if not links:
+            return ''
+        lines = '\n'.join(f'- [{title}]({url})' for url, title in links)
+        return f'\n**参考链接**:\n\n{lines}\n'
+
+    return re.sub(
+        r'<details><summary>[^<]*</summary>\s*<ul>(.*?)</ul>\s*</details>',
+        replace,
+        text,
+        flags=re.DOTALL,
+    )
+
+
 def convert_to_mdx(summary_path: Path, date_str: str) -> str:
     content = summary_path.read_text(encoding='utf-8')
     item_count, total_fetched = extract_counts(content)
@@ -36,7 +57,7 @@ def convert_to_mdx(summary_path: Path, date_str: str) -> str:
             skipped = True
             continue
         body_lines.append(line)
-    body = '\n'.join(body_lines).lstrip('\n')
+    body = _fix_details_for_mdx('\n'.join(body_lines).lstrip('\n'))
 
     if total_fetched > 0:
         description = f"从 {total_fetched} 条内容中精选 {item_count} 条 AI/ML 重要动态"

@@ -54,6 +54,8 @@ def convert_to_mdx(summary_path: Path, date_str: str) -> str:
         f'total_fetched: {total_fetched}\n'
         f'---\n\n'
     )
+    # Note: cover_image is added manually for historical posts.
+    # Automated daily runs omit it; the digest page degrades gracefully.
     return frontmatter + body
 
 

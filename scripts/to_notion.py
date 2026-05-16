@@ -63,10 +63,22 @@ INLINE_TOKEN = re.compile(
 )
 
 
+def _valid_url(url: str | None) -> bool:
+    """Notion only accepts absolute http(s) and mailto URLs as link annotations.
+
+    Fragment-only refs like `#item-1` (from in-doc TOCs) and other relative
+    paths trigger 'Invalid URL for link' validation errors.
+    """
+    if not url:
+        return False
+    return url.startswith(("http://", "https://", "mailto:"))
+
+
 def _rt(text: str, *, bold: bool = False, code: bool = False, link: str | None = None) -> dict:
+    safe_link = link if _valid_url(link) else None
     return {
         "type": "text",
-        "text": {"content": text, "link": ({"url": link} if link else None)},
+        "text": {"content": text, "link": ({"url": safe_link} if safe_link else None)},
         "annotations": {
             "bold": bold,
             "italic": False,

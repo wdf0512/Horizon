@@ -43,6 +43,18 @@ jobs:
           BLOG_REPO_TOKEN: ${{ secrets.BLOG_REPO_TOKEN }}
         run: uv run python scripts/to_blog_post.py
 
+      - name: Sync digest to Obsidian vault
+        env:
+          OBSIDIAN_VAULT_TOKEN: ${{ secrets.OBSIDIAN_VAULT_TOKEN }}
+        run: uv run python scripts/to_obsidian_vault.py
+
+      - name: Append digest to Notion pages
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_PAGE_ID_ZH: ${{ secrets.NOTION_PAGE_ID_ZH }}
+          NOTION_PAGE_ID_EN: ${{ secrets.NOTION_PAGE_ID_EN }}
+        run: uv run python scripts/to_notion.py
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

@@ -1,15 +1,24 @@
 #!/usr/bin/env python3
-"""Append Horizon daily summaries to Notion pages.
+"""Create one Notion database entry per Horizon daily digest.
 
 For each enabled language, convert the markdown digest to Notion blocks
-and append them to the target page via the Notion API.
+and create a new Page inside the target database, with Date / Item Count /
+Total Fetched properties populated from the digest header.
 
 Required env vars:
-    NOTION_API_KEY            Notion integration token (secret_... or ntn_...).
-    NOTION_PAGE_ID_ZH         Target page ID for the Chinese digest.
-    NOTION_PAGE_ID_EN         Target page ID for the English digest.
+    NOTION_API_KEY        Notion integration token (secret_... or ntn_...).
+    NOTION_DB_ID_ZH       Target database ID for Chinese digests.
+    NOTION_DB_ID_EN       Target database ID for English digests.
 
-Both page IDs are independent; missing ones are simply skipped.
+Both database IDs are independent; missing ones are simply skipped.
+
+The target database is expected to have these properties (case-sensitive):
+    Name          title       — set to "Horizon · {date}"
+    Date          date        — set to the digest date
+    Item Count    number      — selected items
+    Total Fetched number      — upstream pool size
+
+Extra columns the user adds (e.g. Tags, Status) are not touched.
 """
 
 import json
@@ -213,9 +222,9 @@ def _plain_md_to_blocks(md: str) -> list[dict]:
     return blocks
 
 
-# ---------- Append ----------
+# ---------- Append remaining children ----------
 
-def append_to_page(token: str, page_id: str, blocks: list[dict]) -> bool:
+def _append_children(token: str, page_id: str, blocks: list[dict]) -> bool:
     for start in range(0, len(blocks), MAX_CHILDREN_PER_REQUEST):
         chunk = blocks[start:start + MAX_CHILDREN_PER_REQUEST]
         result, status = notion_api(
@@ -227,11 +236,69 @@ def append_to_page(token: str, page_id: str, blocks: list[dict]) -> bool:
     return True
 
 
+# ---------- Header parsing (item count / total fetched) ----------
+
+_COUNT_RE_ZH = re.compile(r"从\s*(\d+)\s*条内容中筛选出\s*(\d+)\s*条")
+_COUNT_RE_EN = re.compile(r"From\s+(\d+)\s+items.*?(\d+)\s+important", re.IGNORECASE)
+
+
+def extract_counts(md: str) -> tuple[int, int]:
+    """Return (item_count, total_fetched). 0,0 if not found."""
+    m = _COUNT_RE_ZH.search(md)
+    if m:
+        return int(m.group(2)), int(m.group(1))
+    m = _COUNT_RE_EN.search(md)
+    if m:
+        return int(m.group(2)), int(m.group(1))
+    return 0, 0
+
+
+# ---------- Create database entry ----------
+
+def create_db_entry(
+    token: str,
+    db_id: str,
+    *,
+    title: str,
+    date_str: str,
+    item_count: int,
+    total_fetched: int,
+    blocks: list[dict],
+) -> str | None:
+    """Create a new Page in `db_id`. Returns the new page ID or None on failure.
+
+    POST /pages accepts up to 100 children inline; the rest is patched after.
+    Properties beyond the four below are not set, so user-added columns survive.
+    """
+    properties: dict = {
+        "Name": {"title": [{"type": "text", "text": {"content": title}}]},
+        "Date": {"date": {"start": date_str}},
+        "Item Count": {"number": item_count},
+        "Total Fetched": {"number": total_fetched},
+    }
+    payload = {
+        "parent": {"database_id": db_id},
+        "properties": properties,
+        "children": blocks[:MAX_CHILDREN_PER_REQUEST],
+    }
+    result, status = notion_api("POST", "/pages", token, payload)
+    if status != 200:
+        print(f"    create failed [{status}]: {result}", file=sys.stderr)
+        return None
+
+    page_id = result.get("id")
+    remaining = blocks[MAX_CHILDREN_PER_REQUEST:]
+    if remaining and page_id:
+        if not _append_children(token, page_id, remaining):
+            return None
+    return page_id
+
+
 # ---------- Main ----------
 
 LANG_ENV = {
-    "zh": "NOTION_PAGE_ID_ZH",
-    "en": "NOTION_PAGE_ID_EN",
+    "zh": "NOTION_DB_ID_ZH",
+    "en": "NOTION_DB_ID_EN",
 }
 
 
@@ -245,8 +312,8 @@ def main() -> None:
     any_failed = False
 
     for lang, env_key in LANG_ENV.items():
-        page_id = os.environ.get(env_key, "").strip()
-        if not page_id:
+        db_id = os.environ.get(env_key, "").strip()
+        if not db_id:
             print(f"  · {lang}: {env_key} not set — skipping")
             continue
 
@@ -256,10 +323,21 @@ def main() -> None:
             continue
 
         md = summary_path.read_text(encoding="utf-8")
+        item_count, total_fetched = extract_counts(md)
         blocks = markdown_to_blocks(md)
-        print(f"  · {lang}: appending {len(blocks)} blocks → page {page_id[:8]}…")
-        if append_to_page(token, page_id, blocks):
-            print(f"  · {lang}: ok")
+        title = f"Horizon · {date_str}"
+
+        print(f"  · {lang}: creating entry in db {db_id[:8]}… ({len(blocks)} blocks, {item_count}/{total_fetched})")
+        new_id = create_db_entry(
+            token, db_id,
+            title=title,
+            date_str=date_str,
+            item_count=item_count,
+            total_fetched=total_fetched,
+            blocks=blocks,
+        )
+        if new_id:
+            print(f"  · {lang}: ok → page {new_id}")
         else:
             any_failed = True
 

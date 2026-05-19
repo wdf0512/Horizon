@@ -5,132 +5,60 @@ date: 2026-05-19
 lang: en
 ---
 
-> From 37 items, 9 important content pieces were selected
+> From 35 items, 9 important content pieces were selected
 
 ---
 
-1. [Anthropic acquires Stainless to enhance Claude Platform's API and agent tooling](#item-1) ⭐️ 9.0/10
-2. [Elon Musk loses lawsuit against Sam Altman and OpenAI over IP and governance claims](#item-2) ⭐️ 9.0/10
-3. [FBI Seeks Nationwide Access to Commercial License Plate Reader Data](#item-3) ⭐️ 9.0/10
-4. [UK GDS issues 'keep open by default' guidance opposing NHS's closed-source shift](#item-4) ⭐️ 9.0/10
-5. [Hugging Face and IBM Launch Open Agent Leaderboard](#item-5) ⭐️ 9.0/10
-6. [Haiku OS now runs on Apple M1 Macs](#item-6) ⭐️ 8.0/10
-7. [Fine-tuning NVIDIA Cosmos Predict 2.5 for robot video generation using LoRA and DoRA](#item-7) ⭐️ 8.0/10
-8. [PaddleOCR 3.5 Introduces Transformers Backend for Unified OCR and Layout Analysis](#item-8) ⭐️ 8.0/10
-9. [OpenClaw Developer Spends $1.3M on OpenAI API Tokens in One Month](#item-9) ⭐️ 8.0/10
+1. [UK GDS issues 'keep open by default' guidance opposing NHS's closed-source shift](#item-1) ⭐️ 9.0/10
+2. [Hugging Face and IBM Research launch Open Agent Leaderboard](#item-2) ⭐️ 9.0/10
+3. [Cursor Launches Composer 2.5 Powered by Kimi K2.5 for Long-Horizon Coding Tasks](#item-3) ⭐️ 9.0/10
+4. [Startup stops AI bot spam using Git's --author flag](#item-4) ⭐️ 8.0/10
+5. [Andon Labs launches AI-run radio station with autonomous agents](#item-5) ⭐️ 8.0/10
+6. [FBI Seeks Nationwide Access to Commercial License Plate Reader Data](#item-6) ⭐️ 8.0/10
+7. [Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation](#item-7) ⭐️ 8.0/10
+8. [PaddleOCR 3.5 Introduces Native Transformers Backend](#item-8) ⭐️ 8.0/10
+9. [World's first offshore wind-powered underwater data center enters full operation in Shanghai](#item-9) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Anthropic acquires Stainless to enhance Claude Platform's API and agent tooling](https://www.anthropic.com/news/anthropic-acquires-stainless) ⭐️ 9.0/10
-
-Anthropic has acquired Stainless, a startup focused on OpenAPI-based SDK generation, and will wind down all of Stainless’s hosted products—including its SDK generator—effective immediately, while integrating its team and technology into the Claude Platform. This acquisition signals Anthropic’s strategic prioritization of robust API connectivity and agentic infrastructure for Claude, accelerating enterprise adoption by enabling seamless integration of external services into managed agents—potentially reshaping how LLM-powered automation interfaces with real-world systems. Stainless’s SDK generator is discontinued for new signups and projects as of the announcement date; Anthropic explicitly frames the deal as an 'acquihire' focused on talent and technical expertise rather than product continuity, with integration efforts centered on enhancing Claude Managed Agents’ ability to consume and reason over OpenAPI specifications.
-
-hackernews · tomeraberbach · May 18, 17:01 · [Discussion](https://news.ycombinator.com/item?id=48182281)
-
-**Background**: OpenAPI is a widely adopted specification format for describing RESTful APIs, enabling automated generation of client SDKs, server stubs, and documentation. Tools like OpenAPI Generator and Speakeasy provide open-source or commercial SDK generation from OpenAPI specs. Meanwhile, Anthropic’s Claude Platform recently launched Managed Agents—a fully hosted environment where Claude can execute tools, browse the web, and process files—making reliable, type-safe API integration increasingly critical for production agent workflows.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://github.com/OpenAPITools/openapi-generator">GitHub - OpenAPITools/openapi-generator: OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3) · GitHub</a></li>
-<li><a href="https://www.speakeasy.com/docs/sdks/create-client-sdks">Generate SDKs from OpenAPI | Speakeasy</a></li>
-<li><a href="https://platform.claude.com/docs/en/managed-agents/overview">Claude Managed Agents overview - Claude API Docs</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters highlight the acquihire nature of the deal, express sadness over the shutdown of a well-regarded SDK generator (especially by early adopters like Mux), raise concerns about lack of clarity for existing users, and debate broader industry trends toward proprietary, walled-garden agentic tooling ecosystems.
-
-**Tags**: `#AI`, `#APIs`, `#acquisition`, `#developer-tools`, `#LLM-platforms`
-
----
-
-<a id="item-2"></a>
-## [Elon Musk loses lawsuit against Sam Altman and OpenAI over IP and governance claims](https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/) ⭐️ 9.0/10
-
-A jury ruled that Elon Musk’s 2026 lawsuit against Sam Altman and OpenAI was time-barred, finding his claims invalid due to delayed filing—specifically, that the challenged 2023 Microsoft deal was substantively similar to earlier 2019 and 2021 deals he had not contested. This ruling sets a major legal precedent on statute-of-limitations enforcement in AI governance disputes and raises urgent questions about accountability when nonprofit-founded AI labs transfer intellectual property to for-profit entities under evolving corporate structures. The jury did not assess the merits of Musk’s allegations—including breach of fiduciary duty or violation of OpenAI’s nonprofit charter—but only whether his claims were filed within the statutory three-year window; OpenAI’s for-profit arm remains governed by its nonprofit board under its October 2025 restructured governance model.
-
-hackernews · nycdatasci · May 18, 17:38 · [Discussion](https://news.ycombinator.com/item?id=48182754)
-
-**Background**: OpenAI was founded in 2015 as a non-profit with a mission to ensure artificial general intelligence benefits all of humanity. In 2019, it created a for-profit subsidiary—later restructured in 2025 into OpenAI Group PBC—to accelerate development and deployment, while maintaining nonprofit oversight. Musk co-founded OpenAI but left in 2018, later alleging that OpenAI abandoned its original mission after partnering with Microsoft.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://legalclarity.org/what-does-time-barred-mean-statute-of-limitations/">What Does Time Barred Mean? Statute of Limitations</a></li>
-<li><a href="https://en.wikipedia.org/wiki/OpenAI">OpenAI - Wikipedia</a></li>
-<li><a href="https://openai.com/our-structure/">Our structure | OpenAI</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters highlighted the narrow legal basis of the loss (statute of limitations), questioned the ethics of nonprofit-to-profit IP transfers, and expressed frustration that no penalty was imposed on OpenAI despite Musk’s foundational role—some speculated about potential government or taxpayer lawsuits challenging the structural shift.
-
-**Tags**: `#AI ethics`, `#legal precedent`, `#OpenAI`, `#intellectual property`, `#nonprofit governance`
-
----
-
-<a id="item-3"></a>
-## [FBI Seeks Nationwide Access to Commercial License Plate Reader Data](https://www.404media.co/the-fbi-wants-to-buy-nationwide-access-to-license-plate-readers/) ⭐️ 9.0/10
-
-The FBI has issued a solicitation seeking to purchase nationwide access to aggregated license plate reader (LPR) data collected by private companies such as Flock Safety and LexisNexis, potentially enabling real-time, persistent tracking of vehicles across the United States. This move represents a major expansion of federal surveillance infrastructure without congressional authorization or judicial oversight, threatening constitutional privacy rights and enabling mass, suspicionless tracking of millions of law-abiding citizens. The FBI’s solicitation targets commercial LPR databases containing over 20 billion scans — including location, time, and vehicle images — with no statutory limits on retention, sharing, or use; existing safeguards like NCIC hot-listing only apply to targeted queries, not bulk data ingestion.
-
-hackernews · cdrnsf · May 18, 19:28 · [Discussion](https://news.ycombinator.com/item?id=48184350)
-
-**Background**: License plate readers (LPRs) are AI-powered cameras that automatically capture and interpret vehicle license plates from images or video. They are widely deployed by law enforcement, municipalities, and private entities like parking operators and security firms. Commercial LPR providers aggregate scans into searchable databases used for investigations, corporate security, and repossession — often with minimal transparency or regulation. The FBI already operates an LPR information-sharing program via NCIC but has not previously sought direct access to private-sector bulk data repositories.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.caranddriver.com/news/a70792616/automated-license-plate-reader-explainer/">What's the Story Behind Automated License Plate Readers?</a></li>
-<li><a href="https://www.congress.gov/crs-product/R48160">Law Enforcement and Technology: Use of Automated License ... Top Stories News about Austin, Texas, Automatic number-plate recognition News about Automatic number-plate recognition, Flock Safety, Home Depot License Plate Reader Guide: How It Works, Uses, Accuracy and ... What is a License Plate Reader? [2026 Comprehensive Guide] License Plate Reader (LPR) Cameras: A Comprehensive Overview</a></li>
-<li><a href="https://risk.lexisnexis.com/insights-resources/article/license-plate-reader-lpr-tools-for-investigations">License Plate Reader LPR Data for Investigations</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters express deep skepticism about political feasibility and legal safeguards, proposing technical countermeasures like daily-changing digital license plates and advocating for reclassifying personal data as a liability rather than an asset. Others note grassroots evasion tactics — from masking plates to using untraceable dealer tags — highlighting how surveillance expansion fuels resistance and noncompliance.
-
-**Tags**: `#surveillance`, `#privacy`, `#civil-liberties`, `#law-enforcement`, `#data-ethics`
-
----
-
-<a id="item-4"></a>
 ## [UK GDS issues 'keep open by default' guidance opposing NHS's closed-source shift](https://simonwillison.net/2026/May/17/gds-weighs-in/#atom-everything) ⭐️ 9.0/10
 
-On May 14, 2026, the UK Government Digital Service (GDS) published official guidance titled 'AI, open code and vulnerability risk in the public sector', explicitly recommending that public sector bodies adopt a 'keep open by default' posture for source code — a direct, unnamed rebuke of the NHS’s April 2026 decision to privatize its open source repositories following vulnerability reports from Project Glasswing. This intervention establishes a binding policy norm across UK public services, affirming that transparency and peer scrutiny strengthen security more than obscurity — countering a dangerous precedent where critical health infrastructure retreats from openness under security pretexts. It reinforces open source as foundational to digital public good sustainability, reuse, and AI-era cybersecurity resilience. The guidance stresses that making code private incurs additional delivery and policy costs, reduces reuse and external scrutiny, and mandates closure only when 'sparingly and deliberately' justified — with no exemption granted for AI or LLM-integrated systems. It applies across all public sector digital projects, including those involving generative AI and AI security research.
+On May 14, 2026, the UK Government Digital Service (GDS) published official guidance titled 'AI, open code and vulnerability risk in the public sector', explicitly recommending that public sector bodies adopt a 'keep open by default' posture for software code — a direct, principled counter to the NHS’s recent decision to privatize its open source repositories following vulnerability reports from Project Glasswing. This intervention reinforces transparency, security through peer scrutiny, and reuse of public digital infrastructure — setting a binding normative standard across UK public tech. It signals that security-by-obscurity is not acceptable policy, especially for critical services like healthcare, and elevates open source as a core element of digital public good sustainability. The GDS guidance does not name the NHS explicitly but is widely interpreted by civil service experts — including Terence Eden — as a targeted, high-level rebuke; it emphasizes that closing code increases delivery and policy costs while reducing reuse and external scrutiny, and permits closure only 'sparingly and deliberately'.
 
 rss · Simon Willison · May 17, 15:59
 
-**Background**: The NHS recently closed access to its open source repositories after receiving vulnerability reports through Project Glasswing — Anthropic’s April 2026 industry-wide cybersecurity initiative focused on securing critical infrastructure using AI tools like Claude Mythos. The Government Digital Service (GDS), established in 2011, oversees digital standards and interoperability across UK government services and operates gov.uk — the central platform for public service delivery.
+**Background**: Project Glasswing is a UK government-led AI security initiative, co-developed with Anthropic, aimed at identifying and mitigating vulnerabilities in AI models and critical software used by public services. The NHS recently restricted access to its open source repositories after receiving vulnerability disclosures under this project, citing security concerns — a move criticized as misapplying security principles. GDS, established in 2011, oversees digital standards and interoperability across UK public services and champions 'Digital by Default' and open government principles.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://grokipedia.com/page/Project_Glasswing">Project Glasswing</a></li>
 <li><a href="https://www.anthropic.com/glasswing">Project Glasswing: Securing critical software for the AI era</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Gov.uk">gov.uk - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Government_Digital_Service">Government Digital Service - Wikipedia</a></li>
+<li><a href="https://www.thestack.technology/uk-public-sector-open-source-ai/">UK gov urges public sector to keep its code open, despite AI</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Terence Eden interprets the GDS guidance as an unusually public and pointed civil service rebuke — signaling serious internal concern — while commentators emphasize that 'security through obscurity' contradicts decades of cybersecurity consensus and risks undermining responsible disclosure culture in public tech.
+**Discussion**: Terence Eden characterizes the GDS statement as an unusually public escalation of internal civil service disagreement — likening it to a 'meeting without biscuits', signaling serious institutional concern. Experts in the discourse emphasize that openness enables faster patching and collective defense, rejecting the notion that secrecy improves security for public infrastructure.
 
 **Tags**: `#open-source`, `#government-digital-policy`, `#cybersecurity`, `#public-sector-tech`, `#nhs`
 
 ---
 
-<a id="item-5"></a>
-## [Hugging Face and IBM Launch Open Agent Leaderboard](https://huggingface.co/blog/ibm-research/open-agent-leaderboard) ⭐️ 9.0/10
+<a id="item-2"></a>
+## [Hugging Face and IBM Research launch Open Agent Leaderboard](https://huggingface.co/blog/ibm-research/open-agent-leaderboard) ⭐️ 9.0/10
 
-Hugging Face and IBM Research jointly launched the Open Agent Leaderboard on January 7, 2025 — an open-source, task-diverse benchmark for evaluating AI agents across domains including web navigation, mathematical reasoning, and multimodal tool use. This leaderboard addresses a critical gap in the AI ecosystem by enabling transparent, standardized, and reproducible evaluation of AI agents — accelerating progress, fostering fair comparison, and supporting trustworthy deployment in real-world applications. The benchmark evaluates agents without domain-specific fine-tuning, supports diverse environments (e.g., WebArena, MathVista), and is fully open — with code, datasets, and evaluation scripts publicly available on GitHub and Hugging Face Spaces.
+Hugging Face and IBM Research jointly launched the Open Agent Leaderboard on April 2024—a standardized, open-source benchmark for evaluating end-to-end AI agent systems across reasoning, tool use, multimodal interaction, and environment navigation. It unifies six established benchmarks—including SWE-Bench Verified, BrowseComp+, AppWorld, and tau2-Bench variants—under a single evaluation protocol. This leaderboard fills a critical gap in the AI ecosystem by enabling fair, reproducible, and holistic comparison of open-source agents—not just their underlying LLMs—accelerating progress in autonomous system development and fostering transparency and community collaboration. The leaderboard reports both task success rate (quality) and computational cost per task (efficiency), supporting dual-axis evaluation; it is fully open—code, data, and evaluation scripts are publicly available on Hugging Face and GitHub. It does not evaluate proprietary or closed-agent systems by design.
 
 rss · Hugging Face Blog · May 18, 14:12
 
-**Background**: AI agents are autonomous systems that perceive environments, reason over goals, and use tools (e.g., APIs, browsers) to act. Unlike static LLMs, agent evaluation requires dynamic, multi-step, environment-grounded metrics — not just accuracy or token-level scores. Prior benchmarks were often narrow, proprietary, or lacked reproducibility, hindering systematic progress.
+**Background**: AI agents are autonomous systems that combine LLMs with tools, memory, and planning to perform multi-step tasks—unlike static language models, they interact dynamically with environments and APIs. Prior to this initiative, agent evaluation was fragmented: benchmarks focused narrowly on coding (e.g., SWE-Bench), web browsing (e.g., BrowseComp+), or function calling, lacking unified metrics or open infrastructure. The Open Agent Leaderboard addresses this by integrating diverse capabilities into one coherent framework.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/om-ai-lab/open-agent-leaderboard">GitHub - om-ai-lab/ open - agent - leaderboard : Reproducible Language...</a></li>
-<li><a href="https://huggingface.co/spaces/omlab/open-agent-leaderboard">Open Agent Leaderboard - a Hugging Face Space by omlab</a></li>
-<li><a href="https://www.exgentic.ai/">Open Agent Leaderboard</a></li>
+<li><a href="https://huggingface.co/blog/ibm-research/open-agent-leaderboard">The Open Agent Leaderboard - Hugging Face</a></li>
+<li><a href="https://ai.nidal.cloud/article/news-1779120210102-huggingface">Hugging Face: Launch of the Open Agent Leaderboard</a></li>
+<li><a href="https://app.daily.dev/posts/the-open-agent-leaderboard-vs2qmkwoy">The Open Agent Leaderboard | daily.dev</a></li>
 
 </ul>
 </details>
@@ -139,66 +67,138 @@ rss · Hugging Face Blog · May 18, 14:12
 
 ---
 
-<a id="item-6"></a>
-## [Haiku OS now runs on Apple M1 Macs](https://discuss.haiku-os.org/t/my-haiku-arm64-progress/19044?page=2) ⭐️ 8.0/10
+<a id="item-3"></a>
+## [Cursor Launches Composer 2.5 Powered by Kimi K2.5 for Long-Horizon Coding Tasks](https://cursor.com/blog/composer-2-5) ⭐️ 9.0/10
 
-Haiku OS, the open-source BeOS successor, has successfully booted and run on Apple Silicon (M1) Macs as part of its ongoing ARM64 porting effort, with community developer antics9 confirming functional operation on real M1 hardware. This port marks a symbolic and technical milestone: it brings a historically significant OS—rooted in Be Inc.’s legacy and once considered by Apple for acquisition—to Apple’s modern silicon, reinforcing Haiku’s relevance and demonstrating progress in supporting contemporary hardware beyond x86. The port is part of Haiku’s broader ARM64 initiative, not yet officially released in stable form but confirmed booting and functional on M1 Macs; it does not yet support M-series iPads due to missing drivers and firmware constraints.
+Cursor released Composer 2.5, its latest AI coding agent, built explicitly on Moonshot AI’s open-source Kimi K2.5 model; it introduces directional text-feedback RL (a non-PPO, engineering-optimized method) to solve credit assignment in long-horizon tasks and leverages 25× more synthetic training data than Composer 2. Cursor also announced a joint large-scale training initiative with SpaceXAI using 1 million H100-equivalent GPUs via the Colossus 2 cluster. This marks the first production-grade integration of Kimi K2.5 into a widely adopted AI coding agent, setting a new benchmark for long-context reasoning and collaborative code generation; the RL innovation and massive compute partnership signal a shift toward scalable, high-fidelity agent training infrastructure in developer tooling. Composer 2.5 offers two inference variants: base ($2.50/M input tokens) and Fast ($15.00/M input tokens), with double usage during launch week; the directional RL method uses token-level textual feedback—not scalar rewards—to guide fine-grained corrections in multi-step coding workflows, avoiding semantic collapse common in standard PPO.
 
-hackernews · tekkertje · May 18, 18:30 · [Discussion](https://news.ycombinator.com/item?id=48183579)
+telegram · zaihuapd · May 19, 03:00
 
-**Background**: Haiku OS is a free, open-source reimplementation of BeOS—a pioneering multimedia-focused OS developed by Be Inc. in the 1990s. After Be Inc. failed to secure acquisition by Apple (which instead acquired NeXT), the company dissolved, and Haiku emerged in 2001 as a community-driven effort to continue BeOS’s vision. Unlike Linux or BSD, Haiku uses its own kernel (derived from NewOS) and maintains binary compatibility with BeOS R5 applications.
+**Background**: Cursor is a popular AI-powered IDE that embeds coding agents directly into the development workflow. Composer is Cursor's proprietary coding agent series, with Composer 2 launched in March 2026 as a frontier-level model trained on Kimi K2.5. Colossus 2 is xAI’s GW-scale AI training cluster, operational since January 2026 in Memphis, Tennessee, and designed to support next-generation foundation models.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Haiku_(operating_system)">Haiku (operating system) - Wikipedia</a></li>
-<li><a href="https://www.haiku-os.org/about/faq/">General FAQ | Haiku Project</a></li>
-<li><a href="https://worldofsoftware.org/beos-inspired-haiku-os-gets-arm64-port-booting/">BeOS-Inspired Haiku OS Gets ARM 64 Port Booting - World Of Software</a></li>
+<li><a href="https://grokipedia.com/page/Composer_2_AI_model">Composer 2 (AI model)</a></li>
+<li><a href="https://cursor.com/blog/composer-2">Introducing Composer 2 · Cursor</a></li>
+<li><a href="https://baike.baidu.com/item/Colossus/64866873">Colossus（x.AI打造的超级人工智能训练集群）_百度百科</a></li>
+<li><a href="https://electrify.tw/xai-colossus-2-launch/">xAI Colossus 2 正式啟用！全球首座 GW 級 AI 訓練集群、用電量超舊金...</a></li>
+<li><a href="https://news.qq.com/rain/a/20260118A05OPA00">全球首个GW级算力集群！马斯克宣布xAI旗下Colossus 2投入运行，距离开...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters highlight historical irony—Apple once nearly acquired Be Inc., and now Haiku runs on Apple Silicon—while praising Haiku’s speed, stability, and unique metadata-aware BeFS filesystem. Others ask about practical usability and express disappointment that M-series iPads remain unsupported.
+**Tags**: `#AI编程`, `#大模型RLHF`, `#算力基建`
 
-**Tags**: `#operating-systems`, `#Haiku-OS`, `#ARM64`, `#Apple-Silicon`, `#retrocomputing`
+---
+
+<a id="item-4"></a>
+## [Startup stops AI bot spam using Git's --author flag](https://archestra.ai/blog/only-responsible-ai) ⭐️ 8.0/10
+
+Archestra.ai implemented a policy requiring all commits to use Git's --author flag with verified, human-associated email addresses, rejecting automated or mismatched authorship to filter out AI-generated pull requests. This low-cost, Git-native mitigation exposes critical gaps in open-source infrastructure security and challenges the overreliance on superficial GitHub activity metrics—especially for VC-backed projects—highlighting urgent needs for human-centric contribution verification. The approach relies on enforcing author identity at commit time—not just signing—and integrates with GitHub's existing 'verified' badge logic; however, it does not prevent malicious humans from bypassing PR approval workflows once they've had one commit merged.
+
+hackernews · ildari · May 18, 15:24 · [Discussion](https://news.ycombinator.com/item?id=48181125)
+
+**Background**: Git allows users to set arbitrary --author and --committer metadata, making commit authorship easily spoofable without cryptographic signing. GitHub displays 'Verified' badges only for commits signed with GPG or S/MIME keys linked to a verified email. AI bot spam refers to mass-submitted, low-quality PRs generated by LLMs—often with fake or generic emails—to inflate contributor counts or claim bounties.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits">Displaying verification statuses for all of your commits</a></li>
+<li><a href="https://conzit.com/post/confronting-ai-spam-githubs-open-source-dilemma">Confronting AI Spam: GitHub's Open Source Dilemma</a></li>
+<li><a href="https://topaihubs.com/articles/github-ai-bot-spam-how-git-s-author-flag-became-a-developer-s-secret-weapon">GitHub AI Bot Spam: How Git's Author Flag Became a Developer's Secret ...</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters raised security concerns about bypassing PR approvals after initial merge, criticized VC-driven metrics as harmful to software quality, proposed rate-limiting based on PR rejection rates, and called for platform-level fixes like CAPTCHA or contributor management tools—some advocating migration to Codeberg or GitLab.
+
+**Tags**: `#git`, `#github`, `#ai-security`, `#open-source`, `#devops`
+
+---
+
+<a id="item-5"></a>
+## [Andon Labs launches AI-run radio station with autonomous agents](https://andonlabs.com/blog/andon-fm) ⭐️ 8.0/10
+
+Andon Labs launched Andon FM, an experimental live radio station fully operated by four autonomous AI agents handling both on-air broadcasting and business operations—including sponsorship outreach—without human intervention, starting in early 2024. This experiment provides rare, real-time insight into AI autonomy failures and emergent behaviors in complex, open-ended, real-world systems—bridging AI safety research, media studies, and agentic AI development in a publicly observable setting. The agents exhibit looping glitches (e.g., repeating 'Queues clear...' with voice variation), ironic content pairing (e.g., narrating historical tragedies followed by upbeat music), runtime instability, and negligible revenue—yet occasionally produce humorous or insightful segments. No fine-tuning or human curation is applied during live operation.
+
+hackernews · lukaspetersson · May 18, 18:12 · [Discussion](https://news.ycombinator.com/item?id=48183301)
+
+**Background**: Andon Labs specializes in stress-testing AI autonomy through real-world deployments—not simulations—including Project Vend (autonomous vending machines), Andon Market (an AI-run physical store), and now Andon FM. These experiments aim to surface systemic failure modes, economic viability limits, and unexpected emergent behaviors when LLM-based agents operate without human oversight.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://intuitionlabs.ai/articles/andon-labs-project-vend-ai">Andon Labs ' Project Vend: Testing Autonomous AI ... | IntuitionLabs</a></li>
+<li><a href="https://www.ainvest.com/news/andon-market-ai-autonomous-move-sparks-human-panic-potential-valuation-mispricing-2604/">Andon Market: AI ’s Autonomous Move Sparks Human Panic—and...</a></li>
+<li><a href="https://www.linkedin.com/pulse/ai-inside-store-from-autonomous-experiments-practical-greg-buzek-4xe0e">AI Inside the Store: From Autonomous Experiments to Practical...</a></li>
+
+</ul>
+</details>
+
+**Discussion**: HN users documented specific emergent behaviors including infinite audio loops, darkly ironic content-song pairings, and runtime crashes—while broadly framing the project as a valuable, non-hype-driven experiment in AI failure analysis. Some expressed ethical concerns about labor displacement, though most emphasized its role as a diagnostic tool rather than a product.
+
+**Tags**: `#AI autonomy`, `#generative media`, `#AI safety`, `#experimental AI`, `#live AI systems`
+
+---
+
+<a id="item-6"></a>
+## [FBI Seeks Nationwide Access to Commercial License Plate Reader Data](https://www.404media.co/the-fbi-wants-to-buy-nationwide-access-to-license-plate-readers/) ⭐️ 8.0/10
+
+The FBI has issued a request for proposals (RFP) to acquire nationwide access to aggregated license plate reader (LPR) data collected by private companies such as Flock Safety and DRN, potentially enabling real-time, location-based tracking of vehicles across the U.S. This move would dramatically expand federal surveillance capabilities without judicial oversight or statutory authorization, threatening constitutional privacy rights and setting a precedent for unchecked data sharing between law enforcement and commercial data brokers. The RFP does not specify legal safeguards, retention limits, or audit requirements; it seeks 'near real-time' access to historical and live LPR data from vendors whose systems—like Flock’s Vehicle Fingerprint®—can identify vehicles even without readable plates. No congressional approval or public rulemaking is required for this procurement.
+
+hackernews · cdrnsf · May 18, 19:28 · [Discussion](https://news.ycombinator.com/item?id=48184350)
+
+**Background**: License plate readers (LPRs) are optical systems that automatically capture and process vehicle license plate images, converting them into searchable text and timestamps. In the U.S., they are widely deployed by law enforcement, private security firms, and repossession companies. Commercial LPR networks—such as those operated by Flock Safety and DRN—aggregate billions of plate sightings annually, creating dense mobility datasets with minimal regulation or transparency.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Automatic_number-plate_recognition">Automatic number-plate recognition - Wikipedia</a></li>
+<li><a href="https://www.flocksafety.com/products/license-plate-readers">Flock Safety LPR Cameras: Automated License Plate Reader</a></li>
+<li><a href="https://drndata.com/">LPR Data & Vehicle Intelligence</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters express deep skepticism about political will to protect privacy, propose shifting data liability to disincentivize collection, suggest technical countermeasures like daily-changing digital license plates, and note widespread informal evasion tactics—including plate masking, altered plates, and unregistered dealer tags.
+
+**Tags**: `#privacy`, `#surveillance`, `#civil-liberties`, `#law-enforcement`, `#data-policy`
 
 ---
 
 <a id="item-7"></a>
-## [Fine-tuning NVIDIA Cosmos Predict 2.5 for robot video generation using LoRA and DoRA](https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation) ⭐️ 8.0/10
+## [Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation](https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation) ⭐️ 8.0/10
 
-NVIDIA and Hugging Face published a technical blog post on November 2024 demonstrating how to efficiently fine-tune the Cosmos Predict 2.5 foundation model for robot-centric video generation using parameter-efficient methods—specifically LoRA and the newer DoRA technique. This advances practical deployment of large multimodal foundation models in robotics by drastically reducing compute and memory requirements for adaptation, enabling researchers and engineers to customize state-of-the-art video generation models for domain-specific robotic tasks without full retraining. The implementation leverages Hugging Face's PEFT library and integrates DoRA—a 2024 method that decomposes pretrained weights into magnitude and direction components, applying LoRA only to directional updates—thereby improving expressivity over standard LoRA while retaining efficiency.
+NVIDIA published a Hugging Face blog post detailing step-by-step fine-tuning of the Cosmos Predict 2.5 multimodal video generation model using Low-Rank Adaptation (LoRA) and Weight-Decomposed Low-Rank Adaptation (DoRA) specifically for robot-centric video synthesis, including code examples and integration with Hugging Face's PEFT library. This demonstrates a practical pathway to adapt cutting-edge foundation models for embodied AI applications—particularly robotics—without full-parameter retraining, lowering compute barriers and accelerating domain-specific generative model deployment in real-world robotic systems. The guide leverages PEFT (Parameter-Efficient Fine-Tuning) libraries to apply LoRA and DoRA to Cosmos Predict 2.5’s transformer-based video diffusion architecture; DoRA decomposes pretrained weights into magnitude and direction components, applying LoRA only to directional updates—improving accuracy over standard LoRA while retaining parameter efficiency.
 
 rss · Hugging Face Blog · May 18, 16:00
 
-**Background**: Cosmos Predict 2.5 is NVIDIA's latest open foundation model for generating high-fidelity, physically plausible robot-centric videos from text or sensor inputs. LoRA (Low-Rank Adaptation) is a widely adopted parameter-efficient fine-tuning technique that injects trainable low-rank matrices into transformer layers. DoRA (Weight-Decomposed Low-Rank Adaptation), introduced in early 2024, extends LoRA by explicitly modeling weight magnitude and direction separately to improve adaptation fidelity.
+**Background**: Cosmos Predict 2.5 is NVIDIA’s latest open multimodal foundation model for high-fidelity video generation, supporting text-to-video and image-conditioned video synthesis. LoRA, introduced by Microsoft in 2021, enables efficient fine-tuning by injecting low-rank trainable matrices into transformer layers. DoRA, proposed in early 2024, extends LoRA by decoupling weight magnitude and direction—allowing independent adaptation of each component for better optimization.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://developer.nvidia.com/blog/introducing-dora-a-high-performing-alternative-to-lora-for-fine-tuning/">Introducing DoRA, a High-Performing Alternative to LoRA for Fine-Tuning | NVIDIA Technical Blog</a></li>
 <li><a href="https://arxiv.org/abs/2402.09353">[2402.09353] DoRA: Weight-Decomposed Low-Rank Adaptation</a></li>
-<li><a href="https://arxiv.org/abs/2405.17357">[2405.17357] DoRA: Enhancing Parameter-Efficient Fine-Tuning with Dynamic Rank Distribution</a></li>
+<li><a href="https://developer.nvidia.com/blog/introducing-dora-a-high-performing-alternative-to-lora-for-fine-tuning/">Introducing DoRA, a High-Performing Alternative to LoRA for ...</a></li>
+<li><a href="https://medium.com/@kailash.thiyagarajan/fine-tuning-large-language-models-with-lora-demystifying-efficient-adaptation-25fa0a389075">Fine - Tuning Large Language Models with LORA ... | Medium</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#robotics`, `#video-generation`, `#LoRA`, `#DoRA`, `#foundation-models`
+**Tags**: `#video-generation`, `#robotics`, `#LoRA`, `#DoRA`, `#multimodal-models`
 
 ---
 
 <a id="item-8"></a>
-## [PaddleOCR 3.5 Introduces Transformers Backend for Unified OCR and Layout Analysis](https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers) ⭐️ 8.0/10
+## [PaddleOCR 3.5 Introduces Native Transformers Backend](https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers) ⭐️ 8.0/10
 
-PaddleOCR 3.5 launched with a new Transformers-based inference backend, enabling seamless integration with Hugging Face’s model hub and supporting over 20 pre-trained models—including layout detection and multimodal document understanding models—for fine-tuning and inference. This shift bridges Document AI and modern NLP/ML ecosystems, allowing developers to leverage Hugging Face tooling (e.g., Trainer, datasets, vLLM) for OCR tasks—lowering barriers to customization, interoperability, and deployment in LLM-augmented workflows. Users can now switch inference backends dynamically among PaddlePaddle static graph, dynamic graph, or Transformers modes; the Transformers backend supports both standalone layout analysis and multimodal VLMs like PaddleOCR-VL-1.5-0.9B, with optional acceleration via vLLM or SGLang.
+PaddleOCR 3.5 rearchitects its inference pipeline to support a native Hugging Face Transformers backend, enabling direct loading and execution of OCR and document parsing models (e.g., PP-OCRv5, PaddleOCR-VL 1.5) from the Hugging Face Hub without requiring PaddlePaddle runtime. This shift significantly improves interoperability with the broader AI ecosystem, lowers adoption barriers for users already invested in Transformers-based tooling, and enables seamless integration into RAG, multimodal document understanding, and browser-side inference workflows. The Transformers backend is now a first-class inference option alongside PaddlePaddle; it supports client-side (browser) inference via ONNX and WebAssembly, and maintains SOTA performance on document parsing benchmarks while decoupling model logic from framework lock-in.
 
 rss · Hugging Face Blog · May 18, 15:12
 
-**Background**: Document layout analysis is a foundational step in Document AI that detects and localizes structural elements (e.g., titles, paragraphs, tables) within scanned documents or PDFs. Traditional OCR systems extract text sequentially, while modern approaches combine layout understanding with text recognition to produce semantically structured outputs—enabling downstream applications like RAG, document summarization, and LLM grounding. Models such as LayoutLM and PP-DocLayout exemplify this unified vision.
+**Background**: PaddleOCR is an open-source OCR toolkit developed by Baidu’s PaddlePaddle team, widely used for text detection, recognition, and layout analysis. Prior versions relied exclusively on the PaddlePaddle deep learning framework. The rise of unified multimodal models and the dominance of the Transformers API (via Hugging Face) have driven demand for framework-agnostic, plug-and-play document AI components.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.kucoin.com/news/flash/baidu-paddleocr-3-5-launches-with-browser-ocr-markdown-conversion-and-transformers-backend">Baidu PaddleOCR 3.5 Launches with Browser OCR, Markdown Conversion, and Transformers Backend | KuCoin</a></li>
-<li><a href="https://github.com/PaddlePaddle/PaddleOCR">GitHub - PaddlePaddle/PaddleOCR: Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages. · GitHub</a></li>
-<li><a href="https://www.paddleocr.ai/main/en/version3.x/pipeline_usage/PaddleOCR-VL.html">Usage Tutorial - PaddleOCR Documentation</a></li>
+<li><a href="https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers">PaddleOCR 3.5: Running OCR and Document Parsing Tasks with...</a></li>
+<li><a href="https://getaibook.com/news/paddleocr-35-adds-transformers-backend-and-browser-inference">PaddleOCR 3.5 Adds Transformers Backend and Browser Inference</a></li>
+<li><a href="https://github.com/PaddlePaddle/PaddleOCR">GitHub - PaddlePaddle/PaddleOCR: Turn any PDF or image document ...</a></li>
 
 </ul>
 </details>
@@ -208,23 +208,24 @@ rss · Hugging Face Blog · May 18, 15:12
 ---
 
 <a id="item-9"></a>
-## [OpenClaw Developer Spends $1.3M on OpenAI API Tokens in One Month](https://www.tomshardware.com/tech-industry/artificial-intelligence/openclaw-creator-burns-through-1-3-million-in-openai-api-tokens-in-a-single-month) ⭐️ 8.0/10
+## [World's first offshore wind-powered underwater data center enters full operation in Shanghai](https://www.tomshardware.com/tech-industry/china-says-worlds-first-offshore-wind-powered-underwater-data-center-has-entered-full-operation-houses-2-000-servers-24-megawatt-subsea-ai-facility-uses-ocean-water-for-passive-cooling-and-offshore-wind-for-power) ⭐️ 8.0/10
 
-OpenAI employee and OpenClaw developer Peter Steinberger disclosed that his team consumed $1.3 million worth of OpenAI API tokens in 30 days—603 billion tokens across 7.6 million requests—using the unreleased GPT-5.5 preview (dated April 23, 2026) and Codex agents in 'fast mode'. This is the first public, real-world cost benchmark for GPT-5.5 and Codex agent 'fast mode', revealing a ~4.3× cost multiplier versus standard mode—and providing critical data for AI system architects to model LLM-native application inference budgets, evaluate model upgrade costs, and design cost-aware agent systems. The $1.3M bill was fully covered by OpenAI as Steinberger is an internal employee; disabling 'fast mode' would have reduced the cost to ~$300K. The experiment involved ~100 autonomous Codex agents performing code review, security scanning, and auto-fixing at scale.
+The world's first commercially operational offshore wind-powered underwater data center—located 35 meters below sea level off Shanghai’s Lingang New Area—has entered full operation, hosting ~2,000 servers with 24 MW capacity, seawater passive cooling, and a PUE of <1.15. This facility establishes a new paradigm for sustainable, high-density AI computing by integrating green power (offshore wind) and ultra-efficient thermal management (seawater cooling), offering a scalable model for carbon-neutral edge and marine AI infrastructure. Built by HaiLan Cloud (Shanghai) Data Technology Co., Ltd. in partnership with China Telecom Shanghai and CCCC Third Harbor Engineering Co., the facility achieves >95% renewable energy supply via dedicated subsea cable from nearby offshore wind farms and maintains long-term sealing integrity at 35 m depth; its PUE of <1.15 significantly undercuts industry averages (~1.5–1.8).
 
-telegram · zaihuapd · May 17, 13:38
+telegram · zaihuapd · May 19, 04:30
 
-**Background**: OpenClaw is an open-source autonomous AI agent that operates via messaging platforms and can execute system-level tasks like file access and shell command execution. Codex is OpenAI's agentic coding tool, integrated into paid ChatGPT plans since 2026, supporting computer use, memory, plugins, and 'fast mode'—a speed-optimized configuration that increases token/credit consumption. GPT-5.5 is a research-preview large language model released in April 2026, succeeding GPT-5.3 and powering advanced reasoning and agent workflows.
+**Background**: Traditional data centers consume vast energy for cooling and rely heavily on grid electricity, often from fossil fuels. Underwater data centers (UDCs) leverage cold seawater for natural heat dissipation and can be co-located with offshore renewables to minimize transmission loss and carbon footprint. HaiLan Xin (300065) pioneered China's UDC R&D, achieving a record PUE of 1.076 in earlier prototypes, and this Lingang project represents its first commercial-scale deployment.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/OpenClaw">OpenClaw - Wikipedia</a></li>
-<li><a href="https://developers.openai.com/codex/pricing">Pricing – Codex | OpenAI Developers</a></li>
-<li><a href="https://aitoolsrecap.com/Reviews/openai-codex-review-2026">OpenAI Codex Review 2026: The Coding Agent That Just Got a ...</a></li>
+<li><a href="https://news.qq.com/rain/a/20251021A07IBN00">打造算力新高地!全球首个风电海底数据中心落沪_腾讯新闻</a></li>
+<li><a href="https://xueqiu.com/1375373555/388960414">全球首个"海风直连"海底数据中心投产：算力基建的"深海革命"与绿色新范式 近期科技界的一大重磅突破!把数据中心"沉"进海底，不仅听起来科幻，更 ...</a></li>
+<li><a href="https://baike.baidu.com/item/上海临港海底数据中心/65781307">上海临港海底数据中心 - 百度百科</a></li>
+<li><a href="https://www.1tg.com.cn/html/yidong/tx/2021/1120/20816.html">海 兰信 海 底 数 据 中 心 PUE 值只有1.076...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM成本分析`, `#AI代理系统`, `#GPT-5.5`
+**Tags**: `#绿色计算`, `#水下数据中心`, `#AI基础设施`
 
 ---

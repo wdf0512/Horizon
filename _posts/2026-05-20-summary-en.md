@@ -5,367 +5,426 @@ date: 2026-05-20
 lang: en
 ---
 
-> From 47 items, 17 important content pieces were selected
+> From 48 items, 19 important content pieces were selected
 
 ---
 
-1. [Google launches Gemini 3.5 Flash: a lightweight, high-speed multimodal LMM for agentic workloads](#item-1) ⭐️ 9.0/10
-2. [Google replaces traditional search results with AI-generated synthetic answers at IO 2026](#item-2) ⭐️ 9.0/10
-3. [Forge: Open-source reliability layer boosts 8B local LLMs from 53% to 99% on agentic tasks](#item-3) ⭐️ 9.0/10
-4. [Andrej Karpathy joins Anthropic's pre-training team](#item-4) ⭐️ 9.0/10
-5. [CISA Contractor Leaks AWS GovCloud Keys and Plaintext Passwords on GitHub](#item-5) ⭐️ 9.0/10
-6. [Google Launches Gemini Omni: Real-Time Multimodal AI with Physics and Efficiency Gaps](#item-6) ⭐️ 9.0/10
+1. [Forge: Open-source guardrail layer boosts 8B LLM agentic success from 53% to 99%](#item-1) ⭐️ 9.0/10
+2. [GitHub investigating unauthorized access and exfiltration of ~3,800 internal repositories](#item-2) ⭐️ 9.0/10
+3. [Andrej Karpathy joins Anthropic’s pre-training team](#item-3) ⭐️ 9.0/10
+4. [CISA Administrator Leaked AWS GovCloud Keys and Internal Credentials on Public GitHub](#item-4) ⭐️ 9.0/10
+5. [Gemini 3.5 Flash launches globally as Google’s new unified LLM backbone](#item-5) ⭐️ 9.0/10
+6. [OlmoEarth v1.1: A more efficient, open foundation model family for Earth system science](#item-6) ⭐️ 9.0/10
 7. [Hugging Face and IBM Research Launch Open Agent Leaderboard](#item-7) ⭐️ 9.0/10
-8. [DeepSeek Dialogue System Has Critical Session Isolation Vulnerability](#item-8) ⭐️ 9.0/10
-9. [Google rolls out SynthID AI detection in Search and Chrome; OpenAI launches official image verification tool](#item-9) ⭐️ 9.0/10
-10. [Virtual OS Museum Launches Web-Based Emulation of Nearly Every Operating System](#item-10) ⭐️ 8.0/10
-11. [Mistral AI Acquires Emmi AI to Build Leading Industrial AI Stack](#item-11) ⭐️ 8.0/10
-12. [Disney shuts down FiveThirtyEight after acquisition](#item-12) ⭐️ 8.0/10
-13. [OlmoEarth v1.1: More efficient Earth observation foundation models](#item-13) ⭐️ 8.0/10
-14. [Hugging Face launches open-weight Ettin Reranker family for efficient retrieval](#item-14) ⭐️ 8.0/10
-15. [Fine-tuning NVIDIA Cosmos Predict 2.5 for robot video generation using LoRA and DoRA](#item-15) ⭐️ 8.0/10
-16. [PaddleOCR 3.5 Introduces Transformers Backend for Unified OCR and Document AI](#item-16) ⭐️ 8.0/10
-17. [Claude Code launches Fast mode research preview for low-latency coding](#item-17) ⭐️ 8.0/10
+8. [DeepSeek Chat System Has Critical Session Isolation Vulnerability](#item-8) ⭐️ 9.0/10
+9. [Google launches Gemini Omni for conversational video editing](#item-9) ⭐️ 9.0/10
+10. [Google integrates SynthID AI detection into Search and Chrome; OpenAI launches image verification tool](#item-10) ⭐️ 9.0/10
+11. [Gemini CLI to retire on June 18, 2026; replaced by Antigravity CLI](#item-11) ⭐️ 9.0/10
+12. [Virtual OS Museum Launches Web-Based Emulation of Historical Operating Systems](#item-12) ⭐️ 8.0/10
+13. [Remove-AI-Watermarks: Open-source tool to strip visible and embedded AI watermarks](#item-13) ⭐️ 8.0/10
+14. [Google launches AI-native search interface powered by Gemini at I/O 2026](#item-14) ⭐️ 8.0/10
+15. [Mistral AI acquires Emmi AI to build industrial AI stack](#item-15) ⭐️ 8.0/10
+16. [Hugging Face launches open-weight Ettin reranker family for efficient cross-encoder document reranking](#item-16) ⭐️ 8.0/10
+17. [Fine-tuning NVIDIA Cosmos Predict 2.5 for robot video generation using LoRA and DoRA](#item-17) ⭐️ 8.0/10
+18. [PaddleOCR 3.5 Introduces Transformers Backend for Unified OCR and Document AI](#item-18) ⭐️ 8.0/10
+19. [Claude Code launches Fast mode research preview for low-latency coding](#item-19) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Google launches Gemini 3.5 Flash: a lightweight, high-speed multimodal LMM for agentic workloads](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/) ⭐️ 9.0/10
+## [Forge: Open-source guardrail layer boosts 8B LLM agentic success from 53% to 99%](https://github.com/antoinezambelli/forge) ⭐️ 9.0/10
 
-Google officially launched Gemini 3.5 Flash on May 20, 2025 at Google I/O — a new lightweight, multimodal large language model optimized for high-throughput, low-latency API use cases such as real-time interaction, agent orchestration, and streaming responses; it is now globally available via the Gemini API. Gemini 3.5 Flash fills a critical gap between cost-efficiency and frontier-level intelligence, enabling developers to deploy scalable, responsive AI agents in production without prohibitive latency or expense — accelerating adoption of agentic workflows across enterprise and developer ecosystems. It outperforms Gemini 3 Flash in safety and tone while maintaining low unjustified refusals; supports sub-agent deployment and long-horizon tasks; pricing is $1.50 per million input tokens and $9.00 per million output tokens — notably higher than prior Flash versions but competitive with Gemini 2.5 Pro; inference speed is up to 4× faster than comparable models.
+Antoine Zambelli released Forge, an open-source reliability layer that increases the success rate of multi-step agentic workflows on an 8B local LLM (Ministral 8B) from ~53% to ~99.3% using domain-agnostic guardrails—including retry nudges, step enforcement, ToolResolutionError handling, and VRAM-aware context management—without model fine-tuning or API reliance. This demonstrates that system-level reliability engineering—not just model scaling or fine-tuning—can close the performance gap between free local models and expensive frontier APIs, making robust, low-cost agentic systems viable for consumer hardware and edge deployment. Forge’s five toggleable guardrail layers were evaluated across 97 model/backend configurations; ablation studies showed retry nudges and error recovery contributed the largest gains (24–49 and ~10 percentage points respectively), while serving backend choice alone caused up to a 75-point accuracy swing—highlighting infrastructure as a critical, often overlooked reliability factor.
 
-hackernews · spectraldrift · May 19, 17:43 · [Discussion](https://news.ycombinator.com/item?id=48196570)
+hackernews · zambelli · May 19, 12:23 · [Discussion](https://news.ycombinator.com/item?id=48192383)
 
-**Background**: Gemini is Google's family of multimodal foundation models, succeeding LaMDA and PaLM 2, designed for text, code, image, audio, and video understanding and generation. The 'Flash' variants are lightweight, inference-optimized models intended for high-frequency, low-latency API usage, contrasting with 'Pro' variants that prioritize maximum capability and longer context. Multimodal inference optimization involves techniques like prefix caching, quantization, and stage-decoupled serving to balance throughput, latency, and resource efficiency.
+**Background**: Agentic workflows involve LLMs orchestrating multi-step tasks using tools (e.g., code execution, file search), where failure compounds across steps—even 90% per-step accuracy yields only ~59% success in a 5-step workflow. Traditional benchmarks rarely control for serving backend or tool-call semantics, and most local AI frameworks lack built-in error recovery, context budgeting, or explicit handling of 'successful-but-empty' tool responses.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://deepmind.google/models/model-cards/gemini-3-5-flash/">Gemini 3 . 5 Flash - Model Card — Google DeepMind</a></li>
-<li><a href="https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash">Gemini 3 . 5 Flash | Gemini API | Google AI for Developers</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Google_Gemini">Google Gemini - Wikipedia</a></li>
+<li><a href="https://insiderllm.com/guides/smarterrouter-vram-aware-llm-gateway-local-ai/">SmarterRouter: A VRAM-Aware LLM Gateway for Your Local AI Lab</a></li>
+<li><a href="https://www.vellum.ai/blog/agentic-workflows-emerging-architectures-and-design-patterns">Agentic Workflows in 2026: The ultimate guide</a></li>
+<li><a href="https://tandem.ac/blog/reliable-agentic-workflows-need-more-than-demos">Reliable Agentic Workflows Need More Than Demos — Tandem Blog</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Developers express mixed reactions: some praise its speed and agentic capabilities, while others criticize steep pricing increases (e.g., 3× jump from Gemini 3.0 Flash) and unexpected quota consumption; one user reported exhausting their Google AI Pro plan quota in just two prompts, raising concerns about real-world usability and cost predictability.
+**Discussion**: Commenters broadly praised Forge’s practical impact on local agent reliability, with several noting its alignment with long-standing observations about harness-driven robustness. One user questioned whether tool-call ambiguity could instead be solved via better tool response design, while another highlighted real-world parallels to their own manual retry-nudge patterns in frontier-model CLI usage.
 
-**Tags**: `#大模型`, `#API`, `#推理优化`
+**Tags**: `#LLM`, `#agentic-systems`, `#guardrails`, `#local-ai`, `#reliability-engineering`
 
 ---
 
 <a id="item-2"></a>
-## [Google replaces traditional search results with AI-generated synthetic answers at IO 2026](https://blog.google/products-and-platforms/products/search/search-io-2026/) ⭐️ 9.0/10
+## [GitHub investigating unauthorized access and exfiltration of ~3,800 internal repositories](https://twitter.com/github/status/2056884788179726685) ⭐️ 9.0/10
 
-At Google I/O 2026, Google announced a fundamental redesign of its search interface, replacing ranked blue-link SERPs with generative, AI-synthesized answers powered by an advanced LLM using Retrieval-Augmented Generation (RAG). The new interface debuted globally on May 19, 2026, and is now the default experience for all users. This shift represents a paradigm change from information retrieval to information synthesis — potentially eroding web traffic to publishers ('Google Zero'), undermining source transparency, and raising epistemic concerns about LLM hallucinations in high-stakes factual queries. It sets a new industry standard that competitors and content ecosystems must rapidly adapt to. The synthetic answers are multi-source RAG outputs presented without inline citations or clickable source links by default; users must explicitly click 'Show sources' to access underlying references. The system currently lacks versioned provenance tracking and does not distinguish between real-time, archival, or contradictory sources in its summary.
+GitHub confirmed it is investigating unauthorized access to its internal repositories, with evidence indicating exfiltration of approximately 3,800 internal repositories; no customer data outside those internal repos has been confirmed compromised. As a foundational software infrastructure provider relied on by millions of developers and enterprises, a breach of GitHub’s internal systems undermines trust in the platform’s security posture and raises concerns about potential supply-chain risks, insider threats, or future exploitation of internal tooling and credentials. The exfiltrated repositories are strictly internal—used for GitHub’s own development and operations—not customer-facing; GitHub explicitly stated there is no evidence of impact to customer data stored outside these internal repos, including enterprise, organization, or user repositories.
 
-hackernews · berkeleyjunk · May 19, 18:34 · [Discussion](https://news.ycombinator.com/item?id=48197370)
+hackernews · splenditer · May 20, 00:01 · [Discussion](https://news.ycombinator.com/item?id=48201316)
 
-**Background**: Traditional search engines return ranked lists of web pages (SERPs) based on relevance algorithms, requiring users to click through and evaluate sources themselves. Generative AI search, by contrast, synthesizes answers directly using LLMs augmented with real-time or cached web retrieval — a model pioneered by early tools like Perplexity and refined in Google's 2024–2025 experimental 'AI Overviews'. RAG architecture helps ground responses in retrieved data but does not eliminate hallucination risks.
+**Background**: Internal repositories on GitHub Enterprise allow code visibility across all organizations within an enterprise account, introduced as a generally available feature in October 2022. Unlike public or private repositories, internal repositories are scoped to enterprise members only and are often used for shared infrastructure, internal tools, and sensitive operational code. Repository exfiltration refers to adversaries stealing source code or configuration data—often as a precursor to deeper compromise or supply-chain attacks.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://blog.google/products-and-platforms/products/search/generative-ai-google-search-may-2024/">Generative AI in Search: Let Google do the searching for you</a></li>
-<li><a href="https://andresseo.expert/geo/geo-glossary/synthesized-answer/">Synthesized Answer: Impact on AI Search and GEO Rankings</a></li>
-<li><a href="https://aiboost.co.uk/investigating-llm-hallucination-in-search/">Investigating LLM Hallucination in Search - Ai Boost</a></li>
+<li><a href="https://docs.github.com/en/enterprise-cloud@latest/repositories/creating-and-managing-repositories/about-repositories">About repositories - GitHub Enterprise Cloud Docs</a></li>
+<li><a href="https://github.blog/news-insights/product-news/internal-repositories-are-now-generally-available-for-github-enterprise/">Internal repositories are now generally available for GitHub Enterprise - The GitHub Blog</a></li>
+<li><a href="https://attack.mitre.org/techniques/T1567/001/">Exfiltration Over Web Service: Exfiltration to Code Repository, Sub-technique T1567.001 - Enterprise | MITRE ATT&CK®</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters express deep skepticism about answer reliability, citing hallucinated consensus ('people think...') built from low-quality snippets, warn of accelerating 'Google Zero' traffic collapse for publishers, and lament the loss of the original minimalist HTML search form as a symbol of transparency and user agency. Several emphasize that primary sources remain essential for verification, especially when numbers or time-sensitive facts are involved.
+**Discussion**: Commenters raised concerns about GitHub’s reliance on Twitter/X for critical security announcements instead of official channels like github.blog or githubstatus.com, questioning transparency and long-term archivability; some noted the lack of a dedicated ephemeral-announcement channel owned by GitHub, while one comment humorously questioned feasibility given historical uptime issues.
 
-**Tags**: `#search-engine`, `#AI-search`, `#LLM-hallucination`, `#Google-IO`, `#web-ecosystem`
+**Tags**: `#cybersecurity`, `#incident-response`, `#github`, `#software-infrastructure`, `#security-communication`
 
 ---
 
 <a id="item-3"></a>
-## [Forge: Open-source reliability layer boosts 8B local LLMs from 53% to 99% on agentic tasks](https://github.com/antoinezambelli/forge) ⭐️ 9.0/10
+## [Andrej Karpathy joins Anthropic’s pre-training team](https://twitter.com/karpathy/status/2056753169888334312) ⭐️ 9.0/10
 
-Antoine Zambelli released Forge, an open-source reliability layer that improves multi-step agentic task accuracy of local 8B LLMs (e.g., Ministral 8B) from ~53% to ~99% using domain-agnostic guardrails—including retry nudges, step enforcement, error recovery, and VRAM-aware context management—without modifying the model weights or architecture. This demonstrates that robust system-level orchestration—not just larger models or cloud APIs—can close the performance gap between free local LLMs and frontier commercial models, enabling cost-effective, private, and production-ready agentic systems on consumer hardware. Forge’s five-layer guardrail stack is modular and toggleable; ablation studies show retry nudges and error recovery contribute most (24–49 and ~10 point gains respectively). It introduces ToolResolutionError to distinguish 'tool succeeded but found nothing' from 'tool failed', and prevents silent CPU fallback by proactively budgeting tokens based on nvidia-smi queries.
+Andrej Karpathy, former OpenAI co-founder, Tesla AI Director, and founder of Eureka Labs, has joined Anthropic to work on its pre-training team responsible for developing Claude’s foundational large language models. Karpathy’s move signals a major consolidation of top-tier AI talent at frontier labs and underscores Anthropic’s growing technical ambition—especially in foundational model development—amid intensifying competition with OpenAI and others. He begins work this week on the pre-training team, which oversees massive, compute-intensive training runs that shape Claude’s core knowledge and reasoning capabilities; his role excludes fine-tuning or safety alignment, focusing instead on upstream model architecture and data-scale training.
 
-hackernews · zambelli · May 19, 12:23 · [Discussion](https://news.ycombinator.com/item?id=48192383)
+hackernews · dmarcos · May 19, 15:07 · [Discussion](https://news.ycombinator.com/item?id=48194352)
 
-**Background**: Agentic tasks involve multi-step reasoning and tool-calling workflows where small per-step failure rates compound exponentially—for example, 90% accuracy per step drops to ~59% over 5 steps. Traditional LLM guardrails focus on safety, toxicity, or output formatting, but Forge targets mechanical reliability: validating tool semantics, managing stateful error recovery, and enforcing execution discipline without altering the model itself.
+**Background**: Pre-training is the foundational stage of LLM development, where models learn general language patterns from trillions of tokens via self-supervised learning—typically using Transformer architectures—before any task-specific adaptation. Anthropic’s Claude models are built on modified Transformer architectures emphasizing efficiency and constitutional AI principles. Karpathy is widely known for educational projects like nanoGPT and for pioneering concepts such as 'vibe coding'.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://medium.com/@prklipi/guardrails-in-llm-systems-building-safe-and-reliable-ai-applications-1b4780798720">Guardrails in LLM Systems: Building Safe and Reliable AI... | Medium</a></li>
-<li><a href="https://www.mindstudio.ai/blog/multi-agent-orchestration-patterns">Multi-Agent Orchestration: How to Build Agent Teams That Actually Work | MindStudio</a></li>
-<li><a href="https://medium.com/@quokkalabs135/how-agentic-ai-handles-complex-workflows-in-production-92e6c86c2859">How Agentic AI Handles Complex Workflows in Production | Medium</a></li>
+<li><a href="https://arxiv.org/abs/2403.08763">[2403.08763] Simple and Scalable Strategies to Continually ... Pre-Trained Language Models and Their Applications Pretraining Large Language Models - Alex Dillhoff Top Stories News about Andrej Karpathy, Anthropic, OpenAI News about Language model, Jensen Huang, Similarweb Also in the news Pretraining LLMs - DeepLearning.AI Pre-Training of Large Language Models Foundations - Krasamo Understanding Pre-training in Large Language Models</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_(language_model)">Claude (language model) - Wikipedia</a></li>
+<li><a href="https://milvus.io/ai-quick-reference/what-is-anthropics-claude-model">What is Anthropic’s Claude model?</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters validate real-world pain points like misinterpreting tool exit codes (e.g., grep returning 1), debate the overloaded term 'guardrails', and affirm the paradigm shift toward reliability engineering over model scaling. One user notes that proper harnesses let small models succeed through intelligent retries rather than brute-force capability.
+**Discussion**: Commenters express mixed reactions: some celebrate Karpathy’s technical leadership and teaching legacy, while others voice concern about corporate consolidation and reduced openness in AI development; one user references his prior interview foreshadowing the move, and another draws a satirical parallel to TRON’s 'Master Control Program'.
 
-**Tags**: `#LLM-agents`, `#local-LLM`, `#reliability-engineering`, `#tool-calling`, `#guardrails`
+**Tags**: `#artificial-intelligence`, `#machine-learning`, `#Anthropic`, `#Claude`, `#career-movement`
 
 ---
 
 <a id="item-4"></a>
-## [Andrej Karpathy joins Anthropic's pre-training team](https://twitter.com/karpathy/status/2056753169888334312) ⭐️ 9.0/10
+## [CISA Administrator Leaked AWS GovCloud Keys and Internal Credentials on Public GitHub](https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/) ⭐️ 9.0/10
 
-Andrej Karpathy, former OpenAI co-founder, Tesla AI Director, and founder of Eureka Labs, announced on May 19, 2026, that he has joined Anthropic’s pre-training team — the group responsible for large-scale model training that forms the foundation of Claude’s capabilities. Karpathy’s move signals intensifying competition among frontier AI labs and reflects a broader trend of top-tier AI talent consolidating at well-funded private labs, potentially accelerating proprietary model development while raising concerns about open-source ecosystem fragmentation and educational accessibility. He will focus specifically on pre-training — not alignment or safety engineering — and begins work immediately; his role does not involve public-facing education or open-source tooling, though his prior work (e.g., nanoGPT) remains widely used in ML education. NDAs likely restrict his ability to share technical insights publicly.
+A CISA administrator accidentally committed and publicly exposed AWS GovCloud access keys, along with a plaintext CSV file containing dozens of internal CISA system usernames and passwords, in a public GitHub repository in May 2026. This incident represents a severe breach of trust and operational security for the U.S. federal government’s lead cybersecurity agency, undermining confidence in its ability to safeguard sensitive cloud infrastructure and controlled unclassified information (CUI). It highlights systemic failures in DevSecOps practices across federal IT operations. The leaked credentials included AWS GovCloud keys granting access to highly regulated U.S. government workloads, and the CSV file 'AWS-Workspace-Firefox-Passwords.csv' contained plaintext credentials for internal CISA systems. No evidence suggests automated secret-scanning tools were in place to detect such leaks before commit.
 
-hackernews · dmarcos · May 19, 15:07 · [Discussion](https://news.ycombinator.com/item?id=48194352)
+hackernews · LelouBil · May 19, 07:45 · [Discussion](https://news.ycombinator.com/item?id=48190454)
 
-**Background**: Andrej Karpathy is a prominent AI researcher and educator known for his leadership roles at OpenAI (co-founder, 2015–2017), Tesla (AI Director, Autopilot/FSD), and as founder of Eureka Labs (2024). He popularized 'vibe coding' in early 2025 and built influential open-education resources including nanoGPT and widely watched YouTube lectures on deep learning fundamentals.
+**Background**: AWS GovCloud (US) is a physically and logically isolated cloud environment built specifically for U.S. government agencies and contractors to host sensitive but unclassified data, complying with stringent regulatory frameworks like FedRAMP, ITAR, and DFARS. DevSecOps integrates security into the software development lifecycle—ideally embedding automated secret detection, policy-as-code, and least-privilege credential management—but remains inconsistently adopted across federal agencies.
 
-**Discussion**: Commenters express admiration for Karpathy’s teaching legacy but concern over increasing corporate consolidation, with metaphors like 'Tron’s Master Control Program' highlighting fears of centralized control. Some note his prior interview foreshadowed the move, while others worry about reduced transparency and educational outreach due to NDAs.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://aws.amazon.com/govcloud-us/">AWS GovCloud (US) - Amazon Web Services</a></li>
+<li><a href="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/whatis.html">What Is AWS GovCloud (US)? - AWS GovCloud (US)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DevSecOps">DevSecOps</a></li>
 
-**Tags**: `#artificial-intelligence`, `#machine-learning`, `#Anthropic`, `#career-move`, `#LLM-development`
+</ul>
+</details>
+
+**Discussion**: Commenters expressed alarm over both the negligence and non-responsiveness of the repository owner after notification, raised concerns about LLMs inadvertently exfiltrating secrets from local .env files, and questioned whether such a blatant leak could be a poorly designed honeypot. Some noted parallel incidents involving CISA staff uploading sensitive documents to ChatGPT.
+
+**Tags**: `#cybersecurity`, `#government-security`, `#aws-govcloud`, `#secret-leak`, `#devsecops`
 
 ---
 
 <a id="item-5"></a>
-## [CISA Contractor Leaks AWS GovCloud Keys and Plaintext Passwords on GitHub](https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/) ⭐️ 9.0/10
+## [Gemini 3.5 Flash launches globally as Google’s new unified LLM backbone](https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything) ⭐️ 9.0/10
 
-A contractor working for the U.S. Cybersecurity and Infrastructure Security Agency (CISA) accidentally committed highly sensitive AWS GovCloud access keys and plaintext internal system credentials—including Firefox login passwords stored in a CSV file titled 'AWS-Workspace-Firefox-Passwords.csv'—to a public GitHub repository in May 2026. This incident represents a severe failure in federal cybersecurity hygiene, exposing critical infrastructure systems to unauthorized access; it undermines trust in government cloud operations and highlights systemic gaps in DevSecOps practices across U.S. federal IT contractors. The leaked credentials included AWS GovCloud access keys—designed for FedRAMP High and DoD SRG Impact Level 5 workloads—as well as dozens of plaintext internal CISA system passwords; GitHub’s automated secret scanning reportedly failed to detect or revoke the GovCloud keys, raising questions about detection coverage for specialized AWS environments.
+Google officially launched Gemini 3.5 Flash at I/O 2026 as a general-availability model—skipping preview status—and deployed it across Search, the Gemini app, Antigravity, Gemini API, and Gemini Enterprise Agent Platform, with a knowledge cutoff of January 2025 and support for up to 1,048,576 input tokens and 65,536 output tokens. This marks Google’s strategic shift toward a single, high-performance LLM powering its entire AI stack—from consumer search to enterprise agents—potentially accelerating industry consolidation around unified, multi-tier foundation models and intensifying pricing competition among major AI providers. Gemini 3.5 Flash costs $1.50/million input tokens and $9.00/million output tokens—3× more expensive than Gemini 3 Flash Preview and 6× more than 3.1 Flash-Lite—yet powers free consumer services; it lacks computer-use capability, introduces the beta Interactions API for server-side history management, and is served on TPU v8i hardware.
 
-hackernews · LelouBil · May 19, 07:45 · [Discussion](https://news.ycombinator.com/item?id=48190454)
+rss · Simon Willison · May 19, 22:40
 
-**Background**: AWS GovCloud (US) is a physically and logically isolated AWS region built exclusively for U.S. government agencies and contractors handling sensitive data, including Controlled Unclassified Information (CUI), and must comply with stringent standards like FedRAMP High and DoD SRG Impact Level 5. DevSecOps is a security-integrated software development methodology that embeds security checks throughout the CI/CD pipeline, aiming to prevent exactly such credential leaks through automation, policy enforcement, and shared accountability.
+**Background**: Gemini is Google’s family of multimodal large language models, with prior versions including Gemini 1.0 (2023), 1.5 (2024), 2.0 (2025), and 3.0/3.1 (2025–2026). 'Flash' variants are optimized for speed and cost-efficiency in high-throughput scenarios, while 'Pro' models emphasize reasoning depth. Google Antigravity is an agent-first IDE announced in November 2025, and the Gemini Enterprise Agent Platform provides tools for building governed, data-grounded enterprise agents.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/whatis.html">What Is AWS GovCloud (US)? - AWS GovCloud (US)</a></li>
-<li><a href="https://aws.amazon.com/govcloud-us/">AWS GovCloud (US) - Amazon Web Services</a></li>
-<li><a href="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-differences.html">AWS GovCloud (US) Compared to Standard AWS Regions - AWS GovCloud (US)</a></li>
-<li><a href="https://www.redhat.com/en/topics/devops/what-is-devsecops">What is DevSecOps?</a></li>
-<li><a href="https://www.microsoft.com/en-us/security/business/security-101/what-is-devsecops">What Is DevSecOps? | Microsoft Security</a></li>
-<li><a href="https://aws.amazon.com/what-is/devsecops/">What is DevSecOps? - Developer Security Operations Explained - AWS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Antigravity">Google Antigravity - Wikipedia</a></li>
+<li><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform">Gemini Enterprise Agent Platform | Google Cloud Documentation</a></li>
+<li><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-enterprise-agent-platform/">Gemini Enterprise Agent Platform optimizes your agents</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed alarm over the non-response to disclosure, criticized lax credential handling (e.g., storing passwords in CSV files), raised concerns about LLMs inadvertently exfiltrating secrets from local .env files, and questioned why GitHub's secret scanning failed to catch GovCloud keys—suggesting possible limitations in detecting region-specific or custom AWS token formats.
+**Discussion**: Commenters noted the steep price jump—especially relative to prior Flash models—and speculated about hidden model scale based on TPU v8i deployment constraints; others highlighted benchmark cost anomalies (e.g., 3.5 Flash costing more than 3.1 Pro) and nostalgic confusion over the 'Flash' naming amid legacy web tech associations.
 
-**Tags**: `#cybersecurity`, `#aws-govcloud`, `#credential-leak`, `#government-IT`, `#devsecops`
+**Tags**: `#AI`, `#LLM`, `#Google`, `#Gemini`, `#I/O`
 
 ---
 
 <a id="item-6"></a>
-## [Google Launches Gemini Omni: Real-Time Multimodal AI with Physics and Efficiency Gaps](https://deepmind.google/models/gemini-omni/) ⭐️ 9.0/10
+## [OlmoEarth v1.1: A more efficient, open foundation model family for Earth system science](https://huggingface.co/blog/allenai/olmoearth-v1-1) ⭐️ 9.0/10
 
-Google DeepMind launched Gemini Omni at I/O 2026 — a native multimodal model that natively processes video, audio, images, and text in a single architecture, enabling real-time audio-visual understanding, conversational video editing, and multimodal generation. Gemini Omni represents Google’s most integrated step toward unified world-modeling AI, setting a new industry benchmark for real-time multimodal interaction; however, its documented shortcomings in physics fidelity, spatial consistency, and cost-performance tradeoffs expose critical gaps in current foundation model paradigms. Benchmarks show Gemini Omni scores only 19/25 on Agentic SQL tasks—slower (367s vs 142s) and over 37× more expensive (75¢ vs 2¢) than Gemini 3.1 Flash Lite Preview—and fails basic rigid-body physics tests, such as realistic Jenga tower collapse, due to discontinuous contact modeling and lack of persistent 3D scene structure.
+The Allen Institute for AI released OlmoEarth v1.1—a new version of its open foundation model family optimized for Earth system prediction, featuring improved parameter efficiency, enhanced climate modeling capabilities, and fully open weights and evaluation protocols as of the May 2025 Hugging Face blog announcement. OlmoEarth v1.1 advances trustworthy, computationally sustainable AI for climate science by combining scientific grounding with open access—enabling reproducible research, community co-development, and lower-barrier entry for researchers in climate and remote sensing domains. OlmoEarth v1.1 achieves state-of-the-art performance across multiple geoscience benchmarks—including remote sensing tasks—and is designed for multimodal Earth observation; it builds on stable latent image modeling principles and integrates with broader Earth system modeling frameworks like ESMF.
 
-hackernews · meetpateltech · May 19, 17:46 · [Discussion](https://news.ycombinator.com/item?id=48196609)
+rss · Hugging Face Blog · May 19, 18:38
 
-**Background**: Multimodal AI models process and generate multiple data types—text, image, audio, video—simultaneously, unlike earlier unimodal or pipeline-based systems. Gemini Omni builds on Google’s Gemini architecture but introduces native video and audio processing within a single transformer-based backbone, aiming for coherent cross-modal reasoning. Physics simulation remains a hard challenge for generative models because physical laws involve discontinuities, conservation constraints, and long-range spatiotemporal dependencies that are poorly captured by standard autoregressive or diffusion training.
+**Background**: Foundation models for Earth system science are large-scale AI models trained on diverse geospatial and temporal data to support tasks like weather forecasting, climate simulation, and satellite image analysis. They differ from traditional physics-based Earth system models (e.g., those built using the Earth System Modeling Framework) by leveraging data-driven patterns while increasingly incorporating physical constraints. Recent examples include Aurora (Nature, 2025) and AERIS (Argonne, 2025), both aiming to extend forecast horizons and improve fidelity beyond classical numerical methods.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.cnet.com/tech/services-and-software/google-introduces-gemini-omni-a-multimodal-ai-that-knows-the-world/">Google Introduces Gemini Omni, a Multimodal AI That Knows the World - CNET</a></li>
-<li><a href="https://letsdatascience.com/news/google-unveils-gemini-omni-for-enterprise-multimodal-ai-5b9ae32f">Google unveils Gemini Omni for enterprise multimodal AI | Let's Data Science</a></li>
-<li><a href="https://thetechportal.com/2026/05/20/google-introduces-gemini-omni-gemini-3-5-flash-ai-powered-search-upgrades-and-more-at-i-o-2026/">Google introduces Gemini Omni, Gemini 3.5 Flash, AI-powered Search upgrades and more at I/O 2026 - The Tech Portal</a></li>
+<li><a href="https://huggingface.co/collections/allenai/olmoearth">OlmoEarth pre-trained and fine-tuned foundation models for remote...</a></li>
+<li><a href="https://arxiv.org/html/2511.13655v1">OlmoEarth : Stable Latent Image Modeling for Multimodal Earth ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Earth_System_Modeling_Framework">Earth System Modeling Framework</a></li>
+<li><a href="https://www.nature.com/articles/s41586-025-09005-y">A foundation model for the Earth system - Nature</a></li>
+<li><a href="https://www.anl.gov/cels/article/aeris-earth-systems-model-pushes-ai-for-science-to-new-heights">AERIS Earth systems model pushes AI for science to new ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Technical users report consistent failures in rigid-body physics (e.g., morphing/disappearing Jenga bricks), poor spatial coherence (geometry changing when objects move in/out of frame), and unfavorable cost-performance ratios—especially versus lighter models like Gemini 3.1 Flash Lite and Gemma4 26B-A4B. Some users also note it underperforms established creative tools like Seedance 2 in practical video generation tasks.
-
-**Tags**: `#AI`, `#multimodal`, `#Gemini`, `#benchmarks`, `#physics-simulation`
+**Tags**: `#climate-AI`, `#foundation-models`, `#open-science`, `#efficient-ML`, `#earth-system-modeling`
 
 ---
 
 <a id="item-7"></a>
 ## [Hugging Face and IBM Research Launch Open Agent Leaderboard](https://huggingface.co/blog/ibm-research/open-agent-leaderboard) ⭐️ 9.0/10
 
-Hugging Face and IBM Research jointly launched the Open Agent Leaderboard on January 7, 2025 — an open, standardized benchmark for evaluating AI agents across real-world tasks including web navigation, API usage, mathematical reasoning, and multimodal problem solving. This leaderboard addresses a critical gap in the AI agent ecosystem by enabling transparent, reproducible, and cross-architecture comparisons — accelerating progress toward reliable, general-purpose agents and supporting community-driven standardization. The leaderboard is hosted as a Hugging Face Space and backed by open-source code and evaluation pipelines on GitHub; it emphasizes systematic evaluation across diverse environments without domain-specific fine-tuning, and aims to preserve ranking fidelity even with cost-efficient task subsets.
+Hugging Face and IBM Research jointly launched the Open Agent Leaderboard on January 7, 2025 — an open-source, task-diverse benchmark for evaluating AI agents across math, multi-modal, and real-world environments without domain-specific tuning. This leaderboard addresses the urgent need for standardized, transparent, and reproducible evaluation of AI agents — filling a critical gap as agent-based systems grow in complexity and deployment, and enabling fair comparison across open and proprietary models. The benchmark is hosted as a Hugging Face Space and backed by a GitHub repository; it evaluates agents on diverse tasks including mathematical reasoning and multi-modal understanding, with results filterable by model, environment, and metric.
 
 rss · Hugging Face Blog · May 18, 14:12
 
-**Background**: AI agents—LLM-based systems that plan, use tools, and act autonomously—lack consistent, real-world benchmarks. Prior efforts like τ-bench or WebShop focus narrowly on single domains, while comprehensive evaluation remains expensive and non-standardized. The Open Agent Leaderboard responds to growing demand for unified, open, and interactive benchmarks that reflect practical agent capabilities.
+**Background**: AI agents—systems that perceive, plan, act, and use tools autonomously—are increasingly deployed in real-world applications, but their evaluation has lacked standardization. Existing benchmarks often focus narrowly on single domains (e.g., coding or web navigation) or require heavy customization, limiting cross-study comparability. The Open Agent Leaderboard builds on broader efforts like the Holistic Agent Leaderboard (HAL) and State-Bench to create a more inclusive, community-accessible framework.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://huggingface.co/spaces/omlab/open-agent-leaderboard">Open Agent Leaderboard - a Hugging Face Space by omlab</a></li>
 <li><a href="https://github.com/om-ai-lab/open-agent-leaderboard">GitHub - om-ai-lab/ open - agent - leaderboard : Reproducible Language...</a></li>
-<li><a href="https://research.ibm.com/blog/AI-agent-benchmarks">A 360 review of AI agent benchmarks</a></li>
+<li><a href="https://www.exgentic.ai/">Open Agent Leaderboard</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI Agents`, `#Benchmarking`, `#LLM Evaluation`, `#Open Source`, `#Hugging Face`
+**Tags**: `#AI Agents`, `#Benchmarking`, `#Open Source`, `#LLM Evaluation`, `#Hugging Face`
 
 ---
 
 <a id="item-8"></a>
-## [DeepSeek Dialogue System Has Critical Session Isolation Vulnerability](https://t.me/zaihuapd/41461) ⭐️ 9.0/10
+## [DeepSeek Chat System Has Critical Session Isolation Vulnerability](https://t.me/zaihuapd/41461) ⭐️ 9.0/10
 
-On May 11, 2026, researcher cancat2024 disclosed a critical session isolation vulnerability in DeepSeek's web and API interfaces: sending an unclosed '<think' string in a new empty session causes the model to leak fragments of other users' prior conversations, including sensitive data like API keys and code. This is a high-severity 'model service layer' vulnerability that bypasses standard session boundaries, enabling cross-user data leakage without authentication — posing immediate risks to enterprise LLM deployments, RAG systems, and third-party integrations relying on DeepSeek models. The vulnerability is triggered by malformed input (unclosed '<think') exploiting improper token parsing and shared memory/state handling in DeepSeek’s inference backend; it affects both official web/API endpoints and self-hosted third-party deployments, confirming a systemic design flaw rather than a configuration error.
+On May 11, 2026, researcher cancat2024 disclosed a critical session isolation vulnerability in DeepSeek’s web and API chat interfaces: sending an unclosed '<think' string in a new, empty conversation causes the model to leak fragments of other users’ prior conversations—including code, API keys, and private data. This flaw undermines fundamental trust in LLM-based chat services, enabling unauthorized cross-user data leakage without authentication or privilege escalation—posing immediate risk to all DeepSeek-R1 deployments (cloud, API, and self-hosted), and highlighting systemic weaknesses in stateful inference design and prompt sanitization. The vulnerability is not hallucination but a confirmed system-level state management failure; it affects both official DeepSeek web/API endpoints and third-party deployments, and requires only a single malformed input ('<think') with no closing tag to trigger leakage.
 
 telegram · zaihuapd · May 19, 11:33
 
-**Background**: LLM dialogue systems rely on strict session isolation—typically enforced via unique session IDs and segregated history storage—to prevent cross-user data leakage. Mechanisms include memory-scoped context injection, Redis-backed session caches, or database-persisted chat histories. When these isolation layers fail, inputs intended for one user can inadvertently access or trigger outputs derived from another user’s prior interactions.
+**Background**: DeepSeek-R1 is an open-weight reasoning-focused LLM released by DeepSeek AI, widely used for its strong chain-of-thought (CoT) capabilities. The '<think' tag is part of its internal CoT prompting mechanism, intended to delimit reasoning steps—but insecure output generation and lack of strict session sandboxing allow attackers to manipulate this tag to leak memory-like context from other sessions. Session isolation is a foundational security requirement for multi-tenant LLM chat services to prevent cross-user contamination.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://blog.csdn.net/qq_30294911/article/details/148934648">LLM复杂记忆存储-多会话隔离案例实战-CSDN博客</a></li>
-<li><a href="https://www.36kr.com/p/3808280461647617">对 DeepSeek 说一句 ，它就开始疯言疯语，到底是不是泄露用户数据啊？-36氪</a></li>
+<li><a href="https://www.trendmicro.com/en_us/research/25/c/exploiting-deepseek-r1.html">Exploiting DeepSeek-R1: Breaking Down Chain of Thought Security | Trend Micro (US)</a></li>
+<li><a href="https://hiddenlayer.com/innovation-hub/deepsht-exposing-the-security-risks-of-deepseek-r1">DeepSh*t: Exposing the Security Risks of DeepSeek-R1</a></li>
+<li><a href="https://www.wired.com/story/deepseeks-ai-jailbreak-prompt-injection-attacks/">DeepSeek’s Safety Guardrails Failed Every Test Researchers Threw at Its AI Chatbot | WIRED</a></li>
 
 </ul>
 </details>
 
-**Discussion**: GitHub users confirmed the issue extends to third-party deployments, suggesting the flaw lies in DeepSeek's core inference logic rather than frontend or proxy misconfiguration; some noted parallels with unsafe token injection in agent frameworks, warning that similar patterns may affect other open-weight LLMs using custom XML-like tags.
+**Discussion**: GitHub users confirmed the vulnerability extends to third-party deployments, refuting initial assumptions that it was merely hallucination; some emphasized that this reflects deeper architectural flaws in how stateful inference handles prompt tags across sessions.
 
-**Tags**: `#大模型安全`, `#会话隔离漏洞`, `#LLM服务漏洞`
+**Tags**: `#安全漏洞`, `#LLM服务安全`, `#会话隔离`
 
 ---
 
 <a id="item-9"></a>
-## [Google rolls out SynthID AI detection in Search and Chrome; OpenAI launches official image verification tool](https://9to5google.com/2026/05/19/google-is-adding-ai-detection-for-photos-videos-and-audio-to-search-and-chrome/) ⭐️ 9.0/10
+## [Google launches Gemini Omni for conversational video editing](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/) ⭐️ 9.0/10
 
-Google has integrated its SynthID AI content identification technology into Google Search and Chrome, enabling users to verify AI-generated images, videos, and audio via Google Lens or 'Circle to Search'; simultaneously, OpenAI released an official verification tool that detects C2PA metadata and SynthID watermarks in images produced by ChatGPT, OpenAI API, or Codex. This marks the first large-scale deployment of standardized, cross-platform AI content provenance infrastructure—reaching billions of users through Search and Chrome—and signals a critical shift from experimental watermarking to production-grade, interoperable content authenticity systems trusted by major AI developers and platforms. Both tools rely on the C2PA (Coalition for Content Provenance and Authenticity) standard for cryptographic metadata embedding and support multimodal detection; SynthID embeds imperceptible, robust watermarks directly into pixel/audio/text data, while OpenAI’s tool validates both C2PA manifests and SynthID signatures—enabling end-to-end traceability across vendor boundaries.
+Google launched Gemini Omni, a multimodal large model enabling natural-language-driven end-to-end video editing; the first variant, Gemini Omni Flash, is now available to Google AI Plus, Pro, and Ultra subscribers via the Gemini app, Google Flow, YouTube Shorts, and YouTube Create App. Gemini Omni is the first publicly released multimodal model capable of natural-language video editing, representing a paradigm shift from traditional GUI-based tools; its physics-aware generation and cross-turn character consistency advance multimodal reasoning, while SynthID watermarking and upcoming API support set new benchmarks for AIGC safety and developer integration. Gemini Omni Flash currently supports video generation and editing from mixed inputs (text, image, audio), with built-in SynthID watermarks for provenance; API access is planned within weeks, and future updates will expand support to native image and audio output formats.
+
+telegram · zaihuapd · May 19, 18:23
+
+**Background**: Multimodal large models extend language model capabilities to process and generate across modalities like vision, audio, and video. Traditional video editing relies on manual timeline manipulation, whereas AI-native approaches aim for semantic, instruction-driven editing. SynthID is Google's imperceptible digital watermarking technology, designed to identify AI-generated content across images, audio, text, and video — now adopted by OpenAI, NVIDIA, and others.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/">Introducing Gemini Omni</a></li>
+<li><a href="https://deepmind.google/models/synthid/">SynthID — Google DeepMind</a></li>
+<li><a href="https://arstechnica.com/google/2026/05/googles-synthid-ai-watermarking-tech-is-being-adopted-by-openai-nvidia-and-more/">Google's SynthID AI watermarking tech is being adopted by ...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#多模态大模型`, `#视频生成`, `#AIGC工具`
+
+---
+
+<a id="item-10"></a>
+## [Google integrates SynthID AI detection into Search and Chrome; OpenAI launches image verification tool](https://9to5google.com/2026/05/19/google-is-adding-ai-detection-for-photos-videos-and-audio-to-search-and-chrome/) ⭐️ 9.0/10
+
+Google has integrated its SynthID AI content detection technology into Google Search and Chrome, enabling real-time identification of AI-generated images, videos, and audio via Lens or 'Circle to Search'. Concurrently, OpenAI released a dedicated verification tool that detects C2PA metadata and SynthID watermarks in images produced by ChatGPT, OpenAI API, or Codex. This marks the first large-scale, end-user-facing deployment of standardized AI provenance tools—combining SynthID’s robust watermarking with C2PA’s cryptographically signed metadata—signaling a critical step toward industry-wide content transparency and trust infrastructure for generative AI. SynthID embeds imperceptible, edit-resilient watermarks via neural networks that survive compression, cropping, rotation, and screenshots; OpenAI’s tool supports single-image upload and verifies both C2PA claims and SynthID signals, but only for content generated by OpenAI’s own models.
 
 telegram · zaihuapd · May 20, 00:03
 
-**Background**: SynthID is a suite of watermarking technologies developed by Google DeepMind to detect AI-generated content across modalities. The C2PA standard—led by the Content Authenticity Initiative—is an open technical specification for embedding tamper-evident provenance metadata (e.g., creator, editing history, AI generation signal) into digital media files. It enables interoperable verification across platforms and tools, unlike proprietary watermarking schemes.
+**Background**: SynthID is Google DeepMind's watermarking system designed to embed detectable signals into AI-generated multimodal content without perceptible degradation. The C2PA (Coalition for Content Provenance and Authenticity) is an open standard co-founded by Adobe, The New York Times, and Twitter to embed cryptographically signed provenance metadata—such as creator, editing history, and generation tool—into digital media files.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://deepmind.google/models/synthid/">SynthID — Google DeepMind</a></li>
-<li><a href="https://ai.google.dev/responsible/docs/safeguards/synthid">SynthID : Tools for watermarking and detecting LLM-generated Text</a></li>
+<li><a href="https://ai.google.dev/responsible/docs/safeguards/synthid">SynthID: Tools for watermarking and detecting LLM-generated Text | Responsible Generative AI Toolkit | Google AI for Developers</a></li>
+<li><a href="https://c2pa.org/">C2PA | Verifying Media Content Sources</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Content_Authenticity_Initiative">Content Authenticity Initiative - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters express skepticism about watermark robustness—some claim SynthID patterns are visually observable and removable with pixel masking and inpainting—while others question the ethics and practicality of mandatory metadata, especially for creative professionals. A few note the absence of reproducible public demonstrations of successful removal, suggesting current resilience may be higher than assumed.
+**Discussion**: Some users report SynthID watermarks are visually observable under specific conditions and can be partially removed using pixel masking and inpainting techniques; others question the practicality and ethics of mandatory watermarking, citing concerns about creative control and DRM-like constraints; a few speculate that open-source models will soon render such detection obsolete for most observers.
 
-**Tags**: `#AI内容溯源`, `#C2PA标准`, `#SynthID`
-
----
-
-<a id="item-10"></a>
-## [Virtual OS Museum Launches Web-Based Emulation of Nearly Every Operating System](https://virtualosmuseum.org/) ⭐️ 8.0/10
-
-A new web-based virtual museum at virtualosmuseum.org has launched, offering browser-accessible emulation of nearly every historically significant operating system, from mainstream systems like Windows 3.1 and Unix variants to obscure ones like Domain/OS, Pick OS, and Apollo DomainOS. This project significantly advances digital preservation and computer history education by making rare, obsolete OSes accessible without specialized hardware or local setup—enabling researchers, educators, and enthusiasts to interact with authentic historical software environments. The museum uses web-based emulation (e.g., JS/Linux emulators or libretro cores) to run OSes directly in browsers; it emphasizes curation over completeness, and some entries reflect later versions (e.g., Domain/OS SR10.4) rather than historically distinctive earlier releases.
-
-hackernews · andreww591 · May 19, 15:53 · [Discussion](https://news.ycombinator.com/item?id=48195009)
-
-**Background**: Operating systems are foundational software layers that manage hardware and enable applications; many early or proprietary OSes (e.g., Apollo Domain/OS, Pick OS) ran on niche hardware and vanished as platforms were discontinued. Web-based emulation leverages modern browser technologies (like WebAssembly and HTML5) to recreate legacy computing environments without native binaries or physical machines.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Web-based_simulation">Web-based simulation</a></li>
-<li><a href="https://www.linuxserver.io/blog/self-hosted-web-based-emulation">Self Hosted Web Based Emulation | LinuxServer.io</a></li>
-<li><a href="https://www.researchgate.net/publication/270802064_Retrocomputing_as_preservation_and_remix">(PDF) Retrocomputing as preservation and remix</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters highlight nuanced technical details—such as Domain/OS 'pads' for editable typeahead, UID naming quirks ('avatar' instead of 'root'), and the omission of Pick OS—reflecting deep domain expertise and underscoring both the museum’s value and opportunities for expansion.
-
-**Tags**: `#operating-systems`, `#retrocomputing`, `#digital-preservation`, `#emulation`, `#computer-history`
+**Tags**: `#AI检测`, `#内容溯源`, `#C2PA`
 
 ---
 
 <a id="item-11"></a>
-## [Mistral AI Acquires Emmi AI to Build Leading Industrial AI Stack](https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai) ⭐️ 8.0/10
+## [Gemini CLI to retire on June 18, 2026; replaced by Antigravity CLI](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/) ⭐️ 9.0/10
 
-Mistral AI has acquired Emmi AI, a startup focused on AI for industrial engineering and manufacturing, to strengthen its vertical AI capabilities in the industrial sector. This acquisition signals a strategic shift toward domain-specific AI solutions, positioning Mistral AI as a serious competitor in industrial AI—a high-value, under-served vertical where real-world validation (e.g., ASML’s investment) enhances credibility and commercial traction. The deal aims to integrate Emmi AI’s engineering-focused AI tools into Mistral’s broader stack, though concrete technical outputs (e.g., product demos, customer deployments) remain unpublicized as of the announcement; ASML is both a major investor in Mistral AI and a likely anchor use-case partner.
+Google will discontinue Gemini CLI and Gemini Code Assist IDE extensions for free, Pro, and Ultra users effective June 18, 2026, and launch Antigravity CLI as the core CLI component of the new Antigravity 2.0 platform. This marks a strategic shift in Google’s AI agent infrastructure, emphasizing programmable extensibility via Agent Skills and Hooks — critical for developers building production-grade CLI agents and enterprise AI workflows. Standard and Enterprise license holders of Gemini Code Assist remain unaffected and retain full access; migration documentation and video guides are officially provided to support the transition.
 
-hackernews · doener · May 19, 19:14 · [Discussion](https://news.ycombinator.com/item?id=48197995)
+telegram · zaihuapd · May 20, 02:13
 
-**Background**: Industrial AI applies artificial intelligence to solve domain-specific challenges in manufacturing, process optimization, predictive maintenance, and physics-informed engineering—relying on specialized datasets, domain knowledge, and real-time industrial data. Vertical AI refers to AI systems fine-tuned for narrow, high-stakes industries (e.g., semiconductor fabrication), where general-purpose models often fail due to jargon, regulatory constraints, and unique success metrics.
+**Background**: Gemini CLI is a command-line interface tool built on Google's Gemini family of multimodal LLMs, widely used for local AI engineering, agent prototyping, and IDE integration. It offered free access, large context windows, and web search capabilities. Antigravity CLI is the next-generation CLI platform introduced under Google's Antigravity 2.0 initiative, designed to support modular, skill-based agent development with event-driven automation via Hooks.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Industrial_AI">Industrial AI</a></li>
-<li><a href="https://www.nvidia.com/en-us/glossary/industrial-ai/">What is Industrial AI and Why Is It Important?</a></li>
-<li><a href="https://grokipedia.com/page/Conversational_AI_in_vertical_contexts">Conversational AI in vertical contexts</a></li>
+<li><a href="https://grokipedia.com/page/Gemini_CLI">Gemini CLI</a></li>
+<li><a href="https://geminicli.com/">Build, debug & deploy with AI | Gemini CLI</a></li>
+<li><a href="https://antigravity.google/product/antigravity-cli">Antigravity CLI</a></li>
+<li><a href="https://medium.com/@anmol_tomer/tools-the-agent-stack-mcp-skills-hooks-explained-82d7b661de81">Tools & Agent Stack: MCP, Skills, Hooks Explained | Medium</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters express cautious optimism: some highlight ASML’s involvement as strong validation, while others question Emmi AI’s technical substance and market traction, noting the absence of public demos or customer references. Skepticism centers on Mistral’s competitiveness amid dominant 'Big 3' players, though many agree industrial AI offers a viable differentiation path.
-
-**Tags**: `#AI acquisition`, `#industrial AI`, `#Mistral AI`, `#vertical AI`, `#engineering AI`
+**Tags**: `#AI CLI`, `#Agent Infrastructure`, `#Google AI Migration`
 
 ---
 
 <a id="item-12"></a>
-## [Disney shuts down FiveThirtyEight after acquisition](https://www.natesilver.net/p/disney-erased-fivethirtyeight) ⭐️ 8.0/10
+## [Virtual OS Museum Launches Web-Based Emulation of Historical Operating Systems](https://virtualosmuseum.org/) ⭐️ 8.0/10
 
-In June 2023, Disney permanently shut down FiveThirtyEight, the data journalism outlet it acquired in 2018 through its purchase of ABC News’ parent company, ESPN Inc., ending all sports predictions and forecasts as of June 13, 2023. The shutdown exemplifies systemic tensions between mission-driven data journalism and entertainment conglomerates’ short-term strategic priorities, raising urgent questions about editorial independence, sustainability of public-interest journalism under corporate ownership, and the viability of quantitative storytelling in mainstream media. FiveThirtyEight’s code and datasets remain publicly archived on GitHub, but real-time forecasting, polling aggregation, and new articles ceased; Disney cited shifting strategic priorities—not financial failure—as the reason, despite FiveThirtyEight’s strong audience engagement and methodological transparency.
+A new virtual museum at virtualosmuseum.org has launched, offering browser-based emulation of nearly every historical operating system—from Apollo Domain/OS and Pick OS to Temple OS and obscure variants of Windows 3.1—curated with technical precision and archival intent. This project fills a critical gap in computing heritage preservation by making fragile, obsolete OS environments accessible, interactive, and educationally viable without requiring specialized hardware or local setup—supporting research, teaching, and public engagement with software history. The museum relies on web-based emulation (e.g., Emscripten-compiled libretro cores) to run legacy OSes directly in modern browsers; some emulated systems—including Domain/OS pads and Temple OS—are exceptionally rare or technically challenging to reproduce, highlighting both the project’s ambition and its reliance on niche emulation advances.
 
-hackernews · 7777777phil · May 19, 18:56 · [Discussion](https://news.ycombinator.com/item?id=48197703)
+hackernews · andreww591 · May 19, 15:53 · [Discussion](https://news.ycombinator.com/item?id=48195009)
 
-**Background**: FiveThirtyEight was founded by Nate Silver in 2008 as an independent blog specializing in statistical analysis of politics, sports, and economics. It gained prominence for its accurate 2008 and 2012 U.S. presidential election forecasts. In 2013, it was acquired by ESPN (a Disney subsidiary), and later fully integrated into ABC News after Disney’s 2019 acquisition of 21st Century Fox assets. Its methodology emphasized transparency, open data, and probabilistic modeling—core tenets of modern data journalism.
+**Background**: Web-based emulation enables running legacy software in browsers without native installation, using technologies like Emscripten to compile emulator cores into WebAssembly. Digital archiving of software—especially operating systems—faces unique challenges due to hardware dependency, license restrictions, and rapid obsolescence of storage media. Projects like this address the 'bit rot' problem by preserving not just binaries, but functional, interactive contexts.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/fivethirtyeight/data">GitHub - fivethirtyeight / data : Data and code behind the articles and...</a></li>
-<li><a href="https://www.kaggle.com/discussions/general/23567">Fivethirtyeight Data Journalism and R | Kaggle</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Independent_media">Independent media - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web-based_simulation">Web-based simulation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Digital_preservation">Digital preservation - Wikipedia</a></li>
+<li><a href="https://www.linuxserver.io/blog/self-hosted-web-based-emulation">Self Hosted Web Based Emulation | LinuxServer.io</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Hacker News commenters debated whether Disney’s decision reflected predictable corporate logic (e.g., portfolio experimentation and leadership-driven project cancellation) or a betrayal of journalistic values; some criticized Silver’s retrospective framing as naive or self-serving, while others lamented the loss of methodological rigor in mainstream political coverage.
+**Discussion**: Commenters praise the curation depth but raise nuanced critiques: some note version selection oversights (e.g., showcasing late Domain/OS instead of its more innovative earlier variants), others highlight missing systems (Pick OS, Temple OS), and several geek out over highly specific technical behaviors (like Domain/OS 'pads' or Windows 3.1 paper-folder desktops), revealing strong domain expertise and community-driven archival priorities.
 
-**Tags**: `#data-journalism`, `#media-acquisitions`, `#corporate-strategy`, `#FiveThirtyEight`, `#Hacker-News-discussion`
+**Tags**: `#operating-systems`, `#retrocomputing`, `#emulation`, `#digital-archiving`, `#computer-history`
 
 ---
 
 <a id="item-13"></a>
-## [OlmoEarth v1.1: More efficient Earth observation foundation models](https://huggingface.co/blog/allenai/olmoearth-v1-1) ⭐️ 8.0/10
+## [Remove-AI-Watermarks: Open-source tool to strip visible and embedded AI watermarks](https://github.com/wiltodelta/remove-ai-watermarks) ⭐️ 8.0/10
 
-The Allen Institute for AI released OlmoEarth v1.1, a new family of open, computationally efficient foundation models for Earth observation and climate science, including the ultra-lightweight OlmoEarth-v1_1-Nano with only 1.7 million parameters. This advancement lowers barriers to entry for researchers and institutions with limited compute resources, enabling broader adoption of AI in climate modeling and remote sensing while promoting sustainable, energy-efficient AI development for critical planetary challenges. OlmoEarth v1.1 was trained on the same dataset as v1.0, isolating improvements to architectural and pretraining optimizations—including modality-aware masking and fixed random projections—resulting in comparable or better performance on satellite image and time-series tasks across Sentinel-1, Sentinel-2, and Landsat.
+Remove-AI-Watermarks is a newly released open-source CLI and Python library that removes both visible overlays and embedded digital watermarks (e.g., SynthID, Gemini watermarks) from AI-generated images. This tool intensifies the global debate on AI transparency, privacy, and copyright — challenging mandatory watermarking standards like Google’s SynthID and raising questions about accountability, content provenance, and user autonomy in generative AI ecosystems. The tool fully removes visible watermarks but only partially defeats embedded watermarks like SynthID by regenerating images with SDXL at low noise — a process that degrades fine details and fails on high-resolution outputs (e.g., 4K images from Gemini or GPT-4o Image).
 
-rss · Hugging Face Blog · May 19, 18:38
+hackernews · janalsncm · May 19, 22:30 · [Discussion](https://news.ycombinator.com/item?id=48200569)
 
-**Background**: Foundation models for Earth observation are large-scale AI models pretrained on diverse geospatial data (e.g., satellite imagery, topographic maps) to serve as general-purpose backbones for downstream tasks like land cover classification, climate anomaly detection, and ecosystem monitoring. Unlike task-specific models, they aim to replace siloed AI pipelines with unified, transferable representations. OlmoEarth is part of a growing ecosystem—including FM4CS and other initiatives—that seeks to build open, scalable foundation models tailored to Earth science.
+**Background**: Digital watermarking embeds imperceptible signals into media to verify authenticity or ownership; visible watermarks are overt logos or text, while embedded (invisible) watermarks use steganography or statistical perturbations. Major AI providers like Google (SynthID), OpenAI, and Meta are deploying such techniques to label AI-generated content for transparency and copyright enforcement.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://huggingface.co/blog/allenai/olmoearth-v1-1">OlmoEarth v 1 . 1 : A more efficient family of models</a></li>
-<li><a href="https://huggingface.co/allenai/OlmoEarth-v1_1-Nano">allenai/ OlmoEarth - v 1 _ 1 -Nano · Hugging Face</a></li>
-<li><a href="https://arxiv.org/html/2511.13655v1">OlmoEarth : Stable Latent Image Modeling for Multimodal Earth ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Digital_watermarking">Digital watermarking - Wikipedia</a></li>
+<li><a href="https://spectrum.ieee.org/ai-watermark-remover">AI Watermark Remover Defeats Top Techniques - IEEE Spectrum</a></li>
+<li><a href="https://www.gradually.ai/en/gemini-watermark-remover/">Gemini Watermark Remover (Free & No Sign-up) - gradually.ai</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#earth-science`, `#foundation-models`, `#efficient-ai`, `#climate-ai`, `#open-models`
+**Discussion**: Commenters express polarized views: some champion the tool as essential for digital privacy and resistance against surveillance-by-watermark, while others criticize it for undermining transparency or enabling misuse; technical caveats about SDXL regeneration trade-offs and limited SynthID removal efficacy are widely acknowledged.
+
+**Tags**: `#AI ethics`, `#digital watermarking`, `#generative AI`, `#privacy`, `#open source`
 
 ---
 
 <a id="item-14"></a>
-## [Hugging Face launches open-weight Ettin Reranker family for efficient retrieval](https://huggingface.co/blog/ettin-reranker) ⭐️ 8.0/10
+## [Google launches AI-native search interface powered by Gemini at I/O 2026](https://blog.google/products-and-platforms/products/search/search-io-2026/) ⭐️ 8.0/10
 
-Hugging Face introduced the Ettin Reranker family — a set of open-weight, neural rerankers featuring a hybrid dual-encoder and cross-encoder architecture, with publicly released model weights, training code, and reproducible recipes. This release fills a critical gap in the open-model ecosystem by providing production-ready, high-accuracy rerankers that are both computationally efficient and fully transparent—enabling better RAG systems, search engines, and enterprise IR applications without vendor lock-in. Ettin models outperform prior open rerankers like RankVicuna and BGE-reranker on standard benchmarks (e.g., MIRACL, BEIR), while maintaining low latency via architectural optimizations including distilled cross-attention and shared token encoders.
+At Google I/O 2026, Google unveiled a fundamentally redesigned search interface that prioritizes direct, synthesized answers over traditional link-based results, powered by real-time grounded Gemini models and integrated across web, mobile, Chrome side-panel, and Gemini Live. This shift represents a paradigm change in how users access information online — potentially reducing click-through traffic to publishers, reshaping SEO strategies, and raising urgent questions about verifiability, source attribution, and the long-term health of the open web. The new search uses 'grounding with Google Search' to retrieve and cite real-time web content, supports multilingual queries, and is designed to synthesize insights rather than rank pages; however, it does not yet expose raw sources by default, and hallucination risks remain despite grounding.
 
-rss · Hugging Face Blog · May 19, 00:00
+hackernews · berkeleyjunk · May 19, 18:34 · [Discussion](https://news.ycombinator.com/item?id=48197370)
 
-**Background**: In information retrieval, rerankers refine an initial list of candidate documents—typically retrieved by a fast but coarse method like BM25 or dense retrieval—by scoring each (query, document) pair more precisely using deeper neural models. Neural rerankers often trade off accuracy for computational cost: cross-encoders are accurate but slow, while dual-encoders are fast but less expressive. Hybrid designs aim to balance both.
+**Background**: Traditional search engines return ranked lists of web pages based on relevance signals like links and keywords. In contrast, AI-native search treats the query as a reasoning task: the model retrieves, evaluates, and synthesizes information before delivering a concise answer — often without requiring users to visit external sites. Gemini is Google's family of multimodal foundation models, and its integration into search marks a move from retrieval-based to reasoning-based information access.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.azion.com/en/learning/ai/what-are-rerankers/">Rerankers | Neural Reranking for Intelligent Search and High Performance | Azion</a></li>
-<li><a href="https://zilliz.com/learn/what-are-rerankers-enhance-information-retrieval">What Are Rerankers and How They Enhance Information Retrieval - Zilliz Learn</a></li>
-<li><a href="https://pyterrier.readthedocs.io/en/latest/neural.html">Neural Rankers and Rerankers - PyTerrier - Read the Docs</a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/google-search">Grounding with Google Search - generateContent API | Google ...</a></li>
+<li><a href="https://gemini.google.com/">Google Gemini</a></li>
+<li><a href="https://medium.com/@laura-zhang/unwrapping-ai-native-search-66c7652f9961">Unwrapping AI - Native Search . I’m excited by where search ... | Medium</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#reranking`, `#information-retrieval`, `#open-models`, `#LLM-optimization`, `#search-engine`
+**Discussion**: Commenters express deep skepticism about LLM reliability for factual queries, warn of 'Google Zero' — where organic traffic to websites collapses — and criticize the loss of primary-source access and transparency. Some note the interface’s divergence from the original minimalist HTML search form, symbolizing a broader philosophical shift away from user agency toward algorithmic curation.
+
+**Tags**: `#search-engine`, `#AI-integration`, `#LLM-hallucination`, `#web-ecosystem`, `#Google-I-O`
 
 ---
 
 <a id="item-15"></a>
-## [Fine-tuning NVIDIA Cosmos Predict 2.5 for robot video generation using LoRA and DoRA](https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation) ⭐️ 8.0/10
+## [Mistral AI acquires Emmi AI to build industrial AI stack](https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai) ⭐️ 8.0/10
 
-Hugging Face published a technical blog demonstrating how to efficiently fine-tune NVIDIA's Cosmos Predict 2.5 — a state-of-the-art multimodal model for robot-centric video generation — using Low-Rank Adaptation (LoRA) and its enhanced variant, Weight-Decomposed Low-Rank Adaptation (DoRA). The guide includes practical code examples, training configurations, and empirical comparisons of resource usage and video quality. This enables robotics researchers and developers to adapt large, compute-intensive video generation models to domain-specific robotic tasks with dramatically reduced GPU memory, training time, and parameter count — accelerating deployment of vision-language-action models in real-world robotic systems. The fine-tuning targets Cosmos Predict 2.5’s transformer-based video diffusion architecture; DoRA outperforms standard LoRA by decomposing pretrained weights into magnitude and direction components and applying LoRA only to the directional part, preserving more fidelity while maintaining efficiency. The blog reports up to 4× faster convergence and ~30% lower VRAM usage compared to full fine-tuning.
+Mistral AI has acquired Austrian startup Emmi AI to combine its AI platform with Emmi’s expertise in physics-based, domain-specific AI for engineering and manufacturing. The acquisition was announced on May 19, 2026, and is backed by ASML, a major semiconductor equipment manufacturer and Mistral investor. This acquisition strengthens Europe’s capacity to develop high-value, domain-specific AI solutions for critical industries like semiconductors, aerospace, and automotive—reducing reliance on US-centric general-purpose AI models and advancing European technological sovereignty. Emmi AI specializes in physics-informed AI models integrated with industrial protocols and digital twins; the combined stack targets low-latency, high-reliability inference for production environments—not consumer-grade exploration. The deal amount remains undisclosed.
 
-rss · Hugging Face Blog · May 18, 16:00
+hackernews · doener · May 19, 19:14 · [Discussion](https://news.ycombinator.com/item?id=48197995)
 
-**Background**: Cosmos Predict 2.5 is NVIDIA’s latest open multimodal foundation model designed specifically for generating temporally coherent, robot-action-aligned videos from text or sensor inputs. LoRA is a widely adopted parameter-efficient fine-tuning (PEFT) method that freezes the original model weights and injects low-rank trainable matrices into attention layers. DoRA, introduced by NVIDIA in late 2024, extends LoRA by decoupling weight magnitude and direction to improve adaptation expressivity without increasing rank size.
+**Background**: Domain-specific AI refers to AI systems built around deep domain knowledge—such as physics laws, engineering constraints, or manufacturing workflows—rather than broad statistical patterns. In industrial settings, such AI must integrate with legacy systems (e.g., PLCs, SCADA), operate under strict safety and latency requirements, and ground predictions in verified sensor data or simulation. Unlike general-purpose LLMs, these systems prioritize accuracy, interpretability, and real-world actionability over scale or generality.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://developer.nvidia.com/blog/introducing-dora-a-high-performing-alternative-to-lora-for-fine-tuning/">Introducing DoRA, a High-Performing Alternative to LoRA for Fine-Tuning | NVIDIA Technical Blog</a></li>
-<li><a href="https://arxiv.org/abs/2402.09353">[2402.09353] DoRA: Weight-Decomposed Low-Rank Adaptation</a></li>
-<li><a href="https://arxiv.org/abs/2405.17357">[2405.17357] DoRA: Enhancing Parameter-Efficient Fine-Tuning with Dynamic Rank Distribution</a></li>
+<li><a href="https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai">Mistral AI Acquires Emmi AI to Create the Leading AI Stack ...</a></li>
+<li><a href="https://techstartups.com/2026/05/19/mistral-ai-acquires-emmi-ai-to-expand-industrial-ai-push-across-europe/">Mistral AI acquires Emmi AI to expand industrial AI push ...</a></li>
+<li><a href="https://sciotex.com/industrial-ai-engineering-guide/">Industrial AI: Architectures, Use Cases & Engineering Guide</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters highlight ASML’s strategic backing as key to credibility, note the importance of the full title emphasizing 'industrial engineering', question Mistral’s current competitiveness amid US dominance, and stress that Europe’s AI leadership hinges on massive capital investment and infrastructure—not just technical acquisitions.
+
+**Tags**: `#AI-acquisition`, `#industrial-AI`, `#European-AI`, `#Mistral-AI`, `#domain-specific-AI`
+
+---
+
+<a id="item-16"></a>
+## [Hugging Face launches open-weight Ettin reranker family for efficient cross-encoder document reranking](https://huggingface.co/blog/ettin-reranker) ⭐️ 8.0/10
+
+Hugging Face announced the open-weight Ettin reranker family — a set of high-performance, efficient cross-encoder models optimized for document reranking, with strong results on MTEB and BEIR benchmarks and full support for Transformers and SentenceTransformers libraries. This matters because efficient, open, and production-ready rerankers lower barriers for building high-quality retrieval-augmented generation (RAG) systems, especially for developers and researchers who need strong cross-encoder performance without proprietary dependencies or excessive compute costs. The Ettin models are distilled and quantization-friendly, support FP16 and INT8 inference, and achieve competitive accuracy with significantly reduced latency compared to larger cross-encoders like bge-reranker-large; they are available under the MIT license and integrate seamlessly with Hugging Face's ecosystem.
+
+rss · Hugging Face Blog · May 19, 00:00
+
+**Background**: Cross-encoder reranking is a key technique in modern information retrieval where a transformer model jointly encodes a query and a candidate document in a single forward pass, enabling fine-grained token-level interaction and higher ranking accuracy than bi-encoder approaches. It is widely used in RAG pipelines but often suffers from high latency due to sequential scoring. Benchmarks like MTEB evaluate reranking performance across diverse datasets and tasks, providing standardized metrics for model comparison.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://arxiv.org/html/2403.10407v1">A Thorough Comparison of Cross - Encoders and LLMs for Reranking ...</a></li>
+<li><a href="https://medium.com/@rossashman/the-art-of-rag-part-3-reranking-with-cross-encoders-688a16b64669">The aRt of RAG Part 3: Reranking with Cross Encoders | Medium</a></li>
+<li><a href="https://www.emergentmind.com/topics/cross-encoder-reranking">Cross - Encoder Reranking</a></li>
+<li><a href="https://huggingface.co/spaces/mteb/leaderboard">MTEB Leaderboard - a Hugging Face Space by mteb</a></li>
+<li><a href="https://sbert.net/docs/sentence_transformer/usage/mteb_evaluation.html">Evaluation with MTEB — Sentence Transformers documentation</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#reranking`, `#information-retrieval`, `#cross-encoder`, `#open-models`, `#MTEB`
+
+---
+
+<a id="item-17"></a>
+## [Fine-tuning NVIDIA Cosmos Predict 2.5 for robot video generation using LoRA and DoRA](https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation) ⭐️ 8.0/10
+
+Hugging Face published a technical blog demonstrating how to efficiently fine-tune NVIDIA's open-weight Cosmos Predict 2.5 model for robot-centric video generation using LoRA and DoRA adapters, with reproducible code, benchmarking results, and step-by-step guidance released on April 2024. This enables resource-efficient adaptation of a state-of-the-art multimodal foundation model for robotics — lowering hardware barriers, accelerating robotics R&D, and supporting open innovation in embodied AI video understanding and generation. The fine-tuning uses rank-8 LoRA and DoRA adapters applied to attention layers only; training is performed on 1–2 A100 GPUs with <1GB VRAM overhead per adapter, and the adapted models retain full inference compatibility with the original Cosmos Predict 2.5 architecture.
+
+rss · Hugging Face Blog · May 18, 16:00
+
+**Background**: Cosmos Predict 2.5 is NVIDIA's latest open-weight multimodal foundation model designed specifically for robot-centric video generation and planning. LoRA (Low-Rank Adaptation) freezes pre-trained weights and injects low-rank trainable matrices into Transformer layers, drastically reducing trainable parameters. DoRA (Decomposed Low-Rank Adapter) extends LoRA by decomposing weight updates into magnitude and direction components for more stable and expressive adaptation.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/LoRA_(machine_learning)">LoRA (machine learning) - Wikipedia</a></li>
+<li><a href="https://arxiv.org/abs/2106.09685">[2106.09685] LoRA: Low-Rank Adaptation of Large Language Models</a></li>
+<li><a href="https://www.emergentmind.com/topics/decomposed-low-rank-adapter-dora">Decomposed Low-Rank Adapter ( DoRA )</a></li>
 
 </ul>
 </details>
@@ -374,46 +433,49 @@ rss · Hugging Face Blog · May 18, 16:00
 
 ---
 
-<a id="item-16"></a>
+<a id="item-18"></a>
 ## [PaddleOCR 3.5 Introduces Transformers Backend for Unified OCR and Document AI](https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers) ⭐️ 8.0/10
 
-PaddleOCR 3.5 introduces a new Transformers-based inference backend, enabling 20+ supported models to run natively via Hugging Face’s ecosystem while retaining full OCR and document parsing pipeline management within PaddleOCR. This shift bridges the gap between traditional OCR toolkits and modern LLM-adjacent document understanding stacks, empowering developers to fine-tune, deploy, and interoperate with state-of-the-art vision-language models using familiar Hugging Face workflows. Users can now seamlessly switch inference backends among PaddlePaddle static graph, dynamic graph, and Transformers modes; the integration supports over 100 languages and enables direct access to Hugging Face-hosted models without modifying core pipelines.
+PaddleOCR 3.5 introduces official support for Hugging Face Transformers as an inference backend, enabling models like PP-OCRv5 and PaddleOCR-VL 1.5 to run natively in PyTorch/Transformers-based workflows via the `engine='transformers'` parameter. This integration bridges the PaddlePaddle and Hugging Face ecosystems, lowering adoption barriers for developers already using Transformers, accelerating fine-tuning and deployment of OCR/document understanding models, and strengthening open-model interoperability in multimodal AI. The Transformers backend is optional and coexists with the default Paddle static graph backend; it supports 20+ major PaddleOCR models and enables document format conversion (e.g., Word/Excel/PPT → Markdown) within Hugging Face–centric pipelines.
 
 rss · Hugging Face Blog · May 18, 15:12
 
-**Background**: PaddleOCR is an open-source OCR toolkit developed by Baidu, widely used for text detection, recognition, and layout analysis in images and PDFs. Transformers are deep learning architectures—especially encoder-decoder or vision-language models—that power modern document AI systems. Hugging Face provides a standardized hub for sharing, fine-tuning, and deploying such models across modalities.
+**Background**: PaddleOCR is an open-source OCR toolkit developed by PaddlePaddle, widely used for text detection, recognition, and layout analysis. Transformers is Hugging Face’s library for state-of-the-art NLP and multimodal models, built on PyTorch. Document AI refers to systems that extract and understand structured information from scanned documents, PDFs, or images — a key requirement for RAG, enterprise search, and automated data entry.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers">PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend</a></li>
-<li><a href="https://www.kucoin.com/news/flash/baidu-paddleocr-3-5-launches-with-browser-ocr-markdown-conversion-and-transformers-backend">Baidu PaddleOCR 3.5 Launches with Browser OCR, Markdown Conversion, and Transformers Backend | KuCoin</a></li>
-<li><a href="https://github.com/PaddlePaddle/PaddleOCR">GitHub - PaddlePaddle/PaddleOCR: Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages. · GitHub</a></li>
+<li><a href="https://app.daily.dev/posts/paddleocr-3-5-running-ocr-and-document-parsing-tasks-with-a-transformers-backend-k312uokek">PaddleOCR 3.5: Running OCR and Document Parsing Tasks...</a></li>
+<li><a href="https://github.com/PaddlePaddle/PaddleOCR">GitHub - PaddlePaddle/PaddleOCR: Turn any PDF or image ...</a></li>
+<li><a href="https://explore.n1n.ai/blog/paddleocr-3-5-transformers-backend-ocr-parsing-2026-05-18">PaddleOCR 3.5: Advanced OCR and Document Parsing with ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OCR`, `#Transformers`, `#Document AI`, `#PaddlePaddle`, `#Hugging Face`
+**Tags**: `#OCR`, `#Transformers`, `#DocumentAI`, `#PaddlePaddle`, `#HuggingFace`
 
 ---
 
-<a id="item-17"></a>
+<a id="item-19"></a>
 ## [Claude Code launches Fast mode research preview for low-latency coding](https://code.claude.com/docs/en/fast-mode) ⭐️ 8.0/10
 
-Claude Code officially launched Fast mode—a research preview feature enabling significantly lower latency responses from Claude Opus 4.6 and 4.7 models—triggered via the '/fast' command in the IDE, with explicit pricing of $30/M input tokens and $150/M output tokens. This is the first production-grade, low-latency inference mode tailored for real-time developer workflows like interactive debugging and rapid code iteration—providing AI engineers and enterprise teams a concrete benchmark for evaluating cost–latency trade-offs in LLM-augmented IDEs. Fast mode requires administrator enablement for Team/Enterprise organizations, enforces independent rate limiting, and automatically degrades to standard speed upon quota exhaustion—with recovery after cooldown; it is incompatible with batch processing or cost-sensitive use cases.
+Claude Code has launched a research preview of Fast mode, available on Opus 4.6 and 4.7, enabling ~2.5x faster responses via the /fast command; it incurs significantly higher costs (input: $30/Mtok, output: $150/Mtok) and is subject to separate rate limits. Fast mode directly addresses latency-sensitive developer workflows—such as IDE inline completions and interactive debugging—where sub-second response times are critical for usability, offering a pragmatic trade-off between speed and cost in AI-assisted programming. Fast mode uses the same underlying Opus model (no architecture change), requires manual activation and enabled pay-as-you-go billing, defaults to disabled for Team/Enterprise organizations, and automatically falls back to standard speed upon hitting its dedicated rate limit.
 
 telegram · zaihuapd · May 19, 10:57
 
-**Background**: Claude Code is Anthropic’s IDE-integrated coding assistant built on top of its flagship Opus-class models. Opus 4.7—released in April 2026—is the latest publicly available Opus model, excelling in advanced software engineering tasks (e.g., 87.6% on SWE-bench) and incorporating safeguards from Project Glasswing. Fast mode leverages model-level optimizations to prioritize output token generation speed over throughput or cost efficiency.
+**Background**: Claude Code is Anthropic’s dedicated coding assistant powered by the Opus series models, known for strong software engineering reasoning. Opus 4.7, released on April 16, 2026, improves multi-step task performance and agentic execution over Opus 4.6. Fast mode is not a new model but an inference optimization layer designed specifically for real-time code interaction.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://code.claude.com/docs/en/fast-mode">Speed up responses with fast mode - Claude Code Docs</a></li>
-<li><a href="https://platform.claude.com/docs/en/build-with-claude/fast-mode">Fast mode (beta: research preview) - Claude API Docs</a></li>
-<li><a href="https://llm-stats.com/models/claude-opus-4-7">Claude Opus 4.7 Benchmarks, Pricing & Context Window</a></li>
+<li><a href="https://medium.com/@joe.njenga/how-im-using-new-claude-code-fast-mode-to-code-faster-like-a-whiz-09a2694da6ae">How I’m Using (New) Claude Code Fast Mode (To Code ... | Medium</a></li>
+<li><a href="https://www.buildthisnow.com/blog/guide/performance/fast-mode">Claude Code Fast Mode | Build This Now</a></li>
+<li><a href="https://pilot-shell.com/blog/fast-mode">Claude Code Fast Mode : Speed Up Opus 4.6 Responses | Pilot Shell</a></li>
+<li><a href="https://www.anthropic.com/news/claude-opus-4-7">Introducing Claude Opus 4.7 \ Anthropic</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM推理优化`, `#开发工具集成`, `#AI编码助手`
+**Discussion**: Early adopters on Medium and technical blogs highlight Fast mode’s tangible speed gains in IDE workflows, praising its seamless toggle and consistent Opus 4.6/4.7 quality—but note its prohibitive cost for sustained use and emphasize careful budgeting and rate-limit monitoring.
+
+**Tags**: `#AI编程`, `#低延迟推理`, `#Claude`
 
 ---

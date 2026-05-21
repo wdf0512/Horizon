@@ -319,6 +319,26 @@ async def hz_get_briefing(
 
 
 @mcp.tool()
+async def hz_search_history(
+    query: str,
+    days: int = 30,
+    top_k: int = 10,
+    min_score: float = 7.0,
+) -> dict[str, Any]:
+    """Keyword + date-range search over historical enriched items."""
+
+    return await _run_tool(
+        "hz_search_history",
+        lambda: service.search_history(
+            query=query,
+            days=days,
+            top_k=top_k,
+            min_score=min_score,
+        ),
+    )
+
+
+@mcp.tool()
 def hz_list_runs(limit: int = 20) -> dict[str, Any]:
     """List recent runs and stage states."""
 

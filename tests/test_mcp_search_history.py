@@ -86,3 +86,18 @@ def test_search_history_returns_empty_on_no_matches(tmp_path):
     result = asyncio.run(service.search_history(query="claude", days=7))
     assert result["count"] == 0
     assert result["items"] == []
+
+
+def test_hz_search_history_tool_envelope(tmp_path, monkeypatch):
+    from src.mcp import server
+
+    async def fake_search(**kwargs):
+        return {"count": 0, "items": [], "query": kwargs["query"],
+                "days": kwargs["days"], "min_score": kwargs["min_score"]}
+
+    monkeypatch.setattr(server.service, "search_history", fake_search)
+
+    result = asyncio.run(server.hz_search_history(query="claude", days=7))
+    assert result["ok"] is True
+    assert result["tool"] == "hz_search_history"
+    assert result["data"]["query"] == "claude"

@@ -22,6 +22,7 @@ from .horizon_adapter import (
     resolve_config_path,
     resolve_horizon_path,
 )
+from .cache import BriefingCache, CacheKey
 from .run_store import RunStore
 from ..services.webhook import WebhookNotifier
 
@@ -83,6 +84,7 @@ class HorizonPipelineService:
     def __init__(self, runs_root: Path | None = None):
         self.runs_root = Path(runs_root).resolve() if runs_root else _default_runs_root().resolve()
         self._run_store: RunStore | None = None
+        self.briefing_cache = BriefingCache(max_entries=256, default_ttl_seconds=3600)
 
     @property
     def run_store(self) -> RunStore:
@@ -570,11 +572,16 @@ class HorizonPipelineService:
         count: int = 5,
         language: str = "zh",
         min_score: float = 7.0,
-        config_pack: str | None = None,  # wired in Task 6.5
+        force_refresh: bool = False,
+        config_pack: str | None = None,
         horizon_path: str | None = None,
         config_path: str | None = None,
     ) -> dict[str, Any]:
-        """One-call curated briefing: run pipeline, return top-N topic-relevant items."""
+        """One-call curated briefing: run pipeline, return top-N topic-relevant items.
+
+        Uses an in-memory LRU+TTL cache. Subsequent identical calls within
+        the TTL window return the cached payload with `cached=true`.
+        """
 
         if language not in ("zh", "en"):
             raise HorizonMcpError(
@@ -586,6 +593,27 @@ class HorizonPipelineService:
                 code="HZ_INVALID_INPUT",
                 message="hours and count must be positive.",
             )
+
+        cache_key = CacheKey(
+            tenant_id="default",
+            topic=topic.strip().lower(),
+            language=language,
+            hours=hours,
+            min_score=min_score,
+            config_pack=config_pack,
+        )
+
+        if not force_refresh:
+            cached_entry = self.briefing_cache.get_entry(cache_key)
+            if cached_entry is not None:
+                payload = dict(cached_entry.value)
+                payload["cached"] = True
+                payload["cached_until"] = datetime.fromtimestamp(
+                    cached_entry.expires_at, tz=timezone.utc
+                ).isoformat()
+                payload["items"] = payload["items"][:count]
+                payload["item_count"] = len(payload["items"])
+                return payload
 
         keywords = _topic_to_keywords(topic)
 
@@ -628,7 +656,7 @@ class HorizonPipelineService:
             for i, it in enumerate(items)
         ]
 
-        return {
+        payload = {
             "topic": topic,
             "language": language,
             "time_window_hours": hours,
@@ -637,6 +665,9 @@ class HorizonPipelineService:
             "item_count": len(ranked),
             "items": ranked,
         }
+
+        self.briefing_cache.set(cache_key, payload)
+        return payload
 
     def _build_context(
         self,

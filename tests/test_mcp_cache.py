@@ -63,3 +63,62 @@ def test_cache_invalidate_removes_entry():
     cache.set(key, {"k": "v"})
     cache.invalidate(key)
     assert cache.get(key) is None
+
+
+import asyncio
+from src.mcp.service import HorizonPipelineService
+
+
+def _fake_run_pipeline_factory(items_payload):
+    async def fake_run_pipeline(self, **kwargs):
+        return {"run_id": "20260521-cached", "fetch": {}, "score": {},
+                "filter": {}, "enrich": {}, "summaries": [], "meta": {}}
+    return fake_run_pipeline
+
+
+def _fake_get_run_stage(items_payload):
+    def loader(self, run_id, stage, max_items=200):
+        return {"items": items_payload, "count": len(items_payload)}
+    return loader
+
+
+def test_get_briefing_second_call_returns_cached_true(tmp_path, monkeypatch):
+    enriched = [{"title": "ai update", "url": "u1", "source_type": "rss",
+                 "ai_score": 9.0, "ai_summary": "ai inference"}]
+    monkeypatch.setattr(HorizonPipelineService, "run_pipeline",
+                        _fake_run_pipeline_factory(enriched))
+    monkeypatch.setattr(HorizonPipelineService, "get_run_stage",
+                        _fake_get_run_stage(enriched))
+
+    service = HorizonPipelineService(runs_root=tmp_path / "mcp-runs")
+    fixed_now = [1_000.0]
+    service.briefing_cache.now = lambda: fixed_now[0]
+
+    first = asyncio.run(service.get_briefing(topic="AI", hours=24, language="zh"))
+    assert first["cached"] is False
+
+    fixed_now[0] = 1_030.0
+    second = asyncio.run(service.get_briefing(topic="AI", hours=24, language="zh"))
+    assert second["cached"] is True
+    assert "cached_until" in second
+    assert second["items"] == first["items"]
+
+
+def test_force_refresh_bypasses_cache(tmp_path, monkeypatch):
+    enriched = [{"title": "x", "url": "u1", "source_type": "rss",
+                 "ai_score": 9.0, "ai_summary": "ai"}]
+    pipeline_calls = {"n": 0}
+
+    async def counting_run_pipeline(self, **kwargs):
+        pipeline_calls["n"] += 1
+        return {"run_id": f"run-{pipeline_calls['n']}", "fetch": {},
+                "score": {}, "filter": {}, "enrich": {}, "summaries": [], "meta": {}}
+
+    monkeypatch.setattr(HorizonPipelineService, "run_pipeline", counting_run_pipeline)
+    monkeypatch.setattr(HorizonPipelineService, "get_run_stage",
+                        _fake_get_run_stage(enriched))
+
+    service = HorizonPipelineService(runs_root=tmp_path / "mcp-runs")
+    asyncio.run(service.get_briefing(topic="AI"))
+    asyncio.run(service.get_briefing(topic="AI", force_refresh=True))
+    assert pipeline_calls["n"] == 2

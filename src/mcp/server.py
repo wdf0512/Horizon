@@ -174,6 +174,7 @@ async def hz_fetch_items(
 async def hz_score_items(
     run_id: str,
     source_stage: str = "raw",
+    topic_keywords: list[str] | None = None,
     horizon_path: str | None = None,
     config_path: str | None = None,
 ) -> dict[str, Any]:
@@ -184,6 +185,7 @@ async def hz_score_items(
         lambda: service.score_items(
             run_id=run_id,
             source_stage=source_stage,
+            topic_keywords=topic_keywords,
             horizon_path=horizon_path,
             config_path=config_path,
         ),
@@ -268,6 +270,7 @@ async def hz_run_pipeline(
     sources: list[str] | None = None,
     enrich: bool = True,
     topic_dedup: bool = True,
+    topic_keywords: list[str] | None = None,
     save_to_horizon_data: bool = False,
 ) -> dict[str, Any]:
     """Run fetch -> score -> filter -> enrich -> summarize in one call."""
@@ -283,6 +286,7 @@ async def hz_run_pipeline(
             sources=sources,
             enrich=enrich,
             topic_dedup=topic_dedup,
+            topic_keywords=topic_keywords,
             save_to_horizon_data=save_to_horizon_data,
         ),
     )

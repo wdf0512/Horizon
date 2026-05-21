@@ -65,3 +65,84 @@ def test_analyze_batch_empty_topic_keywords_treated_as_none():
     ))
     _, user = client.calls[0]
     assert "Topic relevance" not in user
+
+
+from src.mcp.service import HorizonPipelineService
+from src.mcp.errors import HorizonMcpError
+
+
+def test_score_items_forwards_topic_keywords_to_analyzer(tmp_path, monkeypatch):
+    """When topic_keywords is passed, the analyzer receives it."""
+
+    captured = {"topic_keywords": "<not-called>"}
+
+    class FakeAnalyzer:
+        def __init__(self, client): pass
+        async def analyze_batch(self, items, topic_keywords=None):
+            captured["topic_keywords"] = topic_keywords
+            return items
+
+    config_path = tmp_path / "config.json"
+    config_path.write_text("{}")
+
+    fake_runtime = type("R", (), {
+        "create_ai_client": lambda self, ai: object(),
+        "ContentAnalyzer": FakeAnalyzer,
+    })()
+    fake_config = type("C", (), {
+        "filtering": type("F", (), {"ai_score_threshold": 7.0})(),
+        "ai": None,
+    })()
+
+    service = HorizonPipelineService(runs_root=tmp_path / "mcp-runs")
+
+    from types import SimpleNamespace
+    monkeypatch.setattr(service, "_load_stage_items",
+                        lambda **kw: ([SimpleNamespace(ai_score=9.0)],
+                                      SimpleNamespace(runtime=fake_runtime, config=fake_config,
+                                                      horizon_path=tmp_path, config_path=config_path)))
+    monkeypatch.setattr("src.mcp.service.items_to_dicts", lambda items: [])
+    monkeypatch.setattr(service.run_store, "save_items", lambda *a, **kw: None)
+    monkeypatch.setattr(service.run_store, "update_meta", lambda *a, **kw: {})
+    monkeypatch.setattr(service.run_store, "run_dir", lambda run_id: tmp_path)
+
+    asyncio.run(service.score_items(
+        run_id="r1", topic_keywords=["llm", "inference"],
+    ))
+    assert captured["topic_keywords"] == ["llm", "inference"]
+
+
+def test_score_items_without_topic_keywords_passes_none(tmp_path, monkeypatch):
+    captured = {"topic_keywords": "<not-called>"}
+
+    class FakeAnalyzer:
+        def __init__(self, client): pass
+        async def analyze_batch(self, items, topic_keywords=None):
+            captured["topic_keywords"] = topic_keywords
+            return items
+
+    config_path = tmp_path / "config.json"
+    config_path.write_text("{}")
+
+    fake_runtime = type("R", (), {
+        "create_ai_client": lambda self, ai: object(),
+        "ContentAnalyzer": FakeAnalyzer,
+    })()
+    fake_config = type("C", (), {
+        "filtering": type("F", (), {"ai_score_threshold": 7.0})(),
+        "ai": None,
+    })()
+
+    service = HorizonPipelineService(runs_root=tmp_path / "mcp-runs")
+    from types import SimpleNamespace
+    monkeypatch.setattr(service, "_load_stage_items",
+                        lambda **kw: ([SimpleNamespace(ai_score=9.0)],
+                                      SimpleNamespace(runtime=fake_runtime, config=fake_config,
+                                                      horizon_path=tmp_path, config_path=config_path)))
+    monkeypatch.setattr("src.mcp.service.items_to_dicts", lambda items: [])
+    monkeypatch.setattr(service.run_store, "save_items", lambda *a, **kw: None)
+    monkeypatch.setattr(service.run_store, "update_meta", lambda *a, **kw: {})
+    monkeypatch.setattr(service.run_store, "run_dir", lambda run_id: tmp_path)
+
+    asyncio.run(service.score_items(run_id="r1"))
+    assert captured["topic_keywords"] is None

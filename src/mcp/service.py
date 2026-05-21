@@ -305,6 +305,7 @@ class HorizonPipelineService:
         self,
         run_id: str,
         source_stage: str = "raw",
+        topic_keywords: list[str] | None = None,
         horizon_path: str | None = None,
         config_path: str | None = None,
     ) -> dict[str, Any]:
@@ -320,7 +321,7 @@ class HorizonPipelineService:
 
         ai_client = ctx.runtime.create_ai_client(ctx.config.ai)
         analyzer = ctx.runtime.ContentAnalyzer(ai_client)
-        scored_items = await analyzer.analyze_batch(items)
+        scored_items = await analyzer.analyze_batch(items, topic_keywords=topic_keywords)
 
         self.run_store.save_items(run_id, "scored", items_to_dicts(scored_items))
         score_threshold = ctx.config.filtering.ai_score_threshold
@@ -501,6 +502,7 @@ class HorizonPipelineService:
         sources: list[str] | None = None,
         enrich: bool = True,
         topic_dedup: bool = True,
+        topic_keywords: list[str] | None = None,
         save_to_horizon_data: bool = False,
     ) -> dict[str, Any]:
         fetch_result = await self.fetch_items(
@@ -513,6 +515,7 @@ class HorizonPipelineService:
 
         score_result = await self.score_items(
             run_id=run_id,
+            topic_keywords=topic_keywords,
             horizon_path=horizon_path,
             config_path=config_path,
         )
@@ -625,6 +628,7 @@ class HorizonPipelineService:
             config_path=config_path,
             enrich=True,
             topic_dedup=True,
+            topic_keywords=keywords or None,
         )
         run_id = pipeline_result["run_id"]
 

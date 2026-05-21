@@ -669,6 +669,75 @@ class HorizonPipelineService:
         self.briefing_cache.set(cache_key, payload)
         return payload
 
+    async def search_history(
+        self,
+        query: str,
+        days: int = 30,
+        top_k: int = 10,
+        min_score: float = 7.0,
+    ) -> dict[str, Any]:
+        """Keyword + date-range search over enriched artifacts."""
+
+        if days <= 0 or top_k <= 0:
+            raise HorizonMcpError(
+                code="HZ_INVALID_INPUT",
+                message="days and top_k must be positive.",
+            )
+        q = query.strip().lower()
+        if not q:
+            raise HorizonMcpError(
+                code="HZ_INVALID_INPUT",
+                message="query must be non-empty.",
+            )
+
+        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+        candidates: list[dict[str, Any]] = []
+
+        for entry in self.run_store.list_runs(limit=500):
+            created_raw = entry.get("created_at")
+            if not created_raw:
+                continue
+            try:
+                created = datetime.fromisoformat(created_raw)
+            except ValueError:
+                continue
+            if created < cutoff:
+                continue
+            if not self.run_store.has_stage(entry["run_id"], "enriched"):
+                continue
+            try:
+                stage_items = self.run_store.load_items(entry["run_id"], "enriched")
+            except FileNotFoundError:
+                continue
+            for item in stage_items:
+                score = float(item.get("ai_score") or 0)
+                if score < min_score:
+                    continue
+                haystack = " ".join(
+                    str(item.get(field, "")).lower()
+                    for field in ("title", "ai_summary", "ai_reason")
+                )
+                if q in haystack:
+                    candidates.append({
+                        "run_id": entry["run_id"],
+                        "created_at": created_raw,
+                        "title": item.get("title"),
+                        "url": item.get("url"),
+                        "source": item.get("source_type"),
+                        "score": score,
+                        "summary": item.get("ai_summary"),
+                    })
+
+        candidates.sort(key=lambda it: it["score"], reverse=True)
+        items = candidates[:top_k]
+        return {
+            "query": query,
+            "days": days,
+            "min_score": min_score,
+            "count": len(items),
+            "items": items,
+        }
+
     def _build_context(
         self,
         horizon_path: str | None,

@@ -289,6 +289,39 @@ async def hz_run_pipeline(
 
 
 @mcp.tool()
+async def hz_get_briefing(
+    topic: str,
+    hours: int = 24,
+    count: int = 5,
+    language: str = "zh",
+    min_score: float = 7.0,
+    config_pack: str | None = None,
+    horizon_path: str | None = None,
+    config_path: str | None = None,
+) -> dict[str, Any]:
+    """Return a curated briefing of top-N items on a topic.
+
+    Wraps the full pipeline (fetch → score → filter → enrich) and filters
+    the enriched stage by topic keywords derived from `topic`. Cache layer
+    is added in a follow-up task.
+    """
+
+    return await _run_tool(
+        "hz_get_briefing",
+        lambda: service.get_briefing(
+            topic=topic,
+            hours=hours,
+            count=count,
+            language=language,
+            min_score=min_score,
+            config_pack=config_pack,
+            horizon_path=horizon_path,
+            config_path=config_path,
+        ),
+    )
+
+
+@mcp.tool()
 def hz_list_runs(limit: int = 20) -> dict[str, Any]:
     """List recent runs and stage states."""
 

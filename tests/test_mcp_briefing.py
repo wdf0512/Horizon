@@ -105,3 +105,28 @@ def test_get_briefing_rejects_bad_language(tmp_path):
     with pytest.raises(HorizonMcpError) as exc:
         asyncio.run(service.get_briefing(topic="x", language="fr"))
     assert exc.value.code == "HZ_INVALID_INPUT"
+
+
+def test_hz_get_briefing_tool_returns_ok_envelope(tmp_path, monkeypatch):
+    from src.mcp import server
+    enriched = [
+        {"title": "LLM bench", "url": "u1", "source_type": "rss",
+         "ai_score": 9.0, "ai_summary": "llm bench"},
+    ]
+    monkeypatch.setattr(HorizonPipelineService, "run_pipeline",
+                        _fake_run_pipeline_factory(enriched))
+    monkeypatch.setattr(HorizonPipelineService, "get_run_stage",
+                        _fake_load_items(enriched))
+
+    result = asyncio.run(server.hz_get_briefing(topic="LLM", count=3))
+    assert result["ok"] is True
+    assert result["tool"] == "hz_get_briefing"
+    assert result["data"]["item_count"] == 1
+    assert "duration_ms" in result["meta"]
+
+
+def test_hz_get_briefing_tool_returns_error_envelope_on_bad_language(monkeypatch):
+    from src.mcp import server
+    result = asyncio.run(server.hz_get_briefing(topic="x", language="fr"))
+    assert result["ok"] is False
+    assert result["error"]["code"] == "HZ_INVALID_INPUT"

@@ -563,6 +563,81 @@ class HorizonPipelineService:
             "meta": self.run_store.load_meta(run_id),
         }
 
+    async def get_briefing(
+        self,
+        topic: str,
+        hours: int = 24,
+        count: int = 5,
+        language: str = "zh",
+        min_score: float = 7.0,
+        config_pack: str | None = None,  # wired in Task 6.5
+        horizon_path: str | None = None,
+        config_path: str | None = None,
+    ) -> dict[str, Any]:
+        """One-call curated briefing: run pipeline, return top-N topic-relevant items."""
+
+        if language not in ("zh", "en"):
+            raise HorizonMcpError(
+                code="HZ_INVALID_INPUT",
+                message=f"language must be 'zh' or 'en', got {language!r}.",
+            )
+        if hours <= 0 or count <= 0:
+            raise HorizonMcpError(
+                code="HZ_INVALID_INPUT",
+                message="hours and count must be positive.",
+            )
+
+        keywords = _topic_to_keywords(topic)
+
+        pipeline_result = await self.run_pipeline(
+            hours=hours,
+            languages=[language],
+            threshold=min_score,
+            horizon_path=horizon_path,
+            config_path=config_path,
+            enrich=True,
+            topic_dedup=True,
+        )
+        run_id = pipeline_result["run_id"]
+
+        stage_payload = self.get_run_stage(run_id=run_id, stage="enriched", max_items=200)
+        items = stage_payload.get("items", [])
+
+        if keywords:
+            def matches(item: dict[str, Any]) -> bool:
+                haystack = " ".join(
+                    str(item.get(field, "")).lower()
+                    for field in ("title", "ai_summary", "ai_reason")
+                )
+                return any(kw in haystack for kw in keywords)
+            items = [it for it in items if matches(it)]
+
+        items.sort(key=lambda it: float(it.get("ai_score") or 0), reverse=True)
+        items = items[:count]
+
+        ranked = [
+            {
+                "rank": i + 1,
+                "title": it.get("title"),
+                "url": it.get("url"),
+                "source": it.get("source_type"),
+                "score": it.get("ai_score"),
+                "summary": it.get("ai_summary"),
+                "context": it.get("ai_context"),
+            }
+            for i, it in enumerate(items)
+        ]
+
+        return {
+            "topic": topic,
+            "language": language,
+            "time_window_hours": hours,
+            "cached": False,
+            "run_id": run_id,
+            "item_count": len(ranked),
+            "items": ranked,
+        }
+
     def _build_context(
         self,
         horizon_path: str | None,

@@ -30,6 +30,43 @@ def _default_runs_root() -> Path:
     return Path(__file__).resolve().parents[2] / "data" / "mcp-runs"
 
 
+_TOPIC_STOPWORDS = frozenset(
+    {
+        "a", "an", "the", "of", "and", "or", "in", "on", "at", "for",
+        "to", "by", "with", "from", "is", "are", "was", "were",
+    }
+)
+
+
+def _topic_to_keywords(topic: str) -> list[str]:
+    """Normalize a freeform topic string into a deduped keyword list.
+
+    Lowercases, splits on non-alphanumerics, drops stopwords, preserves order.
+    """
+    tokens: list[str] = []
+    current: list[str] = []
+    for ch in topic.lower():
+        if ch.isalnum():
+            current.append(ch)
+        else:
+            if current:
+                tokens.append("".join(current))
+                current = []
+    if current:
+        tokens.append("".join(current))
+
+    out: list[str] = []
+    seen: set[str] = set()
+    for tok in tokens:
+        if not tok or tok in _TOPIC_STOPWORDS:
+            continue
+        if tok in seen:
+            continue
+        seen.add(tok)
+        out.append(tok)
+    return out
+
+
 @dataclass
 class PipelineContext:
     """Resolved execution context per call."""

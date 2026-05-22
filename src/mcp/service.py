@@ -22,7 +22,9 @@ from .horizon_adapter import (
     make_storage,
     resolve_config_path,
     resolve_horizon_path,
+    load_config_pack as _load_config_pack,
 )
+load_config_pack = _load_config_pack  # exposed at module scope for test monkeypatching
 from .cache import BriefingCache, CacheKey
 from .run_store import RunStore
 from .subscriptions_store import SubscriptionStore
@@ -634,12 +636,21 @@ class HorizonPipelineService:
                 message="hours and count must be positive.",
             )
 
+        pack_keywords: list[str] = []
+        effective_min_score = min_score
+        if config_pack:
+            pack = load_config_pack(config_pack)
+            pack_keywords = list(pack.get("topic_keywords") or [])
+            pack_threshold = (pack.get("filtering") or {}).get("ai_score_threshold")
+            if pack_threshold is not None:
+                effective_min_score = float(pack_threshold)
+
         cache_key = CacheKey(
             tenant_id="default",
             topic=topic.strip().lower(),
             language=language,
             hours=hours,
-            min_score=min_score,
+            min_score=effective_min_score,
             config_pack=config_pack,
         )
 
@@ -655,12 +666,17 @@ class HorizonPipelineService:
                 payload["item_count"] = len(payload["items"])
                 return payload
 
-        keywords = _topic_to_keywords(topic)
+        topic_kw = _topic_to_keywords(topic)
+        seen: set[str] = set()
+        keywords = [
+            k for k in topic_kw + [pk.lower() for pk in pack_keywords]
+            if not (k in seen or seen.add(k))
+        ]
 
         pipeline_result = await self.run_pipeline(
             hours=hours,
             languages=[language],
-            threshold=min_score,
+            threshold=effective_min_score,
             horizon_path=horizon_path,
             config_path=config_path,
             enrich=True,

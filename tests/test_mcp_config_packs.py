@@ -65,3 +65,55 @@ def test_overseas_policy_pack_is_valid():
 def test_all_three_packs_have_readmes():
     for name in ["ai-developers", "livestream-compliance", "overseas-policy"]:
         assert (PACKS_DIR / f"{name}.README.md").exists(), f"missing README for {name}"
+
+
+import asyncio
+from src.mcp.service import HorizonPipelineService
+
+
+def test_get_briefing_merges_config_pack_keywords(tmp_path, monkeypatch):
+    fake_pack = {
+        "name": "x",
+        "description": "x",
+        "topic_keywords": ["vllm", "triton"],
+        "sources": {},
+        "filtering": {"ai_score_threshold": 8.0},
+    }
+    monkeypatch.setattr("src.mcp.service.load_config_pack", lambda name: fake_pack)
+
+    captured_kwargs = {}
+
+    async def fake_run_pipeline(self, **kwargs):
+        captured_kwargs.update(kwargs)
+        return {"run_id": "r", "fetch": {}, "score": {}, "filter": {},
+                "enrich": {}, "summaries": [], "meta": {}}
+
+    monkeypatch.setattr(HorizonPipelineService, "run_pipeline", fake_run_pipeline)
+    monkeypatch.setattr(HorizonPipelineService, "get_run_stage",
+                        lambda self, **kw: {"items": []})
+
+    service = HorizonPipelineService(runs_root=tmp_path / "mcp-runs")
+    asyncio.run(service.get_briefing(topic="LLM", config_pack="demo"))
+
+    kws = captured_kwargs["topic_keywords"]
+    assert "llm" in kws         # from topic
+    assert "vllm" in kws        # from pack
+    assert "triton" in kws      # from pack
+    assert captured_kwargs["threshold"] == 8.0  # pack overrode min_score
+
+
+def test_get_briefing_without_config_pack_unchanged(tmp_path, monkeypatch):
+    captured_kwargs = {}
+
+    async def fake_run_pipeline(self, **kwargs):
+        captured_kwargs.update(kwargs)
+        return {"run_id": "r", "fetch": {}, "score": {}, "filter": {},
+                "enrich": {}, "summaries": [], "meta": {}}
+
+    monkeypatch.setattr(HorizonPipelineService, "run_pipeline", fake_run_pipeline)
+    monkeypatch.setattr(HorizonPipelineService, "get_run_stage",
+                        lambda self, **kw: {"items": []})
+
+    service = HorizonPipelineService(runs_root=tmp_path / "mcp-runs")
+    asyncio.run(service.get_briefing(topic="LLM"))
+    assert captured_kwargs["threshold"] == 7.0

@@ -1,0 +1,17 @@
+{
+  "name": "Overseas Platform Policy",
+  "description": "Tracking TikTok / Shopify / Stripe / FTC policy changes affecting cross-border e-commerce.",
+  "topic_keywords": [
+    "tiktok", "shopify", "stripe", "ftc", "ban", "policy", "shop", "ads", "kyc", "sanctions"
+  ],
+  "sources": {
+    "rss": [
+      {"name": "TikTok Newsroom", "url": "https://newsroom.tiktok.com/en-us/rss", "enabled": true},
+      {"name": "Shopify Blog", "url": "https://www.shopify.com/blog.atom", "enabled": true},
+      {"name": "Stripe Blog", "url": "https://stripe.com/blog/feed.rss", "enabled": true},
+      {"name": "FTC Press Releases", "url": "https://www.ftc.gov/news-events/news/press-releases/rss", "enabled": true}
+    ]
+  },
+  "filtering": {"ai_score_threshold": 7.0},
+  "scoring_prompt_addendum": "Prioritize policy changes that affect cross-border sellers and payment flows."
+}

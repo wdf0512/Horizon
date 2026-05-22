@@ -35,3 +35,33 @@ def test_load_config_pack_rejects_path_traversal(tmp_path, monkeypatch):
     monkeypatch.setattr("src.mcp.horizon_adapter._CONFIG_PACKS_DIR", tmp_path)
     with pytest.raises(HorizonMcpError):
         load_config_pack("../etc/passwd")
+
+
+PACKS_DIR = Path(__file__).resolve().parents[1] / "config_packs"
+
+
+def test_ai_developers_pack_is_valid():
+    pack = json.loads((PACKS_DIR / "ai-developers.json").read_text(encoding="utf-8"))
+    assert pack["name"]
+    assert pack["description"]
+    assert len(pack["topic_keywords"]) >= 5
+    assert isinstance(pack["sources"], dict)
+
+
+def test_livestream_compliance_pack_is_valid():
+    pack = json.loads((PACKS_DIR / "livestream-compliance.json").read_text(encoding="utf-8"))
+    assert pack["name"]
+    assert len(pack["topic_keywords"]) >= 5
+    assert isinstance(pack["sources"], dict)
+
+
+def test_overseas_policy_pack_is_valid():
+    pack = json.loads((PACKS_DIR / "overseas-policy.json").read_text(encoding="utf-8"))
+    assert pack["name"]
+    assert len(pack["topic_keywords"]) >= 5
+    assert isinstance(pack["sources"], dict)
+
+
+def test_all_three_packs_have_readmes():
+    for name in ["ai-developers", "livestream-compliance", "overseas-policy"]:
+        assert (PACKS_DIR / f"{name}.README.md").exists(), f"missing README for {name}"

@@ -1,0 +1,17 @@
+{
+  "name": "直播电商合规",
+  "description": "中国直播电商商家/服务商的合规规则跟踪：抖音/快手/视频号/天猫/京东及监管动态。",
+  "topic_keywords": [
+    "合规", "处罚", "封号", "类目", "结算", "退款", "直播", "抖音", "快手", "samr", "市监", "电商法"
+  ],
+  "sources": {
+    "rss": [
+      {"name": "国家市监总局-市场监管动态", "url": "https://www.samr.gov.cn/rss.xml", "enabled": true}
+    ],
+    "telegram": [
+      {"channel": "ecom_compliance_cn", "enabled": true}
+    ]
+  },
+  "filtering": {"ai_score_threshold": 7.0},
+  "scoring_prompt_addendum": "重点关注是否涉及处罚机制、商家资质、结算/退款规则变更。"
+}

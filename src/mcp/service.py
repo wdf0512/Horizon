@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -24,6 +25,7 @@ from .horizon_adapter import (
 )
 from .cache import BriefingCache, CacheKey
 from .run_store import RunStore
+from .subscriptions_store import SubscriptionStore
 from ..services.webhook import WebhookNotifier
 
 
@@ -85,12 +87,47 @@ class HorizonPipelineService:
         self.runs_root = Path(runs_root).resolve() if runs_root else _default_runs_root().resolve()
         self._run_store: RunStore | None = None
         self.briefing_cache = BriefingCache(max_entries=256, default_ttl_seconds=3600)
+        self.subscriptions_path = self.runs_root.parent / "subscriptions.json"
+        self._subscription_store: SubscriptionStore | None = None
 
     @property
     def run_store(self) -> RunStore:
         if self._run_store is None:
             self._run_store = RunStore(self.runs_root)
         return self._run_store
+
+    @property
+    def subscription_store(self) -> SubscriptionStore:
+        if self._subscription_store is None:
+            self._subscription_store = SubscriptionStore(self.subscriptions_path)
+        return self._subscription_store
+
+    async def subscribe_topic(
+        self,
+        topic: str,
+        schedule: str = "0 9 * * *",
+        channels: list[str] | None = None,
+        config_pack: str | None = None,
+    ) -> dict[str, Any]:
+        ch = channels or ["webhook"]
+        sub = self.subscription_store.create(
+            topic=topic,
+            schedule=schedule,
+            channels=ch,
+            config_pack=config_pack,
+        )
+        return json.loads(sub.model_dump_json())
+
+    async def list_subscriptions(self) -> dict[str, Any]:
+        subs = self.subscription_store.list()
+        return {
+            "count": len(subs),
+            "items": [json.loads(s.model_dump_json()) for s in subs],
+        }
+
+    async def delete_subscription(self, subscription_id: str) -> dict[str, Any]:
+        deleted = self.subscription_store.delete(subscription_id)
+        return {"id": subscription_id, "deleted": deleted}
 
     def list_runs(self, limit: int = 20) -> dict[str, Any]:
         """List recent runs and stage availability."""

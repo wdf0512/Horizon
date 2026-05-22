@@ -343,6 +343,43 @@ async def hz_search_history(
 
 
 @mcp.tool()
+async def hz_subscribe_topic(
+    topic: str,
+    schedule: str = "0 9 * * *",
+    channels: list[str] | None = None,
+    config_pack: str | None = None,
+) -> dict[str, Any]:
+    """Create or update a topic subscription. Idempotent by topic."""
+
+    return await _run_tool(
+        "hz_subscribe_topic",
+        lambda: service.subscribe_topic(
+            topic=topic, schedule=schedule, channels=channels, config_pack=config_pack,
+        ),
+    )
+
+
+@mcp.tool()
+async def hz_list_subscriptions() -> dict[str, Any]:
+    """List active topic subscriptions."""
+
+    return await _run_tool(
+        "hz_list_subscriptions",
+        lambda: service.list_subscriptions(),
+    )
+
+
+@mcp.tool()
+async def hz_delete_subscription(subscription_id: str) -> dict[str, Any]:
+    """Delete a topic subscription by id."""
+
+    return await _run_tool(
+        "hz_delete_subscription",
+        lambda: service.delete_subscription(subscription_id=subscription_id),
+    )
+
+
+@mcp.tool()
 def hz_list_runs(limit: int = 20) -> dict[str, Any]:
     """List recent runs and stage states."""
 

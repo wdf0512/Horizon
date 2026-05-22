@@ -20,6 +20,24 @@ The MCP layer does not reimplement Horizon business logic. It reuses the existin
 | `hz_get_run_stage` | Read items from a run stage |
 | `hz_get_run_summary` | Read a generated summary |
 | `hz_get_metrics` | Read in-memory server metrics |
+| `hz_get_briefing` | Top-N curated items on a topic with cache |
+| `hz_search_history` | Keyword + date-range search over enriched history |
+| `hz_subscribe_topic` | Create or update a topic subscription |
+| `hz_list_subscriptions` | List active subscriptions |
+| `hz_delete_subscription` | Delete a subscription by id |
+
+## Topic-aware params
+
+`hz_run_pipeline` and `hz_score_items` now accept an optional `topic_keywords: list[str]` parameter. When supplied, scoring prompts include a `Topic relevance` dimension so high-score items skew toward the topic.
+
+## Config packs
+
+Three turnkey vertical bundles ship in `config_packs/`:
+- `ai-developers` — LLM/inference engineers
+- `livestream-compliance` — 中国直播电商合规
+- `overseas-policy` — TikTok/Stripe/FTC cross-border policy
+
+Pass `config_pack="<name>"` to `hz_get_briefing` or `hz_subscribe_topic` to apply.
 
 ## Resources
 

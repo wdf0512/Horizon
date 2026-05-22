@@ -35,19 +35,15 @@ def _default_runs_root() -> Path:
     return Path(__file__).resolve().parents[2] / "data" / "mcp-runs"
 
 
-_TOPIC_STOPWORDS = frozenset(
-    {
-        "a", "an", "the", "of", "and", "or", "in", "on", "at", "for",
-        "to", "by", "with", "from", "is", "are", "was", "were",
-    }
-)
-
-
 def _topic_to_keywords(topic: str) -> list[str]:
     """Normalize a freeform topic string into a deduped keyword list.
 
     Lowercases, splits on non-alphanumerics, drops stopwords, preserves order.
     """
+    stopwords = frozenset({
+        "a", "an", "the", "of", "and", "or", "in", "on", "at", "for",
+        "to", "by", "with", "from", "is", "are", "was", "were",
+    })
     tokens: list[str] = []
     current: list[str] = []
     for ch in topic.lower():
@@ -63,7 +59,7 @@ def _topic_to_keywords(topic: str) -> list[str]:
     out: list[str] = []
     seen: set[str] = set()
     for tok in tokens:
-        if not tok or tok in _TOPIC_STOPWORDS:
+        if not tok or tok in stopwords:
             continue
         if tok in seen:
             continue
@@ -623,6 +619,11 @@ class HorizonPipelineService:
 
         Uses an in-memory LRU+TTL cache. Subsequent identical calls within
         the TTL window return the cached payload with `cached=true`.
+
+        Note: the cache key intentionally does NOT include `count`. A cached
+        entry is truncated to the requested `count` on hit. Increasing `count`
+        within the TTL window will not produce more items — use
+        `force_refresh=True` to re-run the pipeline.
         """
 
         if language not in ("zh", "en"):
@@ -657,6 +658,10 @@ class HorizonPipelineService:
         if not force_refresh:
             cached_entry = self.briefing_cache.get_entry(cache_key)
             if cached_entry is not None:
+                # Shallow copy: top-level dict is independent so we can flip
+                # `cached`/`cached_until` and trim `items`, but inner item
+                # dicts are still shared with the cache entry. Callers must
+                # not mutate them in place.
                 payload = dict(cached_entry.value)
                 payload["cached"] = True
                 payload["cached_until"] = datetime.fromtimestamp(
@@ -750,14 +755,18 @@ class HorizonPipelineService:
         cutoff = datetime.now(timezone.utc) - timedelta(days=days)
         candidates: list[dict[str, Any]] = []
 
+        # TODO(phase2): paginate or move to Postgres; full-scan-then-filter
+        # scales linearly with run count.
         for entry in self.run_store.list_runs(limit=500):
             created_raw = entry.get("created_at")
             if not created_raw:
                 continue
             try:
                 created = datetime.fromisoformat(created_raw)
-            except ValueError:
+            except (ValueError, TypeError):
                 continue
+            if created.tzinfo is None:
+                created = created.replace(tzinfo=timezone.utc)
             if created < cutoff:
                 continue
             if not self.run_store.has_stage(entry["run_id"], "enriched"):

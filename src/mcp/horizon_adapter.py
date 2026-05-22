@@ -18,6 +18,8 @@ from .errors import HorizonMcpError
 
 VALID_SOURCES = {"github", "hackernews", "rss", "reddit", "telegram", "jinritemai"}
 ENV_KEY_RE = re.compile(r"^[A-Z_][A-Z0-9_]*$")
+_CONFIG_PACKS_DIR = Path(__file__).resolve().parents[2] / "config_packs"
+_CONFIG_PACK_NAME_RE = re.compile(r"^[a-z0-9][a-z0-9\-_]*$")
 
 
 @dataclass
@@ -320,3 +322,26 @@ def _resolve_secrets_path(horizon_path: Path) -> Path | None:
         if resolved.exists():
             return resolved
     return None
+
+
+def load_config_pack(name: str) -> dict[str, Any]:
+    """Load a config pack JSON file by name.
+
+    Pack name must match `^[a-z0-9][a-z0-9\\-_]*$` (no path separators).
+    Files live under repo-root/config_packs/<name>.json.
+    """
+    if not _CONFIG_PACK_NAME_RE.match(name or ""):
+        raise HorizonMcpError(
+            code="HZ_INVALID_INPUT",
+            message=f"invalid config_pack name: {name!r}",
+        )
+
+    pack_path = _CONFIG_PACKS_DIR / f"{name}.json"
+    if not pack_path.exists():
+        raise HorizonMcpError(
+            code="HZ_INVALID_INPUT",
+            message=f"config_pack not found: {name}",
+            details={"checked": str(pack_path)},
+        )
+    with pack_path.open("r", encoding="utf-8") as fh:
+        return json.load(fh)

@@ -5,234 +5,210 @@ date: 2026-05-22
 lang: en
 ---
 
-> From 51 items, 10 important content pieces were selected
+> From 53 items, 9 important content pieces were selected
 
 ---
 
-1. [SpaceX S-1 Reveals $1.25B/Month AI Compute Deal with Anthropic](#item-1) ⭐️ 9.0/10
-2. [Tencent Launches OS-Level AI Assistant Marvis with Offline Privacy Mode and Multi-Agent System](#item-2) ⭐️ 9.0/10
-3. [Project Hail Mary Stellar Chart Built with Real Gaia DR3 Data](#item-3) ⭐️ 8.0/10
-4. [Freenet Reborn: Decentralized Apps Using WASM Contracts and Commutative Merge](#item-4) ⭐️ 8.0/10
-5. [Local Video Indexing on MacBook with Gemma4-31B and 50GB Swap](#item-5) ⭐️ 8.0/10
-6. [Waymo pauses Atlanta service as its robotaxis keep driving into floods](#item-6) ⭐️ 8.0/10
-7. [Local News Outlets Limit Internet Archive Access, Threatening Digital Preservation](#item-7) ⭐️ 8.0/10
-8. [Datasette Agent: New AI Assistant Brings Conversational Queries and Charts to Datasette](#item-8) ⭐️ 8.0/10
-9. [Jensen Huang: Nvidia Has Basically Abandoned China AI Chip Market](#item-9) ⭐️ 8.0/10
-10. [AMD Ryzen AI Max 400 Series Launches with Up to 192 GB Memory](#item-10) ⭐️ 8.0/10
+1. [SpaceX S-1 Reveals $1.25B/Month Anthropic Cloud Deal for AI Compute](#item-1) ⭐️ 10.0/10
+2. [Nvidia largely abandons China AI chip market, cedes ground to Huawei](#item-2) ⭐️ 9.0/10
+3. [Project Hail Mary Interactive Star Chart Using GAIA's 1.8 Billion Stars](#item-3) ⭐️ 8.0/10
+4. [Waymo Pauses Atlanta Robotaxis After Repeated Flood Incidents](#item-4) ⭐️ 8.0/10
+5. [Seattle Shield Intel-Sharing Network Exposed in Investigative Report](#item-5) ⭐️ 8.0/10
+6. [Over 340 Local News Outlets Restrict Internet Archive's Access to Journalism](#item-6) ⭐️ 8.0/10
+7. [Google Tests AI-Powered Personalized Ads in Search, Expanding Direct Offers Pilot](#item-7) ⭐️ 8.0/10
+8. [Datasette Agent: A Conversational AI Assistant for Data Exploration](#item-8) ⭐️ 8.0/10
+9. [Codex now supports remote Mac operation while screen is locked](#item-9) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [SpaceX S-1 Reveals $1.25B/Month AI Compute Deal with Anthropic](https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything) ⭐️ 9.0/10
+## [SpaceX S-1 Reveals $1.25B/Month Anthropic Cloud Deal for AI Compute](https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything) ⭐️ 10.0/10
 
-SpaceX's SEC S-1 filing disclosed a cloud compute agreement in May 2026 under which Anthropic will pay $1.25 billion per month through May 2029 for access to the COLOSSUS and COLOSSUS II supercomputers, revealing a massive new AI infrastructure business for SpaceX. This deal instantly positions SpaceX as a dominant force in the AI cloud market, rivaling traditional hyperscalers, and unlocks a huge recurring revenue stream that could accelerate both SpaceX's and Anthropic's AI ambitions. The agreements include a ramp-up at reduced fees in May and June 2026, and either party can terminate with 90 days' notice. Anthropic has secured all capacity at the Colossus 1 data center, according to Wikipedia.
+SpaceX's SEC S-1 filing disclosed that Anthropic will pay $1.25 billion monthly for AI compute on its Colossus and Colossus II supercomputers, marking a dramatic entry into the cloud services market. This deal reshapes the AI computing landscape by positioning SpaceX as a formidable competitor to established cloud providers, and it underscores the immense financial scale required to train frontier AI models. The agreement allows termination with 90 days' notice, and capacity ramps in May and June 2026 at a reduced fee. Colossus II is currently training xAI's Grok 5 model, and the combined data centers exceed one gigawatt of power.
 
 rss · Simon Willison · May 20, 22:26
 
-**Background**: COLOSSUS is xAI's supercomputer cluster built in Memphis, Tennessee, currently the world's largest AI training system, originally designed to train Grok chatbots. SpaceX and xAI are closely linked through Elon Musk. Grok 5 is the forthcoming large language model being trained on COLOSSUS II, while the deal allows third-party access to those same resources, turning an internal asset into a commercial cloud service.
+**Background**: Colossus is the world's largest AI supercomputer, operational since July 2024 and originally built to train the Grok chatbot. SpaceX's S-1 filing for its IPO reveals that it is now utilizing this massive infrastructure—including the newer Colossus II—not only for its own AI models but also to sell compute capacity to external customers like Anthropic.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Colossus_(supercomputer)">Colossus (supercomputer)</a></li>
-<li><a href="https://x.ai/colossus">Colossus: The World's Largest AI Supercomputer | xAI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Colossus_(supercomputer)">Colossus (supercomputer) - Wikipedia</a></li>
+<li><a href="https://www.wired.com/story/spacex-ipo-anthropic-compute-finances-risks/">SpaceX IPO Filing Reveals Anthropic Is Paying $15 Billion a Year to Access Its Data Centers | WIRED</a></li>
+<li><a href="https://letsdatascience.com/news/anthropic-signs-125b-per-month-colossus-compute-deal-c892b829">Anthropic Signs $1.25B-per-Month Colossus Compute Deal | Let's Data Science</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#SpaceX`, `#Anthropic`, `#AI infrastructure`, `#cloud computing`, `#Grok`
+**Tags**: `#AI`, `#SpaceX`, `#Cloud Computing`, `#Infrastructure`, `#Anthropic`
 
 ---
 
 <a id="item-2"></a>
-## [Tencent Launches OS-Level AI Assistant Marvis with Offline Privacy Mode and Multi-Agent System](https://finance.sina.com.cn/jjxw/2026-05-21/doc-inhyrmmu5949795.shtml) ⭐️ 9.0/10
+## [Nvidia largely abandons China AI chip market, cedes ground to Huawei](https://www.cnbc.com/2026/05/21/nvidia-jensen-huang-china-ai-chip-market-huawei.html) ⭐️ 9.0/10
 
-Tencent officially released Marvis, an OS-level AI assistant that integrates six collaborative agents and supports a privacy mode using on-device large language models, allowing offline use without cloud data transfer. It is available for free download without invitation and offers 10 million free tokens per user daily. Marvis brings system-level AI agent capabilities with strong privacy guarantees to mainstream users, making it relevant for security-sensitive industries and workflow automation. By combining multi-agent collaboration with cross-device synchronization, it could democratize advanced AI agent experiences and reshape personal computing. Marvis uses a '1 main agent + 5 expert agent' architecture, with privacy mode powered by on-device models such as deepseek v4 and Hunyuan3. It supports local file and image search, one-click invocation of APK/EXE applications, and multi-device connectivity across PC, phone, and WeChat.
+Nvidia CEO Jensen Huang stated that due to U.S. export controls, the company has 'largely given up' the Chinese AI chip market, effectively conceding it to domestic players like Huawei. He also revealed that Nvidia told investors to hold 'zero expectation' of receiving licenses to sell advanced chips in China. This marks a major shift in the global AI chip supply chain; China was once at least a fifth of Nvidia's data center revenue, and its exit will accelerate the rise of domestic alternatives like Huawei's Ascend chips, directly impacting hardware choices for engineers and AI developers in the region. The strategic withdrawal follows an April 2026 Trump administration mandate requiring licenses for chip exports to China, effectively blocking Nvidia. Huang noted the company is instead directing capital toward supply chain expansion and a new $80 billion stock buyback program.
 
-telegram · zaihuapd · May 21, 10:00
+telegram · zaihuapd · May 21, 05:52
 
-**Background**: An OS-level AI assistant is embedded into the operating system as a middle layer, allowing direct control of files, apps, and hardware resources, unlike standalone chatbot apps. On-device large models run entirely on the user's device to ensure data never leaves the machine, critical for sensitive environments. AI agents are software systems that can autonomously plan, reason, and use tools to accomplish multi-step tasks, and Marvis orchestrates multiple specialized agents for complex workflows.
+**Background**: The U.S. has imposed escalating export controls on advanced AI semiconductors to China since 2022, initially preventing the sale of Nvidia's top-tier A100 and H100 GPUs. Nvidia responded by designing bandwidth-limited variants like the A800 and H800 specifically for the Chinese market, but subsequent rule updates later blocked those as well. Meanwhile, Huawei has been aggressively developing its Ascend series of AI chips, emerging as the primary domestic alternative capable of training large AI models.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://marvis.qq.com/">Marvis马维斯-更懂你的AI助手-腾讯Marvis官网</a></li>
-<li><a href="https://blog.csdn.net/weixin_44092861/article/details/161278597">腾讯 Marvis（马维斯）完整使用教程（2026 最新版）-CSDN博客</a></li>
-<li><a href="https://www.163.com/dy/article/KTF1P2N4055040N3.html">腾讯Marvis上线：操作系统级AI助手登场，一句话玩转电脑与跨端协同|知...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI助手`, `#端侧大模型`, `#腾讯`, `#隐私计算`, `#Agent`
+**Tags**: `#AI芯片`, `#出口管制`, `#中国市场`
 
 ---
 
 <a id="item-3"></a>
-## [Project Hail Mary Stellar Chart Built with Real Gaia DR3 Data](https://valhovey.github.io/gaia-mary/) ⭐️ 8.0/10
+## [Project Hail Mary Interactive Star Chart Using GAIA's 1.8 Billion Stars](https://valhovey.github.io/gaia-mary/) ⭐️ 8.0/10
 
-A developer created an interactive web-based stellar navigation chart for the fictional system from Andy Weir's novel 'Project Hail Mary,' rendering positions and colors of over 1.8 billion stars using ESA's Gaia DR3 dataset with a custom Python script. This project showcases how massive open astronomical datasets can be creatively merged with popular science fiction, inspiring interest in astronomy, data visualization, and demonstrating the educational potential of public data releases. The skybox uses custom rendered images from Gaia DR3; star positions and colors are taken from the dataset, except a few bright stars not included. The creator also noted that planet sizes, star sizes, and orbits are not to scale to avoid visual clutter.
+A developer created an interactive 3D stellar navigation chart for the sci-fi novel "Project Hail Mary" using ESA's GAIA DR3 dataset, rendering all 1.8+ billion stars with accurate positions and colors into custom skybox images. The project demonstrates how open scientific data can be repurposed for creative and educational experiences, bringing complex astronomy to a broader audience through a popular sci-fi narrative and sparking discussions on scale and data fidelity. Star positions and colors are directly from GAIA DR3, with a few missing bright stars added manually; planet sizes and orbits are deliberately not to scale, and the skybox is generated by a custom Python script.
 
 hackernews · speleo · May 21, 16:23 · [Discussion](https://news.ycombinator.com/item?id=48225297)
 
-**Background**: ESA's Gaia mission aims to create a precise 3D map of Milky Way stars. Its third data release (DR3) provides astrometry and photometry for roughly 1.8 billion stars, making it one of the most detailed stellar catalogs. 'Project Hail Mary' is a sci-fi novel about an astronaut traveling to a distant star system, so this chart applies real stellar data to a fictional interstellar navigation context.
+**Background**: ESA's GAIA satellite maps the Milky Way in 3D with high precision. Its third data release (DR3) from June 2022 provides data on over 1.8 billion stars, including positions, motions, and physical parameters. "Project Hail Mary" is a 2021 hard sci-fi novel by Andy Weir about an astronaut's interstellar journey to save humanity.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://gaia.aip.de/metadata/gaiadr3/">Gaia @AIP</a></li>
-<li><a href="https://arxiv.org/html/2312.03854v1">Gaia DR 3 data consistent with a short bar connected to a spiral arm</a></li>
+<li><a href="https://www.cosmos.esa.int/web/gaia/dr3">Gaia Data Release 3 contents summary - Gaia - Cosmos</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The response was enthusiastic. The creator, Val, detailed the use of Gaia DR3 and the rendering pipeline, while others highlighted the unrealistic scale—using analogies to show the true emptiness of space. Many expressed joy about the book and movie, shared similar book recommendations, and some branched into DIY star projector ideas.
+**Discussion**: The creator (Val) shared rendering details, while one commenter illustrated the vast emptiness of space by comparing orbital scales. Others expressed enthusiasm for the novel and similar books, and a few recommended the game Elite Dangerous for its realistic 1:1 galaxy simulation. Overall, the community praised the project's creativity and scientific foundation.
 
-**Tags**: `#astronomy`, `#data-visualization`, `#gaia`, `#science-fiction`, `#visualization`
+**Tags**: `#astrophysics`, `#data visualization`, `#open data`, `#web development`, `#science fiction`
 
 ---
 
 <a id="item-4"></a>
-## [Freenet Reborn: Decentralized Apps Using WASM Contracts and Commutative Merge](https://freenet.org/) ⭐️ 8.0/10
+## [Waymo Pauses Atlanta Robotaxis After Repeated Flood Incidents](https://techcrunch.com/2026/05/21/waymo-pauses-atlanta-service-as-its-robotaxis-keep-driving-into-floods/) ⭐️ 8.0/10
 
-Freenet has been redesigned from the ground up as a global key-value store where WebAssembly contracts act as keys, defining state validity and synchronization via a commutative merge operation. It has been live since December with early apps like the River group chat and Delta CMS. By using WASM contracts for decentralized state logic, Freenet enables flexible, browser-based apps without central servers, potentially reducing censorship and single points of failure. Its novel consistency mechanism could inspire new distributed system designs. Every contract must provide a merge function that is commutative, allowing state updates to spread virally and reach global consistency in seconds. Applications run locally in a browser and connect to the peer via WebSocket, but mobile support is not yet available.
+Waymo temporarily halted its robotaxi service in Atlanta after multiple incidents in which the autonomous vehicles drove into flooded streets, exposing flaws in handling severe weather and perception. This incident highlights that even leading autonomous driving systems struggle with edge cases like flooding, casting doubt on the near-term viability of fully driverless operation in all conditions and potentially affecting public trust and regulatory timelines. The Atlanta service was paused without a specified restart date, and the vehicles repeatedly misjudged water depths. A former Waymo employee noted the problem is known and simulated, but the system remains imperfect, and the company operates only in validated domains where safety confidence is high.
 
-hackernews · sanity · May 21, 14:34 · [Discussion](https://news.ycombinator.com/item?id=48223362)
+hackernews · mattas · May 21, 16:30 · [Discussion](https://news.ycombinator.com/item?id=48225426)
 
-**Background**: The original Freenet (now Hyphanet) was an early peer-to-peer network for anonymous publishing. WebAssembly (WASM) is a low-level bytecode that runs in browsers and other environments, enabling high performance. A commutative merge operation guarantees that combining updates in any order yields the same result, akin to eventually consistent data types like CRDTs.
+**Background**: Autonomous vehicles use sensors like cameras, lidar, and radar to perceive the environment. Edge cases are rare, unexpected scenarios—such as flooded roads—that system training often lacks, making them disproportionately responsible for serious failures. Waymo typically deploys only in areas where it has extensively tested and validated safety, but expanding to cities like Atlanta introduces novel weather challenges that existing solutions may not fully cover.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/CosmWasm/cosmwasm">GitHub - CosmWasm/cosmwasm: WebAssembly Smart Contracts for the Cosmos SDK · GitHub</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Commutative_property">Commutative property - Wikipedia</a></li>
+<li><a href="https://www.kognic.com/articles/edge-cases-autonomous-driving">Edge Cases in Autonomous Driving : Detection and Handling Guide</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0968090X18302134">Autonomous vehicle perception: The technology of today and ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed concern that the project was restarted without consulting the original development team, calling it an ivory-tower decision. Some critiqued the 'ghost key' spam prevention (donation-based) as potentially centralizing reputation, and alternatives like update logs were proposed for state synchronization.
+**Discussion**: Discussion was mixed: some considered this a normal operational learning step that can be fixed, while others voiced skepticism about the broader AI progress, noting that after years of investment, autonomous cars still fail in basic weather conditions. An insider acknowledged the problem is well-known and simulated, but highlighted that Waymo’s safety is maintained by limiting deployments to validated domains, implying that edge cases will persist.
 
-**Tags**: `#peer-to-peer`, `#decentralization`, `#WebAssembly`, `#key-value-store`, `#decentralized-applications`
+**Tags**: `#autonomous vehicles`, `#AI safety`, `#edge cases`, `#Waymo`, `#robotics`
 
 ---
 
 <a id="item-5"></a>
-## [Local Video Indexing on MacBook with Gemma4-31B and 50GB Swap](https://blog.simbastack.com/indexed-a-year-of-video-locally/) ⭐️ 8.0/10
+## [Seattle Shield Intel-Sharing Network Exposed in Investigative Report](https://prismreports.org/2026/05/20/seattle-shield-private-companies-surveillance/) ⭐️ 8.0/10
 
-A developer detailed a homebrew system that indexes a year of personal video on a 2021 MacBook using Google's Gemma4-31B model quantized to 4-bit, requiring 50GB of swap memory. The code has been open-sourced as the 'framedex' project under MIT license. This shows that powerful video-aware AI can run entirely on consumer laptops, making private, local media archives searchable without sending data to the cloud. It highlights the growing viability of edge computing for multimodal AI tasks. The 4-bit quantized Gemma4-31B model, about 19 GiB, still required 50GB of swap, raising concerns about SSD lifespan. The prototype extracts frames, generates descriptions, and clusters them, with plans to connect to DaVinci Resolve for assisted video editing.
+An investigative report by Prism revealed the existence and operations of Seattle Shield, a police-private intelligence-sharing network that includes Amazon, Facebook, the FBI, and other entities, focusing on monitoring protests and suspicious activities. The report highlights the lack of transparency in corporate–government surveillance partnerships, raising serious concerns about privacy, protest monitoring, and the erosion of civil liberties for residents and activists. The network requests behavior-based suspicious activity reports from member companies and circulates them among law enforcement and federal agencies. Some former participants, such as the Church of Scientology and the U.S. Navy, have since disengaged.
 
-hackernews · asenna · May 21, 14:01 · [Discussion](https://news.ycombinator.com/item?id=48222733)
+hackernews · root-parent · May 21, 17:55 · [Discussion](https://news.ycombinator.com/item?id=48226588)
 
-**Background**: Gemma4-31B is an open multimodal model from Google DeepMind that handles text and image inputs, and can process video as sequences of frames. 4-bit quantization reduces the precision of model weights to cut memory usage by about 75% compared to full 16-bit precision, enabling inference on devices with limited memory—but it can still push consumer hardware to its limits. Extended swap usage on SSDs can cause significant write amplification, potentially shortening drive life.
+**Background**: Intelligence-sharing networks like Seattle Shield are public-private partnerships designed to identify and mitigate potential threats, but they often operate with minimal oversight. Critics compare them to a 'panopticon', where pervasive surveillance chills lawful behavior. Such programs expanded after 9/11 but remain controversial due to their potential for abuse.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://huggingface.co/google/gemma-4-31B">google/gemma-4-31B · Hugging Face</a></li>
-<li><a href="https://huggingface.co/blog/4bit-transformers-bitsandbytes">Making LLMs even more accessible with bitsandbytes, 4-bit quantization and QLoRA</a></li>
+<li><a href="https://security-zone.info/cybersecurity/amazon-facebook-fbi-have-access-to-a-private-intelligence-sharing-network/">Amazon, Facebook, FBI have access to a private intelligence - sharing ...</a></li>
+<li><a href="https://flipso.com/p/sx1z7sgox">Amazon, Facebook, and ICE access Seattle police ... | Flipso</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters questioned the 50GB swap requirement, arguing that the quantized model should fit in RAM if other heavy apps were closed. The author quickly released a functional GitHub repo (framedex) and discussed extending it to multi-modal indexing and integration with DaVinci Resolve's face detection. Others shared their own experiences running similar tasks on older hardware with llama.cpp.
+**Discussion**: Community reaction was mixed: some users criticized the article’s title as sensationalist, noting that Amazon and Facebook were barely mentioned; others were surprised by the eclectic list of member groups; and a few shared personal anecdotes of police harassment for photography. The debate centered on whether the network is a benign neighborhood watch or a threat to democracy.
 
-**Tags**: `#local-llm`, `#video-indexing`, `#quantization`, `#edge-computing`, `#open-source`
+**Tags**: `#surveillance`, `#privacy`, `#law-enforcement`, `#seattle`, `#investigative-journalism`
 
 ---
 
 <a id="item-6"></a>
-## [Waymo pauses Atlanta service as its robotaxis keep driving into floods](https://techcrunch.com/2026/05/21/waymo-pauses-atlanta-service-as-its-robotaxis-keep-driving-into-floods/) ⭐️ 8.0/10
+## [Over 340 Local News Outlets Restrict Internet Archive's Access to Journalism](https://www.niemanlab.org/2026/05/more-than-340-local-news-outlets-are-limiting-the-internet-archives-access-to-their-journalism/) ⭐️ 8.0/10
 
-On May 21, 2026, Waymo suspended its robotaxi service in Atlanta after multiple incidents in which its autonomous vehicles drove into flooded streets, revealing a perception failure in detecting hazardous water conditions. This event underscores the persistent challenge of handling edge cases in autonomous driving, showing that even leading companies like Waymo still face serious perception gaps. It may slow expansion and raise questions about readiness for large-scale deployment, especially in diverse weather conditions. Waymo's sensor suite, which integrates cameras, LiDAR, and radar, was unable to distinguish between shallow puddles and dangerously deep flood zones, causing vehicles to become stranded. The company is now using the pause to collect data on flood scenarios to improve its perception system.
+More than 340 local news outlets have started blocking the Internet Archive's web crawlers, preventing the Wayback Machine from capturing and preserving their journalism for long-term access. This move threatens the historical record of local journalism, potentially erasing public access to news archives and undermining fact-checking, research, and cultural memory that depend on those records. The restriction is likely enforced through robots.txt or paywall mechanisms, and no widely adopted technical compromise, such as delayed access, has emerged. Over 340 outlets are affected, highlighting the growing conflict between news monetization and digital preservation.
 
-hackernews · mattas · May 21, 16:30 · [Discussion](https://news.ycombinator.com/item?id=48225426)
+hackernews · jaredwiener · May 21, 16:59 · [Discussion](https://news.ycombinator.com/item?id=48225838)
 
-**Background**: Autonomous vehicles use LiDAR, cameras, and radar to perceive the environment. Floodwaters present a unique challenge because water surfaces can appear as drivable ground to these sensors, and depth assessment is not straightforward. Waymo has operated robotaxi services in cities like Phoenix and San Francisco, but Atlanta's frequent heavy rainfall introduces a new failure mode that was not thoroughly encountered in drier climates.
+**Background**: The Internet Archive is a non-profit digital library founded in 1996 that runs the Wayback Machine, a web archive capturing periodic snapshots of websites. It serves as a vital tool for journalists, researchers, and the public to access historical web content that might otherwise disappear. Web archiving is a recognized practice for preserving digital heritage, with many national libraries and archives also engaging in it.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://grokipedia.com/page/Autonomous_vehicle_perception">Autonomous vehicle perception</a></li>
-<li><a href="https://www.gadgetreview.com/waymo-issues-recall-over-flood-detection-failure">Waymo Issues Recall Over Flood Detection Failure - Gadget Review</a></li>
-<li><a href="https://www.traffictechnologytoday.com/opinion/opinion-why-puddles-are-still-a-challenge-for-autonomous-vehicles.html">OPINION: Why puddles and floods are still... | Traffic Technology Today</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Internet_Archive">Internet Archive</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_archiving">Web archiving</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community reaction was mixed but largely understanding. Many recognized that encountering and learning from edge cases like floods is a natural part of autonomous vehicle deployment. However, some skeptics pointed out that after years of development, such basic perception failures raise doubts about the timeline for full autonomy. Others appreciated Waymo's cautious approach, prioritizing safety over service continuity.
+**Discussion**: Commenters voiced disappointment and concern over the potential permanent loss of information. Some suggested practical fixes like a one-week delay before archiving or micropayment systems, while others emphasized the importance of archives for fact-checking, tracking article changes, and preserving public records that were once freely available.
 
-**Tags**: `#autonomous vehicles`, `#AI safety`, `#Waymo`, `#flood detection`, `#deployment challenges`
+**Tags**: `#web-archiving`, `#journalism`, `#digital-preservation`, `#paywalls`, `#internet-archive`
 
 ---
 
 <a id="item-7"></a>
-## [Local News Outlets Limit Internet Archive Access, Threatening Digital Preservation](https://www.niemanlab.org/2026/05/more-than-340-local-news-outlets-are-limiting-the-internet-archives-access-to-their-journalism/) ⭐️ 8.0/10
+## [Google Tests AI-Powered Personalized Ads in Search, Expanding Direct Offers Pilot](https://blog.google/products/ads-commerce/google-marketing-live-search-ads/) ⭐️ 8.0/10
 
-More than 340 local news outlets are now blocking or restricting the Internet Archive's Wayback Machine from crawling and preserving their articles, reducing the long-term availability of these stories. This trend endangers digital preservation of journalism, making it harder for researchers, historians, and fact-checkers to access and verify information over time, and raises concerns about accountability as articles can be silently edited or deleted. The blocking often prevents immediate archiving, but community members suggest a compromise of allowing access after a one-week delay, when articles no longer generate advertising revenue. No technical specifics about the blocking mechanism were provided.
+Google is rolling out AI-generated ad formats in Search that use Gemini to dynamically write custom product explainers tailored to each user, while simultaneously expanding its Direct Offers pilot, which lets advertisers present exclusive promotional deals like discounts directly within AI Mode. This integration of persuasive conversational AI into core search results blurs the line between organic information and paid influence, raising urgent ethical concerns about user manipulation and the long-term erosion of search quality. The new formats leverage Gemini to pull relevant advertiser products and instantly generate personalized justifications for why a product suits the searcher. The Direct Offers pilot is an early example of agentic commerce, where Google's AI acts as a sales agent to bridge product research and purchase with exclusives like 20% off deals.
 
-hackernews · jaredwiener · May 21, 16:59 · [Discussion](https://news.ycombinator.com/item?id=48225838)
+hackernews · sofumel · May 21, 09:49 · [Discussion](https://news.ycombinator.com/item?id=48220105)
 
-**Background**: The Internet Archive's Wayback Machine crawls and stores snapshots of web pages, enabling users to view historical versions. Many news websites want to drive traffic to their live sites for ad revenue and prevent unauthorized reuse. After the pandemic, some local papers locked down archives that once contained public information, but cost and content control now drive the restrictions. Digital preservation is crucial as a significant portion of online content eventually disappears.
+**Background**: AI-generated ads are made possible by large language models like Gemini, which can interpret search intent and create context-aware copy. The Direct Offers pilot is part of Google's broader agentic commerce push, where AI automates the path from discovery to transaction. This announcement follows the gradual infusion of generative AI into Google Search, a shift that has already sparked debates over the distinction between useful results and paid promotions in the evolving AI Mode.
 
-**Discussion**: Commenters expressed concern that this undermines fact-checking and historical record-keeping, noting frequent silent edits or deletions of articles. Suggestions included a one-week embargo and micropayment systems, while others highlighted the broader problem of dead websites and disappearing public information.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.accelerateddigitalmedia.com/insights/agentic-commerce-googles-direct-offers-pilot-is-bringing-paid-ads-to-ai-mode/">Agentic Commerce: Google’s “ Direct Offers ” Pilot is Bringing Paid Ads...</a></li>
+<li><a href="https://www.luzern.co/direct-offers-googles-first-agentic-ad-format/">Direct Offers : Google’s First Agentic Ad Format – Luzern</a></li>
 
-**Tags**: `#internet-archive`, `#digital-preservation`, `#journalism`, `#web-archiving`, `#fact-checking`
+</ul>
+</details>
+
+**Discussion**: The community reaction is overwhelmingly negative, with many decrying the move as the ‘essence of the evil of AI ads.’ Commenters argue it trains AI to manipulate people even when they are aware of being influenced, and some predict Google Search will become useless. A minority viewpoint suggests Google could have waited for competitors to move first to gain market share, but no one defends the ethical implications.
+
+**Tags**: `#AI ads`, `#Google Search`, `#advertising ethics`, `#user manipulation`, `#search quality`
 
 ---
 
 <a id="item-8"></a>
-## [Datasette Agent: New AI Assistant Brings Conversational Queries and Charts to Datasette](https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything) ⭐️ 8.0/10
+## [Datasette Agent: A Conversational AI Assistant for Data Exploration](https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything) ⭐️ 8.0/10
 
-Simon Willison announced the first release of Datasette Agent, an extensible AI assistant that enables conversational querying of Datasette-hosted data using the LLM library, with optional plugin support for chart generation and image creation. It integrates Willison's LLM library with Datasette for the first time, lowering the barrier for data practitioners to interact with databases conversationally and visually, and extending the Datasette ecosystem with a plugin system. The live demo uses Gemini 3.1 Flash-Lite for cost and speed, and the tool generates SQL queries that are executed against Datasette. Three plugins have been released: datasette-agent-charts for Observable Plot charts, datasette-agent-openai-imagegen for image generation, and a multi-model chatbot tool.
+Datasette Agent, a new extensible AI assistant, has been released, bringing conversational querying and chart generation to the Datasette data exploration platform by integrating the LLM Python library. It makes data exploration more accessible by allowing natural language questions, and its plugin system enables custom capabilities like charting and image generation, benefiting anyone who works with data in Datasette. The live demo runs on Gemini 3.1 Flash-Lite for fast and cost-effective SQL generation; three plugins have been shipped, including datasette-agent-charts (powered by Observable Plot) and datasette-agent-openai-imagegen (using ChatGPT Images 2.0).
 
 rss · Simon Willison · May 21, 19:52
 
-**Background**: Datasette is an open-source multi-tool for exploring and publishing data, primarily running SQLite queries. The LLM Python library by Simon Willison is a CLI utility and library for interacting with large language models both remotely and locally, facilitating prompt execution and result storage. Datasette Agent combines these two, leveraging LLMs to translate natural language into SQL queries and returning results.
+**Background**: Datasette is an open-source tool by Simon Willison for exploring and publishing data as interactive websites and APIs. The LLM Python library is a utility to interact with large language models via command-line or code. Datasette Agent merges them to let users ask questions in plain English, which the assistant translates into SQL queries against the underlying databases, with optional plugins for extra features.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://simonwillison.net/2026/May/12/datasette/">Release: datasette 1.0a29 | Simon Willison’s Weblog</a></li>
+<li><a href="https://datasette.io/for/exploratory-analysis">Datasette for exploratory analysis</a></li>
+<li><a href="https://github.com/simonw/datasette">GitHub - simonw/ datasette : An open source multi-tool for exploring ...</a></li>
 <li><a href="https://github.com/underlines/awesome-ml/blob/master/llm-tools.md">awesome-ml/ llm -tools.md at master · underlines/awesome-ml · GitHub</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#datasette`, `#ai-assistant`, `#llm`, `#data-analysis`, `#python`
+**Tags**: `#datasette`, `#ai-assistant`, `#llm`, `#open-source`, `#data-exploration`
 
 ---
 
 <a id="item-9"></a>
-## [Jensen Huang: Nvidia Has Basically Abandoned China AI Chip Market](https://www.cnbc.com/2026/05/21/nvidia-jensen-huang-china-ai-chip-market-huawei.html) ⭐️ 8.0/10
+## [Codex now supports remote Mac operation while screen is locked](https://x.com/OpenAIDevs/status/2057536706778378692) ⭐️ 8.0/10
 
-Nvidia CEO Jensen Huang publicly stated that due to U.S. export controls, Nvidia has essentially given up on the Chinese AI chip market, ceding it to domestic companies such as Huawei. He revealed that the company told investors not to expect any licenses for selling advanced chips in China. This marks Nvidia's formal exit from a market that once accounted for at least 20% of its data center revenue, directly impacting supply chains and hardware choices for Chinese AI developers. It underscores the growing dominance of domestic alternatives like Huawei's Ascend series, accelerating China's push for AI chip self-sufficiency. The export control tightened in April 2026 when the Trump administration required licenses for chip exports to China, effectively barring Nvidia. Meanwhile, Huawei's latest Ascend 950PR inference chip (2026) delivers 1.56 PFLOPS with 112GB of memory, and DeepSeek V4 has become the first top-tier large language model to run entirely on Huawei Ascend 950PR, showcasing a shift from CUDA to Huawei's CANN ecosystem.
+OpenAI announced that Codex can now continue performing actions on a Mac even when the screen is locked, allowing users to remotely control approved applications from a connected device like a phone. This new “lock screen usage” capability extends the Computer Use feature to scenarios where the Mac is unattended. This eliminates a key limitation where AI-driven desktop automation halted when the Mac locked, enabling unattended workflows that can run overnight or while the user is away. It makes Codex more practical for developers building automated engineering tasks that require long-running, continuous computer interaction. The feature requires installing a plugin and granting screen recording and accessibility permissions. The temporary unlock is only valid for the current task and the system re-locks if local input is detected; initial availability excludes the European Economic Area, the United Kingdom, and Switzerland.
 
-telegram · zaihuapd · May 21, 05:52
+telegram · zaihuapd · May 22, 00:58
 
-**Background**: Nvidia has long dominated the global AI accelerator market with its GPUs and CUDA software platform, but successive US export restrictions on advanced semiconductors to China have increasingly limited its sales. Huawei's Ascend series aims to provide a domestic alternative, with its own CANN software stack and ecosystem partners like DeepSeek. The Chinese AI chip market is strategically important as the country pushes for technological self-reliance amid geopolitical tensions.
+**Background**: OpenAI Codex is a suite of AI coding agents that extends beyond code generation to include Computer Use — the ability to control desktop applications by clicking, typing, and navigating like a human. Traditionally, this automation stopped when a Mac was locked or the screen turned off. The new lock-screen support removes that barrier, allowing Codex to act as a persistent automated assistant, and builds on OpenAI's broader push toward agentic systems that can perform real-world tasks with minimal supervision.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://news.qq.com/rain/a/20250918A03W5A00">华为昇腾AI芯片路线图公布！_腾讯新闻</a></li>
-<li><a href="https://ascendai.csdn.net/69d716f30a2f6a37c59df6df.html">DeepSeek V4全面换装华为昇腾950PR：从CUDA到CANN的国产算力里程碑</a></li>
+<li><a href="https://openai.com/codex/">Codex | AI Coding Partner from OpenAI</a></li>
+<li><a href="https://grokipedia.com/page/OpenAI_Codex">OpenAI Codex</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI芯片`, `#出口管制`, `#市场动态`, `#华为昇腾`
-
----
-
-<a id="item-10"></a>
-## [AMD Ryzen AI Max 400 Series Launches with Up to 192 GB Memory](https://www.techpowerup.com/349218/amd-launches-the-ryzen-ai-max-400-series-processors-strix-halo-gets-a-memory-upgrade) ⭐️ 8.0/10
-
-AMD has introduced the Ryzen AI Max 400 series, an upgrade to the Strix Halo platform, with unified memory support up to 192 GB, allowing up to 160 GB to be allocated as graphics memory, and boosting CPU frequency to 5.2 GHz, GPU to 3.0 GHz, and NPU performance to 55 TOPS. This enables running large language models with over 300 billion parameters locally, offering AI developers a powerful tool for local inference and model debugging without cloud dependency. The initial PRO commercial models include a 16-core CPU with 40 CU iGPU (flagship 495), and 12-core and 8-core variants with 32 CU iGPU (490 and 485); consumer versions are planned for later this year.
-
-telegram · zaihuapd · May 21, 08:15
-
-**Background**: NPU (Neural Processing Unit) is a specialized processor designed to accelerate neural network and AI workloads. TOPS (Tera Operations Per Second) measures a chip's AI computational throughput, with higher values indicating better performance. Strix Halo is AMD's client APU platform that integrates CPU, GPU, and NPU on a single chip, first unveiled at CES 2025 as a direct response to Apple's M-series chips.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.ibm.com/think/topics/neural-processing-unit">What is a Neural Processing Unit (NPU)? | IBM</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/5595061242">一文看懂芯片算力TOPS - 知乎</a></li>
-<li><a href="https://news.qq.com/rain/a/20251021A01Q0700">AMD首颗客户端APU：Strix Halo详解_腾讯新闻</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#硬件`, `#AI处理器`, `#大模型推理`
+**Tags**: `#Codex`, `#macOS`, `#远程控制`, `#桌面自动化`, `#OpenAI`
 
 ---

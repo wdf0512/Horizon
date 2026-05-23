@@ -5,230 +5,262 @@ date: 2026-05-23
 lang: en
 ---
 
-> From 49 items, 10 important content pieces were selected
+> From 45 items, 12 important content pieces were selected
 
 ---
 
-1. [Pydantic v2.14.0a1 drops Python 3.9 and eval_type_backport](#item-1) ⭐️ 9.0/10
-2. [NVIDIA Nemotron-Labs Unveils Diffusion Language Models for Near-Light-Speed Text Generation](#item-2) ⭐️ 9.0/10
-3. [Shipping a laptop to a refugee camp in Uganda](#item-3) ⭐️ 8.0/10
-4. [Anthropic's Project Glasswing Update: High Accuracy in AI Vulnerability Detection](#item-4) ⭐️ 8.0/10
-5. [Antigravity 2.0 Tops OpenSCAD Architectural 3D LLM Benchmark](#item-5) ⭐️ 8.0/10
-6. [yt-dlp Deprecates Bun Support Over AI-Generated Rust Rewrite Concerns](#item-6) ⭐️ 8.0/10
-7. [US Funding Agencies Informally Restrict Publishing with Foreign Collaborators](#item-7) ⭐️ 8.0/10
-8. [DeepSeek Makes V4 Pro API Price Cut Permanent](#item-8) ⭐️ 8.0/10
-9. [AI-Driven HBM Boom Creates DDR and LPDDR Shortage, Raises Device Prices](#item-9) ⭐️ 8.0/10
-10. [ByteDance Open-Sources Lance: 3B Unified Multimodal Model](#item-10) ⭐️ 8.0/10
+1. [Pydantic v2.14.0a1 Drops Python 3.9 and eval_type_backport](#item-1) ⭐️ 9.0/10
+2. [ByteDance Open-Sources Lance, a 3B Unified Multimodal Model](#item-2) ⭐️ 9.0/10
+3. [Why Japanese Companies Do So Many Different Things](#item-3) ⭐️ 8.0/10
+4. [Kanbots: Open-Source Kanban Desktop App Runs Parallel AI Agents on Every Card](#item-4) ⭐️ 8.0/10
+5. [CISA Contractor Leaked Sensitive Data on Public GitHub Repository](#item-5) ⭐️ 8.0/10
+6. [SpaceX Launches Starship V3: Heat Shield Perfected, Engine Issues Persist](#item-6) ⭐️ 8.0/10
+7. [yt-dlp Deprecates Bun Support Over Unreviewable AI-Generated Code](#item-7) ⭐️ 8.0/10
+8. [U.S. Agencies Quietly Restrict Foreign Co-Authors on Grant-Funded Papers](#item-8) ⭐️ 8.0/10
+9. [AI-driven memory shortage set to hike consumer electronics prices](#item-9) ⭐️ 8.0/10
+10. [Simon Willison Releases Datasette Agent: AI Assistant for Conversational Data Queries](#item-10) ⭐️ 8.0/10
+11. [Nemotron Labs' Diffusion Language Model Aims for Near-Instant Text Generation](#item-11) ⭐️ 8.0/10
+12. [Specialized AI Models Outperform Large General-Purpose Ones in Procurement](#item-12) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Pydantic v2.14.0a1 drops Python 3.9 and eval_type_backport](https://github.com/pydantic/pydantic/releases/tag/v2.14.0a1) ⭐️ 9.0/10
+## [Pydantic v2.14.0a1 Drops Python 3.9 and eval_type_backport](https://github.com/pydantic/pydantic/releases/tag/v2.14.0a1) ⭐️ 9.0/10
 
-Pydantic v2.14.0a1 is an alpha release that drops support for Python 3.9, removes the internal `eval_type_backport()` utility, adds a PyEmscripten wheel for WebAssembly, and includes several mypy plugin fixes. Removing Python 3.9 and `eval_type_backport()` is a breaking change that forces users still on Python 3.9 to upgrade immediately. The PyEmscripten wheel expands Pydantic's reach to browser and WebAssembly environments via Pyodide. The `eval_type_backport()` function allowed forward references with newer typing syntax on older Python versions; its removal may break code that relied on it. The PyEmscripten wheel uses the `pyemscripten_2026_0` tag and requires Pyodide 314.0 or later, which is still in development.
+On May 22, 2026, Pydantic published v2.14.0a1, an alpha pre-release that drops support for Python 3.9, removes the eval_type_backport() compatibility function, and introduces initial PyEmscripten platform tag support for Pyodide. These breaking changes will force projects still on Python 3.9 to upgrade their Python version or freeze their Pydantic dependency, potentially disrupting deployments. The new PyEmscripten wheel extends Pydantic's availability to browser and Node.js environments via WebAssembly. The eval_type_backport() removal eliminates the workaround that let older Python versions use newer typing features; such code must be refactored. The PyEmscripten wheel requires Pyodide 314.0 or later (still in development), so production use is discouraged until a future Pydantic release.
 
 github · Viicos · May 22, 13:46
 
-**Background**: `eval_type_backport()` was an internal utility in Pydantic that enabled type annotations using features like `X | Y` (PEP 604) on Python versions before 3.10, where such syntax is not natively supported. The PyEmscripten platform tag is a standardized way to distribute Python wheels compiled to WebAssembly via Emscripten, allowing them to run in browser-based Python environments like Pyodide.
+**Background**: Pydantic is a popular Python data validation library. The eval_type_backport package, created by alexmojaki, patches typing._eval_type to support newer typing features on Python 3.9 and earlier, originally made for Pydantic's internal use (issue #7873). Python 3.9 reached end‑of‑life in October 2025, so dropping it aligns with industry trends. Pyodide is a CPython port to WebAssembly that runs Python in browsers and Node.js; it uses the pyemscripten platform tag to identify compatible wheels.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/pyodide/pyodide">GitHub - pyodide/pyodide: Pyodide is a Python distribution for the browser and Node.js based on WebAssembly · GitHub</a></li>
-<li><a href="https://github.com/pydantic/pydantic/blob/main/pydantic/_internal/_typing_extra.py">pydantic/pydantic/_internal/_ typing _extra.py at main · pydantic/pydantic</a></li>
-<li><a href="https://deepwiki.com/pydantic/pydantic/9.1-typing-utilities">Typing Utilities | pydantic/pydantic | DeepWiki</a></li>
+<li><a href="https://pypi.org/project/eval-type-backport/">eval-type-backport · PyPI</a></li>
+<li><a href="https://pyodide.org/">Pyodide — Version 0.29.4</a></li>
+<li><a href="https://github.com/alexmojaki/eval_type_backport">GitHub - alexmojaki/eval_type_backport: Like `typing._eval ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#breaking-change`, `#deprecation`
+**Tags**: `#breaking-change`
 
 ---
 
 <a id="item-2"></a>
-## [NVIDIA Nemotron-Labs Unveils Diffusion Language Models for Near-Light-Speed Text Generation](https://huggingface.co/blog/nvidia/nemotron-labs-diffusion) ⭐️ 9.0/10
+## [ByteDance Open-Sources Lance, a 3B Unified Multimodal Model](https://mp.weixin.qq.com/s/Xbfq72cr1796RZxJIs3L1A) ⭐️ 9.0/10
 
-NVIDIA Nemotron-Labs has introduced a new family of diffusion language models that generate text with near-instantaneous latency, using a parallel, non-autoregressive process. This represents a fundamental departure from traditional autoregressive models like GPT, which generate tokens sequentially. This breakthrough could drastically reduce inference times and costs for large language models, enabling real-time applications such as voice assistants, coding copilots, and on-device AI. It challenges the dominance of autoregressive architectures and could reshape the LLM landscape. The models are part of NVIDIA's open Nemotron family and leverage a hybrid Mamba-Transformer Mixture of Experts (MoE) architecture for efficiency. While specific diffusion-layer details are sparse, the approach promises near speed-of-light text generation by refining noise in parallel across all tokens.
+ByteDance has open-sourced Lance, a lightweight model with 3B activated parameters that natively unifies image and video understanding with image and video generation, releasing weights under Apache 2.0 on Hugging Face. A single small model that can both understand and generate visual content eliminates the need for separate systems, significantly simplifying architecture for multimodal applications and enabling more efficient on-device or cost-effective deployments. Lance uses a shared context with a dual-stream expert architecture: Qwen2.5-VL's ViT for understanding visual inputs and Wan2.2's decoder for generating outputs, combined with modality-aware position encodings to resolve sequence boundary confusion; it achieves state-of-the-art results on GenEval image generation and VBench video generation benchmarks.
 
-rss · Hugging Face Blog · May 23, 00:02
+telegram · zaihuapd · May 22, 06:40
 
-**Background**: Autoregressive language models, such as GPT, generate text one token at a time in sequence, leading to linear latency. Diffusion models, borrowed from image generation, instead start with random noise and iteratively denoise the entire sequence in parallel, drastically reducing generation time. NVIDIA's Nemotron family includes both autoregressive and now diffusion-based models aimed at efficient, high-performance AI.
+**Background**: Most multimodal models specialize in either understanding (e.g., visual question answering) or generation (e.g., text-to-image). Unifying these tasks in a single lightweight model is challenging. Lance achieves this by leveraging powerful existing backbones: Qwen2.5-VL’s vision transformer extracts semantic features for understanding, while Wan2.2’s decoder synthesizes images or videos. The dual-stream design separates the two expert capabilities while sharing a common token representation. Modality-aware position encodings help the model distinguish between text, image, and video tokens in the sequence, which is crucial when handling mixed modalities.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Nemotron">Nemotron - Wikipedia</a></li>
-<li><a href="https://medium.com/@vickythevgn/large-language-diffusion-models-b4d0e6826057">Large Language Diffusion Models . Welcome to a new... | Medium</a></li>
+<li><a href="https://www.ithome.com/0/953/848.htm">“拼好模”：字节跳动开源轻量原生统一多模态 AI 模型 Lance - IT之家</a></li>
+<li><a href="https://www.163.com/dy/article/KTHP2IAD0511B8LM.html">字节开源轻量原生统一多模态AI模型Lance - 网易</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#diffusion models`, `#language models`, `#NVIDIA`, `#text generation`, `#AI research`
+**Tags**: `#多模态模型`, `#开源`, `#字节跳动`, `#图像视频理解生成`
 
 ---
 
 <a id="item-3"></a>
-## [Shipping a laptop to a refugee camp in Uganda](https://notesbylex.com/shipping-a-laptop-to-a-refugee-camp-in-uganda) ⭐️ 8.0/10
+## [Why Japanese Companies Do So Many Different Things](https://davidoks.blog/p/why-japanese-companies-do-so-many) ⭐️ 8.0/10
 
-A firsthand account details the complex bureaucratic, corrupt, and logistical hurdles overcome to successfully ship a laptop to a refugee camp in Uganda, demonstrating the immense effort required for direct aid. This story exposes systemic corruption and red tape that inflate costs and block technology access in vulnerable communities, while also highlighting how individual perseverance and direct assistance can still make a tangible impact. The laptop's journey involved bribes to officials, unexpected import taxes, and reliance on strangers hand-carrying the device, reflecting common obstacles in informal aid delivery.
+A detailed analysis explains how Japan's lifetime employment system and corporate governance structure incentivize companies to continuously diversify into unrelated businesses, contrasting sharply with Western corporate focus on specialization. This insight reveals a fundamental driver of Japanese corporate strategy and economic rigidity, helping explain why famous Japanese firms like Yamaha or Hitachi make everything from motorcycles to medical devices. It also illuminates trade-offs between employee security and economic dynamism. The system relies on employees whose skills are tailored to the firm rather than transferable, and companies insulated from shareholder pressure exist primarily to perpetuate themselves—diversification thus becomes a means to keep workers employed and the organization alive.
 
-hackernews · lexandstuff · May 22, 21:36 · [Discussion](https://news.ycombinator.com/item?id=48241997)
+hackernews · d0ks · May 22, 15:22 · [Discussion](https://news.ycombinator.com/item?id=48237163)
 
-**Background**: Uganda hosts one of the world's largest refugee populations, often with limited infrastructure and high corruption. Shipping goods to remote camps is notoriously difficult, with formal channels expensive and unreliable, leading many to rely on personal networks or couriers.
+**Background**: Japan's post-war economic model featured lifetime employment at large firms, where workers are hired straight out of school and expected to stay until retirement. This created a 'company community' that resists layoffs, forcing firms to find new business lines when existing ones decline. In contrast, Western shareholder capitalism emphasizes core competencies and can downsize quickly.
 
-**Discussion**: Comments largely praise the recipient's resilience and criticize systemic corruption. Some share similar experiences of hand-carrying goods to Africa to avoid logistics failures. Others note that such stories are common but rarely documented with this level of detail.
+**Discussion**: Comments highlight that Westerners sometimes idealize this system without grasping its downsides, such as rigid labor markets that penalize those missing the new graduate hiring window. Others note that US firms like IBM were once highly diversified, and that the article's core argument—that the J-firm exists just to continue existing—is buried late in the post.
 
-**Tags**: `#refugee`, `#logistics`, `#corruption`, `#technology access`, `#personal narrative`
+**Tags**: `#japan`, `#corporate-culture`, `#lifetime-employment`, `#diversification`, `#business-history`
 
 ---
 
 <a id="item-4"></a>
-## [Anthropic's Project Glasswing Update: High Accuracy in AI Vulnerability Detection](https://www.anthropic.com/research/glasswing-initial-update) ⭐️ 8.0/10
+## [Kanbots: Open-Source Kanban Desktop App Runs Parallel AI Agents on Every Card](https://www.kanbots.dev/) ⭐️ 8.0/10
 
-Anthropic released an initial update for Project Glasswing, reporting that its AI vulnerability discovery system achieved high validation rates—90.6% of high/critical vulnerabilities assessed by independent firms were true positives. This demonstrates that AI can significantly improve software security by proactively finding vulnerabilities at scale, potentially benefiting critical open-source infrastructure and shifting defense strategies from reactive patching to AI-driven prevention. Out of 1,752 assessed high/critical vulnerabilities, 62.4% were confirmed high/critical severity; however, external experts like curl maintainer Daniel Steinberg argue the tool does not outperform existing tools to a significant degree.
+Kanbots is a new open-source, local-first Kanban desktop app that lets you assign autonomous AI coding agents to each card, running them in parallel. All data, worktrees, and configuration stay in a local .kanbots folder with no cloud server or telemetry required. By blending project management with parallel autonomous agents, Kanbots helps solo developers and small teams scale coding throughput while retaining full privacy and control. It also arrives at a time when similar local-first tools like Vibe Kanban have halted development, filling a gap for privacy-conscious developers. The app uses a local SQLite database and isolated per-agent worktrees, avoiding any external dependencies. Currently a desktop-only edition, it executes code autonomously on each card, but users note that reviewing and merging the results from parallel agents can be challenging without careful oversight.
 
-hackernews · louiereederson · May 22, 19:31 · [Discussion](https://news.ycombinator.com/item?id=48240419)
+hackernews · vitriapp · May 22, 18:17 · [Discussion](https://news.ycombinator.com/item?id=48239413)
 
-**Background**: Project Glasswing is Anthropic's initiative to secure critical open-source software using frontier AI models like Claude Mythos Preview. Open-source code underpins most modern infrastructure but is often maintained by volunteers with limited auditing resources. While traditional static analysis and linters catch common patterns, AI models aim to understand deeper code semantics, potentially identifying complex logic flaws that evade rule-based tools.
+**Background**: Local-first software stores the authoritative copy of data on the user's device, enabling offline work and data ownership. Parallel AI coding agents run multiple AI assistants simultaneously in separate workspaces, each tackling a different task, to speed up development. Autonomous task execution means agents plan and carry out code changes without step-by-step human guidance, though fully reliable autonomy is still evolving.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.anthropic.com/glasswing">Project Glasswing: Securing critical software for the AI era</a></li>
-<li><a href="https://www.anthropic.com/project/glasswing">Project Glasswing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Local-first_software">Local-first software</a></li>
+<li><a href="https://stoneforge.ai/blog/run-multiple-ai-coding-agents-parallel/">Run Multiple AI Coding Agents in Parallel — Stoneforge Blog</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community reactions are split: some users report 90% accuracy and consider the tool essential, while others like curl maintainer Daniel Steinberg express skepticism, citing no significant improvement over existing tools. Concerns were also raised about the expense of LLM tools when many teams already neglect cheaper static analysis, though the 90.6% true-positive rate impressed those familiar with AI vulnerability detection.
+**Discussion**: Community reactions are mixed: many praise the local-first, no-cloud approach, but some are skeptical of fully autonomous agents, citing difficulty in reviewing and merging unattended work. Comparisons to the now-stalled Vibe Kanban are common, with users seeing Kanbots as a promising alternative, though a few feel the UI is secondary to the underlying agent capabilities.
 
-**Tags**: `#AI security`, `#vulnerability detection`, `#Anthropic`, `#code analysis`, `#software security`
+**Tags**: `#open-source`, `#ai-agents`, `#kanban`, `#local-first`, `#developer-tools`
 
 ---
 
 <a id="item-5"></a>
-## [Antigravity 2.0 Tops OpenSCAD Architectural 3D LLM Benchmark](https://modelrift.com/blog/openscad-llm-benchmark/) ⭐️ 8.0/10
+## [CISA Contractor Leaked Sensitive Data on Public GitHub Repository](https://krebsonsecurity.com/2026/05/lawmakers-demand-answers-as-cisa-tries-to-contain-data-leak/) ⭐️ 8.0/10
 
-Antigravity 2.0, with Gemini 3.5 Flash, achieved a 4.5/5 quality score in the OpenSCAD LLM Benchmark, autonomously generating the Pantheon's interior ceiling coffers — a detail no other AI agent replicated without human guidance. It demonstrates that autonomous AI agents can now handle complex architectural geometry in script-based CAD, potentially streamlining design workflows and making advanced 3D modeling more accessible to non-experts. The benchmark tested six tools (Codex 5.5, Claude, Cursor, Antigravity, ModelRift), with Antigravity's Gemini 3.5 Flash output showing real dimensions and interior detail. Caveat: a single model and one attempt limit the benchmark's generalizability.
+A contractor for the Cybersecurity and Infrastructure Security Agency (CISA) exposed sensitive internal data on a public GitHub repository, prompting lawmakers to demand answers amid revelations of reduced election security efforts. The incident undermines confidence in the very agency tasked with defending US federal networks and critical infrastructure, raising serious questions about its own security posture and policy direction on election security. CISA stated that 'no sensitive data was compromised,' but the repository reportedly contained secrets and exhibited a pattern consistent with a contractor using GitHub as a scratchpad for syncing work, a fundamental credential management failure. The leak emerged concurrently with a senator's inquiry into why CISA was scaling back election security measures.
 
-hackernews · jetter · May 22, 10:38 · [Discussion](https://news.ycombinator.com/item?id=48234090)
+hackernews · speckx · May 22, 16:54 · [Discussion](https://news.ycombinator.com/item?id=48238429)
 
-**Background**: OpenSCAD is a free, script-only 3D CAD modeler that uses constructive solid geometry. LLMs are increasingly tested on generating its code. The Pantheon in Rome features a coffered concrete ceiling with an oculus, a classic architectural challenge for accurate 3D recreation.
+**Background**: CISA, part of the Department of Homeland Security, leads national efforts to understand, manage, and reduce risk to US cyber and physical infrastructure. It operates the EINSTEIN system to detect intrusions on federal networks. This incident is not the first severe lapse: the agency previously leaked millions of highly personal SF-86 background-check forms.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://modelrift.com/blog/openscad-llm-benchmark">OpenSCAD LLM Benchmark: Building the Pantheon</a></li>
-<li><a href="https://en.wikipedia.org/wiki/OpenSCAD">OpenSCAD</a></li>
-<li><a href="https://www.copecheck.com/v/antigravity-2-0-tops-the-openscad-architectural-3d-llm-bench-413a28e6">Antigravity 2.0 Tops the OpenSCAD Architectural 3D LLM Benchmark</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cybersecurity_and_Infrastructure_Security_Agency">Cybersecurity and Infrastructure Security Agency - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Reactions are mixed: one commenter praised Antigravity for autonomously looking inside the model, while others shared practical success stories with LLM-generated OpenSCAD parts. However, some expressed frustration with Antigravity's frequent login requirements and argued that one benchmark model is insufficient to judge overall capability.
+**Discussion**: Commenters overwhelmingly criticized the incident as an egregious basic security failure, with many pointing out that avoiding credentials in Git is fundamental. Others noted the timing of Tulsi Gabbard's resignation and CISA's scaling back of election security, suggesting a pattern of neglect. Some argued that technical controls could have prevented exposure, disputing the agency's claim that it was purely a human problem.
 
-**Tags**: `#AI`, `#OpenSCAD`, `#3D modeling`, `#LLM benchmark`, `#architecture`
+**Tags**: `#cybersecurity`, `#data-leak`, `#cisa`, `#government`, `#incident`
 
 ---
 
 <a id="item-6"></a>
-## [yt-dlp Deprecates Bun Support Over AI-Generated Rust Rewrite Concerns](https://github.com/yt-dlp/yt-dlp/issues/16766) ⭐️ 8.0/10
+## [SpaceX Launches Starship V3: Heat Shield Perfected, Engine Issues Persist](https://www.nbcnews.com/now/video/spacex-successfully-launches-prototype-of-starship-rocket-263835205505) ⭐️ 8.0/10
 
-yt-dlp has officially deprecated its support for the Bun JavaScript runtime, citing concerns that Bun's upcoming Rust rewrite, largely generated by an AI agent, may introduce maintainability and security risks. This decision highlights a growing debate in open-source software about the acceptability of AI-generated code in critical infrastructure, as maintainers weigh the risks of unvetted, large-scale code changes against the speed of AI tools. Bun's Rust rewrite, merged in version 1.3.14, introduced over one million lines of AI-generated code in six days, passing 99.8% of tests but raising concerns about edge-case bugs and long-term maintenance; yt-dlp's deprecation applies to existing and future Bun versions.
+SpaceX launched its Starship V3 prototype on May 21, demonstrating a near-perfect heat shield during reentry with no burn-through, but the booster suffered an engine failure and failed its boost-back burn, leading to a hard off-target water landing. The improved heat shield is a major step toward full reusability, but unreliable engine relight on the booster could delay plans for rapid turnaround and crewed lunar missions, raising questions about the 2028 timeline. The booster lost one engine early, then failed to reignite for the boost-back burn after stage separation; the landing burn did occur but was uncontrolled. Starship’s upper stage also lost an engine shortly after separation, yet its guidance system compensated precisely, achieving a targeted landing.
 
-hackernews · tamnd · May 22, 17:24 · [Discussion](https://news.ycombinator.com/item?id=48238789)
+hackernews · busymom0 · May 22, 23:41 · [Discussion](https://news.ycombinator.com/item?id=48242959)
 
-**Background**: Bun is a fast, all-in-one JavaScript runtime and toolkit originally written in Zig. yt-dlp is a popular open-source tool for downloading video and audio from YouTube and other sites. In May 2026, Bun's development team merged a Rust rewrite generated primarily by an AI agent in under a week, transitioning the codebase from Zig to Rust. This move sparked debate about the reliability of AI-generated code in production systems.
+**Background**: Starship is SpaceX’s fully reusable super heavy-lift rocket, intended for lunar and Mars missions. V3 introduces upgraded Raptor engines and a redesigned heat shield. The test program iterates rapidly, with each flight building on lessons from previous failures. Reliable engine reignition and landing of both stages are essential for the promised low-cost reusability.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Bun_(software)">Bun (software) - Wikipedia</a></li>
-<li><a href="https://www.theregister.com/devops/2026/05/14/anthropics-bun-rust-rewrite-merged-at-speed-of-ai/5240381">Anthropic’s Bun Rust rewrite merged at speed of AI</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Yt-dlp">Yt-dlp</a></li>
+<li><a href="https://www.nbcnews.com/now/video/spacex-successfully-launches-prototype-of-starship-rocket-263835205505">SpaceX successfully launches prototype of Starship rocket - NBC News</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ke_V1Dlw_lI">Replay! SpaceX launches Starship V3 megarocket for first time - YouTube</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community reactions are divided. Supporters emphasize the impracticality of fully reviewing 1 million lines of AI-generated code, thus justifying caution. Critics argue the deprecation is premature and politically motivated, pointing out that the rewrite hasn't caused observed issues yet and that the current Zig version also has stability problems. Some express disappointment with Bun's AI-heavy direction.
+**Discussion**: Commenters widely praised the heat shield breakthrough, declaring it “nailed,” but expressed concern over persistent engine failures. Some debated whether this progress is sufficient for a 2028 crewed landing, while others highlighted the guidance system’s impressive compensation. Scepticism remains about quick reusability and on-schedule lunar missions.
 
-**Tags**: `#AI`, `#software-engineering`, `#open-source`, `#bun`, `#yt-dlp`
+**Tags**: `#spacex`, `#starship`, `#rocketry`, `#engineering`, `#reusability`
 
 ---
 
 <a id="item-7"></a>
-## [US Funding Agencies Informally Restrict Publishing with Foreign Collaborators](https://www.science.org/content/article/u-s-researchers-face-new-restrictions-publishing-foreign-collaborators) ⭐️ 8.0/10
+## [yt-dlp Deprecates Bun Support Over Unreviewable AI-Generated Code](https://github.com/yt-dlp/yt-dlp/issues/16766) ⭐️ 8.0/10
 
-The US National Institutes of Health and NASA are informally imposing new restrictions on research publications co-authored with foreign collaborators, without any formal public guidance, causing confusion among researchers. This move may hinder international scientific collaboration, particularly in fields requiring global expertise, and raises significant concerns about academic freedom and the consistency of US research funding policies. The restrictions originate from long-standing 'foreign component' disclosure rules but are now applied to co-authorship, with agencies notifying grantees on a case-by-case basis instead of issuing official guidelines.
+The yt-dlp project has deprecated and limited support for the Bun JavaScript runtime, citing that a massive upcoming Rust rewrite in Bun (involving nearly one million lines of code) cannot be properly reviewed, raising concerns about 'vibe coding' and code quality. This decision highlights the growing tension in open-source maintainability when AI-generated code enters critical dependencies, affecting developers who rely on yt-dlp with Bun and prompting wider industry debate on how to balance innovation with software integrity. The deprecated support is not based on current bugs but on the inability to review the upcoming Rust-based Bun.rs rewrite, which may land in Bun 1.4 or 2.0; the project maintainers fear foreseeable compatibility and security issues without proper oversight.
 
-hackernews · ceejayoz · May 22, 16:23 · [Discussion](https://news.ycombinator.com/item?id=48238025)
+hackernews · tamnd · May 22, 17:24 · [Discussion](https://news.ycombinator.com/item?id=48238789)
 
-**Background**: Since at least 2003, US federal research grants have required disclosure of any significant 'foreign component'—typically involving resources or funding transferred outside the US. However, these rules were not previously interpreted to cover standard co-authorship on papers. Recent national security concerns and geopolitical tensions have prompted wider reinterpretation.
+**Background**: Bun is a fast, all-in-one JavaScript runtime designed as a drop-in replacement for Node.js, offering a bundler, transpiler, and package manager. yt-dlp is a popular command-line tool for downloading videos from thousands of sites. Vibe coding refers to the practice of using AI (like large language models) to generate source code from natural language prompts, often without detailed manual review. Bun's maintainers have been working on a significant rewrite in Rust, a systems programming language, which has led to concerns about code reviewability due to its size and AI involvement.
 
-**Discussion**: Commenters criticized the opacity of the guidelines and highlighted the asymmetrical access that US researchers face internationally. Some also noted that similar foreign component rules have technically existed but were not enforced for co-authorship, questioning the sudden, unofficial crackdown.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bun_(software)">Bun (software) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe coding - Wikipedia</a></li>
 
-**Tags**: `#research-policy`, `#international-collaboration`, `#science-funding`, `#academic-freedom`, `#US`
+</ul>
+</details>
+
+**Discussion**: Community reactions are mixed: some support the maintainers' right to refuse a major codebase they cannot review, while others argue the decision is political, as the Rust rewrite hasn't shipped yet and no concrete bugs have been observed. Many express sadness over Bun's direction after its Anthropic acquisition and the prevalence of 'vibe coding,' questioning long-term software quality.
+
+**Tags**: `#open-source`, `#Bun`, `#yt-dlp`, `#code-quality`, `#software-maintainability`
 
 ---
 
 <a id="item-8"></a>
-## [DeepSeek Makes V4 Pro API Price Cut Permanent](https://api-docs.deepseek.com/quick_start/pricing) ⭐️ 8.0/10
+## [U.S. Agencies Quietly Restrict Foreign Co-Authors on Grant-Funded Papers](https://www.science.org/content/article/u-s-researchers-face-new-restrictions-publishing-foreign-collaborators) ⭐️ 8.0/10
 
-DeepSeek announced that the API pricing for its V4 Pro model will be permanently set to one-quarter of the original price, following the end of a 75% discount promotion on May 31, 2026. This replaces the temporary promotion with a lasting cost reduction. The permanent price cut intensifies competition in the AI API market, making advanced reasoning models far more affordable for developers and startups. It pressures other providers to lower costs and aligns with DeepSeek's commitment to open, accessible AI. The new price becomes effective after the 75% promotion expires at 15:59 UTC on May 31, 2026. DeepSeek also reduced input cache hit prices to 1/10 of launch levels; for V4 Pro, a cache hit now costs just 0.8% of the input price, down from roughly 8% originally, which is exceptionally low compared to competitors.
+NIH and NASA are informally barring researchers from listing foreign collaborators as co-authors on papers funded by their grants, without issuing public guidance, causing widespread confusion. This threatens international scientific collaboration, undermines accurate productivity assessments, and may lead to funding cuts based on artificially deflated publication records. The restrictions have existed since at least 2003 but were only recently clarified to include co-authorship itself as a 'foreign component.' Papers with foreign co-authors are being excluded from progress reports to funders.
 
-hackernews · Tiberium · May 22, 15:59 · [Discussion](https://news.ycombinator.com/item?id=48237663)
+hackernews · ceejayoz · May 22, 16:23 · [Discussion](https://news.ycombinator.com/item?id=48238025)
 
-**Background**: DeepSeek is a Chinese AI company that gained global attention with its open-weight DeepSeek-R1 model in early 2025, sparking a wave of ultra-low-cost, high-performance AI. DeepSeek V4 Pro is their latest flagship model, a 1.6-trillion-parameter mixture-of-experts architecture with 49 billion active parameters, a 1-million-token context window, and three distinct thinking modes for complex reasoning. The company has consistently open-sourced its models and research to promote affordable AI.
+**Background**: NIH and NASA are major U.S. federal research funding agencies. Grant rules have long required prior approval for projects involving significant 'foreign components,' but these were historically not interpreted to cover routine co-authorship with foreign collaborators. The recent enforcement without formal guidance has left researchers uncertain about what is allowed.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/DeepSeek_(product)">DeepSeek (product)</a></li>
-<li><a href="https://huggingface.co/unsloth/DeepSeek-V4-Pro">unsloth/ DeepSeek - V 4 - Pro · Hugging Face</a></li>
+**Discussion**: Commenters express frustration over lack of transparency, note the asymmetry with China's restrictive collaboration policies, and warn that excluding papers from progress reports could create a pretext for future funding cuts.
 
-</ul>
-</details>
-
-**Discussion**: Comments are overwhelmingly positive, with users praising the value and performance of V4 Pro for coding and complex tasks. Some note that V4 Flash still offers better cost-performance for agentic workloads, while others highlight the remarkably low cache pricing, which even affects unit economics. Overall, the community sees DeepSeek’s moves as supportive of open-source AI and developer access.
-
-**Tags**: `#DeepSeek`, `#AI pricing`, `#API economy`, `#language models`, `#open-source`
+**Tags**: `#research policy`, `#international collaboration`, `#NIH`, `#NASA`, `#academic freedom`
 
 ---
 
 <a id="item-9"></a>
-## [AI-Driven HBM Boom Creates DDR and LPDDR Shortage, Raises Device Prices](https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone) ⭐️ 8.0/10
+## [AI-driven memory shortage set to hike consumer electronics prices](https://simonwillison.net/2026/May/22/memory-shortage/#atom-everything) ⭐️ 8.0/10
 
-The surging demand for high-bandwidth memory (HBM) from AI accelerators is consuming a disproportionately large share of DRAM manufacturing capacity, drastically reducing the production of DDR and LPDDR memory wafers for consumer electronics. This is directly increasing costs for devices like smartphones and laptops. This could make affordable consumer electronics significantly more expensive or harder to find, impacting billions globally. It also reflects how the AI infrastructure boom is reshaping the entire hardware supply chain, extending beyond GPU shortages to fundamental components like memory. Modern DRAM fabs cost $15–20 billion to build, and HBM's 3D-stacked design consumes much more die area, with a roughly 3-to-1 wafer conversion ratio relative to DDR5. Even though HBM is a small fraction of total DRAM output, its rapid growth is crowding out commodity memory supply.
+AI data centers' surging demand for high-bandwidth memory (HBM) is rapidly consuming a greater share of fixed wafer capacity, pushing its allocation from 2% to 20% by 2026 and causing a shortage that will drive up consumer electronics prices. Each gigabyte of HBM consumes over three times the wafer capacity of standard DDR or LPDDR memory. Rising memory costs will inflate prices of smartphones, laptops, and other devices, especially hurting cost-sensitive markets in Africa and South Asia that rely on sub-$100 gadgets. The shift highlights a growing tension between AI infrastructure spending and affordable consumer technology. The three remaining major memory manufacturers—Samsung, SK Hynix, and Micron—have learned from past oversupply crises to deliberately under-provision capacity, aiming to sustain high margins. Analysts expect the memory shortage to last at least until 2030.
 
-hackernews · d0ks · May 21, 21:55 · [Discussion](https://news.ycombinator.com/item?id=48229319)
+rss · Simon Willison · May 22, 22:01
 
-**Background**: DRAM is the main memory in computers and phones, with DDR used in PCs/laptops and LPDDR in mobile devices for low power. HBM is a specialized DRAM that uses 3D stacking and through-silicon vias to deliver very high bandwidth, used in AI accelerators like GPUs. All these memory types begin as wafers fabricated in the same enormously expensive DRAM manufacturing facilities, which take years and tens of billions of dollars to bring online. This shared capacity means that a surge in HBM production for AI directly reduces the number of wafers available for DDR and LPDDR, tightening supply and raising prices.
+**Background**: High-Bandwidth Memory (HBM) is a 3D-stacked DRAM architecture used in AI GPUs and high-performance computing, offering much higher bandwidth than standard DDR memory. Memory chips are produced on silicon wafers in costly fabrication plants. The DRAM market is dominated by three companies, which after previous boom-bust cycles now favor conservative capacity expansion to avoid losses.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory</a></li>
-<li><a href="https://en.wikipedia.org/wiki/LPDDR">LPDDR</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HBM_memory_shortage">HBM memory shortage</a></li>
+<li><a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters largely praised the article for its depth and clarity, with many shocked by the $15–20 billion fab cost and the 3:1 conversion ratio. Some linked the memory shortage to broader inflationary pressures from global conflicts, while others questioned whether rising RAM consumption trends in phones are also a factor in reduced affordability.
-
-**Tags**: `#memory`, `#DRAM`, `#HBM`, `#supply chain`, `#AI hardware`
+**Tags**: `#memory shortage`, `#HBM`, `#AI data centers`, `#consumer electronics`, `#supply chain`
 
 ---
 
 <a id="item-10"></a>
-## [ByteDance Open-Sources Lance: 3B Unified Multimodal Model](https://mp.weixin.qq.com/s/Xbfq72cr1796RZxJIs3L1A) ⭐️ 8.0/10
+## [Simon Willison Releases Datasette Agent: AI Assistant for Conversational Data Queries](https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything) ⭐️ 8.0/10
 
-ByteDance has open-sourced Lance, a lightweight 3B-parameter model that natively unifies image/video understanding, generation, and cross-modal editing, with weights available on Hugging Face under the Apache 2.0 license. This compact yet unified model lowers the barrier for deploying advanced multimodal AI on edge devices and in resource-limited settings, while its open-source license accelerates both research and commercial innovation. Lance uses a shared-context dual-stream expert architecture, with Qwen2.5-VL for understanding and Wan2.2 for generation, and introduces modality-aware position encoding to resolve sequence boundary confusion; it achieves leading results on GenEval and VBench benchmarks.
+On May 21, 2026, Simon Willison announced the first release of Datasette Agent, an extensible AI assistant for Datasette that enables users to ask natural language questions and generate charts about their data. A live demo running on Gemini 3.1 Flash-Lite showcases how it translates plain-language queries into SQL and returns structured results. This release brings large language model capabilities natively into a popular open-source data exploration tool, lowering the barrier for non-technical users to interact with databases. It demonstrates a practical and well-integrated AI agent for data analysis, aligning with the industry trend of embedding LLMs into everyday workflows. Datasette Agent is extensible via plugins; the initial set includes chart generation powered by Observable Plot and image generation via OpenAI. The demo uses Google's Gemini 3.1 Flash-Lite for cost and speed, and the system can execute generated SQL against any Datasette-connected SQLite database.
 
-telegram · zaihuapd · May 22, 06:40
+rss · Simon Willison · May 21, 19:52
 
-**Background**: Qwen2.5-VL is an open-source vision-language model from Alibaba Cloud, excelling at OCR and document understanding. Wan2.2 is the first open-source Mixture-of-Experts video generation model, capable of high-quality text/image-to-video synthesis. The dual-stream design separates understanding and generation for specialized optimization, and modality-aware position encoding assigns distinct positional representations to different modalities to prevent confusion when interleaving text, image, and video tokens.
+**Background**: Datasette is an open-source tool by Simon Willison for exploring, analyzing, and publishing SQLite databases. His LLM library is a Python CLI and tool for interacting with large language models. Datasette Agent combines these two projects, using LLM's tool-use capabilities to run AI-generated SQL queries and produce visualizations within the Datasette interface.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Qwen">Qwen</a></li>
-<li><a href="https://github.com/Wan-Video/Wan2.2">GitHub - Wan-Video/Wan2.2: Wan: Open and Advanced Large-Scale Video Generative Models · GitHub</a></li>
+<li><a href="https://github.com/simonw/llm">GitHub - simonw/llm: Access large language models from the command-line · GitHub</a></li>
+<li><a href="https://simonwillison.net/2025/May/27/llm-tools/">Large Language Models can run tools in your terminal with LLM 0.26</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#多模态模型`, `#开源模型`, `#图像视频生成`, `#轻量级模型`
+**Tags**: `#datasette`, `#llm`, `#ai-agent`, `#data-analysis`, `#open-source`
+
+---
+
+<a id="item-11"></a>
+## [Nemotron Labs' Diffusion Language Model Aims for Near-Instant Text Generation](https://huggingface.co/blog/nvidia/nemotron-labs-diffusion) ⭐️ 8.0/10
+
+Nemotron Labs (NVIDIA) has introduced a diffusion language model that generates text by reversing a noise process, breaking the sequential bottleneck of traditional autoregressive decoding. This promises to enable near-instant text generation, a significant departure from current methods. If successful, this approach could drastically reduce latency in text generation, making large models more practical for real-time interactions like chatbots and live translation. It challenges the prevailing assumption that sequential autoregressive generation is essential for high-quality language output. The model uses discrete diffusion to process text's categorical tokens, potentially enabling parallel token generation. However, the approach has yet to demonstrate performance and scaling on par with current large autoregressive models at similar sizes.
+
+rss · Hugging Face Blog · May 23, 00:02
+
+**Background**: In autoregressive language models, text is produced one token at a time, with each step depending on the previous output, leading to a cumulative delay. Diffusion models, originally developed for image generation, work by adding noise to data and then learning to reverse the process to generate clean samples, which can be done across all positions simultaneously. Adapting this to discrete text requires special techniques to represent and denoise tokens, an area of active research. Nemotron Labs' work builds on recent advances in discrete diffusion to apply this parallel generation paradigm to language.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://grokipedia.com/page/diffusion-language-model">Diffusion language model</a></li>
+<li><a href="https://huggingface.co/blog/ProCreations/diffusion-language-model">Diffusion Language Models: The New Paradigm</a></li>
+<li><a href="https://arxiv.org/abs/2502.09992">[2502.09992] Large Language Diffusion Models</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#diffusion models`, `#text generation`, `#natural language processing`, `#model efficiency`, `#Nemotron`
+
+---
+
+<a id="item-12"></a>
+## [Specialized AI Models Outperform Large General-Purpose Ones in Procurement](https://huggingface.co/blog/Dharma-AI/specialization-beats-scale) ⭐️ 8.0/10
+
+The blog post argues that specialized AI models frequently outperform their larger, general-purpose counterparts in real-world procurement decisions, offering better value and efficiency. This strategic variable is often overlooked by decision-makers. This perspective challenges the dominant assumption that bigger models are always better, potentially reshaping how organizations evaluate and invest in AI. It highlights a shift towards cost-effectiveness and task-specific performance as key procurement criteria. The argument centers on procurement contexts, where specialized models can achieve comparable or better results with a smaller computational footprint, leading to reduced infrastructure costs and faster deployment. This contrasts with large, general-purpose models that often bring excessive overhead for targeted business tasks.
+
+rss · Hugging Face Blog · May 22, 15:25
+
+**Background**: The AI industry has long focused on scaling up models to improve performance, with large general-purpose models like GPT-4 requiring massive resources. In contrast, specialized models tailored to specific tasks can deliver similar or better results more efficiently, a concept gaining traction as enterprises seek practical ROI from AI.
+
+**Tags**: `#AI`, `#machine learning`, `#specialization`, `#model efficiency`, `#procurement strategy`
 
 ---

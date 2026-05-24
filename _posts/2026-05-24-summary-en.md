@@ -5,36 +5,37 @@ date: 2026-05-24
 lang: en
 ---
 
-> From 34 items, 9 important content pieces were selected
+> From 39 items, 10 important content pieces were selected
 
 ---
 
-1. [Pydantic 2.14.0a1 Drops Python 3.9 and eval_type_backport](#item-1) ⭐️ 9.0/10
-2. [Nemotron-Labs Diffusion Model Promises Speed-of-Light Text Generation](#item-2) ⭐️ 9.0/10
-3. [Anthropic's Project Glasswing Finds Over 10,000 Critical Vulnerabilities in One Month](#item-3) ⭐️ 9.0/10
-4. [Apple Open Sources corecrypto with Formal Verification of Quantum-Safe Algorithms](#item-4) ⭐️ 9.0/10
-5. [HTML <dl> Element Deep Dive Triggers Semantic and Accessibility Discussion](#item-5) ⭐️ 8.0/10
-6. [C# Finally Gets Union Types in .NET 11 Preview 2](#item-6) ⭐️ 8.0/10
-7. [Intel 80386 microcode disassembled from die images](#item-7) ⭐️ 8.0/10
-8. [Making Deep Learning Go Brrrr from First Principles](#item-8) ⭐️ 8.0/10
-9. [Cloudflare's WAF misconfiguration caused 25-minute global outage impacting 28% of HTTP traffic](#item-9) ⭐️ 8.0/10
+1. [Pydantic v2.14.0a1 drops Python 3.9 support and eval_type_backport()](#item-1) ⭐️ 9.0/10
+2. [NVIDIA Nemotron-Labs Introduces Diffusion Language Models for Ultra-Fast Text Generation](#item-2) ⭐️ 9.0/10
+3. [Apple Open-Sources corecrypto with Formal Verification for Quantum-Safe Algorithms](#item-3) ⭐️ 9.0/10
+4. [Microsoft Open-Sources Earliest DOS Source Code, 86-DOS v0.1-C](#item-4) ⭐️ 8.0/10
+5. [AMD's Vivado 2026.1 Drops Linux Support for Free Tier](#item-5) ⭐️ 8.0/10
+6. [Wake up! 16b: A 16-Byte Audiovisual Demo Masterpiece](#item-6) ⭐️ 8.0/10
+7. [Scammers Abuse Internal Microsoft Account to Send Spam Links](#item-7) ⭐️ 8.0/10
+8. [Developer Leaves AWS After Four Years, Cites Deteriorating Support and AI Missteps](#item-8) ⭐️ 8.0/10
+9. [80386 Microcode Disassembled in Remarkable Reverse Engineering Effort](#item-9) ⭐️ 8.0/10
+10. [Google Docs Launches Docs Live for Voice-Driven Document Drafting with Gemini AI](#item-10) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Pydantic 2.14.0a1 Drops Python 3.9 and eval_type_backport](https://github.com/pydantic/pydantic/releases/tag/v2.14.0a1) ⭐️ 9.0/10
+## [Pydantic v2.14.0a1 drops Python 3.9 support and eval_type_backport()](https://github.com/pydantic/pydantic/releases/tag/v2.14.0a1) ⭐️ 9.0/10
 
-Pydantic's v2.14.0a1 alpha release drops support for Python 3.9 and removes the `eval_type_backport()` compatibility shim, introducing breaking changes alongside a new PyEmscripten wheel for pydantic-core and fixes for the Mypy plugin. Production systems still running Python 3.9 will be unable to upgrade to this version, compelling them to migrate to a newer Python runtime to receive future updates, security patches, and features. The removal of eval_type_backport eliminates a historical workaround for type annotation evaluation on legacy interpreters. The `eval_type_backport()` function, previously used to evaluate PEP 604 union types and other modern annotations on older Python versions, is removed; pydantic now relies on Python 3.10+ native mechanisms. The new PyEmscripten wheel (with the `pyemscripten_2026_0` tag) targets the still-in-development Pyodide 314.0 runtime for WebAssembly environments.
+Pydantic v2.14.0a1 is an alpha release that drops support for Python 3.9 and removes the eval_type_backport() utility, marking breaking changes. It also introduces experimental PyEmscripten platform tag support for Pyodide-based Python environments. Dropping Python 3.9 and eval_type_backport() aligns pydantic with the end-of-life Python 3.9 and resolves a TypeError that occurs with Python 3.14, ensuring forward compatibility. The new Emscripten wheel experimentally enables pydantic validation in browser-based Python runtimes like Pyodide, expanding its reach. eval_type_backport() removal addresses an incompatibility with Python 3.14 where its internal _eval_type function received an unexpected keyword argument, halting schema generation. The new PyEmscripten wheel targets Pyodide 314.0+ but is experimental; users are advised to wait for the final Pyodide release. Additionally, model_copy() now performs a shallow copy on unchanged fields for performance.
 
 github · Viicos · May 22, 13:46
 
-**Background**: Python 3.9 reached its end-of-life in November 2025, so many libraries are dropping support. The eval_type_backport package was a temporary bridge that allowed pydantic (and others) to evaluate newer typing constructs on Python <3.10 by backporting the `typing._eval_type` function. The PyEmscripten platform tag denotes Python builds compiled for Emscripten/Wasm, commonly used with Pyodide to run Python in the browser.
+**Background**: Pydantic is a data validation library using Python type hints. The eval_type_backport() function was used to evaluate newer type annotation syntax on older Python versions, but it breaks on Python 3.14. Pyodide is a Python distribution that runs in the browser via WebAssembly, and the new pydantic wheel uses the pyemscripten platform tag defined by Pyodide and tools like auditwheel-emscripten (PEP 776 outlines Emscripten support).
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/pydantic/pydantic/issues/9910">get install the `eval_type_backport` error, though don't use new types syntax · Issue #9910 · pydantic/pydantic</a></li>
-<li><a href="https://github.com/alexmojaki/eval_type_backport/">GitHub - alexmojaki/eval_type_backport: Like `typing._eval_type`, but lets older Python versions use newer typing features. · GitHub</a></li>
-<li><a href="https://pyodide.org/en/latest/development/abi.html">The PyEmscripten Platform — Version 314.0.0.dev0</a></li>
+<li><a href="https://pyodide.org/">Pyodide — Version 0.29.4</a></li>
+<li><a href="https://peps.python.org/pep-0776/">PEP 776 - Emscripten Support - peps.python.org</a></li>
+<li><a href="https://bijuhanta.web.id/blog/pydantic-and-python-3-14">Pydantic And Python 3.14: Ignoring Eval _ type _ backport</a></li>
 
 </ul>
 </details>
@@ -44,170 +45,185 @@ github · Viicos · May 22, 13:46
 ---
 
 <a id="item-2"></a>
-## [Nemotron-Labs Diffusion Model Promises Speed-of-Light Text Generation](https://huggingface.co/blog/nvidia/nemotron-labs-diffusion) ⭐️ 9.0/10
+## [NVIDIA Nemotron-Labs Introduces Diffusion Language Models for Ultra-Fast Text Generation](https://huggingface.co/blog/nvidia/nemotron-labs-diffusion) ⭐️ 9.0/10
 
-NVIDIA has introduced Nemotron-Labs Diffusion, a tri-mode language model that combines autoregressive, diffusion, and self-speculation decoding for dramatically faster text generation, as detailed in a research paper published five days ago. This breakthrough challenges the dominant autoregressive paradigm by enabling parallel token generation, potentially reducing inference time and costs by orders of magnitude for real-time applications. The model uses a joint AR-diffusion training objective and can dynamically switch between modes: autoregressive for quality, diffusion for speed via iterative denoising, and self-speculation for further acceleration while maintaining throughput.
+NVIDIA's Nemotron-Labs has proposed diffusion language models that generate text by iteratively denoising the full sequence in parallel, promising a dramatic leap in inference speed compared to traditional autoregressive models. If validated, this approach could represent a paradigm shift in efficient LLM inference, enabling much faster and more scalable real-time text generation for low-latency applications like chatbots and code assistants. The model leverages continuous diffusion processes for categorical data, but critical details such as training stability, text quality relative to autoregressive methods, and specific hardware requirements are still forthcoming.
 
 rss · Hugging Face Blog · May 23, 00:02
 
-**Background**: Traditional autoregressive models generate text one token at a time, causing latency proportional to output length. Diffusion language models instead iteratively denoise a sequence of masked tokens in parallel, akin to image generation, but text's discrete nature made this challenging. Nemotron-Labs Diffusion bridges this gap by combining both approaches.
+**Background**: Diffusion language models generate text by starting from random noise and iteratively refining the entire sequence all at once, as opposed to autoregressive models that generate tokens one by one. NVIDIA's Nemotron family includes several open-source language models with diverse architectures; this diffusion-based proposal marks a notable departure from their previous dense and mixture-of-experts designs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://research.nvidia.com/publication/2026-05_nemotron-labs-diffusion-tri-mode-language-model-unifying-autoregressive">Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Self-Speculation Decoding | Research</a></li>
-<li><a href="https://medium.com/@vickythevgn/large-language-diffusion-models-b4d0e6826057">Large Language Diffusion Models . Welcome to a new... | Medium</a></li>
+<li><a href="https://ranko-mosic.medium.com/large-language-diffusion-models-82d09602f7c9">Large Language Diffusion Models . Google text diffusion ... | Medium</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nemotron">Nemotron - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#diffusion language models`, `#text generation`, `#NVIDIA`, `#speed optimization`, `#natural language processing`
+**Tags**: `#diffusion models`, `#text generation`, `#NVIDIA`, `#language modeling`, `#efficient inference`
 
 ---
 
 <a id="item-3"></a>
-## [Anthropic's Project Glasswing Finds Over 10,000 Critical Vulnerabilities in One Month](https://www.anthropic.com/research/glasswing-initial-update) ⭐️ 9.0/10
+## [Apple Open-Sources corecrypto with Formal Verification for Quantum-Safe Algorithms](https://security.apple.com/blog/formal-verification-corecrypto/) ⭐️ 9.0/10
 
-Anthropic's Project Glasswing, powered by the Claude Mythos Preview model, discovered over 10,000 high or critical vulnerabilities in software from about 50 partners and scanned thousands of open-source projects, uncovering 6,202 such flaws with a 90.6% true positive rate among verified reports. This demonstrates that AI can dramatically accelerate vulnerability discovery, shifting the bottleneck from detection to remediation and pressuring the industry to shorten patch cycles as automated bug hunting becomes mainstream. The model achieved a 90.6% true positive rate on verified reports, but the sheer volume overwhelmed human triage and patching, leading open-source maintainers to ask for slower vulnerability reports. Anthropic has released Claude Security tools and partnered with the Open Source Security Foundation to help enterprises manage the flood.
-
-telegram · zaihuapd · May 23, 03:16
-
-**Background**: Project Glasswing is a defensive cybersecurity initiative by Anthropic, launched in April 2026, built around Claude Mythos Preview, a new frontier model more capable than previous Opus models. The project aims to secure critical software by leveraging this model's advanced code analysis, and it marks one of the first large-scale deployments of AI for automated vulnerability discovery.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.anthropic.com/glasswing">Project Glasswing : Securing critical software for the AI era \ Anthropic</a></li>
-<li><a href="https://cloud.google.com/blog/products/ai-machine-learning/claude-mythos-preview-on-vertex-ai">Claude Mythos Preview on Vertex AI | Google Cloud Blog</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI安全`, `#漏洞挖掘`, `#Anthropic`, `#安全自动化`
-
----
-
-<a id="item-4"></a>
-## [Apple Open Sources corecrypto with Formal Verification of Quantum-Safe Algorithms](https://security.apple.com/blog/formal-verification-corecrypto/) ⭐️ 9.0/10
-
-Apple has open-sourced its corecrypto library, releasing implementations of the post-quantum algorithms ML-KEM and ML-DSA along with end-to-end formal verification proofs. These proofs guarantee that both C code and hand-optimized ARM64 assembly strictly conform to NIST standards. This is the first public release of end-to-end formal verification for quantum-safe algorithms on such a massive scale, deployed on over 2.5 billion active devices where corecrypto provides foundational encryption. It sets a new benchmark for cryptographic assurance and demonstrates a strong commitment to post-quantum security. The verification covers both C code and hand-optimized ARM64 assembly; Apple also released custom verification tools and Isabelle theory libraries for independent expert assessment. The algorithms are lattice-based, standardized by NIST as FIPS 203 and FIPS 204, and resistant to attacks from future quantum computers.
+Apple released the source code of corecrypto, its fundamental cryptographic library, including implementations of the post-quantum algorithms ML-KEM and ML-DSA, along with the first end-to-end formal verification proofs. The proofs guarantee that the C code and hand-optimized ARM64 assembly strictly conform to NIST standards. corecrypto underpins encryption for over 2.5 billion active devices, including iMessage and VPN services, making this release a significant step toward practical quantum-resistant security at massive scale. It also sets a new bar for transparency and verification in critical software infrastructure. The release includes hand-optimized ARM64 assembly, custom verification tools, and an Isabelle theory library for independent review. The formal proofs cover the full chain from high-level mathematical specification down to the compiled hardware instructions.
 
 telegram · zaihuapd · May 23, 04:49
 
-**Background**: ML-KEM (Module-Lattice-Based Key-Encapsulation Mechanism) and ML-DSA (Module-Lattice-Based Digital Signature Algorithm) are post-quantum cryptographic algorithms recently standardized by NIST in 2024, designed to replace current public-key schemes vulnerable to quantum Shor's algorithm. Formal verification is a mathematical process that proves software exactly meets its specification, eliminating implementation bugs at the highest assurance level. Apple's corecrypto is the low-level cryptographic engine used across iOS, macOS, and other platforms for operations like encryption, key exchange, and digital signatures. The public release of these proofs advances trust in Apple's security infrastructure and encourages wider adoption of formal methods in critical software.
+**Background**: NIST standardized ML-KEM (formerly Kyber) and ML-DSA (Dilithium) as post-quantum cryptographic schemes resistant to future quantum computers. Formal verification is a mathematical technique that proves a program's implementation exactly matches its specification, eliminating entire classes of bugs. Apple leveraged the Isabelle proof assistant to create machine-checkable proofs that corecrypto faithfully implements the NIST algorithms.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/ML-KEM">ML-KEM</a></li>
-<li><a href="https://en.wikipedia.org/wiki/ML-DSA">ML-DSA</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9936.pdf">RFC 9936: Use of ML - KEM in the Cryptographic Message Syntax (CMS)</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Formal_verification">Formal verification</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#密码学`, `#形式化验证`, `#量子安全`
+**Tags**: `#安全`, `#量子计算`, `#形式化验证`, `#开源`, `#加密`
+
+---
+
+<a id="item-4"></a>
+## [Microsoft Open-Sources Earliest DOS Source Code, 86-DOS v0.1-C](https://arstechnica.com/gadgets/2026/04/microsoft-open-sources-the-earliest-dos-source-code-discovered-to-date/) ⭐️ 8.0/10
+
+Microsoft released the source code of 86-DOS version 0.1-C, the earliest known version of DOS, painstakingly recovered from decades-old paper printouts via OCR by a team of preservationists. This release preserves a foundational artifact of computing history that directly led to MS-DOS and the IBM PC revolution, offering an unprecedented look at the origins of the dominant PC operating system lineage. The code, written in 8086 assembly around 1980, was originally from Seattle Computer Products. Recovery required the DOS Disassembly Group to transcribe degraded printouts, as modern OCR software struggled with the paper quality.
+
+hackernews · DamnInteresting · May 24, 01:21 · [Discussion](https://news.ycombinator.com/item?id=48253386)
+
+**Background**: 86-DOS, internally called QDOS (Quick and Dirty Operating System), was developed by Seattle Computer Products for Intel 8086 systems. It shared command similarities with CP/M, making it easy to port software. Microsoft licensed and later purchased 86-DOS, evolving it into MS-DOS and IBM PC DOS, the foundation of the personal computer industry. Version 0.1-C is the oldest source code known to survive.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/86-DOS">86 - DOS - Wikipedia</a></li>
+<li><a href="https://archive.org/details/86-dos-version-0.1-c-serial-11-original-disk">86 DOS Version 0 . 1 C Serial # 11 ( ORIGINAL DISK)... : Internet Archive</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters expressed gratitude to Microsoft and marveled at the OCR recovery effort, noting that even earlier binary copies exist (e.g., v0.34). Several highlighted Microsoft's parallel open-sourcing of the early BASIC interpreter, and the overall sentiment was nostalgic appreciation for a time when a few thousand lines of assembly could launch a software empire.
+
+**Tags**: `#open-source`, `#retrocomputing`, `#microsoft`, `#dos`, `#computing-history`
 
 ---
 
 <a id="item-5"></a>
-## [HTML <dl> Element Deep Dive Triggers Semantic and Accessibility Discussion](https://benmyers.dev/blog/on-the-dl/) ⭐️ 8.0/10
+## [AMD's Vivado 2026.1 Drops Linux Support for Free Tier](https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US) ⭐️ 8.0/10
 
-A detailed 2021 blog post exploring the semantics, accessibility pitfalls, and real-world use of the HTML <dl> element gained renewed attention on Hacker News, sparking a lively debate with 370 upvotes and 110 comments. The discussion highlights the persistent ambiguity and implementation challenges of semantic HTML, directly affecting how screen readers and other assistive technologies interpret content, making it a crucial topic for inclusive web development. The <dl> element, renamed from 'definition list' to 'description list' in HTML5, has no inherent ARIA role; using aria-label on it is non-conforming, as noted by commenters. Its lineage extends to IBM's 1985 GML, and Tim Berners-Lee's first website heavily employed it.
+AMD is removing Linux support from the free Basic edition of Vivado starting with version 2026.1, leaving only Windows for no-cost users. This decision alienates students, educators, and hobbyists who rely on Linux for FPGA development, potentially slowing ecosystem growth and signaling a shift toward cost-cutting over community-friendly practices. The change applies only to the free tier; paid licenses still retain Linux support. AMD has not publicly explained the rationale, but community speculation points to reducing support overhead. Free users are left without a Linux-native toolchain for newer devices.
 
-hackernews · ravenical · May 23, 13:03 · [Discussion](https://news.ycombinator.com/item?id=48247325)
+hackernews · zdw · May 24, 04:14 · [Discussion](https://news.ycombinator.com/item?id=48254309)
 
-**Background**: Semantic HTML uses markup to convey meaning, not just presentation, aiding accessibility and SEO. The <dl> element represents a description list of term-description pairs (<dt> and <dd>). Proper ARIA roles and labels are crucial for screen readers, which rely on semantic information to navigate and interpret page structure.
+**Background**: Vivado Design Suite is AMD's (formerly Xilinx) IDE for FPGA synthesis, implementation, and debugging. The free Basic edition supports a subset of devices and is essential for learning and prototyping. Linux is the dominant platform in hardware design and open-source communities due to its flexibility and scriptable build flows.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl">HTML description list element - HTML | MDN</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Semantic_HTML">Semantic HTML</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vivado">Vivado</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FPGA">FPGA</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters debated the practicality of semantic HTML: one argued that <dl> is too inflexible for real-world designs, while others provided technical corrections about invalid aria-label usage. Historical roots from IBM's GML and the first website's heavy <dl> usage were highlighted, adding context about the element's evolution. The discussion reflected a mix of pragmatic frustration and a desire for cleaner, more accessible markup.
+**Discussion**: Response is overwhelmingly negative. Users argue Linux is critical for FPGA development and education; some saw it as another sign of AMD losing its engineering focus. Alternatives like Lattice were praised for more developer-friendly licensing, and frustration was voiced over ongoing license management hassles.
 
-**Tags**: `#HTML`, `#semantic HTML`, `#accessibility`, `#web development`, `#front-end`
+**Tags**: `#FPGA`, `#Vivado`, `#Linux`, `#AMD`, `#tools`
 
 ---
 
 <a id="item-6"></a>
-## [C# Finally Gets Union Types in .NET 11 Preview 2](https://andrewlock.net/exploring-the-dotnet-11-preview-2-dotnet-gets-union-types/) ⭐️ 8.0/10
+## [Wake up! 16b: A 16-Byte Audiovisual Demo Masterpiece](https://hellmood.111mb.de/wake_up_16b_writeup.html) ⭐️ 8.0/10
 
-C# is introducing union types in .NET 11 Preview 2, a long-requested language feature that allows developers to define types that can hold values of different kinds, improving type safety and expressiveness. Union types enable more precise modeling of data that can be in several states, reducing boilerplate code and runtime errors. This enhancement brings C# closer to languages like F# and TypeScript, making it more attractive for modern application development. The feature introduces a `union` keyword and supports pattern matching for exhaustiveness checks, but the precise syntax and integration details are still being refined. The current implementation is in preview and may evolve.
+A 16-byte computer program, 'Wake up! 16b', generates complex generative graphics and synchronized sound, demonstrating the pinnacle of size coding and demoscene artistry. This extreme compression proves how much audiovisual richness can be achieved with minimal code, inspiring programmers and pushing the boundaries of what is possible in creative computing. The demo is likely written in x86 real-mode assembly, directly manipulating video memory and the PC speaker, with all code and data condensed into exactly 16 bytes.
 
-hackernews · ingve · May 22, 12:28 · [Discussion](https://news.ycombinator.com/item?id=48234954)
+hackernews · MaximilianEmel · May 24, 00:30 · [Discussion](https://news.ycombinator.com/item?id=48253060)
 
-**Background**: Union types, also known as sum types or discriminated unions, are a fundamental concept in functional programming languages. They allow a variable to be one of several predefined types, each possibly carrying different data. C# already has enums and class hierarchies, but union types provide a more concise and type-safe way to express alternatives without the overhead of inheritance or the limitations of enums. In the C# community, this feature has been one of the most requested for over a decade, as it addresses common patterns like representing success/failure results or state machines.
+**Background**: The demoscene is an international computer art subculture focused on creating demos: self-contained programs that generate real-time audiovisual presentations. Size coding is a niche within it where programmers craft the smallest possible functional programs, often using assembly language to exploit hardware quirks.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.typescriptlang.org/docs/handbook/2/everyday-types.html">TypeScript: Documentation - Everyday Types</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Demoscene">Demoscene</a></li>
+<li><a href="http://www.sizecoding.org/wiki/Main_Page">SizeCoding.org</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community is largely enthusiastic, with long-time C# developers expressing relief that union types are finally arriving. Comments highlight that this feature has been awaited for a decade, and some note that F# has had it for years, pointing out C# gradually adopting functional features. Others appreciate that C# is adding high-performance capabilities while maintaining ease of use. A few joke about classic bugs that could be avoided with union types.
+**Discussion**: The community reacted with awe, sharing related demoscene gems like 'rainbow surf' and a recursive PowerPoint Sierpinski triangle. One user noted this 16-byte masterpiece surpasses a previous 32-byte demo that lacked sound, and another humorously confused '16b' with a 16-billion-parameter LLM.
 
-**Tags**: `#c#`, `#dotnet`, `#union-types`, `#programming-languages`, `#language-design`
+**Tags**: `#demoscene`, `#sizecoding`, `#assembly`, `#low-level`, `#optimization`
 
 ---
 
 <a id="item-7"></a>
-## [Intel 80386 microcode disassembled from die images](https://www.reenigne.org/blog/80386-microcode-disassembled/) ⭐️ 8.0/10
+## [Scammers Abuse Internal Microsoft Account to Send Spam Links](https://techcrunch.com/2026/05/21/scammers-are-abusing-an-internal-microsoft-account-to-send-spam/) ⭐️ 8.0/10
 
-A detailed disassembly of the Intel 80386 microprocessor's microcode has been published, extracted from high-resolution die photographs on the reenigne blog. This reveals the internal microprogram sequences that control instruction execution. This reverse-engineering achievement provides unprecedented visibility into a historically significant CPU's design, offering insights for x86 architecture study and inspiring open-source hardware projects like the z386 core. The microcode was lifted from a specific 80386 die revision, but the exact stepping is unknown; the disassembly likely covers instruction decode and complex execution sequences. Extraction relied on identifying the microcode ROM layout from die photos and decoding the bit patterns.
+Scammers have been exploiting an internal Microsoft account to send spam links that appear to originate from a legitimate Microsoft domain, successfully bypassing email filters. This incident reveals that even trusted internal channels can be weaponized, leaving users and automated defenses unable to distinguish genuine messages from malicious ones, which could lead to widespread phishing. The abuse involves a real account within Microsoft's infrastructure, making the emails pass authentication checks; subscribers who recognize domains like microsoftonline.com may be especially susceptible.
 
-hackernews · nand2mario · May 23, 12:11 · [Discussion](https://news.ycombinator.com/item?id=48247004)
+hackernews · spike021 · May 24, 00:51 · [Discussion](https://news.ycombinator.com/item?id=48253186)
 
-**Background**: Microcode is a low-level firmware inside a CPU that translates machine instructions (e.g., x86) into sequences of internal control signals, allowing complex instructions to be implemented with more flexibility than pure hardware. The Intel 80386, launched in 1985, was a landmark 32-bit processor that used microcode for many operations. Die shots are high-resolution photographs of a chip's silicon die, which reverse engineers can analyze to trace circuits and extract stored data like microcode.
+**Background**: Email spoofing is a technique where the sender address is forged to appear from a trusted source. Protocols like SPF, DKIM, and DMARC are designed to verify a sender's domain, but they cannot detect abuse when the email genuinely originates from a legitimate internal account. Microsoft uses a complex array of domains for different services, making it difficult for users to maintain a definitive list of legitimate senders.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Microcode">Microcode - Wikipedia</a></li>
-<li><a href="https://www.hackster.io/news/ken-shirriff-offers-an-introduction-to-reverse-engineering-cmos-chips-from-die-shots-baa40e81ca5a">Ken Shirriff Offers an Introduction to Reverse Engineering CMOS Chips From Die Shots - Hackster.io</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Email_spoofing">Email spoofing</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Readers were intrigued by the extraction process, asking how microcode can be reconstructed from die images. A related discussion about an open-source 80386 core built from the original microcode was linked, and a commenter stressed the importance of identifying the specific 80386 stepping due to many small changes during its long production run.
+**Discussion**: Commenters expressed frustration with Microsoft's messy domain management, noting that it's hard to tell if microsoftonline.com is even legitimate. Some shared similar experiences of spam arriving from trusted domains like Google and Booking.com, while others were relieved to learn that the issue was a compromised Microsoft account rather than their own password leak.
 
-**Tags**: `#microcode`, `#80386`, `#reverse-engineering`, `#CPU-architecture`, `#retro-computing`
+**Tags**: `#security`, `#phishing`, `#Microsoft`, `#spam`, `#vulnerability`
 
 ---
 
 <a id="item-8"></a>
-## [Making Deep Learning Go Brrrr from First Principles](https://horace.io/brrr_intro.html) ⭐️ 8.0/10
+## [Developer Leaves AWS After Four Years, Cites Deteriorating Support and AI Missteps](https://www.adventuresinoss.com/aws-four-years/) ⭐️ 8.0/10
 
-A 2022 blog post, 'Making deep learning go brrrr from first principles', has resurfaced on Hacker News with 159 points and 59 comments, offering a systematic, low-level analysis of deep learning performance bottlenecks and optimization tactics. The post bridges the gap between hardware capabilities and real-world ML software efficiency, exposing how even powerful GPUs are often underutilized. The ensuing discussion highlights fragmentation in inference runtimes and Python overhead, issues that directly affect cost and scalability for anyone deploying models. The analysis quantifies Python’s overhead: one Python FLOP corresponds to 9.75 million FLOPs on an A100 GPU. Commenters note NVIDIA’s sustained exponential growth in compute and bandwidth, the portability mess between ONNX, CUDA, and TensorRT runtimes, and the counterintuitive speed of chained method calls like x.cos().cos().
+A detailed personal account describes a developer's departure from AWS after four years, pointing to worsening customer support, complex billing, and forced adoption of immature generative AI features that fail to deliver real value. The critique resonates with a growing base of long-term users who see AWS shifting focus from reliable infrastructure to hype-driven AI, potentially eroding its competitive advantage and trust among enterprise customers. Support cases went unassigned for a week, billing questions could not be answered even by staff reading the same docs, and AI-generated slide content with misspellings was pushed as 'good enough' rather than customer-obsessed.
 
-hackernews · tosh · May 23, 11:50 · [Discussion](https://news.ycombinator.com/item?id=48246889)
+hackernews · RyeCombinator · May 24, 04:51 · [Discussion](https://news.ycombinator.com/item?id=48254475)
 
-**Background**: Deep learning models rely on GPUs for massive parallel computation. Performance depends on memory bandwidth, compute throughput, and software stack efficiency. ONNX is a model interchange format, and TensorRT is an NVIDIA inference optimizer, but they often yield inconsistent performance across different hardware and configurations.
+**Background**: AWS pioneered cloud computing in 2006, enabling companies to rent compute and storage instead of buying physical servers. For years, it dominated the market with a vast array of services. Recently, competition from Microsoft Azure and Google Cloud, along with the generative AI boom, has pressured AWS to integrate AI rapidly, sometimes at the expense of core operational excellence.
 
-**Discussion**: The community widely praised the post as a classic, with appreciation for its clarity on hardware-software mismatches. Key viewpoints: NVIDIA’s lead has been remarkably sustained; the inference runtime landscape (ONNX, TensorRT, etc.) is a “humongous mess”; and the staggering Python overhead prompted a detailed question about how x.cos().cos() outperforms two separate cos calls.
+**Discussion**: Comments broadly agree, with users sharing support horror stories (like a 7-day unassigned case) and likening AWS to IBM in its decline. Many feel customer obsession has been replaced by cost-cutting and half-baked AI mandates that alienate experienced staff.
 
-**Tags**: `#deep learning`, `#performance optimization`, `#GPU`, `#systems`, `#machine learning`
+**Tags**: `#AWS`, `#cloud-computing`, `#customer-support`, `#developer-experience`, `#AI-critique`
 
 ---
 
 <a id="item-9"></a>
-## [Cloudflare's WAF misconfiguration caused 25-minute global outage impacting 28% of HTTP traffic](https://t.me/zaihuapd/41527) ⭐️ 8.0/10
+## [80386 Microcode Disassembled in Remarkable Reverse Engineering Effort](https://www.reenigne.org/blog/80386-microcode-disassembled/) ⭐️ 8.0/10
 
-Cloudflare experienced a global network outage lasting 25 minutes on December 5, 2025, due to an erroneous WAF change made while patching the Next.js vulnerability CVE-2025-55182. The incident affected approximately 28% of HTTP traffic, primarily impacting customers using the legacy FL1 proxy with Cloudflare-managed rulesets. This outage highlights how even a well-intentioned security fix can cascade into a massive infrastructure failure, affecting millions of websites. It serves as a critical lesson for SREs and DevOps teams on the need for rigorous testing and canary deployments before applying WAF rule changes in production environments. The outage started at 08:47 UTC and fully recovered by 09:12 UTC. The root cause was a WAF rule change that incorrectly handled traffic when mitigating the React2Shell RCE (CVE-2025-55182), specifically impacting users on the legacy FL1 proxy infrastructure with Cloudflare's managed rules enabled.
+Reenigne has manually disassembled the Intel 80386 processor's microcode ROM, producing a detailed listing of the control words that drive instruction execution. This follows their previous disassembly of the 8086 microcode and provides unprecedented insight into the 386's internal operation. This detailed microcode listing offers a unique window into the internal workings of a pioneering 32-bit x86 processor, aiding hardware historians, emulator developers, and microarchitecture researchers. It also demonstrates the feasibility of reverse-engineering complex CPU internals from publicly available information and original documentation fragments. The disassembly covers the entire microcode ROM, producing a human-readable listing that details each micro-instruction's operation, with the disassembler source code available on GitHub. The work involved manually deciphering control word formats, cross-referencing Intel's public 386 manuals, and painstakingly reconstructing the two-level microcode structure that orchestrates x86 execution, including protected mode and paging.
 
-telegram · zaihuapd · May 22, 16:15
+hackernews · nand2mario · May 23, 12:11 · [Discussion](https://news.ycombinator.com/item?id=48247004)
 
-**Background**: CVE-2025-55182 is a critical unauthenticated RCE in React Server Components, often targeted via Next.js's App Router. Cloudflare's Web Application Firewall (WAF) uses managed rulesets to protect against such exploits. The FL1 proxy is a legacy component of Cloudflare's edge network, and customers still using it were uniquely exposed to this misconfiguration.
+**Background**: Microcode is a layer inside many CPUs that breaks down complex machine instructions into simpler hardware control steps. The Intel 80386, launched in 1985, was a milestone x86 CPU that extended the architecture to 32 bits and introduced features like protected mode and paging. Reverse-engineering microcode is rare due to its proprietary nature; the author previously disassembled the older 8086's microcode in 2021, demonstrating that such analysis is possible from available documentation and known opcode behaviors.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.linkedin.com/pulse/react2shell-cve-2025-55182-critical-rce-vulnerability-react-wjfgc">React2Shell ( CVE - 2025 - 55182 ): Critical RCE Vulnerability in React...</a></li>
-<li><a href="https://www.kaspersky.com/blog/react4shell-vulnerability-cve-2025-55182/54915/">CVE - 2025 - 55182 vulnerability in React and... | Kaspersky official blog</a></li>
-<li><a href="https://react.dev/reference/rsc/server-components">Server Components – React</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Microcode">Microcode - Wikipedia</a></li>
+<li><a href="https://www.reenigne.org/blog/8086-microcode-disassembled/">8086 microcode disassembled « Reenigne blog</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#事故复盘`, `#基础设施`, `#WAF`, `#Cloudflare`, `#可观测性`
+**Discussion**: Commenters expressed admiration for the sheer manual effort and depth of the disassembly. Some discussed how microcode could be extracted from high-resolution die images, while others linked to related open-source 386 projects and recommended classic textbooks on microprogramming.
+
+**Tags**: `#microcode`, `#reverse-engineering`, `#80386`, `#hardware`, `#historical-computing`
+
+---
+
+<a id="item-10"></a>
+## [Google Docs Launches Docs Live for Voice-Driven Document Drafting with Gemini AI](https://www.wsj.com/tech/personal-tech/google-docs-live-test-e4473e07) ⭐️ 8.0/10
+
+Google introduced Docs Live, a new feature in Google Docs that lets users create document drafts through voice conversations, with Gemini AI transforming spoken thoughts into structured text and integrating files from Google Drive and web search results. This directly tackles the common 'blank page anxiety' by lowering the barrier to starting documents, demonstrating a practical integration of generative AI into productivity workflows and potentially accelerating user adoption of AI-assisted writing. The feature is rolling out first to paid AI subscribers on iOS and Android, with plans to expand to web and more users later. It operates under Google Workspace privacy rules, meaning user input is not used for model training.
+
+telegram · zaihuapd · May 24, 09:39
+
+**Background**: Gemini is Google's family of AI models that powers various applications with text understanding and generation. 'Blank page anxiety' refers to the common psychological hurdle of starting with an empty document. Google Workspace privacy rules ensure that data in business and education accounts is not utilized to train AI models, preserving confidentiality.
+
+**Tags**: `#Google Docs`, `#AI 写作`, `#语音交互`, `#Gemini`
 
 ---

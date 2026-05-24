@@ -199,6 +199,46 @@ class HorizonOrchestrator:
                 self.console.print(f"📋 Enriching {len(compliance_items)} compliance item(s)...")
                 await self._enrich_important_items(compliance_items)
 
+            # 7.6 Build a combined "compliance digest" md for Obsidian/Notion push.
+            # Mirrors what Telegram receives via the extra webhook:
+            #   - category == "dependency-risk" and score >= 7.0
+            #   - category startswith "compliance-" and score >= 5.0
+            # Persists per-language so to_obsidian_vault.py / to_notion.py can pick it up.
+            compliance_digest_items = [
+                item for item in analyzed_items
+                if (
+                    (
+                        item.metadata.get("category") == "dependency-risk"
+                        and (item.ai_score or 0) >= 7.0
+                    )
+                    or (
+                        (item.metadata.get("category") or "").startswith("compliance-")
+                        and (item.ai_score or 0) >= 5.0
+                    )
+                )
+            ]
+            compliance_digest_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
+
+            if compliance_digest_items:
+                self.console.print(
+                    f"📑 Compliance digest: {len(compliance_digest_items)} item(s)\n"
+                )
+                for lang in self.config.ai.languages:
+                    compliance_summary = await DailySummarizer().generate_summary(
+                        compliance_digest_items,
+                        today,
+                        len(all_items),
+                        language=lang,
+                    )
+                    compliance_path = self.storage.save_daily_summary(
+                        today, compliance_summary, language=lang, variant="compliance",
+                    )
+                    self.console.print(
+                        f"💾 Saved {lang.upper()} compliance digest to: {compliance_path}\n"
+                    )
+            else:
+                self.console.print("📑 Compliance digest: no items matched, skipping\n")
+
             # 8. Fire extra webhooks (e.g. compliance channel) from analyzed_items
             if self.extra_notifiers:
                 for notifier in self.extra_notifiers:

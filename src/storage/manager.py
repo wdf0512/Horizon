@@ -49,8 +49,25 @@ class StorageManager:
 
         return self.config_path
 
-    def save_daily_summary(self, date: str, markdown: str, language: str = "en") -> Path:
-        filename = f"horizon-{date}-{language}.md"
+    def save_daily_summary(
+        self,
+        date: str,
+        markdown: str,
+        language: str = "en",
+        variant: str = "",
+    ) -> Path:
+        """Persist a daily Markdown summary under data/summaries/.
+
+        Args:
+            date: Date string (YYYY-MM-DD).
+            markdown: Rendered Markdown body.
+            language: Language code (en / zh / ...).
+            variant: Optional file-name variant, e.g. ``"compliance"``. When
+                provided, the file is saved as ``horizon-{date}-{variant}-{language}.md``;
+                otherwise it falls back to the default ``horizon-{date}-{language}.md``.
+        """
+        slug = f"{variant}-" if variant else ""
+        filename = f"horizon-{date}-{slug}{language}.md"
         filepath = self.summaries_dir / filename
 
         with open(filepath, "w", encoding="utf-8") as f:

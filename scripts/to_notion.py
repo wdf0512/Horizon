@@ -301,6 +301,43 @@ LANG_ENV = {
     "en": "NOTION_DB_ID_EN",
 }
 
+# Compliance digest pages can optionally target their own databases. When
+# unset, the corresponding main-language database is used and the page title
+# is the only distinguishing marker.
+COMPLIANCE_LANG_ENV = {
+    "zh": "NOTION_DB_ID_COMPLIANCE_ZH",
+    "en": "NOTION_DB_ID_COMPLIANCE_EN",
+}
+
+# Variant slug → (filename token, title suffix per language). Empty token
+# means the main digest file horizon-{date}-{lang}.md.
+VARIANTS = (
+    {
+        "key": "",
+        "file_token": "",
+        "title_suffix": {"zh": "", "en": ""},
+    },
+    {
+        "key": "compliance",
+        "file_token": "compliance",
+        "title_suffix": {"zh": " · 合规", "en": " · Compliance"},
+    },
+)
+
+
+def _summary_filename(date_str: str, lang: str, file_token: str) -> str:
+    slug = f"{file_token}-" if file_token else ""
+    return f"horizon-{date_str}-{slug}{lang}.md"
+
+
+def _resolve_db_id(variant_key: str, lang: str) -> str:
+    """Return the Notion database ID for this variant+lang, falling back to the main DB."""
+    if variant_key == "compliance":
+        explicit = os.environ.get(COMPLIANCE_LANG_ENV[lang], "").strip()
+        if explicit:
+            return explicit
+    return os.environ.get(LANG_ENV[lang], "").strip()
+
 
 def main() -> None:
     token = os.environ.get("NOTION_API_KEY")
@@ -311,35 +348,45 @@ def main() -> None:
     date_str = sys.argv[1] if len(sys.argv) > 1 else date.today().strftime("%Y-%m-%d")
     any_failed = False
 
-    for lang, env_key in LANG_ENV.items():
-        db_id = os.environ.get(env_key, "").strip()
-        if not db_id:
-            print(f"  · {lang}: {env_key} not set — skipping")
-            continue
+    for variant in VARIANTS:
+        for lang in LANG_ENV:
+            variant_key = variant["key"]
+            db_id = _resolve_db_id(variant_key, lang)
+            label = f"{lang} [{variant_key}]" if variant_key else lang
 
-        summary_path = Path("data/summaries") / f"horizon-{date_str}-{lang}.md"
-        if not summary_path.exists():
-            print(f"  · {lang}: source missing ({summary_path}) — skipping")
-            continue
+            if not db_id:
+                print(f"  · {label}: no database configured — skipping")
+                continue
 
-        md = summary_path.read_text(encoding="utf-8")
-        item_count, total_fetched = extract_counts(md)
-        blocks = markdown_to_blocks(md)
-        title = f"Horizon · {date_str}"
+            filename = _summary_filename(date_str, lang, variant["file_token"])
+            summary_path = Path("data/summaries") / filename
+            if not summary_path.exists():
+                # Main digest missing is unusual; compliance missing is fine
+                # (no items matched).
+                print(f"  · {label}: source missing ({summary_path}) — skipping")
+                continue
 
-        print(f"  · {lang}: creating entry in db {db_id[:8]}… ({len(blocks)} blocks, {item_count}/{total_fetched})")
-        new_id = create_db_entry(
-            token, db_id,
-            title=title,
-            date_str=date_str,
-            item_count=item_count,
-            total_fetched=total_fetched,
-            blocks=blocks,
-        )
-        if new_id:
-            print(f"  · {lang}: ok → page {new_id}")
-        else:
-            any_failed = True
+            md = summary_path.read_text(encoding="utf-8")
+            item_count, total_fetched = extract_counts(md)
+            blocks = markdown_to_blocks(md)
+            title = f"Horizon · {date_str}{variant['title_suffix'][lang]}"
+
+            print(
+                f"  · {label}: creating entry in db {db_id[:8]}… "
+                f"({len(blocks)} blocks, {item_count}/{total_fetched})"
+            )
+            new_id = create_db_entry(
+                token, db_id,
+                title=title,
+                date_str=date_str,
+                item_count=item_count,
+                total_fetched=total_fetched,
+                blocks=blocks,
+            )
+            if new_id:
+                print(f"  · {label}: ok → page {new_id}")
+            else:
+                any_failed = True
 
     if any_failed:
         sys.exit(1)

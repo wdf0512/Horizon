@@ -43,17 +43,35 @@ jobs:
           BLOG_REPO_TOKEN: ${{ secrets.BLOG_REPO_TOKEN }}
         run: uv run python scripts/to_blog_post.py
 
-      - name: Sync digest to Obsidian vault
+      - name: Sync digest to Obsidian vault (main + compliance)
         env:
           OBSIDIAN_VAULT_TOKEN: ${{ secrets.OBSIDIAN_VAULT_TOKEN }}
         run: uv run python scripts/to_obsidian_vault.py
 
-      - name: Create digest entry in Notion database
+      - name: Create digest entry in Notion database (main + compliance)
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DB_ID_ZH: ${{ secrets.NOTION_DB_ID_ZH }}
           NOTION_DB_ID_EN: ${{ secrets.NOTION_DB_ID_EN }}
+          # Optional: if set, compliance digest goes to its own Notion DB.
+          # Unset → falls back to NOTION_DB_ID_{ZH,EN} with title suffix " · 合规".
+          NOTION_DB_ID_COMPLIANCE_ZH: ${{ secrets.NOTION_DB_ID_COMPLIANCE_ZH }}
+          NOTION_DB_ID_COMPLIANCE_EN: ${{ secrets.NOTION_DB_ID_COMPLIANCE_EN }}
         run: uv run python scripts/to_notion.py
+
+      - name: Commit data/summaries back to main (audit trail)
+        # Keeps a record of which digest files were generated each run,
+        # so you can later inspect when compliance fired vs no items matched.
+        run: |
+          if [[ -n "$(git status --porcelain data/summaries/)" ]]; then
+            git config user.name "horizon-bot[bot]"
+            git config user.email "horizon-bot@users.noreply.github.com"
+            git add data/summaries/
+            git commit -m "data: daily summaries ${{ env.DATE }} (incl. compliance variant if any)"
+            git push origin main
+          else
+            echo "data/summaries/ unchanged — nothing to commit"
+          fi
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

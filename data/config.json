@@ -232,7 +232,8 @@
       "layout": "markdown",
       "languages": ["zh"],
       "category_filter": ["dependency-risk"],
-      "score_threshold_override": 7.0,
+      "category_prefix_filter": ["compliance-"],
+      "score_threshold_override": 0.0,
       "request_body": {
         "chat_id": "6855688015",
         "text": "#{message_title}\n\n#{summary}"

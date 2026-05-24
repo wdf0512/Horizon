@@ -200,21 +200,21 @@ class HorizonOrchestrator:
                 await self._enrich_important_items(compliance_items)
 
             # 7.6 Build a combined "compliance digest" md for Obsidian/Notion push.
-            # Mirrors what Telegram receives via the extra webhook:
-            #   - category == "dependency-risk" and score >= 7.0
-            #   - category startswith "compliance-" and score >= 5.0
+            # **All** compliance-relevant items go through, regardless of score:
+            #   - category == "dependency-risk"
+            #   - category startswith "compliance-"
+            # This is intentionally NOT score-gated so the digest is exhaustive.
+            # For Telegram parity, set the corresponding extra_webhook in
+            # data/config.json to:
+            #   category_filter: ["dependency-risk"],
+            #   category_prefix_filter: ["compliance-"],
+            #   score_threshold_override: 0.0
             # Persists per-language so to_obsidian_vault.py / to_notion.py can pick it up.
             compliance_digest_items = [
                 item for item in analyzed_items
                 if (
-                    (
-                        item.metadata.get("category") == "dependency-risk"
-                        and (item.ai_score or 0) >= 7.0
-                    )
-                    or (
-                        (item.metadata.get("category") or "").startswith("compliance-")
-                        and (item.ai_score or 0) >= 5.0
-                    )
+                    item.metadata.get("category") == "dependency-risk"
+                    or (item.metadata.get("category") or "").startswith("compliance-")
                 )
             ]
             compliance_digest_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
@@ -247,9 +247,24 @@ class HorizonOrchestrator:
                     wh_threshold = override if override is not None else self.config.filtering.ai_score_threshold
                     wh_langs = wh_cfg.languages or self.config.ai.languages
 
+                    def _category_matches(item):
+                        cat = item.metadata.get("category") or ""
+                        # If neither filter set → match all
+                        if wh_cfg.category_filter is None and wh_cfg.category_prefix_filter is None:
+                            return True
+                        # Exact match against category_filter
+                        if wh_cfg.category_filter is not None and cat in wh_cfg.category_filter:
+                            return True
+                        # Prefix match against category_prefix_filter
+                        if wh_cfg.category_prefix_filter is not None and any(
+                            cat.startswith(p) for p in wh_cfg.category_prefix_filter
+                        ):
+                            return True
+                        return False
+
                     wh_items = [
                         item for item in analyzed_items
-                        if (wh_cfg.category_filter is None or item.metadata.get("category") in wh_cfg.category_filter)
+                        if _category_matches(item)
                         and (wh_threshold == 0 or (item.ai_score is not None and item.ai_score >= wh_threshold))
                     ]
 

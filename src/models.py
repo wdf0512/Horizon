@@ -178,6 +178,7 @@ class WebhookConfig(BaseModel):
     languages: Optional[List[str]] = None  # Optional language filter for webhook delivery; defaults to all AI languages
     enabled: bool = False
     category_filter: Optional[List[str]] = None  # if set, only items whose metadata.category is in this list
+    category_prefix_filter: Optional[List[str]] = None  # if set, also matches items whose category starts with any of these prefixes (e.g. ["compliance-"]). Combined with category_filter as a union.
     score_threshold_override: Optional[float] = None  # overrides global ai_score_threshold; 0.0 = send all regardless of score
 
 

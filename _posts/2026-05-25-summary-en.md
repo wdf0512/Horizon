@@ -5,136 +5,128 @@ date: 2026-05-25
 lang: en
 ---
 
-> From 37 items, 6 important content pieces were selected
+> From 37 items, 5 important content pieces were selected
 
 ---
 
-1. [APKPure Telegram 12.6.5 Injected with Spy Backdoor Stealing Chat Data](#item-1) ⭐️ 9.0/10
-2. [Memory Now Two-Thirds of AI Chip Component Costs, Hinting at 3x Reduction](#item-2) ⭐️ 8.0/10
-3. [Constraint Decay: The Fragility of LLM Agents in Back End Code Generation](#item-3) ⭐️ 8.0/10
-4. [Microsoft Open-Sources Earliest DOS Source Code from Paper Printouts](#item-4) ⭐️ 8.0/10
-5. [Vivado 2026.1 Free Tier Dropping Linux Support Sparks Outcry](#item-5) ⭐️ 8.0/10
-6. [Armin Ronacher Criticizes AI-Generated GitHub Issues, Calls for Human-Written Reports](#item-6) ⭐️ 8.0/10
+1. [Huawei's 'Tao's Law' replaces geometric scaling with time scaling to extend chip density](#item-1) ⭐️ 9.0/10
+2. [Audiomass: Free, Open-Source Multitrack Audio Editor for the Web](#item-2) ⭐️ 8.0/10
+3. [Memory Now Represents Nearly Two-Thirds of AI Chip Component Costs](#item-3) ⭐️ 8.0/10
+4. [Study Reveals 'Constraint Decay' in LLM Coding Agents](#item-4) ⭐️ 8.0/10
+5. [Vivado 2026.1 Free Tier Drops Linux Support, Angering FPGA Community](#item-5) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [APKPure Telegram 12.6.5 Injected with Spy Backdoor Stealing Chat Data](https://x.com/EricParker/status/2058411298195661221) ⭐️ 9.0/10
+## [Huawei's 'Tao's Law' replaces geometric scaling with time scaling to extend chip density](https://www.peopleapp.com/column/30052220655-500007509895) ⭐️ 9.0/10
 
-A re-signed version of Telegram 12.6.5 on APKPure was found containing the DataCollector spy framework. It exfiltrates full chat histories, contacts, photos, GPS location, and SIM information, encrypting the data with AES-GCM and sending it to a C2 server at 38.190.225.166. This supply-chain attack demonstrates the severe risks of downloading trusted apps from third-party stores. As a widely used private messaging tool, a compromised Telegram build could expose millions of users' most sensitive data to remote attackers. The backdoor resides in a 3000+-line classes3.dex file within the repackaged APK. It collects a wide range of data categories and uses AES-GCM encryption to protect the stolen information during transmission to the C2 server.
+Huawei announced 'Tao's Law' at ISCAS 2026, proposing to replace traditional geometric scaling (shrinking transistor size) with time scaling (reducing signal propagation delay via the time constant τ). The company has already designed and mass-produced 381 chips using this principle over six years, and will release a new Kirin phone chip this fall featuring 'logic folding' technology. This is China's first globally proposed guiding principle for the semiconductor industry, providing a practical path to continue performance scaling as Moore's Law hits physical limits. It can enable transistor density equivalent to a 1.4nm process without relying solely on advanced lithography, significantly impacting AI/ML hardware evolution and the global chip landscape. The law focuses on reducing the time constant τ (tau), which is the product of resistance and capacitance (RC) determining signal travel time, through multi-level optimization from device, circuit, chip, to system. The enabling technology is 'logic folding', set to debut in the 'Kirin 2026' phone chip, with a roadmap targeting 1.4nm-equivalent density by 2031. The detailed technical mechanism of logic folding has not been publicly disclosed.
 
-telegram · zaihuapd · May 24, 11:38
+telegram · zaihuapd · May 25, 01:35
 
-**Background**: APKPure is a popular third-party platform for downloading Android APK files outside the official Google Play Store. Third-party stores lack the rigorous security checks of official markets, making them susceptible to supply-chain attacks where legitimate apps are altered with malicious code. A C2 (command and control) server is an attacker-controlled machine used to receive exfiltrated data and issue commands. AES-GCM is a widely adopted encryption standard that the malware employed to hide the stolen information in transit.
+**Background**: Moore's Law historically advanced by geometric scaling—shrinking transistor gate lengths to pack more into a chip. As dimensions approach atomic scales, further shrinking becomes extremely difficult and costly. 'Time scaling' addresses the same problem from signal propagation: the time constant τ = RC dictates how fast a signal can travel. By optimizing circuit topology and system architecture to shorten signal paths and reduce delay, Huawei effectively increases processing density without making transistors tinier. The Greek letter τ also corresponds to the Chinese character '韬,' which is part of the name of He Tingbo, Huawei's semiconductor head.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://apkpure.com/">APKPure: Download APK on Android with Free APK Downloader</a></li>
-<li><a href="https://medium.com/@wangbinxp/aes-gcm-加密简介-b4b5f539c7d6">AES - GCM 加 密 简介 - CV肉饼王 - Medium</a></li>
-<li><a href="https://blog.csdn.net/qq_29607687/article/details/136520825">攻击技术：命令和控制服务器（C2）是什么意思_c2服务器-CSDN博客</a></li>
+<li><a href="https://www.21jingji.com/article/20260525/herald/1573642c437a5e4e76a15fc1c40f0a35.html">华为提出的"韬定律"是什么？跟摩尔定律有什么不同？ - 21经济网</a></li>
+<li><a href="https://www.huxiu.com/article/4861142.html">华为发布"韬定律"半导体新理论 提出以时间缩微替代几何缩微</a></li>
+<li><a href="https://www.ithome.com/0/954/677.htm">华为发表半导体韬定律：预计到 2031 年，基于该定律的高端芯片晶体管密度将达到 1.4 纳米制程的同等水平</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#安全威胁`, `#恶意软件分析`, `#供应链攻击`, `#移动安全`
+**Tags**: `#半导体`, `#芯片设计`, `#技术突破`, `#华为`
 
 ---
 
 <a id="item-2"></a>
-## [Memory Now Two-Thirds of AI Chip Component Costs, Hinting at 3x Reduction](https://epoch.ai/data-insights/ai-chip-component-cost-shares) ⭐️ 8.0/10
+## [Audiomass: Free, Open-Source Multitrack Audio Editor for the Web](https://audiomass.co/?multitrack=1) ⭐️ 8.0/10
 
-A new analysis from Epoch AI reveals that memory (primarily HBM) now accounts for roughly 63% of AI chip component costs, up significantly, while logic die costs have stayed constant around 13–14%. This shift means that once DRAM supply catches up with demand, hardware costs could drop by a factor of about three without any technical innovation. The dominance of memory in AI chip costs underscores how heavily the industry depends on a concentrated DRAM market. A normalization of supply could slash AI accelerator costs by ~3x, making training and inference far more accessible and accelerating AI adoption across sectors, while also highlighting supply chain vulnerabilities. HBM (High Bandwidth Memory) spending is the main driver, with a 3:1 wafer capacity conversion ratio relative to DDR5, which squeezes commodity DRAM supply. Meanwhile, packaging costs fell from 19% to 15% and auxiliary components from 15% to 9%, cementing memory’s cost dominance.
+Audiomass, a free and open-source multitrack audio editor, has been released as a web application, enabling users to mix and edit audio tracks directly in the browser with native FLAC support and an intuitive interface. This tool democratizes audio editing by eliminating installation and platform barriers, making multitrack production accessible from any modern browser; it also opens up possibilities for real-time online collaboration, as suggested by the community. The editor features a classic vanilla JavaScript codebase reminiscent of pre‑framework development, native FLAC handling, and an interface praised for its similarity to early Cool Edit Pro; however, the project currently lacks a clear open‑source license, which may hinder adoption.
 
-hackernews · intelkishan · May 24, 16:31 · [Discussion](https://news.ycombinator.com/item?id=48258684)
+hackernews · pantelisk · May 24, 15:25 · [Discussion](https://news.ycombinator.com/item?id=48258015)
 
-**Background**: DRAM is the volatile main memory used in computers and AI accelerators; its high-performance stacked variant, HBM, is essential for the massive data throughput of modern AI chips. The global DRAM market is controlled by three manufacturers—Samsung, SK Hynix, and Micron—and the AI-driven demand surge has caused severe price hikes, with some modules rising over 200% since early 2025 as HBM production crowds out standard memory.
+**Background**: FLAC (Free Lossless Audio Codec) is a lossless audio compression format that retains original audio quality, widely used by audiophiles. Multitrack audio editors like Audacity and professional DAWs allow users to layer and edit multiple audio tracks. Traditionally, such tools require desktop installation; Audiomass brings full‑featured editing to the browser, lowering the barrier to entry for casual creators.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares">AI Chip Component Costs: Memory at 63% | Epoch AI | Epoch AI</a></li>
-<li><a href="https://en.wikipedia.org/wiki/DRAM">DRAM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FLAC">FLAC - Wikipedia</a></li>
+<li><a href="https://www.audacityteam.org/">Audacity ® | Free Audio editor, recorder, music making and more!</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Hackernews commenters largely confirm the analysis with anecdotes: 96GB of RAM that cost $250 a few years ago now sells for $1200. Many gamers and PC enthusiasts are postponing upgrades until prices normalize, and some doubt that the current 20-25% annual capacity growth can meet AI’s insatiable demand. The idea of a 3x cost reduction from supply catching up is widely seen as plausible but timing remains uncertain.
+**Discussion**: Commenters praised the editor’s intuitive UX reminiscent of early Cool Edit Pro, its nostalgic vanilla JavaScript style, and native FLAC support. Some raised concerns about the absence of a license file, while others dreamed of adding cloud collaboration features to enable remote jamming.
 
-**Tags**: `#AI hardware`, `#memory costs`, `#DRAM prices`, `#supply chain`, `#Hackernews discussion`
+**Tags**: `#audio-editor`, `#open-source`, `#web-application`, `#show-hn`, `#multitrack`
 
 ---
 
 <a id="item-3"></a>
-## [Constraint Decay: The Fragility of LLM Agents in Back End Code Generation](https://arxiv.org/abs/2605.06445) ⭐️ 8.0/10
+## [Memory Now Represents Nearly Two-Thirds of AI Chip Component Costs](https://epoch.ai/data-insights/ai-chip-component-cost-shares) ⭐️ 8.0/10
 
-A systematic study reveals that LLM coding agents experience 'constraint decay': their code generation performance drops dramatically when required to follow explicit architectural rules, losing 30 points on average in assertion pass rates compared to unconstrained generation. This exposes a critical reliability gap for production backend development, where architectural compliance is essential. While LLM agents excel at rapid prototyping, 'constraint decay' limits their trustworthiness for enterprise-grade systems, potentially hindering adoption in real-world software engineering. The study measured assertion pass rates under progressively stricter constraints, finding a 30-percentage-point average decline. Notably, the experiments did not include latest frontier models (e.g., GPT-4 class) due to cost, so results may not fully capture top-tier model behavior.
+A new analysis from Epoch AI reveals that memory components, primarily high-bandwidth memory (HBM), now account for nearly two-thirds of the total component cost of AI accelerator chips, highlighting the extreme supply-demand imbalance in the DRAM market. The dominance of memory costs suggests that AI hardware could become substantially cheaper once DRAM supply matches demand, potentially enabling wider AI adoption and reducing barriers for smaller players. It also underscores the critical dependency of AI progress on memory manufacturing capacity. The cost breakdown specifically points to high-bandwidth memory (HBM), a 3D-stacked DRAM technology that provides the massive throughput required by GPUs like NVIDIA's H100. The analysis implies that even if logic die costs remain constant, total chip cost is dominated by memory.
 
-hackernews · wek · May 24, 12:55 · [Discussion](https://news.ycombinator.com/item?id=48256912)
+hackernews · intelkishan · May 24, 16:31 · [Discussion](https://news.ycombinator.com/item?id=48258684)
 
-**Background**: LLM agents are AI systems that use large language models to reason, plan, and execute tasks, often with tool use. Backend code generation involves creating server-side logic that must follow strict architectural patterns (e.g., layered design, data access rules) for maintainability and security. 'Constraint decay' describes the phenomenon where agent performance collapses when forced to comply with such rules, contrasting with high success in unconstrained scenarios.
+**Background**: AI accelerators like GPUs rely on high-bandwidth memory (HBM) to feed data to thousands of processing cores. HBM uses 3D stacking and through-silicon vias (TSVs) to achieve terabyte-per-second bandwidth, but it is expensive and supply-constrained. The AI boom, especially large language models, has caused a surge in HBM demand, leading to price increases and shortages as DRAM manufacturers struggle to scale production.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/abs/2605.06445">[2605.06445] Constraint Decay: The Fragility of LLM Agents in Backend Code Generation</a></li>
-<li><a href="https://arxiv.org/html/2605.06445">Constraint decay: The Fragility of LLM Agents in Backend Code Generation</a></li>
-<li><a href="https://developer.nvidia.com/blog/introduction-to-llm-agents/">Introduction to LLM Agents | NVIDIA Technical Blog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Comments widely validate the finding, with developers sharing similar experiences of degradation under architectural constraints. One commenter introduced 'calcification'—agents over-applying patterns—as a related side-effect. Another mentioned that external orchestrators help enforce constraints but require many review-fix rounds. The lack of frontier model testing was acknowledged as a study limitation.
+**Discussion**: Commenters broadly agree that memory supply constraints are a major bottleneck, with one noting a potential 3x hardware cost reduction if supply meets demand. Others expressed frustration over doubled RAM prices and personal decisions to delay hardware upgrades until prices normalize, reflecting widespread concern over memory affordability.
 
-**Tags**: `#LLM-agents`, `#code-generation`, `#constraint-decay`, `#software-engineering`, `#AI-reliability`
+**Tags**: `#ai hardware`, `#memory`, `#chip design`, `#cost analysis`, `#supply chain`
 
 ---
 
 <a id="item-4"></a>
-## [Microsoft Open-Sources Earliest DOS Source Code from Paper Printouts](https://arstechnica.com/gadgets/2026/04/microsoft-open-sources-the-earliest-dos-source-code-discovered-to-date/) ⭐️ 8.0/10
+## [Study Reveals 'Constraint Decay' in LLM Coding Agents](https://arxiv.org/abs/2605.06445) ⭐️ 8.0/10
 
-Microsoft has open-sourced the earliest known version of the DOS operating system's source code, which was painstakingly recovered from decades-old paper printouts using OCR and manual transcription. This release is a landmark in software preservation, offering a rare and direct look at the humble origins of the operating system that fueled the PC revolution and Microsoft's rise. The source code was transcribed by the 'DOS Disassembly Group,' led by Yufeng Gao and Rich Cini, who struggled with modern OCR tools due to the poor quality of the ancient printouts. It is primarily written in assembly language and consists of only a few thousand lines.
+A new paper identifies that LLM-based coding agents suffer from 'constraint decay', with performance dropping by an average of 30 percentage points in assertion pass rates when forced to follow explicit architectural rules like database schemas and ORM patterns. This finding reveals a critical fragility in AI coding agents, confirming that while they excel at unconstrained prototyping, they are currently unreliable for production-grade backend development where strict architectural constraints are necessary. The paper reports that capable models lose an average of 30 points in assertion pass rates when structural constraints accumulate. The study primarily tested non-frontier models, so the performance of the latest frontier systems under constraints remains underexplored.
 
-hackernews · DamnInteresting · May 24, 01:21 · [Discussion](https://news.ycombinator.com/item?id=48253386)
+hackernews · wek · May 24, 12:55 · [Discussion](https://news.ycombinator.com/item?id=48256912)
 
-**Background**: DOS (Disk Operating System) was the text-based operating system that dominated early IBM-compatible PCs in the 1980s. Microsoft's version, MS-DOS, began as an adaptation of 86-DOS (also called QDOS) created by Tim Paterson, and it became the foundation of Microsoft's empire after the pivotal deal with IBM. This newly released source code likely represents that early, pre-MS-DOS stage.
-
-**Discussion**: Commenters expressed gratitude and nostalgia, with some noting that Microsoft also recently open-sourced its early BASIC interpreter. Many marveled at how the entire OS fit in a few thousand lines of assembly, while others voiced hope that early Windows source code might also be released. The challenging OCR transcription process from paper was widely appreciated.
-
-**Tags**: `#open-source`, `#computer-history`, `#DOS`, `#retrocomputing`, `#software-preservation`
-
----
-
-<a id="item-5"></a>
-## [Vivado 2026.1 Free Tier Dropping Linux Support Sparks Outcry](https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US) ⭐️ 8.0/10
-
-AMD is removing Linux support from the free Basic tier of Vivado 2026.1, while Windows support will continue. This change has provoked strong criticism from the FPGA developer community. Linux is widely used in education, open-source development, and among hobbyists; dropping support risks alienating these groups and may push users toward competitors like Lattice Semiconductor. The free tier previously supported both operating systems; the restriction applies only to the Basic license and does not affect paid node-locked or floating licenses. AMD has not publicly stated the reason, but speculation points to reduced maintenance costs.
-
-hackernews · zdw · May 24, 04:14 · [Discussion](https://news.ycombinator.com/item?id=48254309)
-
-**Background**: Vivado is the primary design suite for AMD (formerly Xilinx) FPGAs and adaptive SoCs, offering synthesis, place-and-route, and simulation. The free tier, often called Vivado Standard or WebPack, supports a limited set of devices and has been essential for learning and prototyping. Linux has long been a first-class platform for FPGA development due to its strong command-line and scripting ecosystem.
+**Background**: LLM agents are AI systems that use large language models to autonomously perform tasks like code generation, interacting with codebases and tools. Back-end development often requires strict adherence to architectural patterns, such as database schema design, Object-Relational Mapping (ORM) configurations, and API structure. Constraint decay refers to the observed decline in code quality and correctness when these explicit rules must be followed, as opposed to more free-form code generation.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Vivado">Vivado - Wikipedia</a></li>
-<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html">Vivado Overview - AMD</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Lattice_Semiconductor">Lattice Semiconductor - Wikipedia</a></li>
+<li><a href="https://arxiv.org/pdf/2605.06445v1">Constraint decay: The Fragility of LLM Agents in Backend Code ...</a></li>
+<li><a href="https://news.ycombinator.com/item?id=48256912">Constraint Decay: The Fragility of LLM Agents in Back End ...</a></li>
+<li><a href="https://byteiota.com/llm-agent-constraint-decay-backend-code/">LLM Agent Constraint Decay: Why Real Backends Break AI Code</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community reaction is largely negative. Longtime users criticize the move as short-sighted, noting that Linux support is crucial for students, hobbyists, and CI/CD pipelines. Some report spending heavily on Xilinx hardware but still facing license friction, and several say they will switch to Lattice devices and tools. Educators also plan to adopt alternative vendors. Many see this as a sign of AMD's post-acquisition shift away from engineering-driven decisions.
+**Discussion**: Practitioners confirm experiencing constraint decay in real projects, noting that agents struggle more with large-scale architectural rules. Some suggest that constraints should be introduced incrementally during the coding process rather than specified upfront. Concerns remain about whether this fragility holds for frontier models, and a related side-effect of 'calcification' was mentioned, where repeated patterns in code generation hinder adaptability.
 
-**Tags**: `#fpga`, `#vivado`, `#amd`, `#licensing`, `#linux`
+**Tags**: `#LLM agents`, `#code generation`, `#constraint decay`, `#backend development`, `#AI reliability`
 
 ---
 
-<a id="item-6"></a>
-## [Armin Ronacher Criticizes AI-Generated GitHub Issues, Calls for Human-Written Reports](https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything) ⭐️ 8.0/10
+<a id="item-5"></a>
+## [Vivado 2026.1 Free Tier Drops Linux Support, Angering FPGA Community](https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US) ⭐️ 8.0/10
 
-Armin Ronacher, creator of Flask and Pi, published a blog post expressing frustration with AI-generated GitHub issues filed against his project Pi. He observed that users run observed problems through AI tools, which then produce verbose, confident but inaccurate reports full of guesswork and false root causes. This highlights a growing friction in open source maintenance: AI can generate plausible but misleading issue reports, increasing the burden on maintainers who must sift through noise. It underscores the need for clear human communication to efficiently triage bugs. Ronacher specifically criticizes the 'clanker' (AI) failure mode where rewording leads to confident wrong conclusions, fake minimal reproductions, and irrelevant code analogies. He proposes a minimal template: command run, expected outcome, actual outcome, and exact error log.
+AMD announced that starting with version 2026.1, the Vivado Design Suite's free 'Basic' tier will no longer support the Linux operating system, while Windows support remains. This decision alienates a large portion of the FPGA development community—including students, hobbyists, and open-source developers—who predominantly use Linux, potentially hindering AMD's ecosystem growth and driving users to competing platforms like Lattice. The free Basic tier will remain device-limited and require annual renewal, but Linux support is removed; official statements have not provided a technical or business justification, focusing instead on the new tiered licensing structure.
 
-rss · Simon Willison · May 24, 18:46
+hackernews · zdw · May 24, 04:14 · [Discussion](https://news.ycombinator.com/item?id=48254309)
 
-**Background**: Armin Ronacher is a prominent software developer known for creating Flask, Jinja2, and the Pi Python package installer. ‘Clanker’ is a colloquial term for an AI text generator, often referring to LLM-powered assistants. Recently, some users have started using AI to automatically draft GitHub issues, but models often produce inaccurate content due to hallucination and lack of codebase understanding.
+**Background**: Xilinx Vivado is a comprehensive suite for FPGA design, synthesis, and implementation, widely used in hardware development and education. The free tier, previously available for both Windows and Linux, enabled hobbyists and students to learn and develop on AMD hardware without cost. Linux is favored by many developers for its flexibility and open-source tool integration. AMD acquired Xilinx in 2022.
 
-**Tags**: `#open source`, `#AI`, `#software development`, `#bug reports`, `#LLM usage`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Vivado">Vivado - Wikipedia</a></li>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado/vivado-licensing-options.html">AMD Vivado™ Licensing Options | Flexible Subscription & Perpetual Tiers</a></li>
+
+</ul>
+</details>
+
+**Discussion**: The community reaction is overwhelmingly negative. Users criticize AMD for nickel-and-diming even loyal customers, creating licensing hassles for CI setups and interns, and worry that removing Linux support will deter students and shrink the hobbyist ecosystem. Several commenters suggest switching to Lattice FPGAs, citing better treatment of free-tier users and stronger documentation. Some long-time Xilinx users now consider moving to competitors.
+
+**Tags**: `#FPGA`, `#AMD`, `#Vivado`, `#Linux`, `#licensing`
 
 ---

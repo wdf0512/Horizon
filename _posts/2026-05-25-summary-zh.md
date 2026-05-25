@@ -5,136 +5,128 @@ date: 2026-05-25
 lang: zh
 ---
 
-> From 37 items, 6 important content pieces were selected
+> From 37 items, 5 important content pieces were selected
 
 ---
 
-1. [APKPure 上的 Telegram 12.6.5 被植入间谍后门窃取聊天数据](#item-1) ⭐️ 9.0/10
-2. [AI 芯片内存成本占比升至 63%，预示潜在 3 倍降价空间](#item-2) ⭐️ 8.0/10
-3. [约束衰减：LLM 代理在后端代码生成中的脆弱性](#item-3) ⭐️ 8.0/10
-4. [微软开源从纸质打印件转录的最早 DOS 源代码](#item-4) ⭐️ 8.0/10
-5. [Vivado 2026.1 免费版取消 Linux 支持引发强烈抗议](#item-5) ⭐️ 8.0/10
-6. [Armin Ronacher 批评 AI 生成的 GitHub issue，呼吁简明人工报告](#item-6) ⭐️ 8.0/10
+1. [华为发表“韬定律”：以时间缩微替代几何缩微突破芯片极限](#item-1) ⭐️ 9.0/10
+2. [Audiomass：免费开源的多轨网页音频编辑器](#item-2) ⭐️ 8.0/10
+3. [内存成本已占 AI 芯片组件成本近三分之二](#item-3) ⭐️ 8.0/10
+4. [研究揭示 LLM 编码代理的“约束衰减”现象](#item-4) ⭐️ 8.0/10
+5. [Vivado 2026.1 免费版取消 Linux 支持，激怒 FPGA 社区](#item-5) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [APKPure 上的 Telegram 12.6.5 被植入间谍后门窃取聊天数据](https://x.com/EricParker/status/2058411298195661221) ⭐️ 9.0/10
+## [华为发表“韬定律”：以时间缩微替代几何缩微突破芯片极限](https://www.peopleapp.com/column/30052220655-500007509895) ⭐️ 9.0/10
 
-APKPure 平台上重新签名的 Telegram 12.6.5 被植入名为 DataCollector 的间谍框架。该后门窃取全部聊天记录、通讯录、相册、GPS 定位和 SIM 卡信息，经 AES-GCM 加密后上传至 IP 为 38.190.225.166 的 C2 服务器。 此次供应链攻击凸显了从第三方商店下载可信应用的高风险。Telegram 作为广泛使用的私密通讯工具，被篡改的安装包可能将数百万用户最敏感的数据暴露给远程攻击者。 后门代码位于重新打包的 APK 中一个超过 3000 行的 classes3.dex 文件内。该间谍组件收集广泛的数据类别，并利用 AES-GCM 加密在传输至 C2 服务器时保护窃取的信息。
+华为在 2026 年国际电路与系统研讨会（ISCAS）上发表“韬定律”，提出用“时间缩微”（降低时间常数τ所决定的信号传播时延）替代“几何缩微”。过去六年已据此设计并量产 381 款芯片，今年秋季将推出首次完整采用逻辑折叠技术的新麒麟手机芯片。 这是中国在全球半导体领域首次提出指导产业发展的新原则，为摩尔定律逼近物理极限提供了实质性替代路径。该定律可在不纯粹依赖先进光刻技术的情况下实现与 1.4 纳米制程相当的晶体管密度，对 AI/ML 硬件发展和全球芯片格局具有深远影响。 “韬定律”以降低时间常数τ（音“韬”，为电阻与电容乘积 RC）为核心，通过器件、电路、芯片、系统四层级协同优化压缩信号时延。关键使能技术是“逻辑折叠”，将在“麒麟 2026”手机上首次实施，目标到 2031 年高端芯片的晶体管密度达到 1.4 纳米制程同等水平。逻辑折叠的具体技术原理尚未公开。
 
-telegram · zaihuapd · May 24, 11:38
+telegram · zaihuapd · May 25, 01:35
 
-**背景**: APKPure 是流行的第三方 Android 应用分发平台，允许用户绕过 Google Play 商店直接下载 APK 文件。第三方商店缺乏官方市场严格的安全审核，易遭遇供应链攻击，即合法应用被篡改植入恶意代码。C2（命令与控制）服务器是攻击者控制的机器，用于接收窃取的数据并向受感染设备下达指令。AES-GCM 是一种广泛采用的加密标准，该恶意软件利用它隐藏传输中的被盗信息。
+**背景**: 摩尔定律传统上依靠几何缩微，即不断缩小晶体管栅极长度来提升芯片密度。随着尺寸逼近原子尺度，进一步缩小异常困难且成本高昂。“时间缩微”从信号传播角度切入：时间常数τ=RC 决定了信号在芯片内的传输速度。华为通过优化电路拓扑与系统架构，缩短信号路径、降低延迟，从而在不继续缩小单个晶体管的情况下提高等效晶体管密度。希腊字母τ对应中文“韬”，也是华为半导体业务总裁何庭波名字中的一部分。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://apkpure.com/">APKPure: Download APK on Android with Free APK Downloader</a></li>
-<li><a href="https://medium.com/@wangbinxp/aes-gcm-加密简介-b4b5f539c7d6">AES - GCM 加 密 简介 - CV肉饼王 - Medium</a></li>
-<li><a href="https://blog.csdn.net/qq_29607687/article/details/136520825">攻击技术：命令和控制服务器（C2）是什么意思_c2服务器-CSDN博客</a></li>
+<li><a href="https://www.21jingji.com/article/20260525/herald/1573642c437a5e4e76a15fc1c40f0a35.html">华为提出的"韬定律"是什么？跟摩尔定律有什么不同？ - 21经济网</a></li>
+<li><a href="https://www.huxiu.com/article/4861142.html">华为发布"韬定律"半导体新理论 提出以时间缩微替代几何缩微</a></li>
+<li><a href="https://www.ithome.com/0/954/677.htm">华为发表半导体韬定律：预计到 2031 年，基于该定律的高端芯片晶体管密度将达到 1.4 纳米制程的同等水平</a></li>
 
 </ul>
 </details>
 
-**标签**: `#安全威胁`, `#恶意软件分析`, `#供应链攻击`, `#移动安全`
+**标签**: `#半导体`, `#芯片设计`, `#技术突破`, `#华为`
 
 ---
 
 <a id="item-2"></a>
-## [AI 芯片内存成本占比升至 63%，预示潜在 3 倍降价空间](https://epoch.ai/data-insights/ai-chip-component-cost-shares) ⭐️ 8.0/10
+## [Audiomass：免费开源的多轨网页音频编辑器](https://audiomass.co/?multitrack=1) ⭐️ 8.0/10
 
-Epoch AI 的最新分析显示，内存（主要是 HBM）目前占 AI 芯片组件成本约 63%，占比大幅上升，而逻辑芯片成本保持在 13-14%左右。这表明一旦 DRAM 供应跟上需求，硬件成本有望在不依赖技术突破的情况下降低约 3 倍。 内存成本在 AI 芯片中的主导地位凸显了整个行业对高度集中的 DRAM 市场的严重依赖。供应正常化有望将 AI 加速器成本削减约 3 倍，大幅降低 AI 训练和推理的门槛，加速各行业的 AI 普及，同时暴露出供应链的脆弱性。 HBM（高带宽内存）是成本大户，其与 DDR5 的晶圆产能转换比率为 3:1，严重挤占了通用 DRAM 的供应。与此同时，封装成本占比从 19%降至 15%，辅助组件从 15%降至 9%，进一步巩固了内存的成本主导地位。
+Audiomass 是一款新发布的免费开源多轨音频编辑器，作为网页应用运行，用户可在浏览器中直接混音和编辑音轨，原生支持 FLAC 格式，界面直观易用。 该工具通过消除安装和平台障碍，使音频编辑大众化，让多轨制作可从任何现代浏览器访问；社区还提出了实时在线协作的可能性，或将为音乐创作带来新的协作模式。 该编辑器采用怀旧风格的原生 JavaScript 编写，原生支持 FLAC 处理，用户界面被称赞类似早期 Cool Edit Pro；但目前项目缺少明确的开源许可证，可能会影响社区贡献和采用。
 
-hackernews · intelkishan · May 24, 16:31 · [社区讨论](https://news.ycombinator.com/item?id=48258684)
+hackernews · pantelisk · May 24, 15:25 · [社区讨论](https://news.ycombinator.com/item?id=48258015)
 
-**背景**: DRAM 是计算机和 AI 加速器使用的易失性主存，其高性能堆叠版本 HBM 对现代 AI 芯片的巨大数据吞吐量至关重要。全球 DRAM 市场由三星、SK 海力士和美光三家制造商控制。AI 驱动的需求激增导致价格急剧上涨，自 2025 年初以来部分内存模块涨幅超过 200%，原因是 HBM 生产挤占了标准内存的产能。
+**背景**: FLAC（免费无损音频编解码器）是一种无损压缩格式，能保留原始音质，深受音频爱好者欢迎。多轨音频编辑器如 Audacity 及专业 DAW 软件可让用户叠加和编辑多条音轨。以往这类工具多为桌面应用，Audiomass 将功能丰富的编辑器搬到了浏览器中，降低了普通创作者的使用门槛。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares">AI Chip Component Costs: Memory at 63% | Epoch AI | Epoch AI</a></li>
-<li><a href="https://en.wikipedia.org/wiki/DRAM">DRAM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FLAC">FLAC - Wikipedia</a></li>
+<li><a href="https://www.audacityteam.org/">Audacity ® | Free Audio editor, recorder, music making and more!</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: Hackernews 评论者通过实例印证了这一分析：几年前 96GB 内存仅需 250 美元，如今已涨至 1200 美元。许多游戏玩家和 PC 爱好者选择推迟升级，等待价格回归合理水平，同时也有人质疑目前每年 20-25%的产能增速能否满足 AI 的旺盛需求。多数人认为供应跟上后带来 3 倍降价是合理的，但拐点何时到来尚不确定。
+**社区讨论**: 评论者称赞其直观的用户体验让人想起早期 Cool Edit Pro，怀旧的原生 JavaScript 风格以及对 FLAC 的原生支持；有人指出缺少许可证的问题，还有人畅想添加云协作功能以实现远程即兴合奏。
 
-**标签**: `#AI hardware`, `#memory costs`, `#DRAM prices`, `#supply chain`, `#Hackernews discussion`
+**标签**: `#audio-editor`, `#open-source`, `#web-application`, `#show-hn`, `#multitrack`
 
 ---
 
 <a id="item-3"></a>
-## [约束衰减：LLM 代理在后端代码生成中的脆弱性](https://arxiv.org/abs/2605.06445) ⭐️ 8.0/10
+## [内存成本已占 AI 芯片组件成本近三分之二](https://epoch.ai/data-insights/ai-chip-component-cost-shares) ⭐️ 8.0/10
 
-一项系统性研究揭示，LLM 编码代理存在'约束衰减'现象：当被要求遵守显式架构规则时，其代码生成性能急剧下降，平均断言通过率较无约束生成下降 30 个百分点。 这暴露了生产级后端开发中关键的可靠性差距，因为架构合规性不可或缺。尽管 LLM 代理擅长快速原型开发，但'约束衰减'限制了其在企业级系统中的可信度，可能阻碍在实际软件工程中的采用。 研究通过逐步增强约束测量断言通过率，发现平均下降 30 个百分点。值得注意的是，由于成本原因未测试最新前沿模型（如 GPT-4 级别），因此结果可能不完全反映最先进模型的表现。
+Epoch AI 的最新分析显示，以高带宽内存（HBM）为主的内存组件现已占据 AI 加速器芯片总组件成本的近三分之二，凸显了 DRAM 市场供需的严重失衡。 内存成本的主导地位表明，一旦 DRAM 供给跟上需求，AI 硬件成本可能大幅下降，有望降低 AI 训练和推理的门槛，使更多中小玩家受益，同时也凸显了 AI 发展对内存制造产能的严重依赖。 该成本分解特别指向了高带宽内存（HBM），这是一种采用 3D 堆叠架构的 DRAM 技术，能为 NVIDIA H100 等 GPU 提供所需的大带宽吞吐量。分析暗示，即使逻辑芯片成本保持不变，内存成本也已占据主导地位。
 
-hackernews · wek · May 24, 12:55 · [社区讨论](https://news.ycombinator.com/item?id=48256912)
+hackernews · intelkishan · May 24, 16:31 · [社区讨论](https://news.ycombinator.com/item?id=48258684)
 
-**背景**: LLM 代理是利用大语言模型进行推理、规划和任务执行的 AI 系统。后端代码生成需创建遵循严格架构模式（如分层设计、数据访问规则）的服务端逻辑，以确保可维护性和安全性。‘约束衰减’描述了代理在强制遵守此类规则时性能崩溃的现象，与在无约束条件下表现良好形成鲜明对比。
+**背景**: AI 加速器（如 GPU）依赖高带宽内存（HBM）向数千个处理核心输送数据。HBM 采用 3D 堆叠和硅通孔（TSV）技术实现每秒 TB 级带宽，但成本高昂且供应受限。AI 热潮，尤其是大语言模型，推动 HBM 需求激增，导致价格上涨和短缺，因为 DRAM 制造商难以快速扩大产能。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://arxiv.org/abs/2605.06445">[2605.06445] Constraint Decay: The Fragility of LLM Agents in Backend Code Generation</a></li>
-<li><a href="https://arxiv.org/html/2605.06445">Constraint decay: The Fragility of LLM Agents in Backend Code Generation</a></li>
-<li><a href="https://developer.nvidia.com/blog/introduction-to-llm-agents/">Introduction to LLM Agents | NVIDIA Technical Blog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论普遍验证了该发现，开发者分享了强制架构约束时代理性能下降的相似经历。一位评论者提出了'钙化'现象——代理过度套用模式——作为相关副作用。另一人提到外部编排器有助于约束执行但需多轮审查修正。未测试前沿模型被承认为研究局限。
+**社区讨论**: 社区普遍认为内存供应紧张是主要瓶颈，有人指出如果供给追上需求，硬件成本有望降低三分之二。也有人抱怨内存价格翻倍，导致个人用户推迟升级计划，反映出对内存可负担性的普遍担忧。
 
-**标签**: `#LLM-agents`, `#code-generation`, `#constraint-decay`, `#software-engineering`, `#AI-reliability`
+**标签**: `#ai hardware`, `#memory`, `#chip design`, `#cost analysis`, `#supply chain`
 
 ---
 
 <a id="item-4"></a>
-## [微软开源从纸质打印件转录的最早 DOS 源代码](https://arstechnica.com/gadgets/2026/04/microsoft-open-sources-the-earliest-dos-source-code-discovered-to-date/) ⭐️ 8.0/10
+## [研究揭示 LLM 编码代理的“约束衰减”现象](https://arxiv.org/abs/2605.06445) ⭐️ 8.0/10
 
-微软开源了已知最早的 DOS 操作系统源代码，该代码是通过 OCR 和人工转录从几十年前的纸质打印件中费力恢复而来的。 这次发布是软件保存领域的一个里程碑，让人们得以直接窥见驱动个人电脑革命和微软崛起的操作系统之卑微起源，历史意义重大。 该源代码由高宇峰和 Rich Cini 领导的'DOS 反汇编小组'转录，由于老旧打印件质量差，现代 OCR 工具难以识别。代码主要用汇编语言编写，仅有几千行。
+一项新研究指出，基于 LLM 的编码代理会出现“约束衰减”现象：在要求遵循显式架构规则（如数据库模式和 ORM 模式）时，其断言通过率平均下降 30 个百分点。 该发现揭示了 AI 编码代理的关键脆弱性，证实其在不受约束的原型开发中表现出色，但在需要严格架构约束的生产级后端开发中仍不可靠。 该论文报告，随着结构约束的累积，能力较强的模型在断言通过率上平均下降 30 个百分点。研究主要测试了非前沿模型，因此最新前沿系统在约束下的性能仍有待探索。
 
-hackernews · DamnInteresting · May 24, 01:21 · [社区讨论](https://news.ycombinator.com/item?id=48253386)
+hackernews · wek · May 24, 12:55 · [社区讨论](https://news.ycombinator.com/item?id=48256912)
 
-**背景**: DOS（磁盘操作系统）是 1980 年代早期 IBM 兼容 PC 上主导的文本式操作系统。微软的 MS-DOS 最初改编自 Tim Paterson 开发的 86-DOS（也称 QDOS），在与 IBM 达成关键协议后，成了微软帝国的基础。这次发布的源代码很可能代表了 MS-DOS 出现之前的早期阶段。
-
-**社区讨论**: 评论者表达了感激与怀旧之情，有人指出微软最近也开源了其早期的 BASIC 解释器。许多人感叹整个操作系统仅需几千行汇编代码，另一些人则希望早期的 Windows 源代码也能发布。从纸质打印件进行 OCR 转录的艰难过程得到了广泛赞赏。
-
-**标签**: `#open-source`, `#computer-history`, `#DOS`, `#retrocomputing`, `#software-preservation`
-
----
-
-<a id="item-5"></a>
-## [Vivado 2026.1 免费版取消 Linux 支持引发强烈抗议](https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US) ⭐️ 8.0/10
-
-AMD 决定在 Vivado 2026.1 的免费 Basic 版本中移除 Linux 支持，仅保留 Windows 支持。此举引发了 FPGA 开发者社区的强烈批评。 Linux 系统在教育、开源开发和爱好者群体中广泛使用，取消支持可能会疏远这些用户，并促使他们转向 Lattice 等竞争对手。 此前免费版本同时支持 Linux 和 Windows；此限制仅针对 Basic 许可，不影响付费的节点锁定或浮动许可。AMD 未公开说明原因，外界猜测是为了降低维护成本。
-
-hackernews · zdw · May 24, 04:14 · [社区讨论](https://news.ycombinator.com/item?id=48254309)
-
-**背景**: Vivado 是 AMD（原 Xilinx）FPGA 及自适应 SoC 的主要设计套件，提供综合、布局布线和仿真等功能。其免费版本（常称为 Vivado Standard 或 WebPack）支持部分器件，一直是学习和原型开发的重要工具。Linux 因其强大的命令行和脚本生态长期是 FPGA 开发的首选平台之一。
+**背景**: LLM 代理是使用大语言模型自主执行任务（如代码生成）的 AI 系统，可与代码库和工具交互。后端开发通常需要严格遵守架构模式，包括数据库模式设计、对象关系映射（ORM）配置和 API 结构。约束衰减指当必须遵循这些显式规则时，代码质量和正确性会下降的现象，这与自由生成形式形成对比。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Vivado">Vivado - Wikipedia</a></li>
-<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html">Vivado Overview - AMD</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Lattice_Semiconductor">Lattice Semiconductor - Wikipedia</a></li>
+<li><a href="https://arxiv.org/pdf/2605.06445v1">Constraint decay: The Fragility of LLM Agents in Backend Code ...</a></li>
+<li><a href="https://news.ycombinator.com/item?id=48256912">Constraint Decay: The Fragility of LLM Agents in Back End ...</a></li>
+<li><a href="https://byteiota.com/llm-agent-constraint-decay-backend-code/">LLM Agent Constraint Decay: Why Real Backends Break AI Code</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区反应以负面为主。长期用户批评此举短视，指出 Linux 支持对学生、爱好者和 CI/CD 流程至关重要。有人投入数十万美元购买 Xilinx 硬件却仍受许可困扰，多位用户表示将转向 Lattice 器件及工具。教育工作者也计划改用其他厂商。许多人认为这是 AMD 收购后不再以工程师为本的体现。
+**社区讨论**: 从业者证实实际项目中确实存在约束衰减，并指出代理在处理大规模架构规则时表现更差。有人建议在编码过程中逐步引入约束，而非提前一次性指定。对于该脆弱性是否同样影响前沿模型仍存疑，且提到了一个称为“钙化”的相关副作用，即代码中重复出现的模式会阻碍适应性。
 
-**标签**: `#fpga`, `#vivado`, `#amd`, `#licensing`, `#linux`
+**标签**: `#LLM agents`, `#code generation`, `#constraint decay`, `#backend development`, `#AI reliability`
 
 ---
 
-<a id="item-6"></a>
-## [Armin Ronacher 批评 AI 生成的 GitHub issue，呼吁简明人工报告](https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything) ⭐️ 8.0/10
+<a id="item-5"></a>
+## [Vivado 2026.1 免费版取消 Linux 支持，激怒 FPGA 社区](https://adaptivesupport.amd.com/s/question/0D5Pd00001YQLdMKAX/why-is-vivado-20261-dropping-linux-support-for-free-tier-?language=en_US) ⭐️ 8.0/10
 
-Flask 和 Pi 的作者 Armin Ronacher 在博客中表达了对 AI 生成 GitHub issue 的不满，指出用户将问题输入 AI 工具后，得到的报告冗长、充满自信却常不准确，充斥着猜测和错误的原因分析。 这揭示了开源维护中的一个日益严重的问题：AI 能生成看似合理但误导性的报告，增加了维护者过滤噪音的负担，并强调了高效调试需要清晰的人类沟通。 Ronacher 特别批评了 AI ‘clanker’ 重写问题后给出充满信心的错误结论，甚至包含虚假的最小复现和不相关的代码类比。他提出了一个极简模板：运行了何命令、预期发生什么、实际发生了什么、确切的错误日志。
+AMD 宣布从 2026.1 版本开始，Vivado Design Suite 的免费“Basic”层级将不再支持 Linux 操作系统，仅保留 Windows 支持。 这一决定疏远了大量主要使用 Linux 的 FPGA 开发社区成员，包括学生、爱好者和开源开发者，可能阻碍 AMD 生态系统的扩展，并将用户推向 Lattice 等竞争平台。 免费 Basic 层级仍受设备限制并需要每年续期，但 Linux 支持被移除；官方声明没有给出技术或商业上的理由，而是聚焦于新的分级许可结构。
 
-rss · Simon Willison · May 24, 18:46
+hackernews · zdw · May 24, 04:14 · [社区讨论](https://news.ycombinator.com/item?id=48254309)
 
-**背景**: Armin Ronacher 是著名软件开发者，创造了 Flask、Jinja2 和 Python 包安装器 Pi。‘Clanker’ 是对 AI 文本生成助手的俗称，常指大语言模型驱动的工具。近期一些用户开始使用 AI 自动生成 GitHub 议题，但模型因幻觉和对代码库理解不足常产生不准确的内容。
+**背景**: Xilinx Vivado 是一款用于 FPGA 设计、综合和实现的综合性套件，广泛应用于硬件开发和教育。此前的免费版本适用于 Windows 和 Linux，使爱好者和学生能够免费在 AMD 硬件上学习与开发。Linux 因其灵活性和开源工具集成而受到众多开发者青睐。AMD 于 2022 年收购了 Xilinx。
 
-**标签**: `#open source`, `#AI`, `#software development`, `#bug reports`, `#LLM usage`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Vivado">Vivado - Wikipedia</a></li>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado/vivado-licensing-options.html">AMD Vivado™ Licensing Options | Flexible Subscription & Perpetual Tiers</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区反应几乎一致负面。用户批评 AMD 连忠实客户都要计较小钱，给 CI 环境和实习生配置带来许可证麻烦，并担心取消 Linux 支持会劝退学生、缩小爱好者生态。多位评论者建议转向 Lattice FPGA，称其免费层用户待遇更好、文档更优。部分长期 Xilinx 用户如今考虑转向竞争对手。
+
+**标签**: `#FPGA`, `#AMD`, `#Vivado`, `#Linux`, `#licensing`
 
 ---

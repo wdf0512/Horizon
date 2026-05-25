@@ -174,6 +174,7 @@ async def hz_fetch_items(
 async def hz_score_items(
     run_id: str,
     source_stage: str = "raw",
+    topic_keywords: list[str] | None = None,
     horizon_path: str | None = None,
     config_path: str | None = None,
 ) -> dict[str, Any]:
@@ -184,6 +185,7 @@ async def hz_score_items(
         lambda: service.score_items(
             run_id=run_id,
             source_stage=source_stage,
+            topic_keywords=topic_keywords,
             horizon_path=horizon_path,
             config_path=config_path,
         ),
@@ -268,6 +270,7 @@ async def hz_run_pipeline(
     sources: list[str] | None = None,
     enrich: bool = True,
     topic_dedup: bool = True,
+    topic_keywords: list[str] | None = None,
     save_to_horizon_data: bool = False,
 ) -> dict[str, Any]:
     """Run fetch -> score -> filter -> enrich -> summarize in one call."""
@@ -283,8 +286,96 @@ async def hz_run_pipeline(
             sources=sources,
             enrich=enrich,
             topic_dedup=topic_dedup,
+            topic_keywords=topic_keywords,
             save_to_horizon_data=save_to_horizon_data,
         ),
+    )
+
+
+@mcp.tool()
+async def hz_get_briefing(
+    topic: str,
+    hours: int = 24,
+    count: int = 5,
+    language: str = "zh",
+    min_score: float = 7.0,
+    force_refresh: bool = False,
+    config_pack: str | None = None,
+    horizon_path: str | None = None,
+    config_path: str | None = None,
+) -> dict[str, Any]:
+    """Return a curated briefing of top-N items on a topic."""
+
+    return await _run_tool(
+        "hz_get_briefing",
+        lambda: service.get_briefing(
+            topic=topic,
+            hours=hours,
+            count=count,
+            language=language,
+            min_score=min_score,
+            force_refresh=force_refresh,
+            config_pack=config_pack,
+            horizon_path=horizon_path,
+            config_path=config_path,
+        ),
+    )
+
+
+@mcp.tool()
+async def hz_search_history(
+    query: str,
+    days: int = 30,
+    top_k: int = 10,
+    min_score: float = 7.0,
+) -> dict[str, Any]:
+    """Keyword + date-range search over historical enriched items."""
+
+    return await _run_tool(
+        "hz_search_history",
+        lambda: service.search_history(
+            query=query,
+            days=days,
+            top_k=top_k,
+            min_score=min_score,
+        ),
+    )
+
+
+@mcp.tool()
+async def hz_subscribe_topic(
+    topic: str,
+    schedule: str = "0 9 * * *",
+    channels: list[str] | None = None,
+    config_pack: str | None = None,
+) -> dict[str, Any]:
+    """Create or update a topic subscription. Idempotent by topic."""
+
+    return await _run_tool(
+        "hz_subscribe_topic",
+        lambda: service.subscribe_topic(
+            topic=topic, schedule=schedule, channels=channels, config_pack=config_pack,
+        ),
+    )
+
+
+@mcp.tool()
+async def hz_list_subscriptions() -> dict[str, Any]:
+    """List active topic subscriptions."""
+
+    return await _run_tool(
+        "hz_list_subscriptions",
+        lambda: service.list_subscriptions(),
+    )
+
+
+@mcp.tool()
+async def hz_delete_subscription(subscription_id: str) -> dict[str, Any]:
+    """Delete a topic subscription by id."""
+
+    return await _run_tool(
+        "hz_delete_subscription",
+        lambda: service.delete_subscription(subscription_id=subscription_id),
     )
 
 

@@ -14,6 +14,7 @@ from .prompts import (
     DEPENDENCY_RISK_SYSTEM, DEPENDENCY_RISK_USER,
     ECOSYSTEM_SIGNAL_SYSTEM, ECOSYSTEM_SIGNAL_USER,
     TELEGRAM_ZH_SYSTEM, TELEGRAM_ZH_USER,
+    render_topic_addendum,
 )
 from .utils import parse_json_response
 from ..models import ContentItem
@@ -41,7 +42,11 @@ class ContentAnalyzer:
         throttle_sec = getattr(config, "throttle_sec", DEFAULT_THROTTLE_SEC)
         return max(throttle_sec, 0.0)
 
-    async def analyze_batch(self, items: List[ContentItem]) -> List[ContentItem]:
+    async def analyze_batch(
+        self,
+        items: List[ContentItem],
+        topic_keywords: list[str] | None = None,
+    ) -> List[ContentItem]:
         throttle_sec = self._get_throttle_sec()
         analyzed_items = []
 
@@ -56,7 +61,7 @@ class ContentAnalyzer:
 
             for index, item in enumerate(items):
                 try:
-                    await self._analyze_item(item)
+                    await self._analyze_item(item, topic_keywords=topic_keywords)
                     analyzed_items.append(item)
                 except Exception as e:
                     print(f"Error analyzing item {item.id}: {e}")
@@ -74,11 +79,16 @@ class ContentAnalyzer:
         stop=stop_after_attempt(3),
         wait=wait_exponential(min=2, max=10)
     )
-    async def _analyze_item(self, item: ContentItem) -> None:
+    async def _analyze_item(
+        self,
+        item: ContentItem,
+        topic_keywords: list[str] | None = None,
+    ) -> None:
         """Analyze a single content item.
 
         Args:
             item: Content item to analyze (modified in-place)
+            topic_keywords: Optional list of topic keywords to bias scoring
         """
         # Prepare content section
         content_section = ""
@@ -187,6 +197,7 @@ class ContentAnalyzer:
                 content_section=content_section,
                 discussion_section=discussion_section,
             )
+            user_prompt = user_prompt + render_topic_addendum(topic_keywords)
             system_prompt = CONTENT_ANALYSIS_SYSTEM
 
         # Get AI completion

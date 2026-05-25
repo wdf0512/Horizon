@@ -283,3 +283,21 @@ Respond with valid JSON only. Each _en field must be in English; each _zh field 
   "community_discussion_zh": "<用中文写1-3句话，或空字符串>",
   "sources": ["<url from search results>", "..."]
 }}"""
+
+TOPIC_RELEVANCE_ADDENDUM = """
+
+Topic relevance (additional dimension):
+The user is specifically tracking these topic keywords: {topic_keywords_str}
+- If the content is directly relevant to the listed topics, weight it more heavily.
+- If the content is only tangentially related, score it conservatively.
+- If the content is unrelated to the listed topics, score below 5 regardless of intrinsic quality.
+"""
+
+
+def render_topic_addendum(topic_keywords: list[str] | None) -> str:
+    """Return the topic-relevance block, or empty string if no keywords supplied."""
+    if not topic_keywords:
+        return ""
+    return TOPIC_RELEVANCE_ADDENDUM.format(
+        topic_keywords_str=", ".join(topic_keywords)
+    )

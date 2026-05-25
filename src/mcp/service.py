@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -21,13 +22,50 @@ from .horizon_adapter import (
     make_storage,
     resolve_config_path,
     resolve_horizon_path,
+    load_config_pack as _load_config_pack,
 )
+load_config_pack = _load_config_pack  # exposed at module scope for test monkeypatching
+from .cache import BriefingCache, CacheKey
 from .run_store import RunStore
+from .subscriptions_store import SubscriptionStore
 from ..services.webhook import WebhookNotifier
 
 
 def _default_runs_root() -> Path:
     return Path(__file__).resolve().parents[2] / "data" / "mcp-runs"
+
+
+def _topic_to_keywords(topic: str) -> list[str]:
+    """Normalize a freeform topic string into a deduped keyword list.
+
+    Lowercases, splits on non-alphanumerics, drops stopwords, preserves order.
+    """
+    stopwords = frozenset({
+        "a", "an", "the", "of", "and", "or", "in", "on", "at", "for",
+        "to", "by", "with", "from", "is", "are", "was", "were",
+    })
+    tokens: list[str] = []
+    current: list[str] = []
+    for ch in topic.lower():
+        if ch.isalnum():
+            current.append(ch)
+        else:
+            if current:
+                tokens.append("".join(current))
+                current = []
+    if current:
+        tokens.append("".join(current))
+
+    out: list[str] = []
+    seen: set[str] = set()
+    for tok in tokens:
+        if not tok or tok in stopwords:
+            continue
+        if tok in seen:
+            continue
+        seen.add(tok)
+        out.append(tok)
+    return out
 
 
 @dataclass
@@ -46,12 +84,48 @@ class HorizonPipelineService:
     def __init__(self, runs_root: Path | None = None):
         self.runs_root = Path(runs_root).resolve() if runs_root else _default_runs_root().resolve()
         self._run_store: RunStore | None = None
+        self.briefing_cache = BriefingCache(max_entries=256, default_ttl_seconds=3600)
+        self.subscriptions_path = self.runs_root.parent / "subscriptions.json"
+        self._subscription_store: SubscriptionStore | None = None
 
     @property
     def run_store(self) -> RunStore:
         if self._run_store is None:
             self._run_store = RunStore(self.runs_root)
         return self._run_store
+
+    @property
+    def subscription_store(self) -> SubscriptionStore:
+        if self._subscription_store is None:
+            self._subscription_store = SubscriptionStore(self.subscriptions_path)
+        return self._subscription_store
+
+    async def subscribe_topic(
+        self,
+        topic: str,
+        schedule: str = "0 9 * * *",
+        channels: list[str] | None = None,
+        config_pack: str | None = None,
+    ) -> dict[str, Any]:
+        ch = channels or ["webhook"]
+        sub = self.subscription_store.create(
+            topic=topic,
+            schedule=schedule,
+            channels=ch,
+            config_pack=config_pack,
+        )
+        return json.loads(sub.model_dump_json())
+
+    async def list_subscriptions(self) -> dict[str, Any]:
+        subs = self.subscription_store.list()
+        return {
+            "count": len(subs),
+            "items": [json.loads(s.model_dump_json()) for s in subs],
+        }
+
+    async def delete_subscription(self, subscription_id: str) -> dict[str, Any]:
+        deleted = self.subscription_store.delete(subscription_id)
+        return {"id": subscription_id, "deleted": deleted}
 
     def list_runs(self, limit: int = 20) -> dict[str, Any]:
         """List recent runs and stage availability."""
@@ -266,6 +340,7 @@ class HorizonPipelineService:
         self,
         run_id: str,
         source_stage: str = "raw",
+        topic_keywords: list[str] | None = None,
         horizon_path: str | None = None,
         config_path: str | None = None,
     ) -> dict[str, Any]:
@@ -281,7 +356,7 @@ class HorizonPipelineService:
 
         ai_client = ctx.runtime.create_ai_client(ctx.config.ai)
         analyzer = ctx.runtime.ContentAnalyzer(ai_client)
-        scored_items = await analyzer.analyze_batch(items)
+        scored_items = await analyzer.analyze_batch(items, topic_keywords=topic_keywords)
 
         self.run_store.save_items(run_id, "scored", items_to_dicts(scored_items))
         score_threshold = ctx.config.filtering.ai_score_threshold
@@ -462,6 +537,7 @@ class HorizonPipelineService:
         sources: list[str] | None = None,
         enrich: bool = True,
         topic_dedup: bool = True,
+        topic_keywords: list[str] | None = None,
         save_to_horizon_data: bool = False,
     ) -> dict[str, Any]:
         fetch_result = await self.fetch_items(
@@ -474,6 +550,7 @@ class HorizonPipelineService:
 
         score_result = await self.score_items(
             run_id=run_id,
+            topic_keywords=topic_keywords,
             horizon_path=horizon_path,
             config_path=config_path,
         )
@@ -524,6 +601,207 @@ class HorizonPipelineService:
             "enrich": enrich_result,
             "summaries": summaries,
             "meta": self.run_store.load_meta(run_id),
+        }
+
+    async def get_briefing(
+        self,
+        topic: str,
+        hours: int = 24,
+        count: int = 5,
+        language: str = "zh",
+        min_score: float = 7.0,
+        force_refresh: bool = False,
+        config_pack: str | None = None,
+        horizon_path: str | None = None,
+        config_path: str | None = None,
+    ) -> dict[str, Any]:
+        """One-call curated briefing: run pipeline, return top-N topic-relevant items.
+
+        Uses an in-memory LRU+TTL cache. Subsequent identical calls within
+        the TTL window return the cached payload with `cached=true`.
+
+        Note: the cache key intentionally does NOT include `count`. A cached
+        entry is truncated to the requested `count` on hit. Increasing `count`
+        within the TTL window will not produce more items — use
+        `force_refresh=True` to re-run the pipeline.
+        """
+
+        if language not in ("zh", "en"):
+            raise HorizonMcpError(
+                code="HZ_INVALID_INPUT",
+                message=f"language must be 'zh' or 'en', got {language!r}.",
+            )
+        if hours <= 0 or count <= 0:
+            raise HorizonMcpError(
+                code="HZ_INVALID_INPUT",
+                message="hours and count must be positive.",
+            )
+
+        pack_keywords: list[str] = []
+        effective_min_score = min_score
+        if config_pack:
+            pack = load_config_pack(config_pack)
+            pack_keywords = list(pack.get("topic_keywords") or [])
+            pack_threshold = (pack.get("filtering") or {}).get("ai_score_threshold")
+            if pack_threshold is not None:
+                effective_min_score = float(pack_threshold)
+
+        cache_key = CacheKey(
+            tenant_id="default",
+            topic=topic.strip().lower(),
+            language=language,
+            hours=hours,
+            min_score=effective_min_score,
+            config_pack=config_pack,
+        )
+
+        if not force_refresh:
+            cached_entry = self.briefing_cache.get_entry(cache_key)
+            if cached_entry is not None:
+                # Shallow copy: top-level dict is independent so we can flip
+                # `cached`/`cached_until` and trim `items`, but inner item
+                # dicts are still shared with the cache entry. Callers must
+                # not mutate them in place.
+                payload = dict(cached_entry.value)
+                payload["cached"] = True
+                payload["cached_until"] = datetime.fromtimestamp(
+                    cached_entry.expires_at, tz=timezone.utc
+                ).isoformat()
+                payload["items"] = payload["items"][:count]
+                payload["item_count"] = len(payload["items"])
+                return payload
+
+        topic_kw = _topic_to_keywords(topic)
+        seen: set[str] = set()
+        keywords = [
+            k for k in topic_kw + [pk.lower() for pk in pack_keywords]
+            if not (k in seen or seen.add(k))
+        ]
+
+        pipeline_result = await self.run_pipeline(
+            hours=hours,
+            languages=[language],
+            threshold=effective_min_score,
+            horizon_path=horizon_path,
+            config_path=config_path,
+            enrich=True,
+            topic_dedup=True,
+            topic_keywords=keywords or None,
+        )
+        run_id = pipeline_result["run_id"]
+
+        stage_payload = self.get_run_stage(run_id=run_id, stage="enriched", max_items=200)
+        items = stage_payload.get("items", [])
+
+        if keywords:
+            def matches(item: dict[str, Any]) -> bool:
+                haystack = " ".join(
+                    str(item.get(field, "")).lower()
+                    for field in ("title", "ai_summary", "ai_reason")
+                )
+                return any(kw in haystack for kw in keywords)
+            items = [it for it in items if matches(it)]
+
+        items.sort(key=lambda it: float(it.get("ai_score") or 0), reverse=True)
+        items = items[:count]
+
+        ranked = [
+            {
+                "rank": i + 1,
+                "title": it.get("title"),
+                "url": it.get("url"),
+                "source": it.get("source_type"),
+                "score": it.get("ai_score"),
+                "summary": it.get("ai_summary"),
+                "context": it.get("ai_context"),
+            }
+            for i, it in enumerate(items)
+        ]
+
+        payload = {
+            "topic": topic,
+            "language": language,
+            "time_window_hours": hours,
+            "cached": False,
+            "run_id": run_id,
+            "item_count": len(ranked),
+            "items": ranked,
+        }
+
+        self.briefing_cache.set(cache_key, payload)
+        return payload
+
+    async def search_history(
+        self,
+        query: str,
+        days: int = 30,
+        top_k: int = 10,
+        min_score: float = 7.0,
+    ) -> dict[str, Any]:
+        """Keyword + date-range search over enriched artifacts."""
+
+        if days <= 0 or top_k <= 0:
+            raise HorizonMcpError(
+                code="HZ_INVALID_INPUT",
+                message="days and top_k must be positive.",
+            )
+        q = query.strip().lower()
+        if not q:
+            raise HorizonMcpError(
+                code="HZ_INVALID_INPUT",
+                message="query must be non-empty.",
+            )
+
+        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+        candidates: list[dict[str, Any]] = []
+
+        # TODO(phase2): paginate or move to Postgres; full-scan-then-filter
+        # scales linearly with run count.
+        for entry in self.run_store.list_runs(limit=500):
+            created_raw = entry.get("created_at")
+            if not created_raw:
+                continue
+            try:
+                created = datetime.fromisoformat(created_raw)
+            except (ValueError, TypeError):
+                continue
+            if created.tzinfo is None:
+                created = created.replace(tzinfo=timezone.utc)
+            if created < cutoff:
+                continue
+            if not self.run_store.has_stage(entry["run_id"], "enriched"):
+                continue
+            try:
+                stage_items = self.run_store.load_items(entry["run_id"], "enriched")
+            except FileNotFoundError:
+                continue
+            for item in stage_items:
+                score = float(item.get("ai_score") or 0)
+                if score < min_score:
+                    continue
+                haystack = " ".join(
+                    str(item.get(field, "")).lower()
+                    for field in ("title", "ai_summary", "ai_reason")
+                )
+                if q in haystack:
+                    candidates.append({
+                        "run_id": entry["run_id"],
+                        "created_at": created_raw,
+                        "title": item.get("title"),
+                        "url": item.get("url"),
+                        "source": item.get("source_type"),
+                        "score": score,
+                        "summary": item.get("ai_summary"),
+                    })
+
+        candidates.sort(key=lambda it: it["score"], reverse=True)
+        items = candidates[:top_k]
+        return {
+            "query": query,
+            "days": days,
+            "min_score": min_score,
+            "count": len(items),
+            "items": items,
         }
 
     def _build_context(

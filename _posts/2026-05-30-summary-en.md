@@ -5,158 +5,186 @@ date: 2026-05-30
 lang: en
 ---
 
-> From 40 items, 7 important content pieces were selected
+> From 43 items, 9 important content pieces were selected
 
 ---
 
-1. [Anthropic Launches Claude Opus 4.8 with Performance Gains and 66% Price Cut on Fast Mode](#item-1) ⭐️ 9.0/10
-2. [Blog Argues SQLite Is Sufficient for Durable Workflows](#item-2) ⭐️ 8.0/10
-3. [Mistral AI Now Summit Highlights On-Prem Strategy and Tech Lag Concerns](#item-3) ⭐️ 8.0/10
-4. [You Can Just Say It: The Case Against LLM-Generated Personal Messages](#item-4) ⭐️ 8.0/10
-5. [California Assembly Passes 'Protect Our Games Act' for Digital Game Preservation](#item-5) ⭐️ 8.0/10
-6. [Is AI Causing a Repeat of Frontend's Lost Decade?](#item-6) ⭐️ 8.0/10
-7. [Researcher threatens more Windows 0-day exploit dumps in Microsoft feud](#item-7) ⭐️ 8.0/10
+1. [Huawei Unveils 'Tao Law': Time Shrinkage Replaces Geometric Scaling for Chips](#item-1) ⭐️ 9.0/10
+2. [The Dead Economy Theory: AI Automation Could Cannibalize Its Consumers](#item-2) ⭐️ 8.0/10
+3. [SQLite Is All You Need for Durable Workflows](#item-3) ⭐️ 8.0/10
+4. [UC Math Faculty Urge SAT/ACT Return for STEM Admissions](#item-4) ⭐️ 8.0/10
+5. [Blog Post Defines AI Slop as Hollow LLM Output, Urges Sending Prompts Instead](#item-5) ⭐️ 8.0/10
+6. [Deep Dive: Optimizing Code Diff Rendering for Large Diffs](#item-6) ⭐️ 8.0/10
+7. [Is AI causing a repeat of frontend's lost decade?](#item-7) ⭐️ 8.0/10
+8. [Rockstar Games Developers Unionize Over Pay and Crunch Culture](#item-8) ⭐️ 8.0/10
+9. [We should be more tired than the model](#item-9) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Anthropic Launches Claude Opus 4.8 with Performance Gains and 66% Price Cut on Fast Mode](https://www.anthropic.com/news/claude-opus-4-8) ⭐️ 9.0/10
+## [Huawei Unveils 'Tao Law': Time Shrinkage Replaces Geometric Scaling for Chips](https://t.me/zaihuapd/41648) ⭐️ 9.0/10
 
-Anthropic released Claude Opus 4.8, its latest flagship model, achieving significant improvements in coding, reasoning, and agentic task benchmarks. The fast mode API cost is reduced to one-third of the previous price, and new features like adjustable effort level on the web interface and Claude Code's dynamic workflows for parallel sub-agents were introduced. The 66% cost reduction in fast mode makes high-performance AI more accessible for developers, while the improved reliability reduces errors in coding tasks. The new agentic capabilities like dynamic workflows enable large-scale codebase migrations, accelerating enterprise software development. Claude Opus 4.8 is four times less likely to ignore errors when writing code and can actively point out input issues. The new dynamic workflows feature, currently in research preview, allows hundreds of sub-agents to run in parallel within Claude Code CLI, desktop, and VS Code extension.
+At the 2026 International Symposium on Circuits and Systems, Huawei introduced the 'Tao Law,' a new principle that targets time shrinkage—reducing signal propagation delay across device, circuit, and system levels—rather than traditional transistor miniaturization. The company revealed it has already used this approach to mass-produce 381 chips, with a new Kirin phone chip featuring logic folding technology set to launch this fall. The Tao Law addresses the economic and physical limits of Moore's Law, offering a path to sustain performance gains critical for AI and high-speed optical communication. It signals Huawei's bid to set a new industry direction at a time when traditional geometric scaling is stalling. Symbolized by τ (tau), the law targets time constant reduction to achieve coordinated optimization. Huawei projects that by 2031, its high-end chips using time shrinkage and logic folding will match the transistor density of a 1.4nm geometric-process node.
 
-telegram · zaihuapd · May 28, 16:50
+telegram · zaihuapd · May 30, 02:18
 
-**Background**: Claude Opus is Anthropic's highest-performance model line, competing with OpenAI's GPT-4 series. Claude Code is a developer tool that turns natural language instructions into code changes across entire codebases. Anthropic previously unveiled Claude Mythos, an even more capable model that excelled at finding security vulnerabilities, prompting cautious limited release; its wider public availability is now being prepared.
+**Background**: Moore's Law historically drove chip progress by shrinking feature sizes (geometric scaling) to double transistor density. That approach now faces atomic-scale physical barriers and soaring costs. Time shrinkage instead focuses on making electrons 'travel faster' through advanced circuit and system design, reducing the delay τ and effectively increasing performance without ever-smaller lithography.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.forbes.com/sites/ronschmelzer/2026/05/29/anthropics-guarded-mythos-model-is-headed-for-wider-release/">Anthropic’s Guarded Mythos Model Is Headed For Wider Release</a></li>
-<li><a href="https://www.qbitai.com/2026/05/426314.html">Claude 4.8炸场！部分 能 力超过Mythos，支持数百 子 智 能 体 并 行 | 量 子 位</a></li>
+<li><a href="https://www.ithome.com/0/955/839.htm">华为 韬 定 律 ，全球权威媒体 / 机构 / 顶级专家们都怎么看 - IT之家</a></li>
+<li><a href="https://www.cls.cn/detail/2383556">华为公司董事、半导体业务部总裁何庭波：华为比同行更早遇到这堵“墙”</a></li>
+<li><a href="https://36kr.com/p/3827586768688002">这两天，你τ了吗？ 扔掉制程的傻大憨粗，拥抱系统协同-36氪</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#模型发布`, `#Claude`, `#API降价`, `#Anthropic`, `#AI开发工具`
+**Tags**: `#半导体`, `#摩尔定律`, `#华为`, `#芯片设计`
 
 ---
 
 <a id="item-2"></a>
-## [Blog Argues SQLite Is Sufficient for Durable Workflows](https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/) ⭐️ 8.0/10
+## [The Dead Economy Theory: AI Automation Could Cannibalize Its Consumers](https://www.owenmcgrann.com/p/the-dead-economy-theory) ⭐️ 8.0/10
 
-A new blog post asserts that SQLite alone can serve as the state store for durable workflows, bypassing the need for specialized orchestration engines. The post has sparked lively debate, with many comments challenging its production-readiness and concurrency limitations. This challenges the conventional approach of using platforms like Temporal or Azure Durable Functions for reliable workflow state, and taps into the growing 'SQLite for everything' trend. It forces the community to examine where lightweight, embedded databases can realistically replace heavy infrastructure. The post likely leverages SQLite's write-ahead log (WAL) mode or other techniques to simulate durability, but commenters note that concurrent writes from multiple processes remain a fundamental weakness. Notable responses include a library (s3db) that extends SQLite with session-based concurrency on cloud object storage.
+An article published on Owen McGrann's blog presents the 'dead economy theory', arguing that AI-driven automation could shrink its own consumer base, potentially triggering economic collapse. The piece ignited intense discussion on Hacker News, with 818 upvotes and over 1000 comments debating the paradox. This theory challenges the optimistic view of AI-driven productivity by exposing a potential feedback loop where cost-cutting layoffs erode the very market demand that sustains businesses. It raises urgent questions about sustainable economic models in an age of rapid automation. The article uses vivid analogies like the Ouroboros to illustrate the self-consuming nature of AI-driven cost cuts, and community discussion points out real-world examples of tech overcapacity, such as excessive developers on projects like Facebook Messenger. It also questions whether universal basic income would actually provide meaning, contrasting with the contentment of retirees.
 
-hackernews · tomasol · May 29, 17:54 · [Discussion](https://news.ycombinator.com/item?id=48326802)
+hackernews · WillDaSilva · May 29, 15:46 · [Discussion](https://news.ycombinator.com/item?id=48324712)
 
-**Background**: Durable workflows are long-running, stateful processes that must survive failures and restarts, commonly implemented with engines like Temporal, Azure Durable Functions, or Camunda. These platforms manage checkpoints, retries, and recovery automatically. SQLite is a self-contained, serverless database widely used in mobile and desktop apps, but its file-based locking traditionally limits concurrent access from multiple machines, making it controversial for production workflow backends.
+**Background**: The 'dead economy theory' echoes long-standing debates about technological unemployment and the 'paradox of automation', where machines that boost productivity can undercut the purchasing power of workers. Unlike past industrial revolutions that eventually created new jobs, some economists fear that AI may displace workers faster than new roles can emerge, leading to structural demand deficits.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://dev.to/mahdi0shamlou/mahdi-shamlou-durable-workflow-engines-comparison-temporal-dbos-transact-prefect-custom-3a6a">Mahdi Shamlou | Durable Workflow Engines Comparison ...</a></li>
-<li><a href="https://medium.com/@sant1/exploring-temporal-workflow-automating-tasks-with-elegance-53d30274492e">Exploring Temporal Workflow : Automating Tasks with... | Medium</a></li>
+**Discussion**: Commenters broadly engaged with the theory, using metaphors like the Ouroboros and a greedy farmer to depict the self-defeating nature of AI-driven cost cutting. Some argued that overcapacity was already endemic in tech, while others debated whether a post-work society would lead to meaninglessness or, as with retirees, fulfillment. A few awaited real financial data from upcoming AI company IPOs to test sustainability.
 
-</ul>
-</details>
-
-**Discussion**: Reactions were mixed: supporters appreciated the simplicity and low overhead for small projects, while critics (e.g., levkk) argued SQLite is inherently unsuitable for concurrent production workloads. Others highlighted pragmatic compromises, such as using Temporal with a SQLite backend locally or employing DuckDB for local ETL, and psanford shared a library that safely handles concurrent SQLite updates on S3.
-
-**Tags**: `#sqlite`, `#workflows`, `#durable-execution`, `#concurrency`, `#distributed-systems`
+**Tags**: `#economy`, `#AI`, `#automation`, `#future of work`, `#tech industry`
 
 ---
 
 <a id="item-3"></a>
-## [Mistral AI Now Summit Highlights On-Prem Strategy and Tech Lag Concerns](https://koenvangilst.nl/lab/mistral-ai-now-summit) ⭐️ 8.0/10
+## [SQLite Is All You Need for Durable Workflows](https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/) ⭐️ 8.0/10
 
-Mistral AI hosted its Now Summit, unveiling a focus on on-premise AI solutions and European data sovereignty, as detailed in a blog post that reignited debate about the company's competitive standing in the AI market. The summit underscores Mistral's strategic push into regulated European industries through on-prem deployments, an alternative to US hyperscalers, at a time when community voices warn its models are falling dangerously behind Chinese and American rivals. Mistral's 'small' model has 120B parameters, roughly four times the size of leading small models like Gemma4 and Qwen3.6, yet it struggles to compete in reasoning performance, especially at medium context lengths.
+A blog post argues that SQLite alone can serve as a sufficient backend for durable workflows, sparking debate on Hacker News about its concurrency limits and the growing use of embedded databases in production. This challenges the common reliance on complex workflow orchestrators or dedicated database servers, highlighting a movement toward minimal infrastructure that can cut costs and operational overhead for many applications. The discussion notes that with WAL mode, SQLite can handle moderate concurrency, though high-concurrency multi-process workloads still benefit from dedicated servers like PostgreSQL. One user replaced a full SaaS stack with Go + SQLite, cutting costs to one-tenth.
 
-hackernews · vnglst · May 29, 16:22 · [Discussion](https://news.ycombinator.com/item?id=48325340)
+hackernews · tomasol · May 29, 17:54 · [Discussion](https://news.ycombinator.com/item?id=48326802)
 
-**Background**: Founded in 2023 in Paris, Mistral AI is a prominent European AI startup known for open-weight large language models and a valuation above $14 billion. The AI landscape is increasingly dominated by US hyperscalers and Chinese labs, with small, efficient models becoming critical for enterprise adoption. The Now Summit serves as the company's venue for product launches and strategic announcements.
+**Background**: Durable workflows persist execution state across failures and long waits, traditionally requiring external databases or services like Temporal or Inngest. SQLite is an embedded, serverless database that runs in-process; while historically limited in concurrent writes, modern improvements like WAL mode have expanded its production viability for many non-distributed workloads.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Mistral_AI">Mistral AI - Wikipedia</a></li>
-<li><a href="https://venturebeat.com/technology/mistral-ai-launches-vibe-expands-into-industrial-ai-and-announces-data-center-push-to-challenge-openai">Mistral AI launches Vibe, expands into industrial AI and ... - VentureBeat</a></li>
+<li><a href="https://www.inngest.com/uses/durable-workflows">Inngest - Durable Workflows</a></li>
+<li><a href="https://medium.com/@gwendal.roue/four-different-ways-to-handle-sqlite-concurrency-db3bcc74d00e">Four different ways to handle SQLite concurrency | Medium</a></li>
+<li><a href="https://www.sqlite.org/lockingv3.html">File Locking And Concurrency In SQLite Version 3</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters widely praised the on-prem strategy as a smart move for regulated European industries, but strongly criticized Mistral's technological delays. Many noted its large models are outperformed by much smaller competitors and expressed fear that Europe's regulatory and tax environment is stifling AI innovation.
+**Discussion**: Comments are divided: proponents praise SQLite's simplicity and cost savings, with one replacing many SaaS tools using Go + SQLite. Critics argue that SQLite's concurrency model is fundamentally unsuitable for production applications, recommending dedicated database servers. Some note that DuckDB may outperform SQLite for ETL tasks.
 
-**Tags**: `#Mistral AI`, `#AI Summit`, `#European AI`, `#LLM`, `#AI Strategy`
+**Tags**: `#sqlite`, `#workflows`, `#software-architecture`, `#databases`, `#concurrency`
 
 ---
 
 <a id="item-4"></a>
-## [You Can Just Say It: The Case Against LLM-Generated Personal Messages](https://noperator.dev/posts/you-can-just-say-it/) ⭐️ 8.0/10
+## [UC Math Faculty Urge SAT/ACT Return for STEM Admissions](https://www.latimes.com/california/story/2026-05-27/uc-math-professors-demand-return-of-sat-for-stem-admissions) ⭐️ 8.0/10
 
-A blog post by 'noperator' argues that using large language models (LLMs) to compose personal emails or messages is often unnecessary and dehumanizing, prompting a discussion about authenticity and AI slop. The piece resonates amid growing frustration with AI-generated slop—content that is high in volume but low in genuine intent—and questions whether offloading personal communication to machines erodes authentic human connection. The author’s friend notes, 'If you’re going to use an LLM to write me an email, I’d much rather you just send me the prompt.' Commenter antirez defines AI slop as output that is large but 'lacks fundamental motivation/understanding,' a distinction that separates tool from misuse.
+University of California math faculty are demanding the reinstatement of SAT/ACT scores for STEM admissions, citing severe math deficiencies among incoming students that force instructors to re-teach middle-school math. This pushback against test-optional policies was made public through a faculty letter. The debate highlights systemic failures in K-12 math education that could undermine STEM workforce development, equity in admissions, and the academic readiness of future scientists and engineers. The faculty letter warns instructors must reteach middle-school mathematics while covering college material, and critics counter that placement tests and prerequisites could filter unprepared students without reinstating the SAT.
 
-hackernews · antirez · May 29, 15:54 · [Discussion](https://news.ycombinator.com/item?id=48324853)
+hackernews · brandonb · May 28, 14:13 · [Discussion](https://news.ycombinator.com/item?id=48309233)
 
-**Background**: Large language models (LLMs) like ChatGPT are widely used to draft emails and messages, but critics argue they produce generic, impersonal text. The term 'AI slop' has emerged to describe low-effort, high-volume AI-generated content that clogs the internet and devalues human expression. Merriam-Webster and the American Dialect Society both named 'slop' the 2025 Word of the Year, reflecting its cultural impact.
+**Background**: Starting in 2020, the University of California system and many other universities dropped SAT/ACT requirements to promote equity amid concerns about socioeconomic bias. However, faculty have increasingly reported that incoming students lack fundamental math skills, leading to calls for reinstatement. The SAT historically served as a common benchmark for college readiness across diverse high schools.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/AI_slop">AI slop</a></li>
+**Discussion**: Comments reveal contrasting views: one contributor from Italy notes that rigorous university exams, not entrance tests, ensure quality. Others argue professors should enforce prerequisites rather than reteach middle school math, and some blame digital distractions in high school math classes for declining skills.
 
-</ul>
-</details>
-
-**Discussion**: Commenters largely agreed with the critique, finding the 'just send the prompt' idea resonant. Some argued that human communication itself often contains slop, and that AI could assist those who struggle with expression. antirez's definition of slop was praised as a useful mental model, while others reflected on AI's potential to separate human value from economic output.
-
-**Tags**: `#AI ethics`, `#communication`, `#LLM`, `#human value`, `#slop`
+**Tags**: `#education`, `#standardized-testing`, `#STEM`, `#math-education`, `#higher-education`
 
 ---
 
 <a id="item-5"></a>
-## [California Assembly Passes 'Protect Our Games Act' for Digital Game Preservation](https://www.invenglobal.com/articles/22330/stop-killing-games-movement-gains-momentum-california-assembly-passes-game-protection-bill) ⭐️ 8.0/10
+## [Blog Post Defines AI Slop as Hollow LLM Output, Urges Sending Prompts Instead](https://noperator.dev/posts/you-can-just-say-it/) ⭐️ 8.0/10
 
-The California state assembly has passed the 'Protect Our Games Act', which requires digital game publishers to keep games playable after online service shutdowns, and prohibits the continued sale of games rendered unplayable. This legislation sets a significant precedent for consumer rights in digital game ownership, directly addressing the problem of games becoming unplayable after server shutdowns, and may inspire similar efforts globally. The bill applies only to digitally sold games and excludes those offered via subscription, free-to-play titles, and offline-capable games; it also bars the continued sale of a game after its service termination renders it unusable.
+The blog post by noperator.dev defines 'AI slop' as large, motivation-lacking text generated by LLMs, and argues that sending the raw prompt would be more authentic than the inflated, hollow final message. This definition directly addresses growing unease about authenticity in AI-mediated communication, encouraging people to prioritize genuine intent over polished but meaningless filler in personal and professional correspondence. The post distinguishes between using AI and misusing it, emphasizing that slop arises from a lack of fundamental motivation or understanding, not the technology itself. The community deepened the discussion with philosophical reflections, including a C.S. Lewis quote on human dignity.
 
-hackernews · TechTechTech · May 29, 19:55 · [Discussion](https://news.ycombinator.com/item?id=48328365)
+hackernews · antirez · May 29, 15:54 · [Discussion](https://news.ycombinator.com/item?id=48324853)
 
-**Background**: The 'Stop Killing Games' movement has campaigned for years against publishers discontinuing online services for games that then become unplayable, as seen with titles like Firefall. Similar concerns have prompted a European citizens' petition, but California's bill is among the first legislative actions at the state level. The growing reliance on live-service models and server-dependent features has made game preservation a pressing consumer issue.
-
-**Discussion**: The community largely supports the bill as a consumer win, but many question enforcement, pointing to loopholes like publishers forming shell companies to avoid liability. Others worry that the exceptions for subscription and free-to-play games will incentivize companies to shift models, and some wish the scope extended further, such as to subscription-based titles.
-
-**Tags**: `#consumer-protection`, `#video-games`, `#legislation`, `#digital-rights`, `#software-preservation`
-
----
-
-<a id="item-6"></a>
-## [Is AI Causing a Repeat of Frontend's Lost Decade?](https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/) ⭐️ 8.0/10
-
-A discussion explores whether AI tools are devaluing deep frontend expertise—such as browser quirks and CSS specificity—similar to how the earlier 'frontend lost decade' saw frameworks encourage neglect of core web technologies. Community comments argue that much of this complexity was accidental and that lowering the barrier to building is beneficial. This trend could erode crucial skills needed for performance, accessibility, and long-term maintainability, potentially repeating past mistakes where the web became bloated and exclusionary. It highlights the tension between democratizing development and preserving quality craftsmanship. The blog references Alex Russell's 'frontend lost decade' concept, where heavy JavaScript frameworks caused poor mobile performance and user exclusion. Today's AI coding tools, like agentic assistants, further abstract fundamental web understanding, potentially repeating that pattern.
-
-hackernews · xyzal · May 29, 11:09 · [Discussion](https://news.ycombinator.com/item?id=48321631)
-
-**Background**: The 'frontend lost decade' (roughly early 2010s–2020s) describes how the industry's shift to large frameworks caused many developers to lose touch with vanilla HTML, CSS, and JavaScript, building a 'tower of abstractions' that added performance overhead and complexity. This led to slower, less accessible websites. Now, AI coding assistants that generate code from prompts threaten to further distance developers from underlying technologies.
+**Background**: The term 'AI slop' emerged in the 2020s to describe low-effort, high-volume synthetic content, often generated for clickbait or monetary gain. This blog post extends the concept to everyday interpersonal communication, contrasting genuine human expression with hollow AI-generated text. Similar to spam, AI slop is widely criticized for degrading online content quality.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/">Is AI causing a repeat of Frontend's Lost Decade?</a></li>
-<li><a href="https://arpit.blog/links/2026/01/reckoning-frontends-lost-decade-alex-russell/">Reckoning: Frontend's Lost Decade | Alex Russell | performance.now ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AI_slop">AI slop</a></li>
+<li><a href="https://theconversation.com/what-is-ai-slop-a-technologist-explains-this-new-and-largely-unwelcome-form-of-online-content-256554">What is AI slop? A technologist explains this new and largely unwelcome form of online content</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters largely push back against nostalgia for lost skills, arguing that browser quirks, CSS specificity, and framework eccentricities were 'accidental complexity' hindering broader participation. They note that before AI, much frontend work was already mediocre, and AI may improve quality long-term. The sentiment overwhelmingly favors accessibility over preserving arcane expertise.
+**Discussion**: The commenters overwhelmingly endorse the definition, linking it to broader issues of dehumanization and the intrinsic value of human effort. Many share personal reflections on identity crises in the AI era, while others, like antirez, praise the post's conciseness and its capacity to blame misuse rather than AI itself. The discussion is enriched by literary quotes, reinforcing the call for authenticity.
 
-**Tags**: `#frontend`, `#AI`, `#software-engineering`, `#web-development`, `#career`
+**Tags**: `#AI slop`, `#communication`, `#LLM ethics`, `#authenticity`, `#human-AI interaction`
+
+---
+
+<a id="item-6"></a>
+## [Deep Dive: Optimizing Code Diff Rendering for Large Diffs](https://pierre.computer/writing/on-rendering-diffs) ⭐️ 8.0/10
+
+An in-depth article details several techniques to drastically speed up rendering of large code diffs in web-based editors, such as deferred syntax highlighting and an innovative 'inverse sticky' scrolling method, receiving enthusiastic feedback from developers. Optimizing diff rendering is crucial for developer productivity, as slow interfaces can make reviewing large pull requests frustrating; these techniques could directly influence future improvements in major platforms like GitHub and code editors, enhancing the daily workflow of millions of developers. Key techniques include deferring syntax highlighting to idle time and using an 'inverse sticky' viewport lock to prevent blank flashes; however, the sticky method has a drawback where fast scrolling can temporarily halt scroll, as noted by a commenter.
+
+hackernews · amadeus · May 29, 19:04 · [Discussion](https://news.ycombinator.com/item?id=48327809)
+
+**Background**: Code diff rendering is the visual display of file changes between versions, often shown in split or unified views. For large diffs with thousands of changed lines, browser-based editors can become slow due to the need to compute layout, apply syntax highlighting, and update the DOM for each line. Performance optimizations typically involve incremental rendering, virtualization, and deferred work.
+
+**Discussion**: Community reaction is largely enthusiastic, with many praising the article's clarity and practical value. A developer building a CAD diff tool found the deferred highlighting technique applicable to their work. Some skepticism was raised about the 'inverse sticky' scrolling, which a commenter noted can disrupt scrolling if too fast, and questioned whether browsers should handle rendering more efficiently without such tricks.
+
+**Tags**: `#diff`, `#rendering`, `#performance`, `#optimization`, `#frontend`
 
 ---
 
 <a id="item-7"></a>
-## [Researcher threatens more Windows 0-day exploit dumps in Microsoft feud](https://www.theregister.com/security/2026/05/28/microsoft-0-day-feud-escalates-as-researcher-threatens-another-windows-exploit-dump/5248085) ⭐️ 8.0/10
+## [Is AI causing a repeat of frontend's lost decade?](https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/) ⭐️ 8.0/10
 
-A security researcher, escalating a dispute with Microsoft, has threatened to publicly release additional Windows zero-day exploits, criticizing the company's bug reporting system and alleged failure to compensate or acknowledge his findings. This feud highlights deep tensions over coordinated vulnerability disclosure expectations, potentially influencing how vendors handle external research and how researchers resort to public pressure when they feel ignored. The researcher, known as Eclipse, says he was neither compensated nor publicly acknowledged by Microsoft despite their bug bounty program's promises, and Microsoft has not released evidence of his alleged coordinated vulnerability disclosure violation.
+A blog post by Mastro argues that AI-assisted coding tools risk repeating the 'lost decade' of frontend development, where JavaScript frameworks abstracted away core skills and led to a decline in deep expertise, sparking a high-volume debate among developers. The discussion highlights a critical tension in software engineering: the trade-off between accessibility and quality. If AI deskills developers en masse, the long-term health of the web ecosystem—including security, accessibility, and performance—could be compromised. The article draws an analogy between JavaScript frameworks (which treat the browser as a compilation target) and AI coding assistants (which may render knowledge of HTML/CSS obsolete). Commenter kangalioo argues that much of the lost 'deep expertise' was accidental complexity, while kristianc emphasizes that more people building things is a net positive even if quality varies.
 
-hackernews · Cider9986 · May 29, 19:37 · [Discussion](https://news.ycombinator.com/item?id=48328175)
+hackernews · xyzal · May 29, 11:09 · [Discussion](https://news.ycombinator.com/item?id=48321631)
 
-**Background**: Zero-day exploits target unpatched vulnerabilities. Coordinated vulnerability disclosure (CVD) is a process where researchers report flaws privately to vendors before public release, giving them time to fix. When vendors are perceived as unresponsive, some researchers resort to full disclosure to pressure a fix.
+**Background**: The 'lost decade' of frontend development refers to the era when frameworks like React and Angular became dominant, abstracting away direct HTML/CSS/JS manipulation. This enabled faster development but resulted in many developers lacking foundational knowledge of browser APIs, performance optimization, and web standards. The concern now is that AI tools like GitHub Copilot may further deskill developers by generating code without understanding, analogous to earlier framework-induced abstraction.
 
-**Discussion**: Commenters generally see Microsoft as provoking the feud with a hostile bug reporting system, while acknowledging the burdens of report triage. There's some satisfaction with the researcher's stance but concern for exploitation victims and potential legal actions against him.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/">Is AI causing a repeat of Frontend ’s Lost Decade? | Mastro Blog</a></li>
+<li><a href="https://news.ycombinator.com/item?id=48321631">Is AI causing a repeat of frontend's lost decade? - Hacker News</a></li>
+<li><a href="https://kpwags.com/posts/2026/is-ai-causing-a-repeat-of-frontends-lost-decade/">Extended Note: Is AI causing a repeat of Frontend's Lost Decade?</a></li>
 
-**Tags**: `#cybersecurity`, `#vulnerability-disclosure`, `#microsoft`, `#zero-day`, `#ethical-hacking`
+</ul>
+</details>
+
+**Discussion**: Community sentiment largely disputes the article's premise, arguing that the lost 'deep expertise' was often accidental complexity like browser quirks rather than valuable skill. Several commenters note that AI can enforce a 'latent rigor' missing from framework-era abstractions, and that prior to AI, much web work was already mediocre. The overall view is that increased accessibility and speed outweigh potential quality drops.
+
+**Tags**: `#AI`, `#frontend`, `#web development`, `#software engineering`, `#developer experience`
+
+---
+
+<a id="item-8"></a>
+## [Rockstar Games Developers Unionize Over Pay and Crunch Culture](https://rockstarintel.com/gta-6-developers-announce-rockstar-games-union/) ⭐️ 8.0/10
+
+Rockstar Games developers have formally announced a union, demanding pay transparency, flexible working, and an end to crunch culture at the studio behind Grand Theft Auto 6. This unionization at a high-profile game studio highlights long-standing issues of wage disparity and excessive overtime in game development, and could pressure the broader tech industry to improve labor standards. The union's initial platform focuses on three demands: pay transparency, flexible working arrangements, and an end to crunch—the compulsory, often unpaid overtime common during game development.
+
+hackernews · AndrewKemendo · May 29, 15:32 · [Discussion](https://news.ycombinator.com/item?id=48324499)
+
+**Background**: Crunch is a widespread practice in game development where workers put in extreme overtime, sometimes 65–80 hours per week, often without extra compensation. Unionization in the tech and gaming sectors has historically been rare, though recent efforts at companies like Activision Blizzard and now Rockstar indicate a growing movement.
+
+**Discussion**: Commenters discussed wage gaps between game and big tech, condemned crunch as predatory, and debated how outsourcing and H1B visas weaken union leverage. Overall sentiment was largely supportive of the union, with some cynicism about employer resistance.
+
+**Tags**: `#unionization`, `#gaming industry`, `#labor rights`, `#tech culture`, `#crunch`
+
+---
+
+<a id="item-9"></a>
+## [We should be more tired than the model](https://vickiboykis.com/2026/05/28/we-should-be-more-tired-than-the-model/) ⭐️ 8.0/10
+
+A recent essay by Vicki Boykis argues that in the age of AI coding assistants, developers should be more tired than the model — meaning they must invest more effort in understanding code than the model spends generating it, to avoid a decline in code quality. This perspective challenges the industry’s focus on AI-driven productivity, warning that overreliance on generated code without deep understanding can erode developer skills and lead to brittle, hard-to-maintain systems. It matters to anyone building long-lived software, as the author emphasizes that comprehension remains the bottleneck for quality. The article claims understanding is the bottleneck in AI-assisted development, and developers must actively direct agents for tasks like refactoring and test deduplication rather than passively accepting code. Community commenters highlight that abstraction skills and programming fundamentals remain critical, though some note that ‘taste’ (the ability to judge code) might degrade differently than specific technical skills.
+
+hackernews · tosh · May 29, 12:12 · [Discussion](https://news.ycombinator.com/item?id=48322118)
+
+**Background**: AI coding assistants such as GitHub Copilot, Cursor, and ChatGPT have surged in popularity, enabling developers to generate large amounts of code quickly. However, concerns have emerged that developers may accept AI-generated code without fully understanding it, leading to technical debt, security flaws, and erosion of fundamental programming skills. The article by Vicki Boykis enters this ongoing debate, advocating that true software engineering still requires deep comprehension and deliberate effort.
+
+**Discussion**: The community broadly agrees that understanding is the core bottleneck, but offers varied adaptation strategies. Simonw describes directing agents for refactoring to maintain code structure, while paulmooreparks sees moving to a higher-level product role as acceptable. CraigJPerry emphasizes abstraction as the key tool, and adamtaylor_13 questions whether skill loss is truly problematic if ‘taste’ remains. The discussion reveals a spectrum of approaches rather than a single right answer.
+
+**Tags**: `#AI`, `#software-engineering`, `#developer-productivity`, `#coding-assistants`, `#code-quality`
 
 ---

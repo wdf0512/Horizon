@@ -14,7 +14,6 @@ from .prompts import (
     DEPENDENCY_RISK_SYSTEM, DEPENDENCY_RISK_USER,
     ECOSYSTEM_SIGNAL_SYSTEM, ECOSYSTEM_SIGNAL_USER,
     TELEGRAM_ZH_SYSTEM, TELEGRAM_ZH_USER,
-    render_topic_addendum,
 )
 from .utils import parse_json_response
 from ..models import ContentItem
@@ -42,13 +41,30 @@ class ContentAnalyzer:
         throttle_sec = getattr(config, "throttle_sec", DEFAULT_THROTTLE_SEC)
         return max(throttle_sec, 0.0)
 
-    async def analyze_batch(
-        self,
-        items: List[ContentItem],
-        topic_keywords: list[str] | None = None,
-    ) -> List[ContentItem]:
+    def _get_concurrency(self) -> int:
+        """Return the configured analysis concurrency, clamped to 1 or above."""
+        config = getattr(self.client, "config", None)
+        concurrency = getattr(config, "analysis_concurrency", 1)
+        return max(concurrency, 1)
+
+    async def analyze_batch(self, items: List[ContentItem]) -> List[ContentItem]:
         throttle_sec = self._get_throttle_sec()
-        analyzed_items = []
+        concurrency = self._get_concurrency()
+        semaphore = asyncio.Semaphore(concurrency)
+
+        async def _process(item: ContentItem, index: int, progress_task) -> ContentItem:
+            async with semaphore:
+                try:
+                    await self._analyze_item(item)
+                except Exception as e:
+                    print(f"Error analyzing item {item.id}: {e}")
+                    item.ai_score = 0.0
+                    item.ai_reason = "Analysis failed"
+                    item.ai_summary = item.title
+                if throttle_sec > 0 and index < len(items) - 1:
+                    await asyncio.sleep(throttle_sec)
+            progress.advance(progress_task)
+            return item
 
         with Progress(
             SpinnerColumn(),
@@ -58,20 +74,10 @@ class ContentAnalyzer:
             transient=True,
         ) as progress:
             task = progress.add_task("Analyzing", total=len(items))
-
-            for index, item in enumerate(items):
-                try:
-                    await self._analyze_item(item, topic_keywords=topic_keywords)
-                    analyzed_items.append(item)
-                except Exception as e:
-                    print(f"Error analyzing item {item.id}: {e}")
-                    item.ai_score = 0.0
-                    item.ai_reason = "Analysis failed"
-                    item.ai_summary = item.title
-                    analyzed_items.append(item)
-                progress.advance(task)
-                if throttle_sec > 0 and index < len(items) - 1:
-                    await asyncio.sleep(throttle_sec)
+            coros = [
+                _process(item, i, task) for i, item in enumerate(items)
+            ]
+            analyzed_items = await asyncio.gather(*coros)
 
         return analyzed_items
 
@@ -79,16 +85,11 @@ class ContentAnalyzer:
         stop=stop_after_attempt(3),
         wait=wait_exponential(min=2, max=10)
     )
-    async def _analyze_item(
-        self,
-        item: ContentItem,
-        topic_keywords: list[str] | None = None,
-    ) -> None:
+    async def _analyze_item(self, item: ContentItem) -> None:
         """Analyze a single content item.
 
         Args:
             item: Content item to analyze (modified in-place)
-            topic_keywords: Optional list of topic keywords to bias scoring
         """
         # Prepare content section
         content_section = ""
@@ -197,7 +198,6 @@ class ContentAnalyzer:
                 content_section=content_section,
                 discussion_section=discussion_section,
             )
-            user_prompt = user_prompt + render_topic_addendum(topic_keywords)
             system_prompt = CONTENT_ANALYSIS_SYSTEM
 
         # Get AI completion

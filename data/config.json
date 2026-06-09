@@ -6,7 +6,10 @@
     "api_key_env": "DASHSCOPE_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
-    "languages": ["zh", "en"]
+    "languages": [
+      "zh",
+      "en"
+    ]
   },
   "sources": {
     "github": [
@@ -211,7 +214,10 @@
     },
     "twitter": {
       "enabled": false,
-      "users": ["karpathy", "roifex"],
+      "users": [
+        "karpathy",
+        "roifex"
+      ],
       "fetch_limit": 10,
       "fetch_reply_text": false,
       "max_replies_per_tweet": 3,
@@ -227,12 +233,18 @@
     {
       "enabled": true,
       "url_env": "TELEGRAM_WEBHOOK_URL",
-      "delivery": "items_only",
-      "platform": "telegram",
+      "delivery": "summary",
+      "platform": "generic",
       "layout": "markdown",
-      "languages": ["zh"],
-      "category_filter": ["dependency-risk"],
-      "category_prefix_filter": ["compliance-"],
+      "languages": [
+        "zh"
+      ],
+      "category_filter": [
+        "dependency-risk"
+      ],
+      "category_prefix_filter": [
+        "compliance-"
+      ],
       "score_threshold_override": 0.0,
       "request_body": {
         "chat_id": "6855688015",
@@ -246,10 +258,12 @@
     "url_env": "TELEGRAM_WEBHOOK_URL",
     "delivery": "summary_and_items",
     "overview_position": "first",
-    "platform": "telegram",
+    "platform": "generic",
     "layout": "markdown",
     "fallback_layout": "markdown",
-    "languages": ["zh"],
+    "languages": [
+      "zh"
+    ],
     "request_body": {
       "chat_id": "6855688015",
       "text": "#{message_title}\n\n#{summary}"

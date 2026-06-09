@@ -8,7 +8,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from rich.console import Console
 
-from .storage.manager import StorageManager
+from .storage.manager import ConfigError, StorageManager
 from .orchestrator import HorizonOrchestrator
 
 
@@ -54,11 +54,19 @@ def main():
             config = storage.load_config()
         except FileNotFoundError:
             console.print("[bold red]❌ Configuration file not found![/bold red]\n")
+            data_dir_path = data_dir if isinstance(data_dir, Path) else Path(data_dir)
+            example_path = data_dir_path / "config.example.json"
+            if example_path.exists():
+                console.print(
+                    f"Copy the example config and edit it:\n"
+                    f"  [cyan]cp {example_path} {data_dir_path / 'config.json'}[/cyan]\n"
+                )
             console.print(
-                "Run [bold cyan]uv run horizon-wizard[/bold cyan] to launch the interactive setup wizard,\n"
-                "or create [cyan]data/config.json[/cyan] manually based on the template:\n"
+                "Or run [bold cyan]uv run horizon-wizard[/bold cyan] to launch the interactive setup wizard.\n"
             )
-            print_config_template()
+            sys.exit(1)
+        except ConfigError as e:
+            console.print(f"[bold red]❌ Error loading configuration: {e}[/bold red]")
             sys.exit(1)
         except Exception as e:
             console.print(f"[bold red]❌ Error loading configuration: {e}[/bold red]")
@@ -114,7 +122,11 @@ def print_config_template():
   },
   "filtering": {
     "ai_score_threshold": 7.0,
-    "time_window_hours": 24
+    "time_window_hours": 24,
+    "max_items": null,
+    "category_groups": {},
+    "default_group": "other",
+    "default_group_limit": null
   }
 }
 

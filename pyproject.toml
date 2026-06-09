@@ -28,6 +28,14 @@ dev = [
     "pytest>=8.0.0",
     "pytest-cov>=5.0.0",
 ]
+openbb = [
+    "openbb>=4.4.0",
+    "openbb-benzinga>=1.6.0",
+]
+twitter = [
+    "playwright>=1.40.0",
+    "playwright-stealth>=1.0.0",
+]
 
 [project.scripts]
 horizon = "src.main:main"
@@ -46,3 +54,8 @@ packages = ["src"]
 minversion = "8.0"
 addopts = "-q"
 testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]

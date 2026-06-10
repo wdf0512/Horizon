@@ -1,9 +1,9 @@
 {
   "version": "1.0",
   "ai": {
-    "provider": "openai",
-    "model": "gpt-4",
-    "api_key_env": "OPENAI_API_KEY",
+    "provider": "ali",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "DASHSCOPE_API_KEY",
     "temperature": 0.3,
     "max_tokens": 4096,
     "throttle_sec": 0,
@@ -78,7 +78,10 @@
     },
     "twitter": {
       "enabled": false,
-      "users": ["karpathy", "ylecun"],
+      "users": [
+        "karpathy",
+        "ylecun"
+      ],
       "fetch_limit": 10,
       "fetch_reply_text": false,
       "max_replies_per_tweet": 3,
@@ -96,14 +99,26 @@
           "provider": "yfinance",
           "fetch_limit": 20,
           "category": "equities",
-          "symbols": ["AAPL", "MSFT", "NVDA", "GOOGL", "AMZN", "META", "TSLA"]
+          "symbols": [
+            "AAPL",
+            "MSFT",
+            "NVDA",
+            "GOOGL",
+            "AMZN",
+            "META",
+            "TSLA"
+          ]
         }
       ]
     },
     "ossinsight": {
       "enabled": false,
       "period": "past_24_hours",
-      "languages": ["All", "Python", "TypeScript"],
+      "languages": [
+        "All",
+        "Python",
+        "TypeScript"
+      ],
       "keywords": [],
       "min_stars": 10,
       "max_items": 30
@@ -118,9 +133,9 @@
     "default_group_limit": null
   },
   "webhook": {
-    "enabled": false,
-    "url_env": "HORIZON_WEBHOOK_URL",
-    "delivery": "summary",
+    "enabled": true,
+    "url_env": "TELEGRAM_WEBHOOK_URL",
+    "delivery": "summary_and_items",
     "overview_position": "first",
     "platform": "generic",
     "layout": "markdown",

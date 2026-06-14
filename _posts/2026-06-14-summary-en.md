@@ -5,410 +5,323 @@ date: 2026-06-14
 lang: en
 ---
 
-> From 31 items, 18 important content pieces were selected
+> From 31 items, 15 important content pieces were selected
 
 ---
 
-1. [US government forces Anthropic to suspend Fable 5 and Mythos 5 access](#item-1) ⭐️ 10.0/10
-2. [Census Bureau bans noise infusion, raising privacy and gerrymandering fears](#item-2) ⭐️ 9.0/10
-3. [Z.ai Launches Fully Open GLM 5.2 Model Amid US Frontier AI Restrictions](#item-3) ⭐️ 8.0/10
-4. [A deep dive into frame-perfect UI animation flaws in modern interfaces](#item-4) ⭐️ 8.0/10
-5. [New approach targets previously 'undruggable' KRAS protein in pancreatic cancer](#item-5) ⭐️ 8.0/10
-6. [Amazon CEO's U.S. government talks trigger Anthropic model crackdown](#item-6) ⭐️ 8.0/10
-7. [Rendering Arabic typography exposes deep technical debt in Latin-centric software](#item-7) ⭐️ 8.0/10
-8. [Pyodide 314.0 lets maintainers publish WASM wheels directly to PyPI](#item-8) ⭐️ 8.0/10
-9. [UK officer investigated for using AI to create evidence in multiple cases](#item-9) ⭐️ 7.0/10
-10. [Google Proposes Using Retired Phones as a Low-Carbon Computing Cluster](#item-10) ⭐️ 7.0/10
-11. [Satire Exposes Circular AI Economics Through Crematorium Metaphor](#item-11) ⭐️ 7.0/10
-12. [Lightweight C++ PaddleOCR (v3–v6) uses ncnn for fast deployment](#item-12) ⭐️ 7.0/10
-13. [RTX 5080 + RTX 3090 Dual GPU Hits 80+ Tok/s on Qwen 3.6 27B](#item-13) ⭐️ 6.0/10
-14. [Initial alpha release of luau-wasm enables Luau scripting in Pyodide](#item-14) ⭐️ 6.0/10
-15. [Exploring SQLite Column Provenance Mapping with Claude Code](#item-15) ⭐️ 6.0/10
-16. [OpenAI WebRTC Audio Tool Gets Document Context for GPT-Realtime-2 Conversations](#item-16) ⭐️ 6.0/10
-17. [hubert.cpp: Self-contained C++ implementation of distilHuBERT for edge deployment](#item-17) ⭐️ 6.0/10
-18. [Derivative-free optimizer MDP tops Adam on small-scale MNIST test](#item-18) ⭐️ 6.0/10
+1. [PyPI Now Supports Publishing WASM Wheels for Browser-Based Python](#item-1) ⭐️ 9.0/10
+2. [US Government Forces Anthropic to Suspend Fable 5 and Mythos 5 Models Globally](#item-2) ⭐️ 9.0/10
+3. [10th Gen Honda Civic Firmware Updates Signed with Public AOSP Test Keys](#item-3) ⭐️ 8.0/10
+4. [US Census Bureau bans noise infusion, raising privacy fears](#item-4) ⭐️ 8.0/10
+5. [Z.ai Releases Open-Source GLM-5.2 Amid US AI Access Restrictions](#item-5) ⭐️ 8.0/10
+6. [Targeting KRAS mutation reveals a master switch in pancreatic cancer](#item-6) ⭐️ 8.0/10
+7. [Critique of Imperfect Animation Frames in macOS UI Design](#item-7) ⭐️ 7.0/10
+8. [Mapping SQLite result columns back to source tables for Datasette](#item-8) ⭐️ 7.0/10
+9. [Two-Tier Verification Reveals 'Verifier Tax' in LLM Agent Safety](#item-9) ⭐️ 7.0/10
+10. [PaddleOCR v3-v6 deployed via lightweight C++ and ncnn inference](#item-10) ⭐️ 7.0/10
+11. [Rust/WASM Edge Semantic Cache for LLMs Proposed to Slash Latency](#item-11) ⭐️ 7.0/10
+12. [OpenAI WebRTC audio playground adds GPT-Realtime-2 and document context](#item-12) ⭐️ 6.0/10
+13. [Satirical excerpt 'AI Economics for Dummies' mocks AI investment hype](#item-13) ⭐️ 6.0/10
+14. [Open-source bilingual Jupyter course on classical machine learning seeks feedback](#item-14) ⭐️ 6.0/10
+15. [hubert.cpp: A Lightweight C++ Library for distilHuBERT with On-Par ONNX Performance](#item-15) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [US government forces Anthropic to suspend Fable 5 and Mythos 5 access](https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/#atom-everything) ⭐️ 10.0/10
+## [PyPI Now Supports Publishing WASM Wheels for Browser-Based Python](https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-everything) ⭐️ 9.0/10
 
-The US government issued a sudden export control directive on June 13, 2026, requiring Anthropic to immediately suspend all access to its Fable 5 and Mythos 5 models for all foreign nationals, forcing the company to disable these models for all customers worldwide. This is an unprecedented government intervention in AI model access, using export control laws to restrict cutting-edge AI based on jailbreaking concerns that appear to duplicate capabilities already widely available in other models. The government provided only verbal evidence of a narrow, non-universal jailbreak technique that essentially asks the model to read a codebase and fix software flaws, and this capability is already available in models like OpenAI's GPT-5.5.
+Pyodide 314.0 and PEP 783 now enable developers to publish WebAssembly (WASM) Python wheels directly to PyPI, removing the need for Pyodide maintainers to manually curate and host over 300 packages. This decentralizes Pyodide's package ecosystem, dramatically reducing the bottleneck of manual review and accelerating the development of Python-in-browser applications by empowering any maintainer to distribute WASM extensions. Packages built for the PyEmscripten platform, defined in PEP 783, now use the `pyemscripten_*` tag and can be installed at runtime via micropip, as demonstrated by the `luau-wasm` package built with C++ and cibuildwheel.
 
-rss · Simon Willison · Jun 13, 01:01
+rss · Simon Willison · Jun 13, 23:55
 
-**Background**: Fable 5 is Anthropic's most capable widely released AI model, based on the same technology as the Mythos class models that previously demonstrated superhuman ability to find and exploit cybersecurity vulnerabilities. Export controls traditionally regulate physical goods and dual-use technologies; extending these rules directly to AI model access based on a jailbreaking concern is a novel application. Jailbreaking refers to techniques that bypass built-in safety mechanisms in AI models.
+**Background**: Pyodide is a project that brings Python to the browser by compiling the CPython interpreter and scientific computing libraries to WebAssembly, which is a binary instruction format that runs in web browsers. Previously, any non-pure-Python package had to be manually built and published through the Pyodide team. A wheel is a standard, pre-compiled distribution format for Python packages that allows for faster installation.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.nbcnews.com/tech/security/fable-5-anthropic-release-public-mythos-claude-model-rcna349104">Anthropic releases Fable 5 model, built on the same tech that spooked the government</a></li>
-<li><a href="https://witness.ai/blog/ai-jailbreaking/">AI Jailbreaking: How It Works & Enterprise Defenses - WitnessAI</a></li>
-<li><a href="https://x.com/aycawe/status/2065631992494870600">Export control extends to AI.</a></li>
+<li><a href="https://blog.pyodide.org/posts/314-release/">Pyodide 314.0 Release</a></li>
+<li><a href="https://pyodide.org/en/latest/development/abi.html">The PyEmscripten Platform — Version 314.0.0a2 - Pyodide</a></li>
+<li><a href="https://discuss.python.org/t/pep-783-emscripten-packaging/86862?page=4">PEP 783: Emscripten Packaging - Page 4 - Python Discussions</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI Policy`, `#National Security`, `#Export Controls`, `#Anthropic`, `#AI Governance`
+**Discussion**: The Hacker News discussion celebrated this as a long-awaited and significant infrastructure improvement that makes Pyodide packaging finally work like native Python packaging, while discussion on Python forums reflected broad consensus and technical refinement during the PEP acceptance process.
+
+**Tags**: `#python`, `#webassembly`, `#pypi`, `#pyodide`, `#pep-783`
 
 ---
 
 <a id="item-2"></a>
-## [Census Bureau bans noise infusion, raising privacy and gerrymandering fears](https://desfontain.es/blog/banning-noise.html) ⭐️ 9.0/10
+## [US Government Forces Anthropic to Suspend Fable 5 and Mythos 5 Models Globally](https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/#atom-everything) ⭐️ 9.0/10
 
-The U.S. Census Bureau has banned the use of noise infusion, a statistical disclosure control method, from its published statistical products. This policy shift discontinues a privacy protection that had been used in datasets like the Quarterly Workforce Indicators (QWI) since 2003. Removing noise infusion severely weakens protections for individual data, making it easier to reconstruct personal information from aggregated statistics. This raises the risk of sensitive census responses being exploited for scams, fraud, and, as several community members suggest, political gerrymandering. Noise infusion works by applying a permanent, multiplicative distortion to data, ensuring every item is altered while preserving aggregated statistical properties. Its removal stands in contrast to the Census Bureau's broader adoption of differential privacy for the 2020 Decennial Census, a more rigorous mathematical framework designed to limit what can be learned about any individual.
+The US government issued an export control directive on June 12, 2026, forcing Anthropic to abruptly suspend global access to its latest Fable 5 and Mythos 5 models, citing national security concerns related to a jailbreaking method. This marks the first time the US government has forced an AI company to abruptly shut down access to frontier models globally, setting a precedent for how export controls may be used to intervene in AI deployment and raising concerns about extraterritorial overreach. The directive targets access by any foreign national, including Anthropic's own employees outside the US, and was triggered by a jailbreak that simply asked the model to read a codebase and fix flaws — a capability Anthropic claims is widely available in other models like GPT-5.5.
 
-hackernews · nl · Jun 13, 13:54 · [Discussion](https://news.ycombinator.com/item?id=48517377)
+rss · Simon Willison · Jun 13, 01:01
 
-**Background**: Census data, while aggregated, can be vulnerable to 'reconstruction attacks' where attackers combine multiple tables to infer individual-level information. Noise infusion and differential privacy are both disclosure avoidance methods used to prevent this. Gerrymandering refers to the political manipulation of electoral district boundaries, a process that relies on detailed, accurate demographic data to dilute or concentrate voting power.
+**Background**: AI jailbreaks are methods to bypass a model's safety guardrails, and they are a known and pervasive challenge across all LLMs, with vulnerabilities often being architectural rather than model-specific. US export controls on AI have traditionally targeted hardware like chips, but this action extends regulatory reach to software models under national security authorities. Anthropic's Fable 5 and Mythos 5 were their newest and most capable models, launched just days earlier.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www2.census.gov/ces/wp/2012/CES-WP-12-13.pdf">DYNAMICALLY CONSISTENT NOISE INFUSION AND PARTIALLY SYNTHETIC DATA</a></li>
-<li><a href="https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/process/disclosure-avoidance/differential-privacy.html">Understanding Differential Privacy</a></li>
+<li><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 and Claude Mythos 5 \ Anthropic</a></li>
+<li><a href="https://www.microsoft.com/en-us/security/blog/2024/06/04/ai-jailbreaks-what-they-are-and-how-they-can-be-mitigated/">AI jailbreaks: What they are and how they can be mitigated | Microsoft Security Blog</a></li>
+<li><a href="https://cset.georgetown.edu/article/dont-forget-the-catch-all-basics-ai-export-controls/">For Export Controls on AI, Don't Forget the "Catch-All" Basics | Center for Security and Emerging Technology</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community sentiment is overwhelmingly alarmed and negative. Former census workers express betrayal, worrying that the trust they built with respondents is now broken. Many suspect the ban was driven by political actors who want to exploit de-anonymized data for gerrymandering, while others lament the long-term damage to robust data collection and evidence-based policy making.
+**Discussion**: Commenters questioned why Anthropic informed the government about a known, universal LLM vulnerability, speculating that Amazon's involvement with Anthropic may have triggered the crackdown; others suggested that Fable 5 is actually less capable in exploitation tasks than older models like Opus 4.8, casting doubt on the government's rationale.
 
-**Tags**: `#privacy`, `#census`, `#differential-privacy`, `#policy`, `#data-security`
+**Tags**: `#AI`, `#policy`, `#Anthropic`, `#export-controls`, `#national-security`
 
 ---
 
 <a id="item-3"></a>
-## [Z.ai Launches Fully Open GLM 5.2 Model Amid US Frontier AI Restrictions](https://twitter.com/jietang/status/2065784751345287314) ⭐️ 8.0/10
+## [10th Gen Honda Civic Firmware Updates Signed with Public AOSP Test Keys](https://juniperspring.org/posts/honda-evil-valet/) ⭐️ 8.0/10
 
-Z.ai has released GLM 5.2 as a fully open, coding-first model with 1 million token context, directly in response to recent US government restrictions on frontier AI models like Anthropic's Fable 5. The release is explicitly framed as a commitment to keeping advanced AI globally accessible. This launch deepens the global debate on open-source versus proprietary AI, especially as geopolitical tensions lead to restricted access to cutting-edge technology. It positions open-weight models from Chinese labs as a strategic alternative, potentially reshaping who can participate in advanced AI development. GLM 5.2 is the successor to GLM-5.1, designed primarily for agentic coding tasks and long-horizon refactors, and is reported to approach Claude Opus 4.5's performance in real programming scenarios. The release timing was noted to coincide exactly with the moment Anthropic received a US government letter regarding Fable 5.
+A security researcher discovered that Honda's over-the-air firmware updates for 10th-generation Civic headunits are signed with publicly-available Android Open Source Project (AOSP) test keys, not private Honda signing keys. This allows anyone with physical USB access to sign and flash arbitrary code onto the vehicle's infotainment system without needing root privileges. This oversight represents a significant security failure by a major automaker, potentially exposing millions of vehicles to attacks via malicious USB drives. It highlights the ongoing tension in the automotive industry between implementing robust security practices and preserving owners' right to repair and modify their vehicles. The updates are essentially Android 4.2.2 recovery packages with Honda-added version checks that can be easily spoofed. The vulnerability requires physical access to the vehicle's front USB port but does not need existing root or superuser privileges on the headunit, and has been successfully demonstrated on a 2021 Civic.
 
-hackernews · aloknnikhil · Jun 13, 16:18 · [Discussion](https://news.ycombinator.com/item?id=48518684)
+hackernews · librick · Jun 14, 00:49 · [Discussion](https://news.ycombinator.com/item?id=48523080)
 
-**Background**: GLM (General Language Model) is a series of foundation models developed by Zhipu AI (also known as Z.ai), a prominent Chinese AI company. Frontier AI models like Anthropic's Fable 5 represent the most advanced AI capabilities, but their access has recently been curtailed by US government orders related to cybersecurity and national security concerns. Z.ai's release of GLM 5.2 with permissive open weights is a direct counter to this trend, echoing a recent wave of openly released models from other Chinese labs.
+**Background**: AOSP test keys are publicly-known cryptographic keys included in the Android source code, intended solely for development and testing purposes. Production devices should always use manufacturer-specific private keys to sign firmware, ensuring only authorized code can run. The discovery that these development keys are used in shipping vehicles follows similar findings reported by Meta's Red Team X in 2024, where several Android device vendors also shipped components signed with the same test keys.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://codersera.com/blog/glm-5-2-release-1m-context-coding-2026/">GLM 5.2 Release — 1M Context, Coding-First (June 2026)</a></li>
-<li><a href="https://www.ibtimes.sg/anthropics-fable-5-restrictions-explained-what-new-u-s-ai-rules-mean-87874">Anthropic's Fable 5 Restrictions Explained: What the New U.S. ...</a></li>
-<li><a href="https://docs.z.ai/guides/llm/glm-5">GLM-5 - Overview - Z.AI DEVELOPER DOCUMENT</a></li>
+<li><a href="https://github.com/wfairclough/android_aosp_keys">GitHub - wfairclough/android_aosp_keys: The platform keys that are used as test keys for the AOSP build · GitHub</a></li>
+<li><a href="https://rtx.meta.security/exploitation/2024/01/30/Android-vendors-APEX-test-keys.html">Missing signs: how several brands forgot to secure a key piece of Android | Meta Red Team X</a></li>
+<li><a href="https://github.com/aosp-mirror/platform_build/blob/master/tools/releasetools/sign_target_files_apks.py">platform_build/tools/releasetools/sign_target_files_apks.py at master · aosp-mirror/platform_build</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community sentiment is overwhelmingly positive toward the open release, with users expressing gratitude to Chinese AI labs for providing permissive alternatives. Many view this as a pivotal moment where closed, restricted US models are being supplanted by open-weight models, with some commenting that the situation 'reads like fiction' given the simultaneous release timing and US censorship actions.
+**Discussion**: The community shows mixed reactions, with some humorously noting this ironically proves Honda didn't intend to lock owners out of their cars, while others worry about deeper security implications like CAN bus access. A recurring sentiment suggests that regardless of whether manufacturers lock down systems or leave them open, they face criticism from different camps in the right-to-repair versus security debate.
 
-**Tags**: `#AI/ML`, `#Open Source`, `#LLM`, `#Geopolitics`, `#Model Release`
+**Tags**: `#security`, `#embedded-systems`, `#automotive`, `#android`, `#firmware`
 
 ---
 
 <a id="item-4"></a>
-## [A deep dive into frame-perfect UI animation flaws in modern interfaces](https://tonsky.me/blog/every-frame-perfect/) ⭐️ 8.0/10
+## [US Census Bureau bans noise infusion, raising privacy fears](https://desfontain.es/blog/banning-noise.html) ⭐️ 8.0/10
 
-The article 'Every Frame Perfect' presents a detailed frame-by-frame technical analysis, exposing numerous rendering stutters, transitional glitches, and visually imperfect animations found in contemporary user interfaces across major operating systems and applications. This critique highlights a prevalent decline in software craft quality, where even large companies neglect motion design fundamentals, negatively impacting the perceived smoothness, polish, and overall user experience for millions of people daily. The analysis uses high-frame-rate recordings and single-frame stepping to isolate flaws like elements popping in or out, clipping, inconsistent easing, and layout shifts that are often invisible to the naked eye but degrade perceived quality.
+The U.S. Census Bureau has decided to ban noise infusion, a technique based on differential privacy, from its statistical products. This move reverses previous privacy-enhancing measures and raises serious concerns about the potential erosion of individual data protection in government statistics. This policy shift could significantly weaken the protection of sensitive personal data collected by the government, making it easier to re-identify individuals from supposedly anonymous aggregate statistics. It impacts the fundamental trust between the public and the state, potentially deterring participation in future censuses and affecting the quality of crucial demographic data. Noise infusion (differential privacy) works by adding mathematically calibrated noise to statistical outputs, providing a provable guarantee against individual re-identification. Critics of the ban argue it was motivated by data users who found the noise inconvenient, overlooking that reconstruction attacks successfully reverse-engineered individual-level data from unprotected 2010 Census aggregate figures.
 
-hackernews · ravenical · Jun 13, 11:40 · [Discussion](https://news.ycombinator.com/item?id=48516251)
+hackernews · nl · Jun 13, 13:54 · [Discussion](https://news.ycombinator.com/item?id=48517377)
 
-**Background**: Modern graphic rendering pipelines draw screen content dozens to hundreds of times per second to create the illusion of smooth motion. Even a single frame that breaks visual continuity, introduces a stutter, or violates motion physics can be subconsciously detected by the human visual system, reducing the feeling of quality and direct manipulation.
+**Background**: Differential privacy is a rigorous mathematical framework for publishing statistical data while limiting information leakage about specific individuals. The Census Bureau adopted it for the 2020 decennial census to counter modern re-identification threats where attackers can combine census tabulations with external commercial databases to unmask respondents' identities. The technique involves a deliberate trade-off between data accuracy and privacy protection.
 
-**Discussion**: While many agree with the low quality of specific examples, the discussion debates the core premise: some argue that transitional frames cannot be judged in isolation due to how human perception works during motion, while others question whether many animations are even necessary, suggesting that instant transitions would feel better than poorly executed ones.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Differential_privacy">Differential privacy</a></li>
 
-**Tags**: `#UI design`, `#animation`, `#motion design`, `#rendering`, `#HCI`
+</ul>
+</details>
+
+**Discussion**: Discussion reflects a strong consensus that this decision is a major setback for privacy. Commenters, including a former enumerator, express deep concern over broken trust and the increased risk of weaponizing sensitive data. Some note that differential privacy's deliberate resistance to individual-level reconstruction is exactly its intended purpose, suggesting the ban may benefit those seeking to exploit the data.
+
+**Tags**: `#differential privacy`, `#census`, `#data policy`, `#government transparency`, `#privacy`
 
 ---
 
 <a id="item-5"></a>
-## [New approach targets previously 'undruggable' KRAS protein in pancreatic cancer](https://economist.com/science-and-technology/2026/06/12/treating-pancreatic-tumours-may-have-revealed-cancers-master-switch) ⭐️ 8.0/10
+## [Z.ai Releases Open-Source GLM-5.2 Amid US AI Access Restrictions](https://twitter.com/jietang/status/2065784751345287314) ⭐️ 8.0/10
 
-Researchers have developed a novel therapeutic approach to target the KRAS protein, a notorious cancer driver long deemed 'undruggable', with a clinical trial (NCT06625320) underway to test its effectiveness against pancreatic and other KRAS-driven tumors. This breakthrough challenges a decades-old dogma in oncology, as KRAS mutations are present in approximately 20% of all human cancers. Successfully drugging KRAS could open a vast new therapeutic avenue for patients with particularly lethal cancers like pancreatic ductal adenocarcinoma. The advance involves designing biologic drugs to target the KRAS protein, a strategy that was previously impossible. The specific approach is detailed in a registered clinical trial (NCT06625320), though community members note the title oversimplifies its scope, as it applies to a subset of tumors rather than all cancers.
+Z.ai has released GLM-5.2 as a fully open-source model under a permissive license, explicitly timed to counter recent US government restrictions on frontier AI models like Fable. This release intensifies the global debate on open-source AI versus controlled access, demonstrating that open-weight models can ensure global scientific progress even when strategic products are gated by geopolitical actors. The model was released at 5:21 pm China time, coinciding with the timing of Anthropic receiving a government letter banning Fable. Detailed benchmark results are not yet available in an official blog post.
 
-hackernews · andsoitis · Jun 13, 13:34 · [Discussion](https://news.ycombinator.com/item?id=48517199)
+hackernews · aloknnikhil · Jun 13, 16:18 · [Discussion](https://news.ycombinator.com/item?id=48518684)
 
-**Background**: KRAS is a gene that produces the K-Ras protein, a critical signal transducer in the MAPK pathway that regulates cell proliferation. Mutations in KRAS cause the protein to be constantly active, driving uncontrolled cell growth. It has been considered an 'undruggable' protein because its smooth surface and deep binding pockets make it extremely difficult for conventional small-molecule drugs to bind to it effectively.
+**Background**: GLM is a series of large language models developed by Z.ai, with the previous GLM-4.5 featuring 355 billion total parameters and 32 billion active parameters. The release context involves recent US government actions that suddenly restricted access to certain frontier AI models like Fable for non-technical reasons, prompting calls for more open alternatives.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/KRAS">KRAS - Wikipedia</a></li>
+<li><a href="https://github.com/zai-org/GLM-4.5">GLM-4.7 & GLM-4.6 & GLM-4.5 - Coding - GitHub</a></li>
+<li><a href="https://www.reddit.com/r/vibecoding/comments/1pzwepo/what_is_glm_i_saw_it_under_a_vibecode_video_and/">What is GLM? (I saw it under a vibecode video) And what are allt ...</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Community sentiment largely praises the release, with users expressing gratitude for Chinese AI labs' openness and remarking on a perceived role reversal where US companies censor while Chinese labs freely contribute open-weight models.
+
+**Tags**: `#open-source`, `#large-language-models`, `#china-ai`, `#ai-policy`, `#open-weight-models`
+
+---
+
+<a id="item-6"></a>
+## [Targeting KRAS mutation reveals a master switch in pancreatic cancer](https://economist.com/science-and-technology/2026/06/12/treating-pancreatic-tumours-may-have-revealed-cancers-master-switch) ⭐️ 8.0/10
+
+A new breakthrough has enabled targeting the KRAS protein, which was previously considered undruggable and is present in about 20% of all cancers, with significant implications for treating pancreatic tumors. This breakthrough opens the door to treating a wide range of cancers that share this common mutation, potentially transforming the prognosis for one of the deadliest forms of cancer and paving the way for drugging other previously unreachable targets. The study referenced in the article is registered as clinical trial NCT06625320, and while promising, the advance applies to cancers driven by a specific KRAS mutation, not all cancer types.
+
+hackernews · andsoitis · Jun 13, 13:34 · [Discussion](https://news.ycombinator.com/item?id=48517199)
+
+**Background**: KRAS is a protein that acts as a molecular switch for cell growth, and mutations in it lead to uncontrolled division found in many cancers, especially pancreatic cancer. For decades, KRAS was labeled 'undruggable' because its smooth surface made it impossible for traditional small-molecule drugs to bind to it. Recent advances in drug design, such as biologic therapies, have begun to overcome this challenge, with scientists now able to develop agents that can latch onto previously hidden pockets in the protein.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10367563/">Emerging Pharmacotherapeutic Strategies to Overcome Undruggable Proteins in Cancer - PMC</a></li>
 <li><a href="https://www.nature.com/articles/s41392-023-01589-z">Recent advances in targeting the “undruggable” proteins: from drug discovery to clinical trials | Signal Transduction and Targeted Therapy</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community widely acknowledges the importance of the breakthrough while cautioning that the article's title is hyperbolic, as the discovery affects about 20% of cancers, not all. The key excitement stems from overcoming the 'undruggable' nature of KRAS, with commenters viewing this as a foundational step that could enable future treatments for other challenging targets.
+**Discussion**: Commenters note the title is hyperbolic but still welcome the advance. They emphasize that KRAS was considered 'undruggable,' making this a significant proof-of-concept for future treatments, while also calling for greater investment in early cancer detection alongside therapeutic breakthroughs.
 
-**Tags**: `#oncology`, `#KRAS`, `#drug-discovery`, `#biotechnology`, `#medical-research`
-
----
-
-<a id="item-6"></a>
-## [Amazon CEO's U.S. government talks trigger Anthropic model crackdown](https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&reflink=desktopwebshare_permalink) ⭐️ 8.0/10
-
-Amazon CEO discussed Anthropic's AI models with U.S. government officials, triggering a regulatory crackdown on Anthropic's models. The WSJ report reveals direct corporate-government interactions leading to concrete enforcement actions against a major AI developer. This marks a potential turning point in AI governance where cloud providers can directly influence government regulation of their AI partners. It raises significant questions about competitive fairness, regulatory capture, and whether safety concerns are being used as a pretext for market maneuvering in the AI industry. The exact technical trigger remains unclear - the community speculates about Anthropic model 'Fable' crossing some threshold, but no specific parameter counts or benchmark scores have been officially confirmed as exceeding government limits. Amazon is a major investor in Anthropic, adding complexity to the regulatory dynamics.
-
-hackernews · ls612 · Jun 13, 16:57 · [Discussion](https://news.ycombinator.com/item?id=48519092)
-
-**Background**: Anthropic is a leading AI safety company founded by ex-OpenAI employees that develops the Claude series of large language models. Amazon has invested heavily in Anthropic and partnered through AWS for security projects. All major LLMs are known to be susceptible to jailbreaking - techniques to bypass safety alignment - making universal safety standards difficult to enforce.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Anthropic">Anthropic - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters are largely skeptical, questioning why the government was informed about a known industry-wide LLM vulnerability, with some suggesting financial or competitive motivations rather than genuine safety concerns. Others note Amazon's deep investment and partnership with Anthropic, arguing ordinary incompetence rather than malicious intent explains the situation.
-
-**Tags**: `#AI regulation`, `#corporate influence`, `#LLM safety`, `#Anthropic`, `#policy`
+**Tags**: `#cancer-research`, `#biotechnology`, `#oncology`, `#KRAS`, `#medical-breakthrough`
 
 ---
 
 <a id="item-7"></a>
-## [Rendering Arabic typography exposes deep technical debt in Latin-centric software](https://lr0.org/blog/p/arabic/) ⭐️ 8.0/10
+## [Critique of Imperfect Animation Frames in macOS UI Design](https://tonsky.me/blog/every-frame-perfect/) ⭐️ 7.0/10
 
-A detailed technical survey highlights the unique challenges of rendering Arabic typography, showing how deeply ingrained Latin-centric assumptions in operating systems, text editors, and font technologies create accumulated technical debt that breaks everyday bilingual text handling. This analysis is significant because it shows how architectural decisions made decades ago continue to systematically disadvantage Arabic users, with the cognitive cost of fighting broken editors often exceeding the cost of abandoning one language entirely in professional communication. Arabic script requires contextual glyph shaping where letters take isolated, initial, medial, or final forms depending on neighbors, a process handled by OpenType GSUB and GPOS tables through engines like HarfBuzz. The cursor movement, text selection, and bidirectional mixing with Latin scripts break down because most editors treat text as a linear sequence of characters rather than a shaped, bidirectional flow.
+A detailed technical article analyzes specific frames in macOS animations, revealing instances where UI elements are technically incorrect or distorted in isolation, despite appearing smooth during motion. The analysis sparks an important debate about the tradeoffs between pixel-perfect rendering and perceived motion quality, challenging UI engineers to reconsider what constitutes 'correct' animation in human-computer interaction. The article focuses on imperceptible flaws visible only when pausing animations, with commenters noting that these issues appear to have worsened in newer macOS versions, and that some 'wrong' frames may actually be optimal for real-time perception.
 
-hackernews · bookofjoe · Jun 13, 12:40 · [Discussion](https://news.ycombinator.com/item?id=48516710)
+hackernews · ravenical · Jun 13, 11:40 · [Discussion](https://news.ycombinator.com/item?id=48516251)
 
-**Background**: Arabic script is written right-to-left, with letters that connect cursively and change shape based on their position in a word. The OpenType font specification handles this through two tables: GSUB (Glyph Substitution) for selecting correct letter forms and required ligatures like lam-alef, and GPOS (Glyph Positioning) for diacritic marks and kerning. The HarfBuzz engine processes these tables at runtime. However, most software was originally designed for Latin scripts, which flow left-to-right with minimal contextual shaping, leading to fundamental architectural mismatches when handling Arabic or mixed bidirectional text.
+**Discussion**: The community is highly divided. Some argue that exploiting human visual system limitations is fundamental to graphics and that a 'wrong' static frame can look best in motion. Others note a regression in macOS animation quality over versions, while some question the necessity of motion animations entirely, suggesting instantaneous transitions would feel just as good.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://learn.microsoft.com/en-us/typography/opentype/spec/gsub">GSUB — Glyph Substitution Table (OpenType 1.9.1) - Typography</a></li>
-<li><a href="https://blog.fontlab.com/2026/03/03/gsub-gpos-and-harfbuzz/">GSUB, GPOS, and HarfBuzz: the machinery under OpenType</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Arabic_script">Arabic script - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters expressed empathy for Arabic users, sharing that the article explained their own painful experiences with mixed text editors. Some noted that English text has its own complexities like kerning and ligatures, which CJK languages lack, suggesting the reverse situation would produce similar complaints. One user linked to an academic paper on Arabic-script justification, and another advocated for mainstream use of disconnected Arabic fonts as a practical workaround.
-
-**Tags**: `#typography`, `#arabic`, `#font-rendering`, `#software-engineering`, `#technical-debt`
+**Tags**: `#ui-design`, `#animation`, `#macos`, `#graphics`, `#human-computer-interaction`
 
 ---
 
 <a id="item-8"></a>
-## [Pyodide 314.0 lets maintainers publish WASM wheels directly to PyPI](https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-everything) ⭐️ 8.0/10
+## [Mapping SQLite result columns back to source tables for Datasette](https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything) ⭐️ 7.0/10
 
-Pyodide 314.0 introduces the ability for package maintainers to build and publish WebAssembly (WASM) wheels directly to PyPI, eliminating the previous requirement for Pyodide maintainers to manually build and host over 300 packages themselves. This removes a major maintenance bottleneck for Pyodide, enabling any Python package with native extensions to be easily distributed for browser-based Python environments and significantly expanding the Pyodide ecosystem. WASM wheels use the PyEmscripten platform tag defined in PEP 783 and can be built with tools like cibuildwheel or pyodide-build. Simon Willison demonstrated this by packaging the Luau runtime as the luau-wasm package, which installs via micropip in Pyodide.
+Simon Willison experimented with using Claude Code (Opus 4.8) to solve SQL column provenance mapping for Datasette, discovering multiple technical approaches including APSW, direct C function access via ctypes, and EXPLAIN output interrogation. Solving column provenance would allow Datasette to enrich arbitrary SQL query results with metadata about which tables and columns contributed to each output, significantly improving the user experience for database exploration and analysis. The investigation focused on complex query structures including joins, CTEs, and subqueries; one approach leverages the SQLite C function `sqlite3_column_table_name()` which is not directly exposed in Python's standard library.
 
-rss · Simon Willison · Jun 13, 23:55
+rss · Simon Willison · Jun 13, 23:05
 
-**Background**: Pyodide is a Python runtime compiled to WebAssembly that runs in the browser, previously requiring its maintainers to manually port and host C/C++/Rust extension packages. PEP 783 standardized a PyEmscripten platform tag so WASM wheels could be recognized by PyPI, analogous to how native wheels are tagged for Linux (manylinux), macOS, or Windows.
+**Background**: Datasette is an open-source tool for exploring and publishing SQLite databases as web interfaces. SQLite's Python binding exposes query results as flat column lists, but does not natively indicate which table each column originated from when queries involve joins or complex transformations. Column provenance—tracking the origin of each result column back to its source table and column—is a known challenge in database tools and requires parsing SQL or accessing lower-level database APIs.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://pyodide-build.readthedocs.io/en/latest/how-to/publishing.html">Publishing Wasm Wheels — pyodide-build 0.34.5.dev6+gc2dab7386 ...</a></li>
-<li><a href="https://peps.python.org/pep-0783/">PEP 783 – Emscripten Packaging | peps.python.org</a></li>
-<li><a href="https://discuss.python.org/t/pep-783-emscripten-packaging-is-accepted/107393">PEP 783 – Emscripten Packaging is accepted - WebAssembly - Discussions on Python.org</a></li>
-
-</ul>
-</details>
-
-**Discussion**: The Hacker News discussion generally welcomed this change as a long-awaited improvement that reduces friction for Pyodide adoption. Some commenters noted that publishing WASM wheels alongside native wheels adds to maintainers' CI responsibilities, but overall the community sees this as a positive step toward maturing browser-based Python.
-
-**Tags**: `#python`, `#webassembly`, `#pypi`, `#pyodide`, `#packaging`
+**Tags**: `#sqlite`, `#metadata-extraction`, `#ai-assisted-development`, `#datasette`, `#sql-parsing`
 
 ---
 
 <a id="item-9"></a>
-## [UK officer investigated for using AI to create evidence in multiple cases](https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661) ⭐️ 7.0/10
+## [Two-Tier Verification Reveals 'Verifier Tax' in LLM Agent Safety](https://www.reddit.com/r/MachineLearning/comments/1u58mkq/the_verifier_tax_horizondependent_safetysuccess/) ⭐️ 7.0/10
 
-A police officer in Derbyshire, UK, is under investigation for allegedly using artificial intelligence to create evidential material in multiple cases. The police force declined to provide specific details about the nature of the material, which could range from witness statements to images. This incident highlights a critical, systemic threat to judicial integrity. It underscores how AI tools can be used to falsify or undetectably manipulate evidence, potentially leading to wrongful convictions and a fundamental erosion of public trust in the legal system. Authorities have not clarified whether the AI was used to generate entirely new fabricated material or to 'enhance' existing material, which AI does by filling in missing information and thus technically 'creating' new data. The case surfaces the difficult legal line between legitimate evidence enhancement and fabrication.
+A paper presented at ACM CAIS 2026 introduces a two-tier verification architecture for tool-using LLM agents and discovers a horizon-dependent tradeoff termed the 'Verifier Tax,' where safety verification reduces unsafe outcomes but increasingly impairs task completion as task horizons lengthen. This work provides a crucial safety evaluation framework that distinguishes 'unsafe success' from true success, addressing a blind spot in current agent benchmarks and offering practical insights for building reliable, safety-aware LLM agents in real-world applications. The architecture uses deterministic policy/tool checks as a first layer, followed by an LLM-based verifier for nuanced safety cases. The study demonstrates that as task horizon increases, verification reduces unsafe success but also causes a decline in overall task completion, a phenomenon dubbed the 'Verifier Tax.'
 
-hackernews · austinallegro · Jun 13, 19:54 · [Discussion](https://news.ycombinator.com/item?id=48520807)
+reddit · r/MachineLearning · /u/AccomplishedLeg1508 · Jun 14, 02:09
 
-**Background**: The term 'deepfake' commonly refers to AI-generated synthetic media where a person's likeness is replaced or an event is fabricated. As generative AI drastically reduces the cost and effort needed to create realistic fake documents, images, and audio, courts in the US and UK are increasingly alarmed. New laws like the US TAKE IT DOWN Act are starting to address deepfakes explicitly, but reliable AI-detection technology is still not widely available.
+**Background**: LLM agents are AI systems that use large language models to interact with tools and APIs to perform tasks. Current benchmarks like τ-bench evaluate agents in realistic, multi-turn conversational scenarios, but they typically measure only task success, overlooking whether the agent achieved the goal in a safe or policy-compliant manner. This paper addresses the gap by introducing a safety metric and verification system.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.nbcnews.com/tech/tech-news/ai-generated-evidence-deepfake-use-law-judges-object-rcna235976">AI-generated evidence showing up in court alarms judges</a></li>
-<li><a href="https://www.ncsc.org/resources-courts/ai-generated-evidence-threat-public-trust-courts">AI-generated evidence is a threat to public trust in the courts</a></li>
-<li><a href="https://lawbitdigest.com/the-legal-implications-of-deepfakes-what-courts-are-starting-to-say/">The Legal Implications of Deepfakes: What Courts Are Starting ...</a></li>
+<li><a href="https://github.com/sierra-research/tau-bench">sierra-research/tau-bench: Code and Data for Tau-Bench · GitHub</a></li>
+<li><a href="https://arxiv.org/abs/2406.12045">A Benchmark for Tool-Agent-User Interaction in Real-World Domains</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community discussion centers on the ambiguity of 'creating evidence,' speculating the officer likely used AI to 'enhance' blurry images without malicious intent, though still classified as tampering. A broader concern is that the proliferation of AI generation tools will render entire classes of digital evidence unreliable, raising fears of a surge in unjust imprisonment through perfectly fabricated evidence.
+**Discussion**: The Reddit discussion is limited, but the original poster's question highlights a central tension: should the community count an agent's unsafe task completion as a success, a failure, or a distinct third category? This reflects a broader need for standardized, multi-dimensional evaluation metrics in the field.
 
-**Tags**: `#AI-ethics`, `#law-enforcement`, `#digital-evidence`, `#deepfakes`, `#public-policy`
+**Tags**: `#LLM agents`, `#safety evaluation`, `#verification architecture`, `#tool use`, `#AI safety`
 
 ---
 
 <a id="item-10"></a>
-## [Google Proposes Using Retired Phones as a Low-Carbon Computing Cluster](https://research.google/blog/a-low-carbon-computing-platform-from-your-retired-phones/) ⭐️ 7.0/10
+## [PaddleOCR v3-v6 deployed via lightweight C++ and ncnn inference](https://www.reddit.com/r/MachineLearning/comments/1u4hy2x/paddleocr_v3v4v5v6_implemented_in_c_with_ncnn_p/) ⭐️ 7.0/10
 
-Google Research has proposed a novel platform to repurpose retired smartphones into a low-carbon, distributed computing cluster, aiming to tackle electronic waste and provide sustainable computing resources. This approach offers a dual benefit: it addresses the growing global e-waste crisis by giving a second life to millions of discarded but functional devices, while potentially providing a more energy-efficient alternative for non-time-sensitive computational tasks, reducing the carbon footprint of cloud computing. The platform's practical implementation faces challenges due to the locked-down nature of many retired phones, which are often abandoned by manufacturers with insecure firmware and un-upgradeable proprietary software, making them risky to connect to a network.
+A developer has released a refined C++ implementation of PaddleOCR, now supporting model versions v3 through v6, which uses the ncnn inference framework to significantly simplify deployment compared to the official runtime. By replacing the complex and dependency-heavy official PaddlePaddle runtime with the lightweight ncnn library, this tool makes production deployment of state-of-the-art OCR models significantly easier and faster, benefiting developers integrating OCR into edge or resource-constrained applications. This open-source project covers the PP-OCR model series from v3 to the latest v6, and the author notes ncnn provides both a lighter footprint and faster inference speed for their specific tasks.
 
-hackernews · vikas-sharma · Jun 13, 09:38 · [Discussion](https://news.ycombinator.com/item?id=48515336)
+reddit · r/MachineLearning · /u/Knok0932 · Jun 13, 05:06
 
-**Background**: The growing issue of electronic waste (e-waste) is driven by millions of smartphones being retired yearly, often due to a lack of software support rather than hardware failure. Distributed computing involves using a network of many computers to work on a single task, which can be done with less powerful hardware like retired phones for suitable workloads.
+**Background**: PaddleOCR is a popular open-source optical character recognition (OCR) toolkit developed by Baidu, used for extracting text from images. The ncnn inference framework is also from Tencent, designed for high-performance neural network inference on mobile and embedded platforms with no third-party dependencies, making it ideal for lightweight deployments.
 
-**Discussion**: Community discussion is highly skeptical, focusing on practical barriers. The main concern is that proprietary firmware lock-in and a lack of long-term security updates make old phones dangerously insecure for networked use. Many call for regulations mandating unlockable bootloaders to enable reuse, while others liken the concept to older projects like the PlayStation 3 supercomputer clusters.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://grokipedia.com/page/PaddleOCR">PaddleOCR</a></li>
 
-**Tags**: `#sustainability`, `#distributed-computing`, `#e-waste`, `#android`, `#hardware-security`
+</ul>
+</details>
+
+**Tags**: `#OCR`, `#C++`, `#model-deployment`, `#inference`, `#ncnn`
 
 ---
 
 <a id="item-11"></a>
-## [Satire Exposes Circular AI Economics Through Crematorium Metaphor](https://simonwillison.net/2026/Jun/12/andrew-singleton/#atom-everything) ⭐️ 7.0/10
+## [Rust/WASM Edge Semantic Cache for LLMs Proposed to Slash Latency](https://www.reddit.com/r/MachineLearning/comments/1u3quwk/building_an_open_source_edge_semantic_cache_for/) ⭐️ 7.0/10
 
-Andrew Singleton published a satirical piece in McSweeney's titled "AI Economics for Dummies," using a fictional crematorium and propane company to parody the circular, revenue-inflating investment schemes in the AI industry. The story was amplified by prominent tech blogger Simon Willison. The piece provides a sharp cultural critique of the opaque financial relationships between AI investors and startups, highlighting how reported revenues and valuations can be artificially manufactured without creating real economic value. It resonates with growing skepticism about AI hype and sustainability. In the parable, a $20 billion investment yields a $100 billion valuation through circular money-burning, with the propane supplier booking the same cash as revenue, creating a self-reinforcing paper economy entirely detached from genuine productivity.
+A developer has proposed a new open-source architecture that uses a Rust-compiled WebAssembly (WASM) module on CDN edge nodes to perform semantic caching for large language models (LLMs), aiming to serve cached responses in ~5ms without touching the main LLM provider. This approach directly addresses the high API costs and network latency of centralized LLM gateways by moving computation to the edge, potentially making real-time streaming agents and interactive applications faster and cheaper for high-volume, repetitive use cases. The proposed cache works by generating a vector from the prompt using a lightweight model like bge-small-en-v1.5, performing cosine similarity against an edge vector database, and returning a cached response if the score exceeds a threshold like 0.88. It is designed for sub-millisecond execution and a tiny memory footprint suitable for edge runtimes like Cloudflare Workers.
 
-rss · Simon Willison · Jun 12, 18:09
+reddit · r/MachineLearning · /u/Real-Huckleberry-934 · Jun 12, 09:53
 
-**Background**: The recent AI boom has seen massive capital inflows, with companies like OpenAI and Anthropic raising billions at soaring valuations. Critics frequently point to a lack of proportionate revenue and the practice of startups spending large portions of investment back on cloud services from their own investors, creating a potentially circular financial loop. This satire distills that critique into an accessible metaphor.
+**Background**: Semantic caching understands the intent behind a prompt rather than matching exact text, allowing it to reuse cached LLM responses for similar queries. Edge computing places computation on servers physically near the end-user within a CDN, avoiding the delay of sending data to a central cloud data center. Rust is a systems programming language known for performance and safety, and it can be compiled to WebAssembly, a binary format that runs securely at high speeds in constrained environments like edge nodes.
 
-**Tags**: `#ai`, `#economics`, `#satire`, `#tech-industry`, `#venture-capital`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://redis.io/blog/what-is-semantic-caching/">What is semantic caching? Guide to faster, smarter LLM apps - Redis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Edge_computing">Edge computing</a></li>
+<li><a href="https://www.ibm.com/think/topics/edge-computing">What Is Edge Computing? - IBM</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#LLM`, `#edge-computing`, `#wasm`, `#rust`, `#caching`
 
 ---
 
 <a id="item-12"></a>
-## [Lightweight C++ PaddleOCR (v3–v6) uses ncnn for fast deployment](https://www.reddit.com/r/MachineLearning/comments/1u4hy2x/paddleocr_v3v4v5v6_implemented_in_c_with_ncnn_p/) ⭐️ 7.0/10
+## [OpenAI WebRTC audio playground adds GPT-Realtime-2 and document context](https://simonwillison.net/2026/Jun/12/openai-webrtc/#atom-everything) ⭐️ 6.0/10
 
-A developer has released an open-source C++ implementation of PaddleOCR that supports models from PP-OCR v3 through the latest v6, using Tencent's ncnn inference framework instead of the official Paddle runtime. This project significantly simplifies deployment for production and edge scenarios by eliminating the heavy dependency chain of the official Paddle C++ runtime, enabling faster and easier integration into applications with limited resources. The implementation uses ncnn for CPU and Vulkan-based inference, resulting in a lighter and reportedly faster runtime compared to the official solution; it covers the full PP-OCR series from v3 to the recently released v6.
+Simon Willison updated his OpenAI WebRTC audio playground to support the new GPT-Realtime-2 voice model and allow users to paste document context for conversational audio interactions. This integration demonstrates practical use of OpenAI's latest voice model with GPT-5-class reasoning, enabling richer, context-aware audio conversations directly in the browser. The tool uses the OpenAI WebRTC API, supports voice option 'Coral', and the new model features a knowledge cut-off of September 30, 2024.
 
-reddit · r/MachineLearning · /u/Knok0932 · Jun 13, 05:06
+rss · Simon Willison · Jun 12, 23:53
 
-**Background**: PaddleOCR is a widely used open-source OCR toolkit from Baidu, while ncnn is a high-performance neural network inference framework developed by Tencent optimized for mobile, embedded, and desktop platforms. The official PaddlePaddle C++ deployment often requires numerous dependencies, making lightweight porting efforts like this ncnn-based version valuable for developers seeking minimal footprint and easier integration.
+**Background**: Simon Willison first built this browser-based audio playground in December 2024 to experiment with OpenAI's then-new WebRTC API for real-time voice models. Last month, OpenAI released GPT-Realtime-2, which the company describes as its first voice model with GPT-5-class reasoning, though it has not yet appeared in the ChatGPT iPhone app. WebRTC enables low-latency, real-time audio communication directly in web browsers.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://github.com/Tencent/ncnn">GitHub - Tencent/ncnn: ncnn is a high-performance neural ...</a></li>
-<li><a href="https://github.com/PaddlePaddle/PaddleOCR">GitHub - PaddlePaddle/PaddleOCR: Turn any PDF or image ...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#OCR`, `#C++`, `#model-deployment`, `#ncnn`, `#PaddleOCR`
+**Tags**: `#OpenAI`, `#WebRTC`, `#voice AI`, `#GPT-Realtime`, `#tools`
 
 ---
 
 <a id="item-13"></a>
-## [RTX 5080 + RTX 3090 Dual GPU Hits 80+ Tok/s on Qwen 3.6 27B](https://imil.net/blog/posts/2026/rtx-5080-+-rtx-3090-setup-80+-tok-s-on-qwen-3.6-27b-q8/) ⭐️ 6.0/10
+## [Satirical excerpt 'AI Economics for Dummies' mocks AI investment hype](https://simonwillison.net/2026/Jun/12/andrew-singleton/#atom-everything) ⭐️ 6.0/10
 
-A user combined an RTX 5080 and an RTX 3090 in a single system, achieving over 80 tokens per second when running the Qwen 3.6 27B model at Q8 quantization, as reported in a recent blog post. This demonstrates that high-performance local inference on a capable 27-billion-parameter model is accessible without enterprise-class hardware, making advanced AI assistance more private, cost-effective, and viable for individual developers. The setup uses llama.cpp for inference, leverages Q8 quantization, and the community emphasizes that optimal sampling parameters (temperature, top-p, top-k, min-p) and speculative decoding settings like MTP can significantly affect output quality and speed.
+Simon Willison shared a satirical excerpt from Andrew Singleton's 'AI Economics for Dummies', published on McSweeney's, which uses a fictional story about a crematorium and a propane company to parody the circular, self-dealing financial practices in the AI investment landscape. This satire provides a sharp and accessible critique of opaque financial relationships, inflated valuations, and revenue circularity within the AI industry, resonating with growing concerns about whether AI investment is fueled by genuine value or financial engineering. The fictional scenario involves Jenny's crematorium receiving a $20 billion investment from John's propane company, then using $10 billion to buy propane from John to burn the remaining $10 billion, allowing John to report phantom revenue and asset value. The excerpt is from McSweeney's and was highlighted by Simon Willison on his blog.
 
-hackernews · iMil · Jun 13, 09:55 · [Discussion](https://news.ycombinator.com/item?id=48515454)
+rss · Simon Willison · Jun 12, 18:09
 
-**Background**: Qwen 3.6 is a recent open-weight dense language model from Alibaba, released in April 2026, with strong coding and agentic task performance. The 27B model is notable for rivaling much larger models while being feasible on consumer GPUs. Speculative decoding is an inference acceleration technique where a smaller model drafts tokens that a larger model verifies in parallel, reducing latency. MTP (Multi-Token Prediction) is one such speculative decoding method that predicts multiple future tokens at once.
+**Background**: The AI industry has seen massive capital inflows, with companies like OpenAI and Anthropic raising billions at high valuations, often from strategic investors. This has raised questions about the sustainability and underlying economics, as some transactions involve investors and customers who are the same entities, or revenue generated from subsidiaries, creating a perception of circular funding.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://willitrunai.com/blog/qwen-3-6-27b-vram-requirements">Qwen 3.6 27B VRAM & Hardware Requirements — Dense 27B GPU ...</a></li>
-<li><a href="https://developer.nvidia.com/blog/an-introduction-to-speculative-decoding-for-reducing-latency-in-ai-inference/">An Introduction to Speculative Decoding for Reducing Latency ...</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters shared practical tuning advice, noting Qwen 3.6's recommended sampling parameters for different tasks and optimal MTP draft settings. Some compared alternative hardware setups, expressed that local costs can exceed cloud costs in certain regions, and discussed hardware hacks like multi-GPU expansion cards for homelab experimentation.
-
-**Tags**: `#local-llm`, `#gpu-computing`, `#llama-cpp`, `#qwen`, `#inference-performance`
+**Tags**: `#satire`, `#ai-investment`, `#economics`, `#commentary`
 
 ---
 
 <a id="item-14"></a>
-## [Initial alpha release of luau-wasm enables Luau scripting in Pyodide](https://simonwillison.net/2026/Jun/13/luau-wasm/#atom-everything) ⭐️ 6.0/10
+## [Open-source bilingual Jupyter course on classical machine learning seeks feedback](https://www.reddit.com/r/MachineLearning/comments/1u4zbld/im_building_a_free_bilingual_machinelearning/) ⭐️ 6.0/10
 
-The initial alpha release of luau-wasm, version 0.1a0, was published, providing a WebAssembly-based package that allows the Luau scripting language to be executed within the Pyodide environment. This release accompanies a tutorial on publishing WASM wheels to PyPI for Pyodide. This integration bridges the Luau ecosystem, popularized by Roblox and game development, with Python's browser-based runtime, enabling new cross-language scripting possibilities and educational use cases directly in the browser. It also demonstrates the emerging pattern of distributing compiled WASM modules as standard Python wheels. The package relies on Pyodide's WebAssembly support to run Luau, a language derived from Lua 5.1 with gradual typing and performance enhancements. The accompanying blog post focuses on the technical process of compiling and distributing WASM wheels on PyPI.
+A developer has released an open-source, bilingual (English/Persian) Jupyter notebook course covering classical machine learning topics, and is actively soliciting community feedback on its structure and completeness. This project lowers the barrier for non-native English speakers to learn machine learning using free, hands-on materials, contributing to greater accessibility and diversity in the global ML education ecosystem. The curriculum is notebook-first and covers ML foundations, regression, classification, ensembles, clustering, dimensionality reduction, model evaluation, time series, anomaly detection, and MLOps, with the author specifically asking for advice on chapter ordering and missing topics.
 
-rss · Simon Willison · Jun 13, 23:14
+reddit · r/MachineLearning · /u/abolfazl1363 · Jun 13, 19:07
 
-**Background**: Luau is an open-source scripting language derived from Lua 5.1, developed by Roblox for its gaming platform, featuring gradual typing and sandboxing. Pyodide is a port of CPython to WebAssembly, enabling Python to run in web browsers along with many scientific computing libraries. A WASM wheel is a Python package format that contains WebAssembly binary code instead of native machine code, making it compatible with Pyodide.
+**Background**: Classical machine learning refers to established algorithms outside of deep learning, such as linear regression, decision trees, and support vector machines. Jupyter notebooks are interactive documents that combine code, text, and visualizations, making them a popular tool for learning and teaching data science. Bilingual educational resources are particularly valuable in bridging language gaps for learners who are more comfortable studying in their native language.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Luau_(programming_language)">Luau (programming language)</a></li>
-<li><a href="https://github.com/pyodide/pyodide">GitHub - pyodide/pyodide: Pyodide is a Python distribution ...</a></li>
-<li><a href="https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/">Publishing WASM wheels to PyPI for use with Pyodide</a></li>
+<li><a href="https://developers.redhat.com/articles/2021/05/21/introduction-machine-learning-jupyter-notebooks">Introduction to machine learning with Jupyter notebooks</a></li>
+<li><a href="https://datatalks.club/blog/free-machine-learning-courses.html">20+ Best Free Machine Learning Courses - DataTalks.Club</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#lua`, `#webassembly`, `#pyodide`, `#python`, `#release`
+**Tags**: `#machine-learning`, `#education`, `#open-source`, `#jupyter-notebooks`, `#tutorial`
 
 ---
 
 <a id="item-15"></a>
-## [Exploring SQLite Column Provenance Mapping with Claude Code](https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything) ⭐️ 6.0/10
+## [hubert.cpp: A Lightweight C++ Library for distilHuBERT with On-Par ONNX Performance](https://www.reddit.com/r/MachineLearning/comments/1u3omwk/hubertcpp_a_c_implementation_of_distilhubert_p/) ⭐️ 6.0/10
 
-Simon Willison investigated methods to programmatically map SQL query result columns back to their original table.column sources in SQLite, using Claude Code Opus 4.8 to find three promising approaches: APSW library, ctypes access to SQLite's C function sqlite3_column_table_name(), and interrogation of EXPLAIN output. This column provenance capability would allow Datasette to display richer context for arbitrary SQL queries, helping users understand data lineage across joins, subqueries, and CTEs. It represents a practical enhancement for data exploration tools. The research explores three implementation paths: using the APSW library for direct access, calling the underlying C function via Python ctypes, and analyzing the EXPLAIN output for table references. The work targets complex SQL features like CTEs and joins.
-
-rss · Simon Willison · Jun 13, 23:05
-
-**Background**: Datasette is an open-source tool by Simon Willison that publishes SQLite databases as interactive websites and APIs. SQLite includes a C function sqlite3_column_table_name() that can identify the source table of a query result column, but this function is not exposed in Python's standard sqlite3 module. Common Table Expressions (CTEs) are temporary named result sets that simplify complex queries.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://github.com/simonw/datasette">GitHub - simonw/datasette: An open source multi-tool for ... Datasette: An open source multi-tool for exploring and ... datasette · PyPI Datasette download | SourceForge.net Release: datasette 1.0a33 - simonwillison.net Exploring Data with Datasette: The SQLite Multi-Tool</a></li>
-<li><a href="https://www.anthropic.com/news/claude-opus-4-8">Introducing Claude Opus 4.8 \ Anthropic</a></li>
-<li><a href="https://www.geeksforgeeks.org/sql/cte-in-sql/">CTE in SQL - GeeksforGeeks</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#SQLite`, `#Datasette`, `#SQL`, `#Claude Code`, `#Data Tooling`
-
----
-
-<a id="item-16"></a>
-## [OpenAI WebRTC Audio Tool Gets Document Context for GPT-Realtime-2 Conversations](https://simonwillison.net/2026/Jun/12/openai-webrtc/#atom-everything) ⭐️ 6.0/10
-
-Simon Willison updated his OpenAI WebRTC audio playground to support the new GPT-Realtime-2 model and added an optional document context feature. Users can now paste text into the browser interface, allowing voice conversations about any document they provide. This update provides developers with an immediately usable way to explore OpenAI's new GPT-Realtime-2 voice model, which has not yet been integrated into the ChatGPT consumer app. The document context feature enables information-dense voice interactions, making it practical for tasks like discussing technical articles or reference material. The tool uses the OpenAI WebRTC realtime API for audio streaming. GPT-Realtime-2 supports configurable reasoning effort, with higher reasoning increasing latency and token usage. The document context is supplied as pasted text before starting the session. The model has a September 30, 2024 knowledge cut-off.
-
-rss · Simon Willison · Jun 12, 23:53
-
-**Background**: WebRTC is an open-source standard enabling real-time audio, video, and data exchange directly between web browsers without plugins. OpenAI's realtime API exposes speech-to-speech models through WebRTC for low-latency voice interactions. GPT-Realtime-2 is OpenAI's latest speech-to-speech model, described as having GPT-5-class reasoning capability. Simon Willison originally built this tool in December 2024 to experiment with OpenAI's earlier realtime audio models.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://webrtc.org/">WebRTC</a></li>
-<li><a href="https://developers.openai.com/api/docs/models/gpt-realtime-2">GPT-Realtime-2 Model | OpenAI API</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/realtime-2">GPT Realtime 2.0 (preview) overview - Microsoft Foundry</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#openai`, `#webrtc`, `#voice-ai`, `#developer-tools`, `#gpt-realtime`
-
----
-
-<a id="item-17"></a>
-## [hubert.cpp: Self-contained C++ implementation of distilHuBERT for edge deployment](https://www.reddit.com/r/MachineLearning/comments/1u3omwk/hubertcpp_a_c_implementation_of_distilhubert_p/) ⭐️ 6.0/10
-
-A developer has released hubert.cpp, a pure C++ implementation of distilHuBERT that compiles model weights directly into the library, eliminating all runtime dependencies. It achieves inference performance comparable to ONNX Runtime and integrates easily into any CMake project. This implementation significantly simplifies the deployment of distilHuBERT on resource-constrained edge devices by removing the need for Python, ONNX Runtime, or other heavy inference engines. It makes state-of-the-art speech representation learning more accessible for on-device and embedded applications. The library supports dynamic input sizes, has no runtime dependencies, and in the author's tests matches the performance of ONNX Runtime. It is a straightforward port of an existing model rather than a novel contribution, and the post has minimal community discussion.
+A developer has released hubert.cpp, a header-only C++ implementation of the distilled speech model distilHuBERT that compiles model weights directly into the library, requires no runtime dependencies, and achieves inference performance comparable to ONNX Runtime. This self-contained library significantly simplifies the deployment of distilHuBERT for edge and embedded devices by removing complex dependency chains, making it easier to integrate into CMake projects and accelerating the adoption of on-device speech processing. The library has no runtime dependencies, embeds pre-trained weights internally, supports dynamic input sizes, and is easily integrable into any CMake project, though it's presented as a personal project with limited community testing so far.
 
 reddit · r/MachineLearning · /u/Competitive_Act5981 · Jun 12, 07:40
 
-**Background**: DistilHuBERT is a distilled version of HuBERT, a self-supervised speech representation learning model. It reduces the size of the original HuBERT model by 75% and speeds it up by 73% while retaining most performance on speech processing tasks. ONNX Runtime is a cross-platform inference accelerator for machine learning models, commonly used for deploying deep learning models in production. Compiling weights into a C++ library removes the need for external model files and runtime interpreters.
+**Background**: distilHuBERT is a distilled version of HuBERT, a speech representation model that learns to understand language from audio. The distillation process reduces the model's size by 75% and makes it 73% faster, making it much more suitable for resource-constrained environments. ONNX Runtime is a widely used, cross-platform accelerator for ML models, and matching its performance is a notable achievement for a from-scratch, dependency-free implementation.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/abs/2110.01900">[2110.01900] DistilHuBERT: Speech Representation Learning by ... ntu-spml/distilhubert · Hugging Face s3prl/s3prl/upstream/distiller/README.md at main - GitHub Distilhubert: Speech Representation Learning by Layer-Wise ... DistilHuBERT: Speech Representation Learning by Layer-wise ... distilhubert | PromptLayer Models DistilALHuBERT: A Distilled Parameter Sharing Audio ...</a></li>
-<li><a href="https://github.com/microsoft/onnxruntime">GitHub - microsoft/onnxruntime: ONNX Runtime: cross-platform ... onnxruntime · PyPI ONNX Runtime | Home - GitHub Pages onnxruntime package | Microsoft Learn ONNX | Home ONNX Runtime download | SourceForge.net</a></li>
+<li><a href="https://arxiv.org/abs/2110.01900">[2110.01900] DistilHuBERT: Speech Representation Learning by Layer-wise Distillation of Hidden-unit BERT</a></li>
+<li><a href="https://grokipedia.com/page/ONNX_Runtime">ONNX Runtime</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Reddit post lacks substantive community discussion.
-
-**Tags**: `#hubert`, `#audio-processing`, `#c++`, `#inference`, `#edge-ml`
-
----
-
-<a id="item-18"></a>
-## [Derivative-free optimizer MDP tops Adam on small-scale MNIST test](https://www.reddit.com/r/MachineLearning/comments/1u4fc16/derivativefree_neural_network_optimization_mnist/) ⭐️ 6.0/10
-
-The derivative-free optimization method MDP achieved 93.4% test accuracy on MNIST using a 784-32-10 network with 25,450 parameters, slightly outperforming the gradient-based Adam optimizer's 91.7% under the same conditions. This demonstrates that derivative-free optimization can be viable for training small neural networks without requiring backpropagation, which is relevant for scenarios where gradients are unavailable, unreliable, or expensive to compute. The test used only 5,000 training samples and ran for 1,000,000 function evaluations; the paper does not report wall-clock time or compare against well-tuned Adam baselines, and the network scale is far from modern deep learning standards.
-
-reddit · r/MachineLearning · /u/Mis4318 · Jun 13, 02:51
-
-**Background**: Derivative-free optimization (DFO), also called black-box optimization, finds optimal solutions without using gradient information, making it useful when the objective function is non-smooth, noisy, or time-consuming to evaluate. The MNIST dataset is a classic benchmark of 28x28 pixel handwritten digit images with 10 classes, typically considered a solved problem in deep learning. Backpropagation and gradient-based optimizers like Adam are the standard approach for training neural networks, while DFO methods remain largely experimental for this task.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Derivative-free_optimization">Derivative-free optimization</a></li>
-<li><a href="https://grokipedia.com/page/Derivative-free_optimization">Derivative-free optimization</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#derivative-free-optimization`, `#neural-networks`, `#MNIST`, `#non-gradient-methods`, `#black-box-optimization`
+**Tags**: `#hubert`, `#c++`, `#speech-processing`, `#onnx`, `#edge-inference`
 
 ---

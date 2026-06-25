@@ -5,531 +5,422 @@ date: 2026-06-25
 lang: en
 ---
 
-> From 42 items, 24 important content pieces were selected
+> From 38 items, 19 important content pieces were selected
 
 ---
 
-1. [OpenAI Unveils First Custom AI Inference Chip with Broadcom](#item-1) ⭐️ 9.0/10
-2. [Krea 2: State-of-the-Art Open-Weights 12B Image Model](#item-2) ⭐️ 9.0/10
+1. [OpenAI unveils Jalapeno, its first custom AI chip with Broadcom](#item-1) ⭐️ 10.0/10
+2. [Anthropic Alleges Alibaba Illicitly Extracted Claude AI Capabilities](#item-2) ⭐️ 8.0/10
 3. [Qualcomm to Acquire AI Startup Modular for $4 Billion](#item-3) ⭐️ 8.0/10
-4. [Open-source PR spam resembles early 2000s email spam](#item-4) ⭐️ 8.0/10
-5. [GLM-5.2: An Open-Weight Model Challenging Proprietary AI for Coding Agents](#item-5) ⭐️ 8.0/10
-6. [Xteink X4: A Microcontroller-Powered, Open E-Ink Reader](#item-6) ⭐️ 8.0/10
-7. [John Carmack Reflects on Early Management Mistakes at id Software](#item-7) ⭐️ 8.0/10
-8. [Self-Play RL Agent Tops Generals.io Leaderboard with JAX and Vision Transformer](#item-8) ⭐️ 8.0/10
-9. [DeepSWE: A Contamination-Free Benchmark for Evaluating Coding Agents](#item-9) ⭐️ 8.0/10
-10. [RubyLLM: A Versatile Ruby Framework for Multi-Provider AI Integration](#item-10) ⭐️ 7.0/10
-11. [Google Introduces Computer Use for Gemini 3.5 Flash](#item-11) ⭐️ 7.0/10
-12. [NVIDIA's 45°C Liquid Cooling Design Cuts Data Center Water Use to Near Zero](#item-12) ⭐️ 7.0/10
-13. [Nub: A Bun-like all-in-one toolkit for Node.js](#item-13) ⭐️ 7.0/10
-14. [Simon Willison Converts MDN Browser Compatibility Data into SQLite Database](#item-14) ⭐️ 7.0/10
-15. [Tom MacWright: AI-generated resumes create accidental anonymity](#item-15) ⭐️ 7.0/10
-16. [Datasette 1.0a35 adds Create and Alter Table UI and API](#item-16) ⭐️ 7.0/10
-17. [HDD-RoPE: High-Dimensional Dynamic Rotary Positional Embedding Boosts Convergence](#item-17) ⭐️ 7.0/10
-18. [LLM Inference Pricing Comparison Shows Caching Cost Disparities Across 7 Providers](#item-18) ⭐️ 7.0/10
-19. [Bunny.net Makes Bunny DNS Free with No Query Limits](#item-19) ⭐️ 6.0/10
-20. [Elastic Lays Off 7% of Workforce in AI-Driven Reorganization](#item-20) ⭐️ 6.0/10
-21. [Blog Post Argues Copying Designs Is a Skill, Sparks Ethical Debate](#item-21) ⭐️ 6.0/10
-22. [Papers with Code Launches OCR Benchmark Overview with New Baidu and Mistral Models](#item-22) ⭐️ 6.0/10
-23. [MuJoFil: A GPU-Native Simulator for Vision-Based RL with Newton Physics and Filament Rendering](#item-23) ⭐️ 6.0/10
-24. [Production ML Models Often Skip Security Testing for Extraction and Poisoning](#item-24) ⭐️ 6.0/10
+4. [NVIDIA's 45°C Liquid Cooling Slashes Data Center Water Use](#item-4) ⭐️ 8.0/10
+5. [Superhuman Generals.io Agent via Self-Play RL and Vision Transformer](#item-5) ⭐️ 8.0/10
+6. [DeepSWE: A Contamination-Free Benchmark for AI Code Generation](#item-6) ⭐️ 8.0/10
+7. [LuaJIT 3.0 Proposal Introduces C-Style Syntax Extensions](#item-7) ⭐️ 7.0/10
+8. [RubyLLM: A Ruby framework for all major AI providers](#item-8) ⭐️ 7.0/10
+9. [Google Launches Computer Use in Gemini 3.5 Flash](#item-9) ⭐️ 7.0/10
+10. [Fund Launched to End Respiratory Infections](#item-10) ⭐️ 7.0/10
+11. [Simon Willison Converts MDN Browser Compatibility Data into a CORS-Enabled SQLite Database](#item-11) ⭐️ 7.0/10
+12. [LLM-Generated Job Applications Erase Personal Identity, Tom MacWright Warns](#item-12) ⭐️ 7.0/10
+13. [LLM Inference Pricing Across 7 Providers Reveals Surprising Cache Savings](#item-13) ⭐️ 7.0/10
+14. [Blogging Can Just Be Stating the Obvious](#item-14) ⭐️ 6.0/10
+15. [PR Spam Now Mirrors Early 2000s Email Spam](#item-15) ⭐️ 6.0/10
+16. [Datasette 1.0a35 adds table creation and alteration interfaces](#item-16) ⭐️ 6.0/10
+17. [Papers with Code Aggregates Top Open-Source OCR Models Including New Baidu and Mistral Releases](#item-17) ⭐️ 6.0/10
+18. [MuJoFil: A GPU-Native Simulator Combining Newton Physics and Filament for High-Fidelity Vision RL](#item-18) ⭐️ 6.0/10
+19. [HDD-RoPE: High-Dimensional Dynamic Rotary Positional Embedding Emerges](#item-19) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [OpenAI Unveils First Custom AI Inference Chip with Broadcom](https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/) ⭐️ 9.0/10
+## [OpenAI unveils Jalapeno, its first custom AI chip with Broadcom](https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/) ⭐️ 10.0/10
 
-OpenAI announced its first custom AI inference chip, codenamed Jalapeno, developed in partnership with Broadcom and manufactured by TSMC. The chip was designed specifically for AI inference workloads, marking OpenAI's strategic entry into custom hardware. This move reduces OpenAI's dependence on NVIDIA GPUs for inference, potentially lowering costs and improving efficiency. It also signals a broader trend of AI companies designing their own hardware, following Google's TPU example, which could reshape the AI hardware landscape. The chip was developed from design to production in about nine months, with OpenAI claiming its models accelerated parts of the design and optimization. It is fabricated by TSMC, not Intel, and key architectural details or performance benchmarks remain undisclosed.
+OpenAI announced its first custom AI inference chip, named Jalapeno, developed in collaboration with Broadcom and manufactured by TSMC, going from design to production in just nine months with AI-assisted optimization. This marks a strategic shift for OpenAI toward vertical hardware integration, reducing reliance on third-party GPUs and potentially lowering inference costs and latency for its AI services. The chip was designed from start to production in only nine months, with OpenAI's models used to accelerate parts of the design and optimization process. It is manufactured by TSMC and specifically targets AI inference workloads.
 
 hackernews · jamdesk · Jun 24, 17:47 · [Discussion](https://news.ycombinator.com/item?id=48663324)
 
-**Background**: AI inference is the process where a trained model processes new data to generate outputs, and specialized inference chips are built to handle these computations with low latency and high throughput. Unlike general-purpose GPUs, inference chips are optimized for the repetitive, high-volume demands of serving AI models at scale. OpenAI's custom chip follows a path paved by Google's TPUs and other cloud providers aiming to reduce reliance on third-party hardware.
+**Background**: AI inference chips are specialized processors optimized for running trained models to make predictions on new data, offering better performance per watt than general-purpose GPUs. OpenAI has historically depended on Nvidia GPUs, but custom chips can be tailored to specific model architectures for lower cost. Google has been developing its own inference-optimized TPUs for years, and companies like Groq have pioneered dedicated inference hardware.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://naddod.medium.com/inference-chip-guide-the-foundation-of-scalable-ai-applications-d18f2c22b36c">Inference Chip Guide: The Foundation of Scalable AI Applications | by NADDOD | Medium</a></li>
-<li><a href="https://cloud.google.com/discover/what-is-ai-inference">What is AI inference? How it works and examples | Google Cloud</a></li>
+<li><a href="https://groq.com/">Groq is fast, low cost inference.</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed skepticism about the claim that OpenAI's models accelerated chip design, calling it potentially marketing fluff. Others noted TSMC is the manufacturer, and some discussed more radical ideas like baking model weights directly into silicon. Overall, the community views the move as significant but remains cautious about the limited technical details.
+**Discussion**: Commenters were skeptical about the AI-accelerated design claim, seeing it as potential marketing fluff. Some discussed the idea of hardcoding model weights into silicon for extreme throughput, citing companies like Taalas. The move was generally viewed as significant, with comparisons to Google's long-standing TPU strategy.
 
-**Tags**: `#OpenAI`, `#custom chip`, `#AI inference`, `#Broadcom`, `#hardware`
+**Tags**: `#AI`, `#hardware`, `#OpenAI`, `#Broadcom`, `#chips`
 
 ---
 
 <a id="item-2"></a>
-## [Krea 2: State-of-the-Art Open-Weights 12B Image Model](https://www.krea.ai/blog/krea-2-technical-report) ⭐️ 9.0/10
+## [Anthropic Alleges Alibaba Illicitly Extracted Claude AI Capabilities](https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/) ⭐️ 8.0/10
 
-Krea has released Krea 2, a 12-billion parameter open-weights text-to-image model, along with a fast distilled Turbo variant that generates images in just 8 steps. The release includes a detailed technical report covering training, data curation, and infrastructure. This model achieves state-of-the-art performance among locally hostable open-weights models, rivaling slower proprietary systems, and democratizes access to high-quality AI image generation. The Turbo model is both guidance- and timestep-distilled, enabling 8-step generation, and the full model outperforms many competing models while being significantly faster than Ideogram 4. The report details RL pipelines, prompt expansion, and style references.
+Anthropic claims that Alibaba used fraudulent accounts to generate over 28.8 million exchanges with Claude between April and June 2026, and then distilled the model's capabilities, violating terms of service. This dispute highlights the growing tension over intellectual property in AI, as distillation is a common technique but using fraudulently obtained data crosses ethical and legal lines, potentially affecting international AI regulation and competition. The campaign involved nearly 25,000 fraudulent accounts, and the extracted data was likely used for targeted distillation (RLAIF) rather than simple black-box imitation. The reseller ecosystem, where Chinese intermediaries sell Claude tokens at steep discounts in exchange for user logs, further complicates the issue.
 
-hackernews · mattnewton · Jun 23, 15:31 · [Discussion](https://news.ycombinator.com/item?id=48646659)
+hackernews · htrp · Jun 24, 19:48 · [Discussion](https://news.ycombinator.com/item?id=48664814)
 
-**Background**: Open-weights models provide publicly accessible trained parameters, allowing anyone to run and fine-tune them locally. Model distillation transfers knowledge from a large teacher model to a smaller, faster student model, reducing inference time without sacrificing quality. Krea 2's 12 billion parameters place it in the larger category of image models, typically requiring high-end GPUs.
+**Background**: Knowledge distillation is a machine learning technique where a smaller 'student' model learns to mimic a larger 'teacher' model's behavior, often by training on the teacher's outputs. It is widely used for model compression and efficiency. However, using outputs from a proprietary model without authorization, especially via fraudulent means, may violate terms of service and intellectual property rights. The technique itself is not inherently illegal, but the method of obtaining training data is the key issue here.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://opensource.org/ai/open-weights">Open Weights : not quite what you’ve been told – Open Source Initiative</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Model_distillation">Model distillation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Distillation_(machine_learning)">Distillation (machine learning)</a></li>
+<li><a href="https://www.ibm.com/think/topics/knowledge-distillation">What is Knowledge distillation? | IBM</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community praised the release of open weights and the comprehensive technical report, highlighting the Turbo model's efficiency and competitive performance. Some commenters noted that while the model excels in style diversity, it may be overshadowed by newer agentic composition models like Nano Banana 2, and it struggled with certain test prompts. Overall, the reception was very positive.
+**Discussion**: Community discussion highlights several viewpoints: some argue that distillation is a legitimate practice, while others note the fraudulent account creation and reseller schemes that subsidize access to harvest data. The Xerox analogy is raised, suggesting that Anthropic itself trained on internet data without consent, and thus the accusation may be hypocritical. The technical distinction between black-box distillation and RLAIF is also discussed.
 
-**Tags**: `#open-weights`, `#text-to-image`, `#generative-ai`, `#model-release`, `#deep-learning`
+**Tags**: `#AI`, `#security`, `#distillation`, `#ethics`, `#geopolitics`
 
 ---
 
 <a id="item-3"></a>
 ## [Qualcomm to Acquire AI Startup Modular for $4 Billion](https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/) ⭐️ 8.0/10
 
-Qualcomm announced on June 24, 2026, that it will acquire AI infrastructure startup Modular in an all-stock deal valued at nearly $4 billion, gaining access to Modular's AI engine and the Mojo programming language to enhance its software stack for edge and mobile devices. This acquisition strengthens Qualcomm's AI software capabilities, potentially reducing the industry's reliance on Nvidia's CUDA ecosystem and enabling more efficient AI inference on mobile and IoT devices. It signals a major push by Qualcomm into the AI software space, competing with established players. Modular is known for its Modular AI Engine, an inference engine that runs AI models across diverse hardware, and the Mojo programming language, a Python-based language designed for high-performance AI that compiles via MLIR. The deal is all-stock, and Mojo is expected to be open-sourced later in 2026.
+Qualcomm announced the acquisition of Modular, the AI startup behind the Mojo programming language and MAX platform, in a deal reportedly valued at $4 billion, aiming to enhance its AI inference capabilities and offer an alternative to Nvidia's CUDA stack. This acquisition could disrupt the AI hardware landscape by enabling a cross-platform AI software stack that runs efficiently on Qualcomm's ARM-based chips, challenging Nvidia's dominance in AI inference, and signals Qualcomm's strategic expansion into AI infrastructure beyond mobile. The deal is reportedly valued at $4 billion; Mojo is built on MLIR to target heterogeneous hardware, and the MAX platform abstracts hardware complexity to accelerate GenAI deployment without code changes.
 
 hackernews · timmyd · Jun 24, 13:49 · [Discussion](https://news.ycombinator.com/item?id=48659798)
 
-**Background**: Modular was founded by Chris Lattner, creator of LLVM and Swift, with the goal of simplifying AI development across CPUs, GPUs, and accelerators. The Mojo language aims to combine Python's ease of use with systems-level performance, making it attractive for AI workloads. Qualcomm, a dominant mobile chipmaker, has been expanding into AI and edge computing, previously acquiring startups like Tenstorrent and collaborating with Ventana and Alphawave. This acquisition aligns with its strategy to offer a comprehensive AI software-hardware solution.
+**Background**: Mojo is a programming language developed by Modular that aims to combine Python's ease of use with the performance of C++, leveraging MLIR to target CPUs, GPUs, and ASICs. Nvidia's CUDA is the dominant parallel computing platform but is proprietary to Nvidia GPUs. Qualcomm, a leading ARM-based chip designer, has been seeking to strengthen its AI offerings for data centers and edge devices.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/">Qualcomm to buy startup Modular for $4 billion in AI software push</a></li>
-<li><a href="https://www.cnbc.com/2026/06/24/qualcomm-ai-chip-modular-software.html">Qualcomm inks deal for AI startup Modular to bolster software stack - CNBC</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language)</a></li>
+<li><a href="https://github.com/modular/modular">GitHub - modular/modular: The Modular Platform (includes MAX ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community reactions are mixed. Some express surprise at the acquisition, questioning its strategic logic given Qualcomm's limited presence in the high-end training market. Others see it as part of a broader portfolio move, including RISC-V and AI, to compete beyond mobile. There is also irony noted that Modular, which criticized hardware companies' AI stacks, is now being acquired by one.
+**Discussion**: Community sentiment is mixed: some see Mojo as another cross-platform language that may fail to become truly universal, while others view the acquisition as a strategic move by Qualcomm to build an ARM-based AI inference stack, potentially challenging Nvidia's dominance. Some note the $4 billion valuation and Qualcomm's broader portfolio moves toward RISC-V and AI infrastructure.
 
-**Tags**: `#AI`, `#acquisition`, `#Qualcomm`, `#Modular`, `#edge computing`
+**Tags**: `#AI`, `#acquisition`, `#Qualcomm`, `#Modular`, `#Mojo`
 
 ---
 
 <a id="item-4"></a>
-## [Open-source PR spam resembles early 2000s email spam](https://www.greptile.com/blog/prs-on-openclaw) ⭐️ 8.0/10
+## [NVIDIA's 45°C Liquid Cooling Slashes Data Center Water Use](https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/) ⭐️ 8.0/10
 
-Open-source repositories are experiencing a surge in spam pull requests that mirrors the email spam epidemic of the early 2000s, leading to active discussions about mitigation strategies and the growing burden on maintainers. The proliferation of PR spam drains maintainer resources and threatens the collaborative model of open source, potentially discouraging contributions and slowing down legitimate development. GitHub has introduced configurable PR limits for maintainers to curb spam, but the attack surface differs from email spam: GitHub spam relies on individual user accounts rather than IP or domain reputation, making mitigation more nuanced. Some projects have adopted non-textual verification requirements for new contributors.
+NVIDIA has introduced a direct-to-chip liquid cooling design that operates at 45°C (113°F), far warmer than traditional cooling systems, enabling data centers to run with near-zero water consumption and eliminating the need for evaporative cooling. This breakthrough addresses the soaring water and energy demands of AI data centers, potentially saving millions of liters of water per facility annually and making waste heat recovery for district heating more feasible, which could turn data centers into community assets. The design is part of NVIDIA's Rubin-generation reference architecture, using higher coolant temperatures to reduce chiller energy and avoid water consumption. Its effectiveness depends on external climate conditions, and the 45°C outlet temperature is still within safe limits for modern server components.
 
-hackernews · dakshgupta · Jun 24, 14:32 · [Discussion](https://news.ycombinator.com/item?id=48660579)
+hackernews · nitin_flanker · Jun 24, 14:10 · [Discussion](https://news.ycombinator.com/item?id=48660178)
 
-**Background**: Pull request spam refers to the submission of automated, low-quality, or irrelevant pull requests to open-source repositories on platforms like GitHub. Similar to the email spam wave of the early 2000s, these spam PRs are often designed to promote services, earn contributor badges, or inject malicious code. The influx creates significant triage work for maintainers, who until recently had limited built-in defenses. The comparison underscores the need for platform-level anti-spam measures and community-driven solutions.
+**Background**: Traditional data centers often use air conditioning or water-thirsty evaporative cooling, which can consume millions of gallons of water per year. Liquid cooling is far more efficient but typically requires coolant temperatures below 30°C. Raising the operating temperature to 45°C reduces the energy needed for chilling and makes the waste heat easier to reuse, for example in district heating networks that distribute heat to nearby buildings. Data center heat reuse is already being pioneered in Europe, where projects channel excess heat into residential and commercial systems.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://garvitasood.medium.com/github-clean-up-spam-babc5e5b5ab0">GitHub Clean-up Spam . by Garvita Sood, Anuj Bansal, Garima | Medium</a></li>
-<li><a href="https://github.com/shitoberfest/spam-pullrequests">GitHub - shitoberfest/ spam - pullrequests : Show the world how many...</a></li>
+<li><a href="https://fortune.com/2026/06/22/nvidia-new-data-center-design-ai-water-problem-cooling/">Nvidia says its new data center design will fix AI’s water problem | Fortune</a></li>
+<li><a href="https://www.guru3d.com/story/nvidia-unveils-liquid-cooling-design-for-ai-data-centers">NVIDIA Unveils 45°C Liquid Cooling Design for AI Data Centers</a></li>
+<li><a href="https://www.weforum.org/stories/2025/06/sustainable-data-centre-heating/">These companies are using data centres to heat cities | World Economic Forum</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members shared mitigation strategies: GitHub's new configurable PR limits, requiring non-textual verification for new contributors, and token-based donations for maintainers. A key insight was that unlike email, PR spam targets individual user accounts rather than server reputation, making it harder to block. Some also drew parallels to the anti-spam legal frameworks of the early 2000s.
+**Discussion**: Commenters point out a strong synergy with district heating, though summer heat dissipation remains a challenge. Some question the novelty, citing NASA's existing high-temperature liquid cooled facility, while others note practical limitations like pump temperature ratings. The overall sentiment is optimistic but recognizes that climate conditions and local infrastructure heavily influence feasibility.
 
-**Tags**: `#open-source`, `#spam`, `#pull-requests`, `#maintainer-experience`, `#github`
+**Tags**: `#data center`, `#liquid cooling`, `#sustainability`, `#NVIDIA`, `#HPC`
 
 ---
 
 <a id="item-5"></a>
-## [GLM-5.2: An Open-Weight Model Challenging Proprietary AI for Coding Agents](https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open) ⭐️ 8.0/10
+## [Superhuman Generals.io Agent via Self-Play RL and Vision Transformer](https://www.reddit.com/r/MachineLearning/comments/1uei2yg/i_made_a_superhuman_generalsio_agent_with/) ⭐️ 8.0/10
 
-Z.AI has released GLM-5.2, an open-weight large language model that achieves competitive benchmark scores on coding agent tasks like SWE-bench Pro (62.1%) and Terminal-Bench 2.1 (81.0%), rivaling some proprietary models. This model provides a low-cost, openly accessible alternative for building autonomous coding agents, potentially democratizing advanced AI coding tools for developers worldwide who cannot afford expensive subscriptions. GLM-5.2 uses multi-token prediction and shows strong performance on design and agentic benchmarks, but it lags behind Claude Opus 4.8 on SWE-bench and NL2Repo. Users report excessive token consumption—draining weekly quotas in hours—and restrictive service plans that limit practical usage.
-
-hackernews · vantareed · Jun 23, 03:23 · [Discussion](https://news.ycombinator.com/item?id=48639840)
-
-**Background**: Open-weight models make their trained parameters publicly available, enabling local deployment and customization. Coding agents are AI systems that can autonomously write, debug, and deploy software. GLM-5.2 is developed by the Chinese lab Z.AI and competes with frontier models like Claude Opus, GPT-5.5, and Gemini 3.1 Pro in the fast-growing field of AI-assisted coding.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.reddit.com/r/technology/comments/1uc5hjh/what_is_glm52_another_opensource_chinese_ai_model/">r/technology on Reddit: What is GLM-5.2? Another open-source Chinese AI model has Silicon Valley's attention.</a></li>
-<li><a href="https://docs.z.ai/guides/llm/glm-5.2">GLM-5.2 - Overview - Z.AI DEVELOPER DOCUMENT</a></li>
-<li><a href="https://www.mindstudio.ai/blog/what-is-glm-5-2-open-weight-model">What Is GLM 5.2? The Open-Weight Model Beating GPT 5.5 on Design Benchmarks | MindStudio</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Sentiment is mixed: some users praise GLM-5.2's performance and affordability, calling it a step change for those priced out of proprietary tools; others criticize the token consumption and service plan, describing it as a scam due to rapid quota depletion and frequent 429 errors.
-
-**Tags**: `#AI`, `#open-weight models`, `#GLM-5.2`, `#coding agents`, `#LLM evaluation`
-
----
-
-<a id="item-6"></a>
-## [Xteink X4: A Microcontroller-Powered, Open E-Ink Reader](https://blog.omgmog.net/post/xteink-x4-e-ink-reader/) ⭐️ 8.0/10
-
-The Xteink X4 is a new minimalist e-reader that uses a microcontroller instead of a full operating system, enabling an open, hackable platform with easy WiFi-based book transfers. It challenges the locked-down ecosystems of mainstream e-readers like Kindle, proving that a simple microcontroller can deliver a distraction-free reading experience and potentially inspire more open hardware designs. The X4 features a 4.3-inch E Ink screen, USB-C charging, magnetic attachment for phones, and a built-in HTTP server for drag-and-drop file transfers; it lacks a backlight and the small screen size may be a limitation for some users.
-
-hackernews · felixdoerp · Jun 24, 16:35 · [Discussion](https://news.ycombinator.com/item?id=48662381)
-
-**Background**: Traditional e-readers like Kindle or Kobo run on Linux or Android, offering full multitasking and app support but often at the cost of complexity and closed software. Microcontroller-based e-readers, by contrast, use lightweight chips that handle only essential tasks, enabling longer battery life, simpler interfaces, and easier hacking. The Xteink X4 is part of a growing movement toward open, single-purpose devices that prioritize a focused reading experience.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.xteink.com/products/xteink-x4">Xteink X 4 Pocket eReader</a></li>
-<li><a href="https://hackaday.com/2025/08/03/open-source-flexible-e-reader/">Open-Source, Flexible E-Reader | Hackaday</a></li>
-<li><a href="https://grokipedia.com/page/Xteink_X4">Xteink X4</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Users praise the X4 and X3 for their simplicity, openness, and the convenience of the WiFi HTTP server for book transfers, with some successfully modding the device with CrossPoint. Common wishes include a larger screen, a backlight, and stronger magnets, though many see it as a secondary, ultra-portable companion rather than a primary e-reader.
-
-**Tags**: `#e-ink`, `#ereader`, `#microcontroller`, `#hardware`, `#open-source`
-
----
-
-<a id="item-7"></a>
-## [John Carmack Reflects on Early Management Mistakes at id Software](https://twitter.com/ID_AA_Carmack/status/2069799283369345247) ⭐️ 8.0/10
-
-John Carmack publicly shared personal lessons about his management mistakes at id Software, admitting he pushed teams too hard, failed to adapt his style, and caused burnout, in a candid Twitter thread. Carmack's reflections provide rare, candid leadership lessons from a legendary figure, illustrating the trade-offs between creating groundbreaking products and maintaining a healthy, sustainable company culture. Carmack specifically admitted that the intense development of Quake 'gutted' id Software, and that he failed to realize growing companies need more slack than startups. Comments from Sandy Petersen and others provided contrasting viewpoints on the cost of that pressure.
-
-hackernews · shadowtree · Jun 24, 15:56 · [Discussion](https://news.ycombinator.com/item?id=48661825)
-
-**Background**: John Carmack is the co-founder of id Software and a legendary programmer known for pioneering 3D game engines behind iconic titles like Doom and Quake. id Software's early culture was defined by intense, crunch-heavy development that pushed technical boundaries. The company's transition from a small startup to a larger studio exposed tensions between Carmack's relentless drive for innovation and the need for sustainable management practices.
-
-**Discussion**: The HN discussion was rich and nuanced: some comments praised Carmack's honesty, while others debated whether the creation of Quake justified the cost to the company. Sandy Petersen's firsthand accounts offered a counterpoint, and several users noted that id Software's post-Doom 2 decline was due to prioritizing technical feats over artistic design. Overall sentiment was respectful, with many acknowledging the complexity of leadership in high-pressure creative environments.
-
-**Tags**: `#game development`, `#leadership`, `#management`, `#software engineering`, `#tech history`
-
----
-
-<a id="item-8"></a>
-## [Self-Play RL Agent Tops Generals.io Leaderboard with JAX and Vision Transformer](https://www.reddit.com/r/MachineLearning/comments/1uei2yg/i_made_a_superhuman_generalsio_agent_with/) ⭐️ 8.0/10
-
-A developer trained a self-play reinforcement learning agent for the real-time strategy game Generals.io, achieving the #1 spot on the human 1v1 leaderboard. The breakthrough came from rewriting the entire pipeline in JAX and replacing the CNN with a Vision Transformer architecture. This demonstrates that modern ML infrastructure (JAX) and scalable architectures (Vision Transformers) can solve complex imperfect-information games without relying on hand-crafted domain knowledge. The open-source release and comprehensive guide provide a practical blueprint for RL practitioners building similar agents. The agent began as a master's thesis using behavior cloning and RL fine-tuning, but was consistently beaten by top players. The reimplementation adopted JAX’s high-performance array computation and a Vision Transformer, prioritizing scaling over human priors; the full pipeline, including a fast JAX simulator, is open source.
+A self-play reinforcement learning agent using a Vision Transformer and reimplemented entirely in JAX reached #1 on the Generals.io 1v1 leaderboard, achieving superhuman performance. The project provides an open-source JAX-based simulator and a detailed technical guide. It demonstrates that scaling with transformer architectures and efficient simulators can outperform domain-specific heuristics, offering a blueprint for building superhuman agents in imperfect-information RTS games. The open-source code and simulator are valuable resources for the RL community. The agent replaced a CNN with a Vision Transformer and reimplemented the pipeline from NumPy/PyTorch to JAX, focusing on scaling over human priors. It was originally developed from behavior cloning and RL fine-tuning for a master's thesis, and the JAX simulator handles imperfect-information real-time strategy environments.
 
 reddit · r/MachineLearning · /u/shrekofspeed · Jun 24, 16:18
 
-**Background**: Generals.io is an online real-time strategy game with imperfect information (fog of war), where players command armies to capture territory. JAX is a Python library for high-performance numerical computing and machine learning, known for automatic differentiation and just-in-time compilation. A Vision Transformer (ViT) is a neural network architecture that divides images into patches and processes them with a transformer encoder, offering high capacity for visual tasks. Self-play reinforcement learning is a technique where an agent learns by playing against itself, famously used by AlphaGo.
+**Background**: Generals.io is a fast-paced multiplayer strategy game where players expand territory, battle enemies, and try to capture the opponent's general under fog of war. A Vision Transformer (ViT) splits an image into patches and processes them as tokens, offering high capacity and scalability compared to CNNs. The project leverages JAX, a high-performance numerical computing library, to build an efficient simulator and training pipeline.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/JAX_(software)">JAX (software) - Wikipedia</a></li>
+<li><a href="https://www.indiedb.com/games/generalsio">Generals . io Windows, Mac, iOS, Android game - IndieDB</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Vision_transformer">Vision transformer</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#reinforcement-learning`, `#self-play`, `#JAX`, `#vision-transformer`, `#game-ai`
+**Tags**: `#reinforcement-learning`, `#self-play`, `#game-ai`, `#jax`, `#vision-transformer`
+
+---
+
+<a id="item-6"></a>
+## [DeepSWE: A Contamination-Free Benchmark for AI Code Generation](https://www.reddit.com/r/MachineLearning/comments/1ue0hlp/deepswe_new_benchmark_looking_at_how_well_todays/) ⭐️ 8.0/10
+
+DeepSWE is a new benchmark that evaluates coding agents' software engineering capabilities using contamination-free tasks created from scratch across 91 repositories in 5 languages, with shorter prompts but requiring 5.5x more code and 2x more output tokens than SWE-bench Pro, and hand-written verifiers that test actual software behavior. This benchmark tackles the problem of data contamination and unrealistic simplicity in existing coding benchmarks, offering a more reliable and challenging measure of AI coding agents' real-world software engineering skills, which is essential for advancing the field and comparing frontier models like GPT-5 and Claude Opus. The benchmark is open-source, with verifiers that check software behavior, and tasks are diverse, covering 91 repositories. The prompt length is halved compared to SWE-bench Pro, yet solutions require 5.5x more code and 2x more output tokens, indicating higher real-world complexity.
+
+reddit · r/MachineLearning · /u/we_are_mammals · Jun 24, 02:03
+
+**Background**: SWE-bench Pro is a recent benchmark that aimed to improve upon SWE-bench by introducing more realistic, enterprise-level tasks, but even the best models like GPT-5 score only around 23%. Data contamination, where test content appears in training data, is a recognized problem in AI evaluation, inflating model scores. DeepSWE builds on these efforts by creating tasks from scratch to avoid contamination entirely.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://labs.scale.com/leaderboard/swe_bench_pro_public">SWE-Bench Pro Leaderboard AI Coding Benchmark (Public Dataset ...</a></li>
+<li><a href="https://arxiv.org/html/2602.16763v1">When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#benchmarks`, `#code-generation`, `#software-engineering`, `#large-language-models`, `#evaluation`
+
+---
+
+<a id="item-7"></a>
+## [LuaJIT 3.0 Proposal Introduces C-Style Syntax Extensions](https://github.com/LuaJIT/LuaJIT/issues/1475) ⭐️ 7.0/10
+
+The LuaJIT 3.0 proposal suggests adding C-style ternary operators (? :), logical operators (&&, ||), and compound assignments (e.g., +=, -=) to the Lua language, aiming to make syntax more familiar to developers from C-like languages. This change could lower the barrier for developers switching from C-like languages, but it risks fragmenting Lua's language identity and breaking existing tooling and educational materials that rely on Lua's unique syntax. The proposal is still under discussion on GitHub issue #1475; it includes both new infix operators and compound assignments. The community has raised concerns about readability, backward compatibility, and potential confusion from having two ways to express the same operation.
+
+hackernews · phreddypharkus · Jun 25, 00:41 · [Discussion](https://news.ycombinator.com/item?id=48667336)
+
+**Background**: LuaJIT is a high-performance just-in-time compiler for Lua, widely used in games, embedded systems, and server-side applications. Lua is known for its minimalistic syntax, with keywords like 'and', 'or', and 'not'. The proposed C-style syntax aims to provide an alternative for developers accustomed to languages like C, JavaScript, and Java, but it deviates from Lua's traditional design philosophy.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/LuaJIT">LuaJIT - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Reactions are mixed: some commenters argue that C-style ternary and logical operators are unnecessary and hurt Lua's readability, suggesting if-then-else expressions instead. Others worry about added complexity and maintenance burden, while a few see potential quality-of-life improvements. The debate highlights deep concerns about preserving Lua's simplicity.
+
+**Tags**: `#LuaJIT`, `#Lua`, `#programming-languages`, `#syntax`, `#language-design`
+
+---
+
+<a id="item-8"></a>
+## [RubyLLM: A Ruby framework for all major AI providers](https://rubyllm.com/) ⭐️ 7.0/10
+
+RubyLLM 1.0 was released in March 2025, providing a unified interface for Ruby developers to interact with AI models from OpenAI, Anthropic, Google, and others. The gem has been praised for its ease of use and developer-friendly API design. It simplifies AI integration for Ruby applications, lowering the barrier for the Ruby community to adopt AI features and keeping Ruby competitive in the rapidly evolving AI landscape. This fills a gap similar to Vercel's AI SDK for JavaScript. Notable limitations include unreliable caching for some providers like xAI, challenges with maintainer responsiveness on pull requests, and a retry pattern that clears model history, complicating trace observability. The responses API is now natively supported in recent versions.
+
+hackernews · doener · Jun 24, 14:41 · [Discussion](https://news.ycombinator.com/item?id=48660711)
+
+**Background**: Ruby is a popular dynamic programming language widely used for web development, especially with the Ruby on Rails framework. Large language models (LLMs) from providers like OpenAI, Anthropic, and Google expose distinct APIs with different conventions. RubyLLM abstracts these differences, offering a single, consistent way for Ruby developers to work with multiple AI models, similar to the Vercel AI SDK for JavaScript.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://medium.com/@raviskit2012/rubyllm-the-ruby-gem-that-makes-ai-feel-right-at-home-a34a1d18def4">💎 RubyLLM: The Ruby Gem That Makes AI Feel Right at Home | by Ravi Prakash | Medium</a></li>
+<li><a href="https://dev.to/crmne/introducing-rubyllm-10-a-beautiful-way-to-work-with-ai-5p0">Introducing RubyLLM 1.0: A Beautiful Way to Work with AI - DEV Community</a></li>
+
+</ul>
+</details>
+
+**Discussion**: The community generally finds RubyLLM easy to use and useful, comparing it favorably to Vercel's AI framework. However, users report pain points such as unreliable caching for xAI, difficulty getting maintainer engagement on pull requests, and a retry mechanism that erases model history, complicating observability. The maintainer's tendency to merge 'vibe coded' PRs and rewrite submitted contributions has raised concerns about code quality.
+
+**Tags**: `#ruby`, `#ai`, `#llm`, `#framework`, `#open-source`
 
 ---
 
 <a id="item-9"></a>
-## [DeepSWE: A Contamination-Free Benchmark for Evaluating Coding Agents](https://www.reddit.com/r/MachineLearning/comments/1ue0hlp/deepswe_new_benchmark_looking_at_how_well_todays/) ⭐️ 8.0/10
+## [Google Launches Computer Use in Gemini 3.5 Flash](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/) ⭐️ 7.0/10
 
-DeepSWE is a new benchmark that evaluates coding agents on software engineering tasks using hand-written verifiers, real-world complexity, and a contamination-free design. It spans 91 repositories in 5 languages and requires solutions with 5.5x more code than SWE-bench Pro. It addresses key weaknesses of existing benchmarks like SWE-bench by eliminating data contamination and focusing on realistic, multi-file engineering work. This gives a more accurate picture of how frontier AI coding agents perform in practice. Prompts are about half the length of SWE-bench Pro's, yet solutions require ~2x more output tokens. Verifiers test software behavior rather than implementation details, ensuring reliable evaluation even for creative solutions.
+Google has introduced computer use capabilities in Gemini 3.5 Flash, enabling the model to directly interact with graphical user interfaces, such as clicking buttons and typing. This move positions Google alongside competitors like OpenAI and Anthropic in the race to develop AI agents that can autonomously operate computers, potentially streamlining workflows for developers and users. However, early reliability issues and missing features like MCP support could hinder its real-world utility. The feature is based on the lightweight Gemini 3.5 Flash model. Early user tests reveal frequent errors, such as failing to extract a table from a PDF and accidentally running destructive commands like `git reset --hard`, and it lacks support for the Model Context Protocol (MCP).
 
-reddit · r/MachineLearning · /u/we_are_mammals · Jun 24, 02:03
+hackernews · swolpers · Jun 24, 17:21 · [Discussion](https://news.ycombinator.com/item?id=48662999)
 
-**Background**: Existing software engineering benchmarks like SWE-bench use real GitHub issues and pull requests, which can lead to contamination if models have seen the solutions during training. Contamination-free benchmarks such as LiveBench create entirely new questions to avoid this problem. DeepSWE extends this approach by writing tasks from scratch and using behavior-based hand-written verifiers, ensuring a fair and realistic test of coding agents.
+**Background**: Computer use agents are AI models designed to autonomously operate a computer through its GUI, mimicking human actions like clicking and typing. OpenAI's Computer-Using Agent (CUA) and Anthropic's Claude have previously introduced similar capabilities. The Model Context Protocol (MCP) is an open standard for connecting AI models to external data sources and tools, which enables more integrated and extensive task execution. Gemini 3.5 Flash is a lightweight version of Google's Gemini model family, optimized for speed and efficiency.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.swebench.com/">SWE - bench Leaderboards</a></li>
-<li><a href="https://github.com/LiveBench/LiveBench">GitHub - LiveBench/LiveBench: LiveBench: A Challenging, Contamination-Free LLM Benchmark · GitHub</a></li>
+<li><a href="https://openai.com/index/computer-using-agent/">Computer-Using Agent | OpenAI</a></li>
+<li><a href="https://www.anthropic.com/news/model-context-protocol">Introducing the Model Context Protocol \ Anthropic</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#benchmarking`, `#code generation`, `#software engineering`, `#AI evaluation`, `#LLMs`
+**Discussion**: Community feedback is largely critical, with users reporting that Gemini 3.5 Flash frequently fails at simple tasks, lacks MCP integration, and falls short of competitors like Claude and GPT in both benchmarks and real-world coding assistance. Many question why Google hasn't provided a capable coding agent akin to Codex or Claude Code.
+
+**Tags**: `#AI`, `#Google`, `#Gemini`, `#computer-use`, `#LLM`
 
 ---
 
 <a id="item-10"></a>
-## [RubyLLM: A Versatile Ruby Framework for Multi-Provider AI Integration](https://rubyllm.com/) ⭐️ 7.0/10
+## [Fund Launched to End Respiratory Infections](https://blog.interceptfund.com/p/ending-respiratory-infections) ⭐️ 7.0/10
 
-RubyLLM has emerged as a popular open-source Ruby framework that simplifies working with multiple AI providers like OpenAI, Anthropic, and xAI, earning praise for its developer-friendly API. It fills a gap in the Ruby ecosystem for AI integration, enabling Ruby developers to easily switch between providers and potentially accelerating the development of Ruby-based AI applications. While praised for ease of use, the framework has limitations: caching doesn't work correctly for xAI due to completions API constraints, and the responses API was initially not natively supported, though a recent update may have added it. Retry logic can erase model history, complicating observability.
+A philanthropic fund, the Intercept Fund, has been announced with the goal of ending respiratory infections by investing in air cleaning technologies and new preventatives. Respiratory infections like influenza, COVID-19, and common colds cause widespread illness, disability, and economic loss. This initiative could accelerate the development of better preventatives, potentially reducing suffering and deaths, especially for immunocompromised populations. The fund has an initial budget of $500 million. It focuses on air cleaning technologies and new preventatives, though some observers note that far larger investments are needed to tackle the problem.
 
-hackernews · doener · Jun 24, 14:41 · [Discussion](https://news.ycombinator.com/item?id=48660711)
+hackernews · EthanFantl · Jun 25, 01:14 · [Discussion](https://news.ycombinator.com/item?id=48667588)
 
-**Background**: RubyLLM is a Ruby gem that provides a common interface for interacting with large language models from various providers. It aims to offer a simple, Rails-like developer experience, handling API nuances and allowing easy swapping of backends. The Ruby ecosystem has historically had fewer AI/ML libraries compared to Python, making RubyLLM a significant addition for Ruby developers building AI-powered applications.
+**Background**: Respiratory infections are among the leading causes of illness and death worldwide, with the COVID-19 pandemic highlighting the need for better prevention. Healthy adults spend roughly 15-25 days per year sick with such infections, representing about 5% of their lives. Public funding for prevention has historically been limited compared to treatment, and philanthropic efforts like this fund aim to address that gap.
 
-**Discussion**: Community response is overwhelmingly positive, with many praising its ease of use and comparing it favorably to Vercel's AI framework. However, users highlight practical pain points: broken caching for xAI, missing native responses API support (possibly fixed), and retry logic that obscures observability. Some question whether it offers enough value over direct provider SDKs, while others eagerly await version 2.0.
+**Discussion**: Community reactions are mixed: some express hope and personal relevance, such as a user whose girlfriend died from a respiratory virus, and others who are disabled by long COVID. Others criticize the reliance on philanthropy, noting that $500 million is far less than space exploration budgets, and question the cited statistic of 15-25 sick days per year. Many support the fund's focus on air cleaning and masking.
 
-**Tags**: `#ruby`, `#llm`, `#ai-framework`, `#developer-tools`, `#open-source`
+**Tags**: `#public-health`, `#philanthropy`, `#respiratory-infections`, `#community-discussion`, `#prevention`
 
 ---
 
 <a id="item-11"></a>
-## [Google Introduces Computer Use for Gemini 3.5 Flash](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/) ⭐️ 7.0/10
+## [Simon Willison Converts MDN Browser Compatibility Data into a CORS-Enabled SQLite Database](https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything) ⭐️ 7.0/10
 
-Google announced that Gemini 3.5 Flash now supports computer use, allowing the AI model to interpret graphical user interfaces and perform actions like clicking and typing to automate tasks. This marks Google's entry into the AI agent computer-use race, competing with OpenAI's Operator and Anthropic's Claude Computer Use, but community feedback highlights significant reliability issues and missing features that may limit adoption. The feature is part of the Gemini 3.5 Flash model release. Google's blog claims performance gains, but community members note that the model gave up on simple data extraction tasks, lacks MCP support in the Gemini app, and has no coding agent equivalent to Codex or Claude Code.
-
-hackernews · swolpers · Jun 24, 17:21 · [Discussion](https://news.ycombinator.com/item?id=48662999)
-
-**Background**: Computer use in AI refers to the ability of a model to interpret screen content visually and simulate mouse and keyboard input to complete tasks across applications. OpenAI's Operator employs a Computer-Using Agent (CUA) model, and Anthropic's Claude offers similar capabilities. Gemini 3.5 Flash is a fast, cost-efficient model from Google DeepMind, part of the Gemini family of multimodal LLMs.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/">Gemini 3 . 5 : frontier intelligence with action</a></li>
-<li><a href="https://openai.com/index/computer-using-agent/">Computer-Using Agent | OpenAI</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community comments are overwhelmingly negative. Users report Gemini throwing errors and giving up on a simple table extraction task, lament the absence of MCP support and a coding agent tool, and criticize a benchmark graph that they claim misrepresents Gemini's performance. One commenter calls computer use a 'terrible idea'—slow, insecure, error-prone, and expensive.
-
-**Tags**: `#gemini`, `#computer-use`, `#ai-agents`, `#google`, `#human-computer-interaction`
-
----
-
-<a id="item-12"></a>
-## [NVIDIA's 45°C Liquid Cooling Design Cuts Data Center Water Use to Near Zero](https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/) ⭐️ 7.0/10
-
-NVIDIA has introduced a liquid cooling architecture that operates at an inlet temperature of 45°C, enabling data centers to drastically reduce water consumption compared to traditional air-cooled or lower-temperature liquid-cooled systems. The design claims to eliminate water use entirely in favorable climates, sparking debate over its practical feasibility. This approach could significantly reduce the environmental impact of AI and HPC data centers, which are facing increasing scrutiny over water and energy usage. If proven, it may also enable waste heat integration with district heating networks, potentially turning data centers into net-positive community assets. The 45°C inlet temperature is warmer than typical liquid-cooled systems (often ~24°C) and allows the use of dry coolers instead of evaporative cooling towers, which consume water. However, the effectiveness depends on ambient climate, and the 'zero water' claim is contested because the recirculating coolant still requires initial fill and periodic makeup water, though at minimal levels.
-
-hackernews · nitin_flanker · Jun 24, 14:10 · [Discussion](https://news.ycombinator.com/item?id=48660178)
-
-**Background**: Data centers traditionally use air conditioning or evaporative cooling to remove heat from servers, which can consume millions of gallons of water annually. Liquid cooling is more efficient because water transports heat better than air. Warm-water liquid cooling (e.g., up to 75°F/24°C) has been used in some HPC facilities to reduce energy, but NVIDIA's design raises the temperature further to 45°C (113°F), enabling heat rejection without water evaporation. District heating is a centralized system that distributes waste heat from industrial sources to buildings, and 45°C is a viable temperature for some low-temperature district heating loops.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/District_heating">District heating</a></li>
-<li><a href="https://www.nrel.gov/computational-science/warm-water-liquid-cooling">High-Performance Computing Data Center Warm-Water Liquid Cooling | Computational Science | NLR</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters expressed skepticism about the 'zero water consumption' claim, noting that recirculating water still comes from somewhere and requires makeup. Some highlighted the synergy with district heating, while others questioned the lack of technical details on performance in different climates, and pointed out that warm-water liquid cooling is not entirely new (e.g., NASA Ames facility).
-
-**Tags**: `#liquid cooling`, `#data centers`, `#water conservation`, `#NVIDIA`, `#sustainability`
-
----
-
-<a id="item-13"></a>
-## [Nub: A Bun-like all-in-one toolkit for Node.js](https://github.com/nubjs/nub) ⭐️ 7.0/10
-
-Nub, created by Colin McDonnell (creator of Zod), is a new toolkit that enhances Node.js with a fast transpiler based on oxc, module resolution hooks, and polyfills for APIs like Worker and Temporal, delivering a Bun-like developer experience while still using the stock Node.js runtime. Nub is significant because it allows Node.js developers to enjoy Bun-like speed and convenience—such as TypeScript transpilation and modern API polyfills—without abandoning the mature Node.js ecosystem, reducing migration risks and enabling incremental adoption. Nub uses a `--require` preload hook to inject its transpiler and hooks, which may have edge cases with ESM and top-level await; the transpiler is powered by oxc, a high-performance Rust-based tool, and is packaged as a Node-API add-on for speed. It injects polyfills for APIs like `Worker` and `Temporal` as needed, ensuring compatibility without replacing Node's standard library.
-
-hackernews · colinmcd · Jun 24, 14:14 · [Discussion](https://news.ycombinator.com/item?id=48660267)
-
-**Background**: Bun is a fast, all-in-one JavaScript runtime that bundles a transpiler, package manager, and test runner, offering a streamlined developer experience. Node.js, the most widely used server-side JavaScript runtime, traditionally requires separate tools like ts-node for TypeScript. Nub bridges this gap by using a transpiler (powered by oxc, a high-performance Rust-based toolchain) and Node's module resolution hooks to add these capabilities directly to Node.js without changing the runtime.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Bun_(software)">Bun (software) - Wikipedia</a></li>
-<li><a href="https://github.com/oven-sh/bun">GitHub - oven-sh/bun: Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one</a></li>
-<li><a href="https://nodejs.org/api/module.html">Modules : ` node : module ` API | Node . js v26.3.0 Documentation</a></li>
-
-</ul>
-</details>
-
-**Discussion**: The community reaction is largely positive, with many praising the idea and the credentials of creator Colin McDonnell (Zod). Some raised technical questions about the transpiler necessity given Node's native TypeScript support and the use of a `--require` hook, which may affect ESM and top-level await. One user reported successfully migrating a monorepo to Nub with zero issues, highlighting its speed and reliability.
-
-**Tags**: `#Node.js`, `#TypeScript`, `#toolkit`, `#Bun`, `#oxc`
-
----
-
-<a id="item-14"></a>
-## [Simon Willison Converts MDN Browser Compatibility Data into SQLite Database](https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything) ⭐️ 7.0/10
-
-Simon Willison built a new GitHub repo that transforms Mozilla's comprehensive browser-compat-data JSON dataset into a ~66MB SQLite database, using a script generated by Claude Code and the sqlite-utils library. The database is served via GitHub's raw content CDN with open CORS headers, enabling direct web-based querying through Datasette Lite. This provides developers with an offline-queryable, portable database of browser compatibility information, enabling easy integration into local tools, CI/CD pipelines, and web applications. The open CORS headers remove backend dependencies, allowing any web-based tool to query the data directly, which lowers the barrier for building browser-compat-aware features. The database is force-pushed to an orphan branch named 'db' to ensure CORS support on raw.githubusercontent.com; GitHub release assets lack these headers. The build workflow is automated via GitHub Actions, and the initial script was generated by Claude Code (Opus 4.8) while the workflow was built with Codex Desktop (GPT-5.5).
+Simon Willison has released a new open-source project (simonw/browser-compat-db) that converts Mozilla's MDN browser compatibility data into a portable ~66MB SQLite database. He used AI-assisted tools (Claude Code and Codex Desktop) to generate the conversion script and a GitHub Actions workflow that force-pushes the database to an orphan branch, enabling CORS-enabled CDN access. This makes the extensive browser compatibility data from MDN easily queryable offline and accessible cross-origin, benefiting web applications, developer tools, and AI assistants. It lowers the barrier for integrating compatibility checks into workflows and showcases AI-assisted development for practical data engineering tasks. The 66MB database is built from the mdn/browser-compat-data JSON files using the sqlite-utils library. It is hosted on GitHub's CDN with open CORS headers, allowing direct exploration via Datasette Lite. The build script was generated by Claude Code (Opus 4.8) and the workflow by Codex Desktop (GPT-5.5).
 
 rss · Simon Willison · Jun 24, 23:59
 
-**Background**: MDN's browser-compat-data is a community-maintained JSON dataset covering HTML, CSS, JavaScript, and Web API compatibility across browsers. sqlite-utils is a Python CLI tool by Simon Willison that simplifies importing JSON into SQLite. Claude Code is an AI-powered coding agent from Anthropic that can understand codebases and generate scripts. GitHub repositories support CORS for raw file access on the raw.githubusercontent.com domain, but release assets do not; this project uses an orphan branch to host the database file and make it queryable from the web.
+**Background**: MDN browser compatibility data is an open-source JSON dataset from Mozilla documenting web API support across browsers. SQLite is a lightweight, embeddable database engine, and sqlite-utils is a Python library for creating and manipulating SQLite databases. CORS (Cross-Origin Resource Sharing) headers, such as Access-Control-Allow-Origin, allow web applications to fetch resources from a different origin; GitHub's CDN provides these headers for files in regular repositories, enabling cross-origin access.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://github.com/simonw/sqlite-utils">GitHub - simonw/sqlite-utils: Python CLI utility and library for manipulating SQLite databases · GitHub</a></li>
-<li><a href="https://developer.mozilla.org/en-US/mcp">MDN MCP server</a></li>
-<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
+<li><a href="https://bunny.net/academy/http/what-are-cross-origin-resource-sharing-cors-headers/">How do Cross Origin Resource Sharing ( CORS ) Headers work?</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#browser-compat`, `#sqlite`, `#web-development`, `#mdn`, `#open-data`
+**Tags**: `#sqlite`, `#browser-compatibility`, `#open-data`, `#ai-assisted-development`, `#developer-tools`
+
+---
+
+<a id="item-12"></a>
+## [LLM-Generated Job Applications Erase Personal Identity, Tom MacWright Warns](https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything) ⭐️ 7.0/10
+
+Tom MacWright has observed that job applications are now being fully generated by LLMs, including resumes, portfolio sites, and GitHub projects, leaving candidates anonymous and indistinguishable. This trend erodes the authenticity of hiring, making it difficult for employers to assess genuine human qualities, and may prompt a shift toward valuing personal interaction over polished AI-generated materials. MacWright notes that the entire application chain is synthetic: LLM-generated portfolio sites link to LLM-generated GitHub projects with LLM-generated commit messages, creating what he calls 'accidental anonymity'.
+
+rss · Simon Willison · Jun 24, 18:13
+
+**Tags**: `#ai`, `#careers`, `#llm`, `#hiring`, `#authenticity`
+
+---
+
+<a id="item-13"></a>
+## [LLM Inference Pricing Across 7 Providers Reveals Surprising Cache Savings](https://www.reddit.com/r/MachineLearning/comments/1ueavxn/i_compiled_llm_inference_pricing_across_7/) ⭐️ 7.0/10
+
+A Reddit user compiled LLM inference pricing from seven providers, including OpenRouter, DeepSeek, and Together AI, into a spreadsheet, highlighting that cached input costs can vary over tenfold and are often dramatically cheaper than non-cached requests. This compilation is significant for developers building agents, RAG pipelines, and multi-turn conversations, where caching policies can drastically reduce costs, shifting the focus from raw token price to effective caching strategies. The spreadsheet includes input/output token pricing, context windows, supported models, and provider-specific differences, but does not cover latency, throughput, cold-start times, or hardware precision (e.g., FP16 vs FP8).
+
+reddit · r/MachineLearning · /u/Technomadlyf · Jun 24, 11:28
+
+**Background**: LLM inference caching reuses previously computed results for repeated prompt prefixes, reducing redundant computation. This is particularly beneficial for RAG (Retrieval-Augmented Generation) where external documents are retrieved and used as context, and for multi-turn conversations where the conversation history is reused. Providers like DeepSeek and Together AI offer different caching mechanisms, with varying documentation and cost structures.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://machinelearningmastery.com/the-complete-guide-to-inference-caching-in-llms/">The Complete Guide to Inference Caching in LLMs</a></li>
+<li><a href="https://aws.amazon.com/blogs/database/optimize-llm-response-costs-and-latency-with-effective-caching/">Optimize LLM response costs and latency with effective caching</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#LLM inference`, `#pricing`, `#caching`, `#API providers`, `#cost optimization`
+
+---
+
+<a id="item-14"></a>
+## [Blogging Can Just Be Stating the Obvious](https://blog.jim-nielsen.com/2026/blogging-stating-the-obvious/) ⭐️ 6.0/10
+
+Jim Nielsen's blog post argues that sharing seemingly obvious insights is a valid and valuable form of blogging, because new audiences are always discovering information for the first time, and the accompanying discussion explores the curse of knowledge and the power of repetition. This perspective challenges the pressure on bloggers to constantly produce novel ideas, instead encouraging more people to share their knowledge without fear of redundancy, and it highlights how the curse of knowledge can inhibit communication and learning. The post, linked from a 2026-dated URL, is a concise argument without external references; the Hacker News discussion adds rich context, including a PhD mathematician's personal evolution and a direct link to the Wikipedia article on the Curse of Knowledge.
+
+hackernews · Curiositry · Jun 24, 23:46 · [Discussion](https://news.ycombinator.com/item?id=48666927)
+
+**Background**: The 'curse of knowledge' is a cognitive bias where an expert unknowingly assumes others share their background knowledge, making it hard to explain fundamentals. In blogging, writers often fear being unoriginal, but many successful blogs simply repackage known concepts for new learners. This post contributes to a broader conversation about the value of repetition in education and the role of 'new cohorts' in knowledge dissemination.
+
+**Discussion**: The community overwhelmingly agrees, sharing personal stories that reinforce the premise. They emphasize the curse of knowledge, the constant arrival of new learners, and the value of imperfect, rough posts. Some note that criticism of 'not new' content often comes from outside the intended audience, while upvotes prove the content resonated with its target readers.
+
+**Tags**: `#blogging`, `#writing`, `#knowledge-sharing`, `#curse-of-knowledge`, `#communication`
 
 ---
 
 <a id="item-15"></a>
-## [Tom MacWright: AI-generated resumes create accidental anonymity](https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything) ⭐️ 7.0/10
+## [PR Spam Now Mirrors Early 2000s Email Spam](https://www.greptile.com/blog/prs-on-openclaw) ⭐️ 6.0/10
 
-Tom MacWright reports that he has seen job applications where the resume, portfolio, GitHub projects, and commit messages are all clearly generated by LLMs, resulting in candidates who appear anonymous and reveal nothing about their true personality. This trend could undermine the hiring process by making it hard for employers to evaluate candidates authentically, potentially leading to poor hiring decisions and eroding trust in application materials. The observation, published in June 2026, highlights that the 'perfected, generated, prompted' content strips away individuality, leaving candidates indistinguishable beyond their tool usage.
+A recent blog post draws a parallel between the surge of spam pull requests on open source repositories and the early 2000s email spam epidemic, sparking discussion about reputation systems and community moderation. GitHub has also recently introduced configurable PR limits for maintainers to help combat this issue. The comparison highlights how spam can erode trust and productivity in open source, just as it did for email, and underscores the need for robust reputation mechanisms to filter out bad actors as AI-generated spam increases. The blog post, published by AI code review tool Greptile, was noted by some commenters as a promotional piece. GitHub's new configurable PR limits for maintainers allow restricting new contributors, but unlike email spam, which relied on IP and domain reputation, PR spam is tied to individual user accounts, making reputation harder to establish.
 
-rss · Simon Willison · Jun 24, 18:13
+hackernews · dakshgupta · Jun 24, 14:32 · [Discussion](https://news.ycombinator.com/item?id=48660579)
 
-**Background**: Large language models (LLMs) like GPT-4 can generate coherent text, code, and entire websites from prompts. In tech hiring, resumes and portfolios are meant to showcase unique skills and personality; automating them with AI raises concerns about authenticity. MacWright's term 'accidental anonymity' describes how AI tools can inadvertently erase the human element that employers rely on to assess candidates.
+**Background**: Email spam was a major problem in the early 2000s, leading to filters based on IP reputation and content analysis. Today, open source projects on GitHub are experiencing a wave of spam pull requests, where users submit irrelevant or low-quality contributions, sometimes triggered by tutorials or to promote tools. The Express.js project was hit by such spam in 2024 after a viral YouTube tutorial. The comparison to email spam suggests that similar reputation systems might be needed for GitHub accounts.
 
-**Tags**: `#careers`, `#ai`, `#llm`, `#hiring`, `#ethics`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://socket.dev/blog/express-js-spam-prs-commoditization-of-open-source">Express.js Spam PRs Incident Highlights the Commoditization ...</a></li>
+<li><a href="https://github.com/orgs/community/discussions/53233">What should I do about spam issues or pull requests ... - GitHub</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters appreciated GitHub's new PR limits but highlighted the key difference: email spam filters used IP reputation, not individual user identity, making it harder to apply directly to GitHub. Some users felt the blog post was a disguised ad for an AI tool. The community expressed interest in building reputation systems for GitHub, with one suggestion of 'unsubscribe lists' akin to uBlock Origin.
+
+**Tags**: `#open-source`, `#spam`, `#pull-requests`, `#reputation`, `#github`
 
 ---
 
 <a id="item-16"></a>
-## [Datasette 1.0a35 adds Create and Alter Table UI and API](https://simonwillison.net/2026/Jun/23/datasette/#atom-everything) ⭐️ 7.0/10
+## [Datasette 1.0a35 adds table creation and alteration interfaces](https://simonwillison.net/2026/Jun/23/datasette/#atom-everything) ⭐️ 6.0/10
 
-Datasette 1.0a35, a major alpha release, introduces a new 'Create table' interface and JSON API for defining tables with columns, constraints, and foreign keys, as well as an 'Alter table' interface and API for modifying existing tables, including adding, renaming, and dropping columns and changing types. This update transforms Datasette from a read-only exploration tool into a more complete database management interface, enabling users to create and modify database schemas without leaving the tool. It is a significant step toward making SQLite more accessible for data management tasks and aligns with the trend of embedding admin features in developer-friendly tools. The new endpoints support custom column types, NOT NULL constraints, literal and expression defaults, primary keys, and foreign keys; the Alter table dialog also includes a 'Drop table' button. Additionally, the template context documentation is now a stable API for custom templates, generated from dataclass definitions and validated by tests.
+Datasette 1.0a35 introduces a new "Create table" interface and a corresponding JSON API, along with an "Alter table" action that allows users to add, rename, reorder, drop columns, and modify constraints, defaults, and foreign keys directly from the UI or API. This release significantly expands Datasette's schema management capabilities beyond read-only exploration, allowing users to build and modify database structures interactively, which is crucial for data wrangling, prototyping, and self-service data management workflows. The create table interface supports defining columns, primary keys, custom column types, NOT NULL constraints, literal and expression defaults, and single-column foreign keys, while the alter table feature covers renaming tables, changing column types, defaults, and constraints, and includes a drop table button. The new template context documentation now provides a stable API for custom templates, with auto-generated docs validated against actual view contexts.
 
 rss · Simon Willison · Jun 23, 21:34
 
-**Background**: Datasette is an open-source tool by Simon Willison that provides a web interface and JSON API for exploring and publishing SQLite databases. It is widely used for data journalism and rapid data exploration. Prior to this release, Datasette was primarily read-only, lacking built-in capabilities to create or modify tables, forcing users to rely on external tools like the sqlite3 command-line interface.
+**Background**: Datasette is an open-source tool for exploring and publishing data, built on top of SQLite. It provides a web interface and a JSON API for interacting with databases, and is widely used by data journalists, developers, and researchers for quick data exploration and sharing. The 1.0a35 release is a pre-release version moving toward a stable 1.0.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://docs.datasette.io/en/stable/json_api.html">JSON API - Datasette documentation</a></li>
-<li><a href="https://docs.datasette.cn/en/stable/json_api.html">JSON API - Datasette 文档</a></li>
+<li><a href="https://datasette.io/">Datasette: An open source multi-tool for exploring and publishing data</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#datasette`, `#sqlite`, `#data-exploration`, `#open-source`, `#api`
+**Tags**: `#datasette`, `#release`, `#sqlite`, `#database-tools`, `#web-api`
 
 ---
 
 <a id="item-17"></a>
-## [HDD-RoPE: High-Dimensional Dynamic Rotary Positional Embedding Boosts Convergence](https://www.reddit.com/r/MachineLearning/comments/1uelcm9/high_dimensional_dynamic_rotary_positional/) ⭐️ 7.0/10
+## [Papers with Code Aggregates Top Open-Source OCR Models Including New Baidu and Mistral Releases](https://www.reddit.com/r/MachineLearning/comments/1ueiam6/find_the_best_opensource_ocr_models_in_one_place/) ⭐️ 6.0/10
 
-HDD-RoPE introduces a novel positional embedding that extends RoPE by grouping query/key vectors into larger chunks (e.g., size 4) and making rotations data-dependent, treating token position as multidimensional. On the TinyStories dataset, it shows faster convergence than the xPos baseline. This advancement could improve training efficiency and model performance for transformers, as positional embeddings are crucial for sequence modeling. By enabling multidimensional position learning, it may allow models to capture richer structural information like paragraphs or sentences, potentially leading to better language understanding. The method uses cumulative matrix products to handle rotations, and a chunk size of 4 corresponds to 6 rotational axes. The test architecture is a GPT-2-like model with 4 blocks and 768 hidden dimensions, trained on TinyStories, and the code and math are open-source.
-
-reddit · r/MachineLearning · /u/mikayahlevi · Jun 24, 18:16
-
-**Background**: Rotary Positional Embedding (RoPE) is a widely used method in transformers that encodes token positions by rotating query and key vectors in pairs, allowing the model to learn relative positions. xPos is an enhanced variant designed to improve length extrapolation. HDD-RoPE generalizes this by grouping features into larger chunks and making rotation amounts data-dependent, turning position into a multidimensional concept rather than a one-dimensional sequence index.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Rotary_positional_embedding">Rotary positional embedding</a></li>
-<li><a href="https://github.com/ggml-org/ggml/issues/441">Support for xPos positional embedding · Issue #441 · ggml-org/ggml</a></li>
-<li><a href="https://github.com/jploski/RotaryEmbedding">GitHub - jploski/RotaryEmbedding: Comparison of RoPE and xPos positional embeddings used in LLMs</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#positional-embeddings`, `#transformers`, `#deep-learning`, `#NLP`, `#rotary-position-embedding`
-
----
-
-<a id="item-18"></a>
-## [LLM Inference Pricing Comparison Shows Caching Cost Disparities Across 7 Providers](https://www.reddit.com/r/MachineLearning/comments/1ueavxn/i_compiled_llm_inference_pricing_across_7/) ⭐️ 7.0/10
-
-A Reddit user compiled public pricing data from 7 LLM inference providers, uncovering that cached input token costs can differ by tens of times between services. The comparison reveals that caching policy is often more important than base token pricing for cost-sensitive applications like agents and RAG pipelines, helping developers make more informed provider choices. The spreadsheet tracks input/output token pricing, context windows, cached input pricing, and supported models; the same model can cost several times more across providers, and caching documentation is often incomplete.
-
-reddit · r/MachineLearning · /u/Technomadlyf · Jun 24, 11:28
-
-**Background**: In LLM inference, caching stores intermediate computations (KV cache) from previous requests to avoid recomputing for repeated tokens, such as system prompts or conversation history. This significantly reduces latency and cost. Providers may offer different discounts for cached tokens, reflected in separate pricing tiers.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://machinelearningmastery.com/the-complete-guide-to-inference-caching-in-llms/">The Complete Guide to Inference Caching in LLMs - MachineLearningMastery.com</a></li>
-<li><a href="https://aws.amazon.com/blogs/database/optimize-llm-response-costs-and-latency-with-effective-caching/">Optimize LLM response costs and latency with effective caching | Amazon Web Services</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#LLM pricing`, `#inference`, `#caching`, `#cost comparison`, `#spreadsheet`
-
----
-
-<a id="item-19"></a>
-## [Bunny.net Makes Bunny DNS Free with No Query Limits](https://bunny.net/blog/were-making-bunny-dns-free/) ⭐️ 6.0/10
-
-Bunny.net has eliminated all DNS query fees and now offers free DNS hosting for up to 500 domains per account, including smart records and health monitoring, with no query limits. This move positions Bunny as a competitive European alternative to Cloudflare's free DNS service, appealing to users seeking EU-based infrastructure amid geopolitical concerns. It also lowers the barrier for individuals and small teams to use a scriptable DNS platform with global anycast. The free tier includes smart records and health monitoring, but the community notes that the spending cap feature (e.g., block requests after a certain bill) is only available for Bunny CDN, not other products like Bunny DNS, raising concerns about unexpected costs from traffic spikes.
-
-hackernews · dabinat · Jun 24, 08:50 · [Discussion](https://news.ycombinator.com/item?id=48657030)
-
-**Background**: Bunny.net is a European CDN and DNS provider, known for its scriptable DNS platform with global anycast network. It competes with larger providers like Cloudflare, which also offers free DNS services. The company received a small $6 million funding round in 2022 and operates organically without heavy loss-leader strategies. This announcement makes their DNS hosting free, similar to Cloudflare's model, but with a European base.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://bunny.net/dns/">Bunny DNS | The #1 Scriptable DNS Platform | bunny.net</a></li>
-
-</ul>
-</details>
-
-**Discussion**: The HN community had mixed reactions. Some praised Bunny as a welcome EU-based alternative to Cloudflare, especially given geopolitical tensions. Others noted the company's organic growth model and lack of loss-leader features. Several commenters expressed concerns about the lack of spending caps on DNS services, fearing unexpected bills from automated traffic, and criticized the unclear messaging on the announcement page.
-
-**Tags**: `#DNS`, `#free`, `#CDN`, `#infrastructure`, `#cloud`
-
----
-
-<a id="item-20"></a>
-## [Elastic Lays Off 7% of Workforce in AI-Driven Reorganization](https://www.elastic.co/blog/ceo-ash-kulkarni-announcement-to-elastic-employees) ⭐️ 6.0/10
-
-Elastic announced a layoff of 7% of its employees, citing advances in AI and automation as the reason for restructuring its workforce. The company plans to simplify its structure and increase hiring in go-to-market roles. This reflects a growing trend where tech companies use AI to justify job cuts, raising concerns about employment stability and the normalization of layoffs. The discussion highlights the shifting norms in the tech industry, where layoffs are no longer seen as a sign of failure. The CEO's blog post emphasized future growth and hiring for go-to-market positions, but did not provide details on severance packages. The SEC filing also mentions headcount increases in go-to-market roles.
-
-hackernews · dakrone · Jun 24, 21:57 · [Discussion](https://news.ycombinator.com/item?id=48666100)
-
-**Background**: Elastic is a search software company best known for Elasticsearch, an open-source search and analytics engine. AI-driven reorganization refers to the company's strategy of leveraging automation and AI to streamline operations, a trend seen across the tech industry. This approach often involves reducing roles that can be automated while expanding customer-facing teams. Such layoffs are part of a broader pattern where tech firms adjust headcount to focus on AI and cloud services.
-
-**Discussion**: Commenters expressed sadness over the normalization of layoffs, noting they were once a sign of failure. Some criticized the company's framing of AI-driven cuts while planning to hire in other areas, and debated AI's uneven impact on big vs. small firms.
-
-**Tags**: `#layoffs`, `#tech-industry`, `#ai-impact`, `#business`, `#hackernews`
-
----
-
-<a id="item-21"></a>
-## [Blog Post Argues Copying Designs Is a Skill, Sparks Ethical Debate](https://ben-mini.com/2026/stealing-is-a-skill) ⭐️ 6.0/10
-
-A blog post titled 'Stealing Is a Skill' claimed that methodically copying others' designs is a valuable creative learning process, sparking a lively debate among web designers and developers. The discussion highlights the tension between learning through imitation and the ethical boundaries of copying for commercial work, reflecting broader concerns about design originality and homogeneity in the web industry. Community reactions were mixed: some compared it to the copywork exercise in writing, while others criticized the ethics of copying without permission and lamented the blandness of modern web design. The post's argument is opinion-based rather than a technical breakthrough.
-
-hackernews · bewal416 · Jun 24, 13:08 · [Discussion](https://news.ycombinator.com/item?id=48659165)
-
-**Background**: Copywork is a traditional exercise in writing where students transcribe the works of great authors to internalize style and technique. In design, similar practices of recreating existing works for study are common, but the line between learning and plagiarism is often debated. The modern web has seen a trend toward minimalist, template-driven design, which some see as diluting creativity. The post reignites debates about originality and the 'blandness' of contemporary web aesthetics.
-
-**Discussion**: Some likened the approach to 'copywork' used by writers, viewing it as a legitimate learning method. Others strongly disagreed, arguing that copying a finished design does not convey the creator's underlying process and that commercial copying without permission crosses an ethical line. The debate also touched on the broader perception of bland, template-driven web design.
-
-**Tags**: `#web design`, `#copying`, `#creativity`, `#ethics`, `#front-end development`
-
----
-
-<a id="item-22"></a>
-## [Papers with Code Launches OCR Benchmark Overview with New Baidu and Mistral Models](https://www.reddit.com/r/MachineLearning/comments/1ueiam6/find_the_best_opensource_ocr_models_in_one_place/) ⭐️ 6.0/10
-
-Papers with Code released a curated overview of top open-source OCR models and benchmarks, highlighting recent releases: Baidu’s Unlimited OCR (3B parameters, with Reference Sliding Window Attention) and Mistral OCR 4. This resource helps developers and enterprises quickly identify the best OCR model for converting documents into machine-readable formats, which is crucial for powering agentic RAG applications and AI agents. The page recommends OlmOCRBench and OmniDocBench as key benchmarks, and lists Chandra OCR 2 and Mistral OCR v4 as top performers; Baidu’s model innovates on DeepSeek OCR with R-SWA.
+A revived Papers with Code page now curates top open-source OCR models and benchmarks, highlighting this week's releases: Baidu's Unlimited OCR (3B parameters, with Reference Sliding Window Attention) and Mistral's OCR 4, available via API. By curating OCR benchmarks and models, this page helps developers quickly choose the best open-source solution for tasks like agentic RAG, which powers internal and external chatbots, streamlining the digitization of company data. Baidu's Unlimited OCR introduces Reference Sliding Window Attention (R-SWA), a variant that reduces attention complexity, and builds on the open-weight DeepSeek OCR. Top recommended benchmarks are OlmOCRBench (Ai2) and OmniDocBench (Shanghai AI Lab), and the leading open model is Chandra OCR 2, which can be self-hosted.
 
 reddit · r/MachineLearning · /u/NielsRogge · Jun 24, 16:26
 
-**Background**: OCR (Optical Character Recognition) is the task of digitizing text from images or PDFs. Agentic RAG (Retrieval-Augmented Generation) uses AI agents to retrieve and generate answers from unstructured data, often requiring documents in standardized formats like Markdown. Papers with Code is a platform that tracks machine learning benchmarks and code.
+**Background**: Optical Character Recognition (OCR) converts scanned documents or PDFs into machine-readable text, often in Markdown. Retrieval-Augmented Generation (RAG) enhances LLMs by fetching external knowledge, and agentic RAG uses AI agents to make this pipeline more adaptive. Sliding Window Attention is a transformer technique that restricts each token's attention to a fixed nearby window, reducing computational cost; Baidu's Reference Sliding Window Attention is a novel variant building on this concept.
 
 <details><summary>References</summary>
 <ul>
+<li><a href="https://klu.ai/glossary/sliding-window-attention">What is Sliding Window Attention? — Klu</a></li>
 <li><a href="https://www.ibm.com/think/topics/agentic-rag">What is Agentic RAG? | IBM</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OCR`, `#benchmarks`, `#open-source`, `#document-ai`, `#paperswithcode`
+**Tags**: `#OCR`, `#open-source`, `#benchmarks`, `#RAG`, `#machine-learning`
 
 ---
 
-<a id="item-23"></a>
-## [MuJoFil: A GPU-Native Simulator for Vision-Based RL with Newton Physics and Filament Rendering](https://www.reddit.com/r/MachineLearning/comments/1uemrch/mujoco_derived_simulator_for_high_fidelity_vision/) ⭐️ 6.0/10
+<a id="item-18"></a>
+## [MuJoFil: A GPU-Native Simulator Combining Newton Physics and Filament for High-Fidelity Vision RL](https://www.reddit.com/r/MachineLearning/comments/1uemrch/mujoco_derived_simulator_for_high_fidelity_vision/) ⭐️ 6.0/10
 
-A developer has introduced MuJoFil, an open-source simulator that combines Nvidia's GPU-native Newton physics engine (derived from MuJoCo) with a modified Google Filament renderer to enable highly parallelized, high-fidelity vision-based reinforcement learning training directly on the GPU. Current GPU-accelerated MuJoCo variants like MJX lack robust support for vision-based RL pipelines, and alternatives like NVIDIA Isaac require expensive hardware and licenses. MuJoFil aims to fill this gap with an open-source, accessible solution that can leverage any online 3D environment, potentially democratizing vision-based robot learning. The simulator is available in two variants: a CPU-based version (pip install mujofil) and a CUDA-enabled GPU-native version (pip install mujofil-warp). It supports PBR textures, GLB, OpenUSD, and other environment formats, and the developer is actively seeking feedback before making the repository public.
+A new in-development simulator, MuJoFil, combines Nvidia's GPU-native Newton physics engine and Google's Filament renderer to enable highly parallelized, high-fidelity vision-based RL training, with PBR textures and support for external 3D environments like GLB and OpenUSD. It offers both CPU and GPU (CUDA) variants. MuJoFil fills a gap for GPU-native simulators with high-fidelity vision, offering an open-source alternative to licensed tools like NVIDIA Isaac and enabling faster, more scalable training of visuomotor policies for robotics. The simulator is still in early development with significant bugs; the GPU variant is built on NVIDIA Warp (currently named mujofil-warp, planned to be renamed mujofil-cuda), and the CPU variant is available as mujofil. It modifies Filament to render multiple simulations in parallel on the GPU and supports importing environments in GLB, OpenUSD, and other formats from online sources.
 
 reddit · r/MachineLearning · /u/MT1699 · Jun 24, 19:07
 
-**Background**: MuJoCo is a widely used open-source physics engine for robotics and machine learning research. MJX is a GPU-accelerated version of MuJoCo but focuses on physics and lacks native vision rendering. Google Filament is a real-time physically based rendering engine, while Nvidia's Newton physics engine is a GPU-native derivative of MuJoCo's physics. MuJoFil merges Newton and a heavily modified Filament to render multiple simulations in parallel on the GPU, targeting vision-based policy training.
+**Background**: MuJoCo is a popular physics engine for robotics, but its CPU-based version limits parallelization. MJX, its GPU-accelerated variant, focuses on physics and lacks built-in high-fidelity vision rendering. NVIDIA's Newton engine is an open-source, GPU-native physics engine built on MuJoCo, developed collaboratively with Google DeepMind and Disney Research. Google's Filament is a real-time PBR renderer that can produce realistic visuals. MuJoFil integrates these two to create a simulator optimized for vision-based reinforcement learning.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/MuJoCo">MuJoCo - Wikipedia</a></li>
-<li><a href="https://mujoco.readthedocs.io/en/stable/mjx.html">MuJoCo XLA (MJX) - MuJoCo Documentation</a></li>
+<li><a href="https://developer.nvidia.com/newton-physics">Newton Physics Engine | NVIDIA Developer</a></li>
 <li><a href="https://github.com/google/filament">GitHub - google/filament: Filament is a real-time physically based rendering engine for Android, iOS, Windows, Linux, macOS, and WebGL2 · GitHub</a></li>
+<li><a href="https://mujoco.readthedocs.io/en/stable/mjx.html">MuJoCo XLA (MJX) - MuJoCo Documentation</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#reinforcement learning`, `#simulation`, `#robotics`, `#GPU computing`, `#machine learning`
+**Tags**: `#reinforcement-learning`, `#simulation`, `#GPU`, `#vision`, `#open-source`
 
 ---
 
-<a id="item-24"></a>
-## [Production ML Models Often Skip Security Testing for Extraction and Poisoning](https://www.reddit.com/r/MachineLearning/comments/1uddtws/are_model_security_risks_extraction_poisoning/) ⭐️ 6.0/10
+<a id="item-19"></a>
+## [HDD-RoPE: High-Dimensional Dynamic Rotary Positional Embedding Emerges](https://www.reddit.com/r/MachineLearning/comments/1uelcm9/high_dimensional_dynamic_rotary_positional/) ⭐️ 6.0/10
 
-A Reddit user reports that many ML teams deploy models without any adversarial testing for model extraction and poisoning risks, and asks whether others are actually conducting such security reviews in production. This highlights a significant gap in MLOps security compared to traditional software security reviews, potentially leaving models vulnerable to intellectual property theft and data integrity attacks as ML becomes more deeply embedded in critical systems. The post specifically mentions model extraction (stealing model functionality via API queries) and model poisoning (injecting malicious data into training), and notes that adversarial testing—systematically evaluating models with malicious inputs—is often skipped entirely before deployment.
+A new positional embedding method called HDD-RoPE has been introduced, which generalizes standard Rotary Position Embedding (RoPE) by using cumulative matrix products to dynamically rotate embeddings in higher-dimensional spaces, with data-dependent rotation rates. Preliminary experiments on the TinyStories dataset show faster convergence compared to the xPos method. This approach could improve the representational capacity of transformer models by allowing them to learn multi-dimensional positional structures (e.g., paragraph or sentence boundaries) instead of just linear sequence positions. Faster convergence may also reduce training costs and benefit scenarios where positional relationships are complex. HDD-RoPE breaks query/key vectors into chunks of arbitrary size (e.g., 4 dimensions) corresponding to multiple rotation axes (e.g., 6 axes for 4D). The rotation amounts are data-dependent, computed from the current layer's activations. The test used a GPT-2-like model with 33M parameters on the TinyStories dataset, but validation is limited to this small, synthetic corpus and no peer review has been conducted.
 
-reddit · r/MachineLearning · /u/Xorphian · Jun 23, 10:52
+reddit · r/MachineLearning · /u/mikayahlevi · Jun 24, 18:16
 
-**Background**: Model extraction attacks allow an adversary with query access to replicate a model's functionality by sending many inputs and using the outputs to train a clone. Model poisoning attacks corrupt a model's behavior by manipulating training data, either during initial training or retraining. Adversarial testing is a security practice that probes models with crafted adversarial inputs to uncover vulnerabilities, but it is not yet a standard part of MLOps pipelines.
+**Background**: RoPE is a relative position encoding that rotates query and key vectors at fixed frequencies, enabling transformers to capture relative distances. xPos extends RoPE by adding a decay mechanism to improve length extrapolation. The TinyStories dataset consists of short, simple stories generated by GPT-3.5/4 with a restricted vocabulary, used for fast experimentation on small language models.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.praetorian.com/blog/stealing-ai-models-through-the-api-a-practical-model-extraction-attack/">Stealing AI Models Through the API: A Practical Model Extraction Attack | Praetorian</a></li>
-<li><a href="https://medium.com/@AT24/data-integrity-model-poisoning-tryhackme-12859f52f8ae">Data Integrity & Model Poisoning | Tryhackme | by Aaron | Medium</a></li>
-<li><a href="https://developers.google.com/machine-learning/guides/adv-testing">Adversarial Testing for Generative AI | Machine Learning | Google for Developers</a></li>
+<li><a href="https://arxiv.org/abs/2104.09864">[2104.09864] RoFormer: Enhanced Transformer with Rotary Position Embedding</a></li>
+<li><a href="https://arxiv.org/abs/2212.10554">[2212.10554] A Length-Extrapolatable Transformer - arXiv.org GitHub - lucidrains/rotary-embedding-torch: Implementation of ... Comparison of RoPE and xPos positional embeddings used in LLMs A Length-Extrapolatable Transformer - arXiv.org XPos Length Extrapolation | lucidrains/rotary-embedding-torch ... A Length-Extrapolatable Transformer - ACL Anthology</a></li>
+<li><a href="https://arxiv.org/abs/2305.07759">[2305.07759] TinyStories: How Small Can Language Models Be ... TinyStories · Datasets GitHub - xingvu/TinyStories: Creating a mini GPT-2 model from ... noanabeshima/TinyStoriesV2 · Datasets at Hugging Face GitHub - sri9s/tinystories-language-models: Exploring the ... raymond-van/gpt-tinystories | DeepWiki</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#machine learning security`, `#adversarial testing`, `#model extraction`, `#model poisoning`, `#production ML`
+**Tags**: `#positional embeddings`, `#transformers`, `#RoPE`, `#deep learning`, `#LLMs`
 
 ---

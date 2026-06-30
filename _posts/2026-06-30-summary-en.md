@@ -5,336 +5,277 @@ date: 2026-06-30
 lang: en
 ---
 
-> From 29 items, 15 important content pieces were selected
+> From 26 items, 12 important content pieces were selected
 
 ---
 
-1. [Supreme Court restricts geofence warrants, requiring constitutional protections](#item-1) ⭐️ 9.0/10
-2. [Proposal for .self Top-Level Domain to Empower Self-Hosting](#item-2) ⭐️ 8.0/10
-3. [Rocket Lab Acquires Iridium, Creating Fully Integrated Space Provider](#item-3) ⭐️ 8.0/10
-4. [WATaBoy: JIT-Ing Game Boy Instructions to WASM Beats a Native Interpreter](#item-4) ⭐️ 8.0/10
-5. [One Million Passports Leaked via Cannabis Dispensary ID System](#item-5) ⭐️ 8.0/10
-6. [Google's Agentic AI Peer-Reviewer Handled ~10K Papers at ICML/STOC](#item-6) ⭐️ 8.0/10
-7. [Qwen 3.6 27B: The Sweet Spot for Local Development?](#item-7) ⭐️ 7.0/10
-8. [30-Year Sentence for Transporting Zines Ignites Free Speech Debate](#item-8) ⭐️ 7.0/10
-9. [Ornith-1.0: MIT-Licensed Open-Weight Models for Agentic Coding](#item-9) ⭐️ 7.0/10
-10. [We Should Invite AI Agents Into Our Existing Development Loop, Not Cede Authority](#item-10) ⭐️ 7.0/10
-11. [OpenAI's $20B Cerebras Deal Kills Inference API Access for Startups](#item-11) ⭐️ 7.0/10
-12. [EML Trees Proved to be Universal Approximators](#item-12) ⭐️ 7.0/10
-13. [HEMA Practitioner Builds Open Dataset for AI Sword Tracking and Pose Estimation](#item-13) ⭐️ 7.0/10
-14. [Interactive Miniature Transformer with Editable Weights and Live Recompute](#item-14) ⭐️ 7.0/10
-15. [HTML Table Extractor Converts Rich Text Tables to Multiple Formats](#item-15) ⭐️ 6.0/10
+1. [Supreme Court Rules Geofence Warrants Require Constitutional Protections](#item-1) ⭐️ 10.0/10
+2. [Google's Agentic AI Peer-Reviewer Evaluated ~10K Papers at ICML/STOC; Formal Paper Now Out](#item-2) ⭐️ 9.0/10
+3. [Rocket Lab Acquires Iridium in Historic Vertical Integration Deal](#item-3) ⭐️ 8.0/10
+4. [Jon Udell Calls for Flipping AI Narrative: 'Agent in the Loop' Instead of 'Human in the Loop'](#item-4) ⭐️ 8.0/10
+5. [Qwen 3.6 27B: Sweet Spot for Local AI Coding? Community Debates](#item-5) ⭐️ 7.0/10
+6. [New .self Top-Level Domain Proposal Seeks to Support Self-Hosting](#item-6) ⭐️ 7.0/10
+7. [Browser Tool Extracts HTML Tables into Markdown, CSV, TSV, JSON](#item-7) ⭐️ 7.0/10
+8. [DeepReinforce Releases Ornith-1.0: Open-Weight Agentic Coding Models](#item-8) ⭐️ 7.0/10
+9. [Paper Proves EML Trees are Universal Approximators](#item-9) ⭐️ 7.0/10
+10. [Interactive mini-transformer visualizes full forward pass with editable weights](#item-10) ⭐️ 7.0/10
+11. [Cerebras-OpenAI Deal Spurs Infinite API Waitlist for Startups](#item-11) ⭐️ 6.0/10
+12. [Historical Swordfighter Builds Dataset to Test CV Motion Tracking](#item-12) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Supreme Court restricts geofence warrants, requiring constitutional protections](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
+## [Supreme Court Rules Geofence Warrants Require Constitutional Protections](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 10.0/10
 
-On June 29, 2026, the US Supreme Court ruled that geofence warrants—which allow law enforcement to demand location data on all devices near a crime scene—must comply with Fourth Amendment protections, limiting their indiscriminate use. This landmark decision curtails a powerful surveillance tool, protecting the privacy of millions of innocent people whose location data could be swept up in broad digital dragnets. It signals a shift toward stronger digital privacy rights in the face of advancing technology. The 5-4 ruling did not ban geofence warrants outright but required that they meet constitutional standards, such as particularized probable cause. Google's practice of providing anonymized device lists in a first tranche, then more detailed data upon request, was at issue. The decision may also affect other surveillance technologies like automated license plate readers.
+The US Supreme Court ruled that geofence warrants, which compel tech companies to hand over location data of all devices in a geographic area, must meet constitutional warrant requirements, thereby limiting law enforcement's ability to conduct dragnet surveillance without a warrant. This landmark ruling establishes that individuals have a reasonable expectation of privacy in their digital location data, even in public spaces, setting a critical precedent for digital privacy rights. It significantly curbs the government's use of mass surveillance tools and aligns with growing global demands for protection against unchecked data collection. The majority opinion, authored by Justice Kagan, emphasized that cell phones are integral to modern life, and that unfettered access to location data would enable pervasive tracking. The ruling does not outlaw geofence warrants entirely, but requires them to satisfy the same Fourth Amendment probable cause and particularity standards as traditional warrants.
 
 hackernews · cdrnsf · Jun 29, 15:54 · [Discussion](https://news.ycombinator.com/item?id=48720924)
 
-**Background**: Geofence warrants, also called reverse location warrants, compel companies like Google to search their databases of user location history (such as Sensorvault) and identify all devices present in a defined area during a specific time window. Unlike traditional warrants targeting a known suspect, these warrants cast a wide net, collecting data on many innocent people. Privacy advocates have long argued that this violates the Fourth Amendment's protection against unreasonable searches.
+**Background**: Geofence warrants (also called reverse location warrants) allow law enforcement to request a court order for a tech company like Google to search its database of user locations and identify all devices present within a defined area and time window. This technique, often reliant on repositories like Google's Sensorvault, helps identify unknown suspects but has been criticized as a digital dragnet that violates privacy. Prior to this decision, lower courts were split on the warrants' constitutionality.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Geofence_warrant">Geofence warrant</a></li>
-<li><a href="https://techcrunch.com/2026/06/29/in-major-privacy-win-supreme-court-rules-geofence-warrants-are-protected-by-privacy-rights/">In major privacy win, Supreme Court rules geofence warrants ...</a></li>
+<li><a href="https://mjlst.lib.umn.edu/2025/01/20/caught-in-the-digital-dragnet-the-controversy-over-geofence-warrants-and-privacy-rights/">Caught in the Digital Dragnet: The Controversy Over Geofence ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community largely welcomes the ruling as a privacy victory, though some note the 5-4 split and the dissent of conservative justices like Alito, Thomas, and Barrett. Commenters discuss broader implications, including whether license plate readers now require warrants, and cite historical examples of data fusion to identify individuals, underscoring the decision's importance.
+**Discussion**: Community reaction was largely positive, hailing the ruling as a victory for privacy. Commenters appreciated the opinion's thoroughness and use of citations, but expressed surprise at Justice Barrett's dissent. Some questioned the ruling's impact on other surveillance technologies, such as Flock license plate readers, asking whether they too would now require warrants.
 
-**Tags**: `#privacy`, `#supreme-court`, `#geofence-warrants`, `#digital-rights`, `#constitutional-law`
+**Tags**: `#privacy`, `#geofence-warrants`, `#supreme-court`, `#law`, `#surveillance`
 
 ---
 
 <a id="item-2"></a>
-## [Proposal for .self Top-Level Domain to Empower Self-Hosting](https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain/) ⭐️ 8.0/10
+## [Google's Agentic AI Peer-Reviewer Evaluated ~10K Papers at ICML/STOC; Formal Paper Now Out](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 9.0/10
 
-The .self TLD proposal aims to provide one free domain per person to support self-hosting and digital identity, generating discussion on abuse prevention and reputation systems. This could lower the barrier to self-hosting personal websites and services, reclaiming digital autonomy from centralized platforms, while tackling challenges like squatting and reputation that have plagued free TLDs in the past. The proposal suggests one free domain per person, but policing it is difficult without identity proof. Community members noted that reputation mechanisms—like allowing domain challenges for inactive domains—could help, and comparisons were drawn to the .tk TLD's abuse history.
-
-hackernews · HumanCCF · Jun 29, 19:49 · [Discussion](https://news.ycombinator.com/item?id=48724230)
-
-**Background**: Top-level domains (TLDs) like .com and .org are the highest level of the DNS hierarchy. Self-hosting is the practice of running websites on a server you control, rather than using commercial platforms. In the past, free TLDs such as .tk suffered from widespread abuse by scammers, leading to domain blocks by major services. The .self proposal seeks to learn from these failures by incorporating community-driven reputation and anti-squatting measures.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://grokipedia.com/page/Self-hosting_network">Self-hosting (network)</a></li>
-<li><a href="https://ivanjureta.com/reputation-mechanisms-and-decision-governance/">Reputation Mechanisms and Decision Governance – ij</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Many commenters were skeptical about the feasibility of preventing abuse, citing the failure of .tk. Some suggested that reputation systems based on domain history or zero-knowledge proofs (as in Microsoft Vega) could mitigate fraud. Others questioned the economic model of a free TLD and pointed out existing affordable alternatives like numeric .xyz domains.
-
-**Tags**: `#self-hosting`, `#top-level domain`, `#digital identity`, `#privacy`, `#internet governance`
-
----
-
-<a id="item-3"></a>
-## [Rocket Lab Acquires Iridium, Creating Fully Integrated Space Provider](https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully) ⭐️ 8.0/10
-
-Rocket Lab has announced the acquisition of Iridium Communications, operator of the 66-satellite Iridium constellation, merging a leading small-launch provider with a global satellite network to create a fully integrated satellite manufacturing, launch, and operations company. This acquisition vertically integrates Rocket Lab's launch and satellite manufacturing capabilities with a proven operational constellation, securing a steady internal launch cadence and reducing reliance on external customers, mirroring SpaceX's Starlink strategy and potentially reshaping competition in satellite communications and launch. The deal pairs Rocket Lab's Electron and future Neutron rockets with Iridium's cross-linked LEO constellation, though the current Electron may not reach Iridium's higher polar orbits, likely requiring the Neutron; it also raises questions about corporate nationality, as Rocket Lab is now a US company despite its New Zealand origins.
-
-hackernews · everfrustrated · Jun 29, 14:09 · [Discussion](https://news.ycombinator.com/item?id=48719485)
-
-**Background**: Rocket Lab is a US-based aerospace manufacturer founded in New Zealand in 2006, known for its Electron small rocket (over 75 launches) and satellite components, and is developing the larger, reusable Neutron rocket. Iridium operates a 66-satellite low Earth orbit constellation in polar orbits, providing global voice and data communication, and famously went through bankruptcy before being replaced by the Iridium NEXT system.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Rocket_Lab">Rocket Lab</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Iridium_satellite_constellation">Iridium satellite constellation - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters express mixed reactions: some see strategic value in securing a guaranteed launch customer akin to SpaceX and Starlink, while others worry about accelerating space debris from cheaper launches; technical feasibility of using Electron is questioned, and surprise is voiced at Rocket Lab's shift from a New Zealand to a US company.
-
-**Tags**: `#space`, `#satellite`, `#acquisition`, `#aerospace`, `#telecom`
-
----
-
-<a id="item-4"></a>
-## [WATaBoy: JIT-Ing Game Boy Instructions to WASM Beats a Native Interpreter](https://humphri.es/blog/WATaBoy/) ⭐️ 8.0/10
-
-A blog post shows how compiling Game Boy instructions to WebAssembly JIT can beat a native interpreter, exploiting browser JIT allowances on iOS.
-
-hackernews · energeticbark · Jun 29, 15:02 · [Discussion](https://news.ycombinator.com/item?id=48720190)
-
-**Tags**: `#JIT compilation`, `#WebAssembly`, `#Game Boy emulation`, `#iOS`, `#performance optimization`
-
----
-
-<a id="item-5"></a>
-## [One Million Passports Leaked via Cannabis Dispensary ID System](https://cambridgeanalytica.org/data-breaches-scandals/passports-driver-licenses-exposed-public-internet-2026-51096/) ⭐️ 8.0/10
-
-Over one million passport and driver's license records were exposed online. The breach occurred in the PuffPal cannabis dispensary age-verification system operated by Nefos Solutions, which left the data completely unprotected on publicly accessible servers. This incident highlights the severe risks of storing high-value identity documents in low-security ancillary systems, and underscores systemic failures in data protection that could lead to mass identity theft and regulatory penalties under GDPR. The exposed data, including full passport scans and driver's licenses with photos and identifying numbers, was stored without encryption or password protection on publicly accessible web servers. The vulnerability was discovered by researcher Sammy Azdoufal, and affected users were not notified as of the disclosure date.
-
-hackernews · jruohonen · Jun 28, 11:22 · [Discussion](https://news.ycombinator.com/item?id=48706389)
-
-**Background**: The breach involved PuffPal, a membership and age-verification platform for cannabis clubs across Europe, built by Nefos Solutions (also known as Cannabis Club Systems). The site cambridgeanalytica.org, which reported the leak, is a data breach news platform not affiliated with the original political consulting firm, though its name prompted community confusion. Such systems often retain personal data longer than necessary, violating GDPR's storage limitation principle.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.theverge.com/tech/947157/passports-data-breach-cannabis-club-systems-nefos-puffpal">Nearly a million passports and photo IDs were left unprotected on the ...</a></li>
-<li><a href="https://stateofsurveillance.org/news/cannabis-id-vendor-nefos-million-passports-exposed-2026/">Nefos Left a Million Cannabis Club Passports Exposed Online</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters expressed alarm over unnecessary data retention after age verification, noted that many hotels similarly handle passports insecurely, and questioned why the domain cambridgeanalytica.org is still active given its controversial history. The sentiment strongly criticized the lack of security and potential GDPR violations.
-
-**Tags**: `#data-breach`, `#privacy`, `#security`, `#passports`, `#GDPR`
-
----
-
-<a id="item-6"></a>
-## [Google's Agentic AI Peer-Reviewer Handled ~10K Papers at ICML/STOC](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 8.0/10
-
-Google deployed an agentic AI peer reviewer that processed approximately 10,000 papers at ICML and STOC conferences with a 30-minute turnaround, and a formal research paper now documents a 34% improvement in catching mathematical errors compared to zero-shot prompting. This deployment sets a precedent for AI-automated scientific review at scale, potentially transforming the peer review process in academia by reducing turnaround time and improving error detection, which could accelerate scientific progress. The system's agentic AI architecture allows it to pursue goals with autonomy, and the 34% improvement over zero-shot prompting indicates the benefits of a more structured, tool-using approach. However, the paper does not yet address potential biases or the quality of reviews beyond mathematical error detection.
+Google deployed an agentic AI peer-reviewer at ICML and STOC that reviewed approximately 10,000 papers with a 30-minute turnaround. The formal research paper reveals it caught 34% more mathematical errors than zero-shot prompting. This deployment marks the first large-scale use of AI for scientific peer review at top-tier conferences, setting a precedent for automated review in academic publishing. The significant improvement in error detection could accelerate review processes and enhance the rigor of scientific evaluation. The agentic system outperformed zero-shot prompting by 34% in detecting mathematical errors and processed each paper in about 30 minutes. The formal paper, available on arXiv, details the architecture and evaluation methodology.
 
 reddit · r/MachineLearning · /u/Justgototheeffinmoon · Jun 29, 10:05
 
-**Background**: Agentic AI refers to AI systems that can act autonomously to pursue goals, use tools, and take actions within human-defined constraints. Zero-shot prompting is a technique where a language model is asked to perform a task without any examples, relying on its pre-trained knowledge. ICML (International Conference on Machine Learning) and STOC (Symposium on Theory of Computing) are top-tier conferences in computer science, where peer review ensures the quality of accepted papers. The deployment of AI to assist or automate peer review is a recent development, with Google's experiment being a large-scale test.
+**Background**: Agentic AI systems are designed to pursue goals with autonomy, using tools and multi-step reasoning, unlike single-prompt models. Zero-shot prompting evaluates a model's ability to answer without example-based fine-tuning. ICML and STOC are prestigious computer science conferences where peer review is critical for ensuring quality.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Agentic_AI">Agentic AI</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Zero-shot_prompting">Zero-shot prompting</a></li>
+<li><a href="https://www.ibm.com/think/topics/zero-shot-prompting">What is zero-shot prompting? - IBM</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI peer review`, `#machine learning`, `#academic conferences`, `#agentic AI`, `#Google`
+**Tags**: `#AI`, `#peer review`, `#machine learning`, `#academic publishing`, `#automation`
+
+---
+
+<a id="item-3"></a>
+## [Rocket Lab Acquires Iridium in Historic Vertical Integration Deal](https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully) ⭐️ 8.0/10
+
+Rocket Lab has announced the acquisition of Iridium Communications, a satellite communications provider, to gain control of its valuable L-band spectrum, profitable satellite network, and a guaranteed launch backlog for its rocket fleet. This deal creates a vertically integrated aerospace company that can build, launch, and operate satellites, reducing reliance on external customers and securing a steady stream of launches, much like SpaceX's Starlink strategy. Iridium's cross-linked LEO constellation operates at 781 km altitude, providing global coverage. The acquisition gives Rocket Lab L-band spectrum rights and a need to launch future Iridium satellites, potentially on its upcoming Neutron rocket.
+
+hackernews · everfrustrated · Jun 29, 14:09 · [Discussion](https://news.ycombinator.com/item?id=48719485)
+
+**Background**: Iridium is a satellite communications company known for its global constellation of low-Earth orbit satellites that provide voice and data services. Radio frequency spectrum, especially L-band, is a scarce resource essential for satellite communications, regulated by international bodies. A launch backlog refers to the list of contracted launches a rocket company has yet to fulfill, providing revenue predictability. Rocket Lab, founded in New Zealand, is expanding its US footprint and following a path of vertical integration similar to SpaceX.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Iridium_Communications">Iridium Communications - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Radio_frequency_spectrum">Radio frequency spectrum</a></li>
+<li><a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261948979-rocket-lab-1-1-billion-backlog-50-successful-launches-neutron-2026-is-rklb-a-buy-at-117-tradingkey">Rocket Lab Has a $1.1 Billion Backlog, 50+ Successful Launches, and Neutron Due in 2026 — Is RKLB a Buy at $117?</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters expressed concerns about space debris and orbital advertising, but generally praised the strategic logic of securing a captive launch customer and valuable spectrum. Some noted the shift of Rocket Lab from a New Zealand startup to a U.S. company.
+
+**Tags**: `#space`, `#satellites`, `#mergers & acquisitions`, `#aerospace`, `#Rocket Lab`
+
+---
+
+<a id="item-4"></a>
+## [Jon Udell Calls for Flipping AI Narrative: 'Agent in the Loop' Instead of 'Human in the Loop'](https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything) ⭐️ 8.0/10
+
+Jon Udell, in a blog post, argues that the common phrase 'human in the loop' cedes authority to machines, and proposes flipping the narrative to 'agent in the loop' to emphasize that humans should invite AI agents into their existing workflows, not be inserted into opaque machine-driven loops. This reframing shifts the focus from human oversight of AI to human-centric collaboration, potentially influencing how developers design and interact with AI coding agents, ensuring that human agency and control remain central. It's a timely perspective as agentic AI tools become more prevalent. Udell's critique specifically targets the creation of unreviewable pull requests by AI agents, advocating for processes where agents contribute in a transparent, human-invited manner. The phrase 'agent in the loop' implies that the human loop remains, and agents are asked to join.
+
+rss · Simon Willison · Jun 28, 21:57
+
+**Background**: The term 'human in the loop' is widely used in AI and automation to describe systems where human judgment is required to oversee or approve machine decisions. Agentic AI refers to AI systems that can autonomously pursue goals, use tools, and take actions, but typically within human-defined boundaries. Jon Udell's argument challenges the implicit deprioritization of human agency in prevailing narratives.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Agentic_AI">Agentic AI</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#coding-agents`, `#human-in-the-loop`, `#ai-collaboration`, `#software-development`, `#agentic-ai`
+
+---
+
+<a id="item-5"></a>
+## [Qwen 3.6 27B: Sweet Spot for Local AI Coding? Community Debates](https://quesma.com/blog/qwen-36-is-awesome/) ⭐️ 7.0/10
+
+The article claims that Qwen 3.6 27B, a recent open-weight model released April 2026, is the 'sweet spot' for local LLM development, delivering impressive coding performance on a 128GB MacBook Pro or RTX GPU using llama.cpp and OpenCode. This highlights the growing interest in running powerful AI coding assistants locally for privacy and cost control, but the community debate underscores that the high hardware cost (e.g., $6,699 for a 128GB MacBook Pro) and thermal constraints may undermine the economic and practical benefits compared to cloud APIs. Qwen 3.6 27B is a dense multimodal model with gated delta networks, hybrid attention, multi-token prediction (MTP), and a 262K context window. The article's eval examples are zero-shot greenfield projects; community members note that the model's performance on large, real-world codebases with complex context remains untested and may be limited.
+
+hackernews · stared · Jun 29, 17:05 · [Discussion](https://news.ycombinator.com/item?id=48721903)
+
+**Background**: Qwen is a family of open-weight large language models developed by Alibaba Cloud, with versions optimized for multilingual tasks and coding. Running models locally (e.g., via llama.cpp) avoids sending code to external APIs, appealing to developers concerned about privacy and latency. The 27B parameter size is a middle ground between smaller models (7B-14B) that may lack reasoning depth and larger models (70B+) that require GPUs with 48GB+ VRAM, making it a candidate for high-end consumer hardware.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://quesma.com/blog/qwen-36-is-awesome/">Qwen 3.6 27B is the sweet spot for local development</a></li>
+<li><a href="https://huggingface.co/Qwen/Qwen3.6-27B">Qwen/Qwen3.6-27B · Hugging Face</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Community reaction is mixed. Commenters point out that the 128GB MacBook Pro is prohibitively expensive ($6,699) and runs hot under sustained AI workloads, making it impractical for prolonged coding sessions. Others argue that the tested greenfield examples don't reflect real-world development, and that cloud APIs like OpenRouter offer far cheaper access to larger models, questioning the economic case for local deployment.
+
+**Tags**: `#local-llm`, `#qwen`, `#ai-coding`, `#macbook`, `#performance`
+
+---
+
+<a id="item-6"></a>
+## [New .self Top-Level Domain Proposal Seeks to Support Self-Hosting](https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain/) ⭐️ 7.0/10
+
+The Human-Centered Computing Foundation (HCCF) has proposed a new top-level domain, .self, designed to give every individual a free domain for self-hosting digital identities and services. The .self TLD could mark a shift toward user-owned digital identities, addressing concerns about platform lock-in and censorship, but its viability depends on solving squatting, reputation, and funding problems. The proposal envisions free subdomains, prohibitions on parking and squatting, and a mechanism to challenge inactive domains. Funding and technical implementation details remain unspecified.
+
+hackernews · HumanCCF · Jun 29, 19:49 · [Discussion](https://news.ycombinator.com/item?id=48724230)
+
+**Background**: Top-level domains (TLDs) like .com and .org are managed by ICANN. New TLDs can be proposed for a fee, but adoption and abuse prevention are difficult. Past attempts at free domains, such as .tk, suffered from widespread abuse by scammers, leading to blocklisting by major platforms. Self-hosting refers to running one's own servers instead of using third-party services, aligning with the .self vision of digital sovereignty.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=48724230">.self: A new top-level domain designed to support self ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains">List of Internet top-level domains - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Community reactions were mixed: many expressed skepticism about preventing squatting and abuse, pointing to .tk's failure. Others questioned the funding model and how to distinguish legitimate use from parked domains. Some suggested studying Microsoft Vega's zero-knowledge approach for privacy-preserving identity. A few were outright negative, noting that a .self domain might signal a site as self-hosted and potentially undesirable.
+
+**Tags**: `#self-hosting`, `#top-level-domain`, `#digital-identity`, `#decentralization`, `#internet-governance`
 
 ---
 
 <a id="item-7"></a>
-## [Qwen 3.6 27B: The Sweet Spot for Local Development?](https://quesma.com/blog/qwen-36-is-awesome/) ⭐️ 7.0/10
+## [Browser Tool Extracts HTML Tables into Markdown, CSV, TSV, JSON](https://simonwillison.net/2026/Jun/29/html-table-extractor/#atom-everything) ⭐️ 7.0/10
 
-An article on quesma.com claims that the Qwen 3.6 27B model, released in April 2026, is the optimal balance for local AI development, demonstrating strong coding performance on a 128GB MacBook Pro. The claim is significant because it identifies a practical, private model for offline AI development, potentially reducing reliance on cloud services. However, the high hardware cost and thermal throttling issues could limit its real-world viability for many developers. Qwen 3.6 27B is a dense 27-billion-parameter model from Alibaba, reportedly outperforming models 10x its size on coding benchmarks. Testing was done on a MacBook Pro with 128GB RAM, but community members note that sustained inference leads to thermal throttling and fan noise, making it impractical for use on the same laptop during development.
+Simon Willison released a new browser-based paste tool that converts pasted rich text with embedded HTML tables into multiple formats including Markdown, CSV, TSV, HTML, and JSON. The tool also integrates Wikipedia's CORS API to automatically fetch and extract tables from Wikipedia pages. This tool simplifies a common data extraction pain point for developers, analysts, and journalists who need to quickly convert web tables into structured data formats. It showcases the practical utility of client-side rich text processing and extends the developer's growing suite of handy paste-conversion tools. The tool processes pasted rich text, detecting all HTML tables and offering conversion to Markdown, CSV, TSV, HTML, or JSON. An update integrated Wikipedia's open CORS API, allowing users to search for a Wikipedia page and automatically import its tables. The tool also improves the UI for table handling in the related Rich text to markdown converter.
 
-hackernews · stared · Jun 29, 17:05 · [Discussion](https://news.ycombinator.com/item?id=48721903)
+rss · Simon Willison · Jun 29, 23:38
 
-**Background**: Qwen is a family of open-weight large language models from Alibaba, with the 3.6 version released in April 2026. Running LLMs locally on a laptop provides privacy and offline access but requires substantial memory (e.g., 128GB) and can cause thermal throttling—a protective mechanism that reduces processor speed to prevent overheating, degrading performance during sustained AI workloads.
+**Background**: Simon Willison is a developer known for creating practical, small web tools, often using client-side JavaScript. His collection of paste-conversion tools leverages the browser's ability to read rich text from the clipboard, which may contain HTML formatting including tables. CSV (comma-separated values) and TSV (tab-separated values) are common tabular data formats, while Markdown is a lightweight markup language for plain text formatting. The CORS (Cross-Origin Resource Sharing) API from Wikipedia allows external websites to fetch Wikipedia page content programmatically.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://huggingface.co/rico03/Qwen3.6-27B-Claude-Opus-Reasoning-Distilled">rico03/ Qwen 3 . 6 - 27 B -Claude-Opus-Reasoning-Distilled · Hugging Face</a></li>
-<li><a href="https://ollama.com/library/qwen3.6:27b">qwen 3 . 6 : 27 b</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Thermal_throttling">Thermal throttling</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community members expressed concerns about the practicality of running Qwen 3.6 27B on a MacBook Pro due to excessive heat and fan noise, making it uncomfortable for simultaneous coding. Many pointed out the high cost of a 128GB MacBook Pro ($6,699) and argued that using cloud APIs like OpenRouter is far cheaper. Others doubted the model's ability to handle complex, real-world codebases beyond simple zero-shot tasks, suggesting that the 'sweet spot' claim is overstated.
-
-**Tags**: `#local LLMs`, `#Qwen`, `#hardware`, `#AI development`, `#MacBook Pro`
+**Tags**: `#tools`, `#data conversion`, `#HTML`, `#tables`, `#utility`
 
 ---
 
 <a id="item-8"></a>
-## [30-Year Sentence for Transporting Zines Ignites Free Speech Debate](https://theintercept.com/2026/06/26/daniel-sanchez-estrada-zines-prairieland-free-speech/) ⭐️ 7.0/10
+## [DeepReinforce Releases Ornith-1.0: Open-Weight Agentic Coding Models](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 7.0/10
 
-Daniel Sanchez Estrada received a 30-year prison sentence for evidence tampering after moving zines that were subject to a federal warrant in a protest shooting case, sparking a debate over free speech. The case raises alarms about criminalizing the distribution of printed materials under evidence tampering, potentially chilling political speech and activist publishing. The conviction stemmed from the defendant hiding zines documenting years of protest activities after his wife alerted him to the warrant; the underlying incident involved a federal agent being shot during a protest, though the defendant was not the shooter.
+DeepReinforce released Ornith-1.0, an MIT-licensed open-weight model series with variants from 9B to 397B, achieving state-of-the-art coding performance among open-source models of comparable size. The models use a self-scaffolding technique, learning to create their own agent harnesses during RL post-training. The release advances open-source coding AI, providing developers with permissively licensed, capable local models for agentic coding tasks. It could democratize advanced AI-assisted software development, reducing reliance on proprietary APIs. Variants include 9B Dense, 31B Dense, 35B MoE, and 397B MoE, built on Apache 2.0-licensed Gemma 4 and Qwen 3.5. The 397B MoE reportedly matches Claude Opus 4.7 on SWE-Bench, and the 9B variant outperforms models three times its size. The models are available as GGUF files for local inference and show proficient agentic behavior with tool calls.
 
-hackernews · xrd · Jun 28, 21:42 · [Discussion](https://news.ycombinator.com/item?id=48711981)
+rss · Simon Willison · Jun 29, 16:17
 
-**Background**: Zines are self-published, small-circulation magazines often used by activists. The case arose from a protest at an ICE facility where fireworks were launched and a federal agent was allegedly struck by a bullet. The defendant was charged with evidence tampering for moving the zines after being told of the warrant.
+**Background**: Agentic coding involves autonomous AI agents that plan, write, test, and modify code with minimal human intervention. Mixture of Experts (MoE) is a model architecture where only a subset of parameters (experts) are activated per token, improving efficiency. Self-scaffolding refers to the model learning to generate its own reinforcement learning harness during post-training, enabling it to autonomously use tools and solve multi-step coding tasks. Gemma 4 and Qwen 3.5 are popular open-source foundation models from Google and Alibaba, respectively.
 
-**Discussion**: Comments are divided: some argue hiding evidence at a spouse's request justifies the sentence, while others view the 30-year term as excessive and a threat to free speech, noting the zines had been publicly available for years.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://simonwillison.net/2026/Jun/29/ornith/">Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding</a></li>
+<li><a href="https://www.explainx.ai/blog/ornith-1-0-self-scaffolding-agentic-coding-llm-2026">Ornith-1.0: Self-Scaffolding Open Models for Agentic Coding</a></li>
+<li><a href="https://aratech.ae/blog/ornith-1-0-open-source-self-scaffolding-ai-coding-model">Ornith 1.0: Self-Scaffolding Open-Source AI Coding Model ...</a></li>
 
-**Tags**: `#free-speech`, `#legal`, `#protest`, `#sentencing`, `#activism`
+</ul>
+</details>
+
+**Discussion**: The community has mixed reactions: some praise its creative coding solutions and local usability, while others suspect it is overfitted to benchmarks and note hallucination issues in chat without tools. Some question the novelty of self-scaffolding, calling it 'benchmaxxed'.
+
+**Tags**: `#LLM`, `#Open Source`, `#Coding`, `#Agentic AI`, `#Model Release`
 
 ---
 
 <a id="item-9"></a>
-## [Ornith-1.0: MIT-Licensed Open-Weight Models for Agentic Coding](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 7.0/10
+## [Paper Proves EML Trees are Universal Approximators](https://www.reddit.com/r/MachineLearning/comments/1uipl1t/eml_trees_are_universal_approximators_r/) ⭐️ 7.0/10
 
-DeepReinforce released Ornith-1.0, a family of MIT-licensed open-weight models (9B, 31B, 35B MoE, 397B MoE) built on Gemma 4 and Qwen 3.5, achieving state-of-the-art performance on coding benchmarks among open-source models of comparable size. This release advances open-source agentic coding by providing state-of-the-art models under a permissive MIT license, built on fully compatible base models, enabling developers and researchers to freely use and adapt them for autonomous coding tasks. The model variants include dense and mixture-of-experts architectures, and the 35B MoE GGUF version runs efficiently on consumer hardware with 20GB VRAM. Initial tests show strong tool-use proficiency and a generation speed of 103 tokens per second on a creative task.
+A new paper provides a constructive proof that EML (exponential, multiplication, logarithm) trees are universal approximators, explicitly building polynomial and partition-of-unity blocks within the EML framework to approximate any continuous function. This result establishes a solid theoretical foundation for EML-based architectures, putting them on par with neural networks in terms of approximation capability, and may influence the design of interpretable or symbolic models. The proof handles the ill-definedness of the natural logarithm for nonpositive inputs through sign-based decompositions and an affine map, and generalizes the original EML function to 'EML(-type)' trees with learnable parameters.
 
-rss · Simon Willison · Jun 29, 16:17
+reddit · r/MachineLearning · /u/JoeGermany · Jun 29, 11:16
 
-**Background**: Self-scaffolding LLMs are models that convert implicit reasoning into explicit textual decompositions, enabling them to handle complex tasks without external components. Agentic coding refers to the use of AI agents that autonomously plan, write, test, and modify code based on high-level instructions, going beyond simple code completion. Open-weight models like those from DeepReinforce are publicly available for download and fine-tuning, while the MIT license permits unrestricted use, modification, and distribution.
+**Background**: EML trees are computational graphs composed of exponential, multiplication, and logarithm operations. The universal approximation theorem states that certain function classes can approximate any continuous function on a compact set. The paper leverages the fact that polynomials are dense in continuous functions and Sobolev spaces, and uses partition-of-unity constructions to extend local approximations to the whole domain.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://simonwillison.net/2026/Jun/29/ornith/">Ornith-1.0: Self - Scaffolding LLMs for Agentic Coding</a></li>
-<li><a href="https://www.lesswrong.com/posts/mAwxebLw3nYbDivmt/scaffolded-llms-less-obvious-concerns">Scaffolded LLMs : Less Obvious Concerns — LessWrong</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Agentic_coding">Agentic coding</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Partition_of_unity">Partition of unity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sobolev_space">Sobolev space</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM`, `#code-generation`, `#open-source`, `#model-release`, `#agentic`
+**Tags**: `#machine learning`, `#universal approximation`, `#EML trees`, `#theory`, `#deep learning`
 
 ---
 
 <a id="item-10"></a>
-## [We Should Invite AI Agents Into Our Existing Development Loop, Not Cede Authority](https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything) ⭐️ 7.0/10
+## [Interactive mini-transformer visualizes full forward pass with editable weights](https://www.reddit.com/r/MachineLearning/comments/1uhw7fu/i_shrank_a_transformer_until_every_number_fitted/) ⭐️ 7.0/10
 
-Simon Willison shares Jon Udell's argument that software development should reframe AI agents as team members invited into the human's existing loop, rather than as black-box authorities that exclude humans. This perspective shift advocates for maintaining human oversight and integrating agents into established workflows. This reframing addresses the growing concern that agentic coding processes could become unreviewable and opaque, undermining developer trust and control. By insisting on human agency in the loop, it promotes a more sustainable and collaborative human-AI partnership in software engineering. Udell's original post argues against 'unreviewable PRs' generated by agents, urging that agent-assisted processes should remain transparent and reviewable. The phrase 'human in the loop' is criticized for implying that the loop belongs to the machine, not the human.
+A web-based tool shrinks a transformer to a minimal size, enabling real-time visualization of the entire forward pass. All weights and word vectors are editable, with live recomputation of predictions. This educational resource demystifies the inner workings of transformers by making every matrix multiplication and attention score tangible. It helps learners and practitioners build an intuitive, hands-on understanding of how large language models operate at the fundamental level. The tool is a single self-contained HTML file with no dependencies, featuring a 6-word vocabulary, 3-dimensional embeddings, one attention head, one transformer block, causal masking, softmax, and logits. A Randomize button demonstrates how untrained (random) weights produce meaningless predictions, emphasizing that training is essential.
 
-rss · Simon Willison · Jun 28, 21:57
+reddit · r/MachineLearning · /u/DanielMoGo · Jun 28, 12:35
 
-**Background**: Agentic coding refers to the use of autonomous AI agents that can plan, write, test, and modify code with minimal human intervention. The dominant narrative often depicts a future where AI handles entire development tasks end-to-end, potentially sidelining human developers. Udell's argument challenges this by reclaiming the loop as fundamentally human, with agents as tools within it.
+**Background**: In a transformer, the forward pass processes input tokens to generate predictions. The causal mask ensures that the model only attends to previous tokens during autoregressive generation, preventing information leakage from future positions. Logits are the raw, unnormalized scores output by the model before applying softmax to convert them into probabilities. The softmax function then normalizes these logits into a probability distribution over the vocabulary.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://cloud.google.com/discover/what-is-agentic-coding">What is agentic coding? How it works and use cases | Google Cloud</a></li>
-<li><a href="https://www.incredibuild.com/blog/agentic-ai-changing-software-development">How Agentic AI Is Changing Software Development</a></li>
+<li><a href="https://pdoom.org/causal_mask.html">pdoom.org/ causal _ mask .html</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Logit">Logit - Wikipedia</a></li>
+<li><a href="https://stackoverflow.com/questions/41455101/what-is-the-meaning-of-the-word-logits-in-tensorflow">What is the meaning of the word logits in TensorFlow? Usage example</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#coding-agents`, `#human-in-the-loop`, `#software-development`, `#ai-agents`, `#jon-udell`
+**Tags**: `#transformers`, `#education`, `#visualization`, `#deep learning`, `#interactive-tool`
 
 ---
 
 <a id="item-11"></a>
-## [OpenAI's $20B Cerebras Deal Kills Inference API Access for Startups](https://www.reddit.com/r/MachineLearning/comments/1uiqhiv/cerebras_openai_deal_capacity_has_effectively/) ⭐️ 7.0/10
+## [Cerebras-OpenAI Deal Spurs Infinite API Waitlist for Startups](https://www.reddit.com/r/MachineLearning/comments/1uiqhiv/cerebras_openai_deal_capacity_has_effectively/) ⭐️ 6.0/10
 
-OpenAI has reportedly signed a $20 billion deal with Cerebras, pre-allocating nearly all of the chipmaker's near-term inference capacity and leaving smaller startups like the one posting on Reddit unable to get API access even after months of waitlisting. This highlights the growing concentration of AI compute resources among a few hyperscalers, which could stifle innovation from smaller players, especially those relying on specialized high-throughput inference hardware. Startups may be forced to use less efficient or more expensive alternatives, slowing product development. The startup needed sustained throughput of 1-2k tokens per second with tight p95 latency for a real-time coding agent, a workload well-suited to Cerebras's wafer-scale engine (WSE-3) ASIC chips. The OpenAI deal consumed the vast majority of capacity, making the waitlist effectively infinite.
+A small AI startup reports that the recent Cerebras-OpenAI deal, involving a $20 billion chip purchase, has pre-allocated nearly all inference capacity, making the API waitlist effectively infinite for smaller companies. This situation underscores the growing concentration of AI compute resources among hyperscalers, potentially stifling innovation from smaller companies that depend on specialized, low-latency inference hardware like Cerebras' ASICs. The startup requires sustained high-throughput inference at 1,000-2,000 tokens per second with tight p95 latency, a workload well-suited to Cerebras' Wafer Scale Engine ASICs. The OpenAI deal, reportedly worth $20 billion in chip purchases, has pre-allocated the majority of Cerebras' near-term inference capacity, leaving non-hyperscalers with no viable access.
 
 reddit · r/MachineLearning · /u/Kortopi-98 · Jun 29, 12:00
 
-**Background**: Cerebras Systems designs wafer-scale AI chips, the world's largest processors, optimized for high-throughput training and inference. Their chips are ASICs (application-specific integrated circuits) custom-built for AI, offering superior speed and efficiency. Inference is the process of running a trained model to generate outputs, and p95 latency is the threshold below which 95% of requests complete, critical for real-time applications. Cerebras recently went public, and this massive deal with OpenAI has effectively consumed their near-term production capacity.
+**Background**: Cerebras Systems produces the Wafer-Scale Engine (WSE), the world's largest AI processor, designed for high-throughput AI training and inference. It is particularly attractive for inference workloads requiring low latency and high tokens per second. ASIC (Application-Specific Integrated Circuit) inference chips like Cerebras are custom-made for machine learning inference, offering superior efficiency compared to GPUs. The startup in question was seeking access to Cerebras' inference API, which provides cloud-based access to these chips.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Cerebras_Systems">Cerebras Systems - Wikipedia</a></li>
 <li><a href="https://www.cerebras.ai/chip">Product - Chip - Cerebras</a></li>
-<li><a href="https://redis.io/blog/p95-latency/">P95 Latency: What It Is & Why It Matters - Redis</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#cerebras`, `#openai`, `#inference`, `#hardware`, `#startups`
+**Tags**: `#AI infrastructure`, `#Cerebras`, `#OpenAI`, `#inference`, `#startup challenges`
 
 ---
 
 <a id="item-12"></a>
-## [EML Trees Proved to be Universal Approximators](https://www.reddit.com/r/MachineLearning/comments/1uipl1t/eml_trees_are_universal_approximators_r/) ⭐️ 7.0/10
+## [Historical Swordfighter Builds Dataset to Test CV Motion Tracking](https://www.reddit.com/r/MachineLearning/comments/1uivddx/i_do_historical_swordfighting_and_noticed_ai/) ⭐️ 6.0/10
 
-A new proof demonstrates that EML-type trees, built from the binary operator exp(x) − ln(y) and equipped with learnable parameters, are universal approximators. The proof explicitly constructs polynomials, the hyperbolic tangent, and partitions of unity from elementary compositions of the EML operator. This result places EML trees on a solid theoretical footing, bridging the expressive power of the EML operator with classical approximation theory. It could inspire new neural network architectures that exploit the EML operator's ability to represent all elementary functions. The proof generalizes the original EML function by adding learnable parameters, handles the logarithm's domain restriction on non-positive inputs via sign-based decompositions, and provides explicit constructions of binary operations, polynomials, and the hyperbolic tangent as building blocks.
-
-reddit · r/MachineLearning · /u/JoeGermany · Jun 29, 11:16
-
-**Background**: The EML operator, defined as eml(x,y) = exp(x) − ln(y), was introduced by Andrzej Odrzywołek in 2026. Combined with the constant 1, it can represent all elementary functions—arithmetic, trigonometric, logarithmic, and more. Universal approximation theory states that certain families of functions can approximate any continuous function on a compact set arbitrarily well, a property famously held by neural networks. EML trees are compositions of this operator, akin to a function tree.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://grokipedia.com/page/EML_mathematical_function">EML (mathematical function)</a></li>
-<li><a href="https://arxiv.org/html/2603.21852v2">All elementary functions from a single operator - arXiv.org</a></li>
-<li><a href="https://lilting.ch/en/articles/eml-single-operator-elementary-functions">The EML Operator: Expressing All Elementary Functions with ...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#universal approximation`, `#EML trees`, `#theoretical machine learning`, `#function approximation`, `#deep learning theory`
-
----
-
-<a id="item-13"></a>
-## [HEMA Practitioner Builds Open Dataset for AI Sword Tracking and Pose Estimation](https://www.reddit.com/r/MachineLearning/comments/1uivddx/i_do_historical_swordfighting_and_noticed_ai/) ⭐️ 7.0/10
-
-A historical European martial arts (HEMA) practitioner is creating a multi-view, high-fps dataset with a detailed annotation schema to help computer vision models track fast, thin swords and athletes in heavy gear, addressing key bottlenecks like motion blur and occluded joints. The dataset directly targets the Sim2Real gap and thin-object tracking challenges, offering a rare real-world benchmark for embodied AI and sports analytics. It could improve automated scoring systems and advance robot perception in dynamic, occluded environments. The planned dataset includes 100 hyper-trimmed clips at 120/240fps with synchronized multi-view capture. JSON annotations cover combat metadata (weapon, guard, footwork), frame-level keypoints for sword tips and wrists, and computer vision hazards like occlusion ratings and motion blur flags.
+A HEMA practitioner is creating an open dataset of synchronized multi-view high-speed swordfighting videos (120/240fps) with detailed annotations, aiming to help AI models handle extreme motion blur, sub-pixel thin objects, and heavy occlusions. This dataset targets a unique intersection of challenging computer vision problems—thin-object tracking, fast motion, and occlusion—that are critical for advancing embodied AI, robotics, and sports analytics. It could improve automatic scoring and real-world robot perception. The proposed dataset will contain 100 trimmed clips with annotations including biomechanics, pixel-level keypoints for fencers and swords, segmentation masks for blades, and occlusion/blur ratings. The schema is open for feedback, and data collection has not yet begun.
 
 reddit · r/MachineLearning · /u/fonssagrives · Jun 29, 15:16
 
-**Background**: Historical European Martial Arts (HEMA) reconstructs old fighting techniques, often using steel longswords. In computer vision, thin-object tracking is notoriously difficult because fast, slender objects like swords can drop below pixel resolution or cause severe motion blur. The Sim2Real gap refers to the challenge of transferring models trained in simulation to the messy real world. This dataset leverages the extreme case of swordfighting to create a benchmark that pushes the limits of these technologies.
+**Background**: Sim2Real gap refers to the challenge of transferring models trained in simulation to messy real-world conditions. Thin-object tracking involves detecting objects like steel blades that can become sub-pixel thin and suffer from motion blur. Sub-pixel resolution techniques infer details smaller than one pixel. HEMA is a martial art based on historical manuals, involving fast, chaotic movements that stress-test computer vision systems.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://grokipedia.com/page/Sim-to-real_gap">Sim-to-real gap</a></li>
-<li><a href="https://arxiv.org/abs/2202.05659">Tiny Object Tracking: A Large-scale Dataset and A Baseline GitHub - kuanhungchen/awesome-tiny-object-detection: A ... Object Tracking in Computer Vision - GeeksforGeeks Tiny Object Tracking With Proposal Position Enhancement Comprehensive review of deep learning-based tiny object ... Tiny Object Tracking: A Large-Scale Dataset and a Baseline</a></li>
+<li><a href="https://saipien.org/meta-partnr-embodied-ai-benchmark-teaching-robots-to-partner-with-humans-in-home-and-business/">Meta PARTNR: Embodied AI Benchmark Teaching Robots To Partner...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sub-pixel_resolution">Sub-pixel resolution</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Computer Vision`, `#Dataset`, `#Object Tracking`, `#Motion Blur`, `#HEMA`
-
----
-
-<a id="item-14"></a>
-## [Interactive Miniature Transformer with Editable Weights and Live Recompute](https://www.reddit.com/r/MachineLearning/comments/1uhw7fu/i_shrank_a_transformer_until_every_number_fitted/) ⭐️ 7.0/10
-
-A software engineer built a self-contained single HTML file that implements a miniature transformer with a 6-word vocabulary and 3-dimensional embeddings. It displays the entire forward pass, from embeddings to loss, with editable weights and live recomputation of all downstream calculations. This tool demystifies the inner workings of transformers at the matrix level, making it easier for learners to understand how modern AI models process language. It provides a tangible, hands-on way to explore the mechanics that power applications like LLMs. The miniature transformer uses a single attention head and one block, with a causal mask, softmax, and feed-forward network. All weights and word vectors are editable, and the entire computation is performed in the browser without any external libraries.
-
-reddit · r/MachineLearning · /u/DanielMoGo · Jun 28, 12:35
-
-**Background**: Transformers are a deep learning architecture that processes sequences using self-attention. In the forward pass, input tokens are converted to word vectors, then Query (Q), Key (K), and Value (V) matrices are computed. Attention scores derived from Q and K are masked to prevent seeing future tokens (causal masking), and used to weight V, producing context-aware representations. A feed-forward network further transforms them, and final logits are converted to probabilities via softmax. Training adjusts weights through backpropagation, but this tool focuses only on the forward pass.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://hexiao5886.medium.com/day-4-100-causal-masking-in-transformers-a-deep-dive-into-masked-attention-43a7ece5fc1f">Day(4/100) Causal Masking in Transformers : A Deep Dive... | Medium</a></li>
-<li><a href="https://www.billparker.ai/2024/10/transformer-attention-simple-guide-to-q.html">Transformer Attention: A Guide to the Q, K, and V Matrices</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#transformers`, `#machine-learning`, `#education`, `#visualization`, `#neural-networks`
-
----
-
-<a id="item-15"></a>
-## [HTML Table Extractor Converts Rich Text Tables to Multiple Formats](https://simonwillison.net/2026/Jun/29/html-table-extractor/#atom-everything) ⭐️ 6.0/10
-
-Simon Willison released a new web tool that extracts HTML tables from pasted rich text and outputs them as Markdown, CSV, TSV, JSON, and HTML, expanding his collection of paste-conversion utilities. This tool simplifies the tedious task of extracting tabular data from web pages, enabling developers and data analysts to quickly repurpose structured data without manual reformatting. It lowers the barrier to working with web-based tables. The tool detects all tables in the pasted content and presents them in tabs for each output format, with a copy button for easy transfer. It also complements his recently rebuilt Rich text to markdown tool with improved table support.
-
-rss · Simon Willison · Jun 29, 23:38
-
-**Background**: Paste-conversion tools accept clipboard content, often rich text with embedded HTML tables, and transform it into other formats. Tab-separated values (TSV) is a plain text format similar to CSV but uses tabs as delimiters, making it less prone to delimiter collision. Markdown is a lightweight markup language, and JSON is a widely used data interchange format. These tools bridge the gap between casual copy-paste and structured data reuse.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Tab-separated_values">Tab-separated values - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#tools`, `#data-extraction`, `#html`, `#web-development`, `#open-source`
+**Tags**: `#computer vision`, `#dataset`, `#motion tracking`, `#thin-object detection`, `#sports analytics`
 
 ---

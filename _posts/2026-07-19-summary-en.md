@@ -9,335 +9,321 @@ lang: en
 
 ---
 
-1. [LG Monitors Silently Install Software via Windows Update Without Consent](#item-1) ⭐️ 8.0/10
-2. [AI-Generated Nonsense Wins $25K DeepMind/Kaggle Grand Prize](#item-2) ⭐️ 8.0/10
-3. [GPT-5.6 Solves 30-Year Convex Optimization Problem with Human Collaboration](#item-3) ⭐️ 7.0/10
-4. [NYC Mayor Mandates Disclosure of AI-Generated Images in Rental Listings](#item-4) ⭐️ 7.0/10
-5. [Fable 5 vs. GPT-5.6 Sol on NP-Hard Problem: Does /goal Help?](#item-5) ⭐️ 7.0/10
-6. [SQLite Query Explainer: In-Browser Tool to Interpret Query Plans](#item-6) ⭐️ 7.0/10
-7. [Anthropic Adds Claude Fable 5 to Subscriptions Amid Competitive Pressure](#item-7) ⭐️ 7.0/10
-8. [GPT-2 Small Embedding Geometry: Discretized vs. Continuous Nearest Neighbors of "Trump"](#item-8) ⭐️ 7.0/10
-9. [Stereo2Spatial: Open-Source ML Model Converts Stereo to Binaural Spatial Audio](#item-9) ⭐️ 7.0/10
-10. [EU AI Act OpenRAG Dataset: 933 Legally Structured Chunks with BGE-M3 Embeddings](#item-10) ⭐️ 7.0/10
-11. [If You Build It, They Will Come](#item-11) ⭐️ 6.0/10
-12. [Setting Up Your Spare Mac for Claude Code Control: A Step-by-Step Guide](#item-12) ⭐️ 6.0/10
-13. [Spot birds not golf](#item-13) ⭐️ 6.0/10
-14. [Interactive Map of GPT-2 Token Embeddings Using t-SNE and MST](#item-14) ⭐️ 6.0/10
-15. [Survey of 25 deep learning methods for scRNA-seq analysis summarized in a table](#item-15) ⭐️ 6.0/10
+1. [Transcribe.cpp: Open-Source Local Speech-to-Text Library with Multi-Model Support](#item-1) ⭐️ 8.0/10
+2. [GPT-5.6 Solves 30-Year-Old Convex Optimization Conjecture with Human Guidance](#item-2) ⭐️ 8.0/10
+3. [SQLite Query Explainer](#item-3) ⭐️ 8.0/10
+4. [Essay: Social Communities Need Active Building, Not Passive Consumption](#item-4) ⭐️ 7.0/10
+5. [Hardcore IndieWeb: Run your own website for $0.01/day](#item-5) ⭐️ 7.0/10
+6. [Fable 5 vs. GPT-5.6 Sol on NP-Hard Problem: Does /goal Help?](#item-6) ⭐️ 7.0/10
+7. [Anthropic Reverses Decision, Makes Claude Fable 5 Permanent in Subscription Plans](#item-7) ⭐️ 7.0/10
+8. [Allegations of AI-Generated Slop Winning $25K DeepMind Kaggle Prize](#item-8) ⭐️ 7.0/10
+9. [Interactive Map of GPT-2 Token Embeddings with t-SNE and MST](#item-9) ⭐️ 7.0/10
+10. [Stereo2Spatial: Convert Stereo Music Tracks to Spatialized Binaural Mixes](#item-10) ⭐️ 7.0/10
+11. [TabFM Studio: Point-and-Click Spreadsheet Predictions with Tabular Foundation Models](#item-11) ⭐️ 7.0/10
+12. [NYC Mayor Mandates Disclosure of AI-Generated Images in Rental Listings](#item-12) ⭐️ 6.0/10
+13. [User Shares Summary Table of 25 Deep Learning Methods for scRNA-seq](#item-13) ⭐️ 6.0/10
+14. [Prism Research Tool Leaks Papers Due to Bug, Quickly Taken Down](#item-14) ⭐️ 6.0/10
+15. [EU AI Act OpenRAG: Legally Structured Corpus with BGE-M3 Embeddings](#item-15) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [LG Monitors Silently Install Software via Windows Update Without Consent](https://videocardz.com/newz/lg-monitors-silently-install-software-through-windows-update-without-user-consent) ⭐️ 8.0/10
+## [Transcribe.cpp: Open-Source Local Speech-to-Text Library with Multi-Model Support](https://workshop.cjpais.com/projects/transcribe-cpp) ⭐️ 8.0/10
 
-When an LG monitor is connected to a Windows PC, the operating system automatically downloads and installs LG's OnScreen Control software via Windows Update in the background, with no user notification or interaction required. This poses a serious security and privacy risk, as the software runs with full system privileges, auto-starts at boot, and has internet access, potentially enabling exploitation or unauthorized data collection. It also erodes trust in the OS update mechanism. The installation is triggered by HDMI connection, even for monitors already in use. The software runs with no sandboxing and full system access. Users can block it via Group Policy (gpedit.msc) or the Device Installation Settings 'No' option, but the default behavior remains dangerous.
+The open-source library transcribe.cpp has been released, providing fast, local speech-to-text inference in C/C++ with GPU acceleration via ggml and support for over 16 model families. It enables developers to build private, offline transcription directly into applications, reducing cloud dependency and latency while supporting multiple open models. The library validates its output against reference implementations through systematic word error rate (WER) sweeps and offers maintainer-supported bindings for Python, Go, Rust, and Swift, with a Python binary wheel planned for future release.
 
-hackernews · baranul · Jul 18, 10:21 · [Discussion](https://news.ycombinator.com/item?id=48956688)
+hackernews · sebjones · Jul 19, 00:38 · [Discussion](https://news.ycombinator.com/item?id=48963879)
 
-**Background**: Windows has a feature that automatically downloads device-specific apps and drivers from Windows Update when new hardware is detected, intended to simplify setup. However, manufacturers can push non-essential software like utilities through this channel. LG's OnScreen Control is a monitor settings tool, and its silent installation without consent highlights abuse of this feature.
+**Background**: Speech-to-text (STT) converts spoken language into text. Running models locally keeps data on the device, improving privacy and eliminating the need for internet connectivity. ggml is a lightweight tensor library that enables efficient machine learning inference on consumer hardware. transcribe.cpp was developed through Mozilla.ai's Builders in Residence program.
 
-**Discussion**: The community overwhelmingly condemns this as a security vulnerability, likening the auto-installed software to malware. Many blame Microsoft for enabling the feature, while others share workarounds via Group Policy or Device Settings. Some hope that corporate pressure may force Microsoft to revise the driver consent model.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://github.com/handy-computer/transcribe.cpp">GitHub - handy-computer/transcribe.cpp: ggml speech-to-text inference for 16+ model families · GitHub</a></li>
+<li><a href="https://blog.mozilla.ai/announcing-transcribe-cpp/">Announcing transcribe.cpp</a></li>
+<li><a href="https://workshop.cjpais.com/projects/transcribe-cpp">Project - transcribe.cpp</a></li>
 
-**Tags**: `#security`, `#privacy`, `#Windows`, `#LG`, `#drivers`
+</ul>
+</details>
+
+**Discussion**: The community is enthusiastic about local STT, with users comparing whisper and parakeet models, requesting speaker separation features, and discussing funding for the maintainer. The Python binding is noted as not yet available as a binary wheel but is planned.
+
+**Tags**: `#speech-to-text`, `#cpp`, `#open-source`, `#machine-learning`, `#audio-processing`
 
 ---
 
 <a id="item-2"></a>
-## [AI-Generated Nonsense Wins $25K DeepMind/Kaggle Grand Prize](https://www.reddit.com/r/MachineLearning/comments/1uzyf66/did_blatant_ai_slop_just_win_a_25k_usd_deepmind/) ⭐️ 8.0/10
+## [GPT-5.6 Solves 30-Year-Old Convex Optimization Conjecture with Human Guidance](https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/) ⭐️ 8.0/10
 
-A Reddit investigation alleges that a nonsensical, AI-generated entry won the $25,000 grand prize in the DeepMind/Kaggle 'Measuring Progress Toward AGI – Cognitive Abilities' competition due to inadequate review. This incident questions the credibility of high-profile AI benchmark competitions, highlighting flaws in review processes and the risk of AI-generated content undermining evaluation standards. The entry reportedly contained incoherent methodology and text, exceeded the 10-page submission limit tenfold, and competition organizers defended the review as proper and subjective.
-
-reddit · r/MachineLearning · /u/TheWerkmeister · Jul 18, 15:10
-
-**Background**: DeepMind (Google's AI research lab) partnered with Kaggle, a data science competition platform, to host a challenge aimed at designing cognitive-science-based benchmarks to track progress toward artificial general intelligence (AGI). 'AI slop' refers to low-quality, meaningless content generated by AI tools, often lacking accuracy or coherence. The competition's goal was to create rigorous evaluation frameworks, but the allegedly flawed winning entry suggests significant gaps in the judging process.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence">Artificial general intelligence - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/AI_slop">AI slop - Wikipedia</a></li>
-<li><a href="https://www.mindstudio.ai/blog/google-agi-benchmark-10-cognitive-dimensions">How Google's New AGI Benchmark Measures Intelligence Across 10 Cognitive Dimensions | MindStudio</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#Kaggle`, `#DeepMind`, `#AI Benchmarks`, `#Competition Integrity`, `#Machine Learning`
-
----
-
-<a id="item-3"></a>
-## [GPT-5.6 Solves 30-Year Convex Optimization Problem with Human Collaboration](https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/) ⭐️ 7.0/10
-
-A researcher using GPT-5.6 solved a 30-year-old conjecture in convex optimization. The solution was not autonomous; the prompt was built over a year of iterative work with earlier models and included the solution technique. This case demonstrates AI's potential to assist in mathematical research, but also highlights that current systems still require significant human expertise and effort. It foreshadows a future where AI augments rather than replaces mathematicians. The conjecture involves bounding the time complexity of convex optimization over Lipschitz functions. The solution emerged from a prompt that contained the technique, following a year of prior attempts with models GPT-5.4 and GPT-5.5.
+A researcher used GPT-5.6 (Sol Pro) to close a 30-year-old conjecture about the iteration complexity of convex optimization over Lipschitz functions on a spherical domain, after feeding the model a year’s worth of prior attempts and the key solution technique. This achievement demonstrates that large language models, when steered by seasoned human experts, can accelerate the resolution of niche but meaningful open problems in mathematics, potentially reshaping how researchers approach low- to medium-difficulty conjectures. The proof was not autonomous; the human researcher had been working on the problem for a year with GPT-5.4 and 5.5, and the final prompt included the specific technique. The model used was Sol Pro, not the more advanced Ultra, and the claimed 148 minutes only refers to the last session, not the total effort.
 
 hackernews · mbustamanter · Jul 18, 13:00 · [Discussion](https://news.ycombinator.com/item?id=48957779)
 
-**Background**: Convex optimization is a subfield of mathematical optimization that minimizes convex functions over convex sets. It is widely used in engineering, machine learning, and operations research. Unlike general optimization, convex problems are typically solvable in polynomial time, but many specific complexity questions remain open.
+**Background**: Convex optimization is a subfield of mathematical optimization that minimizes convex functions over convex sets, with wide applications in machine learning, control, and engineering. A central question is the computational complexity of such problems—how many iterations are needed to reach an approximate solution under assumptions like Lipschitz continuity. The conjecture in question concerned precise upper and lower bounds on the number of iterations required to solve convex optimization problems on a sphere with Lipschitz functions, and had remained open for about 30 years.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Convex_optimization">Convex optimization</a></li>
+<li><a href="https://web.stanford.edu/~boyd/cvxbook/">Convex Optimization - Boyd and Vandenberghe - Stanford University</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members clarified that the solution was a human-AI collaboration, not an autonomous AI breakthrough. The prompt was developed over a year with earlier GPT models, and the claimed 148-minute solve time was misleading. Many saw it as a valuable contribution but emphasized that the AI required significant human guidance.
+**Discussion**: Commenters pointed out that the breakthrough was the culmination of a year of iterative work, with the prompt explicitly containing the technique, making the 148-minute claim misleading. Some worried that AI might make low-hanging fruit in math research obsolete, while others argued that human guidance remains essential, akin to how junior developers are trained.
 
-**Tags**: `#AI`, `#mathematics`, `#convex-optimization`, `#GPT-5.6`, `#AI-assisted-research`
+**Tags**: `#convex-optimization`, `#AI-math`, `#GPT-5.6`, `#research-breakthrough`, `#hackernews-discussion`
+
+---
+
+<a id="item-3"></a>
+## [SQLite Query Explainer](https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything) ⭐️ 8.0/10
+
+Simon Willison created an interactive, in-browser SQLite query explainer that uses Pyodide to run EXPLAIN and EXPLAIN QUERY PLAN and adds human-readable explanations.
+
+rss · Simon Willison · Jul 18, 17:19
+
+**Tags**: `#sql`, `#sqlite`, `#python`, `#webassembly`, `#tools`
 
 ---
 
 <a id="item-4"></a>
-## [NYC Mayor Mandates Disclosure of AI-Generated Images in Rental Listings](https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/) ⭐️ 7.0/10
+## [Essay: Social Communities Need Active Building, Not Passive Consumption](https://www.benlandautaylor.com/p/if-you-build-it-they-will-come) ⭐️ 7.0/10
 
-NYC Mayor Mamdani issued a directive requiring landlords and real estate agents to disclose when rental property listings use AI-generated or virtual staging images, aiming to prevent deceptive advertising. This directive addresses the increasing use of AI in real estate, protecting renters from misrepresentation by ensuring transparency. It sets a precedent for how cities can regulate AI-generated content in advertising, aligning with broader debates on AI ethics and consumer protection. The directive requires disclosure but does not ban AI staging outright; it targets the practice of 'secretly' using AI images without notice. The enforcement mechanism and penalties are not yet detailed, and the directive may face legal challenges as it comes from the mayor rather than a legislative body.
+The essay argues that social communities are not self-sustaining but require intentional effort and investment, and that today's social alienation partly stems from a passive consumer mindset. It challenges the passive approach to social life and provides a framework for addressing the loneliness epidemic by encouraging individuals to become active creators of community. The essay highlights the 'free rider' problem, where many benefit from community events without contributing, and notes that organizers often face burnout and emotional vulnerability.
 
-hackernews · gnabgib · Jul 18, 22:13 · [Discussion](https://news.ycombinator.com/item?id=48962983)
+hackernews · barry-cotter · Jul 18, 15:37 · [Discussion](https://news.ycombinator.com/item?id=48959090)
 
-**Background**: Virtual staging is a digital technique that adds furniture and decor to empty property photos to make them more appealing to potential renters. It is widely used in real estate because it costs over 90% less than physical staging. In New York City, the rental platform StreetEasy has seen a surge in AI-staged listings, where furniture is often inserted in ways that misrepresent room dimensions. Existing deceptive advertising laws already prohibit misleading representations, but this directive specifically targets undisclosed AI-generated images.
+**Background**: The concept of 'free riders' refers to individuals who benefit from resources without contributing to their provision. Social alienation describes a feeling of disconnection from others, often linked to modern individualistic lifestyles. Community building requires intentional actions like organizing events and maintaining relationships.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Virtual_staging">Virtual staging</a></li>
-<li><a href="https://virtualstaging.com/">VirtualStaging.com | #1 Virtual Staging for Realtors</a></li>
+**Discussion**: Commenters largely agree, sharing personal experiences of organizing events. They note the emotional toll and vulnerability, but also see opportunities: one commenter turned street festivals into a business. The sentiment is supportive, emphasizing that community building is a labor of love.
 
-</ul>
-</details>
-
-**Discussion**: Commenters generally support the disclosure requirement, with some calling for a full ban on AI staging. Several point out that existing deceptive advertising laws should already cover such practices, raising questions about the necessity of a new directive. Others note that the directive only mandates disclosure, not a ban, and debate whether a mayor has the authority to issue such a rule without legislative action.
-
-**Tags**: `#AI ethics`, `#real estate`, `#advertising`, `#regulation`, `#NYC`
+**Tags**: `#community`, `#social-dynamics`, `#loneliness`, `#personal-growth`, `#culture`
 
 ---
 
 <a id="item-5"></a>
+## [Hardcore IndieWeb: Run your own website for $0.01/day](https://www.neatnik.net/hardcore-indieweb) ⭐️ 7.0/10
+
+A tutorial demonstrated how to host a static website on NearlyFreeSpeech.net for approximately $0.01 per day. The post sparked discussion about the meaning of true independence in web hosting. This highlights the resurgence of personal web hosting and the IndieWeb movement, emphasizing low-cost, self-sufficient solutions. It challenges corporate platform dominance and encourages technical literacy. NearlyFreeSpeech.net is a pay-as-you-go host that charges per storage and bandwidth, making it extremely cheap for low-traffic static sites. However, it still relies on a third-party provider, and the tutorial does not cover dynamic features like databases.
+
+hackernews · cdrnsf · Jul 18, 21:45 · [Discussion](https://news.ycombinator.com/item?id=48962758)
+
+**Background**: NearlyFreeSpeech.net is a long-standing, low-cost hosting provider founded in 2002 with a focus on free speech. The IndieWeb movement promotes owning your own content and using open web standards, while frugal computing advocates for sustainable, minimal-resource computing.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/NearlyFreeSpeech">NearlyFreeSpeech - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/IndieWeb">IndieWeb</a></li>
+<li><a href="https://arxiv.org/abs/2303.06642">[2303.06642] Frugal Computing -- On the need for low-carbon and sustainable computing and the path towards zero-carbon computing</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters noted that NearlyFreeSpeech.net is not truly 100% independent, as it still depends on a third party. Some suggested using a VPS for deeper learning, while others argued that static hosting is not new and is similar to free services like Vercel or Netlify, lacking features like databases.
+
+**Tags**: `#indieweb`, `#self-hosting`, `#web-development`, `#static-site`, `#frugal-computing`
+
+---
+
+<a id="item-6"></a>
 ## [Fable 5 vs. GPT-5.6 Sol on NP-Hard Problem: Does /goal Help?](https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal/) ⭐️ 7.0/10
 
-A blog post compared Anthropic's Fable 5 and OpenAI's GPT-5.6 Sol on an NP-hard problem, testing whether the /goal feature improves performance. The results were mixed, with discussion on how search strategies influence outcomes. This evaluation provides practical insights for developers choosing between top-tier AI coding tools, especially for complex optimization tasks. It highlights how model-specific features like /goal can affect long-horizon problem-solving. The /goal feature appears to help models retain important instructions during extended sessions, but GPT-5.6 Sol showed an advantage in optimization tasks, consistent with its win in the AtCoder heuristics competition. The blog's chart was noted to have an inverted y-axis, making visual interpretation confusing.
+A blog post empirically compared Anthropic's Claude Fable 5 and OpenAI's GPT-5.6 Sol on solving an NP-hard problem, specifically testing whether the /goal command (which automates iterative refinement) improves performance. This evaluation provides insight into how frontier AI models tackle computationally hard problems and whether directive commands like /goal can improve problem-solving efficacy, which is valuable for developers relying on AI for complex reasoning and highlights the ongoing model competition. The comparison uses a chart where lower is better but the y-axis is inverted, causing visual confusion. The test focuses on a single NP-hard instance, and the /goal command is specific to Claude Code v2.1.139+, which uses a small fast model to check completion conditions iteratively.
 
 hackernews · couAUIA · Jul 18, 11:00 · [Discussion](https://news.ycombinator.com/item?id=48956879)
 
-**Background**: Fable 5 is Anthropic's latest coding model, achieving the highest score on FrontierBench and excelling at long-horizon reasoning. GPT-5.6 Sol is OpenAI's flagship model, designed for complex coding, reasoning, and agentic workflows. The /goal feature is a subgoal-driven framework that helps LLM agents maintain focus on the final objective during long tasks, preventing them from losing track of important instructions.
+**Background**: NP-hard problems are computationally difficult and serve as a benchmark for AI reasoning. Claude Fable 5, released June 2026, and GPT-5.6 Sol, released July 2026, are the latest flagship models from Anthropic and OpenAI, both emphasizing strong coding and reasoning. The /goal command in Claude Code lets the model autonomously iterate until a specified condition is met, reducing manual prompting.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://www.anthropic.com/claude/fable">Claude Fable \ Anthropic</a></li>
 <li><a href="https://openai.com/index/previewing-gpt-5-6-sol/">Previewing GPT‑5.6 Sol: a next-generation model - OpenAI</a></li>
-<li><a href="https://arxiv.org/abs/2603.19685">A Subgoal-driven Framework for Improving Long-Horizon LLM Agents</a></li>
+<li><a href="https://code.claude.com/docs/en/goal">Keep Claude working toward a goal - Claude Code Docs</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community discussion highlighted chart confusion due to an inverted y-axis, suggestions to use ultra mode for better search strategies, and a sentiment that GPT-5.6 Sol may be superior for optimization problems. Some users noted that Claude tends to forget instructions in long sessions, and the /goal feature might address this.
+**Discussion**: Community members noted the chart's inverted y-axis caused confusion. Some praised /goal for keeping long sessions focused on key instructions, while others criticized Claude's performance on large codebases. Overall, sentiment is mixed but recognizes /goal's utility for specific iterative tasks.
 
-**Tags**: `#ai-coding-tools`, `#llm-comparison`, `#np-hard`, `#evaluation`, `#hackernews`
-
----
-
-<a id="item-6"></a>
-## [SQLite Query Explainer: In-Browser Tool to Interpret Query Plans](https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything) ⭐️ 7.0/10
-
-Simon Willison created an interactive browser-based tool that uses Pyodide and WebAssembly to run SQLite and explain the output of EXPLAIN and EXPLAIN QUERY PLAN commands. This makes SQLite query plans accessible to learners and developers, lowering the barrier to understanding database performance and optimization. The tool was built with Pyodide, a Python distribution for WebAssembly, enabling SQLite to run entirely in the browser without a server; the author cautions that the explanations have not been verified and should be used with care.
-
-rss · Simon Willison · Jul 18, 17:19
-
-**Background**: Pyodide is a port of CPython to WebAssembly, allowing Python code and packages like the built-in sqlite3 module to run in the browser. SQLite's EXPLAIN and EXPLAIN QUERY PLAN commands show the strategy the database uses to execute a query, such as whether it uses an index or performs a full table scan. Understanding these plans is crucial for optimizing database performance.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://pyodide.org/">Pyodide — Version 314.0.2</a></li>
-<li><a href="https://sqlite.org/eqp.html">EXPLAIN QUERY PLAN - SQLite</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#sqlite`, `#query-plan`, `#webassembly`, `#tool`, `#learning`
+**Tags**: `#AI`, `#LLM`, `#NP-Hard`, `#Benchmarking`, `#HackerNews`
 
 ---
 
 <a id="item-7"></a>
-## [Anthropic Adds Claude Fable 5 to Subscriptions Amid Competitive Pressure](https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything) ⭐️ 7.0/10
+## [Anthropic Reverses Decision, Makes Claude Fable 5 Permanent in Subscription Plans](https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything) ⭐️ 7.0/10
 
-Anthropic announced that from July 20, Claude Fable 5 will be permanently included in Max and Team Premium plans at 50% limits, reversing a previous decision to remove it from subscriptions and make it exclusively available via API. Pro and Team Standard users will continue to access Fable via usage credits and receive a one-time $100 credit. The reversal highlights fierce competition in the LLM market, where GPT-5.6 Sol and Kimi 3 forced Anthropic to retain high-end model access for subscribers. It directly affects developers and businesses that rely on Fable 5 for advanced coding, as they no longer face per-token API costs or the loss of access. The Max plans cost $100 and $200/month; the $20/month Pro plan still does not include Fable 5. The 50% rate limit means subscribers get half the usual quota compared to the full API access, and the original plan was driven by compute capacity constraints, which may force Anthropic to reallocate training resources.
+Anthropic announced that Claude Fable 5 will be permanently included in Max and Team Premium plans at 50% of limits starting July 20, 2026, and Pro and Team Standard users will receive a one-time $100 credit and access via usage credits, reversing a prior plan to withdraw it from subscriptions. This competitive move responds to pressure from OpenAI's GPT-5.6 Sol and Moonshot AI's Kimi K3, making premium subscriptions more attractive and signaling that AI model access pricing is rapidly evolving under market pressure. The $20/month plan still does not include Claude Fable 5; the Max plans cost $100 and $200/month. Anthropic's original plan to remove the model was driven by compute capacity concerns, which may now affect training efforts.
 
 rss · Simon Willison · Jul 18, 06:00
 
-**Background**: Claude Fable 5 is a large language model from Anthropic’s Claude Mythos series, known for advanced coding capabilities. GPT-5.6 Sol, released by OpenAI on July 9, 2026, outperforms Fable 5 on the Artificial Analysis Coding Agent Index with lower cost and latency. Kimi 3 (Kimi K3), an open-source model from Moonshot AI released July 16, 2026, offers a 1-million-token context window and focuses on long-horizon coding. These models created pressure that made Anthropic's original API-only plan unsustainable.
+**Background**: Claude Fable 5 is Anthropic's most capable publicly released large language model, launched in June 2026 for demanding reasoning and agentic coding tasks. It was initially planned to be available only via API pricing after an introductory period, but the release of GPT-5.6 Sol (July 9, 2026) and Kimi K3 (July 16, 2026) — both achieving top-tier benchmark scores — forced Anthropic to retain it in subscriptions to stay competitive.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
 <li><a href="https://en.wikipedia.org/wiki/GPT-5.6">GPT-5.6 - Wikipedia</a></li>
-<li><a href="https://kimi3.online/">Kimi K3: Moonshot AI's Open-Source Flagship, Explained</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kimi_(chatbot)">Kimi (chatbot) - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community had been anxiously preparing for the 'Fablepocalypse'—the removal of Fable 5 from subscriptions—and the reversal was met with widespread relief. However, some Pro plan users on the $20 tier remain unhappy about being excluded, while Max and Team subscribers appreciate that competitive pressure led to a better outcome.
-
-**Tags**: `#Anthropic`, `#Claude`, `#AI pricing`, `#LLM`, `#competition`
+**Tags**: `#Claude`, `#AI models`, `#subscription pricing`, `#Anthropic`, `#competitive landscape`
 
 ---
 
 <a id="item-8"></a>
-## [GPT-2 Small Embedding Geometry: Discretized vs. Continuous Nearest Neighbors of "Trump"](https://www.reddit.com/r/MachineLearning/comments/1v07xai/gpt2_smalls_embedding_geometry_around_trump/) ⭐️ 7.0/10
+## [Allegations of AI-Generated Slop Winning $25K DeepMind Kaggle Prize](https://www.reddit.com/r/MachineLearning/comments/1uzyf66/did_blatant_ai_slop_just_win_a_25k_usd_deepmind/) ⭐️ 7.0/10
 
-A visualization analysis of GPT-2 Small's static token embeddings reveals that discretizing embedding coordinates via thresholding and then computing nearest neighbors of the token "Trump" yields generic political terms like Mitt, Hillary, Pelosi, and Blair, whereas using the original continuous coordinates produces a specific cluster of family members, staff, rivals, and U.S. presidents (Obama, Clinton, Bush, Eisenhower). This finding highlights how token embeddings in language models encode nuanced semantic relationships that can be masked or altered by simple discretization, offering insights for model interpretability, embedding compression, and understanding how names and political entities are organized in the representation space. The analysis used t-SNE to project 32,070 alphabetic tokens (≥2 characters) from GPT-2 Small's static embedding table, before any attention or context; discretization simply thresholded each coordinate, and the nearest neighbor differences were stark.
+A Reddit user alleges that a low-quality, AI-generated submission won the $25,000 grand prize in a DeepMind-sponsored Kaggle competition for designing cognitive benchmarks, and the submission was riddled with nonsensical claims and expanded far beyond the requested format; organizers defended the review process as proper and a matter of subjectivity. This raises significant concerns about the integrity of AI benchmark design and competition judging, potentially undermining trust in evaluation processes that the machine learning community relies on to measure progress toward AGI. The submission intended to test how an LLM changes its assessment when presented with alternative viewpoints, but it devolved into a poorly structured document ten times the specified length; the accuser claims neither the authors nor the judges gave it a proper review.
 
-reddit · r/MachineLearning · /u/Limp-Contest-7309 · Jul 18, 21:29
+reddit · r/MachineLearning · /u/TheWerkmeister · Jul 18, 15:10
 
-**Background**: GPT-2 Small's token embeddings are fixed vectors learned during pretraining, representing each token in a high-dimensional space. Nearest neighbor analysis in this space reveals which tokens the model considers semantically similar. t-SNE is a nonlinear dimensionality reduction technique commonly used to visualize high-dimensional embeddings in 2D while preserving local neighborhoods. Discretization (thresholding coordinates) is a form of quantization that can reduce storage but may lose subtle semantic distinctions.
+**Background**: The competition was part of a Google DeepMind initiative to develop new cognitive-science-based benchmarks for AI, which are crucial for tracking progress toward artificial general intelligence. Kaggle is a popular platform for data science competitions, often offering high-stakes prizes. The term 'AI slop' refers to low-quality, AI-generated content that lacks genuine insight or value.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">t-distributed stochastic neighbor embedding - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#embeddings`, `#NLP`, `#GPT-2`, `#interpretability`, `#visualization`
+**Tags**: `#AI benchmarks`, `#Kaggle`, `#DeepMind`, `#AI safety`, `#machine learning`
 
 ---
 
 <a id="item-9"></a>
-## [Stereo2Spatial: Open-Source ML Model Converts Stereo to Binaural Spatial Audio](https://www.reddit.com/r/MachineLearning/comments/1uzevbg/stereo2spatial_convert_stereo_music_tracks_to/) ⭐️ 7.0/10
+## [Interactive Map of GPT-2 Token Embeddings with t-SNE and MST](https://www.reddit.com/r/MachineLearning/comments/1v09muj/interactive_map_of_gpt2s_token_embedding_space/) ⭐️ 7.0/10
 
-A developer released Stereo2Spatial, a machine learning model that converts stereo music to spatialized binaural mixes. The model uses a flow-matching diffusion model initially in a VAE latent space with memory tokens, then pivoted to a raw waveform model with amplitude lifting for improved quality. This enables anyone to convert existing stereo music into immersive spatial audio, enhancing listening experiences on headphones. It demonstrates practical AI upmixing and could influence future work in spatial audio generation and long-context audio modeling. The waveform model was trained on 7,669 tracks for ~20 days on 2x A6000 GPUs, using a memory-token mechanism for stable long-context generation up to 122-second sequences. The amplitude lifting technique (scaling to RMS 0.33 then multiplying by 3, with clipping) resolved training instability, and the model supports mix-style conditioning.
+An interactive, mobile-friendly map of GPT-2-small's token embedding space was created using t-SNE and a minimum spanning tree, allowing users to tap tokens and explore nearest-neighbor semantic relationships. This tool provides an intuitive way to explore semantic relationships between tokens in GPT-2, making language model internals more accessible and aiding interpretability research and education. The map includes 32,070 alphabetic tokens from GPT-2-small's word token embedding table, with no context or forward pass; t-SNE was applied to a compressed embedding representation, and every edge is a minimum spanning tree ensuring that each line represents a real nearest-neighbor relationship.
 
-reddit · r/MachineLearning · /u/kittenkrazy · Jul 17, 22:55
+reddit · r/MachineLearning · /u/Limp-Contest-7309 · Jul 18, 22:42
 
-**Background**: Spatial audio (such as binaural or 7.1.4 surround) creates a 3D sound field, making music feel more immersive. Flow-matching diffusion models are a class of generative models that learn to transform noise into data by matching flow fields. Prior work, ImmersiveFlow, also used flow matching for stereo-to-7.1.4 conversion but lacked long-context stability. The developer's latent model used EAR-VAE, a pretrained variational autoencoder for audio, to encode the input and output channels, but the waveform model bypasses the VAE for higher fidelity.
+**Background**: Token embeddings are high-dimensional vector representations of words or subwords that capture semantic meaning. t-SNE is a nonlinear dimensionality reduction algorithm often used to visualize such high-dimensional data in 2D. A minimum spanning tree connects all points in a graph with the minimum total edge weight, which in this visualization highlights the closest semantic relationships between tokens.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/html/2601.12950v1">ImmersiveFlow : Stereo-to-7.1.4 Spatial Audio Generation with Flow ...</a></li>
-<li><a href="https://diffusion.csail.mit.edu/2025/index.html">Flow Matching and Diffusion Models</a></li>
+<li><a href="https://medium.com/data-science/t-sne-clearly-explained-d84c537f53a">t - SNE clearly explained. An intuitive explanation of t - SNE | Medium</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum spanning tree</a></li>
+<li><a href="https://www.geeksforgeeks.org/nlp/tokenization-vs-embeddings/">Tokenization vs Embeddings - GeeksforGeeks</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#audio processing`, `#diffusion models`, `#music generation`, `#machine learning`, `#VAE`
+**Tags**: `#token-embeddings`, `#visualization`, `#gpt-2`, `#interpretability`, `#machine-learning`
 
 ---
 
 <a id="item-10"></a>
-## [EU AI Act OpenRAG Dataset: 933 Legally Structured Chunks with BGE-M3 Embeddings](https://www.reddit.com/r/MachineLearning/comments/1uytlac/eu_ai_act_openrag_933_legally_structured_chunks/) ⭐️ 7.0/10
+## [Stereo2Spatial: Convert Stereo Music Tracks to Spatialized Binaural Mixes](https://www.reddit.com/r/MachineLearning/comments/1uzevbg/stereo2spatial_convert_stereo_music_tracks_to/) ⭐️ 7.0/10
 
-A developer released 'EU AI Act OpenRAG,' a SQLite dataset containing 933 legally structured chunks of the EU AI Act, each with normalized 1024-dimensional BGE-M3 embeddings, and benchmarked it against a baseline for RAG tasks. This provides a high-quality, structurally coherent dataset for legal NLP and RAG research on the EU AI Act, a critical regulation; the legal-structure chunking may improve retrieval accuracy over naive sliding-window approaches. Chunking follows the Act's legal hierarchy (one chunk per article paragraph, recital, definition, etc.), includes exact EUR-Lex links, metadata, narrow derived labels, and leaves ambiguous cases as NULL. Evaluation showed improved recall (0.541 vs 0.449 baseline) and QA hit rate (0.927 vs 0.898), but classification performance was slightly lower; full results and limitations are published.
+A new open-source model, Stereo2Spatial, converts stereo music to binaural spatial audio using a flow-matching diffusion model trained on raw waveforms. It introduces a memory token mechanism to maintain long-term consistency across audio segments. This tool makes immersive spatial audio accessible from any stereo recording, eliminating the need for costly studio remixing. The memory token approach also advances long-context generation in audio models. The model was trained on 7,669 tracks for 20 days on 2× A6000 GPUs, using amplitude lifting (scale to RMS 0.33, multiply by 3) to stabilize raw waveform training. It outputs binaural audio directly, with optional mix-style conditioning, and includes a Windows desktop inference app.
+
+reddit · r/MachineLearning · /u/kittenkrazy · Jul 17, 22:55
+
+**Background**: Flow-matching diffusion models are generative models that transform noise into data by matching a velocity field, now state-of-the-art for many modalities. Latent diffusion models compress data into a latent space before diffusion, improving efficiency. Memory tokens are a technique for long-context consistency by carrying a compressed summary across processing windows, often used in large language models.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://diffusion.csail.mit.edu/2026/index.html">Flow Matching and Diffusion Models — 2026 Version</a></li>
+<li><a href="https://www.emergentmind.com/topics/audioldm-model">AudioLDM Model for Conditional Audio Synthesis</a></li>
+<li><a href="https://ginno.net/sliding-windows-and-memory-tokens-extending-llm-attention">Sliding Windows and Memory Tokens : Extending LLM Attention</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#audio processing`, `#spatial audio`, `#diffusion models`, `#generative AI`, `#machine learning`
+
+---
+
+<a id="item-11"></a>
+## [TabFM Studio: Point-and-Click Spreadsheet Predictions with Tabular Foundation Models](https://www.reddit.com/r/MachineLearning/comments/1uzx1el/tabfm_studio_pointandclick_predictions_on/) ⭐️ 7.0/10
+
+A new web application called TabFM Studio allows users to upload CSV or Excel files, click a column header to select a target variable, and use Google's TabFM model to generate predictions directly within the spreadsheet grid, without any coding. This tool democratizes access to state-of-the-art tabular machine learning, enabling business analysts, researchers, and other non-programmers to leverage foundation models for forecasting and classification tasks on their own data, all locally without cloud dependencies. The application currently only supports Google's TabFM, a zero-shot model capable of both classification and regression. It uses in-context learning: rows with filled target values serve as examples, and empty rows are predicted. The tool runs entirely locally, preserving data privacy.
+
+reddit · r/MachineLearning · /u/Lckylke · Jul 18, 14:15
+
+**Background**: Tabular foundation models are pre-trained machine learning models that can work with structured data (rows and columns) without task-specific training. Google's TabFM is a recent example that supports zero-shot classification and regression, meaning it can make predictions on new datasets without fine-tuning. In-context learning allows the model to use a few labeled examples within the spreadsheet to infer predictions for unknown cells.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/">Introducing TabFM : A zero-shot foundation model for tabular data</a></li>
+<li><a href="https://huggingface.co/google/tabfm-1.0.0-pytorch">google/ tabfm -1.0.0-pytorch · Hugging Face</a></li>
+<li><a href="https://mindfulmodeler.substack.com/p/the-state-of-tabular-foundation-models">The state of Tabular Foundation Models (2026)</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#tabular-data`, `#foundation-models`, `#no-code`, `#machine-learning`, `#web-app`
+
+---
+
+<a id="item-12"></a>
+## [NYC Mayor Mandates Disclosure of AI-Generated Images in Rental Listings](https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/) ⭐️ 6.0/10
+
+NYC Mayor Mamdani has mandated that landlords must disclose when AI-generated images are used in rental property listings, effectively banning the secret use of such images. This policy addresses the growing problem of deceptive AI-staged photos that misrepresent rental properties, misleading prospective tenants and setting a precedent for transparency in AI-altered advertising in a competitive housing market. The policy requires disclosure, not an outright ban, so landlords can still use AI images if they clearly label them as such. On platforms like StreetEasy, AI stagings often warp rooms to fit furniture that wouldn't actually fit, making the disclosure requirement especially relevant.
+
+hackernews · gnabgib · Jul 18, 22:13 · [Discussion](https://news.ycombinator.com/item?id=48962983)
+
+**Background**: AI staging uses artificial intelligence to digitally furnish empty rooms in real estate photos, making properties appear more appealing or spacious than they are. This deceptive practice has become common on rental listing sites, causing frustration with bait-and-switch tactics. The new rule mandates transparency, similar to disclosure requirements for edited photos in other industries.
+
+**Discussion**: Commenters generally support the mandate, emphasizing that it's about preventing deception rather than being anti-AI. Some argue that all deceptive advertising should be banned, not just AI-generated content. Others point out broader areas where AI transparency should be mandated, like dating, hiring, and gambling, and note that the headline should stress 'secretly' used AI images since the rule is about disclosure.
+
+**Tags**: `#AI`, `#regulation`, `#real-estate`, `#advertising`, `#deception`
+
+---
+
+<a id="item-13"></a>
+## [User Shares Summary Table of 25 Deep Learning Methods for scRNA-seq](https://www.reddit.com/r/MachineLearning/comments/1v06nc1/deep_learning_tackles_singlecell_analysis_a/) ⭐️ 6.0/10
+
+A Reddit user posted a comprehensive summary table of 25 deep learning methods for scRNA-seq analysis, categorized into six subcategories, based on a recent survey paper. This organized summary serves as a valuable reference for researchers and practitioners looking to apply deep learning to single-cell genomics, offering a quick overview of state-of-the-art methods and their architectures. The summary table includes fields such as method name, category, purpose, architecture, evaluation metrics, explanation, and novelty for each of the 25 methods. The original survey paper organizes methods into six subcategories, though the specific categories are not listed in the post.
+
+reddit · r/MachineLearning · /u/teraRockstar · Jul 18, 20:35
+
+**Background**: scRNA-seq (single-cell RNA sequencing) profiles gene expression in individual cells, uncovering cellular heterogeneity. Deep learning models have been increasingly applied to scRNA-seq data for tasks such as denoising, dimensionality reduction, clustering, and batch correction, leveraging their ability to learn complex patterns from high-dimensional data.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ScRNA-seq">ScRNA-seq</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Single-cell_sequencing">Single-cell sequencing - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#deep learning`, `#single-cell analysis`, `#scRNA-seq`, `#bioinformatics`, `#survey`
+
+---
+
+<a id="item-14"></a>
+## [Prism Research Tool Leaks Papers Due to Bug, Quickly Taken Down](https://www.reddit.com/r/MachineLearning/comments/1uz75qt/prism_accidentally_leaked_d/) ⭐️ 6.0/10
+
+A bug in the Prism LaTeX collaboration tool caused its compile function to return other users' papers instead of the user's own, accidentally exposing unpublished research documents. The issue was reported on Discord and Twitter, and the site was taken down within 10 minutes. This incident underscores the privacy risks of AI-powered research tools handling sensitive pre-publication manuscripts. It could shake trust in such platforms and raise questions about data isolation and security practices in collaborative research environments. The leak was triggered by the compilation feature, which returned wrong papers to users. While the prompt takedown shows responsiveness, the root cause and whether any previously compiled papers were also exposed remain unclear.
+
+reddit · r/MachineLearning · /u/Few-Monitor5103 · Jul 17, 17:59
+
+**Background**: Prism is a free, AI-powered LaTeX workspace by OpenAI with GPT-5.2 built in, designed to help researchers write, collaborate, and reason in one place. It offers features like auto-generated bibliographies, handwritten equation conversion, and real-time collaboration, requiring robust data isolation to protect works-in-progress.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://openai.com/index/introducing-prism/">Introducing Prism | OpenAI</a></li>
+<li><a href="https://www.linkedin.com/pulse/prism-openai-finally-solves-latex-problem-researchers-dr-rahul-dev-zv1jc">OpenAI Prism : AI-Powered LaTeX Editor For Scientists</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#security`, `#incident`, `#research-tools`, `#machine-learning`, `#privacy`
+
+---
+
+<a id="item-15"></a>
+## [EU AI Act OpenRAG: Legally Structured Corpus with BGE-M3 Embeddings](https://www.reddit.com/r/MachineLearning/comments/1uytlac/eu_ai_act_openrag_933_legally_structured_chunks/) ⭐️ 6.0/10
+
+A new EU AI Act corpus has been released, chunked by legal structure (articles, recitals, definitions) rather than sliding windows, and embedded with BGE-M3. It contains 933 chunks in a single SQLite file, demonstrating improved retrieval accuracy over a baseline. This structured chunking approach preserves legal context better than traditional sliding windows, potentially improving performance of RAG systems for legal NLP. It provides a reproducible benchmark and dataset for legal AI research, especially for EU AI Act compliance tools. The corpus uses BGE-M3 embeddings (1024-dimensional) and includes metadata like EUR-Lex links and application dates. Evaluation on an AI Act benchmark showed scenario article recall@20 of 0.541 vs 0.449 baseline, and QA article hit@10 of 0.927 vs 0.898. However, RAG classification performance was slightly lower, indicating generator dominance.
 
 reddit · r/MachineLearning · /u/Automatic-Forever-63 · Jul 17, 08:18
 
-**Background**: BGE-M3 is a versatile embedding model from BAAI that generates dense embeddings for semantic search and also supports sparse and multi-vector retrieval. Retrieval-Augmented Generation (RAG) is a technique where large language models first retrieve relevant external documents, then generate answers, improving accuracy and reducing hallucinations. The EU AI Act (Regulation (EU) 2024/1689) is a landmark law that classifies AI systems by risk and imposes obligations on providers.
+**Background**: Retrieval-augmented generation (RAG) is a technique that enhances large language models by retrieving relevant external documents before generating responses, commonly used in legal and factual domains. Traditional text chunking for RAG often uses a sliding window of fixed token or character length, which can cut across logical boundaries like legal articles. BGE-M3 is a multilingual embedding model known for supporting dense retrieval, multi-vector retrieval, and sparse retrieval.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://huggingface.co/BAAI/bge-m3">BAAI/bge-m3 · Hugging Face</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation">Retrieval-augmented generation</a></li>
+<li><a href="https://medium.com/@hariprasannaa2001/chunking-for-rag-sliding-windows-structure-aware-splits-and-what-actually-works-dfdafcc79c9a">Chunking for RAG: Sliding Windows, Structure-Aware Splits ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#RAG`, `#legal-NLP`, `#EU-AI-Act`, `#dataset`, `#embeddings`
-
----
-
-<a id="item-11"></a>
-## [If You Build It, They Will Come](https://www.benlandautaylor.com/p/if-you-build-it-they-will-come) ⭐️ 6.0/10
-
-Ben Landau-Taylor's new essay highlights the often invisible effort required to build and maintain social communities, using personal anecdotes and sharp observations. The piece resonates amid growing concerns about loneliness and social fragmentation, prompting readers to recognize the hidden labor behind community life and consider taking on that role themselves. The essay draws on the author's personal experience organizing social events and notes that many people treat communities as naturally occurring, like wild berries, rather than something to be cultivated. Commenters further discuss the vulnerability of being the social organizer and the decline of traditional institutions like the Lions Club.
-
-hackernews · barry-cotter · Jul 18, 15:37 · [Discussion](https://news.ycombinator.com/item?id=48959090)
-
-**Background**: The title references the film 'Field of Dreams.' The essay touches on themes of social capital and the erosion of community institutions, as discussed in works like Robert Putnam's 'Bowling Alone.' The Hacker News community often debates the challenges of modern social life and the effort behind organizing meetups and online forums.
-
-**Discussion**: Commenters broadly agree with the essay's premise, sharing experiences of unreciprocated effort in organizing social events. They highlight the vulnerability of being the social backbone, the consumer mindset that takes community for granted, and the generational decline of traditional social institutions. Some express concern about the lack of apprenticeship in social organizing.
-
-**Tags**: `#community-building`, `#social-dynamics`, `#networking`, `#personal-essay`, `#hackernews-discussion`
-
----
-
-<a id="item-12"></a>
-## [Setting Up Your Spare Mac for Claude Code Control: A Step-by-Step Guide](https://ykdojo.github.io/claude-controls-mac/) ⭐️ 6.0/10
-
-A new guide details how to configure a spare Mac to be remotely controlled by Claude Code, enabling the AI agent to perform tasks on a dedicated machine. The guide highlights the growing interest in integrating AI agents with physical hardware for automation, testing, or home projects, sparking debate on practical use cases and hardware choices. The setup requires a spare Mac and may involve connection instability; some commenters argue that virtual machines are sufficient for agent tasks that do not need a physical display.
-
-hackernews · ykev · Jul 18, 16:12 · [Discussion](https://news.ycombinator.com/item?id=48959392)
-
-**Background**: Claude Code is an AI-powered coding tool by Anthropic that operates in the terminal, capable of executing commands and interacting with the system. Repurposing old hardware for AI agents is part of a broader trend of using language models to automate desktop tasks.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
-<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters are divided: some find practical uses like home automation or testing, others argue virtual machines are more efficient, and some struggle to identify a compelling 24/7 use case.
-
-**Tags**: `#AI agents`, `#home automation`, `#macOS`, `#Claude`, `#repurposing hardware`
-
----
-
-<a id="item-13"></a>
-## [Spot birds not golf](https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything) ⭐️ 6.0/10
-
-Simon Willison published a satirical proposal suggesting that hyperscalers like Google offset their data center water consumption by buying golf courses, converting them into public parks, and encouraging former golfers to take up birdwatching. The post uses Google's 2025 water usage of 10.9 billion gallons (~30 million gallons per day) and Coachella Valley golf course consumption (~750,000 gallons per day per course) to calculate that 40 courses would match Google's usage. The piece uses humor to highlight the growing environmental concern over water consumption by AI data centers. It frames the problem in a relatable way, prompting discussion about the trade-offs between technological infrastructure and resource use, and whether unconventional offsets could contribute to real sustainability solutions. The math relies on an acre-foot being approximately 326,000 gallons. Google's 10.9 billion gallons per year equals about 30 million gallons per day, while a typical Coachella Valley golf course uses 800 acre-feet annually, or roughly 750,000 gallons per day. Thus, 40 such courses would consume the same daily water as Google's data centers.
-
-rss · Simon Willison · Jul 17, 02:58
-
-**Background**: Hyperscalers are large cloud service providers like Google, Amazon, and Microsoft that operate massive data centers, which require significant water for cooling. An acre-foot is a US unit of volume equal to about 326,000 gallons, commonly used for large-scale water resources. The Coachella Valley in California is a desert region with many golf courses, each using substantial irrigation water.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Hyperscaler">Hyperscaler</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Acre-foot">Acre-foot</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#ai-energy-usage`, `#water-usage`, `#sustainability`, `#satire`, `#data-centers`
-
----
-
-<a id="item-14"></a>
-## [Interactive Map of GPT-2 Token Embeddings Using t-SNE and MST](https://www.reddit.com/r/MachineLearning/comments/1v09muj/interactive_map_of_gpt2s_token_embedding_space/) ⭐️ 6.0/10
-
-A new interactive, mobile-friendly tool visualizes GPT-2-small's token embeddings using t-SNE and a minimum spanning tree, enabling users to tap tokens and explore nearest-neighbor connections. This visualization makes abstract embedding spaces tangible, serving as an educational tool for understanding how language models represent semantic relationships between tokens. The map includes 32,070 alphabetic tokens from GPT-2-small’s word token embeddings, with no forward pass; t-SNE is applied to a compressed representation, and the minimum spanning tree guarantees edges are genuine nearest-neighbor relations.
-
-reddit · r/MachineLearning · /u/Limp-Contest-7309 · Jul 18, 22:42
-
-**Background**: Token embeddings are high-dimensional vectors representing words or subwords in language models, where similar meanings have similar vectors. t-SNE is a nonlinear dimensionality reduction technique that maps high-dimensional data to 2D for visualization, preserving local similarities. A minimum spanning tree connects all points in a graph with the minimum total edge weight, revealing the closest relationships.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/T-SNE">T-SNE</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Minimum_spanning_tree">Minimum spanning tree</a></li>
-<li><a href="https://medium.com/@saschametzger/what-are-tokens-vectors-and-embeddings-how-do-you-create-them-e2a3e698e037">A Beginner’s Guide to Tokens, Vectors, and Embeddings in NLP | by Sascha Metzger | Medium</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#NLP`, `#tokenization`, `#visualization`, `#embeddings`, `#GPT-2`
-
----
-
-<a id="item-15"></a>
-## [Survey of 25 deep learning methods for scRNA-seq analysis summarized in a table](https://www.reddit.com/r/MachineLearning/comments/1v06nc1/deep_learning_tackles_singlecell_analysis_a/) ⭐️ 6.0/10
-
-A Reddit user shared a structured summary table of 25 deep learning methods from a recent survey paper on scRNA-seq analysis, organizing them across six functional categories with key details like architecture, purpose, and novelty. This summary offers a quick, comparative overview of the deep learning landscape for single-cell transcriptomics, helping researchers and practitioners select appropriate methods and understand design trends in this rapidly evolving field. The table covers six subcategories of scRNA-seq analysis, with columns for category, method name, purpose, architecture, evaluation metrics, explanation, and novelty. The original survey paper compiles methods from various publications, not a new benchmark.
-
-reddit · r/MachineLearning · /u/teraRockstar · Jul 18, 20:35
-
-**Background**: Single-cell RNA sequencing (scRNA-seq) measures gene expression at the individual cell level, revealing cellular heterogeneity. Deep learning is increasingly applied to tasks like clustering, imputation, batch correction, and trajectory inference, where its ability to handle high-dimensional, sparse data proves advantageous. The survey provides a structured overview of these methods, helping the community navigate the growing toolbox.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/ScRNA-seq">ScRNA-seq</a></li>
-<li><a href="https://www.10xgenomics.com/blog/single-cell-rna-seq-an-introductory-overview-and-tools-for-getting-started">Single cell RNA-seq: An introductory overview and tools for getting started | 10x Genomics</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#deep learning`, `#bioinformatics`, `#single-cell`, `#scRNA-seq`, `#survey`
+**Tags**: `#RAG`, `#legal-NLP`, `#embeddings`, `#dataset`, `#EU-AI-Act`
 
 ---

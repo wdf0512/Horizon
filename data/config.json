@@ -261,9 +261,7 @@
     "platform": "generic",
     "layout": "markdown",
     "fallback_layout": "markdown",
-    "languages": [
-      "zh"
-    ],
+    "languages": null,
     "request_body": {
       "chat_id": "6855688015",
       "text": "#{message_title}\n\n#{summary}"

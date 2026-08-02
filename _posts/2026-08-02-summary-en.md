@@ -5,472 +5,350 @@ date: 2026-08-02
 lang: en
 ---
 
-> From 40 items, 21 important content pieces were selected
+> From 36 items, 15 important content pieces were selected
 
 ---
 
-1. [Diátaxis: A Framework for Clear Technical Documentation](#item-1) ⭐️ 8.0/10
-2. [Lean Kernel Soundness Bug Postmortem Examines Trust in Formal Verification](#item-2) ⭐️ 8.0/10
-3. [The Art of 64-bit Assembly, Volume 2: An 800-Page MASM Programming Book](#item-3) ⭐️ 8.0/10
-4. [How Google&\#x27;s Actions Contributed to the Decline of RSS Feeds](#item-4) ⭐️ 8.0/10
-5. [RipGrep&\#x27;s musl binary segfaults during large searches traced to kernel bug](#item-5) ⭐️ 8.0/10
-6. [NetBSD 11.0 Released with RISC-V Support, MicroVM Kernel, and Vintage Hardware Improvements](#item-6) ⭐️ 8.0/10
-7. [DeepSeek V4 Flash Released: 304B Agentic Model with Unbeatable Cost-Performance](#item-7) ⭐️ 8.0/10
-8. [Stateless MCP 2.0 Reignites Simon Willison&\#x27;s Interest, Inspires New Tools](#item-8) ⭐️ 8.0/10
-9. [KataGo Study Reveals How Go AI Learns Board Symmetry Internally](#item-9) ⭐️ 8.0/10
-10. [VLMs Erase Clinical Terms, Hallucinate Bias in Radiology Reports](#item-10) ⭐️ 8.0/10
-11. [MIT Study: AI Financial Advice Effective Only with Expert-Level Questions](#item-11) ⭐️ 7.0/10
-12. [Seedance 2.5: ByteDance&\#x27;s One-Take Video Generation with Flexible Referencing](#item-12) ⭐️ 7.0/10
-13. [Greg Brockman: AI Should Enhance, Not Replace, Human Connection](#item-13) ⭐️ 7.0/10
-14. [Open Weight Revolution Discussed on Oxide and Friends Podcast](#item-14) ⭐️ 7.0/10
-15. [smevals: A Lightweight Eval Suite for AI Models, Prompts, and Harnesses](#item-15) ⭐️ 7.0/10
-16. [Reddit User Trains Transformer to Predict Blood Glucose with DILATE and Pinball Losses](#item-16) ⭐️ 7.0/10
-17. [datasette-apps 0.2a0 Adds Debug and List Tools for Agent](#item-17) ⭐️ 6.0/10
-18. [OpenAI&\#x27;s Astra model solves ten decade-old math problems for under $2,000 each](#item-18) ⭐️ 6.0/10
-19. [llm-mcp-client 0.1a0: Alpha Client for Model Context Protocol Integration](#item-19) ⭐️ 6.0/10
-20. [Datasette-agent 0.4a0 adds browser-side JavaScript execution for agent tools](#item-20) ⭐️ 6.0/10
-21. [Mandatory Peer Review Demands Concrete, Justified Feedback](#item-21) ⭐️ 6.0/10
+1. [Seedance 2.5 Improves Quality, Higher Cost, Action Focus](#item-1) ⭐️ 8.0/10
+2. [Diátaxis Framework Gains Attention for Structuring Documentation](#item-2) ⭐️ 8.0/10
+3. [MIT Study: AI Financial Advice Surprisingly Good With Right Questions](#item-3) ⭐️ 8.0/10
+4. [Postmortem for Kernel Soundness Bug \#14576 in Lean 4 Proof Assistant](#item-4) ⭐️ 8.0/10
+5. [DeepSeek-V4-Flash-0731: 304B Model with Top Value-per-Intelligence and Agentic Skills](#item-5) ⭐️ 8.0/10
+6. [Oxide and Friends: The Open Weight Revolution with Simon Willison](#item-6) ⭐️ 8.0/10
+7. [VLMs Score High on Benchmarks by Erasing Clinical Terms and Introducing Biased Hallucinations](#item-7) ⭐️ 8.0/10
+8. [The Art of 64-bit Assembly Book Sparks Community Debate](#item-8) ⭐️ 7.0/10
+9. [OpenAI President: People Dislike Being Contacted by Coworker&\#x27;s AI Assistants](#item-9) ⭐️ 7.0/10
+10. [OpenAI&\#x27;s Astra Model Solves 10 Unsolved Math Problems for Under $2,000 Each](#item-10) ⭐️ 7.0/10
+11. [Stateless MCP 2.0 Reignites Interest and Inspires New Tools](#item-11) ⭐️ 7.0/10
+12. [Transformer Model Predicts Blood Glucose with Uncertainty Quantification](#item-12) ⭐️ 7.0/10
+13. [Study Probes Internal Symmetry in KataGo&\#x27;s Neural Network](#item-13) ⭐️ 7.0/10
+14. [How Google&\#x27;s Shutdown of Reader Hurt RSS Adoption](#item-14) ⭐️ 6.0/10
+15. [smevals: Lightweight Eval Suite for AI Models, Prompts, and Harnesses](#item-15) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Diátaxis: A Framework for Clear Technical Documentation](https://diataxis.fr/) ⭐️ 8.0/10
+## [Seedance 2.5 Improves Quality, Higher Cost, Action Focus](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5) ⭐️ 8.0/10
 
-The Diátaxis documentation framework is receiving renewed attention, with software teams sharing successful adoption stories and the creator announcing efforts to translate the framework into multiple languages. It provides a systematic way to structure documentation, improving clarity and user experience, and is being adopted by support teams and even used to generate AI-assisted documentation. The framework divides documentation into four distinct types: tutorials, how-to guides, explanations, and references, each with a specific purpose and writing tone. It requires careful planning of page titles but yields consistent, user-focused content.
+ByteDance released Seedance 2.5, a video generation model that supports 30-second clips with up to 50 multimodal references and improved quality, but at approximately double the cost of Seedance 2.0. This update shows the trend of video generation models moving toward longer, more controllable outputs, but highlights the trade-off between quality and cost. It also reflects a market divergence: Chinese models prioritizing action and effects over dialogue, while Western creators may need different features. The model can generate 4K videos up to 30 seconds long, using up to 50 text/image/video/audio references for precise control. Community reports a 30-second generation costs 1440 credits on Dreamina, approximately $15.
 
-hackernews · ryanseys · Aug 1, 20:33 · [Discussion](https://news.ycombinator.com/item?id=49138188)
+hackernews · njaremko · Aug 1, 20:45 · [Discussion](https://news.ycombinator.com/item?id=49138302)
 
-**Background**: Technical documentation often suffers from mixing different types of content, confusing readers. Diátaxis, created by Daniele Procida, is a lightweight framework that addresses this by prescribing a clear separation of content types. It is widely used in open-source projects and endorsed by companies like Canonical, the publisher of Ubuntu.
+**Background**: Seedance is ByteDance&\#x27;s text-to-video model, first released in June 2025. The 2.0 version went viral for its realistic clips of celebrities and fictional characters. Seedance 2.5 extends the model with longer generation and more control.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://diataxis.fr/">Diátaxis</a></li>
-<li><a href="https://ubuntu.com/blog/diataxis-a-new-foundation-for-canonical-documentation">Diátaxis , a new foundation for Canonical documentation | Ubuntu</a></li>
-<li><a href="https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework">What is Diátaxis and should you be using it with your documentation ?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Seedance_2.0">Seedance 2.0</a></li>
+<li><a href="https://www.seeddance.io/models/seedance-2-5">Seedance 2 . 5 Free: Try ByteDance AI Video, No Queue, Instant Results</a></li>
+<li><a href="https://dreamina.capcut.com/seedance/seedance-2-5">Official Seedance 2 . 5 : 4K &amp; 30s AI Video Generator</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Users praised Diátaxis for making documentation writing clearer and more structured, with one team finding it &\#x27;fantastic&\#x27; for a complex codebase handover. The creator highlighted ongoing translation work. A humorous comment noted that once you learn the framework, you&\#x27;ll see all documentation as flawed. Some also use it with LLMs to generate first-pass docs.
+**Discussion**: Community members praised the video quality, with one user linking to impressive Seedance-generated clips. However, they noted the cost is roughly double that of previous versions, and the model&\#x27;s focus on action and effects shots over dialogue may better suit Chinese market demands than Western filmmakers&\#x27; needs.
+
+**Tags**: `#AI`, `#video-generation`, `#ByteDance`, `#Seedance`, `#machine-learning`
+
+---
+
+<a id="item-2"></a>
+## [Diátaxis Framework Gains Attention for Structuring Documentation](https://diataxis.fr/) ⭐️ 8.0/10
+
+The Diátaxis documentation framework, which organizes documentation into four distinct types, is receiving renewed attention from the technical writing community, and its creator Daniele Procida is actively working on translating it into multiple languages. A clear documentation structure like Diátaxis helps teams produce more consistent, understandable, and maintainable documentation, directly improving the developer experience and reducing onboarding friction. The framework categorizes content into tutorials, how-to guides, reference, and explanation, each with a specific writing voice. While highly praised, some users note that keeping documentation up-to-date remains a challenge, and the creator is addressing accessibility through translation efforts.
+
+hackernews · ryanseys · Aug 1, 20:33 · [Discussion](https://news.ycombinator.com/item?id=49138188)
+
+**Background**: Diátaxis is a systematic approach to technical documentation created by Daniele Procida. It rejects the common &\#x27;one-size-fits-all&\#x27; style and instead prescribes four distinct documentation modes: tutorials \(learning-oriented\), how-to guides \(task-oriented\), reference \(information-oriented\), and explanation \(understanding-oriented\). The framework has been adopted by many open-source projects and is often compared to other documentation methodologies like DITA and Information Mapping.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://diataxis.fr/">Diátaxis</a></li>
+<li><a href="https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework">What is Diátaxis and should you be using it with your documentation? | I&#x27;d Rather Be Writing Blog and API doc course</a></li>
+<li><a href="https://github.com/evildmp/diataxis-documentation-framework">GitHub - evildmp/diataxis-documentation-framework: A systematic approach to creating better documentation. · GitHub</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Community members largely praise Diátaxis for its clarity and practical value, with one developer calling it &\#x27;fantastic&\#x27; for a complex codebase handover. Some note the difficulty of keeping documentation up-to-date over time, while others appreciate the creator&\#x27;s translation initiative. One commenter humorously warns that reading it will make you notice how flawed most documentation is.
 
 **Tags**: `#documentation`, `#technical-writing`, `#framework`, `#best-practices`, `#software-engineering`
 
 ---
 
-<a id="item-2"></a>
-## [Lean Kernel Soundness Bug Postmortem Examines Trust in Formal Verification](https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/) ⭐️ 8.0/10
-
-A detailed postmortem of kernel soundness bug \#14576 in the Lean theorem prover reveals how the bug was discovered, its impact, and the broader implications for trust in formally verified systems. The bug highlights that even a small trusted kernel can contain flaws, challenging the absolute guarantee of correctness in formal proofs and underscoring the need for independent verification and multiple implementations. The practical exploit required two distinct bugs in two separate implementations, and independent kernel checkers still work as long as users keep both up to date.
-
-hackernews · juhopitk · Aug 1, 18:32 · [Discussion](https://news.ycombinator.com/item?id=49137060)
-
-**Background**: Lean is a proof assistant based on dependent type theory, with a small trusted kernel that checks all proofs. Soundness means that every statement provable in the system is true. A kernel bug can break soundness, allowing false theorems to be proved. Formal verification relies on this kernel being correct, so such bugs are critical to the trustworthiness of the whole system.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Lean_%28proof_assistant%29">Lean (proof assistant) - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Soundness">Soundness - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters note that independent checking mitigates the risk, but the bug is not surprising given even simpler type checkers have soundness issues. Comparisons to Metamath suggest a preference for airtight foundations, while others propose bounties on proving false to increase trust. The risk of AI-generated proofs exploiting bugs is also raised.
-
-**Tags**: `#formal verification`, `#theorem proving`, `#Lean`, `#kernel bug`, `#soundness`
-
----
-
 <a id="item-3"></a>
-## [The Art of 64-bit Assembly, Volume 2: An 800-Page MASM Programming Book](https://nostarch.com/art-64-bit-assembly-v2) ⭐️ 8.0/10
+## [MIT Study: AI Financial Advice Surprisingly Good With Right Questions](https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions) ⭐️ 8.0/10
 
-No Starch Press has published the second edition of &\#x27;The Art of 64-bit Assembly,&\#x27; an 800-page book that teaches 64-bit assembly language programming using Microsoft Macro Assembler \(MASM\) on Windows. This book provides a deep, modern resource for low-level systems programming, essential for understanding performance-critical software, compilers, and security research. It fills a gap for Windows-focused assembly education using MASM&\#x27;s advanced macro features. The 800-page book covers the x86-64 instruction set architecture and leverages MASM&\#x27;s macro language for looping, string processing, and arithmetic. It is designed exclusively for Windows, which may limit its appeal to Linux users.
+An MIT Sloan study reveals that AI can deliver surprisingly effective financial advice when users ask the right questions, sparking a lively Hacker News discussion on its practical applications and limitations. This finding suggests AI could democratize access to financial guidance, potentially reducing reliance on costly human advisors, while also highlighting the importance of prompt engineering and financial literacy. The study did not specify the model used, but Hacker News comments reveal users are already applying AI to portfolio rebalancing, sell decisions, and major purchases. Limitations include lack of personal context and risk-awareness unless explicitly prompted.
 
-hackernews · 0x54MUR41 · Aug 1, 14:09 · [Discussion](https://news.ycombinator.com/item?id=49134599)
+hackernews · foxtrot8672 · Aug 1, 22:25 · [Discussion](https://news.ycombinator.com/item?id=49139102)
 
-**Background**: Assembly language is a low-level programming language that directly controls computer hardware. x86-64 is the 64-bit extension of the x86 instruction set architecture used in most modern processors. Microsoft Macro Assembler \(MASM\) is an assembler for Windows that uses Intel syntax and provides a macro language with advanced features like string processing and looping, making it distinct from other assemblers like GNU Assembler \(GAS\).
+**Background**: Many people have low financial literacy, and traditional financial advisors often charge high fees for standardized advice. Large language models \(LLMs\) can process natural language and generate structured guidance, making them a potential low-cost alternative. However, financial decisions involve risk and personal context, which LLMs lack unless provided.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Microsoft_Macro_Assembler">Microsoft Macro Assembler - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/X86-64">x86-64 - Wikipedia</a></li>
+**Discussion**: The Hacker News community expressed both enthusiasm and caution. Some users are already using AI for practical financial tasks, while others worry about LLMs&\#x27; lack of &\#x27;skin in the game&\#x27; and inability to handle complex trade-offs. Overall, the sentiment is that AI will disrupt financial planning but cannot replace human expertise entirely.
 
-</ul>
-</details>
-
-**Discussion**: Community discussion was polarized: some criticized the book&\#x27;s marketing copy referencing AI, while others debated the choice of MASM over Linux-friendly assemblers. Many acknowledged the value of learning assembly today, but wished for a Linux equivalent. Some commenters provided technical insights about MASM&\#x27;s advantages, like its macro language features, compared to GNU Assembler&\#x27;s limitations.
-
-**Tags**: `#Assembly`, `#Programming`, `#Systems Programming`, `#x86-64`, `#Book`
+**Tags**: `#AI`, `#finance`, `#personal-finance`, `#LLM`, `#financial-literacy`
 
 ---
 
 <a id="item-4"></a>
-## [How Google&\#x27;s Actions Contributed to the Decline of RSS Feeds](https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds) ⭐️ 8.0/10
+## [Postmortem for Kernel Soundness Bug \#14576 in Lean 4 Proof Assistant](https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/) ⭐️ 8.0/10
 
-The article &\#x27;How Google helped destroy adoption of RSS feeds&\#x27; offers a retrospective analysis of Google&\#x27;s role in the decline of RSS, specifically through the shutdown of Google Reader and other strategic moves, arguing that this contributed to the rise of closed web platforms. This analysis matters because it highlights the shift from an open, decentralized web enabled by RSS to walled gardens dominated by a few platforms, affecting how users consume content and how creators distribute it. It resonates with enduring nostalgia for the early internet and raises concerns about the current ad-driven, closed ecosystem. The article details that Google closed Google Reader on July 1, 2013, citing declining usage while simultaneously pushing its Google+ social network. It also mentions that Mozilla removed Live Bookmarks and RSS feed subscriptions from Firefox 64, further weakening the RSS ecosystem.
+A postmortem analysis of Lean 4 kernel soundness bug \#14576 reveals that two independent bugs in separate checkers could be combined to break the proof assistant&\#x27;s soundness, allowing a malicious metaprogram to forge proofs of False. This incident highlights that even formally verified kernels can harbor subtle bugs, reinforcing the need for defense-in-depth like independent checkers and continuous fuzzing, and sparks discussion about the trustworthiness of formal verification in practice. The exploit required two distinct bugs: one in the kernel&\#x27;s reduction checker and another in the external checker, making it detectable by an independent kernel; the bugs were fixed, and users are advised to update both Lean 4 and the external checker to current versions.
 
-hackernews · pudgywalsh · Aug 1, 18:07 · [Discussion](https://news.ycombinator.com/item?id=49136821)
+hackernews · juhopitk · Aug 1, 18:32 · [Discussion](https://news.ycombinator.com/item?id=49137060)
 
-**Background**: RSS \(Really Simple Syndication\) is a standardized web feed format that allows users to subscribe to website updates and read them in a single aggregator, avoiding the need to visit each site manually. Google Reader was the most popular RSS aggregator, launched in 2005, and its shutdown in 2013 removed a central tool that many relied on. The article examines how Google&\#x27;s decision, along with other platform moves, accelerated the transition from open syndication to algorithm-driven, closed platforms like social media feeds.
+**Background**: Lean 4 is a proof assistant and functional programming language based on the Calculus of Inductive Constructions, enabling users to write mathematical proofs and formally verify software. Its kernel is the trusted code base that checks proof correctness; a soundness bug means the kernel could accept an invalid proof, potentially allowing false theorems to be proven. Formal verification aims to provide mathematical certainty, but such bugs remind us that implementations can still have flaws.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/RSS_feed">RSS feed</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Google_Reader">Google Reader</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lean_%28proof_assistant%29">Lean (proof assistant) - Wikipedia</a></li>
+<li><a href="https://freenode.net/article/lean-4-kernel-bug-lets-metaprograms-forge-proofs-of-false">Lean 4 kernel bug lets metaprograms forge proofs of False</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Formal_verification">Formal verification - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members expressed nostalgia for the early internet, criticized Google&\#x27;s disingenuous reasoning for shutting down Reader while pushing Google+, and noted that RSS remains viable and easy to implement. They also lamented the broader decline of open web standards, pointing to Mozilla&\#x27;s removal of RSS features. The overall sentiment is one of sadness and critique, but with some optimism about RSS&\#x27;s potential revival.
+**Discussion**: Community members emphasized that the bug reinforces the importance of independent kernel checking, noting that similar soundness issues occur in type checkers like Rust&\#x27;s. Some argued that the potential for such bugs is a drawback of complex proof assistants like Lean, suggesting simpler systems like Metamath as alternatives. A Knuth quote about proved code still having bugs was widely appreciated.
 
-**Tags**: `#RSS`, `#Google`, `#open web`, `#internet history`, `#tech nostalgia`
+**Tags**: `#formal verification`, `#proof assistants`, `#software bugs`, `#soundness`, `#Lean`
 
 ---
 
 <a id="item-5"></a>
-## [RipGrep&\#x27;s musl binary segfaults during large searches traced to kernel bug](https://github.com/BurntSushi/ripgrep/issues/3494) ⭐️ 8.0/10
+## [DeepSeek-V4-Flash-0731: 304B Model with Top Value-per-Intelligence and Agentic Skills](https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything) ⭐️ 8.0/10
 
-Ripgrep&\#x27;s musl-linked binary unexpectedly segfaults during very large searches, leading to a deep investigation that uncovered a Linux kernel race condition and sparked an AI-generated analysis by dfoxfranke, with a kernel patch from Andy Lutomirski addressing the issue. The issue undermines ripgrep&\#x27;s reliability in musl-based environments, and the underlying kernel race condition could affect many programs that perform large file-backed memory mappings, while the AI-generated analysis demonstrates both the potential and limitations of AI in low-level debugging. The segmentation fault is triggered specifically by musl&\#x27;s default mallocng allocator, which struggles with memory allocation contention under multi-threaded I/O; the root cause is a race condition in the Linux kernel&\#x27;s mmap/remap handling, and a patch by Andy Lutomirski addresses it. The AI-generated analysis, while flawed, provided a detailed breakdown of the kernel stack trace.
+DeepSeek released V4-Flash-0731, a 304-billion-parameter model with substantially enhanced agentic capabilities, priced at $0.14 per million input tokens and $0.27 per million output tokens. According to Artificial Analysis, it currently offers the best value-per-intelligence ratio among available models. This release sets a new standard for cost-efficient AI, making advanced agentic capabilities accessible at a fraction of the cost of much larger models. It could accelerate adoption in applications where budget and performance must be balanced, and pressure competitors to lower prices. The model is 304B parameters, uses 167GB on Hugging Face, and sits at the far left edge of the Artificial Analysis cost-intelligence chart, indicating unmatched value. It supports adjustable reasoning effort; Simon Willison&\#x27;s test showed that while default reasoning produced a poor pelican drawing, using high reasoning effort significantly improved output quality.
 
-hackernews · throwaway2037 · Aug 1, 12:34 · [Discussion](https://news.ycombinator.com/item?id=49133889)
+rss · Simon Willison · Jul 31, 23:59
 
-**Background**: musl is a lightweight C standard library designed for static linking, offering a minimal footprint and simplicity, commonly used in containers and embedded systems. ripgrep is a fast line-oriented search tool that recursively searches directories, often used for large codebases. A segmentation fault \(segfault\) occurs when a program tries to access memory that it is not allowed to, often due to a bug in the program or the underlying system. The bug was found in ripgrep&\#x27;s musl binary, pointing to an interaction between musl&\#x27;s memory allocator and the Linux kernel&\#x27;s memory management, which was eventually traced to a kernel race condition.
+**Background**: Agentic AI refers to systems that can autonomously plan, reason, and execute tasks with minimal human guidance, going beyond simple text generation. The Artificial Analysis Intelligence Index is a composite benchmark that evaluates models across reasoning, knowledge, coding, and agentic tasks, scaled from 0 to 100. The cost per intelligence index task metric helps compare models&\#x27; efficiency, showing how much each unit of capability costs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Musl">musl - Wikipedia</a></li>
-<li><a href="https://musl.libc.org/">musl libc</a></li>
+<li><a href="https://www.ibm.com/think/topics/agentic-ai">What is Agentic AI? | IBM</a></li>
+<li><a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index">Artificial Analysis Intelligence Index | Artificial Analysis</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments included a kernel developer noting the AI-generated analysis was &\#x27;studious but pretty bad&\#x27;, and a user suggested ripgrep should replace musl&\#x27;s default allocator for better multi-threaded performance. Others cautioned that the I/O pattern could be problematic on HPC cluster filesystems, though the root cause is the kernel bug. Overall, the discussion was technically deep and collaborative.
-
-**Tags**: `#ripgrep`, `#bug`, `#musl`, `#segfault`, `#performance`
+**Tags**: `#LLM`, `#DeepSeek`, `#model release`, `#agentic AI`, `#cost-effectiveness`
 
 ---
 
 <a id="item-6"></a>
-## [NetBSD 11.0 Released with RISC-V Support, MicroVM Kernel, and Vintage Hardware Improvements](https://blog.netbsd.org/tnf/entry/netbsd_11_0_released) ⭐️ 8.0/10
+## [Oxide and Friends: The Open Weight Revolution with Simon Willison](https://simonwillison.net/2026/Jul/31/oxide-and-friends/#atom-everything) ⭐️ 8.0/10
 
-NetBSD 11.0 has been officially released, introducing a new port for the open RISC-V architecture, a microvm kernel for x86 that boots in approximately 10 ms, and significantly enhanced compatibility with older hardware platforms like m68k and alpha. This release underscores NetBSD&\#x27;s commitment to supporting diverse architectures, from modern RISC-V systems to vintage computers, and the microvm kernel opens up possibilities for rapid, lightweight virtualization akin to container-like performance with full kernel isolation. It strengthens the BSD ecosystem&\#x27;s relevance in embedded and retrocomputing niches. The microvm kernel is a specialized x86 variant that achieves ultra-fast boot times suitable for microservices and sandboxed workloads; the npf firewall now supports layer 2 and user/group filtering. The RISC-V port is a first for NetBSD, utilizing the open ISA that is gaining traction in embedded and server markets.
+Simon Willison joined the Oxide and Friends podcast to discuss a landmark week in AI, where the open-weight model Kimi K3 matched proprietary frontier models, and significant cybersecurity and policy developments occurred. The conversation also revisited 2026 predictions and noted that the fast pace of AI meant newer releases like DeepSeek V4 Flash were already beyond the discussion. This discussion is significant because it features Simon Willison, a respected voice in AI, analyzing the open-weight revolution that is democratizing access to advanced AI and challenging the dominance of proprietary models. The conversation also highlights the intertwined cybersecurity and policy dimensions, offering a comprehensive view of the current AI landscape. Kimi K3 is the first open-weight model with 2.8 trillion parameters, while DeepSeek V4 Flash, released on the same day as the podcast, is a 284B-parameter MoE model with a 1M-token context, both illustrating the rapid pace. The policy letter gathered support from most major AI companies, but Anthropic notably declined.
 
-hackernews · jaypatelani · Aug 1, 17:56 · [Discussion](https://news.ycombinator.com/item?id=49136736)
+rss · Simon Willison · Jul 31, 21:33
 
-**Background**: RISC-V is a free and open instruction set architecture \(ISA\) developed at UC Berkeley, offering a royalty-free alternative to proprietary ISAs like x86 and ARM. NetBSD is a highly portable Unix-like operating system known for its clean design and broad hardware support, often favored for legacy and embedded systems. A microvm is a minimal virtual machine that provides strong isolation but with minimal memory and boot overhead, making it ideal for running many isolated workloads efficiently.
+**Background**: Open weight models are AI models whose learned parameters are publicly released, allowing anyone to download and run them, though licensing may restrict modification. Kimi K3, developed by Moonshot AI, is a 2.8 trillion parameter multimodal model that has demonstrated performance competitive with proprietary frontier models like GPT-5.5. DeepSeek V4 Flash, released on July 31, 2026, is a 284 billion parameter mixture-of-experts model with a 1 million token context, emphasizing efficiency. The &\#x27;Open Weights and American AI Leadership&\#x27; letter, published by Microsoft, argues that open weight models are crucial for making advanced AI accessible and maintaining American leadership, and was signed by many major AI companies except Anthropic.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/RISC-V">RISC-V</a></li>
-<li><a href="https://northflank.com/blog/what-is-a-microvm">What is a microVM? | Blog — Northflank</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open-weight_model">Open-weight model</a></li>
+<li><a href="https://www.kimi.com/blog/kimi-k3">Kimi K 3 Tech Blog: Open Frontier Intelligence</a></li>
+<li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash">deepseek-ai/DeepSeek-V4-Flash · Hugging Face</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters praised NetBSD&\#x27;s continued support for vintage hardware, contrasting it with Linux&\#x27;s dropping of legacy platforms, and noted that the new npf features and microvm kernel are valuable additions. Some broad questions about the current state of the BSDs were raised, reflecting curiosity about their relevance compared to Linux.
-
-**Tags**: `#netbsd`, `#bsd`, `#operating-systems`, `#release`, `#retrocomputing`
+**Tags**: `#open-weight`, `#AI`, `#podcast`, `#Simon-Willison`, `#open-source`
 
 ---
 
 <a id="item-7"></a>
-## [DeepSeek V4 Flash Released: 304B Agentic Model with Unbeatable Cost-Performance](https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything) ⭐️ 8.0/10
+## [VLMs Score High on Benchmarks by Erasing Clinical Terms and Introducing Biased Hallucinations](https://www.reddit.com/r/MachineLearning/comments/1vcipzz/vlms_can_score_well_on_benchmarks_while_silently/) ⭐️ 8.0/10
 
-DeepSeek has released DeepSeek-V4-Flash-0731, a 304 billion parameter model with substantially enhanced agentic capabilities. The model is available on Hugging Face and through API providers like OpenRouter, with pricing at $0.14 per million input tokens and $0.27 per million output tokens. DeepSeek V4 Flash offers an exceptional cost-performance ratio, currently ranking as possibly the best value-per-intelligence model. It outperforms larger models like MiniMax M3 in intelligence benchmarks while costing a fraction of the price, which could make advanced agentic AI accessible to a wider range of developers and applications. The model weighs 167GB and can be run locally or via APIs. On the Artificial Analysis Intelligence Index, it achieves a score of 50 at roughly $0.028 per task, occupying a unique position on the Pareto line where no other model offers similar intelligence at that cost. Additionally, image generation quality is sensitive to the reasoning effort parameter, with &\#x27;high&\#x27; reasoning yielding significantly better results than the default.
+A new paper reveals that vision-language models \(VLMs\) for chest X-ray report generation can achieve high scores on conventional benchmarks by erasing important clinical terms and introducing biased hallucinations, making the reports less clinically useful. The authors propose a framework to quantify this erasure and bias. This finding exposes a critical flaw in current evaluation metrics for medical AI, which could lead to overconfident deployment of unsafe models that generate inaccurate or biased reports. It highlights the urgent need for better evaluation methods to ensure patient safety and clinical trustworthiness. The paper focuses on radiology report generation using chest X-rays and introduces a measurement framework that specifically detects term erasure and biased hallucination. The framework is detailed in arXiv preprint 2603.01625.
 
-rss · Simon Willison · Jul 31, 23:59
+reddit · r/MachineLearning · /u/ade17\_in · Aug 1, 09:27
 
-**Background**: Agentic capabilities refer to an AI model&\#x27;s ability to autonomously plan and execute multi-step tasks, often using tools and external APIs. The Artificial Analysis Intelligence Index is a composite benchmark that evaluates models across reasoning, coding, knowledge, and instruction following, providing a holistic intelligence score. The Pareto line in cost-performance charts marks the optimal trade-off between intelligence and cost, with models on the line being the most efficient for their price point. MiniMax M3 is a 428 billion parameter model developed by Chinese AI company MiniMax, known for its large context window and multimodal capabilities.
+**Background**: Vision-language models \(VLMs\) are AI systems that can interpret both images and text, enabling tasks like generating medical reports from X-rays. Radiology report generation aims to automate report writing to assist radiologists, but current evaluation metrics such as BLEU or ROUGE often fail to assess clinical correctness. These metrics can reward repetitive or normal templates, masking the absence of important clinical terms and the presence of hallucinations.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index">Artificial Analysis Intelligence Index | Artificial Analysis</a></li>
-<li><a href="https://en.wikipedia.org/wiki/MiniMax_M3">MiniMax M3</a></li>
-<li><a href="https://www.ibm.com/think/topics/agentic-ai">What is Agentic AI? | IBM</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vision_Language_Models_%28VLM%29">Vision Language Models (VLM)</a></li>
+<li><a href="https://arxiv.org/abs/2405.10842">[2405.10842] Automated Radiology Report Generation: A Review ... UniRG: Scaling medical imaging report generation with ... Automated Structured Radiology Report Generation - ACL Anthology Radiology Report Generation - arXiv.org Medical radiology report generation: A systematic review of ... Radiology report generation with a learned knowledge base and ... Collaboration between clinicians and vision–language models ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#DeepSeek`, `#LLM`, `#agentic capabilities`, `#cost-effectiveness`, `#model release`
+**Tags**: `#VLMs`, `#medical imaging`, `#evaluation metrics`, `#bias`, `#radiology report generation`
 
 ---
 
 <a id="item-8"></a>
-## [Stateless MCP 2.0 Reignites Simon Willison&\#x27;s Interest, Inspires New Tools](https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything) ⭐️ 8.0/10
+## [The Art of 64-bit Assembly Book Sparks Community Debate](https://nostarch.com/art-64-bit-assembly-v2) ⭐️ 7.0/10
 
-The stateless MCP 2.0 specification, released on July 28, 2026, has reignited Simon Willison&\#x27;s enthusiasm for the Model Context Protocol, leading him to develop mcp-explorer \(a CLI tool for exploring MCP servers\) and datasette-mcp \(a Datasette integration\). The shift to stateless MCP simplifies client and server implementation significantly, eliminating session management and making it more suitable for scalable web applications. This re-engagement by a prominent developer signals renewed momentum for MCP as a safer, more auditable alternative to giving agents unrestricted shell access. The new stateless approach replaces the two-request legacy initialization \(first get a session ID, then call a tool\) with a single HTTP request that includes protocol version and method in headers and client info in the JSON body. Simon also built mcp-explorer because no good interactive CLI tool existed, and details how stateless MCP lowers the barrier for building and using MCP servers.
+Randall Hyde&\#x27;s comprehensive 800-page book &\#x27;The Art of 64-bit Assembly&\#x27; \(Volume 1\) has been released, sparking a lively Hacker News discussion. The conversation focused on the book&\#x27;s AI-generated marketing introduction and its choice of the Microsoft Macro Assembler \(MASM\) over Linux alternatives. Assembly language is essential for understanding computer architecture, low-level security, and performance optimization. A modern resource like this book helps programmers master x86-64 assembly, but the community&\#x27;s reaction highlights the value of authentic technical communication and cross-platform tooling. The book, published by No Starch Press, uses MASM and targets Windows, which drew criticism from Linux users. The AI-generated marketing text was seen as undermining the book&\#x27;s low-level craftsmanship, while the volume&\#x27;s 800-page length reflects substantial depth.
+
+hackernews · 0x54MUR41 · Aug 1, 14:09 · [Discussion](https://news.ycombinator.com/item?id=49134599)
+
+**Background**: x86-64 is the 64-bit extension of the x86 instruction set used in most modern PCs and servers. Assembly language is a low-level, human-readable representation of machine code. MASM is Microsoft&\#x27;s assembler, while GNU Assembler \(GAS\) is common on Linux. Randall Hyde previously authored &\#x27;The Art of Assembly Language,&\#x27; which used a high-level assembler; this new volume focuses on 64-bit with MASM.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/X86-64">X86-64</a></li>
+<li><a href="https://cs.brown.edu/courses/csci1260/spring-2021/lectures/x86-64-assembly-language-reference.html">x86-64 assembly language reference</a></li>
+<li><a href="https://sonictk.github.io/asm_tutorial/">Understanding Windows x64 Assembly</a></li>
+
+</ul>
+</details>
+
+**Discussion**: The discussion was dominated by meta-commentary: many criticized the AI-generated marketing introduction, finding it off-putting and contrary to the book&\#x27;s ethos. Others debated the choice of MASM over Linux-compatible assemblers, and some questioned the relevance of learning assembly in the era of AI. A few users defended the book&\#x27;s value and expressed genuine interest in its content.
+
+**Tags**: `#assembly`, `#book`, `#programming`, `#low-level`, `#x86-64`
+
+---
+
+<a id="item-9"></a>
+## [OpenAI President: People Dislike Being Contacted by Coworker&\#x27;s AI Assistants](https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything) ⭐️ 7.0/10
+
+OpenAI President and Co-Founder Greg Brockman shared that many OpenAI employees connect their ChatGPT to Slack, but people strongly dislike being contacted by a coworker&\#x27;s AI assistant, even when they would happily help the human coworker directly. This insight reveals that people deeply value human relationships and helping each other, and suggests that AI should be designed to augment human interaction rather than act as a layer separating people; it has significant implications for how AI agents are deployed in collaborative workplaces. The observation came from internal OpenAI use of ChatGPT&\#x27;s Slack integration; the behavior shows that people prefer direct human communication and may reject AI-mediated requests even when the task is the same.
+
+rss · Simon Willison · Aug 1, 22:29
+
+**Background**: Slack is a popular team messaging platform. ChatGPT can be integrated into Slack as an AI assistant, allowing it to send messages, ask for help, or automate tasks on behalf of a user. OpenAI&\#x27;s own employees have been experimenting with this integration, giving rise to this social dynamic observation.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://medium.com/@reveation-labs/chatgpt-slack-integration-mastering-team-communication-8123bf3d1c9f">ChatGPT Slack Integration : Mastering Team Communication | Medium</a></li>
+<li><a href="https://www.eesel.ai/blog/chatgpt-slack">The ultimate guide to using ChatGPT Slack | eesel AI</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#ai-ethics`, `#generative-ai`, `#human-ai-interaction`, `#openai`, `#social-dynamics`
+
+---
+
+<a id="item-10"></a>
+## [OpenAI&\#x27;s Astra Model Solves 10 Unsolved Math Problems for Under $2,000 Each](https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything) ⭐️ 7.0/10
+
+OpenAI used an internal version of its upcoming Astra model to solve ten long-standing mathematical problems that had seen no progress for at least a decade, spending less than $2,000 in GPT-5.6 Sol tokens per problem. The solutions were formalized in Lean 4, with a paper and an LLM-generated reasoning walkthrough released, but the company did not disclose how many additional problems were attempted without success. This demonstrates that AI models can now contribute to high-level mathematical research, potentially accelerating progress in the field. It also intensifies the AI arms race between companies like OpenAI and Anthropic, and has triggered a &\#x27;Deep Blue&\#x27; moment among mathematicians, prompting reflection on the role of human creativity in a field where AI can solve long-standing open problems. The proofs were formalized in Lean 4, a proof assistant that ensures mathematical correctness. The cost was based on GPT-5.6 Sol token pricing \($5/1M input, $30/1M output\). OpenAI did not reveal the number of failed attempts, and the exact prompts used were not released, despite the model&\#x27;s reasoning traces being reconstructed into a walkthrough PDF.
+
+rss · Simon Willison · Aug 1, 20:34
+
+**Background**: Lean 4 is a proof assistant and programming language that allows mathematicians to formally verify proofs, ensuring they are free of errors. Deep Blue, the 1997 chess computer that defeated Garry Kasparov, became a symbol of AI surpassing human expertise, causing a crisis of meaning for chess players. Ahead of Astra&\#x27;s release, OpenAI describes it as a model family designed for long-running, complex tasks, possibly using multiple agents. Mathematician Terence Tao has envisioned a future of &\#x27;big mathematics&\#x27; where humans and AI collaborate, with AI handling technical grunt work.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/">OpenAI announces its &quot;next major model&quot; Astra by dropping ten previously unsolved math solutions</a></li>
+<li><a href="https://openai.com/index/gpt-5-6/">GPT‑5.6: Frontier intelligence that scales with your ambition</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#mathematics`, `#OpenAI`, `#theoretical computer science`, `#commentary`
+
+---
+
+<a id="item-11"></a>
+## [Stateless MCP 2.0 Reignites Interest and Inspires New Tools](https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything) ⭐️ 7.0/10
+
+Simon Willison&\#x27;s interest in MCP was revived by the new stateless MCP 2.0 specification, which replaces session-based stateful requests with single stateless HTTP calls, greatly reducing complexity. He built mcp-explorer, a CLI tool for probing MCP servers, and datasette-mcp as a result. The stateless design simplifies client and server implementation, making MCP more scalable and easier to audit. This could revive MCP adoption as a safer, more controlled alternative to giving agents full shell and internet access, especially for smaller models running locally. Legacy MCP required two HTTP requests: one to initialize a session and obtain a session ID, and another to call the tool. Stateless MCP condenses this into a single POST request carrying all necessary metadata in headers and the body, eliminating server-side session state.
 
 rss · Simon Willison · Jul 31, 23:13
 
-**Background**: MCP \(Model Context Protocol\) is an open standard introduced by Anthropic in November 2024 to allow LLMs to interact with external tools and data sources. It initially gained huge traction but was later partially eclipsed by Anthropic&\#x27;s Skills, which gave agents terminal access. The original MCP used a stateful protocol requiring session management, adding complexity. The new stateless 2.0 specification removes that overhead, bringing it closer to the simplicity of REST APIs.
+**Background**: MCP \(Model Context Protocol\) is an open standard by Anthropic \(November 2024\) for connecting LLM-powered agents to external tools and data. It was widely adopted but later faced competition from &\#x27;Skills&\#x27; that let agents use a terminal and curl directly. The original protocol was stateful, requiring session management, which added complexity for developers and hindered scalability. The new 2026-07-28 specification makes it stateless, similar to REST, enabling simpler, more scalable interactions.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Model_Context_Protocol">Model Context Protocol</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Stateless_protocol">Stateless protocol</a></li>
-<li><a href="https://modelcontextprotocol.io/docs/getting-started/intro">What is the Model Context Protocol (MCP)? - Model Context Protocol</a></li>
+<li><a href="https://arstechnica.com/ai/2026/07/with-a-stateless-makeover-new-mcp-spec-targets-enterprise-scale/">With a stateless makeover, new MCP spec targets enterprise scale - Ars Technica</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#MCP`, `#AI agents`, `#LLM tools`, `#stateless protocol`, `#Simon Willison`
-
----
-
-<a id="item-9"></a>
-## [KataGo Study Reveals How Go AI Learns Board Symmetry Internally](https://www.reddit.com/r/MachineLearning/comments/1vcrki2/how_symmetric_are_the_insides_of_a_go_network_r/) ⭐️ 8.0/10
-
-David Wu, maintainer of the open-source Go engine KataGo, conducted an interpretability study on how the neural network internally represents the board. He found that largely symmetric representations emerge solely from data augmentation during training, even without explicit symmetry enforcement. This study provides rare insight into the internal workings of a superhuman Go AI, demonstrating that neural networks can learn invariance to board orientation from data augmentation alone. It contributes to the interpretability of deep learning models in spatial reasoning. The study used KataGo, an open-source Go engine trained with 8-fold random rotation/reflection augmentation. One finding was unexpected. The article was created with AI assistance but curated by the author for accessibility, and code is available.
-
-reddit · r/MachineLearning · /u/icosaplex · Aug 1, 16:18
-
-**Background**: KataGo is a free, open-source Go engine that uses deep reinforcement learning, similar to AlphaZero, to achieve superhuman playing strength. The game of Go is played on a square grid, and its rules are symmetric under rotation and reflection of the board. Neural networks for Go typically process the board as an image; they can be trained with data augmentation, where each training sample is randomly rotated or reflected to artificially increase the data variety. This study investigates whether the network&\#x27;s internal activations end up being symmetric or if separate features are learned for each orientation.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/KataGo">KataGo</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Data_augmentation">Data augmentation</a></li>
-<li><a href="https://github.com/lightvector/katago">GitHub - lightvector/KataGo: GTP engine and self-play learning in Go · GitHub</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#Machine Learning`, `#Interpretability`, `#Neural Networks`, `#Game AI`, `#Go`
-
----
-
-<a id="item-10"></a>
-## [VLMs Erase Clinical Terms, Hallucinate Bias in Radiology Reports](https://www.reddit.com/r/MachineLearning/comments/1vcipzz/vlms_can_score_well_on_benchmarks_while_silently/) ⭐️ 8.0/10
-
-A new study reveals that vision-language models \(VLMs\) for chest X-ray report generation systematically erase rare but clinically meaningful terms and introduce hallucinated bias, yet still achieve high scores on standard benchmark metrics. The authors propose a novel framework to quantify this term erasure and biased introduction. This exposes a critical flaw in medical AI evaluation: popular metrics reward bland, repetitive reports that lack clinical utility, potentially misleading model deployment and endangering patient safety. The new measurement framework helps ensure AI-generated reports are truly informative and trustworthy. The paper focuses on radiology report generation \(RRG\) for chest X-rays and introduces a framework to measure how often rare clinical terms are erased and how hallucinated biased terms appear. The preprint is available at arXiv:2603.01625.
-
-reddit · r/MachineLearning · /u/ade17\_in · Aug 1, 09:27
-
-**Background**: Vision-language models \(VLMs\) are AI systems that jointly process images and text, enabling tasks like generating medical reports from X-rays. Standard evaluation metrics such as BLEU, ROUGE, and CIDEr compare generated text to reference reports, but they can be gamed by models that produce safe, repetitive templates while omitting uncommon clinical terms. AI hallucination refers to the generation of false or nonsensical information, which is especially dangerous in clinical settings where patient safety is at stake.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Vision-language_model">Vision-language model</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Hallucination_%28artificial_intelligence%29">Hallucination (artificial intelligence) - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#VLM`, `#Radiology`, `#Evaluation Metrics`, `#Bias`, `#Medical AI`
-
----
-
-<a id="item-11"></a>
-## [MIT Study: AI Financial Advice Effective Only with Expert-Level Questions](https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions) ⭐️ 7.0/10
-
-An MIT study found that AI models provide surprisingly good financial advice, but only when users ask questions in the manner of an expert, mirroring the model&\#x27;s training data. This highlights a critical limitation of large language models: they are most effective for users who already possess domain expertise, potentially widening the gap for novices. It also underscores that AI cannot yet replicate the emotional and behavioral coaching that human financial advisors provide. The study&\#x27;s commenters noted that the model lacks emotional intelligence and struggles with complex trade-offs, which are essential in real-world financial planning. The model&\#x27;s performance is tied to how well the prompt reflects expert discourse, as it was trained on such data.
-
-hackernews · foxtrot8672 · Aug 1, 22:25 · [Discussion](https://news.ycombinator.com/item?id=49139102)
-
-**Background**: Large language models are trained on vast corpora that include expert-written content, so they respond best to queries that resemble that expert style. Financial advice is not just about numbers; it involves understanding a client&\#x27;s emotions, fears, and long-term goals. Traditional financial advisors often act as behavioral coaches, helping clients stay disciplined during market volatility.
-
-**Discussion**: Commenters agreed that the need for expert prompting is a core flaw, and that AI struggles with emotional and behavioral aspects. One noted that financial discussions are often about safety and fear, not money. Another pointed out that AI finds decisions with nested trade-offs difficult, and linked to a personal financial planning skill on GitHub.
-
-**Tags**: `#AI`, `#LLMs`, `#financial-advice`, `#human-ai-interaction`, `#ai-limitations`
+**Tags**: `#MCP`, `#Model Context Protocol`, `#AI agents`, `#stateless protocol`, `#Simon Willison`
 
 ---
 
 <a id="item-12"></a>
-## [Seedance 2.5: ByteDance&\#x27;s One-Take Video Generation with Flexible Referencing](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5) ⭐️ 7.0/10
+## [Transformer Model Predicts Blood Glucose with Uncertainty Quantification](https://www.reddit.com/r/MachineLearning/comments/1vc1txc/i_have_trained_a_model_to_predict_my_blood_sugar_p/) ⭐️ 7.0/10
 
-ByteDance released Seedance 2.5, an AI video generation model that introduces one-take creation and flexible referencing, excelling at action and effect shots but lacking dialogue capabilities. This release demonstrates a shift toward action-focused AI video generation, meeting high demand in China&\#x27;s market, and pushes the boundary of consistent, multi-shot storytelling with precise control. The model excels at generating 30-second videos with audio-video joint generation, but users note high inference costs and a persistent &\#x27;uncanny valley&\#x27; feeling in human faces and movements.
+A Reddit user trained an encoder-only transformer that predicts future blood glucose from past glucose, carbohydrate, and insulin data, using announced meals and basal/bolus insulin. The model incorporates DILATE and pinball loss for uncertainty quantification and operates in Kovachev risk space, and was pretrained on a simulator before fine-tuning on real-world datasets. This project demonstrates how advanced machine learning can be applied to personal health monitoring, potentially improving diabetes management through accurate, uncertainty-aware predictions. It highlights the growing trend of personalized, open-source healthcare AI. The model uses BERT-style bidirectional attention with future blood glucose masked, DILATE loss for median shape/timing, and pinball loss for quantile bands, mixed via Kendall-Gal. The largest version has 17 million parameters, pretrained for 48 hours, fine-tuned in under 10 minutes, and can run on a phone; it currently requires announced carbohydrates and insulin.
 
-hackernews · njaremko · Aug 1, 20:45 · [Discussion](https://news.ycombinator.com/item?id=49138302)
+reddit · r/MachineLearning · /u/0xdeadf1sh · Jul 31, 20:09
 
-**Background**: Seedance is a text-to-video model series from ByteDance, first launched in June 2025 with Seedance 2.0, which went viral for its realistic clips of famous actors and sparked copyright concerns. Seedance 2.5 builds on this with longer native scenes, multi-asset understanding, and editing capabilities, aiming for one-take storytelling.
+**Background**: Blood glucose prediction is critical for managing type 1 diabetes, helping patients anticipate hypo- and hyperglycemia. Transformer architectures, originally designed for natural language processing, can be adapted to time series forecasting. The project uses DILATE loss, which simultaneously penalizes shape and temporal errors, and pinball loss for quantile regression to estimate prediction uncertainty bands. The Kovachev risk space reparameterization transforms glucose readings into a risk-sensitive scale, emphasizing dangerous low and high values. The model was pretrained on a simulator and fine-tuned on public datasets like OhioT1DM, Azt1D, and ShanghaiT1DM.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Seedance_2.0">Seedance 2.0</a></li>
-<li><a href="https://seed.bytedance.com/en/seedance2_5">Seedance 2.5</a></li>
+<li><a href="https://openreview.net/pdf?id=ryxarpcfTB">Re: Shape and Time Distortion Loss for Training Deep Time Series</a></li>
+<li><a href="https://towardsdatascience.com/an-introduction-to-quantile-loss-a-k-a-the-pinball-loss-33cccac378a9/">An Introduction to Quantile Loss, a.k.a. the Pinball Loss | Towards Data Science</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S1474667016416216">Model-Based Control of Type 1 Diabetes in “Risk Space”</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members praised the high quality of sample videos and creative use cases, but criticized the focus on action shots over dialogue, expensive inference, and an unsettling &\#x27;AI look&\#x27; in motion and expressions. Some noted that the model matches the demand for spectacle-driven content in China.
-
-**Tags**: `#AI`, `#video-generation`, `#ByteDance`, `#generative-models`, `#machine-learning`
+**Tags**: `#machine learning`, `#healthcare`, `#transformer`, `#time series`, `#personal project`
 
 ---
 
 <a id="item-13"></a>
-## [Greg Brockman: AI Should Enhance, Not Replace, Human Connection](https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything) ⭐️ 7.0/10
+## [Study Probes Internal Symmetry in KataGo&\#x27;s Neural Network](https://www.reddit.com/r/MachineLearning/comments/1vcrki2/how_symmetric_are_the_insides_of_a_go_network_r/) ⭐️ 7.0/10
 
-Greg Brockman, President of OpenAI, shared that people at OpenAI dislike receiving task requests from a coworker&\#x27;s ChatGPT assistant, even if they would happily help if asked directly. This insight underscores the value of human relationships over AI-mediated interactions. This observation from a leading AI company&\#x27;s co-founder reveals a critical social dynamic: if deployed carelessly, AI tools can erode trust and collaboration in the workplace. It signals that developers must design AI to enhance human connection rather than provide a substitute that alienates users. The observation came from OpenAI&\#x27;s internal Slack integration, where ChatGPT can autonomously message colleagues. Brockman&\#x27;s insight highlights that the same work, when requested by an AI instead of a person, triggers a negative reaction, showing that communication medium significantly affects willingness to help.
+A researcher published an interpretability study on the open-source Go engine KataGo, investigating how its neural network learns symmetric board representations despite only using stochastic 8-fold data augmentation during training. This work sheds light on how deep neural networks generalize and learn invariances, a central question in interpretability and a potential guide for training more robust AI systems. The study was largely AI-driven with human direction, but carefully polished to be accessible. The code is openly available, and the analysis uncovered an unexpected finding about the network&\#x27;s internal symmetry.
 
-rss · Simon Willison · Aug 1, 22:29
+reddit · r/MachineLearning · /u/icosaplex · Aug 1, 16:18
 
-**Background**: ChatGPT is a generative AI chatbot developed by OpenAI, widely used for drafting messages and automating workflows. Integrating AI with communication platforms like Slack allows AI assistants to send messages on behalf of users, which can sometimes lead to impersonal interactions. Greg Brockman co-founded OpenAI and his insights come from observing internal use patterns, tying into broader discussions about AI ethics and the impact of automation on social dynamics.
+**Background**: Go is a board game with full symmetry under the 8 dihedral transformations \(rotations and reflections\). KataGo is a top open-source Go engine using deep neural networks trained via self-play reinforcement learning, similar to AlphaZero. Neural network interpretability research aims to make the &\#x27;black box&\#x27; decisions of such models understandable. Typically, symmetric constraints are not hard-coded; instead, training data is augmented with random flips and rotations.
 
-**Tags**: `#ai-ethics`, `#human-ai-interaction`, `#social-dynamics`, `#openai`, `#generative-ai`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/KataGo">KataGo</a></li>
+<li><a href="https://arxiv.org/pdf/2012.14261">A Survey on Neural Network Interpretability</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#deep learning`, `#neural network interpretability`, `#Go`, `#symmetry`, `#game AI`
 
 ---
 
 <a id="item-14"></a>
-## [Open Weight Revolution Discussed on Oxide and Friends Podcast](https://simonwillison.net/2026/Jul/31/oxide-and-friends/#atom-everything) ⭐️ 7.0/10
+## [How Google&\#x27;s Shutdown of Reader Hurt RSS Adoption](https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds) ⭐️ 6.0/10
 
-Simon Willison joined the Oxide and Friends podcast to discuss the Kimi K3 open-weight model matching proprietary frontier AI, recent cybersecurity incidents, and a public letter on open weights and US AI leadership signed by many AI leaders but not Anthropic. The discussion highlights the rapid closing of the gap between open-weight and proprietary models, along with the cybersecurity and policy debates that will shape the future of AI development and regulation. The podcast covered Kimi K3 \(a 2.8T-parameter open-weight model with 1M-token context\), the DeepSeek V4 Flash 0731 model \(284B MoE with 13B active params\), and the accidental OpenAI-Hugging Face cyberattack. It also noted Anthropic&\#x27;s refusal to sign the Microsoft-led open-weights policy letter.
+The blog post examines how Google&\#x27;s 2013 shutdown of Google Reader, combined with its lack of support for RSS, contributed to the decline of RSS feeds and the centralization of the web. The decline of RSS represents a shift from open, decentralized web standards to centralized platforms controlled by a few corporations, reducing information diversity and user control over content sources. Google Reader launched in 2005 and was shut down in July 2013, citing declining usage. The post argues that killing the dominant aggregator discouraged content creators from providing RSS feeds, accelerating the shift to social media platforms; community members note that RSS is still alive but far less visible.
 
-rss · Simon Willison · Jul 31, 21:33
+hackernews · pudgywalsh · Aug 1, 18:07 · [Discussion](https://news.ycombinator.com/item?id=49136821)
 
-**Background**: Open-weight models publicly release a trained AI model&\#x27;s parameters, allowing anyone to download and use them, while licenses vary. Kimi K3 from Moonshot AI is a recent example showing open-weight models can rival closed ones like GPT-4. DeepSeek V4 Flash is a fast-thinking model for coding and reasoning. The US AI policy debate centers on whether open-weight models strengthen or threaten American leadership, with Microsoft advocating for openness and Anthropic opposing it.
+**Background**: RSS \(Really Simple Syndication\) is an XML-based protocol for subscribing to website updates, allowing users to read posts in a news aggregator. Google Reader, launched in 2005, became a popular web-based feed reader that centralized millions of subscriptions. Its closure in 2013 was a major blow to RSS adoption, pushing many users toward social media for news consumption.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Open-weight_model">Open-weight model</a></li>
-<li><a href="https://www.kimi.com/blog/kimi-k3">Kimi K3 Tech Blog: Open Frontier Intelligence</a></li>
-<li><a href="https://openrouter.ai/deepseek/deepseek-v4-flash-0731">DeepSeek V 4 Flash 0731 - API Pricing &amp; Benchmarks | OpenRouter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RSS">RSS - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Google_Reader">Google Reader</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#open-weight-models`, `#AI`, `#podcast`, `#cybersecurity`, `#AI-policy`
+**Discussion**: Commenters expressed nostalgia for the early web and frustration with Google&\#x27;s decision, calling the declining usage excuse &\#x27;obviously fake&\#x27; as they pushed Google+. Some noted that RSS is not dead, pointing to continued use in apps like NetNewsWire and platforms like Shopify supporting feeds. Others lamented the shift to walled gardens.
+
+**Tags**: `#RSS`, `#open web`, `#Google`, `#web history`, `#decentralization`
 
 ---
 
 <a id="item-15"></a>
-## [smevals: A Lightweight Eval Suite for AI Models, Prompts, and Harnesses](https://simonwillison.net/2026/Jul/31/smevals/#atom-everything) ⭐️ 7.0/10
+## [smevals: Lightweight Eval Suite for AI Models, Prompts, and Harnesses](https://simonwillison.net/2026/Jul/31/smevals/#atom-everything) ⭐️ 6.0/10
 
-smevals is a new open-source tool that lets developers quickly build and run evaluation suites \(evals\) to test AI model capabilities across different configurations, using a simple YAML-based directory structure and a command-line interface powered by uvx. It simplifies the process of evaluating LLMs, agent harnesses, and prompt variations, making it easier for teams to benchmark model performance and catch regressions without heavy infrastructure. This lightweight approach could accelerate iteration cycles in AI development. The tool separates runs from grading, supports custom graders with check scripts, and can generate static HTML reports or serve a local web dashboard. It uses uvx for ephemeral execution, and its vocabulary defines evals, tasks, configs, runs, graders, and checks.
+Simon Willison and Prime Radiant have launched smevals, a lightweight open-source framework for creating and running custom evaluation suites to compare AI model configurations, prompts, and harnesses. It provides a simple, reproducible way for applied AI practitioners to evaluate models on specific tasks, helping them make informed decisions about which models and configurations to use, and lowering the barrier to entry for LLM evaluation. smevals uses uvx for ephemeral execution, defines evals as YAML directories, separates run and grading steps, and can output a local web dashboard or static HTML. It introduces a structured vocabulary: evals, tasks, configs, runs, graders, checks, and checkers.
 
 rss · Simon Willison · Jul 31, 21:15
 
-**Background**: AI evaluation suites help developers measure model performance on specific tasks, similar to unit tests in software. smevals is a lightweight alternative to heavier frameworks like EleutherAI&\#x27;s lm-evaluation-harness, focusing on flexibility and ease of use. The tool relies on uvx, a command from the uv Python package manager, which runs Python tools in isolated environments without manual installation. This design allows smevals to be executed with a single command without permanent setup.
+**Background**: In AI model development, evaluation suites \(evals\) are used to benchmark model performance on specific tasks. Existing frameworks like EleutherAI&\#x27;s lm-evaluation-harness provide standardized evaluation, but they can be complex. smevals aims to offer a simpler, more flexible alternative for custom evaluations. The tool uvx is a Python runner that creates temporary isolated environments, allowing smevals to run without permanent installation.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Demystifying evals for AI agents \ Anthropic</a></li>
-<li><a href="https://slyracoon23.github.io/blog/posts/2025-03-21_eleutherai-evaluation-methods.html">EleutherAI’s lm- evaluation - harness : Architecture and Configuration...</a></li>
-<li><a href="https://docs.bswen.com/blog/2026-03-05-uvx-commands-guide/">How to Run Python CLI Tools with uvx : Complete Command... | BSWEN</a></li>
+<li><a href="https://pydevtools.com/handbook/reference/uvx/">uvx: Run Python CLI Tools in Isolated Environments</a></li>
+<li><a href="https://deepeval.com/blog/what-is-an-eval-harness">Eval harness: What it is, how to use it, and why you should care | DeepEval - The LLM Evaluation Framework</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#evals`, `#llm`, `#ai`, `#tools`, `#software`
-
----
-
-<a id="item-16"></a>
-## [Reddit User Trains Transformer to Predict Blood Glucose with DILATE and Pinball Losses](https://www.reddit.com/r/MachineLearning/comments/1vc1txc/i_have_trained_a_model_to_predict_my_blood_sugar_p/) ⭐️ 7.0/10
-
-A Reddit user built an encoder-only transformer that forecasts blood glucose up to 2 hours ahead by consuming past glucose, carbs, and insulin data, along with future announced carbs and insulin, and trained it with DILATE loss for shape/time alignment and pinball loss for uncertainty bands, all in the Kovatchev risk space. This personal project demonstrates how advanced deep learning architectures and specialized loss functions can be applied to individualized diabetes management, potentially reducing hypoglycemic risk and improving automated insulin delivery systems. The model uses bidirectional attention with future blood glucose masked, reparameterizes blood glucose to the \[40,400\] range in Kovatchev risk space, and combines DILATE and pinball losses via Kendall-Gal mixing; four sizes were trained, with the largest at 17M parameters and pretraining taking 48 hours, while a nano version has under 40K parameters.
-
-reddit · r/MachineLearning · /u/0xdeadf1sh · Jul 31, 20:09
-
-**Background**: DILATE loss is a combination of shape and temporal distortion terms that penalizes both waveform difference and timing mismatch in time series forecasting, making it suitable for aligning predicted glucose curves. Pinball loss \(quantile loss\) is used for quantile regression, enabling the model to output uncertainty bands \(e.g., median, upper and lower quantiles\). The Kovatchev risk space transforms blood glucose values to reflect the asymmetric clinical risk of hypoglycemia and hyperglycemia, so a prediction error near low glucose levels is penalized more heavily.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.emergentmind.com/topics/distortion-loss-incorporating-shape-and-time-dilate">DILATE : Loss for Shape &amp; Time in Forecasting</a></li>
-<li><a href="https://towardsdatascience.com/an-introduction-to-quantile-loss-a-k-a-the-pinball-loss-33cccac378a9/">An Introduction to Quantile Loss, a.k.a. the Pinball Loss | Towards Data Science</a></li>
-<li><a href="https://www.researchgate.net/profile/Boris-Kovatchev">Boris KOVATCHEV | Ph.D. | University of Virginia, Charlottesville | UVa | Center for Diabetes Technology (CDT) | Research profile</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#machine learning`, `#healthcare`, `#transformers`, `#time series`, `#diabetes`
-
----
-
-<a id="item-17"></a>
-## [datasette-apps 0.2a0 Adds Debug and List Tools for Agent](https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything) ⭐️ 6.0/10
-
-The datasette-apps 0.2a0 release introduces two new tools for Datasette Agent: app\_debug\(\) allows the agent to invisibly test an app in a sandboxed iframe, and app\_list\(\) lets the agent list apps the user can edit. These tools enable AI agents to actively debug and manage applications inside Datasette, moving from simple code generation to interactive testing and orchestration. app\_debug\(\) displays the app in an iframe with opacity:0 and pointer-events:none, then executes agent-provided JavaScript for smoke testing and element measurement, relying on the new context.browser\_task\(\) mechanism in datasette-agent 0.4a0.
-
-rss · Simon Willison · Aug 1, 21:23
-
-**Background**: Datasette is an open-source tool for exploring and publishing data. Datasette Agent is an LLM-powered assistant that can query and visualize data. The datasette-apps plugin lets users host lightweight HTML/JavaScript applications inside Datasette. A sandboxed iframe is an isolated browser container that restricts what embedded content can do, preventing security risks.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://github.com/datasette/datasette-apps">GitHub - datasette/ datasette - apps : Apps that live inside Datasette</a></li>
-<li><a href="https://datasette.io/blog/2026/datasette-apps/">Host applications inside Datasette with Datasette ... - Datasette Blog</a></li>
-<li><a href="https://agent.datasette.io/">Datasette Agent : an AI assistant for Datasette to help explore and...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#datasette`, `#release`, `#app-development`, `#testing`, `#tools`
-
----
-
-<a id="item-18"></a>
-## [OpenAI&\#x27;s Astra model solves ten decade-old math problems for under $2,000 each](https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything) ⭐️ 6.0/10
-
-OpenAI announced that an internal version of its upcoming Astra model solved ten mathematical problems that had seen no progress for at least a decade, each costing under $2,000 in GPT-5.6 Sol token prices. They released Lean 4 formalizations, a paper, and an LLM-generated reasoning walkthrough. This achievement could signal a new era in AI-assisted mathematical research, where models can tackle long-standing open problems at a fraction of the cost of traditional methods. It intensifies the debate about the role of AI in creative fields and the future of human mathematicians. The cost comparison is stark: only $2,000 per problem versus Anthropic&\#x27;s $100,000 for cryptographic weakness discovery with Claude Mythos. However, OpenAI has not disclosed how many problems it attempted without success, nor the prompts used. The proofs are formalized in the Lean 4 proof assistant, and the model&\#x27;s reasoning traces were unpublished.
-
-rss · Simon Willison · Aug 1, 20:34
-
-**Background**: OpenAI&\#x27;s Astra is a next-generation model family designed for long-running, multi-agent problem-solving. GPT-5.6 Sol is the current flagship model, priced at $5 per million input tokens and $30 per million output tokens, making $2,000 equivalent to roughly 400 million input tokens or 66 million output tokens. The Lean 4 proof assistant is a tool for formalizing mathematical proofs so they can be machine-verified. Terence Tao, a Fields Medalist, has advocated for &quot;big mathematics&quot; where AI handles technical grunt work while humans focus on creativity.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://the-decoder.com/openai-announces-its-next-major-model-astra-by-dropping-ten-previously-unsolved-math-solutions/">OpenAI announces its &quot;next major model&quot; Astra by dropping ten previously unsolved math solutions</a></li>
-<li><a href="https://openai.com/index/gpt-5-6/">GPT-5.6: Frontier intelligence that scales with your ambition | OpenAI</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI`, `#OpenAI`, `#mathematics`, `#research`, `#commentary`
-
----
-
-<a id="item-19"></a>
-## [llm-mcp-client 0.1a0: Alpha Client for Model Context Protocol Integration](https://simonwillison.net/2026/Jul/31/llm-mcp-client/#atom-everything) ⭐️ 6.0/10
-
-Simon Willison released llm-mcp-client 0.1a0, an alpha client that integrates the Model Context Protocol \(MCP\) with LLM tools, enabling LLMs to use MCP servers for tool execution. This release provides a practical client for the emerging MCP standard, lowering the barrier for developers to experiment with tool-augmented LLMs. As MCP gains industry traction, early tools like this can accelerate ecosystem development. The client is an alpha release \(0.1a0\), indicating it is early-stage and may lack stability. It is designed to work with MCP, and the accompanying blog post on stateless MCP suggests the client may focus on a stateless pattern for MCP interactions.
-
-rss · Simon Willison · Jul 31, 23:03
-
-**Background**: The Model Context Protocol \(MCP\) is an open standard introduced by Anthropic in November 2024 to standardize how AI models like LLMs connect to external tools, data sources, and services. MCP provides a unified interface for reading files, executing functions, and handling prompts, aiming to solve the &\#x27;Model Sprawl&\#x27; problem where different AIs cannot communicate with user data. It has been adopted by major AI providers including OpenAI and Google DeepMind.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Model_Context_Protocol">Model Context Protocol</a></li>
-<li><a href="https://modelcontextprotocol.io/docs/getting-started/intro">What is the Model Context Protocol (MCP)? - Model Context Protocol</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#llm`, `#model-context-protocol`, `#mcp`, `#tools`, `#release`
-
----
-
-<a id="item-20"></a>
-## [Datasette-agent 0.4a0 adds browser-side JavaScript execution for agent tools](https://simonwillison.net/2026/Jul/31/datasette-agent/#atom-everything) ⭐️ 6.0/10
-
-The alpha release 0.4a0 introduces \`await context.browser\_task\(\)\`, allowing Datasette Agent plugins to run custom JavaScript directly in the user&\#x27;s browser. This expands the agent&\#x27;s capabilities beyond server-side SQL queries to client-side browser interaction, enabling richer data exploration workflows and custom tool experiences, though currently for a niche audience. The mechanism is exposed via \`context.browser\_task\(\)\` merged in PR \#33, and was immediately used in datasette-apps 0.2a0 to add a debug loop. The feature is in alpha, so stability is not guaranteed.
-
-rss · Simon Willison · Jul 31, 14:14
-
-**Background**: Datasette is an open-source tool for publishing and exploring data as interactive websites, primarily using SQLite. Datasette Agent is a plugin that adds an LLM-powered assistant able to write and run SQL queries, generate charts, and perform background tasks via tool use \(function calling\). The new browser\_task capability allows those tools to execute JavaScript in the user&\#x27;s browser, not just server-side code.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://agent.datasette.io/">Datasette Agent : an AI assistant for Datasette to help explore and...</a></li>
-<li><a href="https://github.com/datasette/datasette-agent">GitHub - datasette/ datasette - agent : An LLM-powered agent for...</a></li>
-<li><a href="https://simonw.substack.com/p/datasette-agent-an-ai-assistant-for">Datasette Agent : an AI assistant for Datasette built on LLM</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#datasette`, `#datasette-agent`, `#llm-tool-use`, `#browser-execution`, `#javascript`
-
----
-
-<a id="item-21"></a>
-## [Mandatory Peer Review Demands Concrete, Justified Feedback](https://www.reddit.com/r/MachineLearning/comments/1vbeqhw/if_reviewing_is_mandatory_for_paper_submissions/) ⭐️ 6.0/10
-
-A discussion post argues that when AI conferences require authors to review papers as a condition of submission, reviewers must provide specific, evidence-based criticisms, and vague comments can no longer be dismissed as mere volunteer work. This affects the entire ML research community, as low-quality reviews can unfairly determine research outcomes, waste authors&\#x27; time, and undermine the credibility of peer review. Raising standards under mandatory systems could improve fairness and quality in scientific publishing. The post gives concrete examples of what constitutes a good review: citing specific prior work, explaining why a missing comparison is needed, and describing how a claimed lack of novelty overlaps with existing methods. It also stresses that a one-sentence review without evidence should not be treated as equivalent to a thorough one.
-
-reddit · r/MachineLearning · /u/Kwangryeol · Jul 31, 03:05
-
-**Background**: Many top AI conferences \(e.g., NeurIPS, ICML, CVPR\) have recently adopted mandatory reviewing policies, requiring submitting authors to complete a certain number of reviews. This was introduced to handle the growing volume of submissions and shortage of reviewers. Traditionally, peer review was voluntary, and low-quality reviews were often excused as unpaid volunteer work. The post argues that the context has changed, making that justification no longer valid.
-
-**Tags**: `#peer-review`, `#academic-publishing`, `#machine-learning`, `#research-culture`, `#conference-policies`
+**Tags**: `#evals`, `#model-evaluation`, `#open-source`, `#AI-tools`, `#Simon-Willison`
 
 ---

@@ -5,307 +5,274 @@ date: 2026-08-15
 lang: en
 ---
 
-> From 37 items, 19 important content pieces were selected
+> From 36 items, 16 important content pieces were selected
 
 ---
 
-1. [The Shift from Wiretapping to Law Enforcement Hacking as Encryption Goes Dark](#item-1) ⭐️ 9.0/10
-2. [Qwen 3.8 27B Impresses with Local Reasoning and Creative Output](#item-2) ⭐️ 8.0/10
-3. [RISC-V: They Should Have Known Better](#item-3) ⭐️ 8.0/10
-4. [Opus 5&\#x27;s Degraded User Experience: Elliptical Prose and Agent Focus](#item-4) ⭐️ 8.0/10
-5. [RustDesk Now Supports True Unattended Remote Access on Wayland](#item-5) ⭐️ 8.0/10
-6. [Firefox is now the last major browser that still supports uBlock Origin](#item-6) ⭐️ 8.0/10
-7. [Doom Renderer Compiled into 21B-Parameter Transformer Without Training](#item-7) ⭐️ 8.0/10
-8. [torch-preflight: A PyTorch Linter for Common Training Bugs and VRAM Estimation](#item-8) ⭐️ 8.0/10
-9. [Don&\#x27;t classify. Hallucinate\!](#item-9) ⭐️ 7.0/10
-10. [sqlite-utils 4.2 Enhances Schema Transformation and Introspection](#item-10) ⭐️ 7.0/10
-11. [llm-gemini 0.33 adds support for Gemini 3.7 Flash, new embedding models, and LLM 0.32 compatibility](#item-11) ⭐️ 7.0/10
-12. [City2Graph: Python library for urban heterogeneous graph neural networks and spatial analysis](#item-12) ⭐️ 7.0/10
-13. [Reddit Discussion Questions Relevance of Theory in Modern ML Practice](#item-13) ⭐️ 7.0/10
-14. [Google Claims Progress in Practical Private AI with Homomorphic Encryption](#item-14) ⭐️ 6.0/10
-15. [AI by Hand: Prof. Tom Yeh&\#x27;s Subscription for Manual AI Math Exercises](#item-15) ⭐️ 6.0/10
-16. [Mixedbread Launches Toast 1, a Specialized LLM for Search](#item-16) ⭐️ 6.0/10
-17. [Developer Turns RSS Feeds Into E-Ink Newspaper for Phone-Free Reading](#item-17) ⭐️ 6.0/10
-18. [Maximizing the Value of Your Claude Code Sessions](#item-18) ⭐️ 6.0/10
-19. [Open-source Python library and no-code dashboard for oncology AI evaluation at clinical thresholds](#item-19) ⭐️ 6.0/10
+1. [Qwen 3.8 27B: Open-Source Vision-Language Model with Strong Reasoning and Creative Generation](#item-1) ⭐️ 8.0/10
+2. [Going Dark, and the era of law enforcement hacking](#item-2) ⭐️ 8.0/10
+3. [Claude Opus 5&\#x27;s exhausting style may stem from agent-to-agent communication focus](#item-3) ⭐️ 8.0/10
+4. [RISC-V Design Flaws Critique Sparks Openness vs. Technical Excellence Debate](#item-4) ⭐️ 8.0/10
+5. [Hallucinate Novel Tags, Match to Existing via Vector Embeddings](#item-5) ⭐️ 8.0/10
+6. [Doom Renderer Compiled into 21B-Parameter Transformer Without Training](#item-6) ⭐️ 8.0/10
+7. [RustDesk Enables Unattended Remote Access on Wayland](#item-7) ⭐️ 7.0/10
+8. [Firefox Is the Last Major Browser Supporting uBlock Origin](#item-8) ⭐️ 7.0/10
+9. [Open-source Python library + no-code web dashboard for evaluating oncology AI models at clinical decision thresholds. \[P\]](#item-9) ⭐️ 7.0/10
+10. [City2Graph: Python Library for Urban Graph Neural Networks](#item-10) ⭐️ 7.0/10
+11. [torch-preflight: A PyTorch Linter for Bug Detection and VRAM Estimation](#item-11) ⭐️ 7.0/10
+12. [Google Claims Practical Homomorphic Encryption for Private AI](#item-12) ⭐️ 6.0/10
+13. [AI by Hand: A New Publication on Mathematical AI Interpretability](#item-13) ⭐️ 6.0/10
+14. [Mixedbread Launches Toast 1, a Specialized LLM for Search Tasks](#item-14) ⭐️ 6.0/10
+15. [sqlite-utils 4.2 enhances table.transform\(\) and adds check constraint introspection](#item-15) ⭐️ 6.0/10
+16. [llm-gemini 0.33 Adds Gemini 3.7 Flash and Server-Side Tool Execution](#item-16) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [The Shift from Wiretapping to Law Enforcement Hacking as Encryption Goes Dark](https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/) ⭐️ 9.0/10
+## [Qwen 3.8 27B: Open-Source Vision-Language Model with Strong Reasoning and Creative Generation](https://huggingface.co/Qwen/Qwen3.8-27B-FP8) ⭐️ 8.0/10
 
-The blog post examines the law enforcement transition from traditional wiretapping to deploying hacking techniques to bypass encryption, detailing the implications of the &\#x27;going dark&\#x27; debate as end-to-end encryption spreads. This shift forces a fundamental reexamination of the balance between privacy and lawful access, as governments increasingly rely on software vulnerabilities that could weaken cybersecurity for everyone. The post notes that the supply of exploitable bugs may hit a ceiling, while commenters point out that AI-generated code is introducing more sloppy bugs, and historical wiretaps once required expensive physical lines and billing, as illustrated by Giuliani&\#x27;s task force spending millions.
+The Qwen team released Qwen3.8-27B, a 27-billion-parameter open-source vision-language model based on the Qwen3.5 architecture. It features a vision encoder, 262k context length, flexible thinking control, and demonstrates strong reasoning, creative generation, and agentic performance. Qwen3.8-27B pushes the frontier of open-source LLMs by combining strong reasoning, creative generation, and efficient on-device deployment. It outperforms rival models on private benchmarks, runs on consumer GPUs, and introduces a unique ‘caveman’ thinking style that enhances explicit reasoning. The model supports a 262k context length, a vision encoder, and flexible thinking control. Community testing reveals that its reasoning style uses many tokens and a distinctive note-form thinking trace that drops function words, which may impact multi-token prediction efficiency; it also benefits from fixed chat templates for better tool calling and KV cache management.
 
-hackernews · vslira · Aug 14, 20:52 · [Discussion](https://news.ycombinator.com/item?id=49304447)
+hackernews · erdaltoprak · Aug 14, 15:00 · [Discussion](https://news.ycombinator.com/item?id=49299605)
 
-**Background**: The &\#x27;going dark&\#x27; debate refers to law enforcement&\#x27;s claim that encryption prevents them from accessing communications, even with a warrant. Traditional wiretapping involved physically tapping telephone lines. As encryption became widespread, agencies turned to hacking tools that exploit software flaws to gain access, raising concerns about security and privacy.
+**Background**: Qwen is a family of open-source large language models developed by Alibaba Cloud, with prior versions like Qwen3.5. The Qwen3.8-27B model is a dense vision-language model, meaning it can process both text and images, and is released under the Apache 2.0 license. It can be run locally using quantized GGUF files and inference engines like llama.cpp, ninfer, or LM Studio. Multi-token prediction \(MTP\) is a technique that predicts several tokens simultaneously to accelerate generation, and its effectiveness can be influenced by the model&\#x27;s internal reasoning style.
 
-**Discussion**: Commenters provided historical context: wiretapping once required physical wires and was costly, with Giuliani&\#x27;s task force spending a million dollars a year. They also noted the irony of &\#x27;going dark&\#x27; given ubiquitous surveillance cameras and metadata. Skepticism about a bug supply ceiling was expressed, with some arguing AI leads to sloppier code and more bugs, while others highlighted persistent poor security practices.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B · Hugging Face</a></li>
+<li><a href="https://lmstudio.ai/models/qwen/qwen3.8-27b">qwen/qwen3.8-27b • LM Studio</a></li>
+<li><a href="https://www.yottalabs.ai/post/how-to-run-qwen-3-8-27b-locally-ollama-gguf-single-gpu-2026">How to Run Qwen 3.8 27B Locally: Ollama, GGUF, and Single-GPU ...</a></li>
 
-**Tags**: `#cryptography`, `#surveillance`, `#law-enforcement`, `#encryption`, `#privacy`
+</ul>
+</details>
+
+**Discussion**: Community reaction is largely positive, with users praising the model&\#x27;s reasoning capabilities and creative outputs, such as generating a correctly composed pelican-on-a-bicycle image. However, some note that it consumes significantly more tokens and VRAM compared to alternatives like Gemma 4, and its unique ‘caveman’ thinking style may reduce multi-token prediction efficiency. Users also share practical tips for running it locally, including using the ninfer engine for faster inference and fixed chat templates to improve tool calling.
+
+**Tags**: `#LLM`, `#Qwen`, `#Open-Source`, `#Model Release`, `#Reasoning`
 
 ---
 
 <a id="item-2"></a>
-## [Qwen 3.8 27B Impresses with Local Reasoning and Creative Output](https://huggingface.co/Qwen/Qwen3.8-27B-FP8) ⭐️ 8.0/10
+## [Going Dark, and the era of law enforcement hacking](https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/) ⭐️ 8.0/10
 
-Qwen released the 27B parameter model Qwen3.8, which matches Gemma 4 on a private reasoning benchmark and generates high-quality SVG images locally. This shows open-weight local models are becoming competitive with proprietary ones, enabling privacy-preserving AI on consumer hardware, and signals strong non-US innovation. The model is in FP8 format for efficiency, but community reports note higher VRAM usage and a distinctive &\#x27;caveman-like&\#x27; thinking style. On an RTX 5090, a custom inference engine achieved 138 tokens/sec.
+The article critically examines the shift from law enforcement demanding encryption backdoors to exploiting software vulnerabilities to bypass encryption, questioning the sustainability and ethics of this approach. This is significant because it reframes the &\#x27;going dark&\#x27; debate from a policy battle over backdoors to the real-world consequences of government hacking. It highlights how such practices could weaken overall cybersecurity and create a market for vulnerabilities. The article notes that the finite supply of exploitable bugs may be reaching a ceiling, while AI-generated code is introducing more vulnerabilities, and contrasts this with historical wiretapping that required physical access. It also highlights the ethical and practical challenges of law enforcement acting as hackers.
 
-hackernews · erdaltoprak · Aug 14, 15:00 · [Discussion](https://news.ycombinator.com/item?id=49299605)
+hackernews · vslira · Aug 14, 20:52 · [Discussion](https://news.ycombinator.com/item?id=49304447)
 
-**Background**: Qwen is a series of LLMs from Alibaba Cloud. The 27B parameter size makes it suitable for local deployment on consumer GPUs. This release follows Qwen 3.6, and FP8 quantization reduces memory footprint. Local models allow users to run AI without cloud dependency, addressing privacy and latency concerns.
+**Background**: The &\#x27;going dark&\#x27; debate, also known as the Crypto Wars, refers to the long-standing conflict between governments seeking to limit strong encryption to aid surveillance and civil liberties advocates arguing for digital privacy. Law enforcement agencies have argued that widespread encryption hinders criminal investigations, leading to proposals for mandated backdoors. This article examines the evolution of that debate into the practice of law enforcement hacking.
 
-**Discussion**: Community reaction is largely positive: users are impressed by its reasoning on private benchmarks and its creative SVG generation. However, some note that it uses more VRAM and tokens than Gemma 4, and its unusual thinking style may affect efficiency. Excitement about non-US model progress is palpable.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Going_dark">Going dark</a></li>
 
-**Tags**: `#AI`, `#LLM`, `#Qwen`, `#local-models`, `#model-release`
+</ul>
+</details>
+
+**Discussion**: Community comments range from historical context \(wiretapping used to require physical lines and direct billing\) to skepticism about the &\#x27;going dark&\#x27; label given pervasive surveillance cameras and metadata collection. One commenter argues that software is becoming more buggy due to AI-generated code, contradicting the idea that usable bugs are finite. Another highlights the disconnect between high-level cyber operations and routine security failures, suggesting the situation is neither as dire nor as manageable as portrayed.
+
+**Tags**: `#cryptography`, `#law-enforcement`, `#surveillance`, `#encryption`, `#security`
 
 ---
 
 <a id="item-3"></a>
-## [RISC-V: They Should Have Known Better](https://dmitry.gr/?r=06.%20Thoughts&amp;proj=12.%20RV) ⭐️ 8.0/10
+## [Claude Opus 5&\#x27;s exhausting style may stem from agent-to-agent communication focus](https://mun-logadan.github.io/why-does-opus-5-feel-worse/) ⭐️ 8.0/10
 
-A detailed technical critique of RISC-V&\#x27;s architectural decisions has been published, highlighting specific design flaws and sparking a debate about the trade-offs between technical perfection and the openness of the ISA. As RISC-V gains traction as an open alternative to proprietary ISAs like x86 and ARM, this discussion underscores the tension between implementing a royalty-free standard and achieving optimal technical design, with implications for the future of global processor development. The critique points out issues such as a 50% encoding space waste for 16-bit instructions and the complexity of building a fully compatible profile like RV64GC, while community comments reveal that the open standard&\#x27;s flexibility allows implementers to work around many flaws.
+Users report that Claude Opus 5 feels significantly worse to work with than previous versions, exhibiting an elliptical, exhausting communication style filled with unnecessary confessions and abstract phrasing. The community speculates that Anthropic&\#x27;s post-training now prioritizes agent-to-agent communication over human-friendly interaction. This shift suggests a potential industry trend where large language models are increasingly optimized for autonomous agents rather than direct human use, which could degrade the user experience for millions of developers and end-users who rely on these models for daily work. It raises critical questions about the balance between agentic capabilities and human-centric design. Opus 5 often writes overly abstract sentences that orbit a point before landing on it, uses inanimate subjects to vary verb choice, and frequently &\#x27;confesses&\#x27; mistakes, making interactions exhausting. Some users have reverted to Opus 4.8 or moved to OpenAI&\#x27;s models, and the official documentation acknowledges behavioral differences like increased verbosity and agentic narration when thinking is disabled.
 
-hackernews · kaycebasques · Aug 14, 22:38 · [Discussion](https://news.ycombinator.com/item?id=49305492)
+hackernews · numeri · Aug 14, 10:12 · [Discussion](https://news.ycombinator.com/item?id=49296740)
 
-**Background**: RISC-V is a free and open instruction set architecture \(ISA\) based on RISC principles, developed at UC Berkeley in 2010 and now maintained by RISC-V International. Unlike proprietary ISAs, it can be implemented without royalties, making it popular for embedded systems and attracting interest from companies and countries seeking IP independence. An ISA defines the interface between hardware and software, allowing multiple implementations that run the same code, though extensions can affect compatibility.
+**Background**: Claude Opus is the most capable model tier in Anthropic&\#x27;s large language model family, with Opus 5 released about three weeks ago and marketed as a step change for long-running agents. Agent-to-agent communication protocols like Agent2Agent \(A2A\) define how AI agents discover and coordinate with each other, often using structured, machine-optimized language. The speculation is that Opus 5&\#x27;s training may have been tuned for such agent speak, leading to human interaction feeling like an afterthought.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/RISC-V">RISC-V</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Instruction_set_architecture">Instruction set architecture</a></li>
-<li><a href="https://riscv.org/">Home - RISC-V International</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Opus">Claude Opus</a></li>
+<li><a href="https://www.anthropic.com/news/claude-opus-5">Introducing Claude Opus 5 \ Anthropic</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Agent2Agent">Agent2Agent - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community largely agrees that RISC-V&\#x27;s technical shortcomings are outweighed by its open, royalty-free nature. Hobbyists value the lack of legal barriers and mainline toolchain support, while others note its strategic importance for IP sovereignty, especially for China. Some compare it to MIPS, suggesting that raw performance can be achieved through brute-force engineering regardless of architectural elegance.
+**Discussion**: Overall sentiment is critical, with many users finding Opus 5&\#x27;s elliptical and verbose style exhausting, and some noting a clear degradation from previous versions. A recurring view is that the model now targets agent-to-agent communication, making human niceties secondary, and several users have rolled back to Opus 4.8 or switched to OpenAI. There is also disagreement on whether the change is a deliberate shift or a cost-cutting measure by Anthropic, with some calling the benchmaxxing marketing pure hype.
 
-**Tags**: `#RISC-V`, `#ISA design`, `#open hardware`, `#CPU architecture`, `#technology policy`
+**Tags**: `#LLM`, `#user experience`, `#Claude`, `#AI agents`, `#Hacker News`
 
 ---
 
 <a id="item-4"></a>
-## [Opus 5&\#x27;s Degraded User Experience: Elliptical Prose and Agent Focus](https://mun-logadan.github.io/why-does-opus-5-feel-worse/) ⭐️ 8.0/10
+## [RISC-V Design Flaws Critique Sparks Openness vs. Technical Excellence Debate](https://dmitry.gr/?r=06.%20Thoughts&amp;proj=12.%20RV) ⭐️ 8.0/10
 
-A Hacker News discussion with 773 points reveals widespread user frustration with Anthropic&\#x27;s Claude Opus 5, citing its overly elliptical and verbose writing style, and speculating that the model&\#x27;s training now prioritizes agent-to-agent communication over human readability. This decline in user experience could signal a broader trend where AI models optimized for agentic tasks become less pleasant for direct human interaction, potentially alienating developers and users who rely on them for conversational and creative work. Users specifically complain about sentences that orbit a point before landing like a surprise, unnecessary use of inanimate subjects, and frequent &\#x27;confessing&\#x27; of mistakes. Some speculate the model has been made smaller or more economical, and comparisons with OpenAI&\#x27;s Sol show a preference for the latter&\#x27;s communication style.
+Dmitry Grinberg published a detailed technical critique arguing that RISC-V&\#x27;s design flaws were avoidable, sparking a lively discussion on Hacker News with 128 points and 97 comments. The debate highlights the tension between openness and technical perfection in ISA design, and shapes perceptions of RISC-V as a strategic alternative to proprietary ISAs for countries like China seeking technological sovereignty. The critique focuses on avoidable decisions in the base ISA and extensions, while the community counters that RISC-V&\#x27;s openness and simplicity enable custom fixes and competitive embedded implementations.
 
-hackernews · numeri · Aug 14, 10:12 · [Discussion](https://news.ycombinator.com/item?id=49296740)
+hackernews · kaycebasques · Aug 14, 22:38 · [Discussion](https://news.ycombinator.com/item?id=49305492)
 
-**Background**: Claude Opus 5 is Anthropic&\#x27;s flagship AI model designed for complex reasoning, coding, and long-horizon agentic tasks. Elliptical writing is a style where the author omits words or implies meaning indirectly, which can feel abstract or circumlocutory. AI agent communication refers to how AI agents exchange information to complete tasks, often prioritizing efficiency over human-friendly language.
+**Background**: RISC-V is a free and open standard instruction set architecture \(ISA\) developed at UC Berkeley, now maintained by RISC-V International. Unlike proprietary ISAs such as x86 and ARM, it can be implemented without licensing fees. The debate reflects a recurring tension in open-source hardware: whether openness can outweigh technical compromises. This is especially relevant as RISC-V gains traction in embedded systems and as a national strategy for technological independence.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openrouter.ai/anthropic/claude-opus-5">Claude Opus 5 - API Pricing &amp; Benchmarks | OpenRouter</a></li>
-<li><a href="https://www.ibm.com/think/topics/ai-agent-communication">What is AI Agent Communication? | IBM</a></li>
-<li><a href="https://www.masterclass.com/articles/how-to-write-an-elliptical-sentence">How to Write an Elliptical Sentence: Improve Your... - MasterClass</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RISC-V">RISC-V</a></li>
+<li><a href="https://riscv.org/">Home - RISC-V International</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open-source_hardware">Open-source hardware</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community sentiment is overwhelmingly negative. Users describe Opus 5&\#x27;s communication as exhausting, with many reverting to version 4.8 or switching to OpenAI&\#x27;s Sol. The prevailing theory is that the model&\#x27;s post-training has been optimized for agent-to-agent communication, making human niceties feel like noise. Some suspect the model is actually smaller or has been degraded for cost reasons, and that benchmark improvements are just marketing.
+**Discussion**: The Hacker News discussion is mixed. Some argue RISC-V&\#x27;s openness and hobbyist/commercial availability outweigh its technical flaws, while others compare it to MIPS, noting that any ISA can be brute-forced into roles but the open standard is a valuable precedent. Overall, there is recognition that the critique&\#x27;s points are largely valid, yet the architecture&\#x27;s broad adoption and compiler support make it practical.
 
-**Tags**: `#AI`, `#LLM`, `#Claude`, `#User Experience`, `#Agent Communication`
+**Tags**: `#RISC-V`, `#ISA design`, `#open source hardware`, `#CPU architecture`, `#Hacker News discussion`
 
 ---
 
 <a id="item-5"></a>
-## [RustDesk Now Supports True Unattended Remote Access on Wayland](https://rustdesk.com/blog/unattended-remote-access-wayland/) ⭐️ 8.0/10
+## [Hallucinate Novel Tags, Match to Existing via Vector Embeddings](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/) ⭐️ 8.0/10
 
-RustDesk now supports true unattended remote access on Wayland, allowing connections to a remote Linux machine without a user needing to accept the session. This feature was previously a major hurdle for Linux users on Wayland due to the display server&\#x27;s security model. Unattended access is essential for IT support, server management, and remote work, and this update fills a critical gap for Linux users on Wayland, bringing RustDesk closer to feature parity with commercial alternatives like TeamViewer and AnyDesk. The implementation leverages modern Linux desktop APIs such as PipeWire and xdg-desktop-portal for screen capture and input simulation. Community feedback notes that self-hosted servers still lack built-in encryption and microphone input passthrough from client to host is not yet supported.
+Doug Turnbull introduced a technique where an LLM is prompted to invent new tags without seeing the existing tag vocabulary, then vector embeddings are used to map those hallucinated tags to the closest real tags. This makes it practical to automatically tag content with large, dynamic tag vocabularies that would be too costly or impossible to feed directly into an LLM prompt. It’s a clever blend of LLM creativity and embedding similarity applicable to many content management tasks. The prompt includes examples of tag shape to guide the LLM, and the final matching step uses vector embeddings to find the nearest real tags. This technique works whenever the tag vocabulary is too large for a single prompt, and embedding distance reflects semantic similarity.
 
-hackernews · rustdesk · Aug 14, 16:12 · [Discussion](https://news.ycombinator.com/item?id=49300759)
+rss · Simon Willison · Aug 14, 21:54
 
-**Background**: RustDesk is an open-source remote desktop software that provides a self-hosted alternative to commercial tools like TeamViewer. Wayland is a modern display server protocol for Linux that replaces the older X11 system, but its stricter security model restricts applications from capturing screen content or simulating input without user consent, making unattended remote access particularly challenging.
+**Background**: Vector embeddings are numerical representations of words or phrases that capture semantic meaning, with similar concepts having vectors close in space. LLMs can produce plausible but fabricated outputs \(hallucinations\), which here are harnessed to generate creative tag suggestions. Simon Willison&\#x27;s blog has 1,856 tags, and Doug Turnbull&\#x27;s solution avoids presenting them all to the model by using embedding similarity to map generated tags to existing ones.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Wayland_%28protocol%29">Wayland (protocol) - Wikipedia</a></li>
-<li><a href="https://rustdesk.com/">RustDesk : Open-Source Remote Desktop with Self-Hosted Server...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vector_embedding">Vector embedding</a></li>
+<li><a href="https://www.geeksforgeeks.org/nlp/what-are-vector-embeddings/">What are Vector Embeddings? - GeeksforGeeks</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community response was largely positive, with users praising the quick resolution of a common pain point. However, commenters highlighted that self-hosted RustDesk still lacks encryption support, and some requested microphone input passthrough, indicating remaining feature gaps. A few users also asked about the difference between RustDesk and VNC, showing growing interest in the tool.
-
-**Tags**: `#RustDesk`, `#remote-desktop`, `#Wayland`, `#Linux`, `#open-source`
+**Tags**: `#LLM`, `#tagging`, `#vector-embeddings`, `#prompt-engineering`, `#content-management`
 
 ---
 
 <a id="item-6"></a>
-## [Firefox is now the last major browser that still supports uBlock Origin](https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html) ⭐️ 8.0/10
+## [Doom Renderer Compiled into 21B-Parameter Transformer Without Training](https://www.reddit.com/r/MachineLearning/comments/1voazhm/i_compiled_dooms_renderer_into_a_21bparameter/) ⭐️ 8.0/10
 
-Firefox is now the only major browser that fully supports uBlock Origin, as Chrome and other Chromium-based browsers enforce Manifest V3 restrictions that limit the extension&\#x27;s ad-blocking capabilities. This highlights the impact of Google&\#x27;s Manifest V3 on user privacy and extension freedom, and positions Firefox as the go-to browser for users who rely on powerful ad blocking. It could influence browser market share and the debate over platform control. uBlock Origin&\#x27;s full functionality depends on the webRequestBlocking API, which Manifest V3 restricts to enterprise sideloaded extensions. Firefox continues to vet uBlock Origin&\#x27;s code on every update for security, while unofficial MV3 ports exist but are limited.
+A developer used a custom compiler to convert the Doom rendering algorithm into a computation graph, then directly compiled that graph into the weights of a 21B-parameter transformer model, requiring no training at all. The resulting model runs as a standard Hugging Face checkpoint that generates a sequence of pixel-drawing commands as tokens to render a frame. This demonstrates that transformers can be used as general-purpose computation engines, not just models trained on data, and opens new possibilities for executing deterministic algorithms inside hardware accelerated by transformer inference. It challenges traditional views of what a model is and how parameters encode functionality. The model takes a 3,614-token prompt representing scene data and generates 53,747 tokens for one frame, taking 40 minutes on a B200 GPU \(35 frames per day\). The entire host program is only 43 lines of Python, and the checkpoint is a standard transformers file that does not require trust\_remote\_code, meaning it contains no custom code.
+
+reddit · r/MachineLearning · /u/notforrob · Aug 14, 15:50
+
+**Background**: A transformer is a deep learning architecture that processes sequences of tokens, typically trained on large datasets. A computation graph is a directed acyclic graph where nodes represent mathematical operations; such graphs are used in machine learning frameworks to define functions and compute gradients. Hugging Face is a platform for sharing models; when a checkpoint is loaded without trust\_remote\_code=True, it means the model only uses standard architectures and weight files, avoiding execution of arbitrary code from the repository. The project&\#x27;s compiler directly maps the computation graph of Doom&\#x27;s renderer into the transformer&\#x27;s attention and feed-forward weights, effectively embedding a deterministic program into the model parameters.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/deep-learning/computational-graphs-in-deep-learning/">Computational Graphs in Deep Learning - GeeksforGeeks</a></li>
+<li><a href="https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct/discussions/23">deepseek-ai/deepseek-coder-33b-instruct · Why do we need the line trust_remote_code=True?</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#transformers`, `#doom`, `#rendering`, `#computation-graphs`, `#novel-application`
+
+---
+
+<a id="item-7"></a>
+## [RustDesk Enables Unattended Remote Access on Wayland](https://rustdesk.com/blog/unattended-remote-access-wayland/) ⭐️ 7.0/10
+
+RustDesk has introduced support for unattended remote desktop access on Linux systems running the Wayland display protocol, a feature that was previously unavailable due to Wayland&\#x27;s security architecture. This addresses a critical gap for Linux remote desktop users, as Wayland&\#x27;s stricter security model had made unattended access difficult. It strengthens RustDesk&\#x27;s position as an open-source alternative to proprietary tools like TeamViewer on modern Linux desktops. The implementation leverages libdrmtap for DRM/KMS framebuffer capture, but input injection and other features may still depend on compositor-specific extensions. The community also notes that encrypted self-hosted connections are not yet supported.
+
+hackernews · rustdesk · Aug 14, 16:12 · [Discussion](https://news.ycombinator.com/item?id=49300759)
+
+**Background**: Wayland is the default display server protocol on many modern Linux distributions, replacing the older X11 system. Its security model limits the ability of applications to capture screen contents or simulate input, making remote desktop unattended access challenging. RustDesk is an open-source remote desktop application written in Rust, offering self-hosting and cross-platform support. Unattended access allows remote control of a machine without user interaction at the remote side.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://rustdesk.com/">RustDesk : Open-Source Remote Desktop with Self-Hosted Server...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wayland_%28protocol%29">Wayland (protocol) - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Community reaction is largely positive, with users grateful for the fix. However, commenters point out that encrypted self-hosted connections are still missing, microphone input passthrough isn&\#x27;t supported, and the solution relies on third-party compositor extensions, limiting universality.
+
+**Tags**: `#open-source`, `#remote-desktop`, `#wayland`, `#linux`, `#rustdesk`
+
+---
+
+<a id="item-8"></a>
+## [Firefox Is the Last Major Browser Supporting uBlock Origin](https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html) ⭐️ 7.0/10
+
+As of early 2025, Firefox remains the only major browser that fully supports the uBlock Origin ad-blocking extension, as Google Chrome and other Chromium-based browsers have moved to Manifest V3, which restricts the extension&\#x27;s capabilities. This highlights the growing divide in browser privacy and user freedom; Firefox&\#x27;s stance preserves robust ad-blocking, while Chrome&\#x27;s shift to Manifest V3 reduces the effectiveness of content blockers, potentially affecting hundreds of millions of users who rely on ad-blockers for a cleaner, safer browsing experience. uBlock Origin relies on the \`webRequest\` API, which Manifest V3 replaces with the less powerful \`declarativeNetRequest\` API, limiting dynamic filtering. Firefox continues to support the full \`webRequest\` API and also manually reviews uBlock Origin&\#x27;s code on each update to ensure security.
 
 hackernews · DemiGuru · Aug 14, 19:03 · [Discussion](https://news.ycombinator.com/item?id=49303202)
 
-**Background**: Manifest V3 is a new extension platform by Google for Chrome, aiming to improve privacy, security, and performance, but it restricts APIs like webRequest that ad blockers need, replacing it with a less powerful declarativeNetRequest API. uBlock Origin is a popular open-source ad blocker developed by Raymond Hill, known for efficiency and low resource usage. Many Chromium-based browsers \(Chrome, Edge, Brave, Opera\) have adopted Manifest V3, leading to the removal or limited functionality of uBlock Origin on those platforms.
+**Background**: uBlock Origin is a widely used open-source content blocker and ad-blocker developed by Raymond Hill. Google&\#x27;s Manifest V3 is a new extension platform for Chrome that, citing security and performance, deprecates the webRequest API in favor of declarativeNetRequest, which prevents extensions from modifying network requests at the same level. This change has been controversial, as it weakens ad-blockers and other privacy tools. Firefox has chosen not to adopt these restrictions, maintaining full support for the older Manifest V2 APIs that enable powerful extensions.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/UBlock_Origin">UBlock Origin</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Manifest_V3">Manifest V3</a></li>
-<li><a href="https://www.eff.org/deeplinks/2021/12/googles-manifest-v3-still-hurts-privacy-security-innovation">Google’s Manifest V 3 Still Hurts Privacy, Security, and Innovation</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters praised Firefox&\#x27;s unique vetting of uBlock Origin updates for security, criticized Google&\#x27;s erosion of extension freedom, mentioned an unofficial Manifest V3 port, and some noted that uBlock Origin Lite works adequately. Overall sentiment is supportive of Firefox and critical of Manifest V3 restrictions.
+**Discussion**: The community strongly supports Firefox&\#x27;s approach, praising its manual review of uBlock Origin updates for security. Many express frustration with Google&\#x27;s restrictions, viewing them as a betrayal of the extension system&\#x27;s original purpose of user freedom. There is a shared sentiment that the web without ad-blocking is unbearable, and some note unofficial ports of uBlock Origin to Manifest V3 exist but face severe limitations.
 
-**Tags**: `#web-browsers`, `#ad-blocking`, `#privacy`, `#manifest-v3`, `#extensions`
+**Tags**: `#ad-blocking`, `#browser-extensions`, `#firefox`, `#privacy`, `#manifest-v3`
 
 ---
 
-<a id="item-7"></a>
-## [Doom Renderer Compiled into 21B-Parameter Transformer Without Training](https://www.reddit.com/r/MachineLearning/comments/1voazhm/i_compiled_dooms_renderer_into_a_21bparameter/) ⭐️ 8.0/10
+<a id="item-9"></a>
+## [Open-source Python library + no-code web dashboard for evaluating oncology AI models at clinical decision thresholds. \[P\]](https://www.reddit.com/r/MachineLearning/comments/1vod2c8/opensource_python_library_nocode_web_dashboard/) ⭐️ 7.0/10
 
-A developer compiled the Doom rendering algorithm directly into a 21B-parameter transformer model by converting a computation graph into weights, entirely bypassing traditional training. The generated checkpoint is a standard Hugging Face format that can be loaded without custom code. This project demonstrates that transformers can execute arbitrary deterministic algorithms as compiled programs, blurring the line between neural networks and classical computation. It could inspire new ways to design specialized models or deepen our understanding of transformer computational capabilities. The model uses a 16-layer decoder with hidden size 512, and rendering one frame requires 3,614 input tokens and 53,747 output tokens, taking about 40 minutes on an NVIDIA B200 GPU \(35 frames per day vs. original Doom’s 35 FPS on a 486\). The host script is only 43 lines of Python, while the computation graph is defined in longer Python code that gets compiled into the weights.
+An open-source Python library and no-code dashboard, oncothresh, evaluates oncology AI models at fixed clinical cutoffs with metrics like sensitivity, specificity, PPV/NPV, bootstrap confidence intervals, and decision-curve analysis, filling a gap left by global metrics.
 
-reddit · r/MachineLearning · /u/notforrob · Aug 14, 15:50
+reddit · r/MachineLearning · /u/adom2989 · Aug 14, 17:06
 
-**Background**: The Doom rendering engine is a software-based graphics pipeline that uses a binary space partitioning \(BSP\) tree to efficiently draw 3D scenes. Transformers are neural network architectures originally designed for sequence processing, but they can be repurposed to execute arbitrary algorithms by embedding a computation graph’s operations into attention and feed-forward weights. The torchwright project compiles a symbolic computation graph into transformer weights, treating the model as a programmable computer rather than a trained neural network.
+**Tags**: `#machine learning`, `#healthcare`, `#evaluation`, `#python`, `#open-source`
+
+---
+
+<a id="item-10"></a>
+## [City2Graph: Python Library for Urban Graph Neural Networks](https://www.reddit.com/r/MachineLearning/comments/1vn8oya/city2graph_a_python_library_for_heterogeneous/) ⭐️ 7.0/10
+
+A new Python library, City2Graph, has been released and published in a paper; it transforms urban geospatial data \(buildings, streets, transit feeds\) into heterogeneous graphs for GNNs and spatial analysis. This library simplifies the creation of heterogeneous graph data from common urban datasets, enabling researchers to apply advanced GNNs to urban systems without extensive data engineering. It addresses a practical need in GeoAI and urban computing. It supports multiple graph construction methods \(morphological, transportation, mobility\) and data sources \(OpenStreetMap, Overture Maps, GTFS, GBFS\). Conversion between GeoDataFrames, NetworkX, rustworkx, and PyTorch Geometric preserves geometries and attributes.
+
+reddit · r/MachineLearning · /u/Tough\_Ad\_6598 · Aug 13, 11:59
+
+**Background**: Heterogeneous Graph Neural Networks \(HGNNs\) extend GNNs to graphs with multiple node and edge types, capturing richer semantic relations. The General Transit Feed Specification \(GTFS\) is a standard format for public transit schedules, while GBFS is for shared mobility services like bike-sharing. City2Graph leverages these standards to build graphs for urban analysis.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://github.com/physicsrob/torchwright">physicsrob/torchwright: A compiler that transforms computation ...</a></li>
-<li><a href="https://doomwiki.org/wiki/Doom_rendering_engine">Doom rendering engine - The Doom Wiki at DoomWiki.org</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/3292500.3330961">Heterogeneous Graph Neural Network | Proceedings of the 25th ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GTFS">GTFS - Wikipedia</a></li>
+<li><a href="https://github.com/MobilityData/gbfs/blob/master/gbfs.md">gbfs / gbfs .md at master · MobilityData/ gbfs · GitHub</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community reacted with a mix of amusement and admiration, praising the technical creativity and the absurdity of running Doom inside a transformer. Many highlighted the project’s value in demonstrating that transformers can be programmed rather than just trained, though some noted the impracticality of the massive computational cost.
-
-**Tags**: `#transformers`, `#weight-compilation`, `#doom`, `#novel-application`, `#huggingface`
+**Tags**: `#graph-neural-networks`, `#geospatial-analysis`, `#urban-systems`, `#python-library`, `#spatial-data`
 
 ---
 
-<a id="item-8"></a>
-## [torch-preflight: A PyTorch Linter for Common Training Bugs and VRAM Estimation](https://www.reddit.com/r/MachineLearning/comments/1vo8vv0/a_linter_for_pytorch_torchpreflight_p/) ⭐️ 8.0/10
+<a id="item-11"></a>
+## [torch-preflight: A PyTorch Linter for Bug Detection and VRAM Estimation](https://www.reddit.com/r/MachineLearning/comments/1vo8vv0/a_linter_for_pytorch_torchpreflight_p/) ⭐️ 7.0/10
 
-torch-preflight is a new static analysis tool that reads PyTorch training scripts without executing them, detecting 13 common bugs such as accumulating losses without detaching, missing zero\_grad\(\), and gradient accumulation without dividing loss. It also estimates the peak VRAM required for a given training script on a specified GPU, helping to avoid out-of-memory errors. This tool can save developers significant GPU hours and cloud costs by catching expensive mistakes early in the development cycle. By providing VRAM estimates and actionable suggestions to reduce memory usage, it lowers the barrier to efficient model training and debugging. The linter operates without importing or executing code, so no GPU or PyTorch installation is required. Its VRAM estimates are within 4% of measured peaks on a single T4, but the tool has only been tested on the PyTorch source tree and on four models, so false positives may occur on diverse codebases. It currently has 13 rules and is open source with contributions welcome.
+A new tool called torch-preflight has been released as a static analysis linter for PyTorch. It catches common bugs like missing zero\_grad\(\) or holding autograd graphs, and estimates VRAM requirements without executing code. This tool helps developers avoid costly GPU hours by catching bugs early, and allows them to check if a training run fits in GPU memory before paying for an instance, saving time and money. It currently implements 13 rules and claims VRAM estimation within 4% of measured peaks on a T4 GPU. The tool works without importing or executing code, requiring no torch installation or GPU, but the author warns it is still in progress and seeks feedback on false positives.
 
 reddit · r/MachineLearning · /u/LeJanbandhu · Aug 14, 14:30
 
-**Background**: PyTorch&\#x27;s autograd engine builds a dynamic computation graph during the forward pass, and if tensors like loss values are appended to a list without detaching them, the graph for every step is retained, consuming GPU memory until CUDA runs out of memory. Gradient accumulation is a technique to simulate a larger batch size by summing gradients over multiple micro-batches before updating weights; forgetting to divide the loss by the number of accumulation steps leads to incorrect gradient scaling. DistributedSampler is used in distributed training with DistributedDataParallel \(DDP\) to ensure each GPU processes a distinct subset of the dataset; without it, all ranks may train on identical batches, defeating the purpose of distributed training.
+**Background**: PyTorch&\#x27;s DistributedDataParallel \(DDP\) enables multi-GPU training, but requires DistributedSampler to ensure each GPU gets different data batches. Gradient accumulation simulates larger batch sizes by summing gradients over multiple mini-batches before stepping the optimizer, but the loss must be divided by the accumulation steps. The autograd graph in PyTorch retains computation history, and appending loss tensors to a list \(e.g., losses.append\(loss\)\) can accumulate graphs without detaching, causing memory leaks. The linter checks for these patterns.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://docs.pytorch.org/docs/2.13/autograd.html">Automatic differentiation package - torch. autograd — PyTorch 2.13...</a></li>
-<li><a href="https://www.hopsworks.ai/dictionary/gradient-accumulation">Gradient Accumulation - MLOps Dictionary | Hopsworks</a></li>
+<li><a href="https://docs.pytorch.org/tutorials/intermediate/ddp_tutorial.html">Getting Started with Distributed Data Parallel — PyTorch Tutorials 2.13.0+cu130 documentation</a></li>
+<li><a href="https://huggingface.co/docs/accelerate/usage_guides/gradient_accumulation">Performing gradient accumulation with Accelerate · Hugging Face</a></li>
 <li><a href="https://discuss.pytorch.org/t/distributedsampler/90205">DistributedSampler - distributed - PyTorch Forums</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#PyTorch`, `#linter`, `#debugging`, `#machine-learning`, `#tools`
-
----
-
-<a id="item-9"></a>
-## [Don&\#x27;t classify. Hallucinate\!](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/) ⭐️ 7.0/10
-
-Doug Turnbull proposed a technique where instead of feeding a large existing tag vocabulary to an LLM for classification, the model is prompted to generate novel, hypothetical tags, which are then mapped to the closest real tags using vector embeddings. This elegantly solves a common scaling problem in automatic tagging, enabling content management systems to leverage LLMs without needing to fit entire tag vocabularies into prompts. The prompt includes examples of existing tag patterns to guide the model&\#x27;s hallucination; the final mapping uses cosine similarity of embeddings to find the nearest real tags, demonstrated with a product classification example.
-
-rss · Simon Willison · Aug 14, 21:54
-
-**Background**: Large language models have a context length limit, making it impractical to include thousands of existing tags in a prompt. Vector embeddings are numerical representations of words or phrases that capture semantic similarity, enabling similarity search.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Vector_embedding">Vector embedding</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#LLM`, `#tagging`, `#embeddings`, `#technique`, `#natural language processing`
-
----
-
-<a id="item-10"></a>
-## [sqlite-utils 4.2 Enhances Schema Transformation and Introspection](https://simonwillison.net/2026/Aug/13/sqlite-utils/) ⭐️ 7.0/10
-
-sqlite-utils 4.2 improves the table.transform\(\) method to preserve additional schema details like check constraints, unique constraints, and column comments. It also adds new introspection properties for querying check constraints. These enhancements make schema migrations more robust for developers who rely on sqlite-utils for database management, reducing the risk of losing important constraints during transformations. The improved introspection also simplifies schema analysis and debugging. The transform\(\) method creates a new table, copies data, and replaces the old table, which enables complex ALTER TABLE operations. The 4.2 release initially had a crashing bug due to a missing dependency, fixed in 4.2.1.
-
-rss · Simon Willison · Aug 13, 20:11
-
-**Background**: sqlite-utils is a Python library and CLI tool for manipulating SQLite databases. The table.transform\(\) method provides a way to perform complex schema changes \(like adding or modifying columns\) by reconstructing the entire table, which is necessary because SQLite has limited built-in ALTER TABLE support. Check constraints are rules that enforce data integrity at the database level, ensuring column values meet specified conditions.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://simonwillison.net/2026/Aug/13/sqlite-utils/">Release: sqlite - utils 4.2 | Simon Willison’s Weblog</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#Python`, `#SQLite`, `#Database`, `#sqlite-utils`, `#Release`
-
----
-
-<a id="item-11"></a>
-## [llm-gemini 0.33 adds support for Gemini 3.7 Flash, new embedding models, and LLM 0.32 compatibility](https://simonwillison.net/2026/Aug/13/llm-gemini/) ⭐️ 7.0/10
-
-llm-gemini 0.33 adds support for the newly released Gemini 3.7 Flash, along with Gemini 3.6 Flash, Gemini 3.5 Flash Lite, and two new embedding models. It also upgrades compatibility with LLM 0.32, enabling visibility of reasoning traces and server-side tool invocation. This update allows users of the popular LLM CLI tool to leverage Google&\#x27;s latest Gemini models and new features like reasoning traces and server-side code execution, enhancing the tool&\#x27;s utility for developers and AI enthusiasts. The plugin now supports the latest Gemini 3.7 Flash model, and the minimal thinking effort option from Gemini 3.6 Flash has been removed. The update also enables server-side tools like CodeExecution via the -T flag, and the author demonstrated image generation from SVG output, though a rendering bug was initially misattributed to the model.
-
-rss · Simon Willison · Aug 13, 19:37
-
-**Background**: LLM is a command-line tool by Simon Willison that provides a unified interface for interacting with various large language models. The llm-gemini plugin connects LLM to Google&\#x27;s Gemini model family, including chat, text generation, and embedding capabilities. Reasoning traces are the step-by-step internal logical steps a model shows when solving problems, while embedding models convert text into numerical vectors for semantic search and similarity tasks.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://simonwillison.net/2026/Aug/13/llm-gemini/">Release: llm-gemini 0.33</a></li>
-<li><a href="https://enigmatica.ai/glossary/reasoning-traces">What Is Reasoning Traces ? Definition &amp; Guide</a></li>
-<li><a href="https://grokipedia.com/page/Gemini_embedding_models">Gemini embedding models</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#llm`, `#gemini`, `#release`, `#plugin`, `#ai-tools`
+**Tags**: `#PyTorch`, `#linting`, `#deep learning`, `#debugging`, `#GPU`
 
 ---
 
 <a id="item-12"></a>
-## [City2Graph: Python library for urban heterogeneous graph neural networks and spatial analysis](https://www.reddit.com/r/MachineLearning/comments/1vn8oya/city2graph_a_python_library_for_heterogeneous/) ⭐️ 7.0/10
+## [Google Claims Practical Homomorphic Encryption for Private AI](https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/) ⭐️ 6.0/10
 
-City2Graph is a Python library that converts geospatial data into heterogeneous graphs, with direct conversion to PyTorch Geometric Data/HeteroData, and its accompanying paper has been published in a peer-reviewed journal. This library bridges urban geospatial data and graph neural networks, enabling researchers to model complex urban systems as heterogeneous graphs and apply GNNs to tasks like transportation analysis and urban morphology. It supports morphological graphs from OpenStreetMap and Overture Maps, GTFS transit feeds via DuckDB, OD matrices, and proximity graphs \(KNN, Delaunay, Gilbert\). Heterogeneous graphs with metapath edges are supported, and geometry is preserved across conversions between GeoDataFrames, NetworkX, rustworkx, and PyTorch Geometric.
-
-reddit · r/MachineLearning · /u/Tough\_Ad\_6598 · Aug 13, 11:59
-
-**Background**: Heterogeneous graphs contain nodes and edges of different types, enabling the modeling of complex relationships in urban systems. PyTorch Geometric is a popular library for training graph neural networks. GTFS is an open standard for public transit schedules and geographic data, widely used in transportation apps.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.emergentmind.com/topics/heterogeneous-graph-neural-networks-gnns">Heterogeneous Graph Neural Networks</a></li>
-<li><a href="https://en.wikipedia.org/wiki/GTFS">GTFS</a></li>
-<li><a href="https://grokipedia.com/page/PyTorch_Geometric">PyTorch Geometric</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#graph-neural-networks`, `#geospatial-analysis`, `#urban-computing`, `#python-library`, `#pytorch-geometric`
-
----
-
-<a id="item-13"></a>
-## [Reddit Discussion Questions Relevance of Theory in Modern ML Practice](https://www.reddit.com/r/MachineLearning/comments/1vohmy4/are_there_any_theoreticallyguided_practices_left/) ⭐️ 7.0/10
-
-A Reddit user posted a discussion questioning whether any theoretical guidelines \(e.g., on overfitting, model size, optimization\) still guide modern machine learning practice, noting that many traditional theories have been overturned by empirical results. This highlights a fundamental tension in the field between theoretical rigor and empirical success, potentially affecting how researchers, educators, and practitioners approach model development and validation. The post cites specific overturned doctrines: overfitting from too much data, large models require huge datasets, never look at the test set, optimizer choice based on theory, and ensemble superiority, arguing they are now ignored in favor of empirical trial-and-error.
-
-reddit · r/MachineLearning · /u/NeighborhoodFatCat · Aug 14, 19:52
-
-**Background**: Traditional machine learning, rooted in statistical learning theory, emphasized bias-variance tradeoff, capacity control, and theoretical guarantees. However, the rise of deep learning with massive models and data has shown that many of these rules do not hold, and practitioners often succeed by scaling up and using empirical methods like Adam and test set reuse. Classic textbooks like &\#x27;Elements of Statistical Learning&\#x27; taught these principles, but the field has largely shifted to an empirical engineering discipline.
-
-**Tags**: `#machine learning theory`, `#deep learning`, `#discussion`, `#overfitting`, `#best practices`
-
----
-
-<a id="item-14"></a>
-## [Google Claims Progress in Practical Private AI with Homomorphic Encryption](https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/) ⭐️ 6.0/10
-
-Google&\#x27;s blog post announces advancements in making private AI practical using homomorphic encryption, allowing computations on encrypted data without decryption. This could enable privacy-preserving AI services where sensitive data remains encrypted during processing, addressing data privacy concerns in healthcare, finance, and other sectors, though significant performance overheads remain a barrier. Community comments highlight that homomorphic encryption currently imposes overheads of ~10^3 on inference tasks, making it commercially unviable for many applications. Google&\#x27;s Gemma4 can run offline, offering an alternative privacy approach.
+Google announced progress in making homomorphic encryption practical for private AI inference, potentially allowing cloud AI services to process encrypted data without ever decrypting it. If truly made practical, this could enable private, cloud-based AI services where sensitive user data remains encrypted even during processing, addressing major privacy concerns in healthcare, finance, and personal data. The technology still faces a &gt;1000x computational overhead, making it commercially unviable today, and commenters note Google&\#x27;s track record on privacy \(e.g., no default end-to-end encryption in Google Password Manager\) raises doubts about the company&\#x27;s commitment.
 
 hackernews · u1hcw9nx · Aug 14, 15:43 · [Discussion](https://news.ycombinator.com/item?id=49300314)
 
-**Background**: Homomorphic encryption is a cryptographic technique that allows computations on encrypted data \(ciphertext\) without decryption, producing encrypted results that match operations on plaintext. It has been researched for privacy-preserving cloud computing but suffers from high computational costs. Google&\#x27;s work aims to make it practical for AI inference.
+**Background**: Homomorphic encryption is a cryptographic technique that allows computations to be performed directly on encrypted data, producing an encrypted result that, when decrypted, matches the output of the same operations on the original plaintext. It has been a long-standing goal for privacy-preserving cloud computing, but historically has been too slow for real-world use, especially for complex tasks like AI inference.
 
 <details><summary>References</summary>
 <ul>
@@ -314,115 +281,99 @@ hackernews · u1hcw9nx · Aug 14, 15:43 · [Discussion](https://news.ycombinator
 </ul>
 </details>
 
-**Discussion**: Comments express skepticism about the practicality due to 1000x resource usage increase, concerns about Google&\#x27;s privacy track record \(e.g., no default end-to-end encryption for password manager\), and suggestions that offline AI \(like Gemma4\) is more private. The sentiment is largely critical.
+**Discussion**: Commenters are skeptical: one notes the &gt;1000x overhead makes it commercially unviable; another criticizes the high energy consumption and suggests local AI as the real privacy solution; several point out Google&\#x27;s poor privacy reputation, such as lacking end-to-end encryption in its own password manager by default.
 
-**Tags**: `#homomorphic-encryption`, `#privacy-preserving-ml`, `#google`, `#ai`, `#security`
+**Tags**: `#privacy`, `#homomorphic-encryption`, `#AI`, `#Google`, `#security`
+
+---
+
+<a id="item-13"></a>
+## [AI by Hand: A New Publication on Mathematical AI Interpretability](https://www.byhand.ai/) ⭐️ 6.0/10
+
+Prof. Tom Yeh has launched AI by Hand, a subscription-based research publication that provides articles and live seminars explaining AI model interpretability and explainability through mathematical and algorithmic foundations. As AI systems become more pervasive in high-stakes domains, understanding their decision-making process is critical for trust and safety. This publication offers a structured, math-focused approach to learning interpretability, empowering researchers and practitioners to build more transparent AI. The publication is part of By Hand Research, founded by Prof. Tom Yeh. Free subscribers receive new articles and seminar invitations, while full access to the research library requires a membership subscription.
+
+hackernews · sans\_souse · Aug 14, 15:58 · [Discussion](https://news.ycombinator.com/item?id=49300568)
+
+**Background**: Model interpretability and explainability address the &\#x27;black box&\#x27; problem of AI, where even designers cannot explain why a model made a specific decision. Explainable AI \(XAI\) aims to provide human-understandable explanations, fostering trust and enabling debugging, fairness, and regulatory compliance. While not all models require explanations, high-stakes applications like healthcare and finance demand transparency.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Explainable_AI">Explainable AI</a></li>
+<li><a href="https://christophm.github.io/interpretable-ml-book/interpretability.html">2 Interpretability – Interpretable Machine Learning</a></li>
+
+</ul>
+</details>
+
+**Discussion**: The comments reflect a moderate interest, with users sharing alternative learning resources like &\#x27;llm-from-scratch&\#x27; and &\#x27;Deep Learning&\#x27; by No Starch Press. Some expressed confusion about the subscription model and the content behind the paywall. The overall sentiment is that AI by Hand is a useful niche resource, complementing other self-directed projects.
+
+**Tags**: `#AI`, `#machine-learning`, `#interpretability`, `#explainability`, `#education`
+
+---
+
+<a id="item-14"></a>
+## [Mixedbread Launches Toast 1, a Specialized LLM for Search Tasks](https://www.mixedbread.com/blog/toast-1) ⭐️ 6.0/10
+
+Mixedbread released Toast 1, a specialized LLM for search that matches or outperforms Claude Opus 5 and GPT-5.6 Sol while being up to 10× cheaper and 12× faster. It is designed for knowledge-intensive tasks and can serve as both an embedding model and a search agent. This launch addresses the need for efficient, cost-effective search-oriented AI, potentially reducing dependence on large general models and enabling faster, specialized search agents for applications like RAG, enterprise search, and AI assistants. Toast 1 functions as both an embedding model and a search agent, competing with OpenAI&\#x27;s text-embedding-3-large and Voyage AI. However, it is not open-weight, and its specific architecture and benchmarks remain undisclosed.
+
+hackernews · mplappert · Aug 14, 15:07 · [Discussion](https://news.ycombinator.com/item?id=49299746)
+
+**Background**: Mixedbread is a Berlin-based AI startup founded in 2023, specializing in open-source embedding and reranking models for information retrieval. Search-oriented LLMs are designed to perform multi-step research, query refinement, and information synthesis, unlike general-purpose chatbots. Toast 1 aims to optimize for accuracy and cost in search tasks, potentially offering a more efficient alternative to large models like GPT-4.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.mixedbread.com/blog/toast-1">Introducing Toast 1 - mixedbread.com</a></li>
+<li><a href="https://dev.to/trismegistus/toast-1-a-new-embedding-model-that-rivals-openai-at-a-fraction-of-the-cost-3k79">Toast 1: A New Embedding Model That Rivals OpenAI at a ...</a></li>
+<li><a href="https://huggingface.co/mixedbread-ai">mixedbread-ai (Mixedbread) - Hugging Face</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters expressed enthusiasm for specialized search LLMs, with some comparing Toast 1 to Voyage AI and Perplexity. Some disappointment was voiced over it not being open-weight, and there were questions about its value compared to smaller general models or non-LLM approaches. Overall, the discussion was constructive but cautious.
+
+**Tags**: `#LLM`, `#Search`, `#AI`, `#Product Launch`, `#NLP`
 
 ---
 
 <a id="item-15"></a>
-## [AI by Hand: Prof. Tom Yeh&\#x27;s Subscription for Manual AI Math Exercises](https://www.byhand.ai/) ⭐️ 6.0/10
+## [sqlite-utils 4.2 enhances table.transform\(\) and adds check constraint introspection](https://simonwillison.net/2026/Aug/13/sqlite-utils/) ⭐️ 6.0/10
 
-AI by Hand is a subscription-based publication by Prof. Tom Yeh that teaches model interpretability and explainability by having subscribers manually calculate algorithms and mathematics step by step. This approach deepens understanding of AI models&\#x27; inner workings, which is crucial for building trustworthy systems and debugging complex neural networks. It addresses the &\#x27;black box&\#x27; problem in deep learning through hands-on mathematical exercises. The publication is behind a subscription wall, with free articles and live seminars for subscribers, and full library access for members. The focus is on manual calculations, not just theory, covering algorithms and architectures.
+Sqlite-utils 4.2 enhances the table.transform\(\) method to preserve more schema definitions, including check constraints, unique constraints, and column comments. It also introduces new introspection properties for check constraints. This release improves the reliability of schema migrations, reducing the risk of losing constraints or comments during table alterations. It is particularly valuable for developers who rely on SQLite for applications requiring strict data integrity. The transform\(\) method creates a new table, copies data, and swaps tables to perform complex ALTER TABLE operations. Version 4.2 had a crashing bug fixed in 4.2.1, and includes contributions from several community members.
 
-hackernews · sans\_souse · Aug 14, 15:58 · [Discussion](https://news.ycombinator.com/item?id=49300568)
+rss · Simon Willison · Aug 13, 20:11
 
-**Background**: Model interpretability is the extent to which a human can understand the cause of a model&\#x27;s decision, while explainability involves making the model&\#x27;s inner workings transparent. Prof. Tom Yeh, a researcher at the University of Colorado Boulder, started the &\#x27;AI by Hand&\#x27; project to teach these concepts through manual calculations of neural network algorithms. The project has gained tens of thousands of subscribers on Substack and shares exercises on LinkedIn.
+**Background**: sqlite-utils is a Python library and CLI tool for manipulating SQLite databases, offering convenient functions for creating and modifying tables. Its table.transform\(\) method allows complex schema changes by rebuilding the table. Check constraints are SQL rules that enforce data validity, such as ensuring a price is non-negative.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.byhand.ai/">AI by Hand | Prof. Tom Yeh | Substack</a></li>
-<li><a href="https://dongou.tech/ai/dongou/ai-by-hand-%E2%9C%8D%EF%B8%8F-with-prof-tom-yeh-for-ai-professionals/">AI by Hand with Prof. Tom Yeh for AI Professionals - Dongou</a></li>
-<li><a href="https://jfrog.com/learn/mlops/ml-model-interpretability/">What is ML Model Interpretability? | JFrog</a></li>
+<li><a href="https://sqlite-utils.datasette.io/">sqlite-utils</a></li>
+<li><a href="https://github.com/simonw/sqlite-utils">GitHub - simonw/sqlite-utils: Python CLI utility and library for manipulating SQLite databases · GitHub</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Check_constraint">Check constraint</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Some community members express skepticism about the subscription model, noting that the site mainly shows article descriptions without full content. Others recommend free, open-source alternatives like &\#x27;llm-from-scratch&\#x27; and &\#x27;ml-by-hand&\#x27; for learning AI by building from scratch.
-
-**Tags**: `#machine-learning`, `#education`, `#interpretability`, `#deep-learning`, `#math`
+**Tags**: `#sqlite-utils`, `#sqlite`, `#python`, `#database`, `#release`
 
 ---
 
 <a id="item-16"></a>
-## [Mixedbread Launches Toast 1, a Specialized LLM for Search](https://www.mixedbread.com/blog/toast-1) ⭐️ 6.0/10
+## [llm-gemini 0.33 Adds Gemini 3.7 Flash and Server-Side Tool Execution](https://simonwillison.net/2026/Aug/13/llm-gemini/) ⭐️ 6.0/10
 
-Mixedbread has released Toast 1, a new specialized large language model \(LLM\) designed specifically for search tasks, which reportedly matches or outperforms frontier models like Claude Opus 5 and GPT-5.6 Sol on search quality while being up to 10× cheaper and 12× faster. This launch addresses the growing need for efficient, specialized AI search agents that can handle complex, multi-step queries more effectively than general-purpose models, potentially reshaping how search is integrated into AI workflows. Toast 1 is available via the Mixedbread API at launch pricing, and it operates as an agentic search model that breaks queries into steps for improved retrieval. However, it is not an open-weight model, which may limit customization.
+The llm-gemini 0.33 plugin now supports Google&\#x27;s latest Gemini 3.7 Flash, along with gemini-3.6-flash, gemini-3.5-flash-lite, and two embedding models. It also upgrades compatibility with LLM 0.32, enabling reasoning traces and server-side tool execution via the -T flag. This update brings cutting-edge Gemini models to LLM CLI users, enabling faster experimentation with reasoning traces and server-side tool integration. It demonstrates the continued evolution of CLI-based AI tooling, making advanced features like code execution accessible directly from the terminal. The server-side tool execution is triggered by the -T flag, e.g., -T CodeExecution, and requires LLM 0.32. The plugin now exposes reasoning traces for compatible models, and the earlier minimal thinking effort option from Gemini 3.6 Flash has been removed in Gemini 3.7 Flash.
 
-hackernews · mplappert · Aug 14, 15:07 · [Discussion](https://news.ycombinator.com/item?id=49299746)
+rss · Simon Willison · Aug 13, 19:37
 
-**Background**: Mixedbread is an AI company known for its search and retrieval solutions. Specialized LLMs for search are a growing category, exemplified by models like Perplexity, Gemini with search, and Voyage AI, which aim to enhance traditional search engines with AI capabilities. Toast 1 is such a model that acts as an agent to break down queries and retrieve information more effectively.
+**Background**: LLM is a command-line tool by Simon Willison for interacting with large language models, and llm-gemini is a plugin that adds support for Google&\#x27;s Gemini models. Gemini 3.7 Flash is Google&\#x27;s latest fast model, announced on August 13, 2026, with improved performance. Reasoning traces show the step-by-step thinking process of a model, while server-side tool execution allows the model to run code or other tools within the API call itself, reducing latency and complexity.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://zeli.app/en/story/49299746">Mixedbread&#x27;s Toast 1 matches frontier search at a fraction of the cost — Introducing Toast 1 | Zeli</a></li>
-<li><a href="https://www.mixedbread.com/blog/toast-1">Introducing Toast 1</a></li>
-<li><a href="https://benchlm.ai/models/toast-1">Toast 1 Pricing, Specs &amp; Sources (August 2026) | BenchLM.ai</a></li>
+<li><a href="https://github.com/simonw/llm-gemini/releases">Releases · simonw/llm-gemini - GitHub</a></li>
+<li><a href="https://blog.yammbo.com/blog/how-to-implement-server-side-tools-ai-agent-efficiency/">How to Implement Server-Side Tools for AI Agent Efficiency</a></li>
+<li><a href="https://jumpcloud.com/it-index/what-are-reasoning-traces-in-ai">What Are Reasoning Traces in AI? - JumpCloud</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community reaction is cautiously optimistic, with users comparing Toast 1 to existing tools like voyageai, SearXNG, and cloud-based search models. Some express disappointment that it&\#x27;s not open-weight, while others note the lack of explanation about what &\#x27;Mixedbread Search&\#x27; is. Overall, the specialized search LLM concept is well-received, but questions remain about its positioning and openness.
-
-**Tags**: `#LLM`, `#search`, `#AI`, `#mixedbread`, `#product-launch`
-
----
-
-<a id="item-17"></a>
-## [Developer Turns RSS Feeds Into E-Ink Newspaper for Phone-Free Reading](https://heyjonny.dev/posts/rss-to-eink-newspaper/) ⭐️ 6.0/10
-
-A developer created a personal project that converts RSS feeds into a formatted e-ink newspaper, specifically designed to reduce phone usage and enable distraction-free reading. This project highlights a growing interest in digital minimalism and repurposing e-ink devices for focused, offline reading, potentially reducing phone addiction and eye strain. The system relies on RSS feeds, but many feeds only provide summaries, requiring external content fetching. Existing tools like Calibre can already generate e-reader news from RSS, suggesting this is a custom implementation of a known concept.
-
-hackernews · speckx · Aug 14, 14:21 · [Discussion](https://news.ycombinator.com/item?id=49299081)
-
-**Background**: RSS \(Really Simple Syndication\) is a standard for distributing web content updates. E-ink displays are low-power, paper-like screens commonly found in e-readers like the Kindle. Digital minimalism is a lifestyle trend that encourages intentional use of technology to reduce screen time and distractions.
-
-**Discussion**: The community showed interest but noted practical hurdles. Some pointed out that Calibre already offers RSS-to-ebook conversion, while others mentioned the difficulty of reading partial feeds on e-ink and the inconvenience of phone dependency for daily tasks. A few found the setup process too cumbersome.
-
-**Tags**: `#RSS`, `#e-ink`, `#digital minimalism`, `#personal project`, `#web scraping`
-
----
-
-<a id="item-18"></a>
-## [Maximizing the Value of Your Claude Code Sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions) ⭐️ 6.0/10
-
-Anthropic published an official blog post with tips for getting the most out of Claude Code sessions, covering compaction, handoff, and file referencing. The accompanying Hacker News discussion added community-driven techniques like cross-model handoff workflows and surfaced bugs and feature requests. As AI coding assistants become central to development workflows, efficient context management is critical for productivity and cost control. The community insights reveal real-world pain points and workarounds, influencing how tools like Claude Code might evolve to better handle long-running sessions. The /handoff command generates a short document with key context and a checklist, enabling seamless continuation across sessions or even between Claude and ChatGPT. The guide also recommends @-mentioning files to reference project context, but users report that the desktop app&\#x27;s implementation is broken, returning irrelevant results. Additionally, the prefix cache in Claude&\#x27;s Fable model is tied to the effort level, causing inefficient use during explanatory follow-up questions.
-
-hackernews · twapi · Aug 14, 16:15 · [Discussion](https://news.ycombinator.com/item?id=49300800)
-
-**Background**: Claude Code is Anthropic&\#x27;s terminal-based AI coding assistant. It maintains a conversation history that can quickly fill the context window, leading to token limits and increased costs. The /compact command summarizes the conversation to reduce token usage, while /handoff creates a transferable context file for continuing work in a fresh session or with another model. These techniques are essential for long, complex coding sessions.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://fast.io/resources/ai-agent-memory-compaction-strategies/">AI Agent Memory Compaction Strategies for Long Sessions | Fastio</a></li>
-<li><a href="https://www.ainews.tech/glossary/cross-model-handoff">Cross - model handoff — what it means in plain English | AINews</a></li>
-
-</ul>
-</details>
-
-**Discussion**: The community largely welcomed the guide, but many highlighted limitations. Users praised the /handoff workflow for cross-model context transfer, requested more intelligent compaction that removes only irrelevant artifacts, and reported bugs like broken @-mention in the desktop app. Some expressed frustration with the complexity of managing costs and the mysterious tie between prefix cache and effort level.
-
-**Tags**: `#claude-code`, `#ai-tools`, `#productivity`, `#developer-tools`, `#llm`
-
----
-
-<a id="item-19"></a>
-## [Open-source Python library and no-code dashboard for oncology AI evaluation at clinical thresholds](https://www.reddit.com/r/MachineLearning/comments/1vod2c8/opensource_python_library_nocode_web_dashboard/) ⭐️ 6.0/10
-
-A new open-source Python library, oncothresh, evaluates oncology AI models at specific clinical decision thresholds rather than using global metrics. It provides sensitivity, specificity, PPV, NPV, bootstrap confidence intervals, boundary-weighted calibration, and decision-curve net benefit, along with a no-code web dashboard for non-programmers. This tool addresses a critical gap in oncology AI evaluation: models are often assessed with global metrics like AUC, but clinical decisions hinge on specific cutoffs. By evaluating at the exact threshold, it helps ensure that AI models are reliable when deciding whether to flag, biopsy, or treat a patient. The library is dependency-light and includes advanced metrics like number-needed-to-test and boundary-weighted calibration. The companion web dashboard runs entirely locally via Docker, requires no cloud dependency, and generates downloadable PDF reports.
-
-reddit · r/MachineLearning · /u/adom2989 · Aug 14, 17:06
-
-**Background**: In oncology, AI models often output continuous scores \(e.g., tumor cellularity percentage\) that are binarized at a clinical threshold to guide actions like biopsy. Traditional evaluation metrics like AUC measure overall discriminative ability but do not assess performance at the specific cutoff used in practice. Decision curve analysis quantifies net benefit across thresholds, while boundary-weighted calibration focuses on improving calibration near decision boundaries. The PathBench benchmark evaluates pathology foundation models globally but does not test at predefined clinical thresholds with uncertainty quantification.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://atm.amegroups.org/article/view/20389/html">Decision curve analysis: a technical note - Zhang - Annals of...</a></li>
-<li><a href="https://arxiv.org/abs/2505.20202">[2505.20202] PathBench: A comprehensive comparison benchmark for pathology foundation models towards precision oncology</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#machine-learning`, `#medical-imaging`, `#python`, `#evaluation`, `#open-source`
+**Tags**: `#LLM`, `#Gemini`, `#CLI`, `#plugin`, `#AI`
 
 ---

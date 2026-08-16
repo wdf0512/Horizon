@@ -5,279 +5,249 @@ date: 2026-08-16
 lang: en
 ---
 
-> From 30 items, 13 important content pieces were selected
+> From 29 items, 11 important content pieces were selected
 
 ---
 
-1. [RISC-V Design Critique Sparks Debate on Microcontroller Suitability](#item-1) ⭐️ 8.0/10
-2. [AI Codex Agent Auto-Optimizes GPU Kernel for 232x Speedup](#item-2) ⭐️ 8.0/10
-3. [Ghost Characters Haunt Unicode: A Deep Dive into CJK Mysteries](#item-3) ⭐️ 8.0/10
-4. [Working with AI feels more like leadership than coding](#item-4) ⭐️ 8.0/10
-5. [BDH-CQ: 150M-Parameter Model Breaks Cost-Accuracy Pareto Frontier on ARC-AGI-1](#item-5) ⭐️ 8.0/10
-6. [Doom Renderer Compiled into a 21B-Parameter Transformer with No Training](#item-6) ⭐️ 8.0/10
-7. [Oncothresh: Open-Source Library and Dashboard for Evaluating Oncology AI at Clinical Decision Thresholds](#item-7) ⭐️ 8.0/10
-8. [AI has access to a vastly larger working memory than the human brain](#item-8) ⭐️ 7.0/10
-9. [LLM Hallucination Leveraged for Content Tagging via Vector Embeddings](#item-9) ⭐️ 7.0/10
-10. [Survival of the Fitted: Qwen3.6-27B’s Jacobian lens reads and steers Qwen3.8-27B with zero refitting \[R\]](#item-10) ⭐️ 7.0/10
-11. [Semaglutide Linked to Lower Predicted Dementia Risk, but Doubts Remain](#item-11) ⭐️ 6.0/10
-12. [At-Home Lateral Flow Test for Ticks Aims to Improve Lyme Disease Diagnosis](#item-12) ⭐️ 6.0/10
-13. [Abdominal Visceral Fat Better Predicts Heart Disease Risk Than BMI](#item-13) ⭐️ 6.0/10
+1. [RISC-V Design Shortcomings Spark Intense Community Debate](#item-1) ⭐️ 9.0/10
+2. [Auto-Research with Codex Yields 232x Faster GPU Kernel](#item-2) ⭐️ 8.0/10
+3. [AI&\#x27;s Superior Working Memory and Persistence Over Human Mathematicians](#item-3) ⭐️ 8.0/10
+4. [Don&\#x27;t Classify – Hallucinate Tags and Embed for Mapping](#item-4) ⭐️ 8.0/10
+5. [BDH-CQ Model Reaches 29.5% on ARC-AGI-1 Using Latent Recurrent Reasoning](#item-5) ⭐️ 8.0/10
+6. [Jacobian lens from Qwen3.6-27B successfully reads Qwen3.8-27B without refitting](#item-6) ⭐️ 8.0/10
+7. [Unicode&\#x27;s Ghost Character 彁: A Phantom Kanji with No Known Meaning](#item-7) ⭐️ 7.0/10
+8. [Doom&\#x27;s Renderer Compiled into a 21B-Parameter Transformer Without Training](#item-8) ⭐️ 7.0/10
+9. [oncothresh: A Python Library for Evaluating Oncology AI at Clinical Decision Thresholds](#item-9) ⭐️ 7.0/10
+10. [Abdominal visceral fat better predicts heart disease risk than BMI](#item-10) ⭐️ 6.0/10
+11. [New Starfield Fauna Dataset: 20,000 Images Across 50 Species](#item-11) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [RISC-V Design Critique Sparks Debate on Microcontroller Suitability](https://dmitry.gr/?r=06.%20Thoughts&amp;proj=12.%20RV) ⭐️ 8.0/10
+## [RISC-V Design Shortcomings Spark Intense Community Debate](https://dmitry.gr/?r=06.%20Thoughts&amp;proj=12.%20RV) ⭐️ 9.0/10
 
-Dmitry Grinberg published a detailed critique of RISC-V&\#x27;s instruction set architecture, highlighting design flaws that make it less suitable for simple microcontrollers, sparking intense discussion among engineers. The debate exposes the tension between RISC-V&\#x27;s open, extensible philosophy and the need for lean, efficient ISAs in cost-sensitive embedded systems, potentially influencing future extension standardization and adoption. The critique targets instruction encoding complexity, code density, and the burden of managing many optional extensions. Community members note that RISC-V&\#x27;s modularity, while a strength, can cause fragmentation and complications for basic microcontroller designs.
+A detailed technical critique of RISC-V&\#x27;s ISA design flaws was published, prompting a high-quality discussion \(237 points, 305 comments\) on the trade-offs of the instruction set architecture, its extensibility, and its suitability for embedded microcontrollers. The debate highlights the real-world engineering challenges of open instruction sets, affecting how companies like AMD and NVIDIA choose cores for their products, and underscores the tension between simplicity, extensibility, and performance in embedded systems. Key criticisms include RISC-V&\#x27;s fragmented extension model and issues with code density, while defenders note that its open, license-free nature and broad compiler support \(LLVM/GCC\) outweigh the design quirks, especially for microcontroller applications where custom IP handles heavy lifting.
 
 hackernews · dmitrygr · Aug 14, 12:50 · [Discussion](https://news.ycombinator.com/item?id=49298035)
 
-**Background**: RISC-V is a free and open instruction set architecture developed at UC Berkeley in 2010 and now maintained by RISC-V International, a non-profit with over 4,500 members. Unlike proprietary ARM or x86 ISAs, it can be implemented royalty-free. It is built as a base integer set with optional extensions, allowing high customization but also introducing design complexity. It is widely used in microcontrollers, embedded systems, and increasingly in AI accelerators and custom chips.
+**Background**: RISC-V is a free and open instruction set architecture developed at UC Berkeley, designed to be extensible with a base integer ISA and optional extensions. Unlike proprietary ISAs like ARM and x86, it allows anyone to implement processors without licensing fees, making it popular for embedded systems and microcontrollers. ISA design involves trade-offs between code density, hardware complexity, and performance, and RISC-V&\#x27;s modularity is both a strength and a source of criticism.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/RISC-V">RISC-V</a></li>
-<li><a href="https://riscv.org/">Home - RISC-V International</a></li>
+<li><a href="https://cseweb.ucsd.edu/classes/wi10/cse240a/Slides/08_ISA.pdf">Instruction Set Design - University of California, San Diego</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Comments show nuanced views: some see RISC-V&\#x27;s modularity as an unavoidable result of diverse industry needs, while others agree a simpler, curated subset would benefit microcontrollers. Success stories like Meta&\#x27;s AI accelerators and AMD&\#x27;s GPU controllers demonstrate practical value. Overall, RISC-V is seen as adequate but imperfect, with its extension model being a double-edged sword.
+**Discussion**: Overall sentiment is mixed but respectful. Some commenters agree with the critique, noting that RISC-V&\#x27;s extension mess is a result of many stakeholders&\#x27; diverse requirements, but they value its legal freedom and open-source tool support. Others argue that for low-cost microcontrollers, the ISA&\#x27;s quirks are irrelevant because the CPU merely orchestrates custom hardware. Prominent hobby CPU designer wren6991 says RISC-V is &\#x27;fine&\#x27; and can be fixed post-implementation, while others point to real-world adoption by AMD and NVIDIA as proof of its practical viability.
 
-**Tags**: `#RISC-V`, `#ISA design`, `#embedded systems`, `#critique`, `#community discussion`
+**Tags**: `#RISC-V`, `#ISA design`, `#embedded systems`, `#open hardware`, `#computer architecture`
 
 ---
 
 <a id="item-2"></a>
-## [AI Codex Agent Auto-Optimizes GPU Kernel for 232x Speedup](https://sankalp.bearblog.dev/autoresearch/) ⭐️ 8.0/10
+## [Auto-Research with Codex Yields 232x Faster GPU Kernel](https://sankalp.bearblog.dev/autoresearch/) ⭐️ 8.0/10
 
-A blog post details using an AI codex agent to automatically research and optimize a GPU kernel, achieving a 232x speed improvement by iterating with profiling, verification, and code generation. This demonstrates AI&\#x27;s potential to automate complex performance optimization, but the community warns that such optimizations often overfit to specific inputs, lacking robustness without human expertise. The method generated 25,000 lines of CUDA code by exploring a vast search space. In a competition, 8 out of 10 top solutions using similar approaches broke on out-of-distribution inputs, while expert-tuned solutions remained robust.
+A developer used OpenAI&\#x27;s Codex AI agent to automate the profiling and iterative optimization of a GPU kernel, achieving a 232x speed improvement. This showcases the transformative potential of AI coding agents in performance-critical engineering, but also fuels debate about the brittleness of auto-generated solutions and the ongoing need for human expertise to ensure generalizability. The optimization specifically targeted a GPU kernel, and community feedback notes that similar auto-optimized kernels in competitions often fail on inputs outside the training distribution, sometimes producing thousands of lines of CUDA with limited robustness.
 
 hackernews · tosh · Aug 15, 11:00 · [Discussion](https://news.ycombinator.com/item?id=49309549)
 
-**Background**: OpenAI Codex is an AI model that translates natural language to code, capable of generating and optimizing programs. A GPU kernel is a function executed on a GPU, often written in CUDA for parallel processing. Optimizing kernels is notoriously difficult due to hardware intricacies and memory hierarchies.
+**Background**: A GPU kernel is a small, massively parallel program executed on graphics hardware for compute-intensive tasks. OpenAI Codex is an AI agent that can generate and refactor code based on natural language, enabling automated software engineering. Profiling tools measure where a program spends time, and low-level optimization often involves tuning memory access patterns and instruction usage. This experiment integrated Codex with profilers to automate the optimization loop.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/introducing-codex/">Introducing Codex | OpenAI</a></li>
 <li><a href="https://modal.com/gpu-glossary/device-software/kernel">What is a CUDA Kernel? | GPU Glossary</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Codex_%28AI_agent%29">OpenAI Codex ( AI agent ) - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Comments highlight that AI-driven optimization tends to overfit to specific benchmarks, and human expertise is crucial for verifying correctness. Some note the refreshing non-AI-generated writing, and speculate that GPU kernel training data is particularly rich in language models.
+**Discussion**: The discussion highlighted the impressive speedup but cautioned that such auto-generated kernels often overfit to specific inputs, contrasting with expert-written solutions that remain robust. Some speculated that rich GPU-related training data may explain LLMs&\#x27; proficiency in this domain, and several appreciated the human-written, non-AI style of the article.
 
-**Tags**: `#AI-assisted programming`, `#GPU optimization`, `#auto-research`, `#CUDA`, `#codex`
+**Tags**: `#AI-assisted programming`, `#GPU optimization`, `#automatic code optimization`, `#performance engineering`, `#LLM`
 
 ---
 
 <a id="item-3"></a>
-## [Ghost Characters Haunt Unicode: A Deep Dive into CJK Mysteries](https://www.dampfkraft.com/ghost-characters.html) ⭐️ 8.0/10
+## [AI&\#x27;s Superior Working Memory and Persistence Over Human Mathematicians](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians) ⭐️ 8.0/10
 
-An in-depth article by Paul McCann investigates &\#x27;ghost&\#x27; characters in Unicode, particularly CJK ideographs, that were mistakenly included from historical Japanese character standards and have no verifiable meaning or origin. These ghost characters, permanently encoded into Unicode, highlight the tension between standardization accuracy and backward compatibility, and how small historical errors can have lasting consequences in global digital infrastructure. The character 彁 \(U+5F41\) is a prime example, likely originating from a misreading or poor scan of 彊 during the 1978 JIS standard creation. Because Unicode prioritizes round-trip compatibility, removing such characters is now almost impossible.
+A recent analysis highlights that AI systems possess a vastly larger working memory and a tireless, persistent nature, allowing them to explore mathematical problems more exhaustively than human mathematicians, who are limited by fatigue and cognitive constraints. This insight reframes the AI vs. human debate from raw intelligence to cognitive architecture and persistence, suggesting that AI&\#x27;s edge in mathematics may come from memory and endurance rather than just superior reasoning, with implications for how AI can be leveraged in research. Community comments added that AI can systematically publish and reuse negative results—something human researchers rarely do due to incentive structures—enabling a more efficient exploration of problem spaces. The project TheoremDB \(theoremdb.org\) is cited as an example of exploiting this capability.
 
-hackernews · sensanaty · Aug 15, 14:34 · [Discussion](https://news.ycombinator.com/item?id=49310926)
+hackernews · rzk · Aug 15, 18:13 · [Discussion](https://news.ycombinator.com/item?id=49312845)
 
-**Background**: Unicode is the universal text encoding standard that assigns a unique code point to every character across all writing systems. CJK unification merged the Chinese, Japanese, and Korean ideographs into a single set, but the process inherited errors from legacy national standards. Ghost characters are spurious entries with no known etymology or usage, often introduced by misprints, misreadings, or administrative mistakes in pre-digital character dictionaries.
+**Background**: Working memory is the cognitive system that holds a limited amount of information temporarily for processing. In AI, this corresponds to context windows and attention mechanisms that can store vast amounts of data. In mathematics, negative results \(proving that a certain approach cannot work\) are often under-published due to publication bias, yet they are valuable for avoiding dead ends.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Ghost_characters">Ghost characters - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/CJK">CJK</a></li>
+**Discussion**: Commenters largely agree that AI&\#x27;s memory and persistence are key advantages. Some note that human intelligence often boils down to recalling past knowledge, while others highlight AI&\#x27;s ability to tirelessly explore dead ends and publish negative results, a practice that human researchers struggle with due to incentives. A few skeptical or incomplete comments exist but the overall sentiment is positive toward the insight.
 
-</ul>
-</details>
-
-**Discussion**: Commenters praised the author&\#x27;s expertise in Japanese NLP and noted that the character 彁 may have originated from a poorly scanned newspaper article. Others pointed out that the Kangxi dictionary is full of similar ghost characters, and that while superfluous characters are undesirable, they are preferable to missing real ones.
-
-**Tags**: `#unicode`, `#cjk`, `#ghost-characters`, `#linguistics`, `#history`
+**Tags**: `#AI`, `#working memory`, `#human cognition`, `#machine learning`, `#mathematics`
 
 ---
 
 <a id="item-4"></a>
-## [Working with AI feels more like leadership than coding](https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/) ⭐️ 8.0/10
+## [Don&\#x27;t Classify – Hallucinate Tags and Embed for Mapping](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/) ⭐️ 8.0/10
 
-A blog post argues that using AI coding assistants transforms the developer&\#x27;s role from coding to a leadership-like task, sparking a lively debate on Hacker News with 169 comments. This shift highlights the evolving skillset required for software engineers, potentially reducing the need for junior developers and altering hiring practices across the industry. Community members point out that managing AI is distinct from managing humans, requiring new skills to avoid pitfalls like blindly trusting AI-generated code, which can lead to project failures and technical debt.
-
-hackernews · allenb · Aug 15, 10:39 · [Discussion](https://news.ycombinator.com/item?id=49309451)
-
-**Background**: AI coding assistants \(e.g., GitHub Copilot, Claude\) are tools that generate code from natural language prompts. They are increasingly used by developers to accelerate coding tasks, but their output often requires careful review and guidance.
-
-**Discussion**: The discussion is divided. Some experienced developers find AI amplifies their productivity, while others caution that treating AI as a human subordinate leads to technical bankruptcy. Many emphasize that this requires a distinct skill set, not just people management, and worry about the impact on junior developers entering the field.
-
-**Tags**: `#AI`, `#software engineering`, `#management`, `#leadership`, `#coding assistants`
-
----
-
-<a id="item-5"></a>
-## [BDH-CQ: 150M-Parameter Model Breaks Cost-Accuracy Pareto Frontier on ARC-AGI-1](https://www.reddit.com/r/MachineLearning/comments/1vov5r5/bdhcq_incontext_learning_with_recurrent_latent/) ⭐️ 8.0/10
-
-A 150M-parameter model called BDH-CQ uses recurrent latent reasoning to achieve 29.5% pass@2 on the ARC-AGI-1 benchmark at a cost of only $0.00070 per task, breaking the previously reported cost-accuracy Pareto frontier. This demonstrates that small models can perform complex reasoning tasks at extremely low cost by using iterative latent-space computation instead of generating verbose chain-of-thought tokens, potentially enabling efficient reasoning in resource-constrained applications. The model&\#x27;s recurrent memory is updated continuously during inference using task demonstrations, and the query is solved through iterative computation in a high-dimensional latent space without verbalizing intermediate steps. No task identifiers or evaluation-task demonstration pairs are used in training, and no parameters are updated at inference time.
-
-reddit · r/MachineLearning · /u/moschles · Aug 15, 06:18
-
-**Background**: ARC-AGI-1 is a reasoning benchmark that measures a model&\#x27;s ability to solve abstract visual puzzles. The Pareto frontier represents the trade-off between two objectives—here, cost and accuracy—where a solution is Pareto-optimal if no other solution achieves better accuracy at equal or lower cost. BDH-CQ&\#x27;s approach of recurrent latent reasoning allows the model to adapt to new tasks via in-context learning without gradient updates, iterating in a continuous latent space rather than generating discrete tokens.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://arxiv.org/html/2608.09888v1">BDH-CQ: In-Context Learning with Recurrent Latent Reasoning</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Pareto_frontier">Pareto frontier</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#in-context learning`, `#latent reasoning`, `#ARC-AGI`, `#recurrent neural networks`, `#cost-efficiency`
-
----
-
-<a id="item-6"></a>
-## [Doom Renderer Compiled into a 21B-Parameter Transformer with No Training](https://www.reddit.com/r/MachineLearning/comments/1voazhm/i_compiled_dooms_renderer_into_a_21bparameter/) ⭐️ 8.0/10
-
-A developer ported Doom&\#x27;s rendering algorithm into a 21B-parameter transformer by compiling the computation graph directly into model weights, eliminating the need for any training. The model receives a scene description as a prompt and autoregressively generates tokens representing pixel-drawing commands that produce a rendered frame. This project showcases how deterministic algorithms can be embedded directly into transformer weights, enabling the model to execute precise computations like rendering without training. It hints at a future where AI models combine probabilistic inference with exact program execution internally, potentially reducing reliance on external tools. The 21B-parameter transformer is a standard Hugging Face checkpoint, requiring no custom code. Rendering a single E1M1 frame involves a 3,614-token prompt and 53,747 output tokens, taking 40 minutes on an NVIDIA B200 GPU \(35 frames per day vs. original 35 FPS on a 486\). The entire inference host code is just 43 lines of Python.
-
-reddit · r/MachineLearning · /u/notforrob · Aug 14, 15:50
-
-**Background**: The Doom rendering engine is a classic software renderer that uses Binary Space Partitioning \(BSP\) to draw walls, floors, and sprites from a 2D map, achieving 3D-like visuals. A computation graph represents a mathematical expression as a directed graph of operations, which is the foundation of deep learning frameworks like PyTorch. The idea of compiling programs into transformer weights has been explored in recent projects, where a computation graph is translated into fixed attention and feedforward layers, allowing the model to execute a specific algorithm step-by-step during autoregressive generation.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.geeksforgeeks.org/deep-learning/computational-graphs-in-deep-learning/">Computational Graphs in Deep Learning - GeeksforGeeks</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Doom_engine">Doom engine - Wikipedia</a></li>
-<li><a href="https://towardsdatascience.com/i-built-a-tiny-computer-inside-a-transformer/">I Built a Tiny Computer Inside a Transformer | Towards Data ...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#transformers`, `#compilation`, `#graphics`, `#machine-learning`, `#novelty`
-
----
-
-<a id="item-7"></a>
-## [Oncothresh: Open-Source Library and Dashboard for Evaluating Oncology AI at Clinical Decision Thresholds](https://www.reddit.com/r/MachineLearning/comments/1vod2c8/opensource_python_library_nocode_web_dashboard/) ⭐️ 8.0/10
-
-A new open-source Python library, oncothresh, and a companion no-code web dashboard have been released. They evaluate oncology AI models at specific clinical decision thresholds, providing sensitivity, specificity, PPV, NPV, bootstrap confidence intervals, and decision-curve net benefit at the chosen cutoff. Most oncology AI models are evaluated with global metrics like AUC, which ignore performance at the exact clinical cutoff where a patient is flagged for biopsy or treatment. This tool fills a critical gap by enabling clinicians and researchers to assess model reliability at the decision point, improving real-world clinical decision-making. The library is dependency-light \(numpy, scipy, scikit-learn, pydantic\) and includes boundary-weighted calibration and threshold-sensitivity curves. The dashboard allows uploading a CSV of predictions and labels, selecting a threshold, and generating charts with a downloadable PDF report, all running locally via Docker.
-
-reddit · r/MachineLearning · /u/adom2989 · Aug 14, 17:06
-
-**Background**: In oncology, AI models often output continuous scores \(e.g., tumor cellularity, Ki-67 index, TMB, PD-L1 expression\) that are dichotomized at a predefined clinical cutoff to decide on biopsy, treatment, or flagging. Traditional metrics like AUC measure overall ranking ability but not performance at that critical threshold. Decision curve analysis quantifies net benefit across threshold probabilities, and benchmarks like PathBench evaluate pathology foundation models globally, but do not provide threshold-specific uncertainty quantification.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://atm.amegroups.org/article/view/20389/html">Decision curve analysis: a technical note - Zhang - Annals of...</a></li>
-<li><a href="https://github.com/scikit-learn/scikit-learn/issues/22136">Net benefit curve and decision curve analysis · Issue #22136...</a></li>
-<li><a href="http://birkhoffkiki.github.io/PathBench/">PathBench : A compensive benchmark for pathology foundation...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#oncology`, `#machine learning`, `#model evaluation`, `#clinical decision thresholds`, `#open-source`
-
----
-
-<a id="item-8"></a>
-## [AI has access to a vastly larger working memory than the human brain](https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians) ⭐️ 7.0/10
-
-The article argues that AI&\#x27;s advantage in mathematics comes not from superior reasoning but from its vastly larger working memory and relentless persistence, enabling brute-force exploration that human mathematicians cannot sustain. Community comments further emphasize that AI can publish and reuse negative results, a practice humans find difficult. This perspective challenges the common belief that AI surpasses humans through raw intelligence, reframing success as a combination of memory and stamina. It has implications for how we design AI systems and collaborate with them in research. The discussion highlights that human mathematicians are incentivized to publish only positive results, while AI agents can systematically explore and document negative findings. AI&\#x27;s unlimited &\#x27;mental energy&\#x27; allows it to tackle problems without fatigue or discouragement.
-
-hackernews · rzk · Aug 15, 18:13 · [Discussion](https://news.ycombinator.com/item?id=49312845)
-
-**Background**: Human working memory has a limited capacity, typically holding only a few items at once, while large language models can process context windows of hundreds of thousands of tokens, effectively acting as a massive working memory. This cognitive science concept is central to understanding why AI can brute-force through many research paths that a human would find exhausting.
-
-**Discussion**: Commenters broadly agree that AI&\#x27;s edge is akin to tireless memory retrieval and brute-force search. Some note that human high performance often boils down to superior memory, while others highlight AI&\#x27;s ability to publish negative results as a game-changer. A reference to Michael Nielsen&\#x27;s essay on memory augmentation reinforces the idea that memory is a foundational component of intelligence.
-
-**Tags**: `#artificial-intelligence`, `#working-memory`, `#cognitive-science`, `#mathematics`, `#hackernews-discussion`
-
----
-
-<a id="item-9"></a>
-## [LLM Hallucination Leveraged for Content Tagging via Vector Embeddings](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/) ⭐️ 7.0/10
-
-Simon Willison highlights a technique from Doug Turnbull that instructs an LLM to generate novel, never-before-seen tag suggestions without seeing the existing tag vocabulary, then uses vector embeddings to find the closest matching existing tags. This approach elegantly solves the content tagging problem for large, dynamic tag sets, avoiding the need to feed all tags to an LLM and leveraging the creative, generative strengths of LLMs combined with the semantic matching of vector embeddings. The prompt asks the LLM to create novel, never-before-seen classifications, with examples of the tag shape to guide the generation; then vector similarity search matches the imagined tags to the real tag corpus.
+Doug Turnbull introduced a technique where an LLM generates hypothetical &\#x27;hallucinated&\#x27; tags without knowing the existing tag vocabulary, and then vector embeddings are used to find the closest real tags from the corpus, avoiding the need to feed a large tag set into the prompt. This approach solves the long-standing challenge of tagging content against a massive controlled vocabulary, reducing token costs and prompt complexity while enabling scalable, high-quality content classification. The prompt provides examples of the tag structure \(e.g., hierarchical product categories\) to guide the LLM&\#x27;s hallucination toward plausible formats. The fake tags only need semantic similarity to real tags, as the embedding lookup resolves the closest match. The technique is related to the Hypothetical Document Embeddings \(HyDE\) pattern.
 
 rss · Simon Willison · Aug 14, 21:54
 
-**Background**: LLM hallucination is usually considered a problem where models generate false information, but here it is deliberately used to invent novel tags. Vector embeddings are dense numerical representations of text that capture semantic meaning, enabling similarity search to find the most relevant existing tags.
+**Background**: Vector embeddings are dense numerical representations that capture semantic meaning, so similar concepts are close in vector space. In large language models, &\#x27;hallucination&\#x27; refers to generating plausible but non-factual content; here it is intentionally leveraged to invent plausible tags. The approach is inspired by Hypothetical Document Embeddings \(HyDE\), where an LLM imagines a document that could answer a query, and its embedding is used to retrieve real documents even if the imagined content is entirely fabricated.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Vector_embedding">Vector embedding</a></li>
-<li><a href="https://en.wikipedia.org/wiki/LLM_hallucination">LLM hallucination</a></li>
+<li><a href="https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications">Don&#x27;t classify. Hallucinate! - softwaredoug.com</a></li>
+<li><a href="https://www.agentpatterns.ai/context-engineering/hypothetical-classification/">Hypothetical Classification for Large Label Vocabularies ¶</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLMs`, `#embeddings`, `#tagging`, `#vector search`, `#content classification`
+**Tags**: `#LLM`, `#tagging`, `#vector embeddings`, `#content management`, `#prompt engineering`
+
+---
+
+<a id="item-5"></a>
+## [BDH-CQ Model Reaches 29.5% on ARC-AGI-1 Using Latent Recurrent Reasoning](https://www.reddit.com/r/MachineLearning/comments/1vov5r5/bdhcq_incontext_learning_with_recurrent_latent/) ⭐️ 8.0/10
+
+Researchers introduced BDH-CQ, a 150M-parameter model that combines in-context learning with recurrent latent reasoning. It solves ARC-AGI-1 tasks at 29.5% pass@2 without decoding intermediate reasoning steps, at a cost of $0.00070 per task. This model breaks the previous cost-accuracy Pareto frontier, demonstrating that effective reasoning can be done without explicit chain-of-thought, and at a fraction of the cost of larger models. It could enable more efficient AI reasoning systems for complex tasks. The model uses a recurrent memory that updates at inference time from demonstrations, then iteratively computes in a high-dimensional latent space. No task identifiers or evaluation pairs are used during training, and no parameters are updated at inference.
+
+reddit · r/MachineLearning · /u/moschles · Aug 15, 06:18
+
+**Background**: In-context learning allows a model to adapt to new tasks from a few demonstrations without weight updates. Recurrent latent reasoning performs iterative computation in a model&\#x27;s hidden states, avoiding the need to verbalize intermediate thoughts. ARC-AGI-1 is a benchmark designed to test a system&\#x27;s ability to acquire new skills from a few examples, considered a core measure of intelligence.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://arxiv.org/html/2608.09888v1">BDH-CQ: In-Context Learning with Recurrent Latent Reasoning</a></li>
+<li><a href="https://arcprize.org/arc-agi/1">ARC-AGI-1</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#in-context learning`, `#latent reasoning`, `#ARC-AGI`, `#recurrent memory`, `#machine learning`
+
+---
+
+<a id="item-6"></a>
+## [Jacobian lens from Qwen3.6-27B successfully reads Qwen3.8-27B without refitting](https://www.reddit.com/r/MachineLearning/comments/1vpa5cv/survival_of_the_fitted_qwen3627bs_jacobian_lens/) ⭐️ 8.0/10
+
+A Jacobian lens originally fitted to Qwen3.6-27B, an interpretability tool from Anthropic&\#x27;s workspace paper, was applied unchanged to the newer Qwen3.8-27B model. It successfully read latent information and steered generation without any refitting. This demonstrates that interpretability lenses can survive model version updates, reducing the need to refit tools for each release. It enables continuous monitoring pipelines that can reuse lenses across model iterations, saving computation and improving safety oversight. The transferred lens maintained latent entity readout with median rank 17 vs 4 on the home model, and concept directions removed the word &\#x27;paradox&\#x27; from generated descriptions while preserving coherence. The logit lens baseline showed much worse readout \(ranks 1e3-1e4\), and surface next-token readout cost 1.2-2x compared to home model.
+
+reddit · r/MachineLearning · /u/imstilllearningthis · Aug 15, 18:24
+
+**Background**: Jacobian lens is an interpretability technique that uses the Jacobian matrix of the model&\#x27;s output with respect to internal activations to decode what the model is &\#x27;thinking&\#x27; without needing it to generate final text. Logit lens, a simpler method, applies the final unembedding matrix to hidden states at intermediate layers. The two Qwen models share the same architecture and tokenizer; the 3.8 version was released 113 days after 3.6, with an undocumented training relationship.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://github.com/anthropics/jacobian-lens">GitHub - anthropics/jacobian-lens: Companion code for the global workspace interpretability paper · GitHub</a></li>
+<li><a href="https://explainx.ai/blog/what-is-j-lens-jacobian-lens-claude-interpretability-2026">What Is the J-Lens? Anthropic Jacobian Lens Guide | explainx.ai Blog | explainx.ai</a></li>
+<li><a href="https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens">interpreting GPT: the logit lens</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#mechanistic-interpretability`, `#Jacobian-lens`, `#language-models`, `#model-robustness`, `#transfer-learning`
+
+---
+
+<a id="item-7"></a>
+## [Unicode&\#x27;s Ghost Character 彁: A Phantom Kanji with No Known Meaning](https://www.dampfkraft.com/ghost-characters.html) ⭐️ 7.0/10
+
+A detailed article by Paul McCann examines the origin and implications of the Unicode ghost character 彁 \(U+5F41\), a kanji mistakenly included in the JIS X 0208 standard in 1978 that has no known meaning or real-world usage. This story highlights the quirks and historical accidents in character encoding standards, showing how a single error can persist and become part of a global standard, affecting fields like digital preservation, linguistics, and NLP. The character 彁 is classified as a 幽霊文字 \(yūrei moji\) or ghost character, likely originating from a poor scan of a newspaper article. It exists in Unicode&\#x27;s CJK Unified Ideographs block but has no documented meaning or use.
+
+hackernews · sensanaty · Aug 15, 14:34 · [Discussion](https://news.ycombinator.com/item?id=49310926)
+
+**Background**: Ghost characters are kanji that were erroneously added to encoding standards, often due to copying errors or mis-scans of source materials. The JIS X 0208 standard, established in 1978, defined 6,349 kanji for Japanese computing, and later became a source for Unicode&\#x27;s CJK Unified Ideographs. Unicode&\#x27;s goal of encoding all existing characters meant that even these phantom kanji were incorporated, leading to long-standing mysteries in the standard.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://codepoints.net/U+5F41?lang=en">U+5F41 CJK UNIFIED IDEOGRAPH-5F41: 彁 – Unicode – Codepoints</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ghost_characters">Ghost characters - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Discussion**: The community discussion is enthusiastic, with many praising the author&\#x27;s work in Japanese NLP and sharing related anecdotes. Some commenters note that evidence suggests the character originated from a poor newspaper scan, while others humorously propose using 彁 to represent an unknowable concept. A few discuss broader historical quirks in Unicode, such as the inclusion of ÿ and other ghost characters from Kangxi dictionary.
+
+**Tags**: `#unicode`, `#japanese`, `#character-encoding`, `#ghost-characters`, `#nlp`
+
+---
+
+<a id="item-8"></a>
+## [Doom&\#x27;s Renderer Compiled into a 21B-Parameter Transformer Without Training](https://www.reddit.com/r/MachineLearning/comments/1voazhm/i_compiled_dooms_renderer_into_a_21bparameter/) ⭐️ 7.0/10
+
+A developer has compiled the classic Doom rendering algorithm into a 21B-parameter transformer model using a custom compiler, without any neural network training. The compiler converts computation graphs into Hugging Face-compatible weights, allowing the model to generate pixel drawing commands to render iconic frames like E1M1. This project showcases a novel way to repurpose transformer architectures as a general-purpose computation engine, bypassing training entirely. It demonstrates that large-scale causal language models can be used to deterministically execute classical algorithms, challenging the assumption that transformers are only for learned tasks and opening up possibilities for verified, interpretable computation within AI frameworks. Rendering a single frame requires a 3,614-token scene prompt and generates 53,747 output tokens, taking about 40 minutes on an NVIDIA B200 GPU \(35 FPD\). The host code is only 43 lines of Python, and the checkpoint loads in Hugging Face without trust\_remote\_code, meaning it is a standard safetensors-based model that runs using only the base transformers library.
+
+reddit · r/MachineLearning · /u/notforrob · Aug 14, 15:50
+
+**Background**: A computation graph is a directed graph used to represent mathematical expressions and the flow of data through operations, commonly used in deep learning frameworks like PyTorch. A transformer checkpoint is a saved model file containing weights and configuration, typically loaded via the Hugging Face library. The trust\_remote\_code flag, when set to False, prevents the execution of custom code from the repository, a security measure to avoid potential malicious code. This project&\#x27;s compiler turns a computation graph into a set of transformer weights that form a valid checkpoint without any custom code, making it loadable with trust\_remote\_code=False.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/deep-learning/computational-graphs-in-deep-learning/">Computational Graphs in Deep Learning - GeeksforGeeks</a></li>
+<li><a href="https://pytorch.org/blog/computational-graphs-constructed-in-pytorch/">How Computational Graphs are Constructed in PyTorch Computational Graph in PyTorch - GeeksforGeeks Computational Graphs - Online Tutorials Library Computational graphs and gradient flows — Simple English ... Computation Graphs - Department of Computer Science Building a computational graph: part 1 · Tom Roth</a></li>
+<li><a href="https://siliconangle.com/2026/06/04/critical-hugging-face-transformers-flaw-ran-attacker-code-routine-model-load/?ref=upmarket.co">Critical Hugging Face Transformers flaw ran attacker code on...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#transformer`, `#doom`, `#compilation`, `#machine-learning`, `#novelty`
+
+---
+
+<a id="item-9"></a>
+## [oncothresh: A Python Library for Evaluating Oncology AI at Clinical Decision Thresholds](https://www.reddit.com/r/MachineLearning/comments/1vod2c8/opensource_python_library_nocode_web_dashboard/) ⭐️ 7.0/10
+
+The open-source Python library oncothresh has been released, providing threshold-specific metrics—sensitivity, specificity, PPV, NPV, bootstrap confidence intervals, threshold-sensitivity curves, boundary-weighted calibration, decision-curve net benefit, and number-needed-to-test—along with a companion no-code web dashboard \(oncothresh-web\) that can be run locally via Docker. This tool addresses a critical gap in oncology AI evaluation: most global metrics like AUC don&\#x27;t reflect performance at the exact cutoffs used to decide whether a patient is flagged, biopsied, or treated, making it directly relevant for safe clinical deployment of AI models. The library is dependency-light \(numpy/scipy/scikit-learn/pydantic\), currently at v0.1, and the dashboard can be launched with a single docker compose command, keeping all data local. It targets tasks like tumor cellularity, Ki-67, TMB, and PD-L1 scoring, where continuous model outputs are collapsed into binary clinical decisions at a fixed cutoff.
+
+reddit · r/MachineLearning · /u/adom2989 · Aug 14, 17:06
+
+**Background**: Traditional oncology AI metrics like AUC measure overall agreement, but clinical decisions hinge on specific thresholds. Decision curve analysis evaluates net benefit by weighting false positives according to threshold probability, transforming model performance into a cost-benefit framework. Boundary-weighted calibration improves reliability near decision boundaries, and number-needed-to-test quantifies risk stratification by estimating how many patients must be tested to identify one additional case. Existing benchmarks such as PathBench and PathBench-MIL evaluate foundation models globally but do not provide threshold-specific metrics with uncertainty quantification.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Decision_curve_analysis">Decision curve analysis - Wikipedia</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6123195/">Decision curve analysis: a technical note - PMC</a></li>
+<li><a href="https://it-innovations-healthcare.medium.com/decision-curve-analysis-or-why-interpretation-of-medical-decision-support-models-should-be-based-on-b553acedb998">Decision curve analysis or why interpretation of medical decision support models should be based on their potential medical benefit | by Research Group for IT-innovations in Healthcare | Medium</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#machine learning`, `#oncology`, `#model evaluation`, `#Python`, `#clinical AI`
 
 ---
 
 <a id="item-10"></a>
-## [Survival of the Fitted: Qwen3.6-27B’s Jacobian lens reads and steers Qwen3.8-27B with zero refitting \[R\]](https://www.reddit.com/r/MachineLearning/comments/1vpa5cv/survival_of_the_fitted_qwen3627bs_jacobian_lens/) ⭐️ 7.0/10
+## [Abdominal visceral fat better predicts heart disease risk than BMI](https://www.acc.org/about-acc/press-releases/2026/08/11/14/59/abdominal-fat-predicts-heart-disease-risk-better-than-bmi) ⭐️ 6.0/10
 
-A Jacobian lens trained on Qwen3.6-27B is shown to effectively read and steer the later Qwen3.8-27B without any refitting, indicating that such interpretability instruments can survive minor architectural updates.
+The American College of Cardiology reports that a study found abdominal visceral fat is a stronger predictor of cardiovascular disease risk than body mass index \(BMI\), following over 260,000 people for about 20 years and comparing multiple measures. This finding could shift clinical focus from BMI to more accurate fat distribution metrics, improving early detection of heart disease and challenging the common reliance on BMI, which may misclassify risk in individuals with normal weight but high visceral fat. Visceral fat, surrounding internal organs, is metabolically active and linked to inflammation, while BMI simply calculates weight relative to height without distinguishing fat from muscle. The study compared BMI, waist circumference, and waist-to-hip ratio, but did not include DEXA-measured body fat percentage.
 
-reddit · r/MachineLearning · /u/imstilllearningthis · Aug 15, 18:24
+hackernews · theanonymousone · Aug 15, 21:14 · [Discussion](https://news.ycombinator.com/item?id=49314403)
 
-**Tags**: `#interpretability`, `#Jacobian lens`, `#model steering`, `#Qwen`, `#transfer learning`
+**Background**: Body mass index \(BMI\) is a screening tool calculated as weight in kilograms divided by height in meters squared. Visceral fat is adipose tissue stored deep in the abdominal cavity around organs; it secretes hormones and inflammatory substances that contribute to metabolic syndrome and cardiovascular disease. Unlike subcutaneous fat, visceral fat is not directly visible and typically requires imaging like CT or MRI for measurement. The idea that abdominal fat distribution matters more than overall weight has been recognized for decades, but BMI remains common due to its simplicity.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Visceral_fat">Visceral fat</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Abdominal_obesity">Abdominal obesity - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters noted that the finding is not new, with many emphasizing that visceral fat, not just abdominal fat, is the key issue. Some criticized the continued reliance on BMI and outdated risk models, while others highlighted dietary interventions like resistant starch and the superiority of ECG for risk prediction. A few pointed out that the study did not include DEXA-measured body fat percentage, which might provide further insight.
+
+**Tags**: `#health`, `#cardiology`, `#BMI`, `#visceral fat`, `#medical research`
 
 ---
 
 <a id="item-11"></a>
-## [Semaglutide Linked to Lower Predicted Dementia Risk, but Doubts Remain](https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432) ⭐️ 6.0/10
+## [New Starfield Fauna Dataset: 20,000 Images Across 50 Species](https://www.reddit.com/r/MachineLearning/comments/1vp9q5v/dataset_starfield_fauna_20000_images_in_50/) ⭐️ 6.0/10
 
-A study funded by Novo Nordisk reports that semaglutide use is associated with a lower predicted dementia risk based on a biomarker, rather than actual dementia diagnoses. Previous dedicated clinical trials for Alzheimer&\#x27;s disease failed to show cognitive benefits. If semaglutide genuinely reduces dementia risk, it could offer a new preventive strategy for a devastating condition with no cure. However, the reliance on a predictive biomarker and industry funding raises concerns about the validity of the findings. The study used a predictive biomarker—similar to a &\#x27;check engine&\#x27; light—not actual dementia outcomes. Critics note that Novo Nordisk&\#x27;s dedicated Alzheimer&\#x27;s trials failed, and the observed association may be confounded by weight loss or other factors.
+A dataset of 20,000 images from 50 fauna species in the video game Starfield has been released, extracted from video footage and curated for fine-grained image classification. This synthetic dataset provides a controlled benchmark for fine-grained visual recognition and domain adaptation, testing models on subtle inter-species differences under varied lighting and backgrounds. Footage was captured in each species&\#x27; biome with both daytime and nighttime shots, usually 2 minutes total per species; 400 frames were extracted per species, with manual cleaning to remove blurry or obstructed images. The dataset is split into training, validation, and test sets, with adjustment to prevent biome skew.
 
-hackernews · randycupertino · Aug 15, 15:58 · [Discussion](https://news.ycombinator.com/item?id=49311651)
+reddit · r/MachineLearning · /u/eccLykta · Aug 15, 18:06
 
-**Background**: Semaglutide is a GLP-1 receptor agonist approved for type 2 diabetes and weight management. Predictive biomarkers measure biological signals that indicate future risk but do not confirm disease. Confounding variables, such as weight loss improving metabolic health, can distort associations in observational studies.
+**Background**: Starfield is a space exploration RPG by Bethesda featuring procedurally generated alien creatures. Synthetic data from video games is increasingly used in computer vision to supplement real-world data, especially for tasks like fine-grained classification where subtle differences between similar categories are critical. Such datasets allow researchers to evaluate model robustness under controlled visual variations.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Semaglutide">Semaglutide</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Predictive_biomarker">Predictive biomarker</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Confounding_variable">Confounding variable</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters express skepticism, highlighting the study&\#x27;s industry funding and reliance on a biomarker instead of real-world dementia cases. They question whether the effect is due to weight loss rather than the drug itself, and some share personal experiences of side effects from semaglutide.
-
-**Tags**: `#semaglutide`, `#dementia`, `#clinical-trials`, `#pharma-funding`, `#predictive-biomarkers`
-
----
-
-<a id="item-12"></a>
-## [At-Home Lateral Flow Test for Ticks Aims to Improve Lyme Disease Diagnosis](https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/) ⭐️ 6.0/10
-
-A new at-home lateral flow test, LymeAlert, allows individuals to check a tick for the Borrelia burgdorferi pathogen after a bite, claiming lab-level accuracy without requiring specialized equipment. This could enable faster decision-making about whether to seek antibiotic treatment after a tick bite, potentially reducing unnecessary antibiotic use and improving early Lyme disease management, especially in areas with rising tick populations. The test uses lateral flow technology, which generally has a lower limit of detection than PCR-based lab tests, and it has not been cleared by the FDA; its accuracy claims remain unverified by public health authorities.
-
-hackernews · gmays · Aug 15, 14:04 · [Discussion](https://news.ycombinator.com/item?id=49310682)
-
-**Background**: Lateral flow tests are simple, paper-based devices that detect target substances using antibody-antigen reactions, commonly used for home pregnancy tests and rapid COVID-19 tests. Lyme disease is a tick-borne illness caused by the bacterium Borrelia burgdorferi, which can lead to serious neurological and joint complications if untreated. Current lab-based tick testing relies on PCR to amplify pathogen DNA, offering high sensitivity. Home tick tests are not subject to FDA medical device regulations, so manufacturers can market them without premarket review.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Lateral_flow_test">Lateral flow test</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community members expressed skepticism about the test&\#x27;s accuracy, noting that lateral flow tests have much lower sensitivity than PCR, and that the lack of FDA clearance raises concerns about unverified claims. Some highlighted the overdiagnosis of Lyme disease in online patient communities, while others saw potential value in raising awareness, especially in emerging risk zones like the UK.
-
-**Tags**: `#Lyme disease`, `#at-home testing`, `#lateral flow`, `#public health`, `#tick-borne illness`
-
----
-
-<a id="item-13"></a>
-## [Abdominal Visceral Fat Better Predicts Heart Disease Risk Than BMI](https://www.acc.org/about-acc/press-releases/2026/08/11/14/59/abdominal-fat-predicts-heart-disease-risk-better-than-bmi) ⭐️ 6.0/10
-
-A new study confirms that visceral abdominal fat, the fat surrounding internal organs, is a stronger predictor of heart disease risk than body mass index \(BMI\). This finding could prompt a shift in cardiovascular risk assessment toward more precise body composition metrics, potentially improving early detection and prevention strategies. The research distinguishes between visceral fat and subcutaneous fat; only visceral fat is strongly linked to adverse heart outcomes. However, measuring visceral fat typically requires CT scans or MRI, which are less accessible than BMI.
-
-hackernews · theanonymousone · Aug 15, 21:14 · [Discussion](https://news.ycombinator.com/item?id=49314403)
-
-**Background**: BMI is a widely used measure of body fat based on height and weight, but it does not reflect fat distribution. Visceral fat, located deep in the abdomen, secretes inflammatory substances and contributes to insulin resistance and atherosclerosis. Previous studies have already suggested its greater role in metabolic disease, but this research reinforces its predictive power for heart disease specifically.
-
-**Discussion**: Community comments largely agreed that the finding isn&\#x27;t new, noting that visceral fat has long been recognized as more harmful. Several users pointed out that BMI is still used because it&\#x27;s easy to measure, while visceral fat assessment requires expensive imaging. Others highlighted alternative prediction methods like ECG and dietary interventions such as resistant starch, and criticized professional associations for not adopting more accurate risk models.
-
-**Tags**: `#health`, `#medical research`, `#heart disease`, `#BMI`, `#abdominal fat`
+**Tags**: `#image-classification`, `#dataset`, `#computer-vision`, `#fine-grained-recognition`, `#video-game`
 
 ---

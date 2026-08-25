@@ -5,313 +5,368 @@ date: 2026-08-25
 lang: en
 ---
 
-> From 34 items, 14 important content pieces were selected
+> From 36 items, 16 important content pieces were selected
 
 ---
 
-1. [Microsoft Paint and Photos embed invisible user-specific watermarks in AI-edited images](#item-1) ⭐️ 8.0/10
-2. [San Francisco Transformed into an Interactive 3D Video Game](#item-2) ⭐️ 8.0/10
-3. [EU Packaging Waste Rules Spark Debate Over Burden on Makers](#item-3) ⭐️ 8.0/10
-4. [Claude Fable&\#x27;s High Cost Ends the &\#x27;Free Lunch&\#x27; Era of AI Model Improvements](#item-4) ⭐️ 8.0/10
-5. [AI Generates Programmable 3D Objects via Spatial Programming](#item-5) ⭐️ 8.0/10
-6. [Xiaomi ARM CPU Claims Apple-Like Single-Core, Faster Multi-Core](#item-6) ⭐️ 7.0/10
-7. [XMPP Marks 25 Years of Digital Independence in Messaging](#item-7) ⭐️ 7.0/10
-8. [IPFS Maintainer Shipyard Winding Down Centralized Support](#item-8) ⭐️ 7.0/10
-9. [Your executable is a SQLite database](#item-9) ⭐️ 7.0/10
-10. [AAAI 2027 Organizers Acknowledge Reviewer Collusion via 2-Cycles](#item-10) ⭐️ 7.0/10
-11. [CCPL: Delay-Corrected Bellman Operator and Causal Attribution for Constrained RL](#item-11) ⭐️ 7.0/10
-12. [Apple Confirms iCloud+ Hide My Email Addresses Stay on icloud.com](#item-12) ⭐️ 6.0/10
-13. [Fringe Chinese Internet Movement Denies Tang Dynasty Existed](#item-13) ⭐️ 6.0/10
-14. [Unbounded Labs Open-Sources Bart, a 2.82B Vintage LLM Trained on Pre-1931 Texts](#item-14) ⭐️ 6.0/10
+1. [Microsoft Paint and Photos Secretly Embed Invisible GUID Watermarks in AI-Edited Images](#item-1) ⭐️ 8.0/10
+2. [Bartosz Ciechanowski&\#x27;s &\#x27;Moon&\#x27; \(2024\): An Interactive Exploration of the Moon](#item-2) ⭐️ 8.0/10
+3. [San Francisco Recreated as an Interactive 3D City Sim in Your Browser](#item-3) ⭐️ 8.0/10
+4. [Bart: A 2.82B Parameter LLM Trained on Pre-1931 English Text](#item-4) ⭐️ 8.0/10
+5. [Apple Reverses Decision: iCloud+ Hide My Email Stays on icloud.com](#item-5) ⭐️ 7.0/10
+6. [Xiaomi&\#x27;s ARM chip matches Apple single-core, faster multi-core](#item-6) ⭐️ 7.0/10
+7. [EU packaging regulations debate: are they really killing micro-entrepreneurs?](#item-7) ⭐️ 7.0/10
+8. [XMPP Celebrates 25 Years of Federated Messaging and Digital Independence](#item-8) ⭐️ 7.0/10
+9. [IPFS Shipyard Maintainer Team Announces Winding Down, Project Continues](#item-9) ⭐️ 7.0/10
+10. [seL4 Microkernel Achieves Full Security Proofs on AArch64](#item-10) ⭐️ 7.0/10
+11. [Technique Creates Executable That Is Also a Valid SQLite Database](#item-11) ⭐️ 7.0/10
+12. [Using LLMs as Spatial Software Generators for Programmable 3D Objects](#item-12) ⭐️ 7.0/10
+13. [Delay-Corrected Bellman Operator and Causal Attribution for Constrained RL](#item-13) ⭐️ 7.0/10
+14. [Chinese Internet Hoax Denies Existence of Tang Dynasty](#item-14) ⭐️ 6.0/10
+15. [Anthropic&\#x27;s revenue hits $65bn but premium models lose user adoption](#item-15) ⭐️ 6.0/10
+16. [Fable Model&\#x27;s High Cost Ends the Era of Constant AI Improvement at Same Price](#item-16) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Microsoft Paint and Photos embed invisible user-specific watermarks in AI-edited images](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/) ⭐️ 8.0/10
+## [Microsoft Paint and Photos Secretly Embed Invisible GUID Watermarks in AI-Edited Images](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/) ⭐️ 8.0/10
 
-Microsoft Paint and Photos have been found to silently add an invisible, user-specific watermark \(a GUID\) to images edited with AI features, even when the AI processing is performed locally on the device. This hidden watermarking, which cannot be disabled by the user, can be used to trace images back to the creator&\#x27;s Microsoft account, undermining anonymity and raising serious privacy concerns, especially for sensitive or political content. The watermark is a Globally Unique Identifier \(GUID\) embedded in the image metadata or pixel data, and it is applied even when using local AI models like Stable Diffusion for image generation or editing. It is unclear whether non-AI edits also include the watermark.
+Microsoft’s Paint and Photos apps now silently embed an invisible, non-removable watermark containing a unique GUID into any image that has been AI-manipulated, even when the AI processing is performed locally on the device, with no user notice or opt-out. This hidden identifier can be linked to the user&\#x27;s Microsoft account, potentially enabling de-anonymization through legal subpoenas and undermining user privacy and control over their own digital content. The invisible watermark is embedded directly into image pixels via a custom algorithm in Watermarker.dll, independent of the visible watermark toggle; the same GUID is also stored in C2PA metadata, so even if metadata is stripped, the pixel-based watermark remains.
 
 hackernews · ComputerGuru · Aug 24, 15:28 · [Discussion](https://news.ycombinator.com/item?id=49421158)
 
-**Background**: Invisible digital watermarking is a technique to embed information into media without perceptible alteration, used for authentication and provenance tracking. AI-generated content is increasingly watermarked to distinguish synthetic media. Microsoft&\#x27;s approach uses a GUID tied to the user&\#x27;s account, similar to digital fingerprinting, which can identify the creator if the image is shared publicly.
+**Background**: A GUID \(Globally Unique Identifier\) is a 128-bit number used to uniquely identify information in computer systems, often associated with specific accounts or sessions. C2PA \(Coalition for Content Provenance and Authenticity\) is an industry standard for attaching provenance metadata to digital content, adopted by Microsoft to label AI-generated images. The invisible watermarking technique goes beyond C2PA metadata by embedding the identifier into the image pixels, making it persistent even if the metadata is removed.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.imatag.com/digital-watermarking">Invisible Digital Watermarking | The smart way to protect your online content</a></li>
-<li><a href="https://huggingface.co/blog/watermarking">AI Watermarking 101: Tools and Techniques</a></li>
+<li><a href="https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/">Microsoft Paint and Photos Embed Server-Issued GUIDs as Invisible ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Universally unique identifier - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community is broadly concerned about privacy and anonymity. Comments note that the invisible watermark is a &\#x27;weapon against internet anonymity&\#x27; because it can be subpoenaed to reveal the user&\#x27;s identity. Some argue the AI aspect is a red herring, and the real issue is the secret embedding of identifiers. Others recall Microsoft&\#x27;s past sloppy watermark implementations in other tools, and advise against using Paint or any other AI-enabled Microsoft apps.
+**Discussion**: The community expressed shock and concern, viewing the secret embedding of unique identifiers as a serious privacy threat. Many noted that the AI aspect is a distraction; the real issue is the silent, non-removable identifier that can be tied to a Microsoft account, potentially enabling deanonymization through subpoenas. Some also pointed out Microsoft&\#x27;s sloppy implementations, with one user reporting the watermark triggering incorrectly.
 
-**Tags**: `#privacy`, `#watermarking`, `#microsoft`, `#reverse-engineering`, `#ai-ethics`
+**Tags**: `#privacy`, `#microsoft`, `#ai-watermarking`, `#digital-rights`, `#security`
 
 ---
 
 <a id="item-2"></a>
-## [San Francisco Transformed into an Interactive 3D Video Game](https://sf.thijs.gg/) ⭐️ 8.0/10
+## [Bartosz Ciechanowski&\#x27;s &\#x27;Moon&\#x27; \(2024\): An Interactive Exploration of the Moon](https://ciechanow.ski/moon/) ⭐️ 8.0/10
 
-A developer released an interactive 3D demo that turns the entire city of San Francisco into a video game-like experience, using real-world map data to render streets, buildings, and terrain. Users can drive around and collect coins, and the project has sparked enthusiastic community engagement. It showcases the potential of combining open geographic data with game engines to create immersive urban simulations, which could inspire applications in gaming, urban planning, or virtual tourism. It also demonstrates the accessibility of such technology, prompting discussions about MMO and GTA-like experiences. The demo is web-based, likely using WebGL and data from OpenStreetMap, with real-time rendering of elevation and buildings. Comments note a collision bug under certain walkways, and while cars can be driven, it remains a tech demo rather than a full game.
+Bartosz Ciechanowski released a new interactive article titled &\#x27;Moon&\#x27; \(2024\), which uses web-based 3D visualizations and simulations to let readers explore the moon&\#x27;s orbit, phases, and libration through hands-on learning. This article showcases the power of explorable explanations, setting a new standard for web-based educational content by making complex astronomical concepts intuitive. It also influences the broader trend of AI-assisted interactive web development, as noted by the community. The article offers a comprehensive exploration of the Moon&\#x27;s orbit, phases, and libration, including a unique perspective from a virtual planet. It lacks a table of contents, a deliberate editorial choice that encourages immersive reading, according to the author&\#x27;s style.
 
-hackernews · centrosphere · Aug 24, 17:05 · [Discussion](https://news.ycombinator.com/item?id=49422784)
+hackernews · simonebrunozzi · Aug 24, 22:06 · [Discussion](https://news.ycombinator.com/item?id=49426466)
 
-**Background**: The project leverages open geospatial data \(like OpenStreetMap\) and 3D rendering techniques to create a game-like environment. Technologies such as WebGL enable browser-based 3D graphics. The developer generated 3D meshes for buildings, roads, and terrain from map data, and added simple game mechanics like coin collection. This taps into the trend of &\#x27;digital twins&\#x27; and using real-world data in entertainment.
+**Background**: Explorable explanations are interactive digital media that allow users to learn by manipulating simulations. Bartosz Ciechanowski is a renowned independent creator who publishes detailed, self-contained interactive articles on topics like physics, engineering, and astronomy, using web technologies such as Three.js. His work is widely praised for its clarity and depth, often compared to interactive museum exhibits.
 
-**Discussion**: Comments are overwhelmingly positive, with excitement about a potential high-resolution offline version, multiplayer mode, and integration with Google Street View. Some expressed nostalgia and emotional connection to the virtual SF. Others discussed technical improvements like adding landmarks and generating GTA-style maps, while a minor collision bug was noted.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Explorable_explanation">Explorable explanation</a></li>
+<li><a href="https://ciechanow.ski/">Bartosz Ciechanowski</a></li>
 
-**Tags**: `#3D rendering`, `#game development`, `#map data`, `#San Francisco`, `#urban simulation`
+</ul>
+</details>
+
+**Discussion**: The community discussion is overwhelmingly positive, with users praising the article&\#x27;s interactive depth and visual clarity. Some commenters note the absence of a table of contents, and one user raises a question about the ethics of using Ciechanowski&\#x27;s style in AI-generated personal learning tools. Others highlight how his work has influenced the broader adoption of interactive web pages, especially with AI-assisted development.
+
+**Tags**: `#interactive-web`, `#education`, `#astronomy`, `#visualization`, `#web-development`
 
 ---
 
 <a id="item-3"></a>
-## [EU Packaging Waste Rules Spark Debate Over Burden on Makers](https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs) ⭐️ 8.0/10
+## [San Francisco Recreated as an Interactive 3D City Sim in Your Browser](https://sf.thijs.gg/) ⭐️ 8.0/10
 
-An article on Lectronz argues that the EU&\#x27;s Packaging and Packaging Waste Regulation imposes excessive compliance costs on micro-entrepreneurs and small hardware makers, potentially stifling innovation. The piece has ignited a heated discussion, with community members pointing out exemptions for micro-enterprises and criticizing the article&\#x27;s interpretation. The debate highlights the tension between environmental regulation and the viability of small-scale entrepreneurship. If the rules are perceived as too burdensome, they could drive away independent makers and startups, weakening Europe&\#x27;s innovation ecosystem and pushing activity toward regions with more centralized or lenient approaches. The EU&\#x27;s FAQ clarifies that micro-enterprises using generic packaging are exempt from many requirements, and the European Commission now advises member states not to enforce the rules until a correction is enacted. The real problem, according to commenters, is the fragmented implementation by 20+ member states, each adopting their own version of the law, rather than the EU regulation itself.
+A developer has turned the entire city of San Francisco into a web-based interactive simulation, using reverse-engineered 3D map data to create a driveable and explorable game-like experience with coin collection. This demo highlights the creative potential of repurposing real-world geospatial data for immersive experiences, bridging the gap between digital twins and gaming, and has resonated emotionally with former residents. The simulation runs entirely in the browser, likely built from 3D tiles extracted via reverse-engineering of Apple Maps data \(similar to the retroplasma approach\), and currently supports vehicle driving and coin collection without deeper game mechanics.
 
-hackernews · l-one-lone · Aug 24, 13:05 · [Discussion](https://news.ycombinator.com/item?id=49419237)
+hackernews · centrosphere · Aug 24, 17:05 · [Discussion](https://news.ycombinator.com/item?id=49422784)
 
-**Background**: The EU Packaging and Packaging Waste Regulation aims to reduce packaging waste and promote a circular economy. It requires producers to register, report data, and pay fees for packaging placed on the market. The maker community, consisting of small hardware startups and individual creators, often ships in small volumes and may lack the resources to navigate complex compliance processes originally designed for large corporations.
+**Background**: Modern 3D city models are often created from aerial imagery and LIDAR scans, then streamed efficiently using standards like 3D Tiles. Web-based renderers such as CesiumJS can display these massive datasets, and hobbyists have reverse-engineered proprietary map data from services like Apple Maps to build interactive urban simulations. This project builds on that community effort to make a real city explorable as a lightweight game.
 
-**Discussion**: Commenters largely agree that the article overstates the impact, noting that micro-enterprises are exempt and that the European Commission is working on a fix. They highlight the real pain point: the fragmented national implementations, which create a costly patchwork for small businesses. Comparisons are drawn to China&\#x27;s centralized approach, where a single system handles compliance for all platforms, and some express frustration that EU member states sabotage harmonization efforts.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.ogc.org/standards/3dtiles/">3D Tiles Standard – Streaming Massive 3D Geospatial Data</a></li>
+<li><a href="https://cesium.com/learn/cesiumjs-learn/cesiumjs-interactive-building/">Visualize a Proposed Building in a 3D City – Cesium</a></li>
 
-**Tags**: `#EU regulations`, `#entrepreneurship`, `#small business`, `#maker community`, `#policy`
+</ul>
+</details>
+
+**Discussion**: Commenters praised the technical achievement and expressed nostalgia, with one former SF resident saying it made them emotional. Many requested features like street names, address teleporting, and a higher-resolution local version, while others noted the reverse-engineering origins and shared a similar Seattle project in N64 style.
+
+**Tags**: `#3D-graphics`, `#game-development`, `#mapping`, `#san-francisco`, `#web-technologies`
 
 ---
 
 <a id="item-4"></a>
-## [Claude Fable&\#x27;s High Cost Ends the &\#x27;Free Lunch&\#x27; Era of AI Model Improvements](https://simonwillison.net/2026/Aug/23/drew-breunig/) ⭐️ 8.0/10
+## [Bart: A 2.82B Parameter LLM Trained on Pre-1931 English Text](https://www.reddit.com/r/MachineLearning/comments/1vx94er/bart_a_vintage_llm_r/) ⭐️ 8.0/10
 
-The release of Anthropic&\#x27;s Claude Fable, a powerful but costly model, has ended the trend where each new AI model improved performance at the same or lower price. Developers must now decide which coding tasks justify the expense of top-tier models versus cheaper alternatives. This signals a major shift for AI-assisted coding: the era of automatic, cost-free improvements is over. Organizations must now strategically allocate work to different models based on cost-capability tradeoffs, impacting productivity and budgets. Claude Fable excels at frontier coding and reasoning, but Drew Breunig specifically cites Opus, K3, and the open-weight GLM model from Zhipu AI as &\#x27;good enough&\#x27; for most tasks, with Fable&\#x27;s high cost only justified for the hardest problems.
+Unbounded Labs built Bart, a 2.82B parameter LLM trained from scratch on 20.1B tokens of pre-1931 English text, achieving state-of-the-art vintage language model performance on their custom Vintage CORE benchmark suite. This project investigates whether LLMs can replicate historical scientific reasoning, addressing the core AI question of whether models can generate original ideas or merely parrot training data; it also demonstrates that domain-specific model training on curated datasets can yield competitive results with limited resources. The model was trained in 5 days on a single H100 GPU with 60% MFU, and the team open-sourced the largest vintage SFT dataset \(416k graded Q&amp;A pairs\), cleaned Harvard&\#x27;s Institutional Books from 242B to 23B tokens, and created Vintage CORE, a suite of 20 benchmarks for vintage models.
 
-rss · Simon Willison · Aug 23, 19:55
+reddit · r/MachineLearning · /u/soggydoggy8 · Aug 24, 17:20
 
-**Background**: The AI industry long saw a pattern where each new model improved performance without increasing cost, leading developers to assume upgrades were always beneficial. Anthropic&\#x27;s Claude Opus family has been a top-tier set of models, and the new Claude Fable is a breakthrough in coding capability but at a premium price. GLM is a series of open-weight models from Chinese company Zhipu AI, offering affordable alternatives for many tasks.
+**Background**: An ablation study in machine learning involves removing components to assess their contribution to performance. Supervised fine-tuning \(SFT\) is a post-training alignment step where a model is further trained on labeled examples to improve task-specific behavior. Corpus curation is the process of carefully selecting and cleaning a text dataset to ensure quality and relevance for training language models.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.anthropic.com/claude/fable">Claude Fable \ Anthropic</a></li>
-<li><a href="https://overchat.ai/models/claude/claude-opus-5">Claude Opus 5</a></li>
-<li><a href="https://en.wikipedia.org/wiki/GLM_%28AI%29">GLM (AI) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ablation_%28artificial_intelligence%29">Ablation (artificial intelligence) - Wikipedia</a></li>
+<li><a href="https://cameronrwolfe.substack.com/p/understanding-and-using-supervised">Understanding and Using Supervised Fine - Tuning ( SFT ) for...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#ai`, `#llm`, `#claude`, `#coding`, `#cost-optimization`
+**Tags**: `#vintage-llm`, `#training-from-scratch`, `#corpus-curation`, `#machine-learning`, `#natural-language-processing`
 
 ---
 
 <a id="item-5"></a>
-## [AI Generates Programmable 3D Objects via Spatial Programming](https://www.reddit.com/r/MachineLearning/comments/1vxcc1h/r_using_ai_as_a_spatial_software_generator_to/) ⭐️ 8.0/10
+## [Apple Reverses Decision: iCloud+ Hide My Email Stays on icloud.com](https://developer.apple.com/news/?id=1ptvdtcm) ⭐️ 7.0/10
 
-This paper introduces a method where large language models generate 3D objects as structured, parametric code instead of fixed polygon meshes, creating assets that are inherently hierarchical, articulable, and adaptable from the moment of creation. This approach could revolutionize game development, simulation, AR/VR, and industrial design by enabling objects that are immediately editable, animation-ready, and able to automatically adjust detail levels for different computing environments, drastically reducing manual post-processing. The generated code objects lag behind mesh-based AI generators in producing complex organic shapes, but they excel in structural logic and programmability. The paper, titled &\#x27;Code-native generation of highly programmable 3D assets,&\#x27; includes a live demo at nova3d.xyz and a GitHub repository.
+Apple has reversed its earlier plan to move iCloud+ Hide My Email addresses to a separate private.icloud.com domain, and will now keep them on the main icloud.com domain. This change comes after user backlash in June when the company announced the domain unification. Keeping Hide My Email addresses on icloud.com makes them indistinguishable from regular iCloud addresses, preventing websites from blocklisting them as disposable or temporary emails. This preserves the privacy feature&\#x27;s usability for millions of users and reduces the risk of lock-in criticism. Apple&\#x27;s original plan would have generated new addresses under private.icloud.com, making them easy to detect and block. The reversal keeps all addresses in the same format as regular icloud.com emails, a direct response to community feedback and the practical need to avoid anti-spam filters.
 
-reddit · r/MachineLearning · /u/mhb\_11 · Aug 24, 19:10
+hackernews · K7PJP · Aug 24, 22:13 · [Discussion](https://news.ycombinator.com/item?id=49426564)
 
-**Background**: Traditional AI 3D generators produce mesh models—opaque collections of polygons—that are difficult to edit or animate. Spatial programming uses code to define 3D geometry with parameters, logic, and relationships, making objects inspectable, measurable, and modifiable. As LLMs become more proficient at generating code, they can now produce 3D assets that are essentially software, unlocking capabilities that static meshes cannot offer.
+**Background**: Hide My Email is an iCloud+ privacy feature that creates random, unique email addresses forwarding to a user&\#x27;s real inbox, protecting their real email when signing up for services. Many online platforms block disposable or temporary email addresses to fight abuse, and if private relay addresses use a distinct domain, they can be flagged and blocked. By staying on the same domain as legitimate iCloud accounts, these addresses blend in seamlessly.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://huggingface.co/papers/2607.22738">Paper page - Nova 3 D : Code-Native Generation of Programmable ...</a></li>
-<li><a href="https://therevision.co/articles/researchers-generate-3d-assets-as-editable-code-not-meshes">Researchers Generate 3 D Assets as Editable Code... | The Revision</a></li>
+<li><a href="https://www.mactech.com/2026/08/24/apple-wont-change-the-email-domain-used-for-the-icloud-hide-my-email-feature/">Apple WON’T change the email domain used for the iCloud+ Hide ...</a></li>
+<li><a href="https://support.apple.com/guide/icloud/set-up-hide-my-email-mm9d9012c9e8/icloud">Set up and use Hide My Email in iCloud+ on all your devices</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#3D Generation`, `#Spatial Programming`, `#LLMs`, `#Programmable Assets`, `#Neural 3D Synthesis`
+**Discussion**: The community reaction is largely positive, with users glad Apple listened. Many note that this prevents blocking and that only Fastmail offers a similar approach. Some criticize Apple&\#x27;s &\#x27;lock-in&\#x27; strategy, but acknowledge it&\#x27;s necessary for the feature to work effectively.
+
+**Tags**: `#privacy`, `#email`, `#Apple`, `#iCloud`, `#security`
 
 ---
 
 <a id="item-6"></a>
-## [Xiaomi ARM CPU Claims Apple-Like Single-Core, Faster Multi-Core](https://twitter.com/lemire/status/2091894299289874926) ⭐️ 7.0/10
+## [Xiaomi&\#x27;s ARM chip matches Apple single-core, faster multi-core](https://twitter.com/lemire/status/2091894299289874926) ⭐️ 7.0/10
 
-Xiaomi announced its XRing O3 chip, an ARM-based processor that achieves a Geekbench single-core score of 3945, comparable to Apple&\#x27;s M5, and a multi-core score of 15221, surpassing Apple&\#x27;s M5 iPad by leveraging 10 cores against 6. This marks Xiaomi&\#x27;s increasing capability in chip design, threatening MediaTek and Qualcomm as the world&\#x27;s third-largest smartphone maker could reduce its reliance on third-party processors and reshape the mobile chip market. The chip is built on ARM&\#x27;s Cortex C1-Ultra design, identical to the one in MediaTek&\#x27;s Dimensity 9500, but with Xiaomi&\#x27;s custom interconnects, TSMC 3nm process, in-house NPU, and LPDDR6 support. Real-world phone performance may be lower due to thermal constraints, and power efficiency remains unverified.
+Xiaomi&\#x27;s new Xring O3 processor, an ARM Cortex design, reportedly achieves Geekbench single-core scores matching Apple&\#x27;s M5 iPad and higher multi-core scores in AnTuTu, owing to its 10-core configuration. This signals that Xiaomi, as the third-largest smartphone maker, can now produce competitive in-house chips, potentially reducing reliance on Qualcomm and MediaTek and intensifying mobile SoC competition. The chip is an ARM Cortex design, not a custom core, with a 10-core CPU \(vs. Apple&\#x27;s 6-core\), fabricated on TSMC 3nm, and includes an in-house NPU and LPDDR6 support; real-world efficiency and per-watt performance remain unverified.
 
 hackernews · tosh · Aug 24, 15:08 · [Discussion](https://news.ycombinator.com/item?id=49420873)
 
-**Background**: ARM Holdings licenses its processor designs to chipmakers. Apple uses an architecture license to build custom cores, while most others like MediaTek and Xiaomi use ARM&\#x27;s pre-designed Cortex cores. Single-threaded performance is critical for smartphone responsiveness, and Geekbench is a common benchmark.
+**Background**: Single-threaded performance measures how fast a CPU completes one task, crucial for app responsiveness. Multi-threaded performance handles multiple tasks simultaneously, benefiting from more cores. ARM reference designs are pre-built CPU blueprints licensed by Arm, letting companies configure core counts without custom core design. Apple uses a custom ARM architecture.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/ARM_Cortex">ARM Cortex</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Single_threaded_performance">Single threaded performance</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multithreading_%28computer_architecture%29">Multithreading (computer architecture) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ARM_architecture_family">ARM architecture family - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters note that Xiaomi did not design the CPU core itself—it&\#x27;s a standard ARM design—and the multi-threaded lead comes from having more cores. Power efficiency is the missing metric, and some view this as a threat to MediaTek and Qualcomm, while others say it still falls short of Apple&\#x27;s custom silicon.
+**Discussion**: The community notes the chip is essentially an ARM reference design, not a custom core, and the multi-threaded lead is largely due to more cores. Doubts are raised about real-world efficiency and power consumption, with some pointing out Apple&\#x27;s last-gen chip still leads in per-watt single-core performance. Others see Xiaomi&\#x27;s move as a threat to Qualcomm and MediaTek.
 
-**Tags**: `#hardware`, `#ARM`, `#mobile-processors`, `#Xiaomi`, `#Apple`
+**Tags**: `#mobile processors`, `#ARM`, `#Xiaomi`, `#Apple Silicon`, `#chip design`
 
 ---
 
 <a id="item-7"></a>
-## [XMPP Marks 25 Years of Digital Independence in Messaging](https://gultsch.de/posts/25-years-of-digital-independence/) ⭐️ 7.0/10
+## [EU packaging regulations debate: are they really killing micro-entrepreneurs?](https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs) ⭐️ 7.0/10
 
-A retrospective article marks the 25th anniversary of the XMPP protocol, highlighting its sustained role in decentralized messaging and sparking a community discussion on its resilience and future potential. As centralized messaging platforms dominate, XMPP&\#x27;s federated architecture and open standard remain a critical alternative for digital sovereignty, and the ongoing community engagement demonstrates its enduring relevance. The article references modern XMPP projects like Movim and Fluux, phone bridges such as jmp.chat, and community ideas for serverless peer-to-peer communication using Iroh networking.
+An article claimed that EU packaging rules, particularly the PPWR, impose excessive burdens on small electronics makers, but community members quickly pointed out that official EU guidance exempts micro-enterprises and non-branded packaging. The debate highlights the real tension between regulation and small-scale innovation, and shows how misinterpretation of complex laws can fuel unnecessary panic among makers and entrepreneurs. The EU&\#x27;s FAQ on packaging rules states that obligations do not apply to micro-enterprises or to packaging that is not branded; the original article may have misunderstood the scope. The European Commission is also working on a correction to centralize registration, after member states blocked a single registry.
 
-hackernews · inputmice · Aug 24, 15:51 · [Discussion](https://news.ycombinator.com/item?id=49421536)
+hackernews · l-one-lone · Aug 24, 13:05 · [Discussion](https://news.ycombinator.com/item?id=49419237)
 
-**Background**: XMPP \(originally Jabber\) is an open, XML-based protocol for instant messaging and presence. It uses a federated model similar to email, allowing anyone to run their own server and interoperate globally. It was standardized by the IETF in 2004 and was once widely used by Google and Facebook, with numerous clients and servers still actively maintained today.
+**Background**: The Packaging and Packaging Waste Regulation \(PPWR\) is an EU law aimed at reducing packaging waste and promoting recycling. Micro-enterprises are defined as businesses with fewer than 10 employees and a turnover below €2 million. The regulation&\#x27;s implementation varies across EU member states, leading to a fragmented compliance landscape that can confuse small businesses.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/XMPP_protocol">XMPP protocol</a></li>
-<li><a href="https://xmpp.org/about/technology-overview/">An Overview of XMPP | XMPP - The universal messaging standard</a></li>
+**Discussion**: Commenters generally agreed the article overstated the problem, with one providing the official EU FAQ that clarifies the exemption. Others noted that the real issue is the federated nature of EU law implementation, where member states create divergent rules, and that China&\#x27;s approach of regulating through major platforms may offer a simpler model. A few pointed out that the EU Commission itself wanted a centralized system but was blocked by member states.
 
-</ul>
-</details>
-
-**Discussion**: The community response is overwhelmingly positive, nostalgic, and forward-looking. Users expressed regret that Matrix did not build upon XMPP, shared practical use cases like AI agent communication and self-hosted phone bridges, and proposed innovative ideas for removing server dependencies using decentralized networking.
-
-**Tags**: `#xmpp`, `#decentralization`, `#open-protocols`, `#messaging`, `#retrospective`
+**Tags**: `#EU regulations`, `#entrepreneurship`, `#hardware`, `#compliance`, `#policy`
 
 ---
 
 <a id="item-8"></a>
-## [IPFS Maintainer Shipyard Winding Down Centralized Support](https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/) ⭐️ 7.0/10
+## [XMPP Celebrates 25 Years of Federated Messaging and Digital Independence](https://gultsch.de/posts/25-years-of-digital-independence/) ⭐️ 7.0/10
 
-Shipyard, a key maintainer of IPFS implementations, announced it will cease contributions to upstream projects like go-libp2p and js-libp2p, as well as its work on specifications and ecosystem coordination, effectively ending its centralized support role. The IPFS project itself is not shutting down and will shift to individual maintainer grants. This marks a significant shift in IPFS’s decentralization, as a large centralized maintainer team steps back, potentially impacting development pace and stability of key implementations. It highlights the sustainability challenges of open-source decentralized infrastructure and may affect users relying on these implementations. Shipyard was formed in April 2024 as an independent collective of IPFS and libp2p maintainers; its sunset after only about two years underscores the difficulty of sustaining open-source maintenance without a strong business model. The initial blog post was confusing, leading many to believe the entire IPFS project was shutting down, but subsequent clarifications confirmed it is only Shipyard ending its role.
+The article offers a retrospective on XMPP&\#x27;s 25-year history as a pioneering open federated messaging protocol, reflecting on its resilience and ongoing development. XMPP&\#x27;s longevity underscores the value of decentralized, standards-based communication in an era of walled gardens, serving as a model for digital sovereignty and interoperability. Projects like Movim, Fluux, and jmp.chat extend XMPP&\#x27;s utility, while community debates contrast its lean, extensible design with Matrix&\#x27;s approach.
 
-hackernews · iand · Aug 24, 15:48 · [Discussion](https://news.ycombinator.com/item?id=49421489)
+hackernews · inputmice · Aug 24, 15:51 · [Discussion](https://news.ycombinator.com/item?id=49421536)
 
-**Background**: IPFS \(InterPlanetary File System\) is a decentralized peer-to-peer protocol for storing and sharing data using content addressing rather than location-based HTTP. It relies on multiple implementations and a network of nodes. Interplanetary Shipyard was an independent collective of developers that maintained key implementations like go-libp2p and js-libp2p, and contributed to IPFS specifications and ecosystem coordination. It emerged in 2024 after Protocol Labs reduced centralized support, aiming to decentralize maintenance.
+**Background**: XMPP \(formerly Jabber\) is an open, XML-based protocol for instant messaging, presence, and more, using a federated architecture similar to email where anyone can run a server. It was formalized as an IETF standard in 2004 and once powered major platforms like Google Talk and Facebook Chat. Matrix is a newer federated protocol with a different technical stack, often seen as a competitor.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/">The end of IPFS at Shipyard</a></li>
-<li><a href="https://blog.ipfs.tech/shipyard-hello-world/">IPFS &amp; libp2p Devs Go Independent: Meet Interplanetary Shipyard | IPFS Blog &amp; News</a></li>
+<li><a href="https://en.wikipedia.org/wiki/XMPP_protocol">XMPP protocol</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Matrix_%28protocol%29">Matrix (protocol)</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Comments express nostalgia for XMPP&\#x27;s heyday, practical use cases like telephony bridges and agent communication, and a debate over whether Matrix&\#x27;s funding was wasted; some users lament XMPP&\#x27;s diminished visibility, while others actively use it and advocate for its potential.
+
+**Tags**: `#XMPP`, `#federated messaging`, `#protocol history`, `#digital sovereignty`, `#Matrix`
+
+---
+
+<a id="item-9"></a>
+## [IPFS Shipyard Maintainer Team Announces Winding Down, Project Continues](https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/) ⭐️ 7.0/10
+
+IPFS Shipyard, one of the maintainer teams of the InterPlanetary File System, has announced it will wind down its support. The broader IPFS project will continue by transitioning to individual maintainer grants. This shift signals a move from centralized team maintenance to a decentralized grant model, which could affect the protocol&\#x27;s development pace and community confidence. It also reflects ongoing challenges in sustaining open-source decentralized infrastructure. The announcement specifically concerns the Shipyard team, not the entire IPFS project; prior to this, Cloudflare had already discontinued IPFS support. The project will now rely on individual grants to fund maintenance.
+
+hackernews · iand · Aug 24, 15:48 · [Discussion](https://news.ycombinator.com/item?id=49421489)
+
+**Background**: IPFS is a decentralized peer-to-peer file sharing protocol that uses content addressing instead of location-based URLs, similar to BitTorrent. It is maintained by multiple teams and individual contributors. Shipyard was one of the organized maintainer teams supporting IPFS implementations.
+
+<details><summary>References</summary>
+<ul>
 <li><a href="https://en.wikipedia.org/wiki/IPFS">IPFS</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members expressed confusion over the misleading announcement, with the top comment clarifying that IPFS is not shutting down. Former maintainers voiced sadness and suggested alternatives like Iroh, built by ex-IPFS developers. Some criticized Protocol Labs&\#x27; priorities and noted Cloudflare’s earlier dropping of IPFS as a sign of decline. Others pointed out the irony of using a Google Form for feedback on a decentralized project. Overall sentiment is disappointment and concern about sustainability.
+**Discussion**: Community members clarified that the announcement is not about IPFS shutting down, only Shipyard winding down. Some expressed sadness and suggested alternatives like Iroh, while others pointed out the irony of using a Google Form for feedback in a decentralized project.
 
-**Tags**: `#IPFS`, `#decentralization`, `#open-source-maintenance`, `#p2p`, `#ecosystem-shift`
-
----
-
-<a id="item-9"></a>
-## [Your executable is a SQLite database](https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/) ⭐️ 7.0/10
-
-Farid Zakaria demonstrated a technique to embed ELF executable components into a SQLite database file, making the database directly executable. The file&\#x27;s application ID at offset 68 is set to &\#x27;SELF&\#x27;, and a custom interpreter called self-exec extracts and runs the pieces. This trick cleverly combines two widely used file formats, demonstrating the flexibility of ELF and binfmt\_misc. It could simplify the packaging and distribution of tools that rely on SQLite data, offering a novel approach to executable file creation on Linux. The technique uses a specific SQLite table schema \(self.sql\) and a C interpreter \(self-exec.c\). On Linux, binfmt\_misc can be registered to automatically recognize the &\#x27;SELF&\#x27; magic bytes at offset 68 and hand off execution to self-exec.
-
-rss · Simon Willison · Aug 24, 11:38
-
-**Background**: ELF \(Executable and Linkable Format\) is the standard binary format for executables and shared libraries on Linux. binfmt\_misc is a Linux kernel feature that allows arbitrary file formats to be recognized by magic bytes and passed to user-space interpreters. SQLite database files begin with a header that includes a 4-byte application ID at offset 68, which this technique exploits to masquerade as a custom executable.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Executable and Linkable Format - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Binfmt_misc">Binfmt misc</a></li>
-<li><a href="https://docs.kernel.org/admin-guide/binfmt-misc.html">Kernel Support for miscellaneous Binary Formats (binfmt_misc) — The Linux Kernel documentation</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#SQLite`, `#ELF`, `#Linux`, `#executable`, `#file format`
+**Tags**: `#IPFS`, `#decentralized web`, `#open source`, `#maintainers`, `#community`
 
 ---
 
 <a id="item-10"></a>
-## [AAAI 2027 Organizers Acknowledge Reviewer Collusion via 2-Cycles](https://www.reddit.com/r/MachineLearning/comments/1vwujcy/aaai_2027_reviewer_bidding_and_assignment/) ⭐️ 7.0/10
+## [seL4 Microkernel Achieves Full Security Proofs on AArch64](https://proofcraft.systems/news-2026/#2026-08-21) ⭐️ 7.0/10
 
-AAAI 2027 organizers sent an email acknowledging collusion during the review process, specifically highlighting &\#x27;2-cycles&\#x27; where authors of paper A and B review each other&\#x27;s work, and hinting that such patterns may be concentrated among authors from a single country. This revelation threatens the integrity of a major machine learning conference, raising concerns about the fairness of peer review and the potential for colluding authors to gain unfair advantages, which could undermine trust in the entire academic publishing process. The email notes that 2-cycles can arise naturally from the assignment algorithm when a large proportion of submissions come from the same country, which may bias detection. The poster also points out that some accepted papers at top venues lack publicly available code, hindering reproducibility.
+The seL4 microkernel has achieved complete formal security proofs for the AArch64 \(ARM 64-bit\) architecture, marking a major milestone in the project&\#x27;s formal verification journey. However, the proofs currently cover only unicore and non-MCS configurations, leaving out multicore and mixed-criticality support. This achievement extends the mathematical guarantees of seL4&\#x27;s security to one of the most widely used processor architectures, bolstering trust for safety-critical and security-sensitive systems in embedded, automotive, and military domains. It demonstrates that the kernel&\#x27;s implementation is provably free of certain classes of bugs, though the limitations highlight that real-world deployments with multicore and mixed-criticality features still lack formal assurance. The proofs are for the non-MCS, unicore configuration of seL4 on AArch64, meaning they do not cover mixed-criticality scheduling or multicore concurrency, which are important for many real-world applications. Community members also note that side-channel attacks like timing leaks are not within the scope of these functional correctness proofs.
 
-reddit · r/MachineLearning · /u/Fragrant\_Fan\_6751 · Aug 24, 06:11
+hackernews · snvzz · Aug 24, 11:32 · [Discussion](https://news.ycombinator.com/item?id=49418255)
 
-**Background**: Machine learning conferences like AAAI, NeurIPS, and ICML use automated reviewer assignment systems to match papers to qualified reviewers while avoiding conflicts of interest. A 2-cycle is a pairing where two authors review each other&\#x27;s papers, which can be exploited for collusion. While such patterns can occur by chance, a country with a dominant share of submissions increases the likelihood of 2-cycles among its authors, making it harder to distinguish coincidence from deliberate collusion.
+**Background**: seL4 is a formally verified microkernel with a capability-based security model, meaning its C implementation has been mathematically proven to follow an abstract specification free of certain bugs. AArch64 is the 64-bit execution state of the ARM architecture, used in most modern smartphones, servers, and embedded devices. Mixed-Criticality Systems \(MCS\) allow tasks of different safety levels to share the same hardware with temporal isolation, a feature that seL4 supports in its MCS configuration but is not yet verified. Formal verification at the binary level ensures that the compiled machine code matches the verified source, providing end-to-end assurance.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://mittmattmutt.medium.com/options-for-improving-peer-review-aa21b245fa04">Options for improving peer review | by Matthew McKeever | Medium</a></li>
+<li><a href="https://en.wikipedia.org/wiki/L4_microkernel_family">L 4 microkernel family - Wikipedia</a></li>
+<li><a href="https://sel4.systems/">The seL 4 Microkernel | seL 4</a></li>
+<li><a href="https://sel4.systems/About/seL4-whitepaper.pdf">The seL4® Foundation https://sel4.systems/Foundation The seL4 Microkernel</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#peer review`, `#academic integrity`, `#collusion`, `#AAAI`, `#machine learning`
+**Discussion**: Community reaction is mixed: some express skepticism that side-channel timing attacks could undermine the proofs, while others point out the limitations of unicore and non-MCS scope. There is interest in real-world deployments \(e.g., GenodeOS, LionsOS, automotive hypervisors\) but also criticism that a native Linux integration is needed to truly improve system security. The sentiment reflects cautious optimism about the milestone, tempered by awareness of remaining gaps.
+
+**Tags**: `#formal verification`, `#seL4`, `#operating systems`, `#security`, `#ARM`
 
 ---
 
 <a id="item-11"></a>
-## [CCPL: Delay-Corrected Bellman Operator and Causal Attribution for Constrained RL](https://www.reddit.com/r/MachineLearning/comments/1vx11hz/delaycorrected_bellman_operator_causal/) ⭐️ 7.0/10
+## [Technique Creates Executable That Is Also a Valid SQLite Database](https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/) ⭐️ 7.0/10
 
-Researchers propose CCPL, a constrained RL method that introduces a delay-corrected Bellman operator with an adaptive effective discount factor and a contraction proof valid under unknown stochastic delay, along with an Interventional Consequence Net \(ICN\) that attributes delayed consequences to the true causal action using structural causal model labels. This work addresses a critical real-world gap in constrained RL: penalizing agents based on immediate temporal proximity often misattributes delayed, stochastic violations, leading to unsafe policies. By providing a principled attribution mechanism, it could enable safer deployment in robotics, autonomous driving, and healthcare. The delay-corrected Bellman operator learns an effective discount in expectation over the consequence-delay distribution, and the contraction proof holds even when the delay distribution is unknown. The ICN estimates the marginal causal contribution of each action but requires pretraining labels from the environment&\#x27;s structural causal model, which is a significant practical limitation.
+Farid Zakaria demonstrated a technique to create a file that is both a valid ELF executable and a valid SQLite database, by embedding the executable&\#x27;s components into SQLite tables and using a custom interpreter with binfmt\_misc. This clever combination of file formats and kernel features highlights the flexibility of Linux systems, potentially inspiring novel approaches to software packaging, distribution, or polyglot file design. The technique sets the SQLite application ID at byte offset 68 to &\#x27;SELF&\#x27;, stores ELF components in multiple SQLite tables per a defined schema, and uses a custom C interpreter \(self-exec\) along with binfmt\_misc registration to directly execute such files.
 
-reddit · r/MachineLearning · /u/No\_Cauliflower7923 · Aug 24, 12:11
+rss · Simon Willison · Aug 24, 11:38
 
-**Background**: Standard constrained RL imposes constraints on immediate outcomes, but real-world consequences \(e.g., safety violations, component wear\) often appear after a stochastic delay. The Bellman operator is a fundamental update rule in RL that expresses the value of a state in terms of expected future rewards, and its contraction property guarantees convergence of algorithms like value iteration. Causal attribution helps distinguish correlation from causation, which is crucial when assigning blame for delayed events. A structural causal model \(SCM\) explicitly describes how variables influence one another, enabling counterfactual reasoning.
+**Background**: ELF \(Executable and Linkable Format\) is the standard binary format for executables and shared libraries on Linux. SQLite is a library that implements a self-contained, serverless, zero-configuration SQL database engine, storing the entire database as a single file. binfmt\_misc is a Linux kernel feature that allows arbitrary executable file formats to be recognized and passed to user-space applications, enabling non-native binaries to be executed transparently.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://pypi.org/project/ccpl-rl/">Causal Consequence-Penalized Learning for delayed constrained...</a></li>
-<li><a href="https://ai.stackexchange.com/questions/11057/what-is-the-bellman-operator-in-reinforcement-learning">terminology - What is the Bellman operator in reinforcement learning?</a></li>
-<li><a href="https://web.stanford.edu/class/cme241/lecture_slides/BellmanOperators.pdf">Understanding (Exact) Dynamic Programming through Bellman ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Binfmt_misc">Binfmt misc</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Executable and Linkable Format - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#constrained-reinforcement-learning`, `#causal-inference`, `#bellman-operator`, `#delay-correction`, `#structural-causal-models`
+**Tags**: `#sqlite`, `#elf`, `#linux`, `#executable`, `#binfmt\_misc`
 
 ---
 
 <a id="item-12"></a>
-## [Apple Confirms iCloud+ Hide My Email Addresses Stay on icloud.com](https://developer.apple.com/news/?id=1ptvdtcm) ⭐️ 6.0/10
+## [Using LLMs as Spatial Software Generators for Programmable 3D Objects](https://www.reddit.com/r/MachineLearning/comments/1vxcc1h/r_using_ai_as_a_spatial_software_generator_to/) ⭐️ 7.0/10
 
-Apple has officially announced that iCloud+ Hide My Email addresses will remain on the icloud.com domain, reversing a potential plan to change the domain in response to user feedback. The decision preserves stability for users who rely on these anonymous addresses across many services, preventing breakage and the need to update countless accounts. It also shows Apple&\#x27;s responsiveness to community concerns. Hide My Email generates random addresses that forward to the user&\#x27;s real inbox; the icloud.com domain is the default. Some users had seen addresses on privaterelay.appleid.com, leading to confusion, but Apple&\#x27;s confirmation keeps the familiar icloud.com.
+A new research paper demonstrates that large language models \(LLMs\) can act as spatial software generators, producing 3D objects that are inherently structured, animation-ready, and programmable, unlike traditional monolithic mesh generation. This approach could transform industries such as game development, industrial design, and AR/VR by enabling 3D objects that are more flexible, editable, and adaptive, potentially reducing the need for manual rigging and programming. The generated 3D objects are composed of logical parts with hinge/socket articulation, and can include logic to adjust appearance based on device capabilities. They currently lag behind traditional methods in creating complex organic shapes.
 
-hackernews · K7PJP · Aug 24, 22:13 · [Discussion](https://news.ycombinator.com/item?id=49426564)
+reddit · r/MachineLearning · /u/mhb\_11 · Aug 24, 19:10
 
-**Background**: Hide My Email is a privacy feature in Apple&\#x27;s iCloud+ subscription that creates unique, random email addresses to shield the user&\#x27;s real email when signing up for websites or services. These addresses forward messages to the user&\#x27;s actual inbox and can be deleted at any time. A potential domain change would have forced users to update or recreate addresses, potentially breaking logins and communications.
+**Background**: Traditional AI 3D generators produce monolithic meshes—single, unstructured blobs that are difficult to edit or animate. Spatial programming, in contrast, represents 3D objects as software with hierarchical structures, logic, and articulation, making them more interactive. The researchers treat 3D generation as a coding task, leveraging LLMs&\#x27; coding abilities to generate spatial programs that describe 3D objects.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/ICloud">ICloud</a></li>
-<li><a href="https://support.apple.com/en-us/102602">About iCloud Private Relay - Apple Support</a></li>
+<li><a href="https://spatialtoolbox.vuforia.com/docs/use/spatial-programming">Spatial Programming | Vuforia Spatial Toolbox</a></li>
+<li><a href="https://cubepar.org/">Try CubePart Demo &amp; Generate Part... — CubePar | AI 3D Mesh Guide</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Users generally welcomed the news, with many expressing gratitude that Apple listened to feedback. Some confusion remained about the privaterelay.appleid.com domain seen by a few users, and one commenter wished Sign in with Apple could be set up without a paid developer license.
-
-**Tags**: `#apple`, `#privacy`, `#email`, `#icloud`, `#product-update`
+**Tags**: `#3D generation`, `#spatial programming`, `#LLM`, `#procedural generation`, `#AI research`
 
 ---
 
 <a id="item-13"></a>
-## [Fringe Chinese Internet Movement Denies Tang Dynasty Existed](https://www.cnn.com/2026/08/19/style/china-tang-dynasty-never-existed-hoax-intl-hnk) ⭐️ 6.0/10
+## [Delay-Corrected Bellman Operator and Causal Attribution for Constrained RL](https://www.reddit.com/r/MachineLearning/comments/1vx11hz/delaycorrected_bellman_operator_causal/) ⭐️ 7.0/10
 
-A CNN article reports on a fringe Chinese internet movement insisting that the Tang Dynasty never existed, sparking a high-quality Hacker News discussion. The phenomenon echoes the &\#x27;phantom time&\#x27; conspiracy theory and illustrates how fringe narratives can gain traction online, undermining public trust in established historical scholarship. Commenters noted that the Tang Dynasty is well-documented by primary sources, archaeological sites like the Qianling Mausoleum, and contemporary foreign accounts, making the denial absurd.
+Researchers proposed a delay-corrected Bellman operator that adjusts the effective discount factor based on the consequence-delay distribution, along with an Interventional Consequence Net \(ICN\) for causal action attribution in constrained RL. The contraction proof holds under unknown stochastic delays, but the ICN requires access to the environment&\#x27;s structural causal model for pretraining. This work addresses the critical challenge of delayed and stochastic consequences in constrained RL, which is common in real-world applications like autonomous driving and healthcare. It paves the way for more reliable credit assignment and safer exploration. The delay-corrected Bellman operator learns an adaptive effective discount from the delay distribution, and the ICN estimates marginal causal contribution per action, not just temporal proximity. The main limitation is that the ICN relies on a known structural causal model, hindering end-to-end learning from data alone.
 
-hackernews · related · Aug 24, 21:03 · [Discussion](https://news.ycombinator.com/item?id=49425819)
+reddit · r/MachineLearning · /u/No\_Cauliflower7923 · Aug 24, 12:11
 
-**Background**: The Tang Dynasty \(618-907 AD\) was a real and influential period in Chinese history, known for its cultural and economic achievements. The denial of its existence is a fringe conspiracy theory, similar to the Western &\#x27;phantom time&\#x27; hypothesis, which claims that certain historical periods were fabricated. Such theories are often fueled by nationalist or racist narratives.
-
-**Discussion**: The Hacker News community generally dismissed the conspiracy as absurd, with users pointing to overwhelming evidence for the Tang Dynasty. Some compared it to the &\#x27;phantom time&\#x27; theory and noted its potential racist motivations, while others expressed concern about the broader trend of narrative warfare eroding historical truth.
-
-**Tags**: `#misinformation`, `#history`, `#conspiracy-theories`, `#internet-culture`, `#China`
-
----
-
-<a id="item-14"></a>
-## [Unbounded Labs Open-Sources Bart, a 2.82B Vintage LLM Trained on Pre-1931 Texts](https://www.reddit.com/r/MachineLearning/comments/1vx94er/bart_a_vintage_llm_r/) ⭐️ 6.0/10
-
-Unbounded Labs has developed and open-sourced Bart, a 2.82 billion-parameter language model trained exclusively on 20.1 billion tokens of English text written before 1931, aiming to test whether models can generate original scientific ideas like historical scientists. This project challenges the notion that LLMs merely regurgitate patterns; by restricting training data to pre-1931 texts, it provides a unique testbed to evaluate whether models can independently reason about scientific concepts without being exposed to modern knowledge, potentially advancing our understanding of machine creativity. The model was trained on a single H100 GPU in 5 days, achieving 60% model flops utilization \(MFU\); the team also curated the largest vintage SFT dataset \(416k graded Q&amp;A pairs\), built the Vintage CORE benchmark suite of 20 tasks, and conducted autonomous research that ran 100 experiments and found 26 improvements.
-
-reddit · r/MachineLearning · /u/soggydoggy8 · Aug 24, 17:20
-
-**Background**: In machine learning, an ablation study involves removing components to assess their impact. Supervised fine-tuning \(SFT\) is the process of further training a pre-trained model on labeled examples to improve performance on specific tasks. Post-training refers to the stages after initial pre-training, such as SFT and alignment, that adapt a model for practical use. A &\#x27;vintage LLM&\#x27; is a language model trained exclusively on historical texts from a specific era, in this case before 1931, to emulate the knowledge and style of that period.
+**Background**: The Bellman equation is a fundamental recursive decomposition in dynamic programming and reinforcement learning, used to compute optimal value functions. The Bellman operator applies this equation to update value estimates. In constrained RL, an agent must maximize reward while satisfying safety constraints, but delayed and stochastic consequences make it hard to assign credit to the correct action, often causing the most recent action to be wrongly penalized.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Ablation_%28machine_learning%29">Ablation (machine learning)</a></li>
-<li><a href="https://www.geeksforgeeks.org/artificial-intelligence/supervised-fine-tuning-sft-for-llms/">Supervised Fine-Tuning (SFT) for LLMs - GeeksforGeeks</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Post-training_of_large_language_models">Post-training of large language models</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bellman_equation">Bellman equation - Wikipedia</a></li>
+<li><a href="https://www.baeldung.com/cs/bellman-operator-reinforcement-learning">What Is the Bellman Operator in Reinforcement Learning? | Baeldung on Computer Science</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM`, `#historical-text`, `#training-from-scratch`, `#NLP`, `#experiment`
+**Tags**: `#reinforcement learning`, `#causal inference`, `#constrained RL`, `#credit assignment`, `#delayed consequences`
+
+---
+
+<a id="item-14"></a>
+## [Chinese Internet Hoax Denies Existence of Tang Dynasty](https://www.cnn.com/2026/08/19/style/china-tang-dynasty-never-existed-hoax-intl-hnk) ⭐️ 6.0/10
+
+CNN reports on a fringe online conspiracy theory within China that claims the Tang Dynasty \(618–907 AD\) was a fabrication, sparking fresh debate over historical denialism. This phenomenon illustrates how conspiracy theories can erode public trust in established scholarship, reflecting a broader global trend of narrative warfare where historical facts are replaced by ideological fictions. The hoax ignores extensive primary sources, including the Old Book of Tang, the Qianling Mausoleum, and contemporary Japanese records, and it closely mirrors the Western phantom time conspiracy theory that also targets a similar historical period.
+
+hackernews · related · Aug 24, 21:03 · [Discussion](https://news.ycombinator.com/item?id=49425819)
+
+**Background**: The Tang Dynasty is widely regarded as a golden age of Chinese civilization, renowned for its poetry, trade along the Silk Road, and cultural influence. Its existence is documented by numerous Chinese annals, archaeological sites, and foreign accounts from Japan, Korea, and the Islamic world. The phantom time hypothesis is a fringe idea that the early Middle Ages were fabricated by the Holy Roman Empire, similar in its denial of well-attested historical periods.
+
+**Discussion**: Commenters overwhelmingly reject the hoax, citing abundant archaeological and textual evidence. Some draw parallels to the phantom time conspiracy theory and note a possible racist motive, while others lament the rise of narrative warfare in public discourse.
+
+**Tags**: `#history`, `#conspiracy`, `#china`, `#internet-culture`, `#denialism`
+
+---
+
+<a id="item-15"></a>
+## [Anthropic&\#x27;s revenue hits $65bn but premium models lose user adoption](https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/) ⭐️ 6.0/10
+
+Anthropic&\#x27;s annualized revenue reached $65 billion in July, up from $47 billion in May, while OpenAI&\#x27;s revenue surged to over $40 billion after the launch of GPT-5.6. Ramp billing data shows that Anthropic&\#x27;s expensive Fable 5 model accounts for only 8% of its model spend, far behind cheaper options like Opus 4.8 at 28%. This highlights a growing trend where cost-effectiveness drives AI model adoption more than raw capability, potentially reshaping pricing strategies and market competition among AI providers. Anthropic expects Q3 profitability and has 6,000 customers spending over $100,000 annually; the Ramp AI Index, based on data from 70,000 companies, reveals that even among Anthropic&\#x27;s own models, cheaper ones dominate usage.
+
+rss · Simon Willison · Aug 23, 20:24
+
+**Background**: Anthropic is a major AI company known for its Claude family of models; OpenAI is its main rival, creator of GPT models. The Ramp AI Index tracks corporate spending on AI services using credit card transaction data, and GPT-5.6 was OpenAI&\#x27;s latest release in July 2026 with multiple tiers.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://ramp.com/data/ai-index">Ramp AI Index</a></li>
+<li><a href="https://ramp.com/data/ai-index-august-2026">August 2026 Ramp AI Index: Cracks in the AI thesis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GPT-5.6">GPT-5.6</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#business`, `#Anthropic`, `#OpenAI`, `#revenue`
+
+---
+
+<a id="item-16"></a>
+## [Fable Model&\#x27;s High Cost Ends the Era of Constant AI Improvement at Same Price](https://simonwillison.net/2026/Aug/23/drew-breunig/) ⭐️ 6.0/10
+
+Drew Breunig observes that Anthropic&\#x27;s Fable model, while incredibly capable, is so expensive that it breaks the trend of each new model being cheaper or equal in cost. This forces developers to abandon the old assumption that a new model would always paper over problems and instead start thinking strategically about which model to use for which task. This shift marks the end of the &\#x27;free lunch&\#x27; in AI, where developers could rely on constant model improvements at the same price. It now compels them to manage cost-performance trade-offs explicitly, changing how AI-powered software is built and operated. Breunig&\#x27;s quote mentions that models like Opus, 5.6, K3, and GLM are &\#x27;good enough&\#x27; for most coding tasks, making Fable&\#x27;s high cost hard to justify for routine work. Fable 5, released in June 2026, is Anthropic&\#x27;s most capable widely available model, targeting demanding reasoning and agentic tasks, but its expense forces a new routing strategy.
+
+rss · Simon Willison · Aug 23, 19:55
+
+**Background**: For years, each new generation of large language models \(like those from OpenAI and Anthropic\) delivered better performance at the same or lower cost. This created a &\#x27;free lunch&\#x27; mentality where developers didn&\#x27;t need to optimize their tooling. Anthropic&\#x27;s Claude models include Opus \(high-end\) and later Fable, a Mythos-class model. GLM is an open-weight Chinese model series from Z.ai, also competitive. The quote was shared by Simon Willison, a prominent developer and commentator on AI.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Mythos">Claude Mythos - Wikipedia</a></li>
+<li><a href="https://www.anthropic.com/claude/fable">Claude Fable \ Anthropic</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GLM_%28AI%29">GLM (AI) - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#language models`, `#Anthropic`, `#Claude`, `#economics`
 
 ---

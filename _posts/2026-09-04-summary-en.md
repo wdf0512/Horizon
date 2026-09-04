@@ -5,153 +5,292 @@ date: 2026-09-04
 lang: en
 ---
 
-> From 30 items, 18 important content pieces were selected
+> From 27 items, 21 important content pieces were selected
 
 ---
 
-1. [OpenAI Releases GPT-6 Astra with 99.9% ARC-AGI-3 Score](#item-1) ⭐️ 9.0/10
-2. [Verisign to Terminate Third-Level .name Domains, Sparking Stability Debate](#item-2) ⭐️ 8.0/10
-3. [Developer Ports 1993 Amiga Assembly Game to Godot Using Claude](#item-3) ⭐️ 8.0/10
-4. [Shin Jinseo defeats KataGo AI with a two-stone handicap](#item-4) ⭐️ 8.0/10
-5. [Audacity 4.0 Released with New Qt6 UI and Numerous Fixes](#item-5) ⭐️ 8.0/10
-6. [Paint.NET&\#x27;s AI-Written Clean-Room Direct2D Enables Linux via WINE](#item-6) ⭐️ 8.0/10
-7. [Jasper Research Cookbook for Building Text-to-Image Models from Scratch](#item-7) ⭐️ 8.0/10
-8. [Most open-source AI detectors fail to achieve 0.5% false-positive rate](#item-8) ⭐️ 8.0/10
-9. [Qwen 3.8 27B Hits 1500 Tokens/s on Cerebras, but Rate Limits Cripple Usability](#item-9) ⭐️ 7.0/10
-10. [Artificial Beaver Dams Boost Juvenile Coho Salmon Survival from 8% to 60%](#item-10) ⭐️ 7.0/10
-11. [GPS Glitched Across the US by up to 33 Feet](#item-11) ⭐️ 7.0/10
-12. [Deepity C++ Library Speeds Predictive Coding to Match Backprop on MNIST](#item-12) ⭐️ 7.0/10
-13. [K2 Horizon: A Fleet of Six Open Models with Mixed Reviews](#item-13) ⭐️ 6.0/10
-14. [AI project &\#x27;Any Human Ever&\#x27; generates random historical lives](#item-14) ⭐️ 6.0/10
-15. [llm-gemini 0.34 Adds Gemini 3.8 Flash Support with Thinking Levels](#item-15) ⭐️ 6.0/10
-16. [Proposal: Grounding LLMs Using JEPA-Based World Models Trained in Simulation](#item-16) ⭐️ 6.0/10
-17. [Mol-JEPA: A Multimodal Molecular Foundation Model Based on JEPA](#item-17) ⭐️ 6.0/10
-18. [Sparse Autoencoders Improve Text-to-Music Search for Rare Attributes](#item-18) ⭐️ 6.0/10
+1. [OpenAI releases GPT-6 with 60% on ARC-AGI-3 without harness](#item-1) ⭐️ 10.0/10
+2. [OpenAI Announces GPT-6 Astra with 99.9% ARC-AGI-3 Score](#item-2) ⭐️ 9.0/10
+3. [Verisign Plans to Terminate All Third-Level .name Domain Registrations](#item-3) ⭐️ 8.0/10
+4. [LLM Reads 68000 Assembly to Port 1993 Amiga Game to Godot](#item-4) ⭐️ 8.0/10
+5. [Solar storm causes unprecedented GPS glitches up to 33 feet across the US](#item-5) ⭐️ 8.0/10
+6. [Analysis of 17k Runs Reveals AI Coding Agents&\#x27; Tool Preferences](#item-6) ⭐️ 8.0/10
+7. [Shin Jinseo defeats AI KataGo with two-stone handicap](#item-7) ⭐️ 8.0/10
+8. [Jasper Research Releases Cookbook and Code for Training Text-to-Image Model from Scratch](#item-8) ⭐️ 8.0/10
+9. [Study: Open-source AI detectors fail to maintain 0.5% false-positive rate](#item-9) ⭐️ 8.0/10
+10. [Any Human Ever: Randomly Generated Life from All of History](#item-10) ⭐️ 7.0/10
+11. [Anthropic&\#x27;s updated Claude system prompt explicitly forbids reproducing song lyrics](#item-11) ⭐️ 7.0/10
+12. [Paint.NET Now Runs on Linux via WINE with AI-Generated Direct2D Clone](#item-12) ⭐️ 7.0/10
+13. [Sparse Autoencoders Disentangle Music Embeddings for Rare Concept Retrieval](#item-13) ⭐️ 7.0/10
+14. [Qwen 3.8 27B on Cerebras at 1500 tokens/s, but Rate Limits Hinder Use](#item-14) ⭐️ 6.0/10
+15. [Artificial beaver dams boost juvenile coho salmon survival from 8% to 60%](#item-15) ⭐️ 6.0/10
+16. [K2 Horizon: Six Open AI Models Released, Performance Gaps Noted](#item-16) ⭐️ 6.0/10
+17. [Grounding LLMs with JEPA-based World Models: A Speculative Proposal](#item-17) ⭐️ 6.0/10
+18. [AAAI-27 Desk Rejection Over Incredibly Minor Abstract Modifications Reported](#item-18) ⭐️ 6.0/10
+19. [Mol-JEPA: A Multimodal Molecular Foundation Model Based on JEPA](#item-19) ⭐️ 6.0/10
+20. [5.94B TikTok Videos and 3.23B Profiles Scraped, Uploaded to Hugging Face](#item-20) ⭐️ 6.0/10
+21. [Deepity: C++ library speeds up Predictive Coding Networks to near backprop accuracy on MNIST](#item-21) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [OpenAI Releases GPT-6 Astra with 99.9% ARC-AGI-3 Score](https://openai.com/index/gpt-6-astra/) ⭐️ 9.0/10
+## [OpenAI releases GPT-6 with 60% on ARC-AGI-3 without harness](https://www.reddit.com/r/MachineLearning/comments/1w6v0ig/gpt6_is_released_n/) ⭐️ 10.0/10
 
-OpenAI has released GPT-6 Astra, the latest major version of its language model, accompanied by a system card detailing safety and capabilities. The model reportedly achieves a 99.9% score on the ARC-AGI-3 benchmark, a significant leap in interactive reasoning. The 99.9% ARC-AGI-3 result, if verified, would mark a major milestone toward artificial general intelligence, sparking debate on benchmark reliability. GPT-6 Astra&\#x27;s release could accelerate AGI timelines and reshape AI applications across industries. The ARC-AGI-3 score is controversial because it uses a &\#x27;responses API harness&\#x27; that was not applied to older models like GPT-5.6 Sol, potentially inflating the comparison. Other benchmarks show only modest gains, and the system card provides safety evaluations.
+OpenAI has announced the release of GPT-6, achieving a 60% score on the challenging ARC-AGI-3 benchmark without using an evaluation harness, as shown in the official benchmark results. This marks a significant leap toward general intelligence, as ARC-AGI-3 is designed to test an AI&\#x27;s ability to acquire new skills and reason in novel environments, and a 60% score without a harness implies robust, out-of-the-box reasoning capabilities. GPT-6 uses a harness for ARC-AGI-3 but still achieves around 60% without one; the benchmark is the third iteration of the Abstraction and Reasoning Corpus, launched by the ARC Prize Foundation in 2026 to move beyond static puzzles.
 
-hackernews · kibae · Sep 3, 18:41 · [Discussion](https://news.ycombinator.com/item?id=49554643)
+reddit · r/MachineLearning · /u/we\_are\_mammals · Sep 4, 05:13
 
-**Background**: ARC-AGI-3 is an interactive benchmark designed to measure human-like intelligence, where previous AI models scored under 1% while humans achieve 100%. System cards are transparency documents akin to nutrition labels that detail an AI model&\#x27;s capabilities and safety measures. GPT-6 Astra is the direct successor to GPT-5, representing a major version update in OpenAI&\#x27;s series.
+**Background**: ARC-AGI-3 is an interactive reasoning benchmark that challenges AI agents to explore novel environments, acquire goals on the fly, and build adaptable world models. An evaluation harness is a standardized infrastructure that defines what gets evaluated in an AI system, runs the scoring, and acts on the results. The harness is typically used to ensure fair and consistent benchmarking, so achieving a high score without it suggests the model&\#x27;s native reasoning is strong.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arcprize.org/arc-agi/3">ARC-AGI-3</a></li>
-<li><a href="https://www.anthropic.com/system-cards">Model system cards \ Anthropic</a></li>
+<li><a href="https://grokipedia.com/page/ARC-AGI-3">ARC-AGI-3</a></li>
+<li><a href="https://arize.com/blog/what-is-an-evaluation-harness/">What is an evaluation harness ? Definition &amp; guide - Arize AI</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community reactions are largely skeptical, questioning the ARC-AGI-3 score&\#x27;s validity due to an unfair harness comparison and noting that other benchmarks show only modest improvements. Some users criticize the focus on autonomous purchasing demos, while others draw parallels to François Chollet&\#x27;s work on intelligence measurement.
-
-**Tags**: `#GPT-6`, `#OpenAI`, `#AGI`, `#benchmark`, `#language model`
+**Tags**: `#GPT-6`, `#OpenAI`, `#large language models`, `#benchmarks`, `#AI release`
 
 ---
 
 <a id="item-2"></a>
-## [Verisign to Terminate Third-Level .name Domains, Sparking Stability Debate](https://neil.fraser.name/news/2026/09/03/) ⭐️ 8.0/10
+## [OpenAI Announces GPT-6 Astra with 99.9% ARC-AGI-3 Score](https://openai.com/index/gpt-6-astra/) ⭐️ 9.0/10
 
-Verisign has announced a plan to terminate all existing third-level .name domain registrations \(e.g., john.doe.name\) and release the underlying second-level domains for new registration. This effectively discontinues the current .name hierarchy and raises concerns about domain name stability and user impact. This move contradicts ICANN&\#x27;s mission of ensuring stable and secure identifier systems, as it could lead to domain hijacking, loss of email addresses, and service disruption for those who built their online presence on these third-level domains. It highlights the fragility of internet naming and the power of registries to unilaterally alter established namespaces. The .name TLD originally offered both second-level and third-level registrations, with personal domains like first.last.name. The termination only affects third-level registrations; second-level .name domains \(e.g., dvt.name\) are not impacted. Critics note the proposal lacks measures to prevent squatting of newly released second-level domains that were previously occupied by third-level registrants.
+OpenAI released GPT-6 Astra, a new major model, claiming a 99.9% score on the ARC-AGI-3 benchmark, sparking intense discussion about benchmark methodology and agent capabilities. The near-perfect score on ARC-AGI-3, a benchmark designed to measure agentic intelligence and adaptable reasoning, suggests a significant leap toward autonomous AI systems that can explore, infer goals, and learn continuously, potentially reshaping the landscape of AI agents. The 99.9% score was achieved using the responses API harness, which may inflate results compared to earlier models like GPT-5.6 Sol; other benchmarks showed only modest improvements, and the demo&\#x27;s autonomous purchasing agent raised realism concerns.
 
-hackernews · pavel\_lishin · Sep 3, 14:54 · [Discussion](https://news.ycombinator.com/item?id=49550772)
+hackernews · kibae · Sep 3, 18:41 · [Discussion](https://news.ycombinator.com/item?id=49554643)
 
-**Background**: The Domain Name System \(DNS\) hierarchy includes top-level domains \(TLDs\) like .com, .org, and .name. A third-level domain is a subdomain one level below the second-level domain, e.g., shop.example.com. The .name TLD was launched in 2001 for individuals to register personal domains in the format firstname.lastname.name. Verisign is the registry operator for .name under contract with ICANN, the organization that coordinates the global internet&\#x27;s unique identifiers.
+**Background**: ARC-AGI-3 is an interactive benchmark from ARC Prize where AI agents must explore novel environments, infer goals on the fly, and build adaptable world models. The responses API harness is a specific evaluation setup that can significantly affect scores. Earlier track ARC-AGI-2 evaluates static grid puzzles, so scores are not directly comparable. The Artificial Analysis Coding Agent Index measures agentic coding capabilities across multiple tasks.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Third-level_domain">Third-level domain</a></li>
-<li><a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains">List of Internet top - level domains - Wikipedia</a></li>
+<li><a href="https://arcprize.org/arc-agi/3">ARC-AGI-3</a></li>
+<li><a href="https://arcprize.org/blog/astra">OpenAI&#x27;s GPT-6 Astra on ARC-AGI-3 | ARC Prize</a></li>
+<li><a href="https://artificialanalysis.ai/">AI Model &amp; API Providers Analysis | Artificial Analysis</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community strongly opposes the termination, calling it a violation of ICANN&\#x27;s stability principles. Many highlight risks of domain squatting and service disruption, and there is consensus that Verisign should at least maintain existing registrations and reserve the second-level domains to prevent hijacking. One commenter shared an anecdote about designing IoT systems to avoid reliance on leased domains, underscoring the inherent unreliability of domain name ownership.
+**Discussion**: Comments highlighted that the responses API harness likely inflated the score, making comparisons unfair; some questioned the practicality of autonomous purchasing demos, while others noted that the improvement on other benchmarks was modest, casting doubt on the AGI label. The overall sentiment was critical but engaged.
 
-**Tags**: `#domain names`, `#ICANN`, `#internet infrastructure`, `#DNS`, `#Verisign`
+**Tags**: `#AI`, `#GPT-6`, `#OpenAI`, `#LLM`, `#HackerNews`
 
 ---
 
 <a id="item-3"></a>
-## [Developer Ports 1993 Amiga Assembly Game to Godot Using Claude](https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/) ⭐️ 8.0/10
+## [Verisign Plans to Terminate All Third-Level .name Domain Registrations](https://neil.fraser.name/news/2026/09/03/) ⭐️ 8.0/10
 
-A developer ported his 1993 Amiga game, originally written in MC68000 assembly, to the Godot engine in one evening with the help of Claude 3.5 Sonnet. The LLM read and converted the legacy assembly code, even assembling it with vasm to achieve a byte-identical binary except for a 108-byte snapshot discrepancy. This demonstrates a practical and accessible workflow for using LLMs to reverse-engineer and port legacy software, potentially accelerating the preservation of vintage games and applications. It shows how AI can bridge the gap between obsolete, hardware-specific code and modern development environments. The LLM utilized the vasm assembler to iteratively produce a binary identical to the original, with the 108-byte mismatch explained by the game being saved as a memory snapshot after execution rather than clean assembly output. The entire process, including polish and release, spanned a few weekends and evenings, and the original game is now free.
+Verisign has announced plans to discontinue all existing third-level .name domain registrations \(e.g., john.doe.name\) and release the corresponding second-level domains \(e.g., doe.name\) for general registration, ending the original .name registry structure. This move could disrupt existing domain owners who relied on .name addresses for personal or professional use, and the release of second-level domains raises concerns about domain squatting and security, potentially undermining ICANN&\#x27;s mission of ensuring stability and security in the domain name system. The proposal does not mention any plan to reserve the second-level domains for a grace period to protect existing third-level registrants from squatting; the termination affects only third-level domains, not those who already own second-level .name domains directly.
 
-hackernews · rabahs · Sep 3, 14:28 · [Discussion](https://news.ycombinator.com/item?id=49550375)
+hackernews · pavel\_lishin · Sep 3, 14:54 · [Discussion](https://news.ycombinator.com/item?id=49550772)
 
-**Background**: The MC68000 is a 16/32-bit microprocessor used in the Amiga, Atari ST, and early Macintosh. Assembly language is low-level, human-readable code that maps directly to machine instructions. vasm is a portable assembler that can target the 68000 and other CPUs. AsmOne is an Amiga assembler that assembles code directly into memory, and the original game was saved as a memory dump after running, leading to the 108-byte difference. Godot is a modern, open-source game engine.
+**Background**: The .name top-level domain was launched in 2001 for personal name registrations, originally requiring a third-level structure like firstname.lastname.name, where the second-level domain \(lastname.name\) was reserved and not available for direct registration. Over time, Verisign allowed direct second-level registrations, but many third-level domains remained. The Domain Name System \(DNS\) hierarchy consists of top-level domains, second-level domains, and subdomains, with ICANN overseeing the global coordination of these identifiers to ensure stability and security.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikibooks.org/wiki/68000_Assembly">68000 Assembly - Wikibooks, open books for an open world</a></li>
-<li><a href="http://sun.hasenbraten.de/vasm/">vasm portable and retargetable assembler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Domain_name">Domain name - Wikipedia</a></li>
+<li><a href="https://icannwiki.org/Second_Level_Domain">Second Level Domain - ICANNWiki</a></li>
+<li><a href="https://www.cloudflare.com/learning/dns/top-level-domain/">What is a top-level domain (TLD)?</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Comments express nostalgia and admiration for the original 1993 assembly creation, with some users sharing similar experiences of using LLMs for retro binary conversion. The overall sentiment is positive, with interest in the debugging process and the potential for similar projects.
+**Discussion**: Comments express strong concern: nneonneo suggests discontinuing new registrations but honoring existing ones, while jl6 argues that terminating service contradicts ICANN&\#x27;s mission of stability and security. dvt clarifies that only third-level domains are affected, not directly owned second-level domains. Some note the inherent risks of leased domains for identity and IoT.
 
-**Tags**: `#retrocomputing`, `#assembly`, `#llm`, `#game-development`, `#reverse-engineering`
+**Tags**: `#domain names`, `#ICANN`, `#internet governance`, `#security`, `#.name TLD`
 
 ---
 
 <a id="item-4"></a>
-## [Shin Jinseo defeats KataGo AI with a two-stone handicap](https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007) ⭐️ 8.0/10
+## [LLM Reads 68000 Assembly to Port 1993 Amiga Game to Godot](https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/) ⭐️ 8.0/10
 
-Shin Jinseo, the world&\#x27;s strongest Go player, defeated the open-source AI KataGo while giving it a two-stone handicap, by luring it into a complex &\#x27;flying knife&\#x27; joseki that led to an equal board position, nullifying the AI&\#x27;s advantage. This victory highlights that even top-tier AI systems can be exploited through deep strategic understanding of their training weaknesses, and it underscores the enduring value of human creativity in games dominated by superhuman AI. The match featured a two-stone handicap, meaning Shin started with two fewer stones than the AI, a significant disadvantage. The &\#x27;flying knife&\#x27; joseki is a long, branching corner sequence that Shin played out to a variation that forced a balanced outcome, effectively resetting the game to even.
+A developer used Claude Fable 5 to port his 1993 Amiga game, originally written in Motorola 68000 assembly, to the Godot game engine in a single evening. The LLM handled the assembly translation and even assembled the code with vasm to achieve a byte-identical binary. This demonstrates the potential of LLMs to revive and preserve legacy software by automating the translation of old assembly code to modern engines. It could inspire similar efforts for countless abandoned games, making software archaeology more accessible. The LLM used vasm on a Mac to assemble the original code, and after resolving a 108-byte mismatch caused by the original AsmOne assembler&\#x27;s memory snapshot behavior, the output became byte-identical. The developer later co-wrote the article with the LLM, editing it line by line.
 
-hackernews · gmays · Sep 3, 01:11 · [Discussion](https://news.ycombinator.com/item?id=49544762)
+hackernews · rabahs · Sep 3, 14:28 · [Discussion](https://news.ycombinator.com/item?id=49550375)
 
-**Background**: KataGo is an open-source Go AI that has achieved superhuman performance, and it was previously discovered to have vulnerabilities when an adversarial AI was trained specifically to exploit its weaknesses. In Go, &\#x27;joseki&\#x27; are established sequences of corner plays that are considered to yield an equal result for both players. Shin Jinseo is the highest-rated human Go player in history, with a rating far surpassing his peers, and he is known for closely replicating AI moves.
+**Background**: The Amiga was a popular home computer in the late 1980s and early 1990s, known for its advanced graphics and sound. Motorola 68000 assembly was commonly used to write high-performance games for it. AsmOne is an integrated assembler/editor/debugger for Amiga that assembled directly into memory, while vasm is a modern, portable assembler that also supports the 68000 architecture. Godot is a free and open-source game engine supporting 2D and 3D development. Claude Fable 5 is a large language model developed by Anthropic, released in 2026, with powerful code generation capabilities.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/J%C5%8Dseki">Jōseki - Wikipedia</a></li>
-<li><a href="https://medium.com/the-polymaths-journey/katagos-gotta-go-a6914fdb7b0f">KataGo ’s Gotta Go. The past few months have been a… | by... | Medium</a></li>
+<li><a href="https://handwiki.org/wiki/ASM-One_Macro_Assembler">ASM-One Macro Assembler - HandWiki</a></li>
+<li><a href="http://sun.hasenbraten.de/vasm/">vasm portable and retargetable assembler</a></li>
+<li><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 and Claude Mythos 5 \ Anthropic</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members pointed out that the headline is slightly misleading because Shin received the handicap \(making him the weaker side\), but his creative use of the &\#x27;flying knife&\#x27; joseki was a genius one-way path to equalize. They noted that Shin&\#x27;s rating is far above any other human player, and that even with this achievement, no human can beat KataGo in an even game. Some commenters questioned the broader fascination with human-AI matches, viewing them as unsurprising.
+**Discussion**: Community response was overwhelmingly positive, with many expressing awe at the original 1993 assembly game creation and the LLM&\#x27;s porting ability. Some shared similar experiences of using LLMs to convert legacy code, while others expressed interest in reusable console porting frameworks.
 
-**Tags**: `#go`, `#AI`, `#KataGo`, `#human-vs-ai`, `#games`
+**Tags**: `#legacy-code`, `#assembly`, `#game-development`, `#llm`, `#godot`
 
 ---
 
 <a id="item-5"></a>
-## [Audacity 4.0 Released with New Qt6 UI and Numerous Fixes](https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0) ⭐️ 8.0/10
+## [Solar storm causes unprecedented GPS glitches up to 33 feet across the US](https://www.sciencealert.com/gps-glitched-across-the-us-by-as-much-as-33-feet-scientists-have-never-seen-this-before) ⭐️ 8.0/10
 
-Audacity 4.0 introduces a redesigned user interface built with the Qt6 framework, replacing the old wxWidgets UI. The release also includes many bug fixes and performance improvements. This major update shows a commitment to modernizing Audacity&\#x27;s aging codebase and improving user experience, which could attract new users and retain existing ones. As a cornerstone of open-source audio editing, the shift to Qt6 improves cross-platform compatibility and lays the groundwork for future features. The UI overhaul uses Qt6, offering better high-DPI support and a more responsive interface. However, Linux users note that JACK integration remains limited, working only as a temporary client during playback or recording, and some worry about the ongoing integration of audio.com services, echoing past telemetry controversies.
+Scientists observed unprecedented GPS errors across the United States, with location readings deviating by up to 10 meters \(33 feet\) during a recent solar storm, a phenomenon never recorded at this scale before. The glitch exposes critical vulnerabilities in satellite navigation, threatening sectors like precision agriculture, autonomous vehicles, and electronic offender monitoring, and highlights the real-world consequences of space weather on infrastructure. The errors were caused by ionospheric disturbances from a solar storm that disrupted GPS signals, with the 10-meter offset being sufficient to disrupt autonomous driving and agricultural operations; the May 2024 storm alone may have cost the US farming industry an estimated $500 million.
 
-hackernews · ClydeN · Sep 3, 10:53 · [Discussion](https://news.ycombinator.com/item?id=49548395)
+hackernews · thread\_id · Sep 3, 00:49 · [Discussion](https://news.ycombinator.com/item?id=49544618)
 
-**Background**: Audacity is a free, open-source audio editor used by millions for recording, editing, and mixing audio. The Qt6 framework represents a significant modernization over the previous wxWidgets UI toolkit, providing better cross-platform support and a more contemporary user experience. On Linux, the JACK Audio Connection Kit is essential for low-latency professional audio workflows, but Audacity&\#x27;s JACK support has been a long-standing pain point. The 2021 telemetry controversy, following Muse Group&\#x27;s acquisition, led to the creation of forks like Tenacity and eroded trust, which persists in the community&\#x27;s reaction to audio.com integration.
+**Background**: Solar storms are eruptions of particles and magnetic fields from the Sun that can distort Earth&\#x27;s ionosphere, altering the speed and path of GPS satellite signals. The ionosphere normally delays signals in a predictable way that GPS receivers correct for, but severe storms create unpredictable fluctuations, degrading accuracy. GPS is used not only for navigation but also for time synchronization and precision tasks like automated tractor guidance.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Qt6">Qt6</a></li>
+<li><a href="https://www.sciencealert.com/gps-glitched-across-the-us-by-as-much-as-33-feet-scientists-have-never-seen-this-before">GPS Glitched Across The US by as Much as 33 Feet. Scientists Have Never Seen This Before. : ScienceAlert</a></li>
+<li><a href="https://www.u-blox.com/en/blogs/insights/solar-storm-gps-signals">Why do solar storms affect GPS signals?</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community discussion is mixed, with many praising the new Qt6 UI and improvements, while others criticize the continued lack of proper JACK support on Linux. Concerns about the integration of audio.com services echo the earlier telemetry controversy, and some users mention the existence of forks like Tenacity as alternatives. However, the release video and technical insights from the Muse team have been well-received.
+**Discussion**: Commenters highlighted real-world impacts: electronic monitoring of parolees could cause false violations, skepticism about the $500 million agricultural loss estimate, parallel concerns about cheap GPS jammers, historical parallels to the US military&\#x27;s &\#x27;selective availability&\#x27; during 9/11, and the danger to autonomous vehicles like Austin&\#x27;s Cybercabs being 33 feet off course.
 
-**Tags**: `#open-source`, `#audio`, `#release`, `#audacity`, `#software`
+**Tags**: `#GPS`, `#infrastructure`, `#solar-storm`, `#navigation`, `#society`
 
 ---
 
 <a id="item-6"></a>
-## [Paint.NET&\#x27;s AI-Written Clean-Room Direct2D Enables Linux via WINE](https://simonwillison.net/2026/Sep/2/rick-brewster/) ⭐️ 8.0/10
+## [Analysis of 17k Runs Reveals AI Coding Agents&\#x27; Tool Preferences](https://armature.tech/blog/which-tools-coding-agents-install) ⭐️ 8.0/10
 
-Paint.NET now includes an internal, clean-room reimplementation of Direct2D, written largely by Claude AI, enabling the application to run on Linux through WINE with the /wine flag. The 180,000-line module was created with minimal human review, a process described as &\#x27;vibe coding.&\#x27; This demonstrates a novel use of AI-assisted reverse engineering at scale, potentially reducing the barrier for porting Windows applications to Linux. The &\#x27;trust me bro&\#x27; approach to code review also challenges traditional software development practices and highlights the growing influence of AI-generated code in production software. The reimplementation lives in PaintDotNet.Windows.Direct2D1.Managed.dll and is triggered by the /wine command-line argument. Developer Rick Brewster noted that while Claude excelled at reverse engineering Direct2D&\#x27;s built-in effects, it required human babysitting to manage COM reference counting and correct architectural mistakes.
+A new analysis of 17,000 runs from AI coding agents Claude, Codex, and Cursor shows which tools they prefer to install, offering empirical insights into agent decision-making. As AI agents become autonomous decision-makers in software development, understanding their tool preferences can shape how developers market and optimize products for an agent-driven ecosystem. The analysis is based on a substantial dataset of 17,000 agent runs, and the findings may inform how tool vendors position themselves to be chosen by AI coding agents.
+
+hackernews · screm · Sep 3, 21:20 · [Discussion](https://news.ycombinator.com/item?id=49557206)
+
+**Background**: Claude is an AI assistant by Anthropic, with a terminal-based coding agent called Claude Code. Codex is OpenAI&\#x27;s code-generation model, now powering a dedicated coding agent. Cursor is an AI-assisted code editor forked from VS Code, offering agentic coding features.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://claude.com/">Claude</a></li>
+<li><a href="https://openai.com/index/introducing-codex/">Introducing Codex | OpenAI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cursor_%28code_editor%29">Cursor (code editor)</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters discussed the &\#x27;golden age of AI&\#x27; potentially ending, the concept of marketing to AI agents, and specific behaviors like Claude Code&\#x27;s use of awk and sed for file editing. Some shared their own tracking projects, reflecting a mix of enthusiasm and concern.
+
+**Tags**: `#AI`, `#coding-agents`, `#developer-tools`, `#data-analysis`, `#agent-behavior`
+
+---
+
+<a id="item-7"></a>
+## [Shin Jinseo defeats AI KataGo with two-stone handicap](https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007) ⭐️ 8.0/10
+
+Recently, Go grandmaster Shin Jinseo, the strongest human player ever, defeated the superhuman AI KataGo while receiving a two-stone handicap. This achievement highlights the closing gap between elite human players and artificial intelligence. The victory is significant because Shin is the highest-rated human Go player in history, with an Elo rating far exceeding any other human, and KataGo is a superhuman AI that normally cannot be beaten in even games. It demonstrates that while AI still dominates, human strategic ingenuity can prevail under specific conditions like a handicap. Shin employed a tailored strategy using a complex &\#x27;flying knife&\#x27; joseki variation to neutralize the early advantage, while KataGo ran on limited hardware rather than a supercomputer, affecting its performance. The two-stone handicap is estimated to be worth roughly 400–600 Elo points.
+
+hackernews · gmays · Sep 3, 01:11 · [Discussion](https://news.ycombinator.com/item?id=49544762)
+
+**Background**: Go is a complex board game where AI surpassed human champions with AlphaGo in 2016. KataGo is an open-source AI using self-play reinforcement learning, similar to AlphaZero, and is widely used by top players for training. In Go, a two-stone handicap means the weaker player starts with two extra stones on the board, a significant advantage. Shin Jinseo is the current world number one, known for closely replicating AI moves, and his rating far exceeds any other player&\#x27;s.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/KataGo">KataGo</a></li>
+<li><a href="https://katagotraining.org/">KataGo Distributed Training</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters emphasize that the two-stone handicap is a huge advantage, and Shin&\#x27;s victory was achieved through a carefully planned strategy, while the AI was not on a supercomputer. They also note that Shin is the strongest human ever, but even he would have no chance in an even game, and the headline is somewhat misleading.
+
+**Tags**: `#Go`, `#AI`, `#KataGo`, `#Shin Jinseo`, `#human vs AI`
+
+---
+
+<a id="item-8"></a>
+## [Jasper Research Releases Cookbook and Code for Training Text-to-Image Model from Scratch](https://www.reddit.com/r/MachineLearning/comments/1w5c9rd/detailed_explanation_of_how_to_create_a/) ⭐️ 8.0/10
+
+Jasper Research has published an interactive cookbook that explains the full pipeline of training a text-to-image model from scratch, complete with a 100-million-image dataset called MONET and a tiny 1.3B-parameter model named nano-t2i, along with all training code and intermediate results. This resource lowers the barrier to entry for understanding and experimenting with cutting-edge generative AI, enabling researchers, students, and hobbyists to replicate and learn from the entire model-building process, from data curation to training and evaluation. The nano-t2i model is a 1.3B DiT-style flow-matching architecture with a Qwen3-4B text encoder and a latent VAE backbone, initialized with AdaLN-Zero and trained in two resolution phases \(512→1024\) on the MONET dataset. MONET is a massive, open, non-redundant, enriched dataset built from curated open-source image-text pairs.
+
+reddit · r/MachineLearning · /u/dh7net · Sep 2, 14:40
+
+**Background**: Text-to-image models like DALL·E and Stable Diffusion generate images by gradually transforming random noise under the guidance of a text prompt, often using a diffusion process or flow-matching framework. Modern architectures replace the traditional U-Net with a Diffusion Transformer \(DiT\) for better scalability. Training such models typically requires enormous datasets of captioned images, which this cookbook makes accessible through a compact, reproducible pipeline.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://github.com/gojasper/nano-t2i">GitHub - gojasper/nano-t2i: Minimal training code of a nano ...</a></li>
+<li><a href="https://gojasper.github.io/monet/">MONET - gojasper.github.io</a></li>
+<li><a href="https://arxiv.org/html/2605.21272v1">MONET: A Massive, Open, Non-redundant and Enriched Text-to ...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#text-to-image`, `#generative-models`, `#tutorial`, `#deep-learning`, `#computer-vision`
+
+---
+
+<a id="item-9"></a>
+## [Study: Open-source AI detectors fail to maintain 0.5% false-positive rate](https://www.reddit.com/r/MachineLearning/comments/1w58erw/most_opensource_ai_detectors_cant_hold_a_05/) ⭐️ 8.0/10
+
+A systematic evaluation of six open-source AI text detectors found that most cannot achieve a 0.5% false-positive rate, with some flagging over a quarter of ordinary human text and all performing poorly on paraphrased AI content and modern frontier models. These findings show that open-source AI detectors are currently unreliable for real-world use, risking false accusations of AI-generated content, particularly for non-native writers, and raising concerns about their deployment in education and publishing. The evaluation used a matched 0.5% false-positive rate baseline on 6,930 human documents; the best model, tropa-mini, detected only 41.6% of humanized AI text, while the outdated OpenAI RoBERTa detector performed worse than random \(AUC 0.31\) on modern models, and MAGE flagged 26% of ordinary web text with high confidence.
+
+reddit · r/MachineLearning · /u/grumpyp2 · Sep 2, 12:04
+
+**Background**: AI text detectors aim to classify whether a piece of text was written by a human or generated by an AI language model. False-positive rate is the proportion of human-written texts that are incorrectly flagged as AI-generated. Humanizer tools like those from Ahrefs or Grammarly rewrite AI text to sound more natural, making it harder for detectors to identify. The detectors tested include fine-tuned RoBERTa models and others, many of which were trained on older AI outputs and struggle with newer frontier models like GPT-5.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://arxiv.org/abs/2305.13242">MAGE: Machine-generated Text Detection in the Wild AI Image Detector – Detect AI-Generated or Altered Images Online MAGE: Machine-generated Text Detection in the Wild - GitHub AI Image Detector — Real or AI-Generated? Free | WeDetect</a></li>
+<li><a href="https://huggingface.co/openai-community/roberta-base-openai-detector">openai -community/ roberta -base- openai - detector · Hugging Face</a></li>
+<li><a href="https://ahrefs.com/writing-tools/ai-humanizer">Free AI Text Humanizer - Ahrefs</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI detection`, `#false positive`, `#open-source`, `#NLP`, `#machine learning`
+
+---
+
+<a id="item-10"></a>
+## [Any Human Ever: Randomly Generated Life from All of History](https://anyhumanever.com/) ⭐️ 7.0/10
+
+A web project randomly selects a birth year and location from the estimated 108 billion humans who have ever lived, then uses AI to generate a detailed life story with statistics, sparking discussion about accuracy and emotional impact. It transforms abstract demographic statistics into a personal narrative, making the vast scale of human existence tangible, while also highlighting the risks of presenting AI-generated historical data as authoritative. The project aggregates historical demographic data but contains contradictions—for example, marriage age and child mortality rates that cannot simultaneously be true. The AI-generated narratives may suffer from hallucination, and the random distribution appears biased, with too few modern births.
+
+hackernews · thinkingemote · Sep 3, 14:51 · [Discussion](https://news.ycombinator.com/item?id=49550698)
+
+**Background**: The total number of humans who have ever lived is estimated at around 108 billion, with the vast majority born before modern record-keeping. Any attempt to reconstruct a “random” life from the past is inherently speculative, relying on statistical models and AI to fill enormous gaps in knowledge.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.worldometers.info/world-population/">World Population Clock: 8.3 Billion People (LIVE, 2026) - Worldometer</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Users were both fascinated and concerned. Many found the generated stories moving, such as a child who died young, but others pointed out flawed probability distributions and inconsistent data. The project was praised as a creative tool but criticized for conveying a misleading sense of accuracy.
+
+**Tags**: `#data visualization`, `#history`, `#AI generation`, `#creative project`, `#statistics`
+
+---
+
+<a id="item-11"></a>
+## [Anthropic&\#x27;s updated Claude system prompt explicitly forbids reproducing song lyrics](https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/) ⭐️ 7.0/10
+
+Anthropic&\#x27;s latest system prompt for Claude \(Fable 5.1\) adds a detailed instruction that the model must not reproduce copyrighted song lyrics, poems, or passages from books, even in part or when rephrased. The prompt specifies that only works published before 1929 are allowed, and Claude will decline subsequent similar requests in the same conversation. This change reflects the growing pressure on AI companies to balance powerful content generation with copyright compliance, and demonstrates Anthropic&\#x27;s commitment to transparency by publishing and versioning its system prompts. It directly affects users who ask Claude for creative or lyrical content, pushing them toward analysis rather than reproduction. The new rule is phrased to cover even fragmented requests like &\#x27;a chorus or hook&\#x27; or &\#x27;lines the person pastes in one at a time and describes as their own song.&\#x27; Claude is instructed to offer description or analysis instead, and the prompt clarifies that the model uses its own knowledge of a work&\#x27;s publication date, not the user&\#x27;s claim. Anthropic&\#x27;s documentation site also supports &\#x27;.md&\#x27; for Markdown rendering, making it easy to diff changes across versions.
+
+rss · Simon Willison · Sep 2, 14:16
+
+**Background**: A system prompt is a hidden instruction given to a large language model at the start of a conversation, shaping its behavior and constraints. Anthropic uniquely publishes the full system prompts for its consumer Claude applications, including historical versions, as part of its transparency efforts. The company previously avoided explicit copyright restrictions in the prompt, but the updated version addresses the legal risk of reproducing song lyrics, a common user request. The new guideline likely responds to pressure from music publishers and ongoing lawsuits over AI-generated content.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/System_prompt">System prompt</a></li>
+<li><a href="https://platform.claude.com/docs/en/release-notes/system-prompts/overview">System prompts - Claude Platform Docs</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#system-prompt`, `#anthropic`, `#copyright`, `#transparency`
+
+---
+
+<a id="item-12"></a>
+## [Paint.NET Now Runs on Linux via WINE with AI-Generated Direct2D Clone](https://simonwillison.net/2026/Sep/2/rick-brewster/) ⭐️ 7.0/10
+
+Paint.NET author Rick Brewster used Claude AI to generate a 180,000-line, clean‑room reverse‑engineered rewrite of Microsoft’s Direct2D API, enabling the image editor to run on Linux under WINE via a new /wine flag. This is one of the largest real‑world demonstrations of AI‑assisted reverse engineering for a major compatibility gap, showing how generative models can unlock cross‑platform support that had been blocked for years. It also sharply illustrates the emerging ‘vibe coding’ trust challenge—where critical code is adopted with minimal human review. The new Direct2D implementation lives in \`PaintDotNet.Windows.Direct2D1.Managed.dll\` and is activated by launching Paint.NET with \`/wine\`. Brewster admits the 180,000 lines were ‘vibe coded’—not thoroughly reviewed—and he had to repeatedly correct Claude on resource management, though the AI impressed him by reverse‑engineering complex imaging formulas.
 
 rss · Simon Willison · Sep 2, 05:50
 
-**Background**: Direct2D is a Microsoft API for hardware-accelerated 2D graphics, essential for Paint.NET&\#x27;s rendering. WINE is a compatibility layer that allows Windows programs to run on Unix-like systems, but its incomplete Direct2D support has long blocked Paint.NET. Clean-room reverse engineering means creating a compatible implementation without using the original source code, often for legal reasons. &\#x27;Vibe coding&\#x27; is a 2025 term for AI-assisted development where code is generated from prompts with minimal review.
+**Background**: Direct2D is Microsoft’s hardware‑accelerated 2D graphics API, essential for high‑performance rendering in Windows apps. WINE is a compatibility layer that lets Windows programs run on Linux, but it has never fully implemented Direct2D, which blocked Paint.NET. ‘Vibe coding’ is a term coined by Andrej Karpathy in 2025 for AI‑assisted development where developers often accept generated code without deep scrutiny. Claude is an AI assistant from Anthropic that can generate and reason about large codebases.
 
 <details><summary>References</summary>
 <ul>
@@ -161,265 +300,193 @@ rss · Simon Willison · Sep 2, 05:50
 </ul>
 </details>
 
-**Tags**: `#AI-assisted coding`, `#WINE`, `#Direct2D`, `#reverse engineering`, `#graphics`
-
----
-
-<a id="item-7"></a>
-## [Jasper Research Cookbook for Building Text-to-Image Models from Scratch](https://www.reddit.com/r/MachineLearning/comments/1w5c9rd/detailed_explanation_of_how_to_create_a/) ⭐️ 8.0/10
-
-Jasper Research has released a comprehensive cookbook that explains how to build a text-to-image model from scratch, including a 100M-image Monet dataset, a tiny model codebase, and full intermediate results. This resource demystifies the training process of text-to-image models, making advanced generative AI research more accessible to students, researchers, and practitioners who lack large-scale compute resources. The cookbook features full reasoning behind each step, intermediate training outputs, and a small-scale model \(nano-t2i\) that can be trained on the Monet dataset, all hosted on Hugging Face and GitHub.
-
-reddit · r/MachineLearning · /u/dh7net · Sep 2, 14:40
-
-**Background**: Text-to-image models like Stable Diffusion and DALL-E are latent diffusion models that generate images from text descriptions. They typically use a pretrained text encoder and a diffusion model trained on billions of image-text pairs. Building even a basic version from scratch requires understanding of diffusion processes, autoencoders, and large-scale data handling, which this cookbook aims to simplify.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Text-to-image_model">Text-to-image model</a></li>
-<li><a href="https://huggingface.co/datasets/jasperai/monet">jasperai/monet · Datasets at Hugging Face</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#text-to-image`, `#machine learning`, `#tutorial`, `#dataset`, `#generative AI`
-
----
-
-<a id="item-8"></a>
-## [Most open-source AI detectors fail to achieve 0.5% false-positive rate](https://www.reddit.com/r/MachineLearning/comments/1w58erw/most_opensource_ai_detectors_cant_hold_a_05/) ⭐️ 8.0/10
-
-A comprehensive evaluation of six open-source AI text detectors shows that most cannot maintain a 0.5% false-positive rate, with detection performance collapsing on humanized text and systematically flagging non-native English writing at higher rates. These findings expose critical reliability flaws in widely used AI detectors, raising serious concerns about their use in academic integrity and content moderation, and highlighting systematic bias that could disproportionately harm non-native English speakers. The evaluation matched thresholds on 6,930 human documents to a 0.5% false-positive rate, then measured recall; MAGE flagged 26% of ordinary human web text as AI with &gt;0.9999 confidence, and the best detector caught only 42% of humanizer-paraphrased AI text.
-
-reddit · r/MachineLearning · /u/grumpyp2 · Sep 2, 12:04
-
-**Background**: AI text detectors are machine learning classifiers trained to distinguish human-written from AI-generated text, often used in education and publishing. Humanizers are paraphrasing tools that rewrite AI output to evade detection. The study evaluated open-source models, including those hosted on Hugging Face, and tested against frontier models like GPT-5.x and Claude Opus 5.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://huggingface.co/openai-community/roberta-base-openai-detector">openai -community/ roberta -base- openai - detector · Hugging Face</a></li>
-<li><a href="https://arxiv.org/html/2409.03291v1/">LLM Detectors Still Fall Short of Real World:Case of LLM-Generated...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI detection`, `#false positives`, `#machine learning`, `#bias`, `#LLM evaluation`
-
----
-
-<a id="item-9"></a>
-## [Qwen 3.8 27B Hits 1500 Tokens/s on Cerebras, but Rate Limits Cripple Usability](https://inference-docs.cerebras.ai/models/overview) ⭐️ 7.0/10
-
-Cerebras now serves the Qwen 3.8 27B model at 1500 tokens per second on its public inference endpoint, marking a major speed breakthrough for an open-source large language model. However, community feedback immediately flagged severe rate limits \(150,000 tokens per minute\) and billing issues that make the service impractical for many coding tasks. The 1500 tokens/s speed could dramatically reduce latency for real-time applications, but the low token-per-minute cap and cost inefficiencies—especially for cached tokens—undermine the value. This highlights a growing tension between raw inference speed and usable throughput in the API ecosystem. The public endpoint is limited to 150,000 tokens per minute, and cached tokens count toward this limit, causing rapid burn-through of the quota and cost. One user reported spending $1.10 in 90 seconds without completing a coding task, while DeepSeek-V4-Flash finished the same task in 172 seconds for only $0.024.
-
-hackernews · altertable · Sep 3, 18:32 · [Discussion](https://news.ycombinator.com/item?id=49554520)
-
-**Background**: Qwen 3.8 27B is a 27-billion-parameter open-source large language model from Alibaba&\#x27;s Qwen research lab, released in August 2026 under the Apache 2.0 license. It is a vision-language model with flexible thinking control, designed as a successor to the popular Qwen 3.6 27B. Cerebras Systems is known for its wafer-scale AI hardware and ultra-fast inference services, making it a go-to platform for high-speed open-source model serving.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B · Hugging Face</a></li>
-<li><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Cerebras">Cerebras - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Users overwhelmingly report that the extreme speed is undone by the 150k TPM limit, making it unsuitable for serious coding tasks. Some suggest making the model available via OpenRouter to pool resources, while others point to local alternatives like ninfer on an RTX 5090 achieving 200-400 tok/s as a more practical choice. The sentiment is that the service is currently too restrictive and costly for real-world use.
-
-**Tags**: `#fast inference`, `#LLM`, `#Qwen`, `#Cerebras`, `#rate limits`
-
----
-
-<a id="item-10"></a>
-## [Artificial Beaver Dams Boost Juvenile Coho Salmon Survival from 8% to 60%](https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california) ⭐️ 7.0/10
-
-A recent ecological restoration project in California installed artificial beaver dams, which dramatically increased juvenile coho salmon survival rates from just 8% to 60% by creating new pond habitat and improving stream conditions. This result demonstrates a powerful nature-based solution for reversing salmon declines, offering a low-cost, scalable method that also cools water temperatures and restores wetland ecosystems, with implications for fisheries and climate resilience globally. The artificial dams created about 9,000 square meters of new habitat supporting over 8,500 young salmon, and a surprising finding was that water temperatures downstream dropped, likely due to increased groundwater exchange through the porous dam structures.
-
-hackernews · speckx · Sep 3, 16:21 · [Discussion](https://news.ycombinator.com/item?id=49552572)
-
-**Background**: Beaver dams naturally slow streamflow, create ponds, and raise water tables, producing complex wetland habitats that benefit salmon. However, beavers were widely trapped and their dams removed, contributing to salmon declines. Artificial beaver dam analogs \(BDAs\) mimic these effects using posts, rocks, and mud, and are increasingly used in stream restoration to rebuild habitat before beavers can be reintroduced.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california">People started building artificial beaver dams in California. Now something &quot;mind blowing&quot; is happening | Discover Wildlife</a></li>
-<li><a href="https://www.worldwildlife.org/news/stories/artificial-beaver-dams-help-montana-ranchers-restore-streams-and-protect-wildlife/">Artificial Beaver Dams Aid Montana Streams | WWF</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters shared historical parallels of earlier dam restoration, noted the counterintuitive cooling effect, and questioned why live beavers weren&\#x27;t reintroduced. Some expressed frustration with regulatory barriers that prevent such interventions, while others worried about unintended ecosystem chain reactions.
-
-**Tags**: `#ecology`, `#restoration`, `#salmon`, `#beaver-dams`, `#nature-based-solutions`
-
----
-
-<a id="item-11"></a>
-## [GPS Glitched Across the US by up to 33 Feet](https://www.sciencealert.com/gps-glitched-across-the-us-by-as-much-as-33-feet-scientists-have-never-seen-this-before) ⭐️ 7.0/10
-
-In November 2025, a solar superstorm caused unprecedented GPS errors across the continental US, with deviations exceeding 10 meters \(33 feet\) in some areas. This anomaly highlights vulnerabilities in critical infrastructure like autonomous vehicles, electronic monitoring, and precision agriculture, which rely on accurate GPS signals. The storm intensified the auroral oval, causing ionospheric scintillation that scrambled GPS signals in areas where such disruptions had never been reported, and scientists note that this phenomenon is difficult to predict or model.
-
-hackernews · thread\_id · Sep 3, 00:49 · [Discussion](https://news.ycombinator.com/item?id=49544618)
-
-**Background**: GPS relies on radio signals from satellites, which can be disrupted by charged particles in the ionosphere during solar storms. Ionospheric scintillation causes rapid fluctuations in signal amplitude and phase, making it difficult for receivers to track satellites accurately. The May 2024 solar storm, for example, caused significant agricultural losses due to precision navigation disruptions.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://phys.org/news/2026-09-geomagnetic-superstorm-shook-gps-accuracy.html">Geomagnetic superstorm shook GPS accuracy across the US—its timing may have averted agricultural losses</a></li>
-<li><a href="https://www.yahoo.com/news/science/articles/gps-glitched-across-us-much-150000451.html">GPS Glitched Across The US by as Much as 33 Feet. Scientists Have Never Seen This Before.</a></li>
-<li><a href="https://www.u-blox.com/en/blogs/insights/solar-storm-gps-signals">Why do solar storms affect GPS signals?</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters raised concerns about false alerts from electronic monitoring devices leading to reincarceration, the danger of autonomous vehicles \(like Austin&\#x27;s Cybercabs\) being 33 feet off, and skepticism about the $500 million agricultural loss estimate, with one user noting the estimate was based on a rough dollar-per-acre guess. Some also questioned whether RTK base stations could mitigate the error.
-
-**Tags**: `#GPS`, `#navigation`, `#autonomous-vehicles`, `#solar-storm`, `#infrastructure`
-
----
-
-<a id="item-12"></a>
-## [Deepity C++ Library Speeds Predictive Coding to Match Backprop on MNIST](https://www.reddit.com/r/MachineLearning/comments/1w5fuhm/deepity_a_c_library_showing_predictive_coding/) ⭐️ 7.0/10
-
-A new C++ library called Deepity implements accelerated predictive coding networks using Direct Kolen-Pollack Feedback Alignment and inference caching, achieving 97.73% test accuracy on MNIST in just 59.5 seconds, closing the gap with backpropagation \(98.27% in ~70s\). This work demonstrates that biologically plausible learning algorithms can be made computationally efficient, challenging the dominance of backpropagation and opening doors for on-device, continual, and neuromorphic learning. The library uses algorithmic caching to skip redundant forward projections during inference settling, and the Direct Kolen-Pollack algorithm establishes learnable direct feedback connections from the output to all hidden layers, bypassing weight transport issues. Current implementation is CPU-only, with CUDA porting planned for scaling.
-
-reddit · r/MachineLearning · /u/Important-Home4431 · Sep 2, 16:49
-
-**Background**: Predictive coding networks are hierarchical neural architectures inspired by the brain’s predictive processing, where local prediction errors are minimized through bidirectional connections. Traditional backpropagation requires exact weight symmetry, which is biologically implausible. Direct Kolen-Pollack Feedback Alignment is a recently proposed method that learns direct feedback pathways from the output to hidden layers, significantly accelerating training in predictive coding networks while maintaining biological plausibility.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.emergentmind.com/topics/predictive-coding-networks">Predictive Coding Networks</a></li>
-<li><a href="https://arxiv.org/pdf/2506.06332">Introduction to Predictive Coding Networks for Machine Learning</a></li>
-<li><a href="https://arxiv.org/html/2602.15571">Accelerated Predictive Coding Networks via Direct Kolen – Pollack ...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#predictive-coding`, `#alternative-credit-assignment`, `#MNIST`, `#C++`, `#biologically-plausible-learning`
+**Tags**: `#AI-assisted development`, `#WINE`, `#Direct2D`, `#reverse engineering`, `#Claude`
 
 ---
 
 <a id="item-13"></a>
-## [K2 Horizon: A Fleet of Six Open Models with Mixed Reviews](https://ifm.ai/blog/k2/) ⭐️ 6.0/10
+## [Sparse Autoencoders Disentangle Music Embeddings for Rare Concept Retrieval](https://www.reddit.com/r/MachineLearning/comments/1w54qkk/mir_with_audiomuseaisae_p/) ⭐️ 7.0/10
 
-IFM launched K2 Horizon, a fleet of six open-source models ranging from 7B to 375B parameters, with the entire training lifecycle disclosed—from pretraining to reasoning and agentic fine-tuning. The release furthers the trend towards fully open AI stacks, offering transparency and reducing dependence on proprietary models, but its self-reported benchmarks lag behind leading peers, limiting immediate practical impact. The 32B dense model notably trails Qwen3 27B in benchmarks, and the 3.7B coding model fails basic tests, producing incorrect code and hallucinating APIs. The release claims full transparency but some community members note opaque benchmark comparisons.
-
-hackernews · karimf · Sep 3, 15:36 · [Discussion](https://news.ycombinator.com/item?id=49551760)
-
-**Background**: Open-source language models have become a competitive field, with many providers sharing model weights but not the full training pipeline. IFM, the company behind K2 Horizon, aims to differentiate by releasing all training details, from pretraining data to fine-tuning procedures. This contrasts with models like Nvidia&\#x27;s Nemotron, which also offer full openness, but the K2 models&\#x27; performance has not yet matched leading alternatives such as Alibaba&\#x27;s Qwen or Google&\#x27;s Gemma.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://ifm.ai/blog/k2/">Introducing K 2 Horizon : Frontier Performance, Radically Open</a></li>
-<li><a href="https://artificialanalysis.ai/models/k2-horizon-375b-a23b">K 2 Horizon 375B A23B - Intelligence, Performance... | Artificial Analysis</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community sentiment is mixed: users applaud the full openness and transparent stack, but many criticize the underwhelming benchmark performance, particularly the 32B model trailing Qwen and the 3.7B coding model&\#x27;s inaccuracies. Some express model fatigue due to rapid releases, while others note that taste in presentation \(unreadable charts\) remains lacking.
-
-**Tags**: `#open-source-models`, `#large-language-models`, `#AI`, `#model-release`, `#benchmarks`
-
----
-
-<a id="item-14"></a>
-## [AI project &\#x27;Any Human Ever&\#x27; generates random historical lives](https://anyhumanever.com/) ⭐️ 6.0/10
-
-The project &\#x27;Any Human Ever&\#x27; uses AI to create a life profile of a random person from human history, including details like birth year, location, and cause of death. Community testing reveals that the generated data is often inaccurate and hallucinated. It demonstrates the creative potential of AI for historical storytelling, while also serving as a cautionary example of AI hallucination and the need for data accuracy in generative applications. The project&\#x27;s probability distribution for selecting birth years appears flawed, with few modern-era results. Citations are often broken or irrelevant, and statistical contradictions emerge, such as implausibly high child mortality rates combined with marriage data.
-
-hackernews · thinkingemote · Sep 3, 14:51 · [Discussion](https://news.ycombinator.com/item?id=49550698)
-
-**Background**: Generative AI models can produce text that sounds plausible but may contain factual errors, a phenomenon known as hallucination. The project likely uses a language model to compose a narrative based on trained data, but without rigorous verification of sources or statistical consistency. The community tested the outputs and uncovered numerous inaccuracies, highlighting the limitations of current AI in historical data recreation.
-
-**Discussion**: Commenters praised the project&\#x27;s creativity but strongly criticized its data accuracy, noting hallucinated citations, contradictory statistics, and a skewed time distribution. Some found emotional resonance despite the flaws, while others saw potential for use in storytelling games.
-
-**Tags**: `#AI`, `#history`, `#data-accuracy`, `#generative-art`, `#critique`
-
----
-
-<a id="item-15"></a>
-## [llm-gemini 0.34 Adds Gemini 3.8 Flash Support with Thinking Levels](https://simonwillison.net/2026/Sep/2/llm-gemini/) ⭐️ 6.0/10
-
-Version 0.34 of the llm-gemini plugin adds support for Google&\#x27;s new Gemini 3.8 Flash model, including low, medium, and high thinking levels. It also fixes a bug where async responses failed to record the resolved model version. This update enables developers and AI practitioners to immediately use the latest Gemini Flash model via the popular LLM CLI tool, taking advantage of its improved reasoning, speed, and cost-efficiency. The adjustable thinking levels allow fine-tuning of model behavior for different tasks, from quick answers to deep reasoning, within a familiar workflow. The minimal thinking level is not supported on Gemini 3.8 Flash and returns an error; valid levels are low, medium, and high. The release also includes a community-contributed fix for async response recording, and the model is noted for its speed \(13 seconds for a complex HTML demo\) and low cost \(1.8 cents\).
-
-rss · Simon Willison · Sep 2, 16:39
-
-**Background**: llm is a command-line tool by Simon Willison that provides a unified interface to various large language models. llm-gemini is a plugin that allows access to Google&\#x27;s Gemini family of models. Gemini 3.8 Flash is Google&\#x27;s latest Flash-series multimodal model, designed for high performance with low latency and cost. The thinking level feature controls how much the model &\#x27;thinks&\#x27; before responding, with higher levels enabling deeper reasoning at the cost of extra latency and tokens.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://github.com/simonw/llm-gemini">GitHub - simonw/llm-gemini: LLM plugin to access Google&#x27;s Gemini family of models · GitHub</a></li>
-<li><a href="https://apidog.com/blog/gemini-3-8-flash-thinking-levels/">Gemini 3 . 8 Flash thinking levels : low vs medium vs high...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#llm-tools`, `#gemini`, `#plugin-release`, `#large-language-models`, `#simon-willison`
-
----
-
-<a id="item-16"></a>
-## [Proposal: Grounding LLMs Using JEPA-Based World Models Trained in Simulation](https://www.reddit.com/r/MachineLearning/comments/1w69gvd/grounding_llms_with_jepabased_world_models/) ⭐️ 6.0/10
-
-A Reddit user proposed a novel architecture to ground LLMs in physical intuition by training a Joint Embedding Predictive Architecture \(JEPA\) model inside a physics simulator, then attaching its learned representations to a language model as a conditioning signal. If successful, this approach could enable LLMs to develop genuine physical understanding rather than just statistical correlations, potentially improving reasoning about the physical world, reducing hallucinations, and accelerating embodied AI development. The proposal emphasizes using JEPA to predict abstract future-state embeddings, not raw pixels, forcing the model to learn physical principles like object permanence. Key open questions include the optimal interface between the world model and LLM \(e.g., concatenation vs. cross-attention\) and whether the sim-to-real gap is surmountable.
-
-reddit · r/MachineLearning · /u/Full\_Promotion4522 · Sep 3, 14:45
-
-**Background**: Joint Embedding Predictive Architecture \(JEPA\) is a self-supervised learning framework that predicts abstract representations of future or missing data, as demonstrated in video models like V-JEPA. Instead of generating raw tokens or pixels, JEPA learns in an embedding space, which could capture structured physical dynamics when trained in simulated environments. LLMs are known to lack grounded understanding of physics, often described as the &\#x27;Mary&\#x27;s room&\#x27; problem. This proposal combines these ideas to give language models a form of internal physical simulation.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.geeksforgeeks.org/artificial-intelligence/jepa/">JEPA - GeeksforGeeks</a></li>
-<li><a href="https://blog.dataopslabs.com/jepa-joint-embedding-predictive-architecture-overview">JEPA : An Overview of Predictive Architecture</a></li>
-<li><a href="https://www.linkedin.com/pulse/joint-embedding-predictive-architecture-jepa-new-paradigm-sameer-shah-lm1jc">Joint Embedding Predictive Architecture ( JEPA ): A New Paradigm...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#LLM`, `#JEPA`, `#World Models`, `#Grounding`, `#Simulation`
-
----
-
-<a id="item-17"></a>
-## [Mol-JEPA: A Multimodal Molecular Foundation Model Based on JEPA](https://www.reddit.com/r/MachineLearning/comments/1w6i8pr/moljepa_multimodal_molecular_foundation_model_r/) ⭐️ 6.0/10
-
-A research paper introduces Mol-JEPA, a multimodal molecular foundation model that applies the Joint Embedding Predictive Architecture \(JEPA\) to molecular data, enabling self-supervised learning across multiple modalities. The model represents a step toward more efficient and generalizable molecular representations, which could benefit drug discovery and materials science by enabling better property prediction and molecular understanding. It uses a joint embedding predictive architecture, which predicts representations of masked target blocks from a context block, avoiding pixel-level generation. The model is multimodal, and the author notes that performance improvements are still needed.
-
-reddit · r/MachineLearning · /u/TerribleAntelope9348 · Sep 3, 19:56
-
-**Background**: Joint Embedding Predictive Architecture \(JEPA\) is a self-supervised learning approach that learns by predicting the embeddings of hidden parts of the input from visible parts. Originally proposed for images \(I-JEPA\), it avoids generating high-dimensional data and focuses on semantic representations. Mol-JEPA adapts this idea to molecular data, which can naturally be multimodal \(e.g., 2D graphs, 3D conformers\).
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://arxiv.org/abs/2301.08243">[2301.08243] Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture</a></li>
-<li><a href="https://www.turingpost.com/p/jepa">JEPA: Joint Embedding Predictive Architecture Explained</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#machine learning`, `#molecular modeling`, `#JEPA`, `#multimodal`, `#foundation model`
-
----
-
-<a id="item-18"></a>
-## [Sparse Autoencoders Improve Text-to-Music Search for Rare Attributes](https://www.reddit.com/r/MachineLearning/comments/1w54qkk/mir_with_audiomuseaisae_p/) ⭐️ 6.0/10
-
-The paper proposes using sparse autoencoders to identify and amplify concept-specific neurons in music embeddings, enabling better retrieval of rare attributes like &\#x27;viola&\#x27; in text-to-music search. The author also open-sourced a distilled CLAP model \(DCLAP\) and a trained SAE, integrated into the AudioMuse-AI software. This work addresses a common failure mode where dominant concepts \(e.g., &\#x27;pop&\#x27;, &\#x27;female vocalist&\#x27;\) overshadow rare ones, improving retrieval precision for nuanced queries. It can benefit music recommendation, search, and analysis tools by making them more responsive to specific user intent. The method operates on the compressed embedding layer, making it sparse to identify neurons for specific words without overlap, then amplifies those neurons before re-embedding. The user&\#x27;s DCLAP model is a 7-million-parameter distilled version of LAION CLAP, efficient on CPU, and the SAE was trained on its embeddings.
+A paper introduces a method to steer dense music retrieval using sparse autoencoders, and an open-source implementation \(AudioMuse-AI-SAE\) applies this to a distilled CLAP model, enabling precise querying of rare musical concepts like &\#x27;viola&\#x27; in text-to-music search. Current music retrieval systems often overlook rare attributes in favor of dominant ones, frustrating users. This approach makes the retrieval process interpretable and controllable, allowing digital audio workstations, streaming platforms, and music libraries to surface niche musical features reliably. The work distills LAION CLAP into a 7M-parameter DCLAP model that runs on CPU, then trains a sparse autoencoder on its embedding layer to identify and amplify concept-specific neurons \(e.g., &\#x27;viola&\#x27;\), avoiding the need to retrain the entire embedding model.
 
 reddit · r/MachineLearning · /u/Old\_Rock\_9457 · Sep 2, 08:47
 
-**Background**: Music embeddings are numerical vectors capturing audio features, used in text-to-music retrieval via joint models like CLAP that align text and audio in a shared space. Sparse autoencoders \(SAEs\) are neural networks that learn compressed representations by enforcing sparsity, often used to disentangle interpretable features in deep learning models. In this context, SAEs help separate concept-specific neurons within music embeddings.
+**Background**: Sparse autoencoders are a technique for neural network interpretability that decompose dense representations into a small set of active, meaningful features. Music embedding models like CLAP learn a joint space for audio and text, but rare concepts tend to be overshadowed by common ones when they co-occur. The paper&\#x27;s method uses a sparse autoencoder to disentangle these embeddings post-hoc, allowing the desired concept&\#x27;s signal to be boosted without retraining the original model.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Sparse_Auto-Encoders">Sparse Auto-Encoders</a></li>
 <li><a href="https://adamkarvonen.github.io/machine_learning/2024/06/11/sae-intuitions.html">An Intuitive Explanation of Sparse Autoencoders for... | Adam Karvonen</a></li>
-<li><a href="https://pooyahekmati.github.io/music_embedding/">Music Embedding — Music Embedding 0.1.7 alpha documentation</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#music information retrieval`, `#sparse autoencoders`, `#concept discovery`, `#text-to-music retrieval`, `#interpretability`
+**Tags**: `#MIR`, `#sparse autoencoders`, `#audio retrieval`, `#embedding disentanglement`, `#machine learning`
+
+---
+
+<a id="item-14"></a>
+## [Qwen 3.8 27B on Cerebras at 1500 tokens/s, but Rate Limits Hinder Use](https://inference-docs.cerebras.ai/models/overview) ⭐️ 6.0/10
+
+Cerebras has added Qwen 3.8 27B to its inference cloud, offering speeds of up to 1500 tokens per second on the public endpoint. However, users are reporting that rate limits and cached token counting severely degrade the model&\#x27;s usability for real-world coding tasks. The ultra-fast inference is a technical achievement, but the practical limitations highlight a common tension in cloud AI services: high throughput often comes with restrictive quotas that undermine developer experience, especially for long-running coding sessions. The public endpoint enforces a 150,000 tokens per minute limit, and cached tokens count toward this quota, causing users to quickly hit the cap and incur costs without completing tasks. Additionally, billing access is restricted for enterprise accounts, and some users hope for integration with OpenRouter for more flexible access.
+
+hackernews · altertable · Sep 3, 18:32 · [Discussion](https://news.ycombinator.com/item?id=49554520)
+
+**Background**: Qwen 3.8 27B is a powerful open-source language model from Alibaba, excelling at coding and agentic tasks. Cerebras is known for its wafer-scale AI chips and cloud inference services that deliver significantly faster token generation than traditional GPU clusters. The combination of a capable model and Cerebras&\#x27; hardware can theoretically enable real-time AI-assisted coding, but infrastructure limitations can negate these benefits.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B · Hugging Face</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cerebras_Systems">Cerebras Systems</a></li>
+
+</ul>
+</details>
+
+**Discussion**: The community is largely frustrated: developers report hitting the 450k token-per-minute limit in under 90 seconds, spending over $1 while the task remained incomplete, compared to $0.024 on DeepSeek-V4. Some note that local inference on an RTX 5090 can achieve ~200 tok/s without such restrictions, and hope for OpenRouter availability. Overall, the sentiment is that the speed is impressive but unusable under current rate limits.
+
+**Tags**: `#Qwen`, `#Cerebras`, `#inference`, `#rate limits`, `#developer experience`
+
+---
+
+<a id="item-15"></a>
+## [Artificial beaver dams boost juvenile coho salmon survival from 8% to 60%](https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california) ⭐️ 6.0/10
+
+Artificial beaver dams installed in a California stream dramatically increased juvenile coho salmon survival from 8% to 60%, with an unexpected cooling effect caused by enhanced groundwater exchange rather than shading. This finding demonstrates that mimicking beaver dams can effectively restore threatened salmon populations and cool streams, offering a scalable, nature-based solution for conservation and climate change adaptation. The dams were built from natural materials like logs and willow branches, and the cooling was linked to pond water infiltrating the ground and exchanging heat with cooler subsurface temperatures. The study was conducted in a California stream where juvenile coho salmon face low survival due to habitat degradation.
+
+hackernews · speckx · Sep 3, 16:21 · [Discussion](https://news.ycombinator.com/item?id=49552572)
+
+**Background**: Beavers are ecosystem engineers whose dams create ponds, slow water, and raise groundwater levels, but their populations were decimated by fur trapping. Coho salmon are anadromous fish that spawn and rear in freshwater streams, and their juveniles are highly vulnerable to predation and drought when stream habitats are degraded. In California, many streams once supported beavers but now lack the complex habitats needed for salmon survival.
+
+**Discussion**: Commenters shared personal observations of coho fry losses in dam-free streams and historical accounts of beaver dam restoration in British Columbia. They noted the counterintuitive cooling effect from groundwater exchange and questioned why real beavers were not reintroduced. Overall, the discussion strongly supports the ecological value of beaver-like structures.
+
+**Tags**: `#ecology`, `#restoration`, `#beaver-dams`, `#salmon`, `#conservation`
+
+---
+
+<a id="item-16"></a>
+## [K2 Horizon: Six Open AI Models Released, Performance Gaps Noted](https://ifm.ai/blog/k2/) ⭐️ 6.0/10
+
+ifm.ai released K2 Horizon, a fleet of six fully open-source AI models \(3.7B to 375B parameters\) under Apache 2.0, targeting reasoning, coding, agentic workflows, and edge deployment. Self-reported benchmarks show the models lagging behind competitors like Qwen3.8 27B and Gemma 4. The Apache 2.0 license with open weights, code, and training data pushes for full transparency, critical for trust and customizability. However, the performance gap may limit adoption, underscoring the tension between openness and capability. The dense 32B model is significantly behind Qwen3.8 27B, and the 3.7B model produced hallucinated code in community tests. The stack includes source code, training data, and processing details, but the self-reported numbers temper enthusiasm.
+
+hackernews · karimf · Sep 3, 15:36 · [Discussion](https://news.ycombinator.com/item?id=49551760)
+
+**Background**: The models are developed by the Institute of Foundation Models \(IFM\) at Mohamed bin Zayed University of Artificial Intelligence \(MBZUAI\). Open-source models under permissive licenses like Apache 2.0 enable commercial use and modification, appealing to enterprises seeking independence from proprietary APIs. The fleet spans a 3.7B edge model to a 375B Mixture-of-Experts architecture.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://ifm.ai/blog/k2">Introducing K2 Horizon: Frontier Performance, Radically Open</a></li>
+<li><a href="https://huggingface.co/collections/IFM/k2-horizon">K2 Horizon - a IFM Collection - Hugging Face</a></li>
+<li><a href="https://moorinsightsstrategy.com/mbzuai-ifm-launches-6-k2-horizon-frontier-models-doubles-down-on-openness-analyst-insight/">MBZUAI&#x27;s IFM Launches 6 K2 Horizon Frontier Models, Doubles ...</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters welcomed the full openness but voiced model fatigue, saying releases are too frequent. Concrete criticisms: the 32B model trails Qwen 3.8 27B, and the 3.7B model failed basic coding tests with hallucinations. Charts were also noted as hard to read.
+
+**Tags**: `#open-source`, `#AI models`, `#LLM`, `#model release`, `#community feedback`
+
+---
+
+<a id="item-17"></a>
+## [Grounding LLMs with JEPA-based World Models: A Speculative Proposal](https://www.reddit.com/r/MachineLearning/comments/1w69gvd/grounding_llms_with_jepabased_world_models/) ⭐️ 6.0/10
+
+A Reddit user proposes combining JEPA-based world models trained in physics simulators with LLMs to provide grounded physical intuition, analogizing to the Mary&\#x27;s Room thought experiment. The idea is speculative and has not been implemented. If successful, this approach could bridge the gap between language models&\#x27; statistical knowledge of physics and a true embodied understanding, enabling faster learning and more robust reasoning in robotics, autonomous systems, and AI safety contexts. The proposal trains a JEPA model to predict future state representations in a physics engine \(e.g., MuJoCo\), then freezes these representations and attaches them to an LLM as a conditioning signal. The user asks about the optimal interface \(concatenation vs. cross-attention\) and whether the sim-to-real gap would hinder transfer, noting that no prior work appears to have done exactly this combination.
+
+reddit · r/MachineLearning · /u/Full\_Promotion4522 · Sep 3, 14:45
+
+**Background**: JEPA \(Joint Embedding Predictive Architecture\) is a self-supervised learning framework that predicts abstract representations in latent space rather than raw pixels, forcing the model to learn essential invariances. World models are internal representations that allow AI to simulate and plan future outcomes. LLM grounding refers to connecting language models to real-world data or physical processes to improve factual accuracy. The Mary&\#x27;s Room thought experiment asks whether a person who knows all physical facts about color but has never seen it would learn something new upon first seeing it, highlighting the gap between propositional knowledge and embodied experience. The Reddit user likens LLMs to Mary, possessing statistical correlations but lacking physical intuition.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.turingpost.com/p/jepa">JEPA: Joint Embedding Predictive Architecture Explained</a></li>
+<li><a href="https://en.wikipedia.org/wiki/World_model_%28artificial_intelligence%29">World model (artificial intelligence) - Wikipedia</a></li>
+<li><a href="https://neuledge.com/blog/2026-02-20/what-is-llm-grounding">What Is LLM Grounding? A Developer&#x27;s Guide - neuledge.com</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#JEPA`, `#world models`, `#LLM grounding`, `#simulation`, `#physical intuition`
+
+---
+
+<a id="item-18"></a>
+## [AAAI-27 Desk Rejection Over Incredibly Minor Abstract Modifications Reported](https://www.reddit.com/r/MachineLearning/comments/1w6kcp6/aaai27_desk_rejection_over_incredibly_minor/) ⭐️ 6.0/10
+
+A Reddit user reports that their paper was desk rejected by AAAI-27 due to what they describe as incredibly minor modifications to the abstract made after the abstract-registration deadline. The rejection notice stated the decision is final and no appeals will be considered, leaving the author questioning how the rule against substantive changes is being applied in practice. This incident highlights concerns about the clarity and fairness of abstract modification policies at top conferences like AAAI. Strict enforcement against even trivial edits may discourage authors from improving clarity and could create confusion about what constitutes a substantive change, potentially affecting many researchers who rely on conference publications. The user claims that the abstract was almost identical and the changes were incredibly minor, yet the paper was desk rejected based on the modification rule that warns against qualitative changes. The rejection was final with no appeal process, leaving the author with no recourse to clarify the nature of the edits.
+
+reddit · r/MachineLearning · /u/Dansilly · Sep 3, 21:12
+
+**Background**: AAAI is a leading international AI conference with rigorous submission guidelines. Many conferences require an abstract registration deadline before the full paper deadline, and prohibit substantive changes to the title and abstract to prevent manipulation of the review process. Desk rejection is a practice where a paper is rejected by editors or program chairs without peer review, often due to policy violations or formatting issues, and typically no appeal is allowed.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AAAI_Conference_on_Artificial_Intelligence">AAAI Conference on Artificial Intelligence</a></li>
+<li><a href="https://besteditproof.com/en/academy/why-research-papers-get-desk-rejected-and-how-to-avoid-it">Why Do Research Papers Get Desk Rejected — And How to Avoid It</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AAAI`, `#academic publishing`, `#desk rejection`, `#conference submission`, `#machine learning`
+
+---
+
+<a id="item-19"></a>
+## [Mol-JEPA: A Multimodal Molecular Foundation Model Based on JEPA](https://www.reddit.com/r/MachineLearning/comments/1w6i8pr/moljepa_multimodal_molecular_foundation_model_r/) ⭐️ 6.0/10
+
+A researcher has introduced Mol-JEPA, a multimodal joint embedding predictive architecture \(JEPA\) model for molecular data, and shared a summary website with key results to solicit feedback from the community. This work explores applying the JEPA self-supervised learning paradigm to molecular data, potentially enabling more efficient molecular representations without large-scale generative modeling, which could benefit drug discovery and materials science. The model uses a joint embedding predictive architecture that predicts in a representation space rather than reconstructing raw input; the summary website provides key results, and the author notes that further work is needed to improve performance.
+
+reddit · r/MachineLearning · /u/TerribleAntelope9348 · Sep 3, 19:56
+
+**Background**: JEPA \(Joint Embedding Predictive Architecture\) is a self-supervised learning paradigm, popularized by models like I-JEPA, that predicts the representations of masked parts of an input in latent space rather than reconstructing the raw data. Molecular foundation models are pretrained on large chemical datasets to learn general-purpose molecular features, and multimodal approaches combine different molecular representations \(e.g., SMILES, graphs, 3D conformers\) to capture richer information. This work integrates these concepts for the molecular domain.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.alphaxiv.org/audio/2510.05949v1">Gaussian Embeddings: How JEPAs Secretly Learn Your... | alphaXiv</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#multimodal`, `#molecular`, `#foundation-model`, `#JEPA`, `#machine-learning`
+
+---
+
+<a id="item-20"></a>
+## [5.94B TikTok Videos and 3.23B Profiles Scraped, Uploaded to Hugging Face](https://www.reddit.com/r/MachineLearning/comments/1w5h9se/i_scraped_594_billion_tiktok_videos_and_323/) ⭐️ 6.0/10
+
+A developer scraped 5.94 billion TikTok videos and 3.23 billion user profiles in three weeks by reverse-engineering the app&\#x27;s public endpoints, then uploaded the complete dataset to Hugging Face for free, accompanied by a paid tutorial and code. This dataset, one of the largest publicly available social media archives, could significantly advance research in video analysis, recommendation systems, and digital sociology, but its collection method highlights the ongoing tension between open data access and platform terms of service. The data was accessed via 24 endpoints that do not require a TikTok account, meaning the information is publicly viewable; however, reverse-engineering and bulk scraping likely violate TikTok&\#x27;s ToS. The full scraping code is not free—the author charges a fee for access, and the dataset&\#x27;s long-term availability on Hugging Face is uncertain.
+
+reddit · r/MachineLearning · /u/DataShack · Sep 2, 17:38
+
+**Background**: TikTok&\#x27;s mobile app communicates with backend servers using private, undocumented APIs. Reverse engineering involves analyzing the app&\#x27;s binary or network traffic to discover these endpoints and mimic client requests. While the data exposed by these endpoints is technically public, platforms like TikTok prohibit automated scraping in their terms of service. Hugging Face is a widely used repository for machine learning datasets and models.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://github.com/armxe/tiktok-api">TikTok Reverse Engineering - Mobile and Web API - GitHub</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#dataset`, `#scraping`, `#tiktok`, `#social-media`, `#huggingface`
+
+---
+
+<a id="item-21"></a>
+## [Deepity: C++ library speeds up Predictive Coding Networks to near backprop accuracy on MNIST](https://www.reddit.com/r/MachineLearning/comments/1w5fuhm/deepity_a_c_library_showing_predictive_coding/) ⭐️ 6.0/10
+
+The Deepity library, written in C++, implements accelerated Predictive Coding Networks \(PCNs\) using Direct Kolen-Pollack Feedback Alignment and algorithmic caching, achieving 97.73% test accuracy on MNIST in 59.5 seconds on a CPU, nearly matching backpropagation’s 98.27% accuracy in ~70 seconds. This work demonstrates that biologically plausible credit assignment algorithms can close the speed gap with backpropagation, strengthening the case for predictive coding as a viable alternative in machine learning and opening the door to efficient continual learning scenarios where backprop struggles. The library employs algorithmic caching to bypass redundant forward projections during inference settling, and next steps include porting the kernels to CUDA for scaling to larger architectures and testing in continual learning tasks.
+
+reddit · r/MachineLearning · /u/Important-Home4431 · Sep 2, 16:49
+
+**Background**: Predictive Coding Networks \(PCNs\) are brain-inspired hierarchical models that learn by minimizing prediction errors between layers, offering a biologically plausible alternative to backpropagation. However, naive PCN implementations are slow due to iterative settling. Direct Kolen-Pollack Feedback Alignment \(DKP\) is a recent method that accelerates PCNs by combining direct feedback alignment with the Kolen-Pollack technique, enabling local and efficient credit assignment without weight transport.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://arxiv.org/html/2602.15571v1">Accelerated Predictive Coding Networks via Direct Kolen ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Predictive_coding">Predictive coding - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#Predictive Coding`, `#Credit Assignment`, `#C++`, `#MNIST`, `#Biological Plausibility`
 
 ---

@@ -5,44 +5,43 @@ date: 2026-09-09
 lang: en
 ---
 
-> From 33 items, 23 important content pieces were selected
+> From 35 items, 22 important content pieces were selected
 
 ---
 
-1. [OpenAI Claims Proof of Navier-Stokes Millennium Problem](#item-1) ⭐️ 10.0/10
+1. [OpenAI Claims AI-Driven Proof of Navier–Stokes Millennium Problem](#item-1) ⭐️ 10.0/10
 2. [AlphaGenome Atlas: a high-resolution map of human DNA](#item-2) ⭐️ 9.0/10
-3. [NeurIPS desk-rejected 178 papers for being AI-generated, detector flagged chairs&\#x27; own papers](#item-3) ⭐️ 9.0/10
-4. [Meta Launches Muse, Personal AI Agent with Prompt Injection Defenses](#item-4) ⭐️ 8.0/10
-5. [Kimi K3 \(2.8T\) runs at 1 token/s on a MacBook Pro using four SSDs](#item-5) ⭐️ 8.0/10
-6. [Terence Tao Warns AI Is Rapidly Depleting Open Math Problems](#item-6) ⭐️ 8.0/10
-7. [Interactive Tool Visualizes LLM Attention Mechanisms](#item-7) ⭐️ 8.0/10
-8. [Terence Tao Warns AI Could Reverse Open Science Tradition](#item-8) ⭐️ 8.0/10
-9. [Rustuna: Official High-Performance Rust Port of Optuna Hyperparameter Optimization Library](#item-9) ⭐️ 8.0/10
-10. [KV Cache as an Agent Runtime: A New Approach to Interactive LLMs](#item-10) ⭐️ 8.0/10
-11. [Qwen3.8 27B Quantization: 4-bit Holds Strong, 1-bit Collapses](#item-11) ⭐️ 7.0/10
-12. [GitHub skill &\#x27;I-have-ADHD&\#x27; tackles Claude&\#x27;s verbosity in coding agents](#item-12) ⭐️ 7.0/10
-13. [Mercury 2.5: Diffusion-Based LLM Hits 1100 Tokens/Sec for Low-Latency Inference](#item-13) ⭐️ 7.0/10
-14. [OpenAI releases ChatGPT Images 2.5 with improved instruction-following](#item-14) ⭐️ 7.0/10
-15. [Abusive Crawlers Consume More CPU on git.kernel.org Than Legitimate Use](#item-15) ⭐️ 7.0/10
-16. [OpenAI Chief Scientist: Build Powerful AI for Defense, but Avoid Recklessness](#item-16) ⭐️ 7.0/10
-17. [Generating Bad Apple from a Single Initial State with a 417k-Parameter Recurrent System](#item-17) ⭐️ 7.0/10
-18. [LLM-Guided Program Evolution Breaks 10 Packomania Records](#item-18) ⭐️ 7.0/10
-19. [DIY Printer Uses E-Ink Display Instead of Paper](#item-19) ⭐️ 6.0/10
-20. [DaVinci Resolve 21.1 Release Sparks Discussion on Free Upgrades and Linux Codec Issues](#item-20) ⭐️ 6.0/10
-21. [Simon Willison Builds Browser-Based Video Compressor Using Claude Fable 5.1](#item-21) ⭐️ 6.0/10
-22. [Reddit User Seeks Debugging Strategies for Silent ML Pipeline Failures](#item-22) ⭐️ 6.0/10
-23. [Practical Radar Object Classification with Histogram MLP: Ablation Studies and Insights](#item-23) ⭐️ 6.0/10
+3. [Meta Unveils Muse Personal AI Agent with Subscription Tiers](#item-3) ⭐️ 8.0/10
+4. [Turning an E-Ink Display into a Printer via IPP and CUPS](#item-4) ⭐️ 8.0/10
+5. [Large language models develop novel social biases through adaptive exploration](#item-5) ⭐️ 8.0/10
+6. [DaVinci Resolve 21.1 Released: Free Pro Upgrade, Linux Codec Gaps Remain](#item-6) ⭐️ 8.0/10
+7. [Terence Tao warns AI is mining open math problems as a non-renewable resource](#item-7) ⭐️ 8.0/10
+8. [Anthropic Employee Resigns Over AI Existential Danger Fears](#item-8) ⭐️ 8.0/10
+9. [I-have-ADHD: A Skill to Make Coding Agents Output Concise Answers](#item-9) ⭐️ 8.0/10
+10. [Benchmarking Qwen3.8 27B Quantizations: 4-bit Holds Up, 1-bit Collapses](#item-10) ⭐️ 8.0/10
+11. [Terence Tao Warns AI May Undermine Open Science](#item-11) ⭐️ 8.0/10
+12. [Linux Kernel&\#x27;s git.kernel.org Wastes Majority CPU on Scraper Commits](#item-12) ⭐️ 8.0/10
+13. [NeurIPS desk-rejected 178 papers for AI use, detector flagged organizers&\#x27; own work](#item-13) ⭐️ 8.0/10
+14. [LLM-guided program evolution breaks 10 circle-packing records on Packomania](#item-14) ⭐️ 8.0/10
+15. [OpenAI Chief Scientist: Develop AI for Defense, Not Reckless Acceleration](#item-15) ⭐️ 7.0/10
+16. [Generating Bad Apple video autonomously from a single initial state using a 417k-parameter RNN](#item-16) ⭐️ 7.0/10
+17. [Rustuna: High-Performance Rust Implementation of Optuna Released](#item-17) ⭐️ 7.0/10
+18. [KV Cache as an Agent Runtime for Interactive LLMs](#item-18) ⭐️ 7.0/10
+19. [Inception Labs Releases Mercury 2.5, a Closed-Weight Diffusion Language Model](#item-19) ⭐️ 6.0/10
+20. [OpenAI Launches ChatGPT Images 2.5 with Sunburst and Flare Models](#item-20) ⭐️ 6.0/10
+21. [Mercator ↔ Equal Earth](#item-21) ⭐️ 6.0/10
+22. [Zero-Downtime Embedding Model Migration via Reranking with EmbedFlow](#item-22) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [OpenAI Claims Proof of Navier-Stokes Millennium Problem](https://www.reddit.com/r/MachineLearning/comments/1wavdi7/openal_says_it_has_cracked_one_of_maths/) ⭐️ 10.0/10
+## [OpenAI Claims AI-Driven Proof of Navier–Stokes Millennium Problem](https://www.reddit.com/r/MachineLearning/comments/1wavdi7/openal_says_it_has_cracked_one_of_maths/) ⭐️ 10.0/10
 
-OpenAI announced that its internal AI system has produced a proof for the Navier-Stokes existence and smoothness problem, demonstrating that solutions can develop a singularity in finite time, and shared a formalization in the Lean proof assistant. This is one of the seven unsolved Millennium Prize Problems. If verified, it would be only the second ever solved and the first achieved with substantial AI assistance, marking a paradigm shift in mathematical research and the role of AI in scientific discovery. The proof has not been externally verified by mathematicians or the Clay Mathematics Institute. OpenAI stated it would decline the $1 million prize. A priority dispute involves Levent Alpöge \(Anthropic\) and Tristan Buckmaster, who derived related results on the Euler equations. The method built upon Cordoba and Zoroa&\#x27;s 2023 blowup proof for related fluid equations. The internal model was reportedly trained for under two weeks and is claimed to be more than twice as capable in mathematics as Astra.
+OpenAI announced that an internal, unreleased model produced a resolution to the Navier–Stokes existence and smoothness problem, one of the seven Millennium Prize Problems, and formalized it in the Lean proof assistant. The claim is accompanied by a priority dispute with researchers from Anthropic who had been working on a closely related problem. If verified, this would be only the second Millennium Prize Problem ever solved, and the first to be cracked by an AI system, marking a potential paradigm shift in mathematics and AI-assisted research. The result could revolutionize our understanding of fluid dynamics and turbulence, with broad implications for physics and engineering. The AI agents required approximately 88 hours and 130 billion output tokens to reach the result, building on a 2023 method by Cordoba and Zoroa. OpenAI stated it would decline the $1 million Clay Prize, but the announcement was overshadowed by accusations that its model may have been trained on sessions from Anthropic’s researchers, who had been working on the problem for nearly a year.
 
 reddit · r/MachineLearning · /u/Shizuka\_Kuze · Sep 8, 17:42
 
-**Background**: The Navier-Stokes equations describe fluid motion and are central to understanding turbulence. The Clay Mathematics Institute listed the existence and smoothness problem among its seven Millennium Prize Problems in 2000, offering a $1 million prize. The challenge is to prove that smooth solutions always exist in three dimensions, or find a counterexample. Only the Poincaré conjecture has been officially solved so far. Lean is a proof assistant used to formally verify mathematical arguments.
+**Background**: The Navier–Stokes equations describe the motion of viscous fluids, and proving whether smooth, globally defined solutions always exist in three dimensions is a fundamental open problem. In 2000, the Clay Mathematics Institute designated it one of the seven Millennium Prize Problems, each carrying a $1 million reward. The only previously solved Millennium Problem is the Poincaré conjecture, resolved by Grigori Perelman in 2003.
 
 <details><summary>References</summary>
 <ul>
@@ -52,301 +51,300 @@ reddit · r/MachineLearning · /u/Shizuka\_Kuze · Sep 8, 17:42
 </ul>
 </details>
 
-**Discussion**: Fields Medalist Terence Tao warned that AI could “flatten” research prematurely, discouraging early sharing of ideas. Comments also raised the priority dispute and speculation about whether the proof built on unpublished work. Some praised the stunning speed of model improvement \(doubling Astra’s capability in two weeks\) but wished such breakthroughs were pursued under public control rather than by a private company.
+**Discussion**: Comments largely express outrage and skepticism, focusing on the ethical and trust implications of the priority dispute. Many condemn OpenAI’s alleged threat to a whistleblower and fear that such incidents will discourage academics from using AI tools or sharing data with large labs. Others view it as extreme but familiar academic sniping, now accelerated by AI, though the ambiguity over whether OpenAI models were trained on external researchers’ data remains a central concern.
 
-**Tags**: `#ai`, `#mathematics`, `#navier-stokes`, `#millennium-problems`, `#openai`
+**Tags**: `#AI`, `#mathematics`, `#Navier-Stokes`, `#breakthrough`, `#OpenAI`
 
 ---
 
 <a id="item-2"></a>
 ## [AlphaGenome Atlas: a high-resolution map of human DNA](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/) ⭐️ 9.0/10
 
-DeepMind released AlphaGenome Atlas, a comprehensive database predicting the molecular effects of all 9 billion possible single-nucleotide variants in the human genome. This resource enables researchers to rapidly assess the functional impact of any DNA change, accelerating the discovery of disease-causing mutations and the development of targeted therapies. The atlas covers both coding and non-coding regions, including promoter sequences, and provides variant effect scores based on a deep learning model trained on functional genomics data.
+Google DeepMind has released AlphaGenome Atlas, a comprehensive database that predicts the molecular consequences of all possible single-nucleotide variants in the human genome, totaling over 9 billion changes. This resource could dramatically accelerate the interpretation of genetic variants, enabling faster diagnosis of rare diseases, personalized medicine, and deeper understanding of gene regulation and disease mechanisms. The Atlas provides predictions for non-coding regions as well, but community feedback notes it lacks explicit data on promoter sequences. Access is free and open, requiring only a simple affiliation field that can be bypassed.
 
 hackernews · utiiiD · Sep 8, 14:55 · [Discussion](https://news.ycombinator.com/item?id=49611251)
 
-**Background**: The human genome consists of 3 billion base pairs. A single-nucleotide variant \(SNV\) is a change in a single DNA letter. While coding variants can alter protein sequences, most disease-associated variants lie in non-coding regions that regulate gene expression. Deep learning models like AlphaGenome learn to predict functional effects from DNA sequence data, building on DeepMind&\#x27;s earlier AlphaFold breakthroughs in protein structure prediction.
+**Background**: Single-nucleotide variants \(SNVs\) are changes in a single DNA letter, which can cause diseases or alter traits. The human genome has about 3 billion base pairs, so examining all possible SNVs is computationally immense. DeepMind previously developed AlphaFold to predict protein structures; AlphaGenome extends this AI approach to directly predict the functional impact of DNA mutations.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">AlphaGenome Atlas: Molecular predictions for 9 Billion human DNA ...</a></li>
-<li><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/">Introducing AlphaGenome Atlas - The Keyword</a></li>
+<li><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/">Introducing AlphaGenome Atlas</a></li>
+<li><a href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">AlphaGenome Atlas : Molecular predictions for... — Google DeepMind</a></li>
+<li><a href="https://spectrum.ieee.org/alphagenome-atlas">AlphaGenome Atlas Maps 9 Billion Possible DNA... - IEEE Spectrum</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members inquired about promoter sequence coverage, practical use with direct-to-consumer genetic data, and the model&\#x27;s impact compared to other tools. Some expressed cautious optimism, noting that not all DeepMind biology models have had lasting impact, while others praised the open access.
+**Discussion**: Community members expressed enthusiasm for the resource&\#x27;s accessibility, noting that it&\#x27;s easy to access even without an institutional affiliation. Some pointed out a lack of promoter sequence information, questioning its coverage of regulatory regions. Others wondered if it could be used with direct-to-consumer genetic data like 23andMe, and a comparison was made to experimental virus mutation studies.
 
-**Tags**: `#genomics`, `#deepmind`, `#AI`, `#bioinformatics`, `#DNA`
+**Tags**: `#genomics`, `#AI`, `#DeepMind`, `#bioinformatics`, `#DNA`
 
 ---
 
 <a id="item-3"></a>
-## [NeurIPS desk-rejected 178 papers for being AI-generated, detector flagged chairs&\#x27; own papers](https://www.reddit.com/r/MachineLearning/comments/1wakf62/neurips_deskrejected_178_papers_for_being/) ⭐️ 9.0/10
+## [Meta Unveils Muse Personal AI Agent with Subscription Tiers](https://ai.meta.com/muse/) ⭐️ 8.0/10
 
-NeurIPS used the proprietary Pangram AI detector to desk-reject 178 position papers without any human review or appeal, and independent tests showed the same detector flagged the track chairs&\#x27; own papers at 24% to 69% AI-generated probability. This controversy exposes the unreliability of AI detection tools in academic gatekeeping, disproportionately affects non-native English speakers, and damages trust in the fairness of top-tier conference review processes. The detector initially flagged 42.7% of all submissions as 90–100% AI before the team narrowed text windows to reduce the rate to 12.7%; 22 papers were rejected solely because authors denied AI use despite a score above 0.5, and a Stanford study showed 61% of human-written TOEFL essays by non-native speakers are falsely flagged as AI.
+Meta launched Muse, a personal AI agent that proactively helps users with goals, offering a free basic version and paid subscriptions at $20 and $100 per month, initially available only in the U.S. The launch represents Meta&\#x27;s strategy to capture mainstream &\#x27;normie-tier&\#x27; AI users with a proactive agent, while differentiating through security and privacy features despite lingering trust issues. The agent employs layered prompt injection defenses, including model training, harness marking of untrusted sources, deterministic code checks, and an ensemble of classifiers; it is also covered by purchase protections for AI agents.
 
-reddit · r/MachineLearning · /u/tughanbulut · Sep 8, 10:19
+hackernews · yks · Sep 8, 19:25 · [Discussion](https://news.ycombinator.com/item?id=49615537)
 
-**Background**: NeurIPS is a top machine learning conference; its position paper track accepts novel viewpoints rather than full empirical results. AI detectors like Pangram use statistical patterns to guess text authorship, but they are known for high false positive rates, especially on formal, non-native English writing. The term &\#x27;circularity trap&\#x27; refers to the detector&\#x27;s score being used as proof that an author lied about AI use, creating a self-reinforcing cycle.
+**Background**: Prompt injection is a cybersecurity attack where malicious inputs trick large language models into executing unintended commands, a vulnerability that Meta has previously faced criticism for when an LLM was given direct access to reset user passwords. Muse was built under chief AI officer Alexandr Wang and aims to differentiate with privacy and security, including optional data opt-out.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Pangram_%28AI_detector%29">Pangram (AI detector)</a></li>
-<li><a href="https://timrequarth.substack.com/p/why-you-shouldnt-trust-ai-detector">The Problem with AI Detector Companies - by Tim Requarth</a></li>
+<li><a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/">Introducing Muse : The World’s First Personal AI Agent Built for...</a></li>
+<li><a href="https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent">Meta debuts Muse personal AI agent</a></li>
+<li><a href="https://www.wired.com/story/meta-releases-muse-a-personal-ai-agent-with-privacy-built-into-it/">Muse , Meta ’s New Personal AI Agent , Needs You to Trust It | WIRED</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The Reddit thread garnered over 500 upvotes and extensive discussion, with overwhelming outrage. Many commenters pointed out that the detector&\#x27;s lack of transparency and the absence of appeal are unacceptable, and the fact that chairs&\#x27; own papers were flagged invalidates the entire process. Some highlighted the irony of using AI to police AI, and ESL researchers shared fears of being unfairly targeted.
+**Discussion**: The community is divided: some see the product as a smart move to attract casual users unfamiliar with AI tier nuances, while others distrust Meta&\#x27;s data practices, citing past incidents like the LLM password reset. The prompt injection defense thread was acknowledged, but skepticism remains high.
 
-**Tags**: `#machine learning`, `#AI detection`, `#academic integrity`, `#NeurIPS`, `#conference ethics`
+**Tags**: `#AI`, `#Meta`, `#AI agents`, `#prompt injection`, `#consumer AI`
 
 ---
 
 <a id="item-4"></a>
-## [Meta Launches Muse, Personal AI Agent with Prompt Injection Defenses](https://ai.meta.com/muse/) ⭐️ 8.0/10
+## [Turning an E-Ink Display into a Printer via IPP and CUPS](https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/) ⭐️ 8.0/10
 
-Meta has launched Muse, a personal AI agent integrated into its ecosystem of apps. The launch emphasized security measures against prompt injection, with a layered defense strategy described by engineering lead David Singleton. With Meta&\#x27;s vast user base, Muse could become a mainstream AI interface, raising significant privacy and data harvesting concerns. The focus on prompt injection defenses highlights the industry&\#x27;s growing security challenges as AI agents gain more access to personal data. David Singleton detailed a layered defense: the model is trained to resist injection, the harness marks untrusted sources, deterministic code checks outputs, and an ensemble of classifiers runs in an inaccessible environment. This shows a multi-pronged approach to mitigate prompt injection risks.
+A developer shared a humorous yet practical guide to turning an e-ink screen into a virtual printer that receives print jobs via the Internet Printing Protocol \(IPP\), using CUPS on Linux. This hack bridges traditional printing workflows and e-ink displays, allowing users to send any document to an e-ink screen as if it were a paper printer, which could streamline paperless workflows and inspire new e-ink device applications. The guide uses a CUPS backend to handle IPP print jobs, emphasizing the importance of defining exact screen dimensions via \`media-size-supported\` and \`media-supported\` attributes to avoid scaling. The implementation is tailored for Linux systems and is primarily a software-based virtual printer, not a physical printer mechanism.
 
-hackernews · yks · Sep 8, 19:25 · [Discussion](https://news.ycombinator.com/item?id=49615537)
+hackernews · cat-whisperer · Sep 8, 21:22 · [Discussion](https://news.ycombinator.com/item?id=49617255)
 
-**Background**: Prompt injection is a cybersecurity exploit where adversarial prompts manipulate large language models to bypass safeguards and execute unintended actions. With web browsing and file upload capabilities, AI agents are vulnerable to indirect prompt injection, where malicious content is embedded in websites or documents. Meta&\#x27;s layered defenses aim to address this threat by combining model training, input validation, and output verification.
+**Background**: IPP \(Internet Printing Protocol\) is a standard network protocol for querying printer capabilities and submitting print jobs. CUPS \(Common Unix Printing System\) is a modular, open-source printing system on Linux and macOS that acts as a print server, supporting IPP and local printers. E-ink screens are low-power, reflective displays that mimic paper, commonly used in e-readers. This project creates a custom CUPS backend that accepts IPP jobs and renders them on an e-ink display, effectively turning it into a printer.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Prompt_injection">Prompt injection</a></li>
-<li><a href="https://grokipedia.com/page/prompt-injection">Prompt injection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Internet_Printing_Protocol">Internet Printing Protocol - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CUPS">CUPS - Wikipedia</a></li>
+<li><a href="https://www.pwg.org/ipp/ippguide.html">How to Use the Internet Printing Protocol - Printer Working Group</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community is divided: some see Meta targeting casual users who are less aware of AI nuances, while others praise the technical depth of prompt injection defenses. Many express distrust of Meta&\#x27;s privacy practices, with some planning to build their own agents to avoid data harvesting. Creative use cases like scraping Facebook groups were also noted.
+**Discussion**: Comments praised the project&\#x27;s cleverness and humor, with users sharing their own CUPS backends for e-ink devices like the Fujitsu Quaderno. One commenter gave detailed advice on defining custom media sizes to avoid image scaling. Some expected a guide on building a physical printer but found the virtual printer approach entertaining instead.
 
-**Tags**: `#AI`, `#Meta`, `#personal-agent`, `#prompt-injection`, `#user-experience`
+**Tags**: `#virtual-printer`, `#e-ink`, `#CUPS`, `#IPP`, `#hack`
 
 ---
 
 <a id="item-5"></a>
-## [Kimi K3 \(2.8T\) runs at 1 token/s on a MacBook Pro using four SSDs](https://github.com/argonautlabsai/deltafin) ⭐️ 8.0/10
+## [Large language models develop novel social biases through adaptive exploration](https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH) ⭐️ 8.0/10
 
-A developer demonstrated running the 2.8 trillion-parameter Kimi K3 language model on a MacBook Pro by streaming its weights from four external SSDs, achieving a speed of 1 token per second. This hack shows that even the largest open-weight models can be run on consumer-grade hardware with sufficient storage bandwidth, pushing the boundaries of local inference and potentially democratizing access to frontier AI for experimentation. The setup streams model weights from four SSDs \(likely via Thunderbolt\) to the MacBook&\#x27;s unified memory, yielding 1 token/s inference—far too slow for interactive use, but proving the viability of SSD-based weight streaming for enormous models.
+A new study demonstrates that large language models \(LLMs\) can spontaneously develop social biases about artificial demographic groups through adaptive exploration in a hiring task, with newer and larger models exhibiting even greater bias. This finding is significant because it demonstrates that LLMs can generate biases against entirely novel groups, not just those present in training data, due to their decision-making processes, posing risks for AI safety and fairness in applications like hiring. The experiment involved a multi-turn hiring task where LLMs assigned jobs to four fictional groups \(Tufa, Aima, Reku, Weki\) across 20 rounds. The biases stem from exploration-exploitation trade-offs, where insufficient exploration causes early successes to over-influence later decisions, and newer models \(like GPT-4\) showed more stratification than older ones.
 
-hackernews · Argonautlabs · Sep 8, 20:07 · [Discussion](https://news.ycombinator.com/item?id=49616257)
+hackernews · paimapi · Sep 8, 21:47 · [Discussion](https://news.ycombinator.com/item?id=49617581)
 
-**Background**: Kimi K3 is a 2.8 trillion-parameter open-weight large language model from Moonshot AI, released in July 2026, and is the largest open model ever. Running such a model typically requires a cluster of datacenter GPUs with hundreds of gigabytes of VRAM. SSD offloading for LLM inference is a technique where model weights are kept on fast SSDs and streamed into compute memory on demand, enabling inference on hardware with limited RAM. This demonstration takes that concept to an extreme by using consumer SSDs and a laptop.
+**Background**: The experiment replicates a classic social psychology paradigm where decision-makers must balance exploring new options versus exploiting known successful ones. When faced with multiple groups and limited information, insufficient exploration can lead to overgeneralization from early observations, forming stereotypes. This study extends these findings to LLMs, which are increasingly used in automated decision-making.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Kimi_K3">Kimi K3</a></li>
-<li><a href="https://www.kimi.ai/blog/kimi-k3">Kimi K3 Tech Blog: Open Frontier Intelligence</a></li>
-<li><a href="https://www.lynxdigital.com/kb/ai/ollm">oLLM: SSD Offloading for Large-Context Inference</a></li>
+<li><a href="https://arxiv.org/abs/2511.06148">[2511.06148] Large Language Models Develop Novel Social Biases Through Adaptive Exploration</a></li>
+<li><a href="https://arxiv.org/html/2511.06148v1">Large Language Models Develop Novel Social Biases Through Adaptive Exploration</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community reacted with humor and admiration, comparing the slow inference to the fictional Deep Thought computer and joking that a medium prompt would take 11 days; some also noted that Apple&\#x27;s soldered RAM makes SSD offloading necessary, and a few asked for technical details on the SSD connection method.
+**Discussion**: Hacker News commenters recognized the significance, with several noting that bias is deeply embedded in the cultural and textual data the models are trained on, not solely a product of adaptive exploration. One comment highlighted that this finding echoes long-standing insights from cultural theory, while another referenced a 2015 study showing racial bias in eBay auctions.
 
-**Tags**: `#LLM`, `#local-inference`, `#MacBook`, `#SSD`, `#model-streaming`
+**Tags**: `#LLM`, `#bias`, `#fairness`, `#AI-safety`, `#social-biases`
 
 ---
 
 <a id="item-6"></a>
-## [Terence Tao Warns AI Is Rapidly Depleting Open Math Problems](https://mathstodon.xyz/@tao/117237320796901560) ⭐️ 8.0/10
+## [DaVinci Resolve 21.1 Released: Free Pro Upgrade, Linux Codec Gaps Remain](https://www.blackmagicdesign.com/media/release/20260908-03) ⭐️ 8.0/10
 
-Terence Tao posted on Mathstodon that AI models are solving open math problems at an unprecedented pace, turning the discovery of promising new problems into the scarce resource. His warning follows multiple AI-generated results on the Navier-Stokes equations within 24 hours. This insight shifts the focus in mathematical research from solving problems to creatively identifying them, potentially transforming the role of human mathematicians. It raises concerns that short-term solution extraction by AI could undermine the long-term health of the mathematical ecosystem. The warning was prompted by a flurry of AI results on Navier-Stokes within a single day, demonstrating that AI can now tackle problems once reserved for human insight. Tao cautions that indiscriminate use of such tools may achieve immediate goals but erode the foundation for future progress.
+Blackmagic Design released DaVinci Resolve 21.1, a free upgrade for Pro users, introducing AI assistant integration with Claude, Claude Code, and ChatGPT Codex for project analysis, media organization, and batch rendering. However, the Linux version still lacks native support for h264/AAC codecs and VST3/JACK, drawing criticism from the community. The sustained free upgrade model for Pro users reinforces Blackmagic’s customer-friendly licensing in an era of subscription fatigue, while AI integration could accelerate editing workflows and lower the barrier for beginners. Persistent Linux codec and plugin gaps, however, frustrate open-source advocates and audio professionals, limiting the platform’s adoption. The AI assistant can create highlight reels, remove unwanted clips, and render deliverables using natural language commands. Linux users must transcode source material to avoid unsupported codecs, and Fairlight audio lacks VST3 and JACK, forcing many to rely on external DAWs like Reaper.
 
-hackernews · \_alternator\_ · Sep 8, 21:00 · [Discussion](https://news.ycombinator.com/item?id=49616968)
+hackernews · tosh · Sep 8, 13:36 · [Discussion](https://news.ycombinator.com/item?id=49610181)
 
-**Background**: Terence Tao is a Fields Medal-winning mathematician renowned for his work in harmonic analysis, partial differential equations, and other areas. Open mathematical problems are unsolved questions that have resisted solution for years or decades, such as the Navier-Stokes existence and smoothness problem, one of the seven Millennium Prize Problems. Recent advances in AI, including large language models and formal proof assistants, have begun to produce verifiable solutions to some of these problems.
+**Background**: DaVinci Resolve is a professional video editing, color grading, and audio post-production suite by Blackmagic Design. The Studio \(Pro\) version has historically offered free lifetime updates, a rarity in the industry. The Linux version has long lacked support for widely used h264/AAC codecs and the VST3 plugin standard, as well as the JACK low-latency audio server, due to licensing and development priorities. The new AI assistant integration leverages large language models to automate tasks via conversational language.
 
-**Discussion**: Commenters debated whether AI solutions without human insight are valuable; some argued that the finite nature of open problems is overstated, while others suggested that the next frontier is asking novel questions. Concerns were raised about short-term extraction harming the research ecosystem, echoing Tao&\#x27;s own warning.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://compresto.app/blog/best-video-format-for-youtube">Best Video Format for YouTube in 2026 ( Codec , Container, Bitrate)</a></li>
+<li><a href="https://www.martinic.com/en/blog/vst3-audio-plugin-standard">Steinberg&#x27;s VST3 Plugin Standard - martinic.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JACK_Audio_Connection_Kit">JACK Audio Connection Kit</a></li>
 
-**Tags**: `#mathematics`, `#AI`, `#research`, `#automation`, `#Terence Tao`
+</ul>
+</details>
+
+**Discussion**: Community sentiment is largely positive about the free upgrade model and the software’s reliability, but Linux users consistently express frustration over missing h264/AAC and VST3/JACK, which force cumbersome workarounds. The AI assistant feature draws mixed reactions: some see it as a helpful tool for beginners, while others dismiss it as an unnecessary ‘agent apocalypse’.
+
+**Tags**: `#video-editing`, `#software-release`, `#linux`, `#blackmagic-design`, `#community-feedback`
 
 ---
 
 <a id="item-7"></a>
-## [Interactive Tool Visualizes LLM Attention Mechanisms](https://ishamf.dev/p/llm-attention-visualizer/) ⭐️ 8.0/10
+## [Terence Tao warns AI is mining open math problems as a non-renewable resource](https://mathstodon.xyz/@tao/117237320796901560) ⭐️ 8.0/10
 
-A new interactive web-based tool has been released that allows users to see how attention layers in large language models combine information from multiple phrases, making the attention mechanism intuitively understandable. This tool demystifies a core component of LLMs, making it easier for students, educators, and practitioners to grasp how attention works, which is essential for interpreting model behavior and advancing AI literacy. The visualization uses vector magnitudes to represent influence, though one commenter noted that this assumption may be overly simplistic. The tool is client-side, easy to share, and has been praised for its clarity, but some concern was raised about later-layer attention being potentially obscured by contributions from earlier layers.
+Terence Tao, a renowned mathematician, recently expressed concern that AI&\#x27;s ability to solve open math problems could deplete the finite supply of such problems, which are essential for training future mathematicians and AI systems. He warned that indiscriminate use of powerful AI solution-extraction tools could achieve short-term goals at the cost of sustaining the research ecosystem. This perspective highlights a potential ethical dilemma: while AI accelerates problem-solving, it might undermine the long-term development of human mathematicians and the very data that AI relies on for learning. It raises questions about how to balance AI assistance with the preservation of training resources. The analogy compares open math problems to a non-renewable resource. Tao cautions that the process of solving problems is valuable for building understanding and intuition, and that simply extracting answers via AI could short-circuit this learning process.
 
-hackernews · ifz · Sep 8, 16:59 · [Discussion](https://news.ycombinator.com/item?id=49613068)
+hackernews · \_alternator\_ · Sep 8, 21:00 · [Discussion](https://news.ycombinator.com/item?id=49616968)
 
-**Background**: The attention mechanism is a technique in deep learning that allows models to dynamically focus on the most relevant parts of an input sequence. It is the foundation of the Transformer architecture and powers models like GPT-4. By visualizing how attention weights are distributed across phrases, users can gain insight into how LLMs process and integrate information from different parts of a prompt.
+**Background**: Terence Tao is a Fields Medalist and one of the most influential living mathematicians. Open math problems are unsolved questions that drive research progress and serve as training exercises for new mathematicians. In recent years, AI tools such as large language models and automated theorem provers have shown increasing capability in solving mathematical problems. Tao&\#x27;s warning draws a parallel to finite resources, emphasizing that the pool of unsolved problems is limited and that their depletion could harm the field&\#x27;s future.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Attention_%28machine_learning%29">Attention (machine learning) - Wikipedia</a></li>
-<li><a href="https://www.ibm.com/think/topics/attention-mechanism">What is an attention mechanism? | IBM</a></li>
+**Discussion**: The discussion reflects a mix of agreement and historical context. Some commenters drew parallels to Isaac Asimov&\#x27;s story &\#x27;Jokester,&\#x27; where the bottleneck is finding meaningful questions rather than computing power. Others noted that mathematics has always been competitive, with figures like Gauss guarding problems. There is recognition that indiscriminate AI problem-solving could deplete the resource, though some view it as an inevitable technological progression.
 
-</ul>
-</details>
-
-**Discussion**: Overall sentiment was very positive, with a teacher exclaiming it was perfect timing for a Friday class and another user calling it the clearest example they had seen. However, a critical view questioned the simplistic use of vector magnitude as a proxy for influence, and another commenter wondered if later-layer attention gets drowned out by earlier layers. The discussion balanced appreciation with constructive methodological scrutiny.
-
-**Tags**: `#LLM`, `#attention-mechanism`, `#visualization`, `#machine-learning`, `#education`
+**Tags**: `#AI`, `#mathematics`, `#research ethics`, `#problem mining`, `#Terence Tao`
 
 ---
 
 <a id="item-8"></a>
-## [Terence Tao Warns AI Could Reverse Open Science Tradition](https://simonwillison.net/2026/Sep/9/terence-tao/) ⭐️ 8.0/10
+## [Anthropic Employee Resigns Over AI Existential Danger Fears](https://twitter.com/hilbertspaess/status/2097476196791709843#m) ⭐️ 8.0/10
 
-Terence Tao, a Fields Medalist mathematician, warned that AI systems capable of rapidly solving open problems upon hearing rumors of human interest could discourage researchers from sharing promising research directions, threatening centuries of open science tradition. This warning underscores a potential chilling effect on scientific collaboration: if AI can preemptively solve problems, researchers may become secretive, reversing the open sharing that has been fundamental to progress in mathematics and other fields. Tao noted that the pool of good open problems is being mined non-renewably, and even rumors of a researcher working on a problem can trigger massive AI-powered efforts to solve it before the original project reaches its full potential.
+An anthropic employee, known by the handle @hilbertspaess, resigned over concerns about AI existential risks, triggering a heated debate on Hacker News with over 360 comments. This resignation from a prominent AI safety-focused company like Anthropic underscores the growing internal alarm about AI existential risks, and the extensive public debate reveals deep divisions over the immediacy and plausibility of such threats. The employee asserted that &\#x27;no other human activity poses this level of danger,&\#x27; but commenters debated whether AI risks are comparable to nuclear weapons or climate change. Others noted that the danger could arise from deploying AI with autonomous agents, code execution, and system access, not just from the model in isolation.
 
-rss · Simon Willison · Sep 9, 00:20
+hackernews · yurivish · Sep 9, 00:40 · [Discussion](https://news.ycombinator.com/item?id=49619227)
 
-**Background**: Terence Tao is a renowned mathematician and Fields Medalist known for contributions to harmonic analysis, partial differential equations, and other areas. Open problems are unsolved mathematical questions that researchers share publicly to stimulate collaboration and progress. Open science is the movement to make scientific research accessible to all, which has been central to how mathematics has advanced for centuries.
+**Background**: AI alignment is a subfield of AI safety that aims to ensure AI systems&\#x27; goals match human values and intentions. Leading AI researchers and CEOs, including those at Anthropic, have warned that advanced AI systems could pose existential risks if misaligned. Concepts like power-seeking, strategic deception, and proxy goal misspecification are central to these concerns. Despite these warnings, the likelihood and timeline of such catastrophic outcomes remain highly debated within the AI community.
 
-**Tags**: `#ai-ethics`, `#mathematics`, `#open-science`, `#ai-impact`, `#research-culture`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AI_alignment">AI alignment</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AI_safety">AI safety</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters were divided: some praised the employee for acting on principle, while others argued that AI dangers are exaggerated compared to nuclear weapons or climate change. Some emphasized that the real risk lies in combining AI with autonomous tools and system access, not in the model alone. Many expressed skepticism about the immediacy of doomsday scenarios, but some agreed that plausible disaster routes exist.
+
+**Tags**: `#AI safety`, `#Anthropic`, `#resignation`, `#existential risk`, `#AI alignment`
 
 ---
 
 <a id="item-9"></a>
-## [Rustuna: Official High-Performance Rust Port of Optuna Hyperparameter Optimization Library](https://www.reddit.com/r/MachineLearning/comments/1w9nyhz/rustuna_a_highperformance_rust_implementation_of/) ⭐️ 8.0/10
+## [I-have-ADHD: A Skill to Make Coding Agents Output Concise Answers](https://github.com/ayghri/i-have-adhd) ⭐️ 8.0/10
 
-The Optuna team has released Rustuna, an official Rust reimplementation of the widely used Optuna hyperparameter optimization framework. It delivers faster execution, lower memory footprint, and zero Python dependencies for improved security. This official port provides a memory-safe, high-performance alternative for ML practitioners who need fast hyperparameter tuning without the overhead or supply chain risks of Python dependencies. Long-term support from the Optuna team ensures it will become a trusted tool in the Rust ML ecosystem. Rustuna maintains API compatibility with Optuna, allowing users to leverage existing knowledge. Its zero Python dependency design eliminates the risk of supply chain attacks, and native Rust memory management reduces resource usage. The source code is available on GitHub, with details in a Medium blog post.
+A new GitHub repository introduces a skill called &\#x27;i-have-adhd&\#x27; that forces coding agents, particularly Claude, to give concise, ADHD-friendly answers instead of lengthy explanations. This addresses a common frustration with LLMs like Claude burying answers in excessive detail, and could significantly improve developer productivity by reducing verbosity. The skill is a prompt engineering technique, likely added to CLAUDE.md files, but community reports note its conciseness effect often fades after a few turns, requiring repeated application. Some users find models like GPT-5.5 already concise without such tricks.
 
-reddit · r/MachineLearning · /u/c-bata · Sep 7, 10:01
+hackernews · domhudson · Sep 8, 14:13 · [Discussion](https://news.ycombinator.com/item?id=49610631)
 
-**Background**: Optuna is an open-source Python library for automatic hyperparameter tuning, created by Preferred Networks in 2018. It allows machine learning engineers to efficiently search for the best model configurations. Rust is a systems programming language known for its memory safety and high performance, making it an attractive choice for optimization workloads. Rustuna brings together Optuna&\#x27;s proven tuning algorithms with Rust&\#x27;s speed and security, catering to production environments where Python&\#x27;s footprint may be undesirable.
+**Background**: ADHD communication style is direct, brief, and gets to the point. Coding agents like Claude are notorious for verbose responses, including unnecessary disclaimers and &\#x27;not-this-but-that&\#x27; statements. The &\#x27;i-have-adhd&\#x27; skill exploits this concept to prompt conciseness. It&\#x27;s part of a broader trend of prompt engineering tools to tame LLM outputs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Optuna">Optuna</a></li>
-<li><a href="https://optuna.org/">Optuna - A hyperparameter optimization framework</a></li>
+<li><a href="https://github.com/ayghri/i-have-adhd">GitHub - ayghri/i-have-adhd: A skill to stop your coding agent from burying the answer. ADHD-friendly output. · GitHub</a></li>
+<li><a href="https://medium.com/@joe.njenga/i-tried-this-claude-code-adhd-skill-that-no-one-is-talking-about-a990a647b1c7">I Tried This Claude Code ADHD Skill (That No One Is Talking About) | by Joe Njenga | Jul, 2026 | Medium</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#hyperparameter-optimization`, `#Rust`, `#machine-learning`, `#Optuna`, `#performance`
+**Discussion**: Commenters note the issue is mainly with Claude, not GPT-5.5, with some finding the skill&\#x27;s conciseness ephemeral. Others criticize Claude&\#x27;s inherent writing style, suggesting Anthropic&\#x27;s training may encourage verbosity. Alternative prompts like &\#x27;/s4&\#x27; for simple synthetic style are mentioned.
+
+**Tags**: `#LLM`, `#prompt-engineering`, `#coding-assistants`, `#Claude`, `#tool`
 
 ---
 
 <a id="item-10"></a>
-## [KV Cache as an Agent Runtime: A New Approach to Interactive LLMs](https://www.reddit.com/r/MachineLearning/comments/1w9myqc/kv_cache_as_an_agent_runtime_r/) ⭐️ 8.0/10
+## [Benchmarking Qwen3.8 27B Quantizations: 4-bit Holds Up, 1-bit Collapses](https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/) ⭐️ 8.0/10
 
-A Yandex research team has published a blog post presenting their work on modifying the KV cache — the inference state of LLMs — to act as an agent runtime, enabling interactive systems. The post references prior papers Hogwild\! Inference and AsyncReasoning, and includes a preview of a Qwen3.8-27B model playing DOOM using this technique. This approach highlights an underexplored axis of agent capabilities: inference runtime design. By treating the KV cache as a mutable runtime, it could enable more responsive and efficient AI agents without expensive model retrofits, potentially changing how interactive AI systems are built. The technique leverages parallel LLM inference methods like Hogwild\! Inference, which uses concurrent attention with shared KV cache and Rotary Position Embeddings \(RoPE\) to avoid recomputation. The future work preview shows a Qwen3.8-27B agent playing DOOM interactively, demonstrating real-time control.
-
-reddit · r/MachineLearning · /u/\_puhsu · Sep 7, 09:03
-
-**Background**: The KV cache is a standard optimization in transformer models that stores key and value vectors from previous tokens during autoregressive generation, avoiding recomputation and speeding up inference. In agent systems, the &\#x27;harness&\#x27; is the external framework that manages the model&\#x27;s actions and environment; changing the model is often too costly. The newly proposed idea treats the KV cache as a dynamic runtime state, allowing the agent&\#x27;s behavior to be modified without altering the model weights. Hogwild\! Inference, a prior work, enables multiple workers to share the attention cache for parallel generation, demonstrating the flexibility of the KV cache.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://grokipedia.com/page/KV_cache">KV cache</a></li>
-<li><a href="https://eqimp.github.io/hogwild_llm/">Hogwild ! Inference</a></li>
-<li><a href="https://arxiv.org/abs/2504.06261">Hogwild ! Inference : Parallel LLM Generation via Concurrent Attention</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#machine learning`, `#LLM`, `#agents`, `#KV cache`, `#inference optimization`
-
----
-
-<a id="item-11"></a>
-## [Qwen3.8 27B Quantization: 4-bit Holds Strong, 1-bit Collapses](https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/) ⭐️ 7.0/10
-
-A new benchmark of the Qwen3.8 27B language model shows that 4-bit quantization nearly retains full performance, but 2-bit quantization causes a noticeable decline and 1-bit quantization leads to a complete collapse in accuracy. This finding confirms that aggressive 4-bit quantization makes a 27-billion-parameter model viable on consumer hardware with minimal quality loss, guiding practitioners on safe quantization levels for real-world deployment. The benchmark used Wilson 95% confidence intervals, which represent statistical uncertainty but not run-to-run variability, as commented by a user. The test also revealed a performance gap at 3-bit quantization, a critical breakpoint for sub-16GB GPUs like the RTX 5080 and 5070 Ti.
+A new benchmark by Quesma evaluates Qwen3.8 27B at multiple quantization levels, showing that 4-bit quantization preserves near-original performance while 1-bit quantization leads to catastrophic quality collapse. This provides actionable deployment guidance: 4-bit quantization can drastically reduce memory and compute requirements for large models like Qwen3.8 27B without sacrificing quality, while extreme 1-bit compression should be avoided. The community discussion also highlights the pressing need for similar benchmarks on KV cache quantization. The benchmark uses Wilson confidence intervals for measurement noise, but commenters noted these do not capture run-to-run variation. The 2-bit and 3-bit levels show a noticeable but not catastrophic quality drop; the 1-bit level is unusable. Some community members theorize that Qwen3.8&\#x27;s extended thinking ability can partially compensate for lower quantization levels.
 
 hackernews · stared · Sep 8, 14:49 · [Discussion](https://news.ycombinator.com/item?id=49611128)
 
-**Background**: Quantization is a model compression technique that reduces memory footprint by using lower-precision numbers for weights \(e.g., 4-bit integers instead of 16-bit floats\), enabling large language models to run on consumer GPUs with limited VRAM. Qwen3.8 27B is an open-weight 27-billion-parameter model from Alibaba, popular for coding and reasoning tasks. The benchmark assessed how different quantization levels \(8-bit down to 1-bit\) affect reasoning performance.
+**Background**: Quantization reduces the numerical precision of model weights to speed up inference and lower memory usage, with 4-bit quantization \(e.g., using bitsandbytes or QLoRA\) being a popular method for running large language models on consumer GPUs. Qwen3.8 27B is an open-weight multimodal model from Alibaba, known for its strong coding and reasoning capabilities but also high resource demands. Extreme quantization to 1-bit \(binary weights\) often leads to severe accuracy loss because the model loses the ability to represent nuanced information.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/ Qwen 3 . 8 - 27 B · Hugging Face</a></li>
-<li><a href="https://symbl.ai/developers/blog/a-guide-to-quantization-in-llms/">A Guide to Quantization in LLMs | Symbl.ai</a></li>
+<li><a href="https://huggingface.co/blog/4bit-transformers-bitsandbytes">Making LLMs even more accessible with bitsandbytes, 4-bit quantization and QLoRA</a></li>
+<li><a href="https://news.ycombinator.com/item?id=49611128">Benchmarking Qwen3.8 27B quantizations : 4- bit holds... | Hacker News</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community welcomed the benchmark, with users noting that 4-bit quantization is practical for local deployment. One commenter clarified that the reported confidence intervals do not reflect run-to-run variation. Others highlighted interest in KV cache quantization and the importance of Q3 performance for 16GB GPUs. Some users discussed the model&\#x27;s ability to &\#x27;think more&\#x27; to compensate for quantization loss, and a newcomer asked about safe local execution.
+**Discussion**: Overall sentiment is positive, praising the practical benchmark. Several users criticized the misuse of confidence intervals for run-to-run noise. There is strong interest in extending the benchmark to KV cache quantization, especially for long-context coding tasks. Some believe Qwen3.8&\#x27;s thinking mechanism can offset quality loss from lower quants, and a &\#x27;quality knee&\#x27; around Q3 is particularly relevant for sub-16GB GPU users.
 
-**Tags**: `#quantization`, `#LLM`, `#benchmark`, `#Qwen`, `#model-compression`
+**Tags**: `#quantization`, `#LLM`, `#benchmarking`, `#model-compression`, `#Qwen`
+
+---
+
+<a id="item-11"></a>
+## [Terence Tao Warns AI May Undermine Open Science](https://simonwillison.net/2026/Sep/9/terence-tao/) ⭐️ 8.0/10
+
+Terence Tao warns that AI&\#x27;s ability to rapidly solve rumored research problems could incentivize researchers to keep promising directions secret, potentially reversing centuries of open science traditions. This could have a chilling effect on academic collaboration, slowing progress in mathematics and other fields, and raises ethical concerns about AI&\#x27;s impact on research culture. Tao notes that even the rumor of someone working on a problem can trigger AI-powered efforts to solve it first, discouraging the sharing of open problems. He also observes that the collection of good open problems is being mined non-renewably.
+
+rss · Simon Willison · Sep 9, 00:20
+
+**Background**: Terence Tao is a Fields Medalist and one of the most influential mathematicians today. Open science is the tradition of openly sharing research problems, methods, and results to foster collaboration and progress. With the rapid advancement of AI tools capable of solving complex mathematical problems, the research ecosystem may shift toward secrecy.
+
+**Tags**: `#ai-ethics`, `#mathematics`, `#open-science`, `#research-culture`, `#ai-impact`
 
 ---
 
 <a id="item-12"></a>
-## [GitHub skill &\#x27;I-have-ADHD&\#x27; tackles Claude&\#x27;s verbosity in coding agents](https://github.com/ayghri/i-have-adhd) ⭐️ 7.0/10
+## [Linux Kernel&\#x27;s git.kernel.org Wastes Majority CPU on Scraper Commits](https://simonwillison.net/2026/Sep/7/creepy-crawlies/) ⭐️ 8.0/10
 
-A new GitHub repository offers a skill called &\#x27;i-have-adhd&\#x27; that instructs coding agents like Claude to be concise, preventing them from burying answers in unnecessary verbosity. The project gained attention on Hacker News, where users discussed Claude&\#x27;s verbose writing flaws in 242 comments. This addresses a widespread pain point with LLM coding assistants, especially Claude, whose verbosity wastes time and hampers productivity. The lightweight, open-source prompt engineering solution empowers developers to get straight to the point, potentially influencing tooling and model behavior. The skill is a simple CLAUDE.md or AGENTS.md instruction that tells the agent it has ADHD and must be concise. Users report that the effect often fades after a few turns, requiring repeated reminders or hooks, and the repository provides installation instructions for various coding agent platforms.
+The official Linux kernel git repository at git.kernel.org now spends more CPU cycles rendering HTML commit views for abusive scrapers than for all legitimate access combined, including git clones, according to a report by Konstantin Ryabitsev. This highlights the severe and growing infrastructure burden that abusive crawlers, particularly AI training bots, impose on public open-source repositories, threatening the sustainability of free community resources. At any given time, 14 CPU cores across five geo-distributed nodes are dedicated solely to rendering commits for scrapers; the main culprit is cgit, the fast web interface used to serve the repository.
 
-hackernews · domhudson · Sep 8, 14:13 · [Discussion](https://news.ycombinator.com/item?id=49610631)
+rss · Simon Willison · Sep 7, 23:08
 
-**Background**: LLM-based coding agents like Claude Code and Cursor have become popular for software development, but Claude&\#x27;s responses are often criticized for being overly verbose, using unnecessary phrases like &\#x27;I did not edit...&\#x27; and burying key information. The community has developed various prompt engineering &\#x27;skills&\#x27; stored in configuration files to guide the model, though newer model versions sometimes override these instructions. The &\#x27;i-have-adhd&\#x27; skill is a humorous but effective attempt to enforce brevity by simulating a condition that demands concise communication.
+**Background**: cgit is a high-performance web frontend for Git repositories written in C, used by many projects including the Linux kernel. Abusive crawlers often ignore robots.txt and make full HTTP requests, which the server must process as if they were real visitors, consuming CPU and bandwidth. AI crawlers especially have exacerbated this problem by continuously scraping content for training data.
 
-**Discussion**: The Hacker News discussion reveals widespread frustration with Claude&\#x27;s verbosity, with users noting it insists on describing what it didn&\#x27;t do and uses convoluted sentence structures. Some find the ADHD skill only temporarily effective, as the model soon reverts to long-windedness. Others caution about the security risks of installing third-party skills from GitHub, recalling the danger of piping curl to shell.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://git.zx2c4.com/cgit/about/">cgit - A hyperfast web frontend for git repositories written in C.</a></li>
+<li><a href="https://www.amicited.com/blog/ai-crawler-impact-server-resources/">AI Crawler Impact on Server Resources : What to Expect | Am I Cited</a></li>
 
-**Tags**: `#LLM`, `#coding-agents`, `#Claude`, `#verbosity`, `#prompt-engineering`
+</ul>
+</details>
+
+**Tags**: `#crawling`, `#infrastructure`, `#web-scraping`, `#git`, `#abuse`
 
 ---
 
 <a id="item-13"></a>
-## [Mercury 2.5: Diffusion-Based LLM Hits 1100 Tokens/Sec for Low-Latency Inference](https://www.inceptionlabs.ai/blog/introducing-mercury-2-5) ⭐️ 7.0/10
+## [NeurIPS desk-rejected 178 papers for AI use, detector flagged organizers&\#x27; own work](https://www.reddit.com/r/MachineLearning/comments/1wakf62/neurips_deskrejected_178_papers_for_being/) ⭐️ 8.0/10
 
-Inception Labs has released Mercury 2.5, a diffusion-based large language model that achieves inference speeds of 1100 tokens per second, optimized for low-latency applications. Its high throughput makes it particularly suitable for roles like arbiter in LLM consortium systems, where additional latency from a judge model is a key drawback; it also excels in real-time voice applications. The model is available via API, not open weights; users can opt out of data collection. It is not at the frontier but is comparable to some last-generation open-weight models, making it usable as a general chatbot.
+NeurIPS&\#x27;s Position Paper Track used the proprietary AI detector Pangram to automatically desk-reject 178 papers \(18.4% of submissions\) without human review or appeal. The same detector flagged the track chairs&\#x27; own papers at 24–69% AI probability, and was found to disproportionately penalize non-native English writers. This incident exposes a critical failure in academic integrity processes: black-box AI detectors are being used as sole arbiters of authorship, leading to unjust rejections and eroding trust in top-tier conferences. It highlights the dangers of automated decision-making without human oversight, especially given the well-documented bias against non-native English speakers. Pangram&\#x27;s default setting initially flagged 42.7% of all submissions as 90-100% AI. To reduce the flag rate, the track chairs manually shrunk the text windows, bringing it down to 12.7%. Additionally, 22 papers were rejected because the authors denied AI use but the detector score exceeded 0.5, creating a &\#x27;circularity trap&\#x27; where the black-box score was used as proof of lying.
 
-hackernews · Topfi · Sep 8, 20:14 · [Discussion](https://news.ycombinator.com/item?id=49616354)
+reddit · r/MachineLearning · /u/tughanbulut · Sep 8, 10:19
 
-**Background**: Diffusion-based LLMs are an alternative to traditional autoregressive generation, where the model iteratively denoises a sequence, potentially enabling parallel token generation and faster inference. Inception Labs is a &\#x27;neolab&\#x27; exploring this architecture primarily for low-latency voice. The LLM consortium concept involves multiple models generating responses, with an arbiter model synthesizing them; fast arbiter inference reduces overall system latency.
+**Background**: NeurIPS is one of the most prestigious machine learning conferences. A desk rejection means a paper is rejected without peer review, typically for scope or formatting issues. AI-generated text detectors like Pangram analyze writing patterns to estimate the likelihood that a text was produced by a large language model. However, such detectors are known to be unreliable, especially for formal, structured writing common among non-native English speakers.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://aipapersacademy.com/large-language-diffusion-models/">Large Language Diffusion Models: The Era Of Diffusion LLMs?</a></li>
-<li><a href="https://github.com/irthomasthomas/llm-consortium">GitHub - irthomasthomas/llm-consortium: Parallel Reasoning: llm-consortium orchestrates mulitple LLMs, iteratively refines &amp; achieves consensus. · GitHub</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pangram_%28AI_detector%29">Pangram (AI detector)</a></li>
+<li><a href="https://www.conferencealerts.in/blog/conference-papers-get-desk-rejected/">Why Conference Papers Get Desk Rejected (and How to Avoid It)!</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members expressed disappointment that the model is not open-weight, but praised its speed, especially for use as an arbiter in LLM consortium systems. Some noted that it is usable as a general chatbot and comparable to last-gen models, and appreciated the opt-out option for data collection.
-
-**Tags**: `#LLM`, `#inference`, `#diffusion-models`, `#NLP`, `#low-latency`
+**Tags**: `#AI-detection`, `#NeurIPS`, `#academic-conferences`, `#AI-ethics`, `#Pangram`
 
 ---
 
 <a id="item-14"></a>
-## [OpenAI releases ChatGPT Images 2.5 with improved instruction-following](https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/) ⭐️ 7.0/10
+## [LLM-guided program evolution breaks 10 circle-packing records on Packomania](https://www.reddit.com/r/MachineLearning/comments/1w9xlyi/llmguided_program_evolution_improves_10_bestknown/) ⭐️ 8.0/10
 
-OpenAI has released ChatGPT Images 2.5, an update to its image generation models that improves instruction-following across multiple turns, responds faster, and better preserves reference photo subjects. The release includes two new API models: gpt-image-2.5-sunburst \(for precision editing\) and gpt-image-2.5-flare \(for fast, everyday generation\). The update addresses key user needs for precise, iterative image editing and faster generation, making it more practical for developers integrating image generation into workflows. With over 3 billion images generated, these improvements directly impact a large user base. The two new models differentiate by use case: Sunburst prioritizes editing precision, while Flare offers speed for everyday tasks. The API now supports passing reference images for inpainting tasks, as demonstrated by Simon Willison&\#x27;s CLI tool update.
+An LLM-guided program evolution approach improved 10 best-known circle-packing solutions on the Packomania csqv benchmark \(N=101–114\) by 2.4–5.4%, costing only $27.72 in LLM calls, and the results were independently verified and accepted by Packomania. This demonstrates that LLMs can efficiently automate the optimization of complex algorithms, dramatically reducing the cost and human effort needed to push the state-of-the-art in well-established benchmarks, and could be applied to other combinatorial optimization problems. The system uses a scoreboard and history to guide LLM proposals, with an independent verifier ensuring only genuine improvements are kept; the author notes the plateau-detection stopping rule as the component most open to critique. The improvements were achieved in just 15 iterations.
 
-rss · Simon Willison · Sep 8, 22:46
+reddit · r/MachineLearning · /u/SIGH\_I\_CALL · Sep 7, 16:54
 
-**Background**: OpenAI&\#x27;s ChatGPT Images is a feature that generates images from natural language descriptions, powered by AI models. The GPT-Image models are the underlying technology also available via OpenAI&\#x27;s API, which allows developers to programmatically create and edit images. The release of version 2.5 follows previous iterations, and the API model names &\#x27;sunburst&\#x27; and &\#x27;flare&\#x27; likely indicate different performance tiers.
-
-**Tags**: `#openai`, `#image-generation`, `#api`, `#chatgpt`, `#ai`
-
----
-
-<a id="item-15"></a>
-## [Abusive Crawlers Consume More CPU on git.kernel.org Than Legitimate Use](https://simonwillison.net/2026/Sep/7/creepy-crawlies/) ⭐️ 7.0/10
-
-Konstantin Ryabitsev revealed that abusive crawlers on git.kernel.org, the official Linux kernel Git repository, spend more CPU cycles rendering commits as HTML than all legitimate access combined, with 14 CPU cores across 5 nodes constantly doing nothing but rendering for scrapers. This highlights the severe resource drain that unchecked web scraping imposes on open-source infrastructure, potentially degrading performance for legitimate users and increasing operational costs, a concern relevant to many public web services. The abusive crawlers are not just fetching static pages but triggering expensive dynamic rendering of commit pages via cgit; the issue is not limited to git.kernel.org, as Simon Willison notes similar concerns for his Datasette project that serves crawlable pages.
-
-rss · Simon Willison · Sep 7, 23:08
-
-**Background**: git.kernel.org uses cgit, a fast web interface for Git repositories, to display commits as HTML pages. Rendering each commit into a web page requires server-side computation, which becomes costly when thousands of crawlers request many pages per second. Datasette is an open-source tool for exploring and publishing data, which also generates many crawlable HTML pages.
+**Background**: The Packomania csqv benchmark challenges researchers to pack N variable-radius circles inside a unit square to maximize the sum of their radii, with best-known solutions continuously tracked. LLM-guided program evolution is a technique where a large language model iteratively modifies the source code of an optimization algorithm, testing and retaining changes that improve performance, thereby reducing the need for hand-crafted heuristics.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://wiki.archlinux.org/title/Cgit">cgit - ArchWiki</a></li>
+<li><a href="https://arxiv.org/abs/2609.05093">[2609.05093] LLM-Guided Program Evolution for Circle Packing: Breaking 10 Packomania Records for $28</a></li>
+<li><a href="https://www.packomania.com/csqv/csqv.html">The best known packings of variable-sized circles in a square with maximized sum of radii (complete up to N</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#crawling`, `#git`, `#infrastructure`, `#web scraping`, `#performance`
+**Tags**: `#LLM`, `#program evolution`, `#optimization`, `#circle packing`, `#machine learning`
 
 ---
 
-<a id="item-16"></a>
-## [OpenAI Chief Scientist: Build Powerful AI for Defense, but Avoid Recklessness](https://simonwillison.net/2026/Sep/7/jakub-pachocki/) ⭐️ 7.0/10
+<a id="item-15"></a>
+## [OpenAI Chief Scientist: Develop AI for Defense, Not Reckless Acceleration](https://simonwillison.net/2026/Sep/7/jakub-pachocki/) ⭐️ 7.0/10
 
-Jakub Pachocki, OpenAI&\#x27;s Chief Scientist, argued that continuing to train much smarter models quickly is necessary to build defensive systems against AI dangers, but he cautioned that this should not become an excuse for recklessness. This statement from a leading AI company&\#x27;s Chief Scientist highlights the strategic dilemma of advancing AI for defense while emphasizing responsible development, influencing the ongoing AI safety and alignment debate. Pachocki specifically referenced defending against rogue AI agents, securing infrastructure, and inventing entirely new protective measures, indicating that OpenAI will prioritize these defensive applications in its deployment efforts.
+Jakub Pachocki, OpenAI&\#x27;s Chief Scientist, argued that the strongest reason to continue training smarter models quickly is to build defensive systems against rogue AI. He warned that this must not become an excuse for reckless acceleration. This statement from a leading AI lab&\#x27;s chief scientist frames the AI development race as a defensive necessity, directly addressing the tension between rapid progress and safety. It carries weight in AI safety and policy discussions, potentially influencing how AI development is justified to the public and regulators. Pachocki specifically highlighted the need for AI to secure infrastructure, protect against rogue agents in real time, and invent new protective measures, stating this will be a primary focus of OpenAI&\#x27;s deployment efforts. He called the idea of &\#x27;racing forward at all costs&\#x27; absurd given the seriousness of the stakes.
 
 rss · Simon Willison · Sep 7, 22:26
 
-**Background**: AI alignment is a subfield of AI safety focusing on ensuring AI systems pursue human-intended goals. Concerns about rogue AI agents, where autonomous AI systems act in harmful ways, have grown in recent years. OpenAI&\#x27;s statement reflects a dual approach: aggressively developing AI for defense while mitigating risks of reckless advancement.
+**Background**: AI alignment is a subfield of AI safety focused on ensuring AI systems pursue human intended goals and values, as misaligned systems can cause unintended harm. Rogue AI agents refer to autonomous AI systems that exhibit unintended harmful behaviors. OpenAI is a prominent AI research lab, and its chief scientist&\#x27;s views carry significant weight in the AI safety and policy debate.
 
 <details><summary>References</summary>
 <ul>
@@ -356,158 +354,139 @@ rss · Simon Willison · Sep 7, 22:26
 </ul>
 </details>
 
-**Tags**: `#ai-safety`, `#openai`, `#alignment`, `#ai-ethics`, `#defense`
+**Tags**: `#AI safety`, `#AI ethics`, `#OpenAI`, `#AI policy`, `#alignment`
+
+---
+
+<a id="item-16"></a>
+## [Generating Bad Apple video autonomously from a single initial state using a 417k-parameter RNN](https://www.reddit.com/r/MachineLearning/comments/1wa8rub/generating_bad_apple_autonomously_from_a_single/) ⭐️ 7.0/10
+
+A 417k-parameter recurrent neural network, trained as a closed-loop latent dynamical system, generates the entire ~6,500-frame Bad Apple video from a single initial condition without any timestamp input. This demonstrates that a tiny recurrent model can autonomously memorize and reproduce a long, complex video sequence without external timing signals, highlighting the potential of compact dynamical systems for long-term sequence generation. Training used a curriculum of increasing rollout horizons \(from 2 to 512 frames\), state perturbation noise, and second-difference acceleration regularization to achieve long-term stability; the model runs at over 200 FPS on an RTX 4080.
+
+reddit · r/MachineLearning · /u/SEBADA321 · Sep 8, 00:05
+
+**Background**: Bad Apple is a popular shadow-art video often used as a benchmark for visual fidelity on constrained hardware. Implicit neural representations like SIREN can memorize a video as a function of pixel coordinates and time, but this work instead uses a recurrent network that learns a latent dynamical system capable of generating frames sequentially without time input, akin to a closed-loop simulation.
+
+**Tags**: `#recurrent-neural-networks`, `#dynamical-systems`, `#video-generation`, `#memorization`, `#tiny-ml`
 
 ---
 
 <a id="item-17"></a>
-## [Generating Bad Apple from a Single Initial State with a 417k-Parameter Recurrent System](https://www.reddit.com/r/MachineLearning/comments/1wa8rub/generating_bad_apple_autonomously_from_a_single/) ⭐️ 7.0/10
+## [Rustuna: High-Performance Rust Implementation of Optuna Released](https://www.reddit.com/r/MachineLearning/comments/1w9nyhz/rustuna_a_highperformance_rust_implementation_of/) ⭐️ 7.0/10
 
-A recurrent dynamical system with only 417k parameters generates the entire 6,500-frame Bad Apple video autonomously from a single initial state, without any time input. This demonstrates that a tiny recurrent model can learn a long, complex temporal sequence and remain stable over thousands of steps, challenging the need for larger models or explicit time embeddings for video generation. The model uses a 64-D latent state, LSTM-style recurrence, and bilinear upsampling decoder; training involved a curriculum of rollout horizons \(2 to 512 frames\), teacher tables, state noise, and second-difference acceleration regularization.
+A new Rust-based implementation of the Optuna hyperparameter optimization framework, called Rustuna, has been released. It offers API compatibility with Optuna, zero Python dependencies, and a lower memory footprint. This provides a faster, more secure, and memory-efficient alternative for production ML workflows, reducing the risk of supply chain attacks from Python dependencies and enabling better performance in resource-constrained environments. Rustuna is a drop-in replacement for Optuna&\#x27;s core hyperparameter optimization functionality, written in Rust, and aims to significantly reduce memory usage and startup time while maintaining the familiar define-by-run API. The source code is available on GitHub under the Optuna organization.
 
-reddit · r/MachineLearning · /u/SEBADA321 · Sep 8, 00:05
+reddit · r/MachineLearning · /u/c-bata · Sep 7, 10:01
 
-**Background**: SIREN \(Sinusoidal Representation Networks\) is an implicit neural representation that uses sine activations to map coordinates to pixel values, enabling memorization of signals like images or videos. The previous approach for Bad Apple used a SIREN MLP with time as input. This work explores a recurrent dynamical system, a type of neural network that evolves its internal state over time without external time signals, similar to how a physical system moves according to its own dynamics.
+**Background**: Optuna is a widely used open-source Python library for automatic hyperparameter tuning, developed by Preferred Networks and first released in 2018. It employs a define-by-run API and supports pruning of unpromising trials and distributed optimization. Hyperparameter optimization is the process of systematically selecting optimal hyperparameters for a machine learning algorithm to maximize its performance. Rust is a systems programming language known for its memory safety and high performance, making it ideal for building efficient, dependency-free tools.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/pdf/2006.09661">Implicit Neural Representations with Periodic</a></li>
-<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S089360800580125X">Approximation of dynamical systems by continuous time recurrent neural networks - ScienceDirect</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Optuna">Optuna</a></li>
+<li><a href="https://optuna.org/">Optuna - A hyperparameter optimization framework</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#recurrent-neural-networks`, `#dynamical-systems`, `#generative-models`, `#computer-vision`, `#machine-learning`
+**Tags**: `#rust`, `#hyperparameter-optimization`, `#machine-learning`, `#performance`, `#open-source`
 
 ---
 
 <a id="item-18"></a>
-## [LLM-Guided Program Evolution Breaks 10 Packomania Records](https://www.reddit.com/r/MachineLearning/comments/1w9xlyi/llmguided_program_evolution_improves_10_bestknown/) ⭐️ 7.0/10
+## [KV Cache as an Agent Runtime for Interactive LLMs](https://www.reddit.com/r/MachineLearning/comments/1w9myqc/kv_cache_as_an_agent_runtime_r/) ⭐️ 7.0/10
 
-A researcher used an LLM to iteratively evolve a circle-packing solver, improving the best-known solutions for 10 problem instances \(N=101-114\) on the Packomania csqv benchmark by 2.4-5.4% in 15 iterations, at a total LLM API cost of $27.72. The improved results were independently verified and accepted by the Packomania maintainer. This demonstrates that LLMs can be used to evolve optimization algorithms themselves, not just solve problem instances directly. The approach is cost-effective and could be applied to other hard combinatorial optimization benchmarks, potentially leading to new state-of-the-art results with minimal human engineering effort. The LLM proposed algorithmic improvements, not direct packing solutions, and each candidate was evaluated by an independent verifier to ensure correctness. The author specifically seeks critique on the plateau-detection stopping rule used to terminate the evolution process.
+Researchers propose modifying the KV cache during inference to create a more interactive agent runtime, and demonstrate a preview of a Qwen3.8-27B agent playing DOOM using this technique. This approach could make LLM agents more responsive and interactive, opening up new possibilities for real-time AI applications by treating the model&\#x27;s inference state as a mutable runtime rather than static memory. The work builds on prior papers Hogwild\! Inference and AsyncReasoning, which explore parallel inference and concurrent attention. The DOOM demo uses a Qwen3.8-27B model, and the method centers on directly manipulating the KV cache during generation.
 
-reddit · r/MachineLearning · /u/SIGH\_I\_CALL · Sep 7, 16:54
+reddit · r/MachineLearning · /u/\_puhsu · Sep 7, 09:03
 
-**Background**: Circle packing is a classic combinatorial optimization problem that involves arranging circles within a container without overlap. The Packomania website tracks the best-known solutions for various packing variants, including the csqv benchmark where the goal is to maximize the sum of radii of N variable-radius circles packed into a unit square. Improving upon these long-standing records is considered a significant achievement, as the problem is computationally hard and requires sophisticated heuristics.
+**Background**: In transformer-based LLMs, the KV cache stores key and value vectors for previous tokens, avoiding recomputation during autoregressive generation. Typically, this cache is read-only and grows sequentially. Modifying it during inference, as proposed here, enables the model to dynamically update its context, supporting interactive behaviors like those needed for game-playing agents.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/abs/2609.05093">[2609.05093] LLM-Guided Program Evolution for Circle Packing: Breaking 10 Packomania Records for $28</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Circle_packing">Circle packing - Wikipedia</a></li>
+<li><a href="https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms">Understanding and Coding the KV Cache in LLMs from Scratch</a></li>
+<li><a href="https://arxiv.org/abs/2504.06261">[2504.06261] Hogwild! Inference: Parallel LLM Generation via Concurrent Attention</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#LLM`, `#program-evolution`, `#optimization`, `#circle-packing`, `#machine-learning`
+**Tags**: `#kv-cache`, `#agent-runtime`, `#llm-inference`, `#interactive-ai`, `#machine-learning`
 
 ---
 
 <a id="item-19"></a>
-## [DIY Printer Uses E-Ink Display Instead of Paper](https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/) ⭐️ 6.0/10
+## [Inception Labs Releases Mercury 2.5, a Closed-Weight Diffusion Language Model](https://www.inceptionlabs.ai/blog/introducing-mercury-2-5) ⭐️ 6.0/10
 
-A blog post describes a creative hack that treats an e-ink display as a printer, allowing documents to be &\#x27;printed&\#x27; directly onto the electronic paper screen. The project highlights an unconventional use of e-ink technology, sparking conversation about paperless alternatives and the potential for repurposing e-readers as low-power, reusable displays. Commenters noted that the device might simply render the PDF directly without the need for a &\#x27;print&\#x27; function, suggesting the hack may be a demonstration of concept rather than a practical necessity.
+Inception Labs has introduced Mercury 2.5, a new diffusion-based language model. The release is accompanied by community feedback highlighting that the model is not open-weight and includes a restrictive classifier that blocks queries about its architecture or training. This release underscores the emergence of diffusion models as a viable alternative to autoregressive transformers for language generation, potentially offering parallel generation and infilling capabilities. However, the closed nature and IP-protection guardrails may limit community scrutiny and adoption. The model utilizes a diffusion process for text generation and can recover from mid-generation errors, as observed when the IP-protection classifier triggered. The classifier refuses to disclose architectural details, but the model still completes the remaining turn.
 
-hackernews · cat-whisperer · Sep 8, 21:22 · [Discussion](https://news.ycombinator.com/item?id=49617255)
+hackernews · Topfi · Sep 8, 20:14 · [Discussion](https://news.ycombinator.com/item?id=49616354)
 
-**Background**: E Ink is a type of electronic paper display technology that mimics ink on paper, using tiny microcapsules to create a low-power, bistable screen that retains an image without continuous power. This project uses such a display as a printer output, effectively turning an e-reader or similar device into a reusable paper substitute.
+**Background**: Diffusion language models generate text by gradually denoising a sequence of tokens, unlike autoregressive models that predict one token at a time. They can offer advantages such as parallel generation and native infilling, but historically have been less efficient. Recent advances in masked diffusion and hybrid approaches have made them competitive with large language models.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/E_Ink">E Ink - Wikipedia</a></li>
+<li><a href="https://grokipedia.com/page/Diffusion_language_model">Diffusion language model</a></li>
+<li><a href="https://arxiv.org/pdf/2508.10875">A Survey on Diffusion Language Models</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community reaction was mixed: some praised the idea as amazing and intuitive, while others were confused about its purpose, questioning why not simply view the PDF on the device. A few users expressed interest in adopting the approach.
+**Discussion**: The community reactions are mixed: some are intrigued by the diffusion approach, but many are disappointed that the model is not open-weight. The IP-protection classifier that blocks architectural queries is seen as overzealous and a hindrance, though the model can recover from these errors. Others noted that the name &\#x27;Mercury&\#x27; is unrelated to the Mercury programming language and that an opt-out for training data is available.
 
-**Tags**: `#e-ink`, `#printer`, `#DIY`, `#hack`, `#hardware`
+**Tags**: `#AI`, `#language models`, `#diffusion models`, `#model release`, `#Inception Labs`
 
 ---
 
 <a id="item-20"></a>
-## [DaVinci Resolve 21.1 Release Sparks Discussion on Free Upgrades and Linux Codec Issues](https://www.blackmagicdesign.com/media/release/20260908-03) ⭐️ 6.0/10
+## [OpenAI Launches ChatGPT Images 2.5 with Sunburst and Flare Models](https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/) ⭐️ 6.0/10
 
-DaVinci Resolve 21.1 introduces integration with AI assistants like Claude and ChatGPT Codex, allowing users to control projects via natural language. It continues Blackmagic Design&\#x27;s free upgrade policy for Studio users, sparking renewed discussion over Linux platform limitations. This update aligns with the growing integration of AI in creative software, potentially simplifying complex tasks for editors. The sustained community focus on Linux codec limitations highlights the persistent gap in professional video editing tools for Linux, affecting a vocal subset of users. The AI feature works via external assistants, not a built-in model. On Linux, the free version cannot decode H.264/H.265, requiring the Studio version; additionally, VST3 plugins, JACK audio, and MIDI control in Fairlight are unsupported.
+OpenAI released ChatGPT Images 2.5, featuring improved instruction-following across multiple turns, faster response, and better preservation of reference image subjects. The API now includes two new models: gpt-image-2.5-sunburst \(precision editing\) and gpt-image-2.5-flare \(fast everyday generation\). The update gives developers a choice between editing precision and speed, enabling more cost-effective workflows. With over 3 billion images generated across the platform, these models are already widely used. Sunburst is positioned as the larger, more precise model, while Flare is the smaller, faster variant. Both accept text and image inputs, support multiple quality levels, and have identical API pricing.
 
-hackernews · tosh · Sep 8, 13:36 · [Discussion](https://news.ycombinator.com/item?id=49610181)
+rss · Simon Willison · Sep 8, 22:46
 
-**Background**: DaVinci Resolve is a comprehensive video editing, color grading, and audio post-production suite. Blackmagic Design offers a free version with many features and a paid Studio version with advanced capabilities, and has historically provided free Studio upgrades. However, the Linux version has long-standing codec limitations: the free version lacks support for H.264 and H.265 decoding, forcing users to transcode footage. Audio support on Linux is also limited, missing VST3 plugins, JACK audio, and MIDI control surface functionality, which are available on Windows and macOS.
+**Background**: OpenAI&\#x27;s GPT-Image series already powers image generation and editing in ChatGPT and the API. ChatGPT Images 2.5 is the latest iteration, enhancing the model&\#x27;s ability to follow complex instructions over multiple turns and maintain consistency across edits. Sunburst and Flare are specialized variants: Sunburst is the &\#x27;base&\#x27; model prioritizing accuracy, while Flare is the &\#x27;small&\#x27; model optimized for speed.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_18_Supported_Codec_List.pdf?_v=1705996810000">DaVinci Resolve January 2024 Supported Formats and Codecs</a></li>
-<li><a href="https://forum.blackmagicdesign.com/viewtopic.php?f=21&amp;t=192600">Blackmagic Forum • View topic - Codecs supported in Ubuntu Linux?</a></li>
-<li><a href="https://github.com/drsnxt/davinci-kit/blob/main/docs/DAVINCI-RESOLVE-LINUX-GUIDE.md">davinci-kit/docs/DAVINCI-RESOLVE-LINUX-GUIDE.md at main · drsnxt/davinci-kit</a></li>
+<li><a href="https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst">GPT-Image-2.5 Sunburst Model | OpenAI API</a></li>
+<li><a href="https://developers.openai.com/api/docs/models/gpt-image-2.5-flare">GPT-Image-2.5 Flare Model | OpenAI API</a></li>
+<li><a href="https://www.orcarouter.ai/blog/gpt-image-2-5-flare-sunburst">GPT-Image-2.5 Flare vs Sunburst: New OpenAI Image APIs</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community praised the software&\#x27;s stability and free upgrades, but many Linux users expressed frustration over the lack of H.264/AAC decoding and missing audio features like VST3 and JACK. Some viewed the AI agent integration as a gimmick, while others noted the need to rely on separate audio tools like Reaper.
-
-**Tags**: `#video-editing`, `#davinci-resolve`, `#linux`, `#software-update`, `#community-discussion`
+**Tags**: `#AI`, `#image-generation`, `#OpenAI`, `#API`, `#machine-learning`
 
 ---
 
 <a id="item-21"></a>
-## [Simon Willison Builds Browser-Based Video Compressor Using Claude Fable 5.1](https://simonwillison.net/2026/Sep/7/video-compressor/) ⭐️ 6.0/10
+## [Mercator ↔ Equal Earth](https://simonwillison.net/2026/Sep/7/equal-earth/) ⭐️ 6.0/10
 
-Simon Willison built a pure client-side video compression tool using the ffmpeg.wasm WebAssembly port of FFmpeg, assisted by Claude Fable 5.1. The tool offers preset quality levels \(Largest to Smallest\) with CRF values from 22 to 28, and can generate multiple optimized versions in seconds directly in the browser. This demonstrates how powerful AI coding assistants like Claude Fable 5.1 can accelerate the creation of privacy-focused utilities. It also highlights the maturity of WebAssembly for running complex media processing like FFmpeg entirely in the browser, eliminating the need for server-side video handling. The tool provides five presets with resolutions from 854×370 to 640×276, CRF 22-28, and audio bitrates 128-64 kbps, plus options for encoder speed, H.264 profile, 30 fps cap, metadata stripping, audio removal, and encoding only the first 10 seconds. All processing is done client-side via ffmpeg.wasm, and the generated ffmpeg commands are displayed for transparency.
+Simon Willison creates an animated D3 map comparing Mercator and Equal Earth projections using GPT-6 Astra.
 
-rss · Simon Willison · Sep 7, 18:29
+rss · Simon Willison · Sep 7, 16:24
 
-**Background**: ffmpeg.wasm is a WebAssembly port of the popular FFmpeg multimedia framework, enabling video and audio processing directly in the browser without server-side infrastructure. CRF \(Constant Rate Factor\) is a quality control method used by H.264 encoders; lower values \(e.g., 18\) produce near-lossless quality, while higher values \(e.g., 28\) reduce file size at the cost of visual fidelity. Claude Fable 5.1 is a &\#x27;Mythos-class&\#x27; large language model released by Anthropic in September 2026, known for strong coding and reasoning abilities, and was used here to generate the tool&\#x27;s code.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpegwasm/ffmpeg.wasm</a></li>
-<li><a href="https://slhck.info/video/2017/02/24/crf-guide.html">CRF Guide (Constant Rate Factor in x264, x265 and libvpx)</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#webassembly`, `#ffmpeg`, `#video-compression`, `#ai-assisted-coding`, `#tool`
+**Tags**: `#geospatial`, `#d3`, `#vibe-coding`, `#map-projections`, `#data-visualization`
 
 ---
 
 <a id="item-22"></a>
-## [Reddit User Seeks Debugging Strategies for Silent ML Pipeline Failures](https://www.reddit.com/r/MachineLearning/comments/1waewc3/when_a_run_is_wrong_but_nothing_actually_failed/) ⭐️ 6.0/10
+## [Zero-Downtime Embedding Model Migration via Reranking with EmbedFlow](https://www.reddit.com/r/MachineLearning/comments/1wabmm7/my_lab_found_a_way_to_migrate_between_embedding/) ⭐️ 6.0/10
 
-A Reddit user on r/MachineLearning asked for practical debugging strategies when an ML pipeline run completes without errors or exceptions but produces incorrect results. The post lists several possible starting points, such as working backward from the output, comparing against a known good run, and inspecting tool call behavior, and invites community input on real-world production approaches. This highlights a common and frustrating challenge in ML engineering—silent failures where the system reports success but the output is flawed. Gathering community approaches can help standardize debugging practices and improve the reliability of ML pipelines in production. The user specifically mentions checking retrieval/tool behavior, model inputs, replaying the run, and examining business state outside the trace, indicating the pipeline likely involves LLM agents with external tool calls. The post emphasizes the need for practical, not idealized, debugging techniques.
+A research lab has introduced EmbedFlow, a method to migrate between embedding models without downtime by reranking a subset of documents from the old index using the new model, achieving retrieval quality equal to a full re-embedding when K is sufficient. This approach solves the costly and time-consuming problem of re-embedding millions or billions of documents when upgrading embedding models, which is essential for RAG and vector search systems, enabling faster model iterations and continuous service availability. The key challenge is determining a sufficient K value; tests on 63 migrations up to 1 million documents showed that reranking just 50 documents when transitioning from Qwen4B to Qwen8B matched native retrieval. EmbedFlow integrates with Qdrant and is available via \`pip install embedflow\`.
 
-reddit · r/MachineLearning · /u/Sensitive-Parsnip-12 · Sep 8, 05:01
+reddit · r/MachineLearning · /u/Potential\_Low\_1183 · Sep 8, 02:16
 
-**Background**: ML pipelines often combine multiple steps, including data retrieval, LLM reasoning, and tool calling—where an LLM invokes external functions or APIs. Silent failures can occur when each step appears to succeed but the overall outcome is incorrect. Replay debugging is a technique that preserves the full execution context \(states, messages, tool responses\) so developers can rerun the pipeline from any step to reproduce and diagnose issues. Tool calling is a core capability for LLM agents, but incorrect tool selection or parameter errors can silently corrupt results.
+**Background**: Retrieval-augmented generation \(RAG\) systems use embedding models to convert documents into vectors for similarity search. When a new embedding model is adopted, the vector space changes, normally requiring all vectors to be recomputed—a process that can take days for large datasets. The proposed method avoids this by using the old index to retrieve a candidate set and then reranking with the new model, effectively simulating the new model&\#x27;s retrieval without full re-embedding.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://composio.dev/content/ai-agent-tool-calling-guide">Tool Calling Explained: The Core of AI Agents (2026 Guide) | Composio</a></li>
-<li><a href="https://mdsanwarhossain.me/blog-agentic-ai-debugging.html">Debugging Broken Agentic AI Pipelines in Production : Loops...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation">Retrieval-augmented generation - Wikipedia</a></li>
+<li><a href="https://mixpeek.com/guides/embedding-model-migration-without-reembedding">How to Switch Embedding Models Without Re- Embedding ... | Mixpeek</a></li>
+<li><a href="https://medium.com/@subramanya.padubidri/embedding-model-migration-d2220133660d">Embedding Model migration . When building AI-powered... | Medium</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#debugging`, `#MLOps`, `#production`, `#troubleshooting`, `#machine learning`
-
----
-
-<a id="item-23"></a>
-## [Practical Radar Object Classification with Histogram MLP: Ablation Studies and Insights](https://www.reddit.com/r/MachineLearning/comments/1w9m26u/automotive_radar_object_classification_p/) ⭐️ 6.0/10
-
-A radar signal processing engineer implemented a 3-layer MLP classifier using per-scan histograms on the RadarScenes dataset, and conducted ablation studies revealing that the number of radar detections per instance is a critical factor, with macro F1 rising from 0.381 to 0.764 as detection count increases from 1 to 5, and that changes in architecture or encoding had less impact than data split variation. The work highlights practical challenges in real-world radar perception, such as class imbalance, sequence bias, and the critical role of detection density. It demonstrates that simple models can be effective, but data quality and split consistency are paramount, and underscores the limitations of single-scan classification without temporal context for autonomous driving. The model uses class-weighted cross-entropy loss. Aggregated classes \(e.g., two-wheeler mixing bicycles and motorized variants, large\_vehicle combining trucks, buses, trains\) cause confusion. Sequence bias from long tracks of slow-moving objects leads to high F1 variance across folds. The most important feature is radial velocity \(vr\_compensated\), causing two-wheelers to be misclassified as pedestrians when stationary. Wide or high-RCS cars are sometimes misclassified as large vehicles due to multipath effects.
-
-reddit · r/MachineLearning · /u/bruno\_pinto90 · Sep 7, 08:10
-
-**Background**: Radar point clouds provide sparse, low-resolution spatial information but are robust in adverse weather and offer direct Doppler velocity measurements. The 2023 paper &quot;Histogram-based Deep Learning for Automotive Radar&quot; proposed computing per-feature histograms of radar point clouds and feeding them to an MLP, achieving competitive results with minimal complexity. The RadarScenes dataset is a public real-world automotive radar point cloud dataset with labeled instances. MLP is a basic neural network architecture. Class imbalance and sequence bias are common in sequential sensor data, where contiguous objects can skew training/validation splits if not carefully handled.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://arxiv.org/abs/2303.02975">[2303.02975] Histogram-based Deep Learning for Automotive Radar</a></li>
-<li><a href="https://arxiv.org/html/2104.02493v2">RadarScenes: A Real-World Radar Point Cloud Data Set for Automotive Applications</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#automotive radar`, `#object classification`, `#point cloud`, `#MLP`, `#histogram features`
+**Tags**: `#embedding models`, `#RAG`, `#vector search`, `#model migration`, `#machine learning`
 
 ---

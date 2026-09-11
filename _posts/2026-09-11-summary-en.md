@@ -5,411 +5,406 @@ date: 2026-09-11
 lang: en
 ---
 
-> From 26 items, 18 important content pieces were selected
+> From 31 items, 18 important content pieces were selected
 
 ---
 
-1. [trynix.dev Lets You Run Any Nix Package in the Browser via WebAssembly VM](#item-1) ⭐️ 10.0/10
-2. [First Zero-Click WeChat Worm Built by AI in Just Over a Week](#item-2) ⭐️ 10.0/10
-3. [OpenAI Launches Agents API for Managed LLM Interactions](#item-3) ⭐️ 9.0/10
-4. [Critical RCE Vulnerability in Forgejo Versions ≤16.0.3](#item-4) ⭐️ 9.0/10
-5. [Microsoft Officially Designates Rust as a Tier-1 Language](#item-5) ⭐️ 9.0/10
-6. [OpenAI&\#x27;s Navier-Stokes Release Included a Lean 4 Formal Proof](#item-6) ⭐️ 9.0/10
-7. [Shopify Abandons React Native for Native Swift and Kotlin Development](#item-7) ⭐️ 8.0/10
-8. [Can Researchers Trust OpenAI with Unpublished Math?](#item-8) ⭐️ 8.0/10
-9. [Fruit Fly Connectome Pong Attempt Exposes neuPrint Bug and Missing Neural Pathways](#item-9) ⭐️ 8.0/10
-10. [uv 0.12.12 introduces code signing for macOS and Windows executables](#item-10) ⭐️ 7.0/10
-11. [PlanetScale Introduces Neki Sharded Postgres Amid Mixed Reactions](#item-11) ⭐️ 7.0/10
-12. [Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls](#item-12) ⭐️ 7.0/10
-13. [Small 348M Model Beats GPT-3 175B in Arithmetic by Showing Work](#item-13) ⭐️ 7.0/10
-14. [Sante&\#x27;s High DiagnosisArena-MCQ Score: MCQ, Not Open-Ended Reasoning](#item-14) ⭐️ 7.0/10
-15. [uv 0.12.13 Released: GraalPy 3.13.0, Faster Resolution, Windows Fixes](#item-15) ⭐️ 6.0/10
-16. [Cognition Launches SWE-2 Model, Claims Parity with Fable 5.1 &amp; GPT-Astra](#item-16) ⭐️ 6.0/10
-17. [NASA&\#x27;s Decorrelation Stretch Reveals Ancient Rock Art](#item-17) ⭐️ 6.0/10
-18. [Stanford Launches Free &\#x27;Probability for AI&\#x27; Course with 1,000+ Volunteers](#item-18) ⭐️ 6.0/10
+1. [Apple Launches iPhone Duo: Foldable Design with Pencil Support](#item-1) ⭐️ 9.0/10
+2. [WeWorm: First Zero-Click WeChat Worm Built with AI in a Week](#item-2) ⭐️ 9.0/10
+3. [Shopify returns to native Swift and Kotlin from React Native](#item-3) ⭐️ 8.0/10
+4. [OpenAI Launches Agents API with Managed Sandbox and Self-Hosting Option](#item-4) ⭐️ 8.0/10
+5. [Researchers Question OpenAI&\#x27;s Trust with Unpublished Math Ideas](#item-5) ⭐️ 8.0/10
+6. [Any Nix package, live in your browser](#item-6) ⭐️ 8.0/10
+7. [348M-parameter model achieves 99.4% arithmetic accuracy, outperforms GPT-3 175B](#item-7) ⭐️ 8.0/10
+8. [Real Fly Connectome Fails to Learn Pong; Auditing Reveals Deeper Insights](#item-8) ⭐️ 8.0/10
+9. [Google to Buy Half of Finland&\#x27;s Loviisa Nuclear Plant Output for 22 Years](#item-9) ⭐️ 7.0/10
+10. [Datasette Releases Security Patches After AI-Assisted Audit Finds Vulnerabilities](#item-10) ⭐️ 7.0/10
+11. [ACL Proposes Submission-Linked Reviewer Quota to Address Review Overload](#item-11) ⭐️ 7.0/10
+12. [Sante&\#x27;s 83.83 on DiagnosisArena-MCQ Measures Only MCQ Diagnosis Selection](#item-12) ⭐️ 7.0/10
+13. [uv 0.12.12 adds code signing to macOS and Windows builds](#item-13) ⭐️ 6.0/10
+14. [Don&\#x27;t Let Anyone Take Away Your Big Box of Cables](#item-14) ⭐️ 6.0/10
+15. [NASA&\#x27;s Decorrelation Stretch Technique Reveals Faded Ancient Rock Art](#item-15) ⭐️ 6.0/10
+16. [The Deathray: A Simple Way for an Untrusted Site to Freeze a Mac](#item-16) ⭐️ 6.0/10
+17. [Mexican Teen&\#x27;s Acoustic Fire Extinguisher Revives Interest in Sound-Based Firefighting](#item-17) ⭐️ 6.0/10
+18. [Planetscale Announces Neki: A Closed-Source Sharded PostgreSQL Database](#item-18) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [trynix.dev Lets You Run Any Nix Package in the Browser via WebAssembly VM](https://simonwillison.net/2026/Sep/10/trynix/) ⭐️ 10.0/10
+## [Apple Launches iPhone Duo: Foldable Design with Pencil Support](https://www.apple.com/iphone-duo/) ⭐️ 9.0/10
 
-Farid Zakaria launched trynix.dev, which uses a qemu-wasm-powered x86\_64 Linux virtual machine to boot any Nix package from the past 13 years directly in the browser. Users get an interactive shell simply by visiting a URL like trynix.dev/?pkg=python3@3.6.2, and a companion GitHub Action, trynix-preview, can comment on pull requests with a link to boot the PR&\#x27;s build. This eliminates the need for local installations or servers for reproducible environments, enabling instant demos, testing, and code reviews. It could dramatically lower the barrier for exploring historical software versions and revolutionize CI workflows. The VM is accessed by visiting URLs like trynix.dev/?pkg=python3@3.6.2, and the service runs entirely client-side with no servers. The trynix-preview GitHub Action extends this to pull requests, letting reviewers boot the PR&\#x27;s build in the browser. Performance is constrained by WebAssembly emulation but remains functional.
+Apple has officially unveiled the iPhone Duo, its first foldable iPhone, which features a refined hinge mechanism and full Apple Pencil compatibility. The device marks Apple&\#x27;s entry into the foldable smartphone market. Apple&\#x27;s move could accelerate developer adoption of foldable app layouts, improving the experience for both iPhone Duo and existing Android foldable users. Combining phone and tablet functionality may also shift user expectations for mobile productivity. The hinge is rumored to use a &\#x27;waterdrop&\#x27; mechanism to reduce screen creasing, and Pencil support enables note-taking and whiteboarding without a separate tablet. First-generation hardware risks and a price around $2,000 are notable caveats.
+
+hackernews · thecosmicfrog · Sep 9, 18:15 · [Discussion](https://news.ycombinator.com/item?id=49630931)
+
+**Background**: Foldable phones rely on flexible OLED displays and advanced hinge designs like the &\#x27;waterdrop&\#x27; or &\#x27;teardrop&\#x27; mechanism that allow the screen to fold without a deep crease. App developers previously had to adapt layouts for Android foldables&\#x27; varying screen sizes; Apple&\#x27;s entrance is expected to push wider optimization for foldable interfaces.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.janhinge.com/friction-hinges-in-consumer-electronics-phones/">Friction Hinges in Consumer Electronics &amp; Foldable Phones</a></li>
+<li><a href="https://servreality.com/blog/how-to-develop-apps-for-foldable-devices/">How to develop apps for foldable devices</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Comments express excitement about Pencil integration and potential app improvements for all foldables, but also concern over the loss of small phones like the iPhone mini and the high price. Some remain skeptical about first-generation risks, while others see the device as a viable tablet replacement.
+
+**Tags**: `#foldable-phone`, `#apple`, `#mobile-hardware`, `#product-launch`, `#tech-industry`
+
+---
+
+<a id="item-2"></a>
+## [WeWorm: First Zero-Click WeChat Worm Built with AI in a Week](https://simonwillison.net/2026/Sep/10/calif-research/) ⭐️ 9.0/10
+
+Calif Research demonstrated WeWorm, the first zero-click worm that spreads via WeChat calls on iOS and Android without any user interaction, successfully compromising three test phones. The vulnerability and remote code execution exploit were developed in about two days with AI assistance, and the worm was built in one more week. The WeWorm proof-of-concept shows that AI can dramatically accelerate the development of advanced cyber threats, cutting time from months to just over a week. It highlights the severe risk that zero-click vulnerabilities pose to the billions of users on popular messaging platforms. The zero-click exploit requires no interaction—victims do not need to answer the call, and even if they do, they hear nothing while still being compromised. Calif&\#x27;s team, with AI doing most of the coding, discovered the bug and wrote the RCE exploit in about two days, then built the worm in another week.
+
+rss · Simon Willison · Sep 10, 00:56
+
+**Background**: WeChat is one of the world&\#x27;s largest messaging platforms, with over a billion users. Zero-click attacks are particularly dangerous because they succeed without any user action, often via incoming calls or messages. Remote code execution \(RCE\) is a vulnerability that lets an attacker run arbitrary code on a device, potentially giving them full control. Recent advances in AI have enabled faster vulnerability discovery and exploit creation, raising concerns about the accelerated development of sophisticated cyber weapons.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://thehackernews.com/2026/09/wechat-zero-click-worm-took-over.html">WeChat Zero-Click Worm Took Over Accounts on iPhone and Android via Incoming Calls</a></li>
+<li><a href="https://www.helpnetsecurity.com/2026/09/08/wechat-weworm-vulnerability-exploit-account-hijacking/">&quot;Zero-click&quot; WeChat worm could hijack accounts and spread via a single call - Help Net Security</a></li>
+<li><a href="https://cybersecuritynews.com/weworm-first-0-click-worm/">WeWorm - First 0-Click Worm Spreading Through WeChat Calls Across iOS and Android</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#ai-security-research`, `#zero-click`, `#worm`, `#WeChat`, `#cybersecurity`
+
+---
+
+<a id="item-3"></a>
+## [Shopify returns to native Swift and Kotlin from React Native](https://shopify.engineering/back-to-native) ⭐️ 8.0/10
+
+Shopify announced it is moving its mobile apps from React Native back to native development using Swift for iOS and Kotlin for Android, citing performance and productivity benefits. This decision by a major e-commerce platform with over 3,000 engineers validates native development over cross-platform frameworks, potentially influencing engineering strategies at other large-scale apps. The company&\#x27;s engineering blog details performance bottlenecks with React Native and the productivity gains from native tools. Community comments also suggest that large language models \(LLMs\) helped reduce migration costs.
+
+hackernews · fnthawar2 · Sep 10, 14:09 · [Discussion](https://news.ycombinator.com/item?id=49643982)
+
+**Background**: React Native is a cross-platform framework by Meta that builds mobile apps with JavaScript, sharing code between iOS and Android. Swift and Kotlin are the native languages for Apple and Android platforms. While cross-platform solutions aim to speed up development, they can suffer performance and integration issues, prompting some large apps like Shopify&\#x27;s to return to native code for better user experience and maintainability.
+
+**Discussion**: Community sentiment is mixed but leans toward validating native over cross-platform. Some commenters shared their own rapid migrations, with one using LLMs to convert a small app overnight. Others criticized Shopify&\#x27;s large engineering team for a relatively simple app, questioning efficiency. iOS engineers expressed validation against management pressure for shared codebases, while some disputed the role of LLMs, stating the migration was feasible without them.
+
+**Tags**: `#react-native`, `#mobile-development`, `#native-apps`, `#engineering-decision`, `#case-study`
+
+---
+
+<a id="item-4"></a>
+## [OpenAI Launches Agents API with Managed Sandbox and Self-Hosting Option](https://developers.openai.com/api/docs/guides/agents-api/overview) ⭐️ 8.0/10
+
+OpenAI has released a new Agents API that provides managed hosting, integrated tools, and a sandbox environment for building AI agents, with the option for developers to self-host the sandbox on their own infrastructure. This launch reduces the heavy infrastructure burden of building and deploying AI agents, making it easier for developers to create complex agentic applications. The self-hosting option also addresses concerns about vendor lock-in and data locality. The API includes managed state persistence, pre-integrated tool execution, and a secure sandbox for code execution. Notably, the self-hosted sandbox feature allows enterprises to keep execution environments within their own VPC for compliance and security.
+
+hackernews · aquir · Sep 10, 19:43 · [Discussion](https://news.ycombinator.com/item?id=49649213)
+
+**Background**: AI agents are autonomous programs that use large language models \(LLMs\) to reason, plan, and execute tasks by interacting with external tools and data sources. Building agents traditionally required developers to set up their own runtime infrastructure, manage state persistence, and secure execution environments \(sandboxes\) to run untrusted code. OpenAI&\#x27;s new API shifts this complexity to a managed service, similar to cloud-based platforms, while still offering a self-hosting path for those needing control.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes">Self-hosted sandboxes - Claude Platform Docs</a></li>
+<li><a href="https://www.beam.cloud/blog/how-to-self-host-code-sandbox">How to Self-Host a Code Execution Sandbox for AI Agents (2026) | Beam</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Community comments reflect mixed feelings: some see value in reduced infrastructure management, while others worry about lock-in and note that running a Python service is easy. The self-hosting option is seen as a significant plus, easing transition between providers. Some users prefer local agent harnesses with strict control over data exposure.
+
+**Tags**: `#AI agents`, `#API`, `#OpenAI`, `#agent infrastructure`, `#developer tools`
+
+---
+
+<a id="item-5"></a>
+## [Researchers Question OpenAI&\#x27;s Trust with Unpublished Math Ideas](https://mathstodon.xyz/@andreasthom/117240535270608201) ⭐️ 8.0/10
+
+Mathematicians claim that OpenAI&\#x27;s models used their collaborative chat conversations for training without attribution, possibly enabling the models to solve open math problems that were discussed in those chats. This raises serious ethical concerns about intellectual property and transparency in AI-assisted research, as researchers may hesitate to share sensitive ideas if they risk having their unpublished work absorbed into future models without credit. OpenAI allegedly generated 300 billion output tokens from a model still in training shortly after learning of a potential major math proof in that model&\#x27;s data; comments note that while models may remember chat details, superhuman problem-solving could also emerge from reinforcement learning on large-scale math computation.
+
+hackernews · pred\_ · Sep 10, 06:49 · [Discussion](https://news.ycombinator.com/item?id=49639408)
+
+**Background**: Large language models are typically pre-trained on vast public data, but fine-tuning and reinforcement learning can incorporate new interactions. In this case, researchers used OpenAI&\#x27;s models to collaborate on open math problems, effectively feeding novel ideas into the system. OpenAI&\#x27;s approach includes using human feedback and reinforcement learning to improve problem-solving, but if chat data is used for training without disclosure, it blurs the line between tool and co-author. The concern echoes broader debates about whether AI companies can freely train on user-provided private content.
+
+**Discussion**: The community draws an analogy to human collaboration, noting that if a human used another&\#x27;s ideas without attribution it would be unethical. Some argue that model improvements from such chats are plausible and that discovered superhuman solutions may have little to do with specific chat techniques. Others view the large-scale token generation after learning of the proof as suspicious parallel construction, while the affected mathematician, Thom, has publicly alleged plagiarism.
+
+**Tags**: `#AI ethics`, `#OpenAI`, `#research integrity`, `#large language models`, `#intellectual property`
+
+---
+
+<a id="item-6"></a>
+## [Any Nix package, live in your browser](https://simonwillison.net/2026/Sep/10/trynix/) ⭐️ 8.0/10
+
+Farid Zakaria&\#x27;s trynix.dev launches a WebAssembly-powered x86\_64 Linux VM in the browser that can boot any Nix package from the past 13 years via a simple URL, providing an interactive shell. The project also offers a GitHub Action that auto-comments on pull requests to let reviewers boot the PR&\#x27;s build in the browser without any servers. This innovation makes historical software environments instantly accessible for reproducible testing, debugging, and education, eliminating the need for local setup or server infrastructure. It could transform code review workflows and lower the barrier to CI testing by making it trivial to verify builds in complete isolation. The VM is based on qemu-wasm, which compiles QEMU&\#x27;s full system emulation to WebAssembly using the Tiny Code Generator, allowing client-side booting of a full Linux system. Packages are URL-addressable \(e.g., https://trynix.dev/?pkg=python3%403.6.2\) and run entirely in the browser without relying on any backend servers.
 
 rss · Simon Willison · Sep 10, 23:44
 
-**Background**: Nix is a package manager that guarantees reproducibility by isolating each package and tracking exact dependencies, with a repository containing over 13 years of versions. WebAssembly allows high-performance execution of compiled code in browsers. qemu-wasm is a project that compiles the QEMU emulator to WebAssembly, enabling full x86\_64 system emulation within a browser. Together, they enable on-demand recreation of any historical Nix environment.
+**Background**: Nix is a functional package manager that installs each package into a unique, hash-addressed store path, guaranteeing build reproducibility. qemu-wasm is a port of the QEMU emulator to WebAssembly, enabling a virtual machine to run in browsers without plugins. Reproducible builds ensure that given the same source and build environment, identical binaries are produced, which is essential for security and trust. Together these technologies enable trynix.dev to offer bit-for-bit identical software environments from any point in Nix&\#x27;s 13-year history.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Nix_%28package_manager%29">Nix (package manager) - Wikipedia</a></li>
 <li><a href="https://github.com/ktock/qemu-wasm">GitHub - ktock/qemu-wasm: QEMU on browser · GitHub</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reproducible_builds">Reproducible builds</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#nix`, `#webassembly`, `#virtualization`, `#developer-tools`, `#reproducibility`
-
----
-
-<a id="item-2"></a>
-## [First Zero-Click WeChat Worm Built by AI in Just Over a Week](https://simonwillison.net/2026/Sep/10/calif-research/) ⭐️ 10.0/10
-
-Calif Research demonstrated WeWorm, the first zero-click worm to spread through WeChat voice calls on iOS and Android without any victim interaction. Leveraging AI, they discovered the bug and developed a remote code execution exploit in roughly two days, completing the full worm in one additional week—work that previously would have taken a larger team months. The rapid creation of WeWorm with AI marks a significant escalation in offensive cyber capabilities, shrinking exploit timelines from months to days. This poses an acute threat to widely used platforms like WeChat \(over 1.4 billion accounts\) and raises urgency for proactive security measures. WeWorm exploits a memory corruption vulnerability in WeChat’s VoIP feature, silently compromising accounts on iOS and Android via incoming calls from existing contacts, without the victim answering. Calif reported the flaw to Tencent, which has since patched it; the proof-of-concept worm spreads through the contact list.
-
-rss · Simon Willison · Sep 10, 00:56
-
-**Background**: Zero-click attacks require no victim interaction, making them especially dangerous. WeChat is a super-app with over 1.4 billion monthly users, integrating messaging, payments, and more. Traditionally, uncovering and weaponizing such vulnerabilities was a months-long manual effort, but AI tools now accelerate vulnerability discovery and exploit generation.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://cybersecuritynews.com/weworm-first-0-click-worm/">WeWorm – First 0-Click Worm Spreading Through WeChat Calls ...</a></li>
-<li><a href="https://thehackernews.com/2026/09/wechat-zero-click-worm-took-over.html">WeChat Zero-Click Worm Took Over Accounts on iPhone and ...</a></li>
-<li><a href="https://horizon3.ai/intelligence/blogs/ai-exploit-speed-scale/">AI-Powered Exploit Generation: Speed, Scale &amp; Cyber Risk | Horizon3</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#ai-security-research`, `#zero-click`, `#worm`, `#WeChat`, `#exploit-development`
-
----
-
-<a id="item-3"></a>
-## [OpenAI Launches Agents API for Managed LLM Interactions](https://developers.openai.com/api/docs/guides/agents-api/overview) ⭐️ 9.0/10
-
-OpenAI introduces the Agents API, which enables developers to create production-ready agents in a single API call by specifying the task, model, tools, and environment. The API includes managed infrastructure with automatic context compaction, multi-agent orchestration, and programmatic tool calling. This commoditizes agent-based LLM interactions, shifting the industry toward managed agent services and blurring the line between raw LLM endpoints and full agent harnesses. It could accelerate adoption by reducing the complexity of building custom harnesses, though it also risks vendor lock-in. The API supports self-hosting the sandbox environment, easing transitions between providers. Its core concepts include Agent, Environment \(optional sandbox/computer\), Session, and Events/Items, plus support for MCP servers.
-
-hackernews · aquir · Sep 10, 19:43 · [Discussion](https://news.ycombinator.com/item?id=49649213)
-
-**Background**: Agentic AI refers to AI programs that can autonomously pursue goals, use external tools, and perform multi-step tasks, often driven by large language models. Previously, developers had to build complex agent harnesses themselves or use open-source libraries, facing challenges like state persistence and environment coupling. The new Agents API provides a hosted harness that abstracts away this infrastructure.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://developers.openai.com/api/docs/guides/agents-api/overview">Agents API | OpenAI API</a></li>
-<li><a href="https://openai.com/index/introducing-the-agents-api/">Introducing the Agents API | OpenAI</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters note the eroding distinction between LLM endpoints and agents, debate the right abstraction for agent products, and discuss self-hosted alternatives. Some appreciate the option to self-host the sandbox \(buried in the docs\) as a way to avoid lock-in, while others highlight the value of managed services for reducing complexity.
-
-**Tags**: `#openai`, `#agents`, `#api`, `#llm`, `#agentic-ai`
-
----
-
-<a id="item-4"></a>
-## [Critical RCE Vulnerability in Forgejo Versions ≤16.0.3](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md) ⭐️ 9.0/10
-
-Forgejo versions up to 16.0.3 contain a critical remote code execution vulnerability that can be triggered when initializing a new repository from a template, due to template expansion interfering with git operations. The issue is fixed in version 16.0.4. Forgejo is a widely used self-hosted Git service, and this critical RCE \(score 9.0/10\) could allow attackers to fully compromise servers hosting repositories, risking source code and sensitive data. Immediate upgrade is essential. The flaw occurs because variable template expansion is performed before the new git repository is properly initialized, enabling injection of malicious commands via crafted template files. The fix is in pull request \#14301, and the release notes are temporarily rate-limited on Codeberg.
-
-hackernews · weierstass · Sep 10, 15:57 · [Discussion](https://news.ycombinator.com/item?id=49645907)
-
-**Background**: Forgejo is a self-hosted Git forge, a fork of Gitea, designed to be lightweight and easy to maintain. It supports creating new repositories from templates, where placeholder variables in template files are replaced with user-supplied values. This template expansion feature, when combined with git repository initialization, led to the vulnerability.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Forgejo">Forgejo</a></li>
-<li><a href="https://forgejo.org/">Forgejo – Beyond coding. We forge .</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community comments confirm the severity, with Gitea leadership noting that Gitea is not affected. Some users worry that rejecting AI-generated code contributions might slow vulnerability detection, while others experienced rate limiting that hindered access to the release notes. There is consensus that immediate patching is required.
-
-**Tags**: `#security`, `#RCE`, `#Forgejo`, `#vulnerability`
-
----
-
-<a id="item-5"></a>
-## [Microsoft Officially Designates Rust as a Tier-1 Language](https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/) ⭐️ 9.0/10
-
-Microsoft has officially made Rust a Tier-1 language within the company, meaning it now receives the same level of security review, tooling support, and internal promotion as mature languages like C++ and C\#. This formalizes Rust as a first-class option for systems programming across Microsoft. This is a strong signal that Rust is a mature and production-ready language, endorsed by one of the largest software companies. It could accelerate Rust adoption industry-wide, particularly for security-critical infrastructure, and encourage more organizations to invest in Rust tooling and developer ecosystems. While Rust is now Tier-1, C++ remains dominant in existing codebases; Microsoft aims to leverage automated code conversion tools to migrate legacy C/C++ code to Rust, with a vision of converting one billion lines by 2030. Rust&\#x27;s integration with MSVC and Windows is being improved, and first-class C++ interoperability is seen as the next major challenge.
-
-hackernews · mmastrac · Sep 10, 13:39 · [Discussion](https://news.ycombinator.com/item?id=49643546)
-
-**Background**: At Microsoft, a Tier-1 language is one that receives full, high-priority support across internal tools, security reviews, and quality gates, alongside C++ and C\#. Rust is a systems programming language known for memory safety guarantees without a garbage collector, making it ideal for preventing common vulnerabilities like buffer overflows. Microsoft and other OS vendors are increasingly investing in Rust to reduce memory-related security flaws, which account for about 70% of critical vulnerabilities in large C/C++ codebases. This move follows similar steps by Google, Amazon, and others, signaling a shift in the industry toward safer systems languages.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/">Guest Post: Rust Is Tier-1 Language at Microsoft</a></li>
-<li><a href="https://lobste.rs/s/eerwba/rust_is_tier_1_language_at_microsoft">Rust Is Tier-1 Language at Microsoft | Lobsters</a></li>
-
-</ul>
-</details>
-
-**Discussion**: The community widely views this as a landmark endorsement of Rust&\#x27;s maturity and safety benefits. Commenters highlighted Microsoft&\#x27;s ambitious goal to automatically convert billions of lines of code to Rust by 2030, the importance of seamless C++ interoperability, and how this move could solidify Rust&\#x27;s position as a &\#x27;safer C++&\#x27; over newer alternatives like Zig. Many expressed optimism that this will accelerate Rust adoption in enterprise and operating system development.
-
-**Tags**: `#rust`, `#microsoft`, `#systems-programming`, `#programming-languages`, `#industry-adoption`
-
----
-
-<a id="item-6"></a>
-## [OpenAI&\#x27;s Navier-Stokes Release Included a Lean 4 Formal Proof](https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/) ⭐️ 9.0/10
-
-OpenAI&\#x27;s internal AI system generated a solution to the Navier–Stokes existence and smoothness problem, a Millennium Prize problem, and released both a traditional proof write-up and a formal, machine-checkable proof in the Lean 4 language. This demonstrates that AI can not only solve deep mathematical problems but also produce formally verifiable proofs, potentially accelerating research and raising the bar for proof correctness. It signals a practical shift toward AI-assisted formal mathematics. The Lean 4 formalization enables independent mechanical verification, though prior large proofs \(e.g., Fermat&\#x27;s Last Theorem\) required 15 hours and 230GB RAM in Lean, raising performance questions. A timing controversy emerged as mathematician Tristan Buckmaster claimed advances on the same problem 12 hours before OpenAI&\#x27;s announcement, and the estimated AI agent cost of $40M was compared to ~$132M for equivalent human labor.
-
-hackernews · ibobev · Sep 10, 21:22 · [Discussion](https://news.ycombinator.com/item?id=49650326)
-
-**Background**: The Navier–Stokes existence and smoothness problem is one of the seven Millennium Prize Problems, asking whether solutions to the fluid motion equations always exist and remain smooth. Lean 4 is an open-source proof assistant and functional programming language that allows mathematical proofs to be encoded as code and mechanically verified, eliminating human error in verification.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://openai.com/index/navier-stokes-solution/">On the Navier–Stokes Millennium Prize Problem | OpenAI</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy">Navier–Stokes priority controversy - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Lean_%28proof_assistant%29">Lean (proof assistant)</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters were impressed but pragmatic, highlighting Lean&\#x27;s potential performance bottlenecks \(e.g., slow verification of large proofs\), cost savings \(~$40M vs. $132M\), and a desire for more direct or inductive proofs. Some questioned the comparability of cost and effort, while others raised philosophical concerns about proofs that might exceed human verification abilities.
-
-**Tags**: `#formal-verification`, `#lean4`, `#openai`, `#automated-reasoning`, `#navier-stokes`
+**Tags**: `#nix`, `#webassembly`, `#reproducible-builds`, `#devtools`, `#browser-based-vm`
 
 ---
 
 <a id="item-7"></a>
-## [Shopify Abandons React Native for Native Swift and Kotlin Development](https://shopify.engineering/back-to-native) ⭐️ 8.0/10
+## [348M-parameter model achieves 99.4% arithmetic accuracy, outperforms GPT-3 175B](https://www.reddit.com/r/MachineLearning/comments/1wc7hmu/i_trained_a_348m_model_trained_from_scratch_on/) ⭐️ 8.0/10
 
-Shopify announced it is migrating its mobile apps away from React Native back to native development using Swift for iOS and Kotlin for Android, leveraging large language models \(LLMs\) to assist with code migration and reduce the effort involved. This move by a major tech company signals a potential shift against cross-platform frameworks, as LLM-assisted migrations could make native development more cost-effective, challenging the long-held assumption that shared codebases are essential for efficiency. The migration used LLMs like Codex and testing tools like Maestro to quickly generate native code from the React Native codebase, with most screens ported overnight, though final polishing took a few days. Shopify re-evaluated its 2020 decision after LLMs changed the core cost assumption.
+A 348M-parameter language model, trained from scratch on 22.7B tokens and fine-tuned for arithmetic, reached 99.4% average accuracy on GPT-3 arithmetic tasks by generating step‑by‑step column arithmetic. It outperformed the 175B GPT-3 few‑shot baseline and, after a simple vocabulary extension, handled up to 14‑digit addition cleanly. This demonstrates that small, specialized models can outperform massive general-purpose models on narrow tasks when trained to &\#x27;show work&\#x27;, enabling reliable built‑in arithmetic for calculators, math tutoring, and code generation without external modules. Training data only named place values up to hundred‑thousands, yet the model spontaneously invented &\#x27;millions&\#x27; and &\#x27;ten‑millions&\#x27; for 7‑8 digit problems. Extending the place‑name vocabulary from 6 to 19 entries raised the clean ceiling from 8 to 14 digits. However, it struggles with word problems \(4% GSM8K\), cannot divide, and requires greedy decoding to keep column traces coherent.
 
-hackernews · fnthawar2 · Sep 10, 14:09 · [Discussion](https://news.ycombinator.com/item?id=49643982)
+reddit · r/MachineLearning · /u/nkthebass · Sep 10, 03:28
 
-**Background**: React Native is a cross-platform framework that lets developers write mobile apps in JavaScript for both iOS and Android, popular for sharing code between platforms. Shopify adopted it in 2020 to speed up development. Native apps, using Swift for iOS and Kotlin for Android, typically offer better performance and platform-specific optimizations. LLMs like GitHub Copilot can now automatically translate existing code to native languages, reducing the manual labor traditionally required for such migrations.
+**Background**: Large language models like GPT-3 use few‑shot learning to perform tasks without fine‑tuning, but they often fail at arithmetic due to limited reasoning ability. Chain‑of‑thought prompting, where the model writes intermediate steps, significantly improves math accuracy. Fine‑tuning smaller models on arithmetic data can unlock performance exceeding much larger models on those specific tasks, as shown in recent research.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.linkedin.com/pulse/experimenting-llm-assisted-software-migrations-java-spring-case-fdose">Experimenting LLM - assisted software migrations : a Java Spring case...</a></li>
-<li><a href="https://medium.com/@monojitchoudhury/ideas-for-llm-driven-code-migration-0455faa7a070">Ideas for LLM -driven code migration | by Monojit Choudhury | Medium</a></li>
+<li><a href="https://arxiv.org/abs/2005.14165">[2005.14165] Language Models are Few-Shot Learners - arXiv.org</a></li>
+<li><a href="https://arxiv.org/abs/2201.11903">[2201.11903] Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></li>
+<li><a href="https://arxiv.org/abs/2310.10047">[2310.10047] Improving Large Language Model Fine-tuning for ... Reinforcement learning fine-tuning of language model for ... Fine-Tuning Large Language Models for Solving Math Word ... Efficient Fine-Tuning of Large Language Models for ... The Mathematics Behind LLM Fine-Tuning - mbrenndoerfer.com Fine-tuning large language models for domain adaptation ... Fine-tune language models as multi-modal differential ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community overwhelmingly validated the move, with many engineers sharing similar overnight LLM-assisted migration successes. Some cautioned that the LLM story may be overstated, as the bulk of work occurred before advanced LLMs were available. A key sentiment is that LLMs diminish React Native&\#x27;s appeal—if code generation is simple, starting native becomes more attractive, challenging the C-suite push for shared codebases.
-
-**Tags**: `#React Native`, `#Swift`, `#Kotlin`, `#Mobile Development`, `#Cross-platform`
+**Tags**: `#small language models`, `#arithmetic reasoning`, `#model specialization`, `#transfer learning`, `#NLP`
 
 ---
 
 <a id="item-8"></a>
-## [Can Researchers Trust OpenAI with Unpublished Math?](https://mathstodon.xyz/@andreasthom/117240535270608201) ⭐️ 8.0/10
+## [Real Fly Connectome Fails to Learn Pong; Auditing Reveals Deeper Insights](https://www.reddit.com/r/MachineLearning/comments/1wc67ci/i_tried_to_make_a_real_fly_connectome_learn_to/) ⭐️ 8.0/10
 
-A growing discussion among researchers questions whether OpenAI exploits unpublished mathematical ideas shared during collaborations, possibly using them without proper attribution. This controversy threatens trust in AI research partnerships, as it raises ethical concerns about intellectual property and the integrity of scientific collaboration. If researchers feel their ideas can be appropriated, they may hesitate to engage with advanced AI tools, slowing shared progress. Specific cases include Dr. Buckmaster&\#x27;s Codex prompts potentially leaking into model outputs, and OpenAI&\#x27;s suspicious generation of 300 billion tokens right after learning a major proof might be in the training data.
+A researcher attempted to train a subgraph of the MaleCNS v1.0 fly connectome on Pong using dopamine-style plasticity, but it completely failed to learn. A meticulous audit uncovered neuron selection bugs, missing intermediate connections, and motor neurons with zero synapses, making the failure more educational than a success would have been. The work exposes limitations in viral &\#x27;fly brain plays X&\#x27; demos and shows that rigorous failure analysis can yield more insight than flashy but unvalidated results. It emphasizes the importance of reproducibility and skepticism in computational neuroscience. The audit found a neuPrint regex bug that silently silenced entire neuron populations, a missing intermediate layer between photoreceptors and motion detectors, and that half of the motor neurons had zero synaptic inputs, preventing any learning. Even after fixing the circuit, dopamine-style plasticity only suppressed activity rather than improving skill.
 
-hackernews · pred\_ · Sep 10, 06:49 · [Discussion](https://news.ycombinator.com/item?id=49639408)
+reddit · r/MachineLearning · /u/oPeraza2007 · Sep 10, 02:28
 
-**Background**: Large language models like those from OpenAI are often tested by mathematicians on open problems, with both parties exchanging ideas. This interaction can inadvertently feed fresh, unpublished research into the model&\#x27;s training pipeline. Such models are known to memorize training data, which can include user-provided prompts if used for later training. The situation is exacerbated by the lack of clear norms around data use and attribution in AI collaborations.
+**Background**: The MaleCNS v1.0 is a connectome reconstructed from electron microscopy of a male fruit fly&\#x27;s central nervous system, containing ~166,000 neurons with their synaptic connections. neuPrint is an open-source tool for querying such connectomes. Dopamine-style plasticity refers to learning rules inspired by dopamine-modulated synaptic changes in biological brains.
 
-**Discussion**: Comments are divided: some compare OpenAI to an unethical human collaborator taking credit, while others suggest it&\#x27;s plausible the model independently rediscovered techniques. There is suspicion over OpenAI&\#x27;s timing of large-scale output generation, and a call for more transparency.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Drosophila_connectome">Drosophila connectome - Wikipedia</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9350508/">neuPrint: An open access tool for EM connectomics - PMC</a></li>
+<li><a href="https://www.nature.com/articles/s41586-022-05485-4">Dopamine promotes head direction plasticity during orienting ...</a></li>
 
-**Tags**: `#AI ethics`, `#OpenAI`, `#research integrity`, `#machine learning`, `#data privacy`
+</ul>
+</details>
+
+**Tags**: `#fly connectome`, `#Pong`, `#computational neuroscience`, `#failure analysis`, `#debugging`
 
 ---
 
 <a id="item-9"></a>
-## [Fruit Fly Connectome Pong Attempt Exposes neuPrint Bug and Missing Neural Pathways](https://www.reddit.com/r/MachineLearning/comments/1wc67ci/i_tried_to_make_a_real_fly_connectome_learn_to/) ⭐️ 8.0/10
+## [Google to Buy Half of Finland&\#x27;s Loviisa Nuclear Plant Output for 22 Years](https://www.bbc.com/news/articles/c8r6y4me2g6o) ⭐️ 7.0/10
 
-A scientist attempted to train a subgraph of the MaleCNS v1.0 fruit fly connectome to play Pong using dopamine-style plasticity, but it failed to learn; a thorough audit revealed a neuPrint regex bug that silenced two neuron populations and identified missing neural pathways that prevented any signal flow from photoreceptors to motor neurons. This case study demonstrates that negative results and rigorous debugging are scientifically valuable, exposing pitfalls in connectome simulation that viral projects often overlook; it also critiques several high-profile fly-brain gaming projects for lacking proper validation, underscoring the need for scientific rigor in computational neuroscience. The audit identified a neuPrint query bug \(misspecified regex\), a missing layer between photoreceptors and motion detectors, and motor neurons with zero sensory connections that rendered learning impossible; after reconstructing a courtship pursuit circuit, learning did diverge, but only in the form of global punishment-driven suppression, not skill improvement.
+Google has signed a 22-year contract with Finnish utility Fortum to purchase 50% of the electricity generated by the Loviisa nuclear power plant, specifically for powering its data centers in Finland. This agreement demonstrates how hyperscale tech companies are increasingly turning to firm, carbon-free nuclear power to meet surging data center energy demands, while also helping Finland stabilize electricity prices and maintain its low-emission grid. The Loviisa plant consists of two Soviet-designed VVER-440 reactors, each with 507 MW capacity, totaling about 1 GW; it produces roughly 8.2 TWh annually, over 10% of Finland&\#x27;s electricity. The contract covers half of that output. Google&\#x27;s agreement is not a new build but off-take from an existing plant that has had operational life extensions.
 
-reddit · r/MachineLearning · /u/oPeraza2007 · Sep 10, 02:28
+hackernews · lukaspetersson · Sep 11, 00:42 · [Discussion](https://news.ycombinator.com/item?id=49652105)
 
-**Background**: A connectome is a complete wiring diagram of neural connections, often derived from electron microscopy \(EM\) imaging of brain slices. The MaleCNS v1.0 dataset is a high-resolution EM reconstruction of the male fruit fly central nervous system comprising ~166,000 neurons. neuPrint is an open-access platform for querying and exploring such connectomes programmatically. Researchers often attempt to simulate learning in these circuits by applying dopamine-style plasticity rules, where synaptic strengths change based on reward or punishment signals.
+**Background**: Data centers are massive electricity consumers, and their demand is accelerating due to AI and cloud services. Finland offers a cool climate for natural cooling, a grid with very low carbon intensity \(71 gCO₂eq/kWh\), and relatively stable power supply. Nuclear plants like Loviisa provide continuous baseload, which complements intermittent renewables. The plant&\#x27;s life has been extended to 2050, ensuring long-term availability.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://neuprint.janelia.org/help/api">neuPrintExplorer - Janelia Research Campus</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Connectome">Connectome - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Loviisa_Nuclear_Power_Plant">Loviisa Nuclear Power Plant - Wikipedia</a></li>
+<li><a href="https://www.fortum.com/energy-production/nuclear-power/plants/loviisa">Loviisa Nuclear Power Plant - Fortum</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#computational neuroscience`, `#connectomics`, `#reinforcement learning`, `#scientific rigor`, `#biomimetic AI`
+**Discussion**: Comments reflect a mix of skepticism and support: one user doubts data center demand will persist as model efficiency improves; another views the deal as a price hedge and political PR rather than new infrastructure investment; others praise Google&\#x27;s choice for low-emission power and note Finland&\#x27;s grid advantages. Overall, the discussion highlights concerns about long-term demand forecasting and the strategic nature of the agreement.
+
+**Tags**: `#data centers`, `#energy`, `#sustainability`, `#nuclear power`, `#Google`
 
 ---
 
 <a id="item-10"></a>
-## [uv 0.12.12 introduces code signing for macOS and Windows executables](https://github.com/astral-sh/uv/releases/tag/0.12.12) ⭐️ 7.0/10
+## [Datasette Releases Security Patches After AI-Assisted Audit Finds Vulnerabilities](https://simonwillison.net/2026/Sep/11/datasette-security/) ⭐️ 7.0/10
 
-uv 0.12.12, released on 2026-09-09, now ships code-signed binaries for macOS and Windows. macOS executables are signed with an Apple Developer ID certificate and notarized by Apple, while Windows executables receive timestamped Authenticode signatures via Azure Artifact Signing. Code signing allows users to verify the publisher and integrity of uv, reducing security warnings and antivirus false positives. It also enables enterprise environments to allowlist the software based on its verified publisher, improving trust and adoption of this popular Python packaging tool. The signing covers the executables in release archives as well as the \`uv\` and \`uv\_build\` wheels on macOS and Windows. Additionally, this release fixed a bug where distributions uploaded after the \`exclude-newer\` cutoff were incorrectly included in lockfiles and requirement hashes.
+Datasette has released version 1.0a39 \(alpha\) and 0.65.4 \(stable\) to fix security vulnerabilities. The bugs were found by an AI-assisted audit using GPT-5.6, GPT-6 Astra, and Claude Fable 5.1, which uncovered subtle issues that could leak private data when public and private database tables are mixed. This is a compelling example of using frontier AI models for security auditing in open-source software, potentially setting a precedent for integrating AI audits into regular development workflows. Public Datasette instances that mix public and private data are at risk of data exposure if left unpatched. The audit process involved AI models flagging issues, after which one developer wrote automated tests to reproduce the bug and the other implemented the fix, ensuring independent human review of each vulnerability. The project maintainers now plan to incorporate frontier model audits into all future development work.
 
-github · astral-automations-bot\[bot\] · Sep 9, 16:45
+rss · Simon Willison · Sep 11, 03:27
 
-**Background**: uv is a fast Python package and project manager written in Rust. Code signing uses digital certificates to cryptographically verify the publisher and integrity of software. Apple&\#x27;s notarization requires submitting software for automated security scanning before it can be signed, while Microsoft&\#x27;s Authenticode is a standard for signing Windows executables; Azure Artifact Signing automates this process with timestamped signatures.
+**Background**: Datasette is an open-source tool by Simon Willison that lets users explore and publish SQLite databases as interactive websites and APIs. It is often used to make data publicly accessible online, sometimes combining publicly visible tables with private ones that require authentication. The recent security audit leveraged three frontier large language models to scrutinize the code for subtle vulnerabilities.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://developer.apple.com/forums/tags/notarization">Notarization | Apple Developer Forums</a></li>
-<li><a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/install/authenticode">Authenticode Digital Signatures - Windows drivers | Microsoft ...</a></li>
-<li><a href="https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/code-signing-options">Code signing options for Windows app developers - Windows ...</a></li>
+<li><a href="https://datasette.io/">Datasette: An open source multi-tool for exploring and ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#uv`, `#Python`, `#packaging`, `#security`, `#release`
+**Tags**: `#security`, `#datasette`, `#AI-assisted-audit`, `#open-source`, `#vulnerability`
 
 ---
 
 <a id="item-11"></a>
-## [PlanetScale Introduces Neki Sharded Postgres Amid Mixed Reactions](https://planetscale.com/blog/introducing-neki) ⭐️ 7.0/10
+## [ACL Proposes Submission-Linked Reviewer Quota to Address Review Overload](https://www.reddit.com/r/MachineLearning/comments/1wd7b83/acl_sustainable_reviewing_policy_d/) ⭐️ 7.0/10
 
-PlanetScale announced Neki, a sharded Postgres database solution, but the launch blog post lacks a clear description of the product, leading to confusion. Sharded Postgres is critical for scaling modern applications, and PlanetScale&\#x27;s experience with Vitess could fill a major gap; however, the unclear messaging and CEO&\#x27;s behavior may erode trust. Neki is currently closed-source, with a promise to open-source after production testing; it claims superiority over the open-source alternative multigres, but technical details about its handling of consistency and CAP theorem trade-offs remain unaddressed.
+ACL has proposed a new sustainable reviewing policy where each submitted paper must be accompanied by a qualified reviewer or it will enter a lottery for limited spare capacity. Additionally, per-author submission caps will be enforced: 20 total submissions and 5 first-author papers per review cycle. This policy aims to tackle the overwhelming number of submissions that current reviewer pools cannot handle, ensuring the long-term health of the NLP reviewing system and preventing reviewer burnout. The proposal includes a mentorship system for those not yet qualified to review, allows non-author endorsees to vouch for work \(similar to arXiv endorsement\), and plans penalties for systematic abuse of the endorsement system.
 
-hackernews · simon\_weber · Sep 10, 15:43 · [Discussion](https://news.ycombinator.com/item?id=49645686)
+reddit · r/MachineLearning · /u/S4M22 · Sep 11, 05:38
 
-**Background**: Database sharding distributes data across multiple servers for horizontal scalability. PlanetScale famously created Vitess, an open-source sharding layer for MySQL used by Google. PostgreSQL lacks a native sharding solution, prompting various forks. The CAP theorem states that a distributed database cannot simultaneously guarantee consistency, availability, and partition tolerance.
+**Background**: ACL Rolling Review \(ARR\) is the centralised peer review platform used by major NLP conferences such as ACL, NAACL, and EMNLP. In recent years, the explosion of submissions in AI and NLP has far outpaced the growth of the reviewer pool, leading to severe overload and calls for structural reform. ACL&\#x27;s proposal directly links each submission to a reviewing contribution, moving from a purely voluntary model towards a more sustainable matching of supply and demand.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://planetscale.com/neki">Neki — PlanetScale | Sharded Postgres by the Team Behind Vitess.</a></li>
-<li><a href="https://neki.dev/">Sharded Postgres by PlanetScale | Neki</a></li>
+<li><a href="https://aclrollingreview.org/">ACL Rolling Review – A peer review platform for the Association for...</a></li>
+<li><a href="https://www.aclweb.org/portal/content/acl-rolling-review">ACL Rolling Review | ACL Member Portal</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community criticized the launch post for failing to explain what Neki is or what it does. Users expressed annoyance at the CEO&\#x27;s aggressive tone and hypocrisy, given PlanetScale&\#x27;s history with open-source Vitess. Technical questions focused on whether Neki can offer strong consistency without sacrificing availability.
+**Discussion**: The initial community response, as seen in the Reddit discussion, is largely supportive, with one user calling it a &quot;bit of gatekeeping but in my opinion highly required&quot; to address the imbalance of many submissions from authors who are not themselves qualified reviewers.
 
-**Tags**: `#database`, `#postgres`, `#sharding`, `#planetscale`, `#launch`
+**Tags**: `#peer-review`, `#academic-publishing`, `#NLP`, `#conference-policy`, `#reviewing-sustainability`
 
 ---
 
 <a id="item-12"></a>
-## [Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls](https://www.pv-magazine.com/2026/09/07/hitachi-launches-co2-heat-pump-water-heaters-with-solar-friendly-tariff-controls/) ⭐️ 7.0/10
+## [Sante&\#x27;s 83.83 on DiagnosisArena-MCQ Measures Only MCQ Diagnosis Selection](https://www.reddit.com/r/MachineLearning/comments/1wbkxsa/what_santes_8383_on_diagnosisarenamcq_actually/) ⭐️ 7.0/10
 
-Hitachi&\#x27;s new CO2 heat pump water heater features tariff-aware controls to leverage daytime solar surpluses, sparking a rich Hacker News discussion on real-world usage and terminology.
+An analysis clarifies that Sante’s 83.83 score on DiagnosisArena-MCQ only reflects its ability to select a diagnosis from four given options, not open-ended clinical reasoning. The model also scored 53.88 on MedXpertQA-Text and 45.73 on HealthBench Professional, providing a broader evaluation profile. This distinction is critical for medical AI safety: over-reliance on MCQ benchmarks can overstate a model’s clinical capability, potentially misleading deployment in real healthcare settings. DiagnosisArena-MCQ provides case information and tests before presenting four candidate diagnoses, making it easier than open-ended diagnosis. The HealthBench Professional score is not percentage accuracy but a rubric-based assessment; comparing it with other models requires checking scoring details.
 
-hackernews · thelastgallon · Sep 9, 14:54 · [Discussion](https://news.ycombinator.com/item?id=49627634)
+reddit · r/MachineLearning · /u/Expert\_Coffee\_203 · Sep 9, 13:01
 
-**Tags**: `#heat-pump`, `#solar-energy`, `#energy-efficiency`, `#smart-grid`, `#japan`
+**Background**: DiagnosisArena is a diagnostic reasoning benchmark; its MCQ variant uses model-generated distractors and significantly inflates scores compared to open-ended tasks, with o1 reaching only 61.90% on MCQ. MedXpertQA-Text is a board-level medical QA dataset with 2,450 multiple-choice questions \(10 options each\). HealthBench Professional, built with 250+ physicians, evaluates LLMs on real clinician chat tasks using physician-written rubrics.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://arxiv.org/html/2505.14107v1">DiagnosisArena: Benchmarking Diagnostic Reasoning for Large Language Models</a></li>
+<li><a href="https://medxpertqa.github.io/">MedXpertQA</a></li>
+<li><a href="https://openai.com/index/healthbench/">Introducing HealthBench | OpenAI</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#medical AI`, `#benchmarking`, `#evaluation`, `#LLMs`, `#healthcare`
 
 ---
 
 <a id="item-13"></a>
-## [Small 348M Model Beats GPT-3 175B in Arithmetic by Showing Work](https://www.reddit.com/r/MachineLearning/comments/1wc7hmu/i_trained_a_348m_model_trained_from_scratch_on/) ⭐️ 7.0/10
+## [uv 0.12.12 adds code signing to macOS and Windows builds](https://github.com/astral-sh/uv/releases/tag/0.12.12) ⭐️ 6.0/10
 
-A 348M-parameter model trained from scratch on 22.7B tokens can perform multi-digit addition, subtraction, and multiplication by explicitly generating column addition, carries, and borrows, achieving 99.4% average accuracy on GPT-3&\#x27;s arithmetic sub-tasks, far surpassing GPT-3 175B&\#x27;s direct-answer performance. It shows that a small model can master arithmetic through learned procedural reasoning, challenging the belief that scale is necessary for such capability and pointing toward more efficient architectures for reliable, interpretable reasoning. The model&\#x27;s reasoning traces are load-bearing: 95.3% of correct answers have valid workings. When it couldn&\#x27;t name enough place values, it skipped digits; after expanding the place-name list from 6 to 19, it cleanedly reached 14-digit addition. Word problems \(GSM8K 4%\) and division remain unsolved, and greedy decoding is required.
+uv 0.12.12 adds code signing for macOS and Windows executables, providing Apple notarization and Authenticode signatures to verify publisher and binary integrity. It also fixes a bug where distributions uploaded after the \`exclude-newer\` cutoff were incorrectly included in lockfiles. Code signing improves security by enabling users to verify that uv binaries come from the official publisher and haven&\#x27;t been tampered with, reducing security warnings and antivirus false positives. The exclude-newer fix ensures lockfiles correctly enforce a maximum package age for reproducible builds. The macOS signing uses an Apple Developer ID certificate and Apple&\#x27;s notarization service, which scans for malware. Windows signing uses Azure Artifact Signing with timestamped Authenticode. The bug fix addresses pull request \#21539.
 
-reddit · r/MachineLearning · /u/nkthebass · Sep 10, 03:28
+github · astral-automations-bot\[bot\] · Sep 9, 16:45
 
-**Background**: Chain-of-thought prompting encourages models to produce intermediate steps, but here the model was fine-tuned to internalize column arithmetic—a structured algorithm. Partial product multiplication, where numbers are broken into parts for multiplication, is a key technique the model uses. This approach contrasts with large language models that often answer arithmetic by pattern recognition rather than step-by-step computation.
+**Background**: Code signing uses digital certificates to verify a software&\#x27;s publisher and that it hasn&\#x27;t been modified. On macOS, notarization adds an automated Apple malware scan. Windows Authenticode provides similar publisher verification. uv&\#x27;s \`exclude-newer\` option lets users limit packages to those uploaded before a certain date, commonly used to achieve reproducible Python environments.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Chain-of-thought_prompting">Chain-of-thought prompting</a></li>
-<li><a href="https://www.splashlearn.com/math-vocabulary/multiplication/partial-product">What Is a Partial Product? Definition, Methods ... - SplashLearn</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/install/authenticode">Authenticode Digital Signatures - Windows drivers | Microsoft Learn</a></li>
+<li><a href="https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution">Notarizing macOS software before distribution | Apple Developer Documentation</a></li>
+<li><a href="https://pydevtools.com/handbook/how-to/how-to-use-exclude-newer-for-reproducible-python-environments/">uv exclude-newer: Pin Installs to a Date or Cooldown | pydevtools</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#small language models`, `#arithmetic reasoning`, `#model efficiency`, `#benchmarking`, `#natural language processing`
+**Tags**: `#uv`, `#python`, `#package-manager`, `#security`, `#release`
 
 ---
 
 <a id="item-14"></a>
-## [Sante&\#x27;s High DiagnosisArena-MCQ Score: MCQ, Not Open-Ended Reasoning](https://www.reddit.com/r/MachineLearning/comments/1wbkxsa/what_santes_8383_on_diagnosisarenamcq_actually/) ⭐️ 7.0/10
+## [Don&\#x27;t Let Anyone Take Away Your Big Box of Cables](https://blog.jim-nielsen.com/2026/hands-off-my-cables/) ⭐️ 6.0/10
 
-Sante scored 83.83 on DiagnosisArena-MCQ, a multiple-choice benchmark where it picks a diagnosis from four given options, not open-ended reasoning tasks. The model also achieved 53.88 on MedXpertQA-Text and 45.73 on HealthBench Professional. This clarification is critical because MCQ performance can be misinterpreted as open-ended clinical reasoning, leading to overestimation of a model&\#x27;s real-world diagnostic capabilities. It underscores the need for nuanced benchmark evaluation in medical AI. DiagnosisArena-MCQ provides case information and tests, then asks for a choice among four diagnoses. HealthBench Professional’s score is rubric-based, not percentage accuracy, and the release didn’t clarify if it was length-adjusted, making direct comparisons uncertain.
+A lighthearted blog post defends the tech tradition of keeping a big box of miscellaneous cables, arguing that it periodically proves invaluable. The post resonates with the broader tech community’s habit of hoarding legacy hardware and cables, sparking discussions about preparedness versus clutter in an era of ever-changing connectors. Comments highlight practical tips like grouping cables to reduce duplicates, warn about modular PSU pinout incompatibility, and share personal wins where an old cable saved the day.
 
-reddit · r/MachineLearning · /u/Expert\_Coffee\_203 · Sep 9, 13:01
+hackernews · Brajeshwar · Sep 10, 15:27 · [Discussion](https://news.ycombinator.com/item?id=49645393)
 
-**Background**: DiagnosisArena is a benchmark for evaluating diagnostic reasoning in large language models, with DiagnosisArena-MCQ being its multiple-choice variant where models select from four diagnoses. MedXpertQA-Text consists of 2,450 board-level, text-only multiple-choice questions with ten options each. HealthBench Professional evaluates LLMs on real clinician tasks—care consultation, writing, and medical research—using physician-graded rubrics.
+**Background**: Tech enthusiasts often accumulate a ‘big box of cables’ because devices use varied and sometimes proprietary connectors. While many throw out old cables to declutter, keeper argue that a rare legacy cable can be priceless when repairing or using older equipment. This debate echoes broader minimalist versus stockpiler mentalities in technology.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://arxiv.org/pdf/2505.14107">DiagnosisArena : Benchmarking Diagnostic Reasoning for Large...</a></li>
-<li><a href="https://medxpertqa.github.io/">MedXpertQA</a></li>
-<li><a href="https://arxiv.org/abs/2604.27470">[2604.27470] HealthBench Professional: Evaluating Large ...</a></li>
+**Discussion**: Overall sentiment is strongly supportive and nostalgic. Commenters share organizing strategies \(group by type\), cautionary tales \(frying hard drives with mismatched modular PSU cables\), and heartfelt anecdotes of saved projects, validating the box’s value. Some also reflect on inherited collections of hardware and the emotional weight of such caches.
 
-</ul>
-</details>
-
-**Tags**: `#medical AI`, `#benchmarks`, `#model evaluation`, `#clinical reasoning`, `#large language models`
+**Tags**: `#culture`, `#cable-management`, `#tech-humor`, `#hoarding`, `#diy`
 
 ---
 
 <a id="item-15"></a>
-## [uv 0.12.13 Released: GraalPy 3.13.0, Faster Resolution, Windows Fixes](https://github.com/astral-sh/uv/releases/tag/0.12.13) ⭐️ 6.0/10
+## [NASA&\#x27;s Decorrelation Stretch Technique Reveals Faded Ancient Rock Art](https://spinoff.nasa.gov/Manipulating_Satellite_Photos_Now_Reveals_Ancient_Images) ⭐️ 6.0/10
 
-uv 0.12.13, released on 2026-09-10, adds support for GraalPy 3.13.0, speeds up dependency resolution by reusing supported hashes from direct URL fragments, verifies hashes of PEP 658 metadata sidecars, and fixes Windows entry-point launcher issues for Nano Server compatibility. GraalPy support extends uv to a high-performance Python 3.13 runtime built on GraalVM, useful for Java embedding and native images. The resolution performance improvement reduces CI/CD pipeline times and bandwidth usage, while the Windows fix enables smooth operation on lightweight Nano Server containers. The resolver avoids downloading full wheels when metadata is separately available via direct URL fragments, reusing supported hashes; the Windows launcher now edits resources in memory to work on Nano Server, where filesystem modifications are limited. Additionally, uv now prefers the &\#x27;core-metadata&\#x27; key in JSON index responses over legacy aliases.
-
-github · astral-automations-bot\[bot\] · Sep 10, 19:27
-
-**Background**: GraalPy is a Python 3.13 compliant runtime developed by Oracle, built on the GraalVM ecosystem. It offers high performance and first-class support for embedding Python in Java applications and compiling Python programs to native binaries. PEP 658 is a Python Enhancement Proposal that allows package indexes \(like PyPI\) to serve distribution metadata files separately from the full package, enabling faster dependency resolution without downloading entire archives. Windows Nano Server is a minimal, headless installation option for Windows Server, designed for containers and cloud environments, where certain APIs and filesystem operations are restricted.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://github.com/oracle/graalpython">GitHub - oracle/graalpython: GraalPy – A high-performance...</a></li>
-<li><a href="https://peps.python.org/pep-0658/">PEP 658 – Serve Distribution Metadata in the Simple ...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Windows_Nano_Server">Windows Nano Server</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#python`, `#package-manager`, `#uv`, `#release-notes`, `#performance`
-
----
-
-<a id="item-16"></a>
-## [Cognition Launches SWE-2 Model, Claims Parity with Fable 5.1 &amp; GPT-Astra](https://cognition.com/blog/swe-2) ⭐️ 6.0/10
-
-Cognition released SWE-2, a proprietary coding model post-trained from the 2.8T-parameter Kimi K33, which it says rivals Anthropic’s Claude Fable 5.1 and OpenAI’s GPT-Astra on agentic coding benchmarks. The launch intensifies AI coding competition, but community skepticism about benchmark overfitting and the closed‑source nature may limit adoption as open‑weight alternatives like DeepSeek Flash 4.1 gain popularity. SWE-2 features a 1M context window and an explicit reasoning mode, yet its Terminal Bench 2.1 score of 92.8% drops sharply to 27.3% on the newer Terminal Bench 4, suggesting poor generalization to unseen tasks.
-
-hackernews · seelos · Sep 10, 15:29 · [Discussion](https://news.ycombinator.com/item?id=49645443)
-
-**Background**: SWE-2 is built on Kimi K33, a large model from Moonshot AI that underwent extensive reinforcement learning for agentic coding. Claude Fable 5.1 and GPT‑Astra \(GPT‑6 Astra\) are leading proprietary models known for high scores on coding tasks. Terminal Bench 2.1 and 4 are paired benchmarks where the newer version contains problems unseen during training; a deep score drop often signals ‘benchmaxxing’ instead of genuine coding skill.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://cognition.com/blog/swe-2">Introducing SWE - 2 : Pushing the Pareto Frontier | Cognition</a></li>
-<li><a href="https://benchlm.ai/models/swe-2">SWE - 2 Benchmarks &amp; Context (September 2026) | BenchLM.ai</a></li>
-<li><a href="https://en.wikipedia.org/wiki/GPT-6_Astra">GPT -6 Astra - Wikipedia</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Commenters widely questioned SWE-2’s generalization, highlighting the steep score gap between Terminal Bench 2.1 and 4 as evidence of overfitting. Many noted that the model is not open‑weight, reducing its appeal compared to DeepSeek Flash 4.1, and recalled Cognition’s past Devin demo that failed on close inspection. Some found it interesting that Fable‑5.1‑level results were achieved via RL on Kimi K3, but overall sentiment remains skeptical about yet another closed model.
-
-**Tags**: `#AI`, `#coding models`, `#benchmarking`, `#LLMs`, `#skepticism`
-
----
-
-<a id="item-17"></a>
-## [NASA&\#x27;s Decorrelation Stretch Reveals Ancient Rock Art](https://spinoff.nasa.gov/Manipulating_Satellite_Photos_Now_Reveals_Ancient_Images) ⭐️ 6.0/10
-
-NASA&\#x27;s Spinoff program highlighted the use of decorrelation stretch, a satellite image enhancement technique, which has been adapted for decades by archaeologists to reveal faded rock art, notably through the Dstretch plugin. This interdisciplinary technology transfer from space exploration to cultural heritage preservation enables the documentation of ancient art invisible to the naked eye, potentially democratizing heritage research and inspiring further cross-domain applications. Decorrelation stretch amplifies subtle color differences by reducing inter-channel correlation. The Dstretch plugin for ImageJ automates this for rock art, and similar results can be achieved manually in GIMP using LAB color decomposition and contrast adjustments.
+A satellite-image enhancement method called decorrelation stretch, originally developed by NASA, is being repurposed by archaeologists to recover details in rock art that have faded almost to invisibility. The technique exaggerates subtle color differences that the human eye can no longer separate. This spinoff allows non-destructive recovery of cultural heritage without physical contact, preserving fragile art while making it visible again. It demonstrates how space-age imaging tools can solve centuries-old archaeological puzzles. The process reduces correlation between color channels to force vivid color separation; it is implemented in the freely available Dstretch plugin for ImageJ, which dates back to around 2005. The technique requires three input bands and works on any digital photograph, not just satellite data.
 
 hackernews · gumby · Sep 10, 15:29 · [Discussion](https://news.ycombinator.com/item?id=49645437)
 
-**Background**: Decorrelation stretch is an image enhancement method that reduces correlation between color channels, making subtle color variations more visible. Originally developed for satellite and aerial remote sensing to distinguish materials like vegetation, minerals, and land use, the technique can reveal pigments that have faded over centuries in rock art. The open-source Dstretch plugin, built on this principle, has been used by archaeologists since 2005.
+**Background**: Decorrelation stretch is an image-processing method invented to enhance color differences in multispectral satellite images, which often have highly correlated color bands that produce bland visuals. By decorrelating the bands and scaling them to full contrast, it reveals details hidden in subtle color variations. The technique was first used on Landsat and Mars rover imagery before finding application in rock-art analysis.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Decorrelation">Decorrelation - Wikipedia</a></li>
-<li><a href="https://dstretch.com/">DStretch.com home page</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members noted that the technique is not new, as the Dstretch plugin has been available since 2005 and similar enhancement methods existed earlier. They shared personal experiences with false-color composites in remote sensing, manual GIMP workflows, and fieldwork attempts, viewing the story as an interesting but belated recognition of a long-standing tool.
+**Discussion**: Commenters generally express appreciation, noting that similar contrast-enhancement and false-color techniques have been used in remote sensing and GIS for years, so the archaeological application is a compelling but not entirely surprising spinoff. Some shared alternative manual methods \(e.g., using GIMP\) and recounted personal attempts at similar imaging archaeology, while acknowledging Dstretch as a polished, accessible tool.
 
-**Tags**: `#image-processing`, `#remote-sensing`, `#archaeology`, `#nasa-spinoff`, `#computer-vision`
+**Tags**: `#image-processing`, `#remote-sensing`, `#archaeology`, `#nasa-spinoff`, `#decorrelation-stretch`
+
+---
+
+<a id="item-16"></a>
+## [The Deathray: A Simple Way for an Untrusted Site to Freeze a Mac](https://auberon.xyz/blog/posts/deathray/) ⭐️ 6.0/10
+
+A blog post demonstrated that a malicious webpage can freeze a Mac by using WebGPU to hang the GPU with an infinite shader loop, a vulnerability that persists despite being known for years. This highlights a persistent denial-of-service vulnerability in WebGPU that can crash browsers or freeze the OS, eroding user trust and system stability as the standard sees wider adoption for high-performance web applications. The attack exploits WebGPU compute shaders that bypass macOS&\#x27;s Metal timeout detection and recovery \(TDR\), causing a system-wide hang with a simple infinite loop. Apple has closed related reports as non-security issues, and the problem also affects Firefox on Linux, though only the browser crashes there.
+
+hackernews · auberonedu · Sep 10, 19:34 · [Discussion](https://news.ycombinator.com/item?id=49649124)
+
+**Background**: WebGPU is a modern web standard for GPU access, replacing WebGL, supported in major browsers including Chrome, Safari, and Firefox. Shaders are programs that run directly on the GPU; if they contain infinite loops, they can freeze the graphics subsystem. Operating systems use timeout detection and recovery \(TDR\) to reset hung GPU tasks, but implementations vary, and on macOS with Metal, recovery may fail, leading to a system-wide freeze. Similar issues with OpenCL on older Intel Macs were known years ago, showing this is a long-standing cross-platform GPU hang risk.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/WebGPU">WebGPU</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Comments note the issue has existed since at least 2011, with some considering it self-correcting as users will avoid offending sites, but others highlight that data isn&\#x27;t stolen. Reports confirm similar hangs on iOS and that Apple dismissed related bugs as non-security. A user recalled 1990s browser crash tricks, and a Linux user confirmed Firefox crashed but left other programs unaffected, underscoring that protections vary across platforms.
+
+**Tags**: `#WebGPU`, `#macOS`, `#Denial of Service`, `#Browser Security`, `#GPU Compute`
+
+---
+
+<a id="item-17"></a>
+## [Mexican Teen&\#x27;s Acoustic Fire Extinguisher Revives Interest in Sound-Based Firefighting](https://www.upsocl.com/en/16-year-old-mexican-student-creates-an-acoustic-fire-extinguisher-that-uses-sound-waves-to-put-out-fires-in-seconds/) ⭐️ 6.0/10
+
+A 16-year-old Mexican student built an acoustic fire extinguisher that uses low-frequency sound waves to suppress flames, sparking online discussion about the technology&\#x27;s prior art and niche feasibility. The student&\#x27;s project highlights the growing accessibility of sound-based fire suppression to tinkerers and educators, potentially accelerating development for specialized uses like quenching fires in grills, grain silos, or sensitive electronics where water or chemicals are undesirable. The device works by vibrating oxygen molecules faster than the fuel can use them, disrupting the chemical reaction. Although similar concepts have been demonstrated by DARPA and college teams, commercial products remain absent, and effectiveness is typically limited to small, controlled fires at fixed distances.
+
+hackernews · rguiscard · Sep 11, 01:00 · [Discussion](https://news.ycombinator.com/item?id=49652237)
+
+**Background**: Fire requires heat, fuel, oxygen, and a chemical chain reaction—the fire tetrahedron. Acoustic extinguishers remove the oxygen component by using low-frequency sound to displace air or disrupt the flame&\#x27;s stability. Research into this technique dates back at least to DARPA experiments in 2012, and more recently companies like Sonic Fire Tech have explored infrasound for wildfire defense. The student&\#x27;s project aligns with this lineage of exploring non-chemical, water-free fire suppression.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.scientificamerican.com/article/infrasound-tech-silences-wildfires-before-they-spread/">This Technology Fights Fire with Sound—No Water Needed</a></li>
+<li><a href="https://pixelburn.tech/en/sound-based-fire-suppression-the-future-of-fighting-fire-with-bass">Sound-Based Fire Suppression: How Acoustic Extinguishers Work</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters noted that similar devices exist on YouTube and in academic papers, characterizing it as a known but non-commercialized technology. They speculated on niche applications like grills and grain silos, and some wondered if the student drew inspiration from Sonic Fire Tech or the well-DARPA projects, reflecting a blend of skeptical and supportive interest.
+
+**Tags**: `#acoustic fire extinguisher`, `#fire safety`, `#physics`, `#student innovation`, `#hacker news discussion`
 
 ---
 
 <a id="item-18"></a>
-## [Stanford Launches Free &\#x27;Probability for AI&\#x27; Course with 1,000+ Volunteers](https://www.reddit.com/r/MachineLearning/comments/1wbf3ox/teach_ml_community_service_project_from_stanford_n/) ⭐️ 6.0/10
+## [Planetscale Announces Neki: A Closed-Source Sharded PostgreSQL Database](https://planetscale.com/blog/introducing-neki) ⭐️ 6.0/10
 
-Stanford professor Chris Piech announced &\#x27;Probability for AI&\#x27;, a free online course starting October 9th that pairs every ten students with one volunteer teacher. Over 1,000 people have already applied to teach, and the course includes hands-on projects like building an AI text detection app alongside a coding agent. This community-driven model radically expands access to high-quality AI education, lowering financial and geographic barriers. By blending rigorous probability foundations with personalized mentorship, it could help close the machine learning talent gap worldwide. The course uses &\#x27;teachable agents&\#x27; for teacher training—allowing volunteers to practice instructing AI before leading student groups. Applications close at the end of September, and the entire program is funded through an alumni donation.
+Planetscale announced Neki, a new sharded PostgreSQL database that aims to provide horizontal scaling. The launch post was vague, lacking clear details about what Neki is and how it works. As a major database company, Planetscale&\#x27;s entry into sharded Postgres highlights the growing demand for scalable PostgreSQL solutions, but the closed-source approach and unclear messaging have drawn criticism from the open-source community. Technical specifics are scant; the product is closed-source, and the announcement did not clarify how Neki handles eventual consistency, cross-shard joins, or transactions. The company has not yet detailed its sharding architecture.
 
-reddit · r/MachineLearning · /u/chrispiech · Sep 9, 07:54
+hackernews · simon\_weber · Sep 10, 15:43 · [Discussion](https://news.ycombinator.com/item?id=49645686)
 
-**Background**: Teachable agents are AI systems designed for learning-by-teaching, where a learner instructs an agent to reinforce their own knowledge. The most prominent example is Betty’s Brain, a qualitative reasoning tool used in science education. Stanford’s course adapts this concept, likely using AI-driven agents to simulate student interactions and help volunteer teachers hone their skills—a method known to foster metacognition and self-regulated learning.
+**Background**: Sharding splits a database across multiple servers to improve scalability. Planetscale previously built Vitess, an open-source sharding solution for MySQL, now widely used. With Neki, they aim to bring similar capabilities to PostgreSQL, joining other solutions like Citus and multi-master approaches. Eventual consistency means that after an update, all copies of data will eventually be consistent, but not immediately, which can complicate application logic. Cross-shard operations require coordination protocols like two-phase commit or sagas.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Teachable_agent">Teachable agent</a></li>
-<li><a href="https://microsoft.github.io/autogen/0.2/blog/2023/10/26/TeachableAgent/">AutoGen&#x27;s Teachable Agents | AutoGen 0.2 - GitHub Pages</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Eventual_consistency">Eventual consistency</a></li>
+<li><a href="https://dropbox.tech/infrastructure/cross-shard-transactions-at-10-million-requests-per-second">Cross shard transactions at 10 million requests per second - Dropbox</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#education`, `#machine learning`, `#probability`, `#community service`, `#Stanford`
+**Discussion**: Commenters sharply criticized the launch post for failing to describe what Neki is. Many questioned how eventual consistency is handled and whether cross-shard joins and transactions are supported. There was notable frustration over Neki being closed-source, especially given Planetscale&\#x27;s open-source heritage with Vitess and the CEO&\#x27;s prior dismissive comments toward open-source alternatives.
+
+**Tags**: `#postgres`, `#sharding`, `#distributed-databases`, `#planetscale`, `#database-consistency`
 
 ---
